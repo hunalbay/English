@@ -1,0 +1,127 @@
+id: gram.a1.possessive-s
+kind: grammar
+level: A1
+title_tr: "Sahiplik eki: 's"
+title_en: "Possessive 's"
+objective_tr: Bu dersin sonunda 's ekiyle bir şeyin kime ait olduğunu söyleyebilecek ve whose ile sahipliği sorabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.possessive-adjectives]
+next: [gram.a1.have-got]
+vocabulary: [whose, friend, parent]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir şeyin bir **kişiye** ait olduğunu söylemek için kişinin adına ya da isme **'s** eklenir: "Ali**'s** car" (Ali'nin arabası).
+
+      Sıra Türkçedeki gibidir: önce sahip, sonra sahip olunan şey. Ali'nin arabası → Ali's car.
+  - kind: formula
+    title_tr: Yazım kuralları
+    table:
+      headers: [Durum, Kural, Örnek, Türkçe]
+      rows:
+        - [Tekil isim, "+ 's", "my sister's room", kız kardeşimin odası]
+        - [-s ile biten çoğul isim, "+ '", "my parents' house", annemle babamın evi]
+        - [Düzensiz çoğul, "+ 's", "the children's toys", çocukların oyuncakları]
+        - ["İki kişi (ortak sahiplik)", "son isme 's", "Ali and Ayşe's son", "Ali ile Ayşe'nin oğlu"]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **İnsanlar ve hayvanlar için 's kullanılır:** "the dog's name", "my teacher's book".
+
+      **Nesneler için genellikle "of" tercih edilir:** "the door **of** the car", "the end **of** the film".
+
+      **Sahipliği sormak için whose kullanılır:** "**Whose** bag is this?" — "It's Elif's."
+
+      **Dükkân ve ev anlamında:** "I am at Tom's." (Tom'un evindeyim.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "This is Ayşe's phone.", tr: "Bu Ayşe'nin telefonu."}
+      - {en: "My brother's wife is a doctor.", tr: "Erkek kardeşimin eşi doktor."}
+      - {en: "The teachers' room is on the first floor.", tr: "Öğretmenler odası birinci katta."}
+      - {en: "The children's school is near here.", tr: "Çocukların okulu buraya yakın."}
+      - {en: "Whose keys are these? — They're my father's.", tr: "Bunlar kimin anahtarları? — Babamın."}
+  - kind: comparison
+    title_tr: "'s her zaman sahiplik değildir"
+    text_tr: |-
+      Kesme işaretli 's üç farklı şey olabilir. Hangisi olduğunu cümlenin geri kalanından anlarsınız.
+    table:
+      headers: [Cümle, "'s ne anlama geliyor?"]
+      rows:
+        - ["Tom's car is new.", "sahiplik: Tom'un arabası"]
+        - ["Tom's a doctor.", "is: Tom is a doctor"]
+        - ["Tom's got a car.", "has: Tom has got a car"]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This is the car of Ali.", tr: "Bu Ali'nin arabası.", wrong: true, correction: "This is Ali's car.", note_tr: "Kişiler için 's kullanılır."}
+      - {en: "My parent's house is old.", tr: "Annemle babamın evi eski.", wrong: true, correction: "My parents' house is old.", note_tr: "İki kişi (parents) olduğu için kesme işareti s'den sonra gelir."}
+      - {en: "The childrens' toys are here.", tr: "Çocukların oyuncakları burada.", wrong: true, correction: "The children's toys are here.", note_tr: "Children zaten çoğuldur; 's alır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Kesme işaretini unutmak.** "Alis car" yanlıştır; "Ali**'s** car" yazılır.
+
+      **Çoğul eki ile sahiplik ekini karıştırmak.** "two book's" yanlıştır; çoğulda kesme işareti olmaz: "two books".
+
+      **Kişiler için "of" kullanmak.** "the bag of my mother" anlaşılır ama doğal değildir; "my mother**'s** bag" deyin.
+questions:
+  - id: q.a1.possessive-s.01
+    type: multiple_choice
+    prompt: "This is ___ bag."
+    options:
+      - "*Elif's :: Kişi adına 's eklenerek sahiplik gösterilir."
+      - "Elif :: İki isim yan yana gelince sahiplik anlaşılmaz; 's gerekir."
+      - "Elifs :: Kesme işareti olmadan bu bir çoğul gibi görünür."
+      - "of Elif :: Kişiler için 's kullanılır; ayrıca sözcük sırası da yanlış olur."
+    explanation: "Sahip + 's + sahip olunan şey: Elif's bag."
+  - id: q.a1.possessive-s.02
+    type: multiple_choice
+    difficulty: 2
+    prompt: "My ___ house is in Bursa. (annemle babamın evi)"
+    options:
+      - "*parents' :: Parents -s ile biten bir çoğuldur; yalnızca kesme işareti eklenir."
+      - "parent's :: Bu \"tek bir ebeveynimin\" anlamına gelir; burada iki kişiden söz ediliyor."
+      - "parents :: Kesme işareti olmadan sahiplik gösterilmez."
+      - "parents's :: -s ile biten çoğullara ikinci bir s eklenmez."
+    explanation: "-s ile biten çoğul isimlerde sahiplik için yalnızca kesme işareti eklenir: parents'."
+  - id: q.a1.possessive-s.03
+    type: fill_blank
+    prompt: "___ book is this? — It's Tom's."
+    answers: [Whose]
+    explanation: "Sahipliği sormak için whose (kimin) kullanılır."
+    vocabulary: [whose]
+  - id: q.a1.possessive-s.04
+    type: sentence_building
+    prompt: "this / be / my sister / room"
+    answers: ["This is my sister's room."]
+    explanation: "Kız kardeşimin odası = my sister's room."
+  - id: q.a1.possessive-s.05
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümlede 's sahiplik bildirir?"
+    options:
+      - "*Anna's brother is tall. :: Anna's brother = Anna'nın erkek kardeşi; sahiplik."
+      - "Anna's tall. :: Burada 's \"is\" demektir: Anna is tall."
+      - "Anna's at home. :: Burada 's \"is\" demektir: Anna is at home."
+      - "Anna's got a dog. :: Burada 's \"has\" demektir: Anna has got a dog."
+    explanation: "'s kendisinden sonra bir isim geliyorsa çoğunlukla sahiplik bildirir. Sıfat ya da yer bildiren sözcük geliyorsa \"is\"tir."
+  - id: q.a1.possessive-s.06
+    type: error_correction
+    prompt: "The childrens' room is big."
+    answers: ["The children's room is big."]
+    explanation: "Children düzensiz bir çoğuldur ve -s ile bitmez; bu yüzden 's alır."
+  - id: q.a1.possessive-s.07
+    type: translation
+    prompt: "Babamın arabası yeni."
+    answers: ["My father's car is new.", "My dad's car is new."]
+    explanation: "Babamın arabası = my father's car."
+  - id: q.a1.possessive-s.08
+    type: true_false
+    prompt: "I have two sister's."
+    options:
+      - "Doğru :: Çoğul yapmak için kesme işareti kullanılmaz."
+      - "*Yanlış :: Çoğul eki kesme işareti almaz: \"I have two sisters.\""
+    explanation: "'s sahiplik içindir; çoğul yalnızca -s ile yapılır."

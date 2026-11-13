@@ -1,0 +1,131 @@
+id: gram.a1.possessive-adjectives
+kind: grammar
+level: A1
+title_tr: "İyelik sıfatları: my, your, his, her..."
+title_en: Possessive adjectives
+objective_tr: Bu dersin sonunda my, your, his, her, its, our, their sözcükleriyle bir şeyin kime ait olduğunu söyleyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.subject-pronouns]
+next: [gram.a1.possessive-s]
+vocabulary: [my, your, his, her, its, our, their]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İyelik sıfatları bir şeyin **kime ait olduğunu** gösterir ve her zaman bir **isimden önce** gelir: "**my** book" (benim kitabım).
+
+      Türkçede sahiplik çoğunlukla ismin sonundaki ekle gösterilir (kitab**ım**); İngilizcede ise isim değişmez, önüne ayrı bir sözcük gelir.
+    table:
+      headers: [Özne zamiri, İyelik sıfatı, Örnek, Türkçe]
+      rows:
+        - [I, my, my name, benim adım]
+        - [you, your, your phone, senin / sizin telefonunuz]
+        - [he, his, his car, onun arabası (erkek)]
+        - [she, her, her bag, onun çantası (kadın)]
+        - [it, its, its color, "onun rengi (nesne, hayvan)"]
+        - [we, our, our house, bizim evimiz]
+        - [they, their, their children, onların çocukları]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Sahibe göre seçilir, sahip olunan şeye göre değil.** Bir erkeğin annesinden söz ediyorsanız "**his** mother", bir kadının babasından söz ediyorsanız "**her** father" dersiniz.
+
+      **İsim çoğul olsa da değişmez.** "my book" → "my books" (mys değil).
+
+      **A / an ya da the ile birlikte kullanılmaz.** "the my car" yanlıştır; "my car" denir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My name is Deniz.", tr: "Benim adım Deniz."}
+      - {en: "What is your address?", tr: "Adresin ne?"}
+      - {en: "His sister is a doctor.", tr: "Onun kız kardeşi doktor.", note_tr: "Sahip bir erkek."}
+      - {en: "Her brother lives in Izmir.", tr: "Onun erkek kardeşi İzmir'de yaşıyor.", note_tr: "Sahip bir kadın."}
+      - {en: "The dog is eating its food.", tr: "Köpek mamasını yiyor."}
+      - {en: "Our teacher is very nice.", tr: "Öğretmenimiz çok iyi."}
+      - {en: "Their house is big.", tr: "Onların evi büyük."}
+  - kind: comparison
+    title_tr: "Karıştırılan çiftler"
+    table:
+      headers: [Sözcük, Anlamı, Örnek]
+      rows:
+        - [its, "onun (iyelik)", "The cat loves its bed."]
+        - ["it's", it is, "It's cold today."]
+        - [your, "senin (iyelik)", "Is this your pen?"]
+        - ["you're", you are, "You're late."]
+        - [their, "onların (iyelik)", "Their car is new."]
+        - ["they're", they are, "They're at home."]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This is Ali. Her car is red.", tr: "Bu Ali. Onun arabası kırmızı.", wrong: true, correction: "This is Ali. His car is red.", note_tr: "Ali bir erkek; his kullanılır."}
+      - {en: "The my phone is new.", tr: "Telefonum yeni.", wrong: true, correction: "My phone is new.", note_tr: "İyelik sıfatıyla the kullanılmaz."}
+      - {en: "The dog is in it's house.", tr: "Köpek kulübesinde.", wrong: true, correction: "The dog is in its house.", note_tr: "It's = it is; iyelik için its yazılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **His ile her'i karıştırmak.** Türkçede ikisi de "onun"dur. Seçimi yapmak için sahibin kim olduğunu düşünün: Ayşe'nin babası → **her** father; Ali'nin annesi → **his** mother.
+
+      **Its ve it's.** Kesme işaretli **it's** her zaman "it is" demektir. Sahiplik bildiren **its** kesme işareti almaz.
+
+      **Öznenin yerine iyelik sıfatı kullanmak.** "My am a student" değil, "**I** am a student".
+questions:
+  - id: q.a1.possessive.01
+    type: multiple_choice
+    prompt: "This is Ayşe. ___ father is a teacher."
+    options:
+      - "*Her :: Sahip Ayşe, yani bir kadın; kadınlar için her kullanılır."
+      - "His :: His sahip erkek olduğunda kullanılır. Babanın erkek olması seçimi etkilemez."
+      - "Its :: Its nesneler ve hayvanlar içindir."
+      - "She :: She özne zamiridir; isimden önce iyelik sıfatı gerekir."
+    explanation: "İyelik sıfatı sahip olunan kişiye (father) göre değil, sahibe (Ayşe) göre seçilir."
+    example: {en: "This is Tom. His mother is a nurse.", tr: "Bu Tom. Onun annesi hemşire."}
+  - id: q.a1.possessive.02
+    type: multiple_choice
+    prompt: "We live in Ankara. ___ house is small."
+    options:
+      - "*Our :: We → our (bizim)."
+      - "Their :: Their \"onların\" demektir; özne we."
+      - "We :: We özne zamiridir; isimden önce our gerekir."
+      - "Us :: Us nesne zamiridir (bizi, bize)."
+    explanation: "We → our: \"Our house\" = bizim evimiz."
+  - id: q.a1.possessive.03
+    type: fill_blank
+    prompt: "I have a cat. ___ name is Pamuk."
+    answers: [Its, Her, His]
+    explanation: "Hayvanlar için genellikle its kullanılır. Cinsiyeti bilinen evcil hayvanlar için his ya da her da doğrudur."
+  - id: q.a1.possessive.04
+    type: fill_blank
+    prompt: "They are students. ___ school is near here."
+    answers: [Their]
+    explanation: "They → their (onların)."
+  - id: q.a1.possessive.05
+    type: nuance
+    difficulty: 2
+    prompt: "\"___ cold today, and the cat is in ___ bed.\""
+    options:
+      - "*It's / its :: İlk boşluk \"it is\" (hava soğuk), ikinci boşluk iyelik (kendi yatağı)."
+      - "Its / it's :: Tam tersi: \"its cold\" olmaz; \"in it is bed\" de anlamsızdır."
+      - "It's / it's :: İkinci boşlukta sahiplik gerekir; it's \"it is\" demektir."
+      - "Its / its :: İlk boşlukta fiil gerekir: it is = it's."
+    explanation: "It's = it is. Its = onun. Emin olamazsanız yerine \"it is\" koyup deneyin; anlamlıysa it's yazılır."
+  - id: q.a1.possessive.06
+    type: error_correction
+    prompt: "The my sister is a nurse."
+    answers: ["My sister is a nurse."]
+    explanation: "İyelik sıfatından önce the, a ya da an kullanılmaz."
+  - id: q.a1.possessive.07
+    type: matching
+    prompt: "Özne zamirlerini iyelik sıfatlarıyla eşleştirin."
+    pairs:
+      - [I, my]
+      - [he, his]
+      - [she, her]
+      - [we, our]
+      - [they, their]
+    explanation: "Her özne zamirinin bir iyelik sıfatı vardır."
+  - id: q.a1.possessive.08
+    type: translation
+    prompt: "Onların çocukları okulda."
+    answers: ["Their children are at school.", "Their kids are at school.", "Their children are in school."]
+    explanation: "Onların = their. Children çoğul olduğu için fiil are olur."

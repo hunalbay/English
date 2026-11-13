@@ -1,0 +1,129 @@
+id: gram.a1.have-got
+kind: grammar
+level: A1
+title_tr: "Sahip olmak: have ve have got"
+title_en: "Have / have got"
+objective_tr: Bu dersin sonunda have ve have got ile neye sahip olduğunuzu söyleyebilecek, olumsuz ve soru cümleleri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.possessive-adjectives]
+next: [gram.a1.present-simple]
+vocabulary: [have, brother, sister, car]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Have** ve **have got** "sahip olmak" demektir ve aynı anlamı taşır: "I **have** a car." = "I**'ve got** a car." (Bir arabam var.)
+
+      Türkçede "var / yok" ile kurduğumuz sahiplik cümleleri İngilizcede bir **fiille** kurulur: "Benim bir kardeşim var." → "I **have** a brother."
+
+      **Have got** özellikle İngiliz İngilizcesinde ve konuşma dilinde yaygındır. **Have** her yerde kullanılır ve daha geneldir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      He / she / it ile **has** kullanılır. İki yapının olumsuz ve soru biçimleri farklıdır; ikisini birbirine karıştırmayın.
+    table:
+      headers: ["", have, have got]
+      rows:
+        - [Olumlu, I have a car., "I have got a car. / I've got a car."]
+        - [Olumlu (he/she/it), She has a car., "She has got a car. / She's got a car."]
+        - [Olumsuz, "I don't have a car.", "I haven't got a car."]
+        - [Olumsuz (he/she/it), "She doesn't have a car.", "She hasn't got a car."]
+        - [Soru, "Do you have a car?", "Have you got a car?"]
+        - ["Soru (he/she/it)", "Does she have a car?", "Has she got a car?"]
+        - [Kısa cevap, "Yes, I do. / No, I don't.", "Yes, I have. / No, I haven't."]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Eşya ve mal:** "I have a new phone."
+
+      **Aile ve arkadaşlar:** "She has two brothers."
+
+      **Görünüş:** "He has blue eyes."
+
+      **Hastalık:** "I have a headache."
+
+      **Dikkat:** Yemek, duş, tatil gibi **eylemlerde** yalnızca have kullanılır, have got kullanılmaz: "I **have** breakfast at eight." (I have got breakfast değil.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have two sisters.", tr: "İki kız kardeşim var."}
+      - {en: "She has got long hair.", tr: "Onun uzun saçları var."}
+      - {en: "We don't have a garden.", tr: "Bahçemiz yok."}
+      - {en: "He hasn't got a car.", tr: "Onun arabası yok."}
+      - {en: "Do you have a pen? — Yes, I do.", tr: "Kalemin var mı? — Evet, var."}
+      - {en: "Has she got a dog? — No, she hasn't.", tr: "Onun köpeği var mı? — Hayır, yok."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She have a brother.", tr: "Onun bir erkek kardeşi var.", wrong: true, correction: "She has a brother.", note_tr: "He, she, it ile has kullanılır."}
+      - {en: "I haven't a car.", tr: "Arabam yok.", wrong: true, correction: "I don't have a car.", note_tr: "Ya \"don't have\" ya da \"haven't got\" denir."}
+      - {en: "Do you have got a pen?", tr: "Kalemin var mı?", wrong: true, correction: "Have you got a pen?", note_tr: "Have got ile do kullanılmaz."}
+      - {en: "She doesn't has a phone.", tr: "Onun telefonu yok.", wrong: true, correction: "She doesn't have a phone.", note_tr: "Doesn't'tan sonra fiil yalın gelir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İki yapıyı karıştırmak.** "Do you have got...?" ya da "I don't have got..." yanlıştır. Ya **do + have** ya da **have + got** kullanın.
+
+      **Doesn't'tan sonra has kullanmak.** Yardımcı fiil zaten üçüncü tekil kişiyi gösterir: "He doesn't **have**."
+
+      **Yaşı have ile söylemek.** "I have 20 years" yanlıştır; yaş "to be" ile söylenir: "I **am** 20."
+questions:
+  - id: q.a1.have-got.01
+    type: multiple_choice
+    prompt: "My brother ___ a new job."
+    options:
+      - "*has :: \"My brother\" = he; he / she / it ile has kullanılır."
+      - "have :: Have; I, you, we, they ile kullanılır."
+      - "is :: Sahiplik için to be değil, have kullanılır."
+      - "haves :: Böyle bir biçim yoktur; have'in üçüncü tekil kişi biçimi has'tir."
+    explanation: "He / she / it → has."
+  - id: q.a1.have-got.02
+    type: multiple_choice
+    prompt: "___ you got a pen?"
+    options:
+      - "*Have :: Have got yapısında soru, have başa alınarak yapılır."
+      - "Do :: Do yalnızca have ile kullanılır: \"Do you have a pen?\" — burada got var."
+      - "Are :: To be sahiplik sorusunda kullanılmaz."
+      - "Has :: Has; he, she, it ile kullanılır; özne you."
+    explanation: "Have you got...? ya da Do you have...? — ikisi birbirine karıştırılmaz."
+  - id: q.a1.have-got.03
+    type: fill_blank
+    prompt: "She ___ have a car. (olumsuz)"
+    answers: ["doesn't", "does not"]
+    explanation: "Have ile olumsuz, don't / doesn't ile yapılır. She → doesn't."
+  - id: q.a1.have-got.04
+    type: fill_blank
+    prompt: "We ___ got a garden. (olumsuz)"
+    answers: ["haven't", "have not"]
+    explanation: "Have got ile olumsuz: haven't / hasn't + got."
+  - id: q.a1.have-got.05
+    type: error_correction
+    prompt: "He doesn't has a phone."
+    answers: ["He doesn't have a phone.", "He does not have a phone."]
+    explanation: "Doesn't'tan sonra fiil yalın hâlde gelir: have."
+  - id: q.a1.have-got.06
+    type: dialogue_completion
+    context: "A: Do you have a brother?\nB: ___"
+    prompt: "Doğru kısa cevap hangisi?"
+    options:
+      - "*Yes, I do. :: Soru do ile soruldu; kısa cevap da do ile verilir."
+      - "Yes, I have. :: Bu kısa cevap \"Have you got...?\" sorusuna verilir."
+      - "Yes, I am. :: Am, to be sorularının cevabıdır."
+      - "Yes, I does. :: Does; he, she, it ile kullanılır."
+    explanation: "Kısa cevapta sorudaki yardımcı fiil tekrarlanır."
+  - id: q.a1.have-got.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümlede \"have got\" KULLANILAMAZ?"
+    options:
+      - "*I ___ breakfast at seven. :: Burada have bir eylem (kahvaltı etmek) bildirir; have got yalnızca sahiplik içindir."
+      - "I ___ two sisters. :: Sahiplik: \"I have got two sisters\" doğrudur."
+      - "She ___ blue eyes. :: Görünüş: \"She has got blue eyes\" doğrudur."
+      - "We ___ a big house. :: Sahiplik: \"We have got a big house\" doğrudur."
+    explanation: "Have got yalnızca sahiplik anlamında kullanılır. \"Have breakfast / a shower / a good time\" gibi eylem kalıplarında yalnızca have kullanılır."
+  - id: q.a1.have-got.08
+    type: translation
+    prompt: "İki erkek kardeşim var."
+    answers: ["I have two brothers.", "I have got two brothers.", "I've got two brothers."]
+    explanation: "Türkçedeki \"var\" burada have ile karşılanır. Two'dan sonra isim çoğul olur."

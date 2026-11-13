@@ -1,0 +1,130 @@
+id: gram.a1.plural-nouns
+kind: grammar
+level: A1
+title_tr: İsimlerin çoğul hâli
+title_en: Plural nouns
+objective_tr: Bu dersin sonunda isimleri -s, -es, -ies ekleriyle çoğul yapabilecek ve en sık kullanılan düzensiz çoğulları tanıyacaksınız.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.articles-a-an]
+next: [gram.a1.this-that]
+vocabulary: [child, man, woman, tooth, foot, box, city, baby]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İngilizcede birden fazla şeyden söz ederken isim çoğul yapılır. Çoğu ismin sonuna **-s** eklenir: one book → two **books**.
+
+      Türkçeden önemli bir fark vardır: Türkçede sayıdan sonra isim tekil kalır ("iki kitap"), İngilizcede ise sayıdan sonra isim **çoğul** olur: "two **books**".
+  - kind: formula
+    title_tr: Yazım kuralları
+    table:
+      headers: [Sözcüğün sonu, Kural, Örnek]
+      rows:
+        - [çoğu isim, "+ -s", "car → cars, dog → dogs"]
+        - ["-s, -ss, -sh, -ch, -x", "+ -es", "bus → buses, watch → watches, box → boxes"]
+        - ["ünsüz + y", "y → -ies", "city → cities, baby → babies"]
+        - ["ünlü + y", "+ -s", "day → days, boy → boys"]
+        - ["-f / -fe", "çoğu zaman → -ves", "knife → knives, wife → wives"]
+        - ["-o (bazı sözcükler)", "+ -es", "tomato → tomatoes, potato → potatoes"]
+  - kind: exceptions
+    title_tr: Düzensiz çoğullar
+    text_tr: |-
+      Bazı isimler -s almaz; çoğul biçimleri ezberlenir.
+
+      Bazı isimlerin tekili ve çoğulu aynıdır: one **sheep** → two **sheep**, one **fish** → two **fish**.
+    table:
+      headers: [Tekil, Çoğul, Türkçe]
+      rows:
+        - [man, men, adam / adamlar]
+        - [woman, women, kadın / kadınlar]
+        - [child, children, çocuk / çocuklar]
+        - [person, people, kişi / insanlar]
+        - [tooth, teeth, diş / dişler]
+        - [foot, feet, ayak / ayaklar]
+        - [mouse, mice, fare / fareler]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have two brothers.", tr: "İki erkek kardeşim var."}
+      - {en: "There are three boxes on the table.", tr: "Masanın üstünde üç kutu var."}
+      - {en: "The children are in the garden.", tr: "Çocuklar bahçede."}
+      - {en: "Big cities are noisy.", tr: "Büyük şehirler gürültülüdür."}
+      - {en: "My feet are cold.", tr: "Ayaklarım üşüdü."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I have two book.", tr: "İki kitabım var.", wrong: true, correction: "I have two books.", note_tr: "Sayıdan sonra isim çoğul olur."}
+      - {en: "The childs are happy.", tr: "Çocuklar mutlu.", wrong: true, correction: "The children are happy.", note_tr: "Child düzensizdir."}
+      - {en: "Three womans work here.", tr: "Burada üç kadın çalışıyor.", wrong: true, correction: "Three women work here.", note_tr: "Woman → women."}
+      - {en: "They are goods students.", tr: "Onlar iyi öğrenciler.", wrong: true, correction: "They are good students.", note_tr: "Sıfatlar çoğul eki almaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sayıdan sonra tekil kullanmak.** Türkçe düşünerek "five apple" demek en yaygın hatadır. Doğrusu: "five **apples**".
+
+      **Sıfatı çoğul yapmak.** İngilizcede sıfatlar değişmez: "two **big** houses" (bigs değil).
+
+      **Düzensiz çoğullara -s eklemek.** "childrens", "mens", "peoples" yanlıştır; bu sözcükler zaten çoğuldur.
+
+      **Çoğul isimle a / an kullanmak.** A / an yalnızca tekil isimlerle kullanılır: "a car" ama "cars".
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Çevrenizdeki nesneleri sayın: one chair, two chairs; one window, three windows. Düzensiz çoğulları tekil–çoğul çiftleri hâlinde sesli tekrar edin: man–men, child–children, foot–feet.
+questions:
+  - id: q.a1.plural.01
+    type: multiple_choice
+    prompt: "I have three ___."
+    options:
+      - "*sisters :: Sayıdan (three) sonra isim çoğul olur."
+      - "sister :: Türkçede \"üç kız kardeş\" denir; İngilizcede sayıdan sonra çoğul gerekir."
+      - "sisteres :: Sister -s, -sh, -ch, -x ile bitmez; yalnızca -s alır."
+      - "a sister :: A \"bir tane\" demektir; three ile birlikte kullanılamaz."
+    explanation: "İngilizcede sayıdan sonra gelen isim çoğul yapılır: three sisters."
+  - id: q.a1.plural.02
+    type: multiple_choice
+    prompt: "The ___ are playing in the park."
+    options:
+      - "*children :: Child sözcüğünün çoğulu düzensizdir: children."
+      - "childs :: Child düzensiz bir isimdir; -s almaz."
+      - "childrens :: Children zaten çoğuldur; üstüne -s eklenmez."
+      - "child :: Fiil \"are\" olduğu için özne çoğul olmalıdır."
+    explanation: "Düzensiz çoğul: child → children."
+    vocabulary: [child]
+  - id: q.a1.plural.03
+    type: fill_blank
+    prompt: "one city → two ___"
+    answers: [cities]
+    explanation: "Ünsüz + y ile biten isimlerde y düşer, -ies gelir: city → cities."
+  - id: q.a1.plural.04
+    type: fill_blank
+    prompt: "one box → three ___"
+    answers: [boxes]
+    explanation: "-x, -s, -sh, -ch ile biten isimler -es alır: box → boxes."
+  - id: q.a1.plural.05
+    type: matching
+    prompt: "Tekil isimleri çoğullarıyla eşleştirin."
+    pairs:
+      - [man, men]
+      - [tooth, teeth]
+      - [foot, feet]
+      - [person, people]
+    explanation: "Bu isimlerin çoğulu -s ile yapılmaz; biçimleri ezberlenir."
+  - id: q.a1.plural.06
+    type: error_correction
+    prompt: "She has two baby."
+    answers: ["She has two babies."]
+    explanation: "Two'dan sonra çoğul gerekir. Baby ünsüz + y ile bittiği için babies olur."
+  - id: q.a1.plural.07
+    type: true_false
+    prompt: "They are goods friends."
+    options:
+      - "Doğru :: İngilizcede sıfatlar çoğul eki almaz."
+      - "*Yanlış :: Sıfat (good) değişmez; yalnızca isim çoğul olur: \"They are good friends.\""
+    explanation: "Sıfatlar tekil ve çoğul isimlerle aynı biçimde kullanılır."
+  - id: q.a1.plural.08
+    type: word_formation
+    prompt: "There are two ___ (woman) in the office."
+    answers: [women]
+    explanation: "Woman → women. Yazılışta yalnızca bir harf değişir, okunuşta ise ilk hece de değişir."

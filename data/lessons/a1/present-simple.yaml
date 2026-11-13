@@ -1,0 +1,132 @@
+id: gram.a1.present-simple
+kind: grammar
+level: A1
+title_tr: "Geniş zaman: olumlu cümleler"
+title_en: "Present Simple: affirmative"
+objective_tr: Bu dersin sonunda alışkanlıklarınızı, günlük işlerinizi ve genel doğruları Present Simple ile anlatabilecek, he / she / it ile fiile -s ekleyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.to-be-present]
+next: [gram.a1.present-simple-negative-questions]
+vocabulary: [work, live, go, study, watch, play]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Present Simple**, Türkçedeki geniş zamana (-r / -ar / -er) benzer. **Her zaman, genellikle ya da düzenli olarak** yapılan işleri ve **genel doğruları** anlatır: "I **work** in a bank." (Bir bankada çalışırım / çalışıyorum.)
+
+      Dikkat: Türkçede "Bir bankada çalışıyorum" derken şimdiki zaman ekini kullanırız, ama kastettiğimiz kalıcı bir durumdur. İngilizcede kalıcı durumlar ve alışkanlıklar için Present Simple kullanılır.
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Alışkanlıklar ve tekrarlanan işler:** "I get up at seven every day."
+
+      **Kalıcı durumlar:** "She lives in Izmir."
+
+      **Genel doğrular:** "The sun rises in the east."
+
+      **Tarifeler ve programlar:** "The train leaves at nine."
+
+      Sık kullanılan zaman ifadeleri: every day, every week, on Mondays, in the morning, always, usually, often, sometimes, never.
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      **I / you / we / they** + fiilin yalın hâli
+
+      **he / she / it** + fiil + **-s / -es**
+    table:
+      headers: ["Fiilin sonu", "Kural (he / she / it)", "Örnek"]
+      rows:
+        - ["çoğu fiil", "+ -s", "work → works, live → lives, play → plays"]
+        - ["-s, -ss, -sh, -ch, -x, -o", "+ -es", "watch → watches, go → goes, wash → washes"]
+        - ["ünsüz + y", "y → -ies", "study → studies, try → tries"]
+        - ["düzensiz", "ezberlenir", "have → has"]
+  - kind: positive
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I work in an office.", tr: "Bir ofiste çalışıyorum."}
+      - {en: "You speak English very well.", tr: "Çok iyi İngilizce konuşuyorsun."}
+      - {en: "He works in a hospital.", tr: "O bir hastanede çalışıyor."}
+      - {en: "She watches TV in the evening.", tr: "O akşamları televizyon izler."}
+      - {en: "My sister studies medicine.", tr: "Kız kardeşim tıp okuyor."}
+      - {en: "We live in a small town.", tr: "Küçük bir kasabada yaşıyoruz."}
+      - {en: "They play football on Sundays.", tr: "Pazarları futbol oynarlar."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She work in a bank.", tr: "O bir bankada çalışıyor.", wrong: true, correction: "She works in a bank.", note_tr: "He, she, it ile fiil -s alır."}
+      - {en: "I works every day.", tr: "Her gün çalışırım.", wrong: true, correction: "I work every day.", note_tr: "I ile fiil -s almaz."}
+      - {en: "He gos to school by bus.", tr: "Okula otobüsle gider.", wrong: true, correction: "He goes to school by bus.", note_tr: "-o ile biten fiiller -es alır."}
+      - {en: "My father is work in a factory.", tr: "Babam bir fabrikada çalışıyor.", wrong: true, correction: "My father works in a factory.", note_tr: "Asıl fiilin önüne is gelmez."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Üçüncü tekil kişide -s'yi unutmak.** En yaygın hatadır. Tek bir kişi ya da şey özneyse (he, she, it, my mother, the bus) fiil **-s** alır.
+
+      **"To be" ile asıl fiili birlikte kullanmak.** "I am work" ya da "She is works" yanlıştır. Ya to be kullanılır ya da asıl fiil: "I work."
+
+      **Kalıcı durumlar için -ing kullanmak.** "I am living in Ankara" yerine, sürekli orada yaşıyorsanız "I **live** in Ankara" deyin.
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "I get up at seven and have breakfast.", tr: "Yedide kalkar ve kahvaltı ederim."}
+      - {en: "My mother makes great soup.", tr: "Annem harika çorba yapar."}
+      - {en: "The shop opens at nine and closes at six.", tr: "Dükkân dokuzda açılır, altıda kapanır."}
+      - {en: "We visit my grandparents every weekend.", tr: "Her hafta sonu büyükannemle dedemi ziyaret ederiz."}
+questions:
+  - id: q.a1.present-simple.01
+    type: multiple_choice
+    prompt: "She ___ in a hospital."
+    options:
+      - "*works :: She üçüncü tekil kişidir; fiil -s alır."
+      - "work :: Yalın hâl I, you, we, they ile kullanılır."
+      - "is work :: Asıl fiilin önüne is gelmez."
+      - "working :: -ing biçimi tek başına fiil olamaz; ayrıca burada kalıcı bir durum anlatılıyor."
+    explanation: "He / she / it + fiil + -s."
+    example: {en: "He lives in Ankara.", tr: "O Ankara'da yaşıyor."}
+  - id: q.a1.present-simple.02
+    type: multiple_choice
+    prompt: "My parents ___ in Bursa."
+    options:
+      - "*live :: \"My parents\" çoğuldur (= they); fiil yalın kalır."
+      - "lives :: -s yalnızca he, she, it ile kullanılır."
+      - "is live :: To be ile asıl fiil birlikte kullanılmaz."
+      - "are live :: To be ile asıl fiil birlikte kullanılmaz."
+    explanation: "Çoğul özneler (they) ile fiil -s almaz."
+  - id: q.a1.present-simple.03
+    type: word_formation
+    prompt: "He ___ (watch) TV every evening."
+    answers: [watches]
+    explanation: "-ch ile biten fiiller -es alır: watch → watches."
+  - id: q.a1.present-simple.04
+    type: word_formation
+    prompt: "My sister ___ (study) English at university."
+    answers: [studies]
+    explanation: "Ünsüz + y ile biten fiillerde y düşer, -ies gelir: study → studies."
+  - id: q.a1.present-simple.05
+    type: word_formation
+    prompt: "Tom ___ (have) two brothers."
+    answers: [has]
+    explanation: "Have fiilinin üçüncü tekil kişi biçimi düzensizdir: has."
+  - id: q.a1.present-simple.06
+    type: error_correction
+    prompt: "My father work in a factory."
+    answers: ["My father works in a factory."]
+    explanation: "\"My father\" = he; fiil -s alır."
+  - id: q.a1.present-simple.07
+    type: true_false
+    prompt: "I am work in a bank."
+    options:
+      - "Doğru :: Am ile asıl fiil yan yana kullanılamaz."
+      - "*Yanlış :: Present Simple'da am / is / are kullanılmaz: \"I work in a bank.\""
+    explanation: "\"To be\" ve asıl fiil aynı cümlede birlikte kullanılmaz (Present Continuous'taki be + -ing yapısı ayrı bir konudur)."
+  - id: q.a1.present-simple.08
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [We, play, football, "on", Sundays]
+    explanation: "Sıra: özne + fiil + nesne + zaman ifadesi."
+  - id: q.a1.present-simple.09
+    type: translation
+    prompt: "O (erkek) İzmir'de yaşıyor."
+    answers: ["He lives in Izmir.", "He lives in İzmir."]
+    explanation: "Kalıcı bir durum olduğu için Present Simple kullanılır; he ile fiil -s alır."

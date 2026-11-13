@@ -1,0 +1,121 @@
+id: gram.a1.adverbs-of-frequency
+kind: grammar
+level: A1
+title_tr: Sıklık zarfları
+title_en: Adverbs of frequency
+objective_tr: Bu dersin sonunda always, usually, often, sometimes, never ile bir işi ne sıklıkla yaptığınızı söyleyebilecek ve bu sözcükleri cümlede doğru yere koyabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple-negative-questions]
+next: [gram.a1.question-words]
+vocabulary: [always, usually, often, never, once, twice]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Sıklık zarfları bir işin **ne sıklıkla** yapıldığını gösterir ve çoğunlukla Present Simple ile kullanılır.
+    table:
+      headers: ["Zarf", "Türkçe", "Yaklaşık sıklık"]
+      rows:
+        - ["always", "her zaman", "%100"]
+        - ["usually", "genellikle", "%80"]
+        - ["often", "sık sık", "%60"]
+        - ["sometimes", "bazen", "%40"]
+        - ["rarely / hardly ever", "nadiren / neredeyse hiç", "%10"]
+        - ["never", "asla, hiç", "%0"]
+  - kind: formula
+    title_tr: Cümledeki yeri
+    text_tr: |-
+      **Asıl fiilden önce:** "I **always** get up early."
+
+      **To be fiilinden sonra:** "She is **always** late."
+
+      **Yardımcı fiil ile asıl fiil arasında:** "I don't **usually** eat breakfast.", "Do you **often** go out?"
+
+      **Sometimes** ve **usually** cümlenin başına da gelebilir: "**Sometimes** I walk to work."
+  - kind: usage
+    title_tr: Diğer sıklık ifadeleri
+    text_tr: |-
+      Sıklığı tam olarak söyleyen ifadeler cümlenin **sonuna** gelir: every day, once a week, twice a month, three times a year.
+
+      Sıklığı sormak için **How often...?** kullanılır: "**How often** do you go to the cinema?" — "Once a month."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I always drink tea in the morning.", tr: "Sabahları her zaman çay içerim."}
+      - {en: "He usually goes to work by bus.", tr: "İşe genellikle otobüsle gider."}
+      - {en: "We often eat out at weekends.", tr: "Hafta sonları sık sık dışarıda yeriz."}
+      - {en: "She is never late.", tr: "O asla geç kalmaz."}
+      - {en: "They are usually at home in the evening.", tr: "Akşamları genellikle evdedirler."}
+      - {en: "I go to the gym twice a week.", tr: "Haftada iki kez spor salonuna giderim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I go always to work by car.", tr: "İşe her zaman arabayla giderim.", wrong: true, correction: "I always go to work by car.", note_tr: "Zarf asıl fiilden önce gelir."}
+      - {en: "She always is tired.", tr: "O her zaman yorgundur.", wrong: true, correction: "She is always tired.", note_tr: "To be'den sonra gelir."}
+      - {en: "I don't never eat meat.", tr: "Asla et yemem.", wrong: true, correction: "I never eat meat.", note_tr: "Never zaten olumsuzdur; don't ile birlikte kullanılmaz."}
+      - {en: "He never go out.", tr: "O hiç dışarı çıkmaz.", wrong: true, correction: "He never goes out.", note_tr: "Araya zarf girse de fiil -s alır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Çift olumsuzluk.** Türkçede "Asla et ye**mem**" derken fiil olumsuzdur; İngilizcede **never** ile fiil **olumlu** kalır: "I **never eat** meat."
+
+      **Zarfı fiilden sonraya koymak.** "I drink always tea" yanlıştır. Zarf asıl fiilin **önüne** gelir.
+
+      **To be ile sırayı karıştırmak.** Asıl fiilden önce, ama am / is / are'dan **sonra**: "I am **often** tired."
+questions:
+  - id: q.a1.frequency.01
+    type: multiple_choice
+    prompt: "Hangi cümle doğrudur?"
+    options:
+      - "*I always get up at seven. :: Sıklık zarfı asıl fiilden önce gelir."
+      - "I get always up at seven. :: Zarf fiilin (get up) ortasına girmez."
+      - "I get up always at seven. :: Always fiilden sonra gelmez."
+      - "Always I get up at seven. :: Always cümlenin başında kullanılmaz (sometimes ve usually kullanılabilir)."
+    explanation: "Özne + sıklık zarfı + asıl fiil."
+  - id: q.a1.frequency.02
+    type: multiple_choice
+    prompt: "Hangi cümle doğrudur?"
+    options:
+      - "*She is never late. :: To be fiilinden sonra sıklık zarfı gelir."
+      - "She never is late. :: To be ile sıra tersine döner: is + never."
+      - "She is late never. :: Never cümlenin sonuna gelmez."
+      - "She doesn't never late. :: Çift olumsuzluk ve yanlış yardımcı fiil."
+    explanation: "Am / is / are + sıklık zarfı."
+  - id: q.a1.frequency.03
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [He, usually, goes, to, work, by, bus]
+    explanation: "Usually asıl fiilden önce gelir: özne + usually + fiil."
+  - id: q.a1.frequency.04
+    type: error_correction
+    prompt: "I don't never drink coffee."
+    answers: ["I never drink coffee."]
+    explanation: "Never cümleyi zaten olumsuz yapar; fiil olumlu kalır."
+  - id: q.a1.frequency.05
+    type: fill_blank
+    prompt: "___ often do you go to the cinema? — Once a month."
+    answers: [How]
+    explanation: "Sıklık \"How often...?\" ile sorulur."
+  - id: q.a1.frequency.06
+    type: matching
+    prompt: "Zarfları anlamlarıyla eşleştirin."
+    pairs:
+      - [always, her zaman]
+      - [usually, genellikle]
+      - [sometimes, bazen]
+      - [never, asla]
+    explanation: "Bu dört zarf sıklığı en çoktan en aza doğru sıralar."
+  - id: q.a1.frequency.07
+    type: true_false
+    prompt: "He never go out on Mondays."
+    options:
+      - "Doğru :: He ile fiil -s almalıdır."
+      - "*Yanlış :: Araya zarf girse de he ile fiil -s alır: \"He never goes out on Mondays.\""
+    explanation: "Sıklık zarfı fiilin çekimini değiştirmez."
+    lessons: [gram.a1.present-simple]
+  - id: q.a1.frequency.08
+    type: translation
+    prompt: "Haftada iki kez spor salonuna giderim."
+    answers: ["I go to the gym twice a week.", "I go to the gym two times a week."]
+    explanation: "\"Twice a week\" gibi tam sıklık ifadeleri cümlenin sonuna gelir."

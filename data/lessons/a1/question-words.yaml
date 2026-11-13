@@ -1,0 +1,132 @@
+id: gram.a1.question-words
+kind: grammar
+level: A1
+title_tr: Soru sözcükleri
+title_en: "Question words (Wh- questions)"
+objective_tr: Bu dersin sonunda what, where, when, who, why, how gibi soru sözcükleriyle bilgi isteyen sorular kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple-negative-questions]
+next: [gram.a1.object-pronouns]
+vocabulary: [what, where, when, who, why, how, which, whose]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Evet / hayır sorularının dışında, **bilgi isteyen** sorular bir soru sözcüğüyle başlar. Bu sözcüklerin çoğu "wh" ile başladığı için bu sorulara "Wh- questions" denir.
+    table:
+      headers: ["Soru sözcüğü", "Türkçe", "Ne sorulur?", "Örnek"]
+      rows:
+        - ["What", "ne", "şey, bilgi", "What is your name?"]
+        - ["Where", "nerede, nereye", "yer", "Where do you live?"]
+        - ["When", "ne zaman", "zaman", "When is your birthday?"]
+        - ["Who", "kim", "kişi", "Who is that man?"]
+        - ["Why", "neden", "sebep", "Why are you late?"]
+        - ["How", "nasıl", "biçim, durum", "How are you?"]
+        - ["Which", "hangi", "seçenekler arasından", "Which bus goes to the center?"]
+        - ["Whose", "kimin", "sahiplik", "Whose bag is this?"]
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      **To be ile:** soru sözcüğü + am / is / are + özne → "Where **are** you?"
+
+      **Diğer fiillerle:** soru sözcüğü + do / does + özne + yalın fiil → "Where **do** you **live**?"
+
+      Türkçede soru sözcüğü cümlenin ortasında durabilir ("Sen nerede yaşıyorsun?"); İngilizcede **her zaman başa** gelir.
+  - kind: usage
+    title_tr: "How ile kurulan sorular"
+    table:
+      headers: ["Kalıp", "Türkçe", "Örnek"]
+      rows:
+        - ["How old", "kaç yaşında", "How old are you?"]
+        - ["How much", "ne kadar (fiyat, sayılamayan)", "How much is this?"]
+        - ["How many", "kaç tane (sayılabilen)", "How many brothers do you have?"]
+        - ["How often", "ne sıklıkla", "How often do you travel?"]
+        - ["How long", "ne kadar süre", "How long is the film?"]
+        - ["What time", "saat kaçta", "What time does the lesson start?"]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "What do you do? — I am a nurse.", tr: "Ne iş yapıyorsun? — Hemşireyim.", note_tr: "\"What do you do?\" meslek sorar."}
+      - {en: "Where does she work? — In a bank.", tr: "O nerede çalışıyor? — Bir bankada."}
+      - {en: "When do you get up? — At seven.", tr: "Ne zaman kalkarsın? — Yedide."}
+      - {en: "Why do you study English? — Because I need it for my job.", tr: "Neden İngilizce çalışıyorsun? — Çünkü işim için gerekli."}
+      - {en: "How many languages do you speak?", tr: "Kaç dil konuşuyorsun?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Where you live?", tr: "Nerede yaşıyorsun?", wrong: true, correction: "Where do you live?", note_tr: "Do yardımcı fiili gerekir."}
+      - {en: "What does she does?", tr: "O ne iş yapıyor?", wrong: true, correction: "What does she do?", note_tr: "Does'tan sonra fiil yalın gelir."}
+      - {en: "You are from where?", tr: "Nerelisin?", wrong: true, correction: "Where are you from?", note_tr: "Soru sözcüğü başa gelir."}
+      - {en: "How many money do you have?", tr: "Ne kadar paran var?", wrong: true, correction: "How much money do you have?", note_tr: "Money sayılamaz; how much kullanılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Yardımcı fiili atlamak.** "Where you work?" yanlıştır. Soru sözcüğünden sonra **do / does** ya da **am / is / are** gelmelidir.
+
+      **Who ile how'u karıştırmak.** Who = kim, how = nasıl. Okunuşları da farklıdır: "hu" ve "hau".
+
+      **"What do you do?" sorusunu yanlış anlamak.** Bu soru "Şu an ne yapıyorsun?" değil, "Mesleğin ne?" demektir.
+questions:
+  - id: q.a1.question-words.01
+    type: multiple_choice
+    prompt: "___ do you live? — In Izmir."
+    options:
+      - "*Where :: Cevap bir yer bildiriyor; yer where ile sorulur."
+      - "What :: What bir şeyi ya da bilgiyi sorar, yeri değil."
+      - "When :: When zaman sorar."
+      - "Who :: Who kişi sorar."
+    explanation: "Cevaba bakın: \"In Izmir\" bir yer → Where."
+  - id: q.a1.question-words.02
+    type: multiple_choice
+    prompt: "___ is your birthday? — In May."
+    options:
+      - "*When :: Cevap bir zaman bildiriyor; zaman when ile sorulur."
+      - "Where :: Where yer sorar."
+      - "How :: How biçim ya da durum sorar."
+      - "Whose :: Whose sahiplik sorar."
+    explanation: "\"In May\" bir zaman → When."
+  - id: q.a1.question-words.03
+    type: multiple_choice
+    difficulty: 2
+    prompt: "How ___ brothers do you have?"
+    options:
+      - "*many :: Brothers sayılabilen çoğul bir isimdir; how many kullanılır."
+      - "much :: How much sayılamayan isimler ve fiyat için kullanılır."
+      - "old :: How old yaş sorar."
+      - "often :: How often sıklık sorar."
+    explanation: "Sayılabilen çoğul isim → How many. Sayılamayan isim ya da fiyat → How much."
+  - id: q.a1.question-words.04
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Where, does, she, work, "?"]
+    explanation: "Sıra: soru sözcüğü + does + özne + yalın fiil."
+  - id: q.a1.question-words.05
+    type: error_correction
+    prompt: "What time the lesson starts?"
+    answers: ["What time does the lesson start?"]
+    explanation: "Soru sözcüğünden sonra does gelir ve asıl fiil yalın kalır."
+  - id: q.a1.question-words.06
+    type: matching
+    prompt: "Soruları cevaplarıyla eşleştirin."
+    pairs:
+      - ["Who is she?", "My sister."]
+      - ["Why are you tired?", "Because I work a lot."]
+      - ["How old is he?", "He is ten."]
+      - ["Whose car is that?", "It's Tom's."]
+    explanation: "Her soru sözcüğü farklı türde bir bilgi ister: kişi, sebep, yaş, sahip."
+  - id: q.a1.question-words.07
+    type: nuance
+    difficulty: 2
+    prompt: "\"What do you do?\" sorusuna en uygun cevap hangisi?"
+    options:
+      - "*I am a teacher. :: \"What do you do?\" mesleği sorar."
+      - "I am reading a book. :: Bu, \"What are you doing?\" (Şu an ne yapıyorsun?) sorusunun cevabıdır."
+      - "I am fine, thanks. :: Bu, \"How are you?\" sorusunun cevabıdır."
+      - "Yes, I do. :: Bu kısa cevap evet / hayır sorularına verilir."
+    explanation: "\"What do you do?\" = Ne iş yapıyorsun? \"What are you doing?\" = Şu an ne yapıyorsun?"
+  - id: q.a1.question-words.08
+    type: translation
+    prompt: "Nerelisin?"
+    answers: ["Where are you from?", "Where do you come from?"]
+    explanation: "\"Where are you from?\" kalıbında from cümlenin sonunda yer alır."

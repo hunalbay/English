@@ -1,0 +1,123 @@
+id: gram.a1.this-that
+kind: grammar
+level: A1
+title_tr: "İşaret sözcükleri: this, that, these, those"
+title_en: "Demonstratives: this / that / these / those"
+objective_tr: Bu dersin sonunda yakındaki ve uzaktaki, tekil ve çoğul şeyleri this, that, these, those ile gösterebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.plural-nouns]
+next: [gram.a1.possessive-adjectives]
+vocabulary: [this, that, here, there]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir şeyi gösterirken iki şeye bakarız: **yakın mı, uzak mı?** ve **tek mi, çok mu?**
+
+      Türkçedeki "bu / şu / o" üçlüsünün yerine İngilizcede iki uzaklık basamağı vardır: yakın (**this / these**) ve uzak (**that / those**).
+    table:
+      headers: ["", Yakın (here), Uzak (there)]
+      rows:
+        - [Tekil, this — bu, that — şu / o]
+        - [Çoğul, these — bunlar, those — şunlar / onlar]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **İsimle birlikte:** "**This** book is new." (Bu kitap yeni.) — isim çoğulsa işaret sözcüğü de çoğul olur: "**These** books are new."
+
+      **Tek başına:** "**This** is my room." (Bu benim odam.), "**Those** are my shoes." (Şunlar benim ayakkabılarım.)
+
+      **Fiil uyumu:** this / that → **is**; these / those → **are**.
+
+      **Tanıştırırken ve telefonda:** "**This** is my friend Ayşe." / "Hello, **this** is Tom."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "This is my phone.", tr: "Bu benim telefonum."}
+      - {en: "That is my school.", tr: "Şurası benim okulum."}
+      - {en: "These are my keys.", tr: "Bunlar benim anahtarlarım."}
+      - {en: "Those are our neighbors.", tr: "Şunlar bizim komşularımız."}
+      - {en: "Is that your car?", tr: "Şu senin araban mı?"}
+      - {en: "How much are these shoes?", tr: "Bu ayakkabılar ne kadar?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This books are old.", tr: "Bu kitaplar eski.", wrong: true, correction: "These books are old.", note_tr: "Çoğul isimle these kullanılır."}
+      - {en: "These is my bag.", tr: "Bu benim çantam.", wrong: true, correction: "This is my bag.", note_tr: "Tekil isim → this + is."}
+      - {en: "Those is my friends.", tr: "Şunlar benim arkadaşlarım.", wrong: true, correction: "Those are my friends.", note_tr: "Those çoğuldur; are alır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Çoğul isimle "this" kullanmak.** Türkçede "bu kitaplar" derken "bu" değişmez; İngilizcede ise değişir: "**these** books".
+
+      **This ile these'i aynı okumak.** This kısa "i" ile, these uzun "ii" ve "z" sesiyle okunur.
+
+      **Fiili uydurmamak.** These / those her zaman **are** alır.
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Excuse me, is this seat free?", tr: "Affedersiniz, bu koltuk boş mu?"}
+      - {en: "Who is that man?", tr: "Şu adam kim?"}
+      - {en: "I like these. How much are they?", tr: "Bunları beğendim. Ne kadar?"}
+      - {en: "That is a good idea!", tr: "Bu iyi bir fikir!", note_tr: "Az önce söylenen bir şey için that kullanılır."}
+questions:
+  - id: q.a1.this-that.01
+    type: multiple_choice
+    prompt: "(Elinizdeki kalemi göstererek) ___ is my pen."
+    options:
+      - "*This :: Yakındaki tekil bir nesne için this kullanılır."
+      - "That :: That uzaktaki tekil nesneler içindir; kalem elinizde."
+      - "These :: These çoğuldur; tek bir kalem var."
+      - "Those :: Those uzaktaki çoğul nesneler içindir."
+    explanation: "Yakın + tekil = this."
+  - id: q.a1.this-that.02
+    type: multiple_choice
+    prompt: "(Uzaktaki evleri göstererek) ___ houses are very old."
+    options:
+      - "*Those :: Uzaktaki çoğul nesneler için those kullanılır."
+      - "That :: That tekildir; houses çoğul."
+      - "These :: These yakındaki çoğul nesneler içindir."
+      - "This :: This yakın ve tekildir."
+    explanation: "Uzak + çoğul = those."
+  - id: q.a1.this-that.03
+    type: fill_blank
+    prompt: "___ are my keys here on the table."
+    answers: [These]
+    explanation: "Keys çoğul, \"here\" yakınlık bildirir: these."
+  - id: q.a1.this-that.04
+    type: error_correction
+    prompt: "This shoes are new."
+    answers: ["These shoes are new."]
+    explanation: "Shoes çoğul bir isimdir; this yerine these gerekir."
+  - id: q.a1.this-that.05
+    type: true_false
+    prompt: "Those is my friends."
+    options:
+      - "Doğru :: Those çoğuldur ve is ile kullanılamaz."
+      - "*Yanlış :: Those çoğuldur; fiil are olmalıdır: \"Those are my friends.\""
+    explanation: "This / that → is; these / those → are."
+  - id: q.a1.this-that.06
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Is, that, your, car, "?"]
+    explanation: "Soruda is başa gelir: Is + that + ...?"
+  - id: q.a1.this-that.07
+    type: matching
+    prompt: "Sözcükleri anlamlarıyla eşleştirin."
+    pairs:
+      - [this, "bu (yakın, tekil)"]
+      - [that, "şu / o (uzak, tekil)"]
+      - [these, "bunlar (yakın, çoğul)"]
+      - [those, "şunlar (uzak, çoğul)"]
+    explanation: "İki soru sorulur: yakın mı uzak mı, tekil mi çoğul mu?"
+  - id: q.a1.this-that.08
+    type: dialogue_completion
+    context: "A: (telefonda) Hello?\nB: Hello, ___ Ayşe. Is Tom there?"
+    prompt: "B kendini nasıl tanıtır?"
+    options:
+      - "*this is :: Telefonda kendini tanıtırken \"This is ...\" kalıbı kullanılır."
+      - "I am :: Yüz yüze \"I am Ayşe\" denir; telefonda alışılmış kalıp \"This is Ayşe\"dir."
+      - "these are :: These çoğuldur; tek bir kişi konuşuyor."
+      - "that is :: That karşıdaki kişi için kullanılır: \"Is that Tom?\""
+    explanation: "Telefonda: \"This is Ayşe.\" (Ben Ayşe.) / \"Is that Tom?\" (Tom musun?)"

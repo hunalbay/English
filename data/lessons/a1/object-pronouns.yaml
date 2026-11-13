@@ -1,0 +1,125 @@
+id: gram.a1.object-pronouns
+kind: grammar
+level: A1
+title_tr: "Nesne zamirleri: me, you, him, her..."
+title_en: Object pronouns
+objective_tr: Bu dersin sonunda me, you, him, her, it, us, them zamirlerini fiilden ve edattan sonra doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.subject-pronouns, gram.a1.possessive-adjectives]
+vocabulary: [me, him, her, us, them]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Özne zamirleri işi **yapanı**, nesne zamirleri ise işten **etkileneni** gösterir: "**I** love **him**." (Ben onu seviyorum.)
+
+      Türkçede bu fark eklerle gösterilir (ben → ben**i**, ban**a**); İngilizcede ise zamirin kendisi değişir. Tek bir nesne zamiri Türkçedeki birkaç hâli karşılar: **me** = beni, bana, benden, benimle.
+    table:
+      headers: ["Özne", "Nesne", "Türkçe", "Örnek"]
+      rows:
+        - ["I", "me", "beni, bana", "Can you help me?"]
+        - ["you", "you", "seni, sana", "I love you."]
+        - ["he", "him", "onu, ona (erkek)", "I know him."]
+        - ["she", "her", "onu, ona (kadın)", "Call her."]
+        - ["it", "it", "onu, ona (nesne)", "I like it."]
+        - ["we", "us", "bizi, bize", "Come with us."]
+        - ["they", "them", "onları, onlara", "I see them every day."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Fiilden sonra:** "She knows **me**.", "I like **them**."
+
+      **Edattan sonra** (with, for, to, at, about...): "Come with **me**.", "This is for **you**.", "Look at **him**."
+
+      **Kısa cevaplarda ve "to be"den sonra konuşma dilinde:** "Who is it? — It's **me**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Can you help me, please?", tr: "Bana yardım edebilir misin, lütfen?"}
+      - {en: "This is Tom. Do you know him?", tr: "Bu Tom. Onu tanıyor musun?"}
+      - {en: "My sister lives in Ankara. I visit her every month.", tr: "Kız kardeşim Ankara'da yaşıyor. Onu her ay ziyaret ederim."}
+      - {en: "Where are my keys? I can't find them.", tr: "Anahtarlarım nerede? Onları bulamıyorum."}
+      - {en: "Our teacher gives us a lot of homework.", tr: "Öğretmenimiz bize çok ödev verir."}
+      - {en: "I like this song. Do you like it?", tr: "Bu şarkıyı seviyorum. Sen seviyor musun?"}
+  - kind: comparison
+    title_tr: "Her: iki farklı görev"
+    text_tr: |-
+      **Her** hem iyelik sıfatı hem nesne zamiridir. Kendisinden sonra bir isim geliyorsa iyelik sıfatıdır ("**her** bag" = onun çantası); gelmiyorsa nesne zamiridir ("I know **her**" = onu tanıyorum).
+
+      Erkekler için bu ikisi ayrıdır: **his** bag (onun çantası) / I know **him** (onu tanıyorum).
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I love she.", tr: "Onu seviyorum.", wrong: true, correction: "I love her.", note_tr: "Fiilden sonra nesne zamiri gelir."}
+      - {en: "Come with I.", tr: "Benimle gel.", wrong: true, correction: "Come with me.", note_tr: "Edattan sonra nesne zamiri gelir."}
+      - {en: "I like very much it.", tr: "Onu çok seviyorum.", wrong: true, correction: "I like it very much.", note_tr: "Nesne fiilden hemen sonra gelir."}
+      - {en: "Me like pizza.", tr: "Pizza severim.", wrong: true, correction: "I like pizza.", note_tr: "Özne konumunda I kullanılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Fiilden sonra özne zamiri kullanmak.** "I see he" yanlıştır; "I see **him**."
+
+      **Nesneyi atlamak.** Türkçede "Seviyorum." denebilir; İngilizcede "like", "love", "want" gibi fiiller nesne ister: "I like **it**."
+
+      **Them yerine they.** "I know they" değil, "I know **them**."
+questions:
+  - id: q.a1.object-pronouns.01
+    type: multiple_choice
+    prompt: "This is my brother. Do you know ___?"
+    options:
+      - "*him :: Fiilden (know) sonra nesne zamiri gelir; erkek için him."
+      - "he :: He özne zamiridir; fiilden sonra kullanılmaz."
+      - "his :: His iyelik sıfatıdır ve bir isimden önce gelir."
+      - "her :: Her bir kadın için kullanılır."
+    explanation: "Fiilden sonra nesne zamiri: know + him."
+  - id: q.a1.object-pronouns.02
+    type: multiple_choice
+    prompt: "Are you going to the cinema? Can I come with ___?"
+    options:
+      - "*you :: Edattan (with) sonra nesne zamiri gelir; you'nun nesne biçimi yine you'dur."
+      - "your :: Your iyelik sıfatıdır; bir isimden önce gelir."
+      - "yours :: Yours \"seninki\" demektir."
+      - "I :: I özne zamiridir; edattan sonra kullanılmaz."
+    explanation: "Edat + nesne zamiri: with you, with me, with them."
+  - id: q.a1.object-pronouns.03
+    type: fill_blank
+    prompt: "Where are my glasses? I can't find ___."
+    answers: [them]
+    explanation: "Glasses çoğuldur; çoğul nesne zamiri them'dir."
+  - id: q.a1.object-pronouns.04
+    type: fill_blank
+    prompt: "We are lost. Can you help ___?"
+    answers: [us]
+    explanation: "We → us (bizi, bize)."
+  - id: q.a1.object-pronouns.05
+    type: error_correction
+    prompt: "She loves he."
+    answers: ["She loves him."]
+    explanation: "Fiilden sonra özne zamiri (he) değil, nesne zamiri (him) kullanılır."
+  - id: q.a1.object-pronouns.06
+    type: matching
+    prompt: "Özne zamirlerini nesne zamirleriyle eşleştirin."
+    pairs:
+      - [I, me]
+      - [he, him]
+      - [she, her]
+      - [we, us]
+      - [they, them]
+    explanation: "You ve it nesne konumunda da değişmez."
+  - id: q.a1.object-pronouns.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümlede \"her\" bir nesne zamiridir?"
+    options:
+      - "*I call her every day. :: Her fiilden sonra tek başına duruyor: \"onu\"."
+      - "Her car is red. :: Her bir isimden (car) önce geliyor: \"onun arabası\" — iyelik sıfatı."
+      - "This is her brother. :: Her bir isimden (brother) önce geliyor — iyelik sıfatı."
+      - "Her name is Elif. :: Her bir isimden (name) önce geliyor — iyelik sıfatı."
+    explanation: "Her'den sonra isim geliyorsa iyelik sıfatıdır; gelmiyorsa nesne zamiridir."
+    lessons: [gram.a1.possessive-adjectives]
+  - id: q.a1.object-pronouns.08
+    type: translation
+    prompt: "Bu hediye senin için."
+    answers: ["This gift is for you.", "This present is for you."]
+    explanation: "Edattan (for) sonra nesne zamiri gelir: for you."

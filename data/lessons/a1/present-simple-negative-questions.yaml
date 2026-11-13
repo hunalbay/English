@@ -1,0 +1,134 @@
+id: gram.a1.present-simple-negative-questions
+kind: grammar
+level: A1
+title_tr: "Geniş zaman: olumsuz ve soru cümleleri"
+title_en: "Present Simple: negatives and questions"
+objective_tr: Bu dersin sonunda do / does yardımcı fiilleriyle Present Simple'da olumsuz cümle ve soru kurabilecek, kısa cevap verebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple]
+next: [gram.a1.adverbs-of-frequency]
+vocabulary: [do, like, speak, know]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Present Simple'da olumsuz cümle ve soru kurmak için bir **yardımcı fiil** gerekir: **do** (I, you, we, they) ve **does** (he, she, it).
+
+      En önemli kural: Yardımcı fiil kullanıldığında **asıl fiil yalın hâlde** kalır. Üçüncü tekil kişinin -s'si artık does'un üzerindedir: "She work**s**." → "She **does**n't work." → "**Does** she work?"
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["", "I / you / we / they", "he / she / it"]
+      rows:
+        - ["Olumsuz", "I don't work.", "She doesn't work."]
+        - ["Soru", "Do you work?", "Does she work?"]
+        - ["Kısa cevap (+)", "Yes, I do.", "Yes, she does."]
+        - ["Kısa cevap (−)", "No, I don't.", "No, she doesn't."]
+  - kind: negative
+    title_tr: Olumsuz cümleler
+    examples:
+      - {en: "I don't like coffee.", tr: "Kahve sevmem."}
+      - {en: "We don't live here.", tr: "Biz burada yaşamıyoruz."}
+      - {en: "He doesn't speak Turkish.", tr: "O Türkçe konuşmuyor."}
+      - {en: "She doesn't have a car.", tr: "Onun arabası yok."}
+      - {en: "The shop doesn't open on Sundays.", tr: "Dükkân pazarları açılmaz."}
+  - kind: question
+    title_tr: Soru cümleleri
+    examples:
+      - {en: "Do you speak English? — Yes, I do.", tr: "İngilizce konuşuyor musun? — Evet, konuşuyorum."}
+      - {en: "Do they live near here? — No, they don't.", tr: "Buraya yakın mı oturuyorlar? — Hayır."}
+      - {en: "Does he work on Saturdays? — Yes, he does.", tr: "Cumartesileri çalışıyor mu? — Evet, çalışıyor."}
+      - {en: "Does your mother like tea? — No, she doesn't.", tr: "Annen çay sever mi? — Hayır, sevmez."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She doesn't works here.", tr: "O burada çalışmıyor.", wrong: true, correction: "She doesn't work here.", note_tr: "Doesn't'tan sonra fiil yalın gelir."}
+      - {en: "Does he likes football?", tr: "Futbol sever mi?", wrong: true, correction: "Does he like football?", note_tr: "Does'tan sonra fiil -s almaz."}
+      - {en: "I not like fish.", tr: "Balık sevmem.", wrong: true, correction: "I don't like fish.", note_tr: "Olumsuzluk için don't gerekir."}
+      - {en: "You speak English?", tr: "İngilizce konuşuyor musun?", wrong: true, correction: "Do you speak English?", note_tr: "Soru do ile başlar."}
+      - {en: "He don't know.", tr: "Bilmiyor.", wrong: true, correction: "He doesn't know.", note_tr: "He ile doesn't kullanılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Çift -s.** "Does she works?" ya da "He doesn't likes" yanlıştır. -s ya does'ta ya fiilde olur; ikisinde birden olmaz.
+
+      **Yardımcı fiili atlamak.** Türkçede soru "mı / mi" ile yapılır; İngilizcede soru **do / does** ile başlar: "**Do** you like tea?"
+
+      **"To be" cümlelerinde do kullanmak.** "Do you are tired?" yanlıştır. To be kendi sorusunu kendisi yapar: "**Are** you tired?"
+  - kind: comparison
+    title_tr: "To be mi, do / does mu?"
+    table:
+      headers: ["Cümlede asıl fiil", "Olumsuz", "Soru"]
+      rows:
+        - ["to be (am / is / are)", "She isn't a doctor.", "Is she a doctor?"]
+        - ["başka bir fiil (work, like...)", "She doesn't work.", "Does she work?"]
+questions:
+  - id: q.a1.ps-neg-q.01
+    type: multiple_choice
+    prompt: "She ___ like coffee."
+    options:
+      - "*doesn't :: She üçüncü tekil kişidir; olumsuzluk doesn't ile yapılır."
+      - "don't :: Don't; I, you, we, they ile kullanılır."
+      - "isn't :: Isn't to be'nin olumsuzudur; \"like\" gibi bir fiille kullanılmaz."
+      - "not :: Not tek başına fiili olumsuz yapamaz; yardımcı fiil gerekir."
+    explanation: "He / she / it + doesn't + yalın fiil."
+  - id: q.a1.ps-neg-q.02
+    type: multiple_choice
+    prompt: "___ your brother play football?"
+    options:
+      - "*Does :: \"Your brother\" = he; soru does ile başlar."
+      - "Do :: Do; I, you, we, they ile kullanılır."
+      - "Is :: Is, asıl fiili to be olan cümlelerde kullanılır; burada asıl fiil play."
+      - "Are :: Are çoğul öznelerle ve to be cümlelerinde kullanılır."
+    explanation: "Soru: Does + he / she / it + yalın fiil?"
+  - id: q.a1.ps-neg-q.03
+    type: multiple_choice
+    prompt: "Does he ___ in Istanbul?"
+    options:
+      - "*live :: Does'tan sonra fiil yalın hâlde gelir."
+      - "lives :: -s zaten does'ta var; fiile ikinci kez eklenmez."
+      - "living :: -ing biçimi does ile kullanılmaz."
+      - "is live :: Does ile to be birlikte kullanılmaz."
+    explanation: "Yardımcı fiil kullanıldığında asıl fiil -s almaz."
+  - id: q.a1.ps-neg-q.04
+    type: fill_blank
+    prompt: "We ___ work on Sundays. (olumsuz)"
+    answers: ["don't", "do not"]
+    explanation: "We → don't."
+  - id: q.a1.ps-neg-q.05
+    type: error_correction
+    prompt: "He doesn't likes fish."
+    answers: ["He doesn't like fish.", "He does not like fish."]
+    explanation: "Doesn't'tan sonra fiil yalın gelir: like."
+  - id: q.a1.ps-neg-q.06
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Do, you, speak, English, "?"]
+    explanation: "Sıra: Do + özne + yalın fiil + ...?"
+  - id: q.a1.ps-neg-q.07
+    type: dialogue_completion
+    context: "A: Does your sister live in Ankara?\nB: ___ She lives in Izmir."
+    prompt: "B'nin kısa cevabı hangisi?"
+    options:
+      - "*No, she doesn't. :: Soru does ile soruldu; olumsuz kısa cevap doesn't ile verilir."
+      - "No, she isn't. :: Isn't, to be sorularının cevabıdır."
+      - "No, she don't. :: She ile don't kullanılmaz."
+      - "No, she doesn't live. :: Kısa cevapta asıl fiil tekrarlanmaz."
+    explanation: "Kısa cevap: Yes, she does. / No, she doesn't."
+  - id: q.a1.ps-neg-q.08
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi soru doğru kurulmuştur?"
+    options:
+      - "*Are you tired? :: Asıl fiil to be olduğunda soru to be ile yapılır."
+      - "Do you are tired? :: To be cümlelerinde do kullanılmaz."
+      - "Do you tired? :: Tired bir sıfattır; fiil olarak to be gerekir."
+      - "Does you tired? :: You ile does kullanılmaz; ayrıca fiil eksik."
+    explanation: "Sıfat ya da isimle biten cümlelerde (tired, a doctor) to be kullanılır; eylem bildiren fiillerde do / does."
+    lessons: [gram.a1.to-be-present]
+  - id: q.a1.ps-neg-q.09
+    type: translation
+    prompt: "Et yemem."
+    answers: ["I don't eat meat.", "I do not eat meat."]
+    explanation: "Olumsuz: I + don't + yalın fiil."

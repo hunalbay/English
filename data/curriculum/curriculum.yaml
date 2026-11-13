@@ -29,3 +29,27 @@ units:
       - gram.a1.subject-pronouns
       - gram.a1.to-be-present
       - gram.a1.articles-a-an
+
+  - id: a1.u02
+    level: A1
+    title_tr: İsimler ve sahiplik
+    title_en: Nouns and possession
+    description_tr: Çoğul isimler, işaret sözcükleri ve sahipliği anlatmanın yolları.
+    lessons:
+      - gram.a1.plural-nouns
+      - gram.a1.this-that
+      - gram.a1.possessive-adjectives
+      - gram.a1.possessive-s
+      - gram.a1.have-got
+
+  - id: a1.u03
+    level: A1
+    title_tr: Günlük hayat
+    title_en: Everyday life
+    description_tr: Geniş zamanla alışkanlıklarınızı anlatın, soru sorun ve sıklık bildirin.
+    lessons:
+      - gram.a1.present-simple
+      - gram.a1.present-simple-negative-questions
+      - gram.a1.adverbs-of-frequency
+      - gram.a1.question-words
+      - gram.a1.object-pronouns
