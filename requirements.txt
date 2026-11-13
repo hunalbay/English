@@ -1,0 +1,9 @@
+# Çalışma zamanı bağımlılıkları (sürümler sabitlenmiştir)
+fastapi==0.162.5
+uvicorn==0.54.0
+SQLAlchemy==2.1.8
+alembic==1.20.1
+pydantic==2.14.3
+# Sistem tepsisi simgesi (yalnızca Windows paketinde kullanılır)
+pystray==0.19.5; sys_platform == "win32"
+pillow==13.0.0; sys_platform == "win32"
