@@ -118,6 +118,90 @@ class LessonFile(Strict):
     related: list[str] = Field(default_factory=list)
     vocabulary: list[str] = Field(default_factory=list, description="İlgili kelimelerin temel biçimleri")
     sections: list[Section] = Field(min_length=1)
+    questions: list[Question] = Field(default_factory=list)
+
+
+QuestionType = Literal[
+    "multiple_choice", "true_false", "fill_blank", "sentence_building", "word_order", "matching",
+    "translation", "written_answer", "error_spotting", "error_correction", "sentence_completion",
+    "dialogue_completion", "reading_comprehension", "listening_comprehension", "word_in_context",
+    "word_formation", "paragraph_completion", "nuance",
+]
+
+# Soru tipi -> değerlendirici. "choice": tek doğru seçenek; "text": kabul edilen cevap listesi;
+# "order": sözcük sıralama; "matching": eşleştirme; "self": örnek cevapla öz değerlendirme.
+EVALUATORS: dict[str, str] = {
+    "multiple_choice": "choice", "true_false": "choice", "error_spotting": "choice",
+    "sentence_completion": "choice", "dialogue_completion": "choice", "reading_comprehension": "choice",
+    "listening_comprehension": "choice", "word_in_context": "choice", "paragraph_completion": "choice",
+    "nuance": "choice",
+    "fill_blank": "text", "sentence_building": "text", "error_correction": "text", "word_formation": "text",
+    "translation": "text",
+    "word_order": "order", "matching": "matching", "written_answer": "self",
+}
+
+DEFAULT_INSTRUCTIONS: dict[str, str] = {
+    "multiple_choice": "Doğru seçeneği işaretleyin.",
+    "true_false": "Cümle dil bilgisi açısından doğru mu, yanlış mı?",
+    "fill_blank": "Boşluğu uygun biçimde doldurun.",
+    "sentence_building": "Verilen sözcükleri kullanarak tam bir İngilizce cümle yazın.",
+    "word_order": "Sözcükleri doğru sıraya dizin.",
+    "matching": "Soldaki her öğeyi sağdaki uygun karşılığıyla eşleştirin.",
+    "translation": "Cümleyi İngilizceye çevirin.",
+    "written_answer": "Soruyu İngilizce tam cümlelerle cevaplayın.",
+    "error_spotting": "Cümlede hatalı olan bölümü seçin.",
+    "error_correction": "Cümledeki hatayı düzeltip cümleyi yeniden yazın.",
+    "sentence_completion": "Cümleyi en uygun biçimde tamamlayan seçeneği işaretleyin.",
+    "dialogue_completion": "Diyaloğu en uygun biçimde tamamlayan seçeneği işaretleyin.",
+    "reading_comprehension": "Metni okuyun ve soruyu cevaplayın.",
+    "listening_comprehension": "Kaydı dinleyin ve soruyu cevaplayın.",
+    "word_in_context": "Cümleye en uygun kelimeyi seçin.",
+    "word_formation": "Parantez içindeki kelimenin uygun biçimini yazın.",
+    "paragraph_completion": "Paragraftaki boşluğa en uygun seçeneği işaretleyin.",
+    "nuance": "Anlam farkına dikkat ederek doğru seçeneği işaretleyin.",
+}
+
+
+class QuestionExample(Strict):
+    en: str = NonEmpty
+    tr: str = NonEmpty
+
+
+class Question(Strict):
+    """Soru tanımı.
+
+    Seçenekli tiplerde `options` satırları "metin :: açıklama" biçimindedir; doğru seçenek `*` ile başlar.
+    Yazılı tiplerde `answers` kabul edilen cevapları listeler. `grading: strict` büyük/küçük harf ve
+    noktalama farkını da değerlendirir.
+    """
+
+    id: str = Field(pattern=ID_PATTERN)
+    type: QuestionType
+    difficulty: int = Field(default=1, ge=1, le=5)
+    prompt: str = NonEmpty
+    context: str | None = None
+    instruction_tr: str | None = None
+    options: list[str] = Field(default_factory=list)
+    answers: list[str] = Field(default_factory=list)
+    grading: Literal["normalized", "strict"] = "normalized"
+    tokens: list[str] = Field(default_factory=list, description="word_order: doğru sıradaki sözcükler")
+    also: list[list[str]] = Field(default_factory=list, description="word_order: kabul edilen diğer sıralar")
+    pairs: list[tuple[str, str]] = Field(default_factory=list, description="matching: [sol, sağ] çiftleri")
+    model_answers: list[str] = Field(default_factory=list, description="öz değerlendirme için örnek cevaplar")
+    checklist: list[str] = Field(default_factory=list)
+    explanation: str = NonEmpty
+    example: QuestionExample | None = None
+    lessons: list[str] = Field(default_factory=list, description="ilgili diğer dersler")
+    vocabulary: list[str] = Field(default_factory=list)
+
+    def parsed_options(self) -> list[tuple[str, bool, str]]:
+        """(metin, doğru mu, açıklama) üçlüleri."""
+        parsed = []
+        for raw in self.options:
+            text, separator, why = raw.partition(" :: ")
+            correct = text.startswith("*")
+            parsed.append((text[1:].strip() if correct else text.strip(), correct, why.strip() if separator else ""))
+        return parsed
 
 
 class Meaning(Strict):

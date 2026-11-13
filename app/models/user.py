@@ -4,7 +4,18 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, CheckConstraint, DateTime, Float, Index, Integer, String, Text, UniqueConstraint
+from sqlalchemy import (
+    Boolean,
+    CheckConstraint,
+    DateTime,
+    Float,
+    ForeignKey,
+    Index,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.user_db import UserBase
@@ -122,3 +133,44 @@ class ReviewHistory(UserBase):
     interval_before: Mapped[int | None] = mapped_column(Integer)
     interval_after: Mapped[int | None] = mapped_column(Integer)
     reviewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+
+class TestSession(UserBase):
+    """Bir test oturumu. question_ids, oturuma seçilen soru kimliklerinin JSON listesidir."""
+
+    __tablename__ = "test_sessions"
+    __table_args__ = (
+        CheckConstraint("kind IN ('lesson','level','mixed')", name="ck_test_sessions_kind"),
+        Index("ix_test_sessions_started", "started_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    kind: Mapped[str] = mapped_column(String(16), nullable=False)
+    lesson_id: Mapped[str | None] = mapped_column(String(120))
+    level: Mapped[str | None] = mapped_column(String(2))
+    question_ids: Mapped[str] = mapped_column(Text, nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class UserAnswer(UserBase):
+    """Bir soruya verilen cevap ve sonucu."""
+
+    __tablename__ = "user_answers"
+    __table_args__ = (
+        UniqueConstraint("session_id", "question_id", name="uq_user_answers_session_question"),
+        CheckConstraint(
+            "result IN ('correct','incorrect','ungraded','self_correct','self_partial','self_incorrect')",
+            name="ck_user_answers_result",
+        ),
+        Index("ix_user_answers_question", "question_id"),
+        Index("ix_user_answers_lesson", "lesson_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    session_id: Mapped[int] = mapped_column(ForeignKey("test_sessions.id", ondelete="CASCADE"), nullable=False)
+    question_id: Mapped[str] = mapped_column(String(120), nullable=False)
+    lesson_id: Mapped[str] = mapped_column(String(120), nullable=False)
+    answer_json: Mapped[str] = mapped_column(Text, nullable=False)
+    result: Mapped[str] = mapped_column(String(16), nullable=False)
+    answered_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)

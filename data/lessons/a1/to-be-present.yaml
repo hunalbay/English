@@ -122,3 +122,94 @@ sections:
       Kendinizle ilgili beş cümle kurun: adınız, yaşınız, mesleğiniz, memleketiniz ve şu anki ruh hâliniz. Sonra aynı cümleleri bir yakınınız için he ya da she ile kurun.
 
       Her olumlu cümleyi önce olumsuza, sonra soruya çevirerek çalışın: "She is at home." → "She isn't at home." → "Is she at home?"
+questions:
+  - id: q.a1.to-be.01
+    type: multiple_choice
+    prompt: "She ___ a teacher."
+    options:
+      - "*is :: He, she, it ile is kullanılır."
+      - "am :: Am yalnızca I ile kullanılır: I am."
+      - "are :: Are; you, we, they ile kullanılır."
+      - "be :: Be fiilin yalın hâlidir; özneye göre çekimlenmesi gerekir."
+    explanation: "Kural: I → am; he / she / it → is; you / we / they → are."
+    example: {en: "He is a student.", tr: "O bir öğrenci."}
+  - id: q.a1.to-be.02
+    type: multiple_choice
+    prompt: "My parents ___ at home."
+    options:
+      - "*are :: \"My parents\" çoğuldur (= they); çoğul öznelerle are kullanılır."
+      - "is :: Is tekil öznelerle kullanılır: My mother is at home."
+      - "am :: Am yalnızca I ile kullanılır."
+      - "be :: Be çekimlenmeden kullanılamaz."
+    explanation: "Çoğul bir isim they gibi davranır ve are alır."
+  - id: q.a1.to-be.03
+    type: fill_blank
+    prompt: "I ___ twenty years old."
+    answers: [am, "'m"]
+    explanation: "İngilizcede yaş \"to be\" ile söylenir: I am twenty years old. \"I have twenty years\" yanlıştır."
+  - id: q.a1.to-be.04
+    type: fill_blank
+    prompt: "We ___ (not) late."
+    answers: ["are not", "aren't", "'re not"]
+    explanation: "Olumsuzluk için am / is / are'dan sonra not gelir. Kısa biçimi: aren't."
+  - id: q.a1.to-be.05
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Are, you, a, student, "?"]
+    explanation: "Soruda am / is / are özneden önceye alınır: Are + you + ...?"
+  - id: q.a1.to-be.06
+    type: error_correction
+    prompt: "I have 25 years old."
+    answers: ["I am 25 years old.", "I'm 25 years old."]
+    explanation: "Yaş bir sahiplik değil, bir durumdur; have ile değil to be ile söylenir."
+  - id: q.a1.to-be.07
+    type: true_false
+    prompt: "Yes, I'm."
+    options:
+      - "Doğru :: Olumlu kısa cevaplarda kısaltma yapılmaz."
+      - "*Yanlış :: Olumlu kısa cevapta kısaltma kullanılmaz. Doğrusu: \"Yes, I am.\""
+    explanation: "Kısaltma yalnızca olumsuz kısa cevaplarda kullanılır: \"No, I'm not.\" Olumluda tam biçim gerekir: \"Yes, I am.\""
+  - id: q.a1.to-be.08
+    type: dialogue_completion
+    context: "A: Is he a doctor?\nB: ___"
+    prompt: "B ne demeli?"
+    options:
+      - "*No, he isn't. :: Soru \"is he\" ile soruldu; kısa cevap aynı özne ve fiille verilir."
+      - "No, he aren't. :: He ile aren't kullanılmaz; he → is / isn't."
+      - "No, I'm not. :: Soru \"he\" hakkında; cevap \"I\" ile verilemez."
+      - "Yes, he's. :: Olumlu kısa cevapta kısaltma yapılmaz: \"Yes, he is.\""
+    explanation: "Kısa cevapta sorudaki özne ve fiil korunur: Is he...? → Yes, he is. / No, he isn't."
+  - id: q.a1.to-be.09
+    type: error_spotting
+    prompt: "Cümle: \"You (A) are (B) tired (C) ?\" — soru olarak yazılmak isteniyor."
+    options:
+      - "*Sözcük sırası (You are) :: Soruda are özneden önce gelmelidir: \"Are you tired?\""
+      - "tired :: Tired (yorgun) sıfatı doğru kullanılmış."
+      - "Soru işareti :: Soru cümlesinin sonunda soru işareti doğrudur."
+    explanation: "Türkçede soru \"mı / mi\" ile yapılır ve sıra değişmez; İngilizcede fiil öne geçer."
+  - id: q.a1.to-be.10
+    type: translation
+    prompt: "O (kadın) evde değil."
+    answers: ["She is not at home.", "She isn't at home.", "She's not at home.", "She is not home.", "She isn't home."]
+    explanation: "Olumsuz: özne + is + not. \"Evde\" = at home."
+  - id: q.a1.to-be.11
+    type: written_answer
+    difficulty: 2
+    prompt: "Kendinizi üç cümleyle tanıtın: adınız, yaşınız ve nereli olduğunuz."
+    model_answers:
+      - "I am Deniz. I am thirty years old. I am from Izmir."
+    checklist:
+      - "Her cümlede özne (I) var mı?"
+      - "Her cümlede am kullandınız mı?"
+      - "Yaşınızı \"I am ... years old\" kalıbıyla yazdınız mı?"
+      - "Cümleleri büyük harfle başlatıp noktayla bitirdiniz mi?"
+    explanation: "Kendini tanıtırken ad, yaş ve memleket \"I am ...\" kalıbıyla söylenir."
+  - id: q.a1.to-be.12
+    type: sentence_completion
+    prompt: "Where ___"
+    options:
+      - "*are you from? :: Soru sözcüğünden sonra fiil, sonra özne gelir: Where + are + you + from?"
+      - "you are from? :: Soruda are özneden önce gelmelidir."
+      - "is you from? :: You ile is kullanılmaz."
+      - "from are you? :: \"From\" bu kalıpta cümlenin sonunda yer alır."
+    explanation: "Soru sözcüklü sorularda sıra: soru sözcüğü + am / is / are + özne."

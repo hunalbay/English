@@ -56,6 +56,72 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.goBack();
   await page.getByText("Bu dersi tamamladınız.").waitFor();
 
+  // 4b) Konu testi: her soru tipinde cevap ver, açıklamaları ve ders bağlantısını doğrula
+  await page.getByRole("link", { name: "Konu testini çöz" }).click();
+  await page.getByRole("heading", { level: 1, name: /Konu testi/ }).waitFor();
+  const seenTypes = new Set();
+  for (let i = 0; i < 10; i += 1) {
+    await page.getByText(`Soru ${i + 1} / 10`).waitFor();
+    if (await page.locator(".options .btn").count()) {
+      seenTypes.add("choice");
+      const optionCount = await page.locator(".options .btn").count();
+      await page.locator(".options .btn").first().click();
+      await page.locator("#feedback").waitFor();
+      check((await page.locator(".option-reasons li").count()) === optionCount, "her seçenek için açıklama gösterilmedi");
+      check((await page.locator(".option-reasons li.is-right").count()) === 1, "doğru seçenek açıklamada işaretlenmedi");
+    } else if (await page.locator("#token-bank").count()) {
+      seenTypes.add("order");
+      check(await page.getByRole("button", { name: "Kontrol et" }).isDisabled(), "sıralama eksikken kontrol edilebiliyor");
+      const tokens = page.locator("#token-bank .btn");
+      const count = await tokens.count();
+      for (let t = 0; t < count; t += 1) await tokens.nth(t).click();
+      await page.getByRole("button", { name: "Kontrol et" }).click();
+      await page.locator("#feedback").waitFor();
+      check(await page.getByText("Doğru sıra:").isVisible(), "doğru sıra gösterilmedi");
+    } else if (await page.locator(".match-row").count()) {
+      seenTypes.add("matching");
+      for (const select of await page.locator(".match-row select").all()) await select.selectOption({ index: 1 });
+      await page.getByRole("button", { name: "Kontrol et" }).click();
+      await page.locator("#feedback").waitFor();
+    } else if (await page.locator("textarea#answer-input").count()) {
+      seenTypes.add("self");
+      await page.locator("textarea#answer-input").fill("I am Deniz. I am thirty years old. I am from Izmir.");
+      await page.getByRole("button", { name: /Cevabımı kaydet/ }).click();
+      await page.locator("#feedback").waitFor();
+      check(await page.getByText("Örnek cevap:").isVisible(), "örnek cevap gösterilmedi");
+      check(await page.getByText("Kontrol listesi:").isVisible(), "kontrol listesi gösterilmedi");
+      await page.getByRole("button", { name: "Doğruydu", exact: true }).click();
+      await page.getByText("Değerlendirmeniz kaydedildi.").waitFor();
+    } else {
+      seenTypes.add("text");
+      await page.locator("input#answer-input").fill("She is xyz");
+      await page.getByRole("button", { name: "Kontrol et" }).click();
+      await page.locator("#feedback").waitFor();
+      if (await page.locator("#self-rating").count()) {
+        check(await page.getByText("kesin olarak değerlendiremez").isVisible(), "değerlendirme sınırı açıklanmadı");
+        await page.getByRole("button", { name: "Yanlıştı", exact: true }).click();
+        await page.getByText("Değerlendirmeniz kaydedildi.").waitFor();
+      }
+    }
+    check(await page.getByText("Açıklama:").isVisible(), `soru ${i + 1}: açıklama gösterilmedi`);
+    check(await page.locator(".feedback-links a", { hasText: "İlgili ders:" }).first().isVisible(), `soru ${i + 1}: ders bağlantısı yok`);
+    check(await page.locator(".feedback-links a", { hasText: "Aynı konudan yeni sorular" }).isVisible(), "aynı konudan soru bağlantısı yok");
+    if (i === 0 && shots) await shot("test-feedback");
+    await page.locator("#next-question").click();
+  }
+  await page.locator("#test-summary").waitFor();
+  check(/10 sorudan \d+ doğru, \d+ yanlış\./.test(await page.locator("#test-summary").innerText()), "test özeti hatalı");
+  check(seenTypes.size >= 4, "testte yeterince farklı soru tipi görülmedi: " + [...seenTypes].join(","));
+  await menu.getByRole("link", { name: "Testler", exact: true }).click();
+  await heading("Testler").waitFor();
+  check((await page.locator("#test-history .list-item").count()) === 1, "test geçmişi görünmüyor");
+  check(await page.getByRole("link", { name: /karışık test/ }).isVisible(), "seviye testi bağlantısı yok");
+  await shot("tests");
+  await page.goto(url + "#/testler/C2");
+  await page.getByText("C2 seviyesi için sorular henüz eklenmedi.").waitFor();
+  await page.goto(url + "#/ders/gram.a1.to-be-present");
+  await page.getByText("Bu dersi tamamladınız.").waitFor();
+
   // 5) Dersten kelimeye, kelimeyi listeye ekle
   await page.locator(".chip", { hasText: "teacher" }).click();
   await heading("teacher").waitFor();
@@ -221,7 +287,7 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
 
   // 12) Küçük ekranda yatay taşma olmamalı
   await page.setViewportSize({ width: 375, height: 700 });
-  for (const hash of ["#/", "#/ders/gram.a1.to-be-present", "#/sozluk", "#/kelime/word.be", "#/ayarlar", "#/calis", "#/calis/kartlar/en_tr/level/A1", "#/calis/alistirma/matching/level/A1"]) {
+  for (const hash of ["#/", "#/ders/gram.a1.to-be-present", "#/sozluk", "#/kelime/word.be", "#/ayarlar", "#/calis", "#/calis/kartlar/en_tr/level/A1", "#/calis/alistirma/matching/level/A1", "#/testler", "#/test/ders/gram.a1.articles-a-an"]) {
     await page.goto(url + hash);
     await page.locator(`main[data-route="${hash.slice(1)}"]`).waitFor();
     check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `375px genişlikte taşma: ${hash}`);

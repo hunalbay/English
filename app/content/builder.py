@@ -20,6 +20,8 @@ from pydantic import ValidationError
 
 from app.content.schema import DDL, SCHEMA_VERSION
 from app.content.source_models import (
+    DEFAULT_INSTRUCTIONS,
+    EVALUATORS,
     CurriculumFile,
     LessonFile,
     SourcesFile,
@@ -28,7 +30,7 @@ from app.content.source_models import (
 )
 from app.content.text import english_tokens, fold_text, lemma_key, regular_inflections, word_id
 
-CONTENT_VERSION = "0.3.0"
+CONTENT_VERSION = "0.4.0"
 
 
 class ContentError(Exception):
@@ -270,6 +272,8 @@ def validate(content: Content) -> list[str]:
             if section.kind == "correct_incorrect" and not any(example.wrong for example in section.examples):
                 errors.append(f"{where}: '{section.title_tr}' bölümünde yanlış kullanım örneği yok")
 
+    errors.extend(_validate_questions(content))
+
     # Kelimeler
     seen_ids: dict[str, str] = {}
     for word in content.words.values():
@@ -306,6 +310,57 @@ def validate(content: Content) -> list[str]:
     return errors
 
 
+def _validate_questions(content: Content) -> list[str]:
+    errors: list[str] = []
+    seen: dict[str, str] = {}
+    for lesson in content.lessons.values():
+        for question in lesson.questions:
+            where = f"soru {question.id} ({lesson.id})"
+            if question.id in seen:
+                errors.append(f"{where}: soru kimliği yineleniyor (ilk kullanım: {seen[question.id]})")
+            seen[question.id] = lesson.id
+            evaluator = EVALUATORS[question.type]
+            if evaluator == "choice":
+                options = question.parsed_options()
+                expected = 2 if question.type == "true_false" else 3
+                if len(options) < expected or (question.type == "true_false" and len(options) != 2):
+                    errors.append(f"{where}: seçenek sayısı yetersiz ya da hatalı ({len(options)})")
+                if sum(1 for _, correct, _ in options if correct) != 1:
+                    errors.append(f"{where}: tam olarak bir doğru seçenek (* ile) işaretlenmelidir")
+                if any(not why for _, _, why in options):
+                    errors.append(f"{where}: her seçeneğin açıklaması olmalıdır (metin :: açıklama)")
+                texts = [text.lower() for text, _, _ in options]
+                if len(set(texts)) != len(texts):
+                    errors.append(f"{where}: yinelenen seçenek var")
+            elif evaluator == "text":
+                if not question.answers:
+                    errors.append(f"{where}: en az bir kabul edilen cevap (answers) gereklidir")
+                if question.type in ("fill_blank", "word_formation") and "___" not in question.prompt:
+                    errors.append(f"{where}: soru metninde boşluk (___) bulunmalıdır")
+            elif evaluator == "order":
+                if len(question.tokens) < 3:
+                    errors.append(f"{where}: en az üç sözcük (tokens) gereklidir")
+                for alternative in question.also:
+                    if sorted(alternative) != sorted(question.tokens):
+                        errors.append(f"{where}: 'also' sırası aynı sözcüklerden oluşmalıdır")
+            elif evaluator == "matching":
+                lefts = [left for left, _ in question.pairs]
+                rights = [right for _, right in question.pairs]
+                if len(question.pairs) < 3 or len(set(lefts)) != len(lefts) or len(set(rights)) != len(rights):
+                    errors.append(f"{where}: en az üç, birbirinden farklı eşleştirme çifti gereklidir")
+            elif evaluator == "self" and not question.model_answers:
+                errors.append(f"{where}: öz değerlendirme için örnek cevap (model_answers) gereklidir")
+            if question.type in ("reading_comprehension", "dialogue_completion", "paragraph_completion") and not question.context:
+                errors.append(f"{where}: bu soru tipi için metin (context) gereklidir")
+            for target in question.lessons:
+                if target not in content.lessons:
+                    errors.append(f"{where}: ilgili ders bulunamadı: {target}")
+            for lemma in question.vocabulary:
+                if lemma_key(lemma) not in content.words:
+                    errors.append(f"{where}: ilgili kelime sözlükte yok: '{lemma}'")
+    return errors
+
+
 def _contains(tokens: list[str], candidate: list[str]) -> bool:
     size = len(candidate)
     return any(tokens[i : i + size] == candidate for i in range(len(tokens) - size + 1))
@@ -330,7 +385,8 @@ def build(data_dir: Path, output: Path) -> dict[str, int]:
         conn.commit()
         counts = {
             table: conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]  # noqa: S608 (sabit tablo adları)
-            for table in ("units", "lessons", "lesson_sections", "vocabulary", "word_meanings", "example_sentences")
+            for table in ("units", "lessons", "lesson_sections", "questions", "vocabulary", "word_meanings",
+                          "example_sentences")
         }
         conn.execute("VACUUM")
     except Exception:
@@ -444,3 +500,45 @@ def _insert(conn: sqlite3.Connection, content: Content) -> None:
             "INSERT OR IGNORE INTO lesson_vocabulary VALUES (?, ?)",
             [(lesson.id, content.words[lemma_key(lemma)].id) for lemma in lesson.vocabulary],
         )
+    _insert_questions(conn, content)
+
+
+def _insert_questions(conn: sqlite3.Connection, content: Content) -> None:
+    for lesson in content.lessons.values():
+        for position, question in enumerate(lesson.questions, 1):
+            evaluator = EVALUATORS[question.type]
+            data: dict = {}
+            if evaluator == "order":
+                data = {"tokens": question.tokens, "also": question.also}
+            elif evaluator == "matching":
+                data = {"pairs": [list(pair) for pair in question.pairs]}
+            if question.model_answers:
+                data["model_answers"] = question.model_answers
+            if question.checklist:
+                data["checklist"] = question.checklist
+            conn.execute(
+                "INSERT INTO questions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                (question.id, lesson.id, position, lesson.level, question.type, evaluator,
+                 question.grading if evaluator == "text" else "none", question.difficulty, question.prompt,
+                 question.context, question.instruction_tr or DEFAULT_INSTRUCTIONS[question.type],
+                 question.explanation, question.example.en if question.example else None,
+                 question.example.tr if question.example else None,
+                 json.dumps(data, ensure_ascii=False) if data else None, lesson.source, lesson.review_status),
+            )
+            conn.executemany(
+                "INSERT INTO answer_options VALUES (?, ?, ?, ?, ?)",
+                [(question.id, i, text, int(correct), why)
+                 for i, (text, correct, why) in enumerate(question.parsed_options(), 1)],
+            )
+            conn.executemany(
+                "INSERT INTO accepted_answers VALUES (?, ?, ?)",
+                [(question.id, i, answer) for i, answer in enumerate(question.answers, 1)],
+            )
+            conn.executemany(
+                "INSERT OR IGNORE INTO question_lessons VALUES (?, ?)",
+                [(question.id, target) for target in question.lessons if target != lesson.id],
+            )
+            conn.executemany(
+                "INSERT OR IGNORE INTO question_vocabulary VALUES (?, ?)",
+                [(question.id, content.words[lemma_key(lemma)].id) for lemma in question.vocabulary],
+            )

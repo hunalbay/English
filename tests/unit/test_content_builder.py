@@ -171,3 +171,70 @@ def test_dictionary_has_at_least_5000_unique_base_words(content_db):
         assert conn.execute("SELECT COUNT(*) FROM vocabulary WHERE ipa IS NOT NULL").fetchone()[0] >= 4500
     finally:
         conn.close()
+
+
+LESSON_FILE = ("lessons", "a1", "to-be-present.yaml")
+
+
+def _edit_question(data_copy, index, change):
+    _edit(data_copy.joinpath(*LESSON_FILE), lambda doc: change(doc["questions"][index]))
+
+
+def test_question_needs_exactly_one_correct_option(data_copy):
+    _edit_question(data_copy, 0, lambda q: q.update(options=[o.lstrip("*") for o in q["options"]]))
+    assert "tam olarak bir doğru seçenek" in _errors(data_copy)
+
+
+def test_two_correct_options_rejected(data_copy):
+    _edit_question(data_copy, 0, lambda q: q.update(options=["*" + o.lstrip("*") for o in q["options"]]))
+    assert "tam olarak bir doğru seçenek" in _errors(data_copy)
+
+
+def test_every_option_needs_explanation(data_copy):
+    _edit_question(data_copy, 0, lambda q: q["options"].__setitem__(1, "am"))
+    assert "her seçeneğin açıklaması olmalıdır" in _errors(data_copy)
+
+
+def test_fill_blank_needs_blank_and_answer(data_copy):
+    _edit_question(data_copy, 2, lambda q: q.update(prompt="I twenty years old.", answers=[]))
+    errors = _errors(data_copy)
+    assert "en az bir kabul edilen cevap" in errors and "boşluk (___)" in errors
+
+
+def test_duplicate_question_id_rejected(data_copy):
+    _edit_question(data_copy, 1, lambda q: q.update(id="q.a1.to-be.01"))
+    assert "soru kimliği yineleniyor" in _errors(data_copy)
+
+
+def test_question_explanation_is_required(data_copy):
+    _edit_question(data_copy, 0, lambda q: q.pop("explanation"))
+    assert "explanation" in _errors(data_copy)
+
+
+def test_question_links_must_exist(data_copy):
+    _edit_question(data_copy, 0, lambda q: q.update(lessons=["gram.a1.yok"], vocabulary=["zzzzz"]))
+    errors = _errors(data_copy)
+    assert "ilgili ders bulunamadı" in errors and "ilgili kelime sözlükte yok" in errors
+
+
+def test_every_real_question_is_linked_and_explained(content_db):
+    conn = sqlite3.connect(content_db)
+    try:
+        total = conn.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
+        assert total >= 30
+        assert conn.execute("SELECT COUNT(*) FROM questions WHERE TRIM(explanation_tr) = ''").fetchone()[0] == 0
+        assert conn.execute(
+            "SELECT COUNT(*) FROM questions q WHERE NOT EXISTS (SELECT 1 FROM lessons l WHERE l.id = q.lesson_id)"
+        ).fetchone()[0] == 0
+        # seçenekli her soruda tam bir doğru seçenek ve her seçenekte açıklama
+        assert conn.execute(
+            """SELECT COUNT(*) FROM questions q WHERE q.evaluator = 'choice' AND
+               (SELECT COUNT(*) FROM answer_options o WHERE o.question_id = q.id AND o.is_correct = 1) <> 1"""
+        ).fetchone()[0] == 0
+        assert conn.execute("SELECT COUNT(*) FROM answer_options WHERE TRIM(explanation_tr) = ''").fetchone()[0] == 0
+        assert conn.execute(
+            """SELECT COUNT(*) FROM questions q WHERE q.evaluator = 'text'
+               AND NOT EXISTS (SELECT 1 FROM accepted_answers a WHERE a.question_id = q.id)"""
+        ).fetchone()[0] == 0
+    finally:
+        conn.close()

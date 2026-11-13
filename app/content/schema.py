@@ -5,7 +5,7 @@ Kimlikler (lesson.id, vocabulary.id, unit.id) sürümler arasında kararlı meti
 değerleridir, çünkü kullanıcı ilerlemesi (user.db) bu kimliklere bağlanır.
 """
 
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
 
 DDL = """
 CREATE TABLE content_meta (
@@ -143,6 +143,58 @@ CREATE TABLE example_sentences (
 );
 CREATE INDEX ix_examples_section ON example_sentences(section_id);
 CREATE INDEX ix_examples_word ON example_sentences(word_id);
+
+-- Sorular. Tipe özgü veri (sıralanacak sözcükler, eşleştirme çiftleri, örnek cevaplar,
+-- kontrol listesi) data_json içinde tutulur; seçenekler ve kabul edilen cevaplar ayrı tablolardadır.
+CREATE TABLE questions (
+    id             TEXT PRIMARY KEY,
+    lesson_id      TEXT NOT NULL REFERENCES lessons(id),
+    position       INTEGER NOT NULL,
+    level          TEXT NOT NULL REFERENCES levels(code),
+    type           TEXT NOT NULL,
+    evaluator      TEXT NOT NULL CHECK (evaluator IN ('choice','text','order','matching','self')),
+    grading        TEXT NOT NULL CHECK (grading IN ('normalized','strict','none')),
+    difficulty     INTEGER NOT NULL CHECK (difficulty BETWEEN 1 AND 5),
+    prompt         TEXT NOT NULL,
+    context        TEXT,
+    instruction_tr TEXT NOT NULL,
+    explanation_tr TEXT NOT NULL,
+    example_en     TEXT,
+    example_tr     TEXT,
+    data_json      TEXT,
+    source_id      TEXT NOT NULL REFERENCES content_sources(id),
+    review_status  TEXT NOT NULL CHECK (review_status IN ('draft','auto_checked','human_reviewed')),
+    UNIQUE (lesson_id, position)
+);
+CREATE INDEX ix_questions_level ON questions(level, type);
+
+CREATE TABLE answer_options (
+    question_id    TEXT NOT NULL REFERENCES questions(id),
+    position       INTEGER NOT NULL,
+    text           TEXT NOT NULL,
+    is_correct     INTEGER NOT NULL CHECK (is_correct IN (0,1)),
+    explanation_tr TEXT NOT NULL,
+    PRIMARY KEY (question_id, position)
+);
+
+CREATE TABLE accepted_answers (
+    question_id TEXT NOT NULL REFERENCES questions(id),
+    position    INTEGER NOT NULL,
+    text        TEXT NOT NULL,
+    PRIMARY KEY (question_id, position)
+);
+
+-- Bir soru, ait olduğu dersin dışında başka derslerle ve kelimelerle de ilişkilendirilebilir.
+CREATE TABLE question_lessons (
+    question_id TEXT NOT NULL REFERENCES questions(id),
+    lesson_id   TEXT NOT NULL REFERENCES lessons(id),
+    PRIMARY KEY (question_id, lesson_id)
+);
+CREATE TABLE question_vocabulary (
+    question_id TEXT NOT NULL REFERENCES questions(id),
+    word_id     TEXT NOT NULL REFERENCES vocabulary(id),
+    PRIMARY KEY (question_id, word_id)
+);
 
 -- Tam metin arama. Metinler fold_text() ile sadeleştirilerek yazılır (ı→i vb.).
 CREATE VIRTUAL TABLE search_index USING fts5(

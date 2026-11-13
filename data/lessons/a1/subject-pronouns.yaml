@@ -84,3 +84,79 @@ sections:
       Çevrenizdeki kişi ve nesnelere bakıp her biri için doğru zamiri söyleyin: annem → she, telefon → it, arkadaşlarım → they.
 
       Kısa cümleleri sesli söylerken özneyi bilerek vurgulayın; özneyi atlamama alışkanlığı böyle yerleşir.
+questions:
+  - id: q.a1.subject-pronouns.01
+    type: multiple_choice
+    prompt: "This is my brother. ___ is a doctor."
+    options:
+      - "*He :: \"My brother\" bir erkektir; erkekler için he kullanılır."
+      - "She :: She kadınlar için kullanılır; brother erkek kardeş demektir."
+      - "It :: It nesneler ve hayvanlar içindir; insanlar için kullanılmaz."
+      - "They :: They çoğuldur; burada tek bir kişiden söz ediliyor."
+    explanation: "Zamiri seçerken yerini tuttuğu isme bakılır: tek bir erkek → he."
+    example: {en: "This is my father. He is a teacher.", tr: "Bu benim babam. O bir öğretmen."}
+    vocabulary: [he, brother]
+  - id: q.a1.subject-pronouns.02
+    type: multiple_choice
+    prompt: "Where is my phone? ___ is on the table."
+    options:
+      - "*It :: Telefon bir nesnedir; tekil nesneler için it kullanılır."
+      - "He :: He yalnızca erkekler (ve bazen erkek evcil hayvanlar) için kullanılır."
+      - "She :: She yalnızca kadınlar için kullanılır."
+      - "They :: They çoğuldur; tek bir telefondan söz ediliyor."
+    explanation: "Türkçedeki \"o\" İngilizcede üçe ayrılır. Nesneler için it kullanılır."
+    vocabulary: [it, phone]
+  - id: q.a1.subject-pronouns.03
+    type: fill_blank
+    prompt: "Ali and Can are not here. ___ are at work."
+    answers: [They]
+    explanation: "İki kişiden söz ediliyor; çoğul için they kullanılır."
+    example: {en: "My parents are old. They are at home.", tr: "Annemle babam yaşlı. Onlar evde."}
+  - id: q.a1.subject-pronouns.04
+    type: fill_blank
+    prompt: "My friend and I are hungry. ___ are in the kitchen."
+    answers: [We]
+    explanation: "\"My friend and I\" (arkadaşım ve ben) = biz. İçinde \"I\" geçen bir grup için we kullanılır."
+  - id: q.a1.subject-pronouns.05
+    type: true_false
+    prompt: "Is a teacher."
+    options:
+      - "Doğru :: İngilizcede özne atlanamaz; cümlede işi yapan belirtilmemiş."
+      - "*Yanlış :: Cümlede özne yok. Doğrusu: \"She is a teacher.\" ya da \"He is a teacher.\""
+    explanation: "Türkçede \"Öğretmen.\" ya da \"O öğretmen.\" denebilir; İngilizcede ise her cümlede bir özne bulunmalıdır."
+  - id: q.a1.subject-pronouns.06
+    type: error_correction
+    grading: strict
+    prompt: "Tom and i are friends."
+    answers: ["Tom and I are friends."]
+    explanation: "\"I\" zamiri cümlenin neresinde olursa olsun büyük harfle yazılır. Bu soruda yazım değerlendirilir."
+  - id: q.a1.subject-pronouns.07
+    type: matching
+    prompt: "Zamirleri Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - [I, ben]
+      - [we, biz]
+      - [they, onlar]
+      - [you, "sen / siz"]
+    explanation: "You hem tekil (sen) hem çoğul ya da resmî (siz) için kullanılır; ayrı bir saygı biçimi yoktur."
+  - id: q.a1.subject-pronouns.08
+    type: multiple_choice
+    difficulty: 2
+    prompt: "___ is cold today."
+    options:
+      - "*It :: Hava durumu, saat ve mesafe söylenirken özne olarak it kullanılır."
+      - "He :: He bir erkeği gösterir; hava durumu için kullanılmaz."
+      - "The weather cold :: Bu seçenek zamir değildir ve cümleyi \"is is\" yapısına sokar."
+      - "They :: They çoğuldur ve \"is\" ile kullanılamaz."
+    explanation: "\"It is cold.\" cümlesindeki it belirli bir nesneyi göstermez; cümlenin özne yerini doldurur."
+    example: {en: "It is seven o'clock.", tr: "Saat yedi."}
+  - id: q.a1.subject-pronouns.09
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [She, is, my, sister]
+    explanation: "Düz cümlede özne zamiri fiilden önce gelir: She + is + ..."
+  - id: q.a1.subject-pronouns.10
+    type: translation
+    prompt: "Onlar mutlu."
+    answers: ["They are happy.", "They're happy."]
+    explanation: "Onlar = they. Çoğul öznelerle \"are\" kullanılır."

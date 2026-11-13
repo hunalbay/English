@@ -85,6 +85,12 @@ export async function render(root, params) {
       : null,
     linked("Sonraki dersler", lesson.next_lessons),
     linked("İlgili dersler", lesson.related_lessons),
+    lesson.question_count
+      ? h("section", { class: "card", id: "lesson-test" },
+          h("h2", {}, "Konu testi"),
+          h("p", { class: "muted" }, `Bu konuda ${lesson.question_count} soru var. Her cevabın açıklaması gösterilir.`),
+          h("a", { class: "btn primary", href: `#/test/ders/${encodeURIComponent(lesson.id)}` }, "Konu testini çöz"))
+      : null,
     h("section", { class: "card" }, h("div", { class: "row" }, completeButton, statusText)),
     h("p", { class: "muted small" },
       `Kaynak: ${lesson.source_name}. `,

@@ -14,6 +14,8 @@ import * as search from "./pages/search.js";
 import * as study from "./pages/study.js";
 import * as flashcards from "./pages/flashcards.js";
 import * as exercise from "./pages/exercise.js";
+import * as tests from "./pages/tests.js";
+import * as test from "./pages/test.js";
 import * as settings from "./pages/settings.js";
 
 // pattern: ":ad" parçaları parametre olarak sayfaya aktarılır. nav: menüde gösterilecek ad.
@@ -27,6 +29,11 @@ const ROUTES = [
   { pattern: "/calis", page: study, nav: "Kelime çalışması", section: "/calis" },
   { pattern: "/calis/kartlar/:direction/:source/:level", page: flashcards, section: "/calis" },
   { pattern: "/calis/alistirma/:type/:source/:level", page: exercise, section: "/calis" },
+  { pattern: "/testler", page: tests, nav: "Testler", section: "/testler" },
+  { pattern: "/testler/:level", page: tests, section: "/testler" },
+  { pattern: "/test/ders/:lessonId", page: test, section: "/testler" },
+  { pattern: "/test/ders/:lessonId/:run", page: test, section: "/testler" },
+  { pattern: "/test/seviye/:level", page: test, section: "/testler" },
   { pattern: "/kelimelerim", page: wordList, nav: "Kelimelerim", section: "/kelimelerim" },
   { pattern: "/ara/:query", page: search, section: null },
   { pattern: "/ayarlar", page: settings, nav: "Ayarlar", section: "/ayarlar" },

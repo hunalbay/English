@@ -86,3 +86,72 @@ sections:
       Odanızdaki nesneleri sesli sayın: a table, a chair, an armchair, an orange... Sözcüğü söylerken ilk sesi dinlemek doğru seçimi kolaylaştırır.
 
       Mesleklerle kısa cümleler kurun: "My father is a driver.", "My aunt is an architect."
+questions:
+  - id: q.a1.a-an.01
+    type: multiple_choice
+    prompt: "I have ___ apple."
+    options:
+      - "*an :: Apple ünlü sesle başlar; ünlü sesten önce an kullanılır."
+      - "a :: A ünsüz sesle başlayan sözcüklerden önce kullanılır: a book."
+      - "(hiçbiri) :: Tekil sayılabilir bir isim tek başına kullanılamaz; a / an gerekir."
+    explanation: "A / an seçimini sonraki sözcüğün ilk sesi belirler."
+    example: {en: "She has an idea.", tr: "Onun bir fikri var."}
+  - id: q.a1.a-an.02
+    type: multiple_choice
+    difficulty: 2
+    prompt: "He is ___ university student."
+    options:
+      - "*a :: University \"yu\" sesiyle, yani ünsüz bir sesle başlar: a university."
+      - "an :: Yazılışa değil sese bakılır; university ünlü sesle başlamaz."
+      - "(hiçbiri) :: Tekil sayılabilir isimden önce a / an gerekir."
+    explanation: "\"u\" harfi \"yu\" diye okunuyorsa a kullanılır: a university, a uniform. \"a\" diye okunuyorsa an: an umbrella."
+  - id: q.a1.a-an.03
+    type: multiple_choice
+    difficulty: 2
+    prompt: "The lesson is ___ hour long."
+    options:
+      - "*an :: Hour sözcüğünde h okunmaz; sözcük ünlü sesle başlar."
+      - "a :: H okunsaydı a kullanılırdı (a house); ama hour'da h sessizdir."
+      - "(hiçbiri) :: Tekil sayılabilir isimden önce a / an gerekir."
+    explanation: "Okunmayan h: an hour, an honest man. Okunan h: a house, a hotel."
+  - id: q.a1.a-an.04
+    type: fill_blank
+    prompt: "It is ___ old car."
+    answers: [an]
+    explanation: "Araya sıfat girince sıfatın ilk sesine bakılır: a car → an old car."
+  - id: q.a1.a-an.05
+    type: fill_blank
+    prompt: "She is ___ teacher."
+    answers: [a]
+    explanation: "Mesleklerden önce a / an kullanılır. Teacher ünsüz sesle başlar."
+  - id: q.a1.a-an.06
+    type: true_false
+    prompt: "They are a students."
+    options:
+      - "Doğru :: A / an \"bir tane\" anlamı taşır; çoğul isimle kullanılamaz."
+      - "*Yanlış :: Çoğul isimlerle a / an kullanılmaz. Doğrusu: \"They are students.\""
+    explanation: "A / an yalnızca tekil sayılabilir isimlerle kullanılır."
+  - id: q.a1.a-an.07
+    type: error_correction
+    prompt: "My father is engineer."
+    answers: ["My father is an engineer."]
+    explanation: "Meslekten önce a / an gerekir; engineer ünlü sesle başladığı için an kullanılır."
+  - id: q.a1.a-an.08
+    type: matching
+    prompt: "Her sözcüğü doğru tanımlıkla eşleştirin."
+    pairs:
+      - [umbrella, "an (ünlü ses: a-)"]
+      - [uniform, "a (\"yu\" sesi)"]
+      - [hour, "an (h okunmaz)"]
+      - [hotel, "a (h okunur)"]
+    explanation: "Karar yazılışa göre değil, ilk sese göre verilir."
+  - id: q.a1.a-an.09
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [I, have, an, old, phone]
+    explanation: "Sıra: tanımlık + sıfat + isim. Old ünlü sesle başladığı için an kullanılır."
+  - id: q.a1.a-an.10
+    type: sentence_building
+    prompt: "she / be / architect"
+    answers: ["She is an architect.", "She's an architect."]
+    explanation: "She → is. Architect ünlü sesle başlayan bir meslek adıdır: an architect."

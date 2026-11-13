@@ -256,6 +256,7 @@ def search(conn: sqlite3.Connection, query: str, limit: int) -> dict[str, list[R
 
 def totals(conn: sqlite3.Connection) -> Row:
     return {
+        "questions": conn.execute("SELECT COUNT(*) FROM questions").fetchone()[0],
         "lessons": conn.execute("SELECT COUNT(*) FROM lessons").fetchone()[0],
         "words": conn.execute("SELECT COUNT(*) FROM vocabulary").fetchone()[0],
     }
@@ -336,3 +337,70 @@ def words_with_antonyms(conn: sqlite3.Connection, word_ids: list[str]) -> list[s
     rows = conn.execute("SELECT word_id, related_word_id FROM word_relations WHERE kind = 'antonym'").fetchall()
     linked = {row[0] for row in rows} | {row[1] for row in rows}
     return [word_id for word_id in word_ids if word_id in candidates & linked]
+
+
+# --- Sorular ----------------------------------------------------------------
+
+def question_counts_by_lesson(conn: sqlite3.Connection) -> dict[str, int]:
+    return {row["lesson_id"]: row["n"] for row in conn.execute(
+        "SELECT lesson_id, COUNT(*) AS n FROM questions GROUP BY lesson_id")}
+
+
+def question_ids(conn: sqlite3.Connection, lesson_id: str | None, level: str | None,
+                 types: list[str] | None) -> list[str]:
+    """Süzgeçlere uyan soru kimlikleri. Ders süzgeci, soruyla ilişkilendirilmiş diğer dersleri de kapsar."""
+    where, params = [], []
+    if lesson_id:
+        where.append("(q.lesson_id = ? OR q.id IN (SELECT question_id FROM question_lessons WHERE lesson_id = ?))")
+        params += [lesson_id, lesson_id]
+    if level:
+        where.append("q.level = ?")
+        params.append(level)
+    if types:
+        where.append(f"q.type IN ({_placeholders(types)})")
+        params += types
+    clause = f"WHERE {' AND '.join(where)}" if where else ""
+    return [row["id"] for row in conn.execute(
+        f"SELECT q.id FROM questions q {clause} ORDER BY q.lesson_id, q.position", params)]  # noqa: S608
+
+
+def existing_question_ids(conn: sqlite3.Connection, ids: list[str]) -> set[str]:
+    found: set[str] = set()
+    for start in range(0, len(ids), 500):
+        chunk = ids[start : start + 500]
+        found |= {row["id"] for row in conn.execute(
+            f"SELECT id FROM questions WHERE id IN ({_placeholders(chunk)})", chunk)}  # noqa: S608
+    return found
+
+
+def question_for_grading(conn: sqlite3.Connection, question_id: str) -> Row | None:
+    """Sorunun tamamı (cevap anahtarı dâhil). Yalnızca sunucu tarafında kullanılır."""
+    question = _one(conn, "SELECT * FROM questions WHERE id = ?", (question_id,))
+    if question is None:
+        return None
+    data_json = question.pop("data_json")
+    question["data"] = json.loads(data_json) if data_json else {}
+    question["options"] = [
+        {**option, "is_correct": bool(option["is_correct"])}
+        for option in _rows(conn, "SELECT position, text, is_correct, explanation_tr FROM answer_options "
+                                  "WHERE question_id = ? ORDER BY position", (question_id,))
+    ]
+    question["accepted"] = [row["text"] for row in conn.execute(
+        "SELECT text FROM accepted_answers WHERE question_id = ? ORDER BY position", (question_id,))]
+    lesson_ids = [question["lesson_id"], *[row["lesson_id"] for row in conn.execute(
+        "SELECT lesson_id FROM question_lessons WHERE question_id = ? ORDER BY lesson_id", (question_id,))]]
+    briefs = lesson_briefs(conn, lesson_ids)
+    question["lessons"] = [briefs[lesson_id] for lesson_id in lesson_ids if lesson_id in briefs]
+    question["vocabulary"] = word_briefs(conn, [row["word_id"] for row in conn.execute(
+        "SELECT word_id FROM question_vocabulary WHERE question_id = ? ORDER BY word_id", (question_id,))])
+    return question
+
+
+def lesson_examples(conn: sqlite3.Connection, lesson_id: str, limit: int = 3) -> list[Row]:
+    """Dersten doğru kullanım örnekleri (yanlış cevap sonrası gösterilir)."""
+    return _rows(
+        conn,
+        """SELECT e.en, e.tr FROM example_sentences e JOIN lesson_sections s ON s.id = e.section_id
+           WHERE s.lesson_id = ? AND e.is_incorrect = 0 ORDER BY s.position, e.position LIMIT ?""",
+        (lesson_id, limit),
+    )

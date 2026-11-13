@@ -118,6 +118,7 @@ def read_lesson(
     for key in ("prerequisite_lessons", "next_lessons", "related_lessons"):
         for other in lesson[key]:
             other["status"] = statuses.get(other["id"], "not_started")
+    lesson["question_count"] = repo.question_counts_by_lesson(content).get(lesson_id, 0)
     saved = progress.in_word_list(session, [word["id"] for word in lesson["vocabulary"]])
     for word in lesson["vocabulary"]:
         word["in_word_list"] = word["id"] in saved

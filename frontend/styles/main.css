@@ -345,3 +345,31 @@ input[type="text"] {
 .bar { width: 100%; background: var(--primary); border-radius: 4px; min-height: 0; }
 .history { font-size: 0.875rem; color: var(--text-muted); padding-left: 1.2em; }
 details summary { cursor: pointer; font-weight: 600; margin: var(--space-2) 0; }
+
+/* --- Aşama 4: test motoru --- */
+.spread { justify-content: space-between; }
+.context {
+  font: inherit; white-space: pre-wrap; background: var(--surface-2); border-radius: 8px;
+  padding: var(--space-3) var(--space-4); margin: 0 0 var(--space-3); overflow-wrap: anywhere;
+}
+.feedback.neutral { border-left-color: var(--warning); }
+.feedback.neutral .feedback-title { color: var(--warning); }
+.option-reasons { list-style: none; padding: 0; margin: 0 0 var(--space-3); display: grid; gap: var(--space-2); }
+.option-reasons li { padding: var(--space-2) var(--space-3); border-radius: 6px; background: var(--surface); border: 1px solid var(--border); }
+.option-reasons li.is-right { border-color: var(--success); }
+.option-reasons li.is-chosen { border-color: var(--danger); }
+.feedback-links { margin-top: var(--space-3); }
+.feedback .notice { background: var(--surface); }
+input.wide { flex: 1; min-width: min(360px, 100%); }
+textarea {
+  font: inherit; color: var(--text); background: var(--surface); width: 100%;
+  border: 1px solid var(--border); border-radius: 8px; padding: var(--space-3); margin-bottom: var(--space-3);
+}
+.order-answer {
+  min-height: 2.6em; padding: var(--space-2) var(--space-3); border: 1px dashed var(--border);
+  border-radius: 8px; font-weight: 600; font-size: 1.1rem;
+}
+.btn.token { font-weight: 600; }
+.btn.token:disabled { opacity: 0.35; }
+#token-bank { margin: var(--space-3) 0; }
+.question-area form { margin-top: var(--space-2); }
