@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sqlite3
 from typing import Any
@@ -263,12 +264,22 @@ def totals(conn: sqlite3.Connection) -> Row:
 # --- Kelime çalışması -------------------------------------------------------
 
 def word_ids_for_level(conn: sqlite3.Connection, level: str) -> list[str]:
-    """Bir seviyenin kelimeleri: önce sık kullanılanlar, sonra alfabetik."""
+    """Bir seviyenin kelimeleri, çalışma sırasıyla.
+
+    Sıklık bilgisi olan kelimeler önce gelir. Diğerleri alfabetik değil, kimliğe bağlı
+    sabit bir karışık sırayla gelir; böylece öğrenci yalnızca "a" ile başlayan kelimelerle
+    başlamaz ve sıra her açılışta aynı kalır.
+    """
+    rows = conn.execute("SELECT id, frequency_rank FROM vocabulary WHERE level = ?", (level,)).fetchall()
     return [
         row["id"]
-        for row in conn.execute(
-            "SELECT id FROM vocabulary WHERE level = ? ORDER BY frequency_rank IS NULL, frequency_rank, lemma_key",
-            (level,),
+        for row in sorted(
+            rows,
+            key=lambda row: (
+                row["frequency_rank"] is None,
+                row["frequency_rank"] or 0,
+                hashlib.sha1(row["id"].encode("utf-8")).hexdigest(),  # noqa: S324 (güvenlik amaçlı değil)
+            ),
         )
     ]
 

@@ -110,7 +110,11 @@ def test_vocabulary_listing_and_pagination(client):
     assert lemmas == sorted(lemmas)
     second = client.get(f"{API}/vocabulary?page_size=10&page=2").json()
     assert not {item["id"] for item in first["items"]} & {item["id"] for item in second["items"]}
-    assert client.get(f"{API}/vocabulary?level=C2").json()["total"] == 0
+    per_level = [client.get(f"{API}/vocabulary?level={level}&page_size=1").json()["total"]
+                 for level in ("A1", "A2", "B1", "B2", "C1", "C2")]
+    assert all(count > 0 for count in per_level) and sum(per_level) == first["total"]
+    only_c2 = client.get(f"{API}/vocabulary?level=C2&page_size=5").json()["items"]
+    assert {item["level"] for item in only_c2} == {"C2"}
     assert client.get(f"{API}/vocabulary?page_size=1000").status_code == 422
 
 

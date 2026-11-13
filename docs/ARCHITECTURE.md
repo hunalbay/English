@@ -85,7 +85,26 @@ yazmadan da arama yapılabilir (ogretmen → öğretmen).
 | `GET/PUT/DELETE /api/v1/word-list[/{id}]` | Kişisel kelime listesi |
 | `GET /api/v1/search?q=` | Derslerde ve sözlükte arama |
 
+| `GET /api/v1/study/session` | Kart oturumu: tekrar zamanı gelenler + sınırlı sayıda yeni kelime |
+| `POST /api/v1/study/review` | Kart cevabı (0 bilemedim · 1 zor · 2 bildim · 3 kolay) |
+| `GET /api/v1/study/exercises` · `POST /api/v1/study/answer` | Alıştırma soruları ve açıklamalı değerlendirme |
+| `GET /api/v1/study/stats` | Kelime istatistikleri |
+| `GET/DELETE /api/v1/study/words/{id}` | Kelimenin öğrenme geçmişi · tekrar planını sıfırlama |
+
 Hata biçimi: `{"error": {"code": "...", "message": "Türkçe açıklama"}}`
+
+## Kelime öğrenme
+
+- **Aralıklı tekrar** (`app/learning/srs.py`): SM-2 türevi, saf fonksiyonlar. Her kelime için iki
+  bağımsız kart vardır (EN→TR ve TR→EN). Kurallar dosyanın başında açıklanmıştır.
+- **Alıştırmalar** (`app/learning/exercises.py`): sözlükten otomatik üretilir. Çeldiriciler aynı
+  türden seçilir; doğru cevapla ortak Türkçe karşılığı olan ya da ilişkili kelimeler çeldirici
+  yapılmaz (tek doğru cevap güvencesi). Yazılı cevapta aynı karşılığı taşıyan başka bir kelime de
+  doğru kabul edilir.
+- Alıştırmalarda doğru cevap tekrar planını ilerletmez; yanlış cevap, kelime daha önce kartlarla
+  çalışılmışsa kartı öne alır. Bütün cevaplar `review_history` tablosuna yazılır.
+- Henüz yok: dinleyerek tanıma ve yazma (ses dosyaları Aşama 5'te), İngilizce tanımdan bulma,
+  kelime ailesi, eşdizim, phrasal verb ve deyim alıştırmaları (ilgili veri Aşama 6'da).
 
 ## Testler
 
@@ -97,8 +116,8 @@ Hata biçimi: `{"error": {"code": "...", "message": "Türkçe açıklama"}}`
 ## Aşamalar
 
 1. Proje altyapısı ✔
-2. Temel eğitim sistemi (içerik veri modeli, ana ekran, seviye seçimi, sözlük, arama) ← **şu an**
-3. Kelime öğrenme (≥ 5.000 temel kelime, kartlar, aralıklı tekrar)
+2. Temel eğitim sistemi (içerik veri modeli, ana ekran, seviye seçimi, sözlük, arama) ✔
+3. Kelime öğrenme (≥ 5.000 temel kelime, kartlar, aralıklı tekrar) ✔
 4. Dil bilgisi ve test motoru
 5. Okuma, dinleme, yazma, telaffuz
 6. Deyimler ve mesleki İngilizce

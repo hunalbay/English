@@ -3,9 +3,10 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 2 (temel eğitim sistemi).** Seviye seçimi, ders sayfaları, sözlük, arama ve yerel
-> ilerleme kaydı çalışıyor. İçerik henüz başlangıç düzeyinde (3 ders, 120 kelime); kelime kartları,
-> testler, okuma/dinleme ve Windows kurulum paketi sonraki aşamalarda eklenecek.
+> **Durum: Aşama 3 (kelime öğrenme sistemi) tamamlandı.** 5.017 benzersiz temel kelimelik sözlük
+> (A1–C2), çift yönlü kelime kartları, aralıklı tekrar, altı alıştırma türü ve kelime istatistikleri
+> çalışıyor. Dil bilgisi müfredatı ve test motoru (Aşama 4), okuma/dinleme/yazma (Aşama 5) ve
+> Windows kurulum paketi (Aşama 9) henüz eklenmedi.
 
 ## Geliştirme ortamı
 

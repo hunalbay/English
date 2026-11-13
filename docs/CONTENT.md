@@ -17,6 +17,44 @@ python scripts/build_content.py           # doğrula ve data/build/content.db ü
 | `data/lessons/<seviye>/*.yaml` | Her dosya bir ders |
 | `data/vocabulary/*.yaml` | Kelime dosyaları (seviye başına bir ya da daha çok) |
 
+## Sıkıştırılmış kelime dosyası (`.psv`)
+
+Büyük kelime listeleri için satır başına bir kelime içeren biçim kullanılır:
+
+```
+#! level: B1
+#! source: original-cefrj
+#! review_status: auto_checked
+temel biçim | tür | Türkçe anlam | Örnek cümle. | Çevirisi. | düzensiz çekimler (isteğe bağlı)
+break | v / n | kırmak / mola, ara | Do not break the glass. | Bardağı kırma. | breaks, broke, broken, breaking
+```
+
+- Tür kısaltmaları: `n v adj adv pron prep conj det art int num modal aux phr`
+- Birden çok anlam için tür ve anlam alanları ` / ` ile ayrılır ve sayıları eşit olmalıdır.
+- **Kurallı çekimleri yazmayın** (`works`, `worked`, `working`): doğrulayıcı bunları kendisi tanır.
+  Yalnızca düzensiz ya da yazımı değişen biçimleri listeleyin (`children`, `went`, `bigger`).
+- Başka bir kelimenin çekimiyle aynı yazılan bağımsız kelimeler (`building`, `left`, `rose`)
+  `data/vocabulary/homographs.txt` dosyasına eklenmelidir; aksi hâlde içerik derlenmez.
+  Bu kural, çekimli biçimlerin yanlışlıkla ayrı temel kelime olarak sayılmasını engeller.
+
+### Yardımcı araçlar
+
+```bash
+python scripts/vocab_tools.py stats               # seviyelere göre benzersiz temel kelime sayısı
+python scripts/vocab_tools.py candidates B2 200   # CEFR-J'de olup sözlükte olmayan kelimeler
+python scripts/vocab_tools.py check-levels        # sözlük seviyeleri ile CEFR-J farkları
+python scripts/vocab_tools.py ipa cmudict.dict    # data/pronunciation/ipa.tsv dosyasını yeniden üretir
+python scripts/relevel.py                         # C1/C2'ye yazılmış ama CEFR-J'de seviyesi olan kelimeleri taşır
+```
+
+### Seviyeler ve kaynaklar
+
+- **A1–B2:** kelime seçimi ve seviye, CEFR-J Wordlist 1.5'e dayanır (`data/reference/README.md`).
+- **C1–C2:** CEFR-J bu seviyeleri kapsamaz; seviyeler bu projede atanmıştır (`source: original`).
+- **IPA:** CMU Pronouncing Dictionary'den otomatik dönüştürülür (Amerikan İngilizcesi).
+  CMUdict'te bulunmayan kelimelerde IPA alanı boş bırakılır.
+- Türkçe anlamlar, örnek cümleler ve çeviriler projeye özgüdür.
+
 ## Kimlikler kalıcıdır
 
 Kullanıcı ilerlemesi ders ve kelime kimliklerine bağlıdır. Yayımlanmış bir kimliği

@@ -154,3 +154,20 @@ def test_psv_format_errors_are_reported(data_copy):
     path.write_text(path.read_text(encoding="utf-8") + "zzz | n | deneme\nyyy | xx | deneme | A yyy. | Bir yyy.\n", encoding="utf-8")
     errors = _errors(data_copy)
     assert "5 ya da 6 alan bekleniyor" in errors and "bilinmeyen kelime türü: xx" in errors
+
+
+def test_dictionary_has_at_least_5000_unique_base_words(content_db):
+    """Hedef, gerçek veri tabanı üzerinden ölçülür; çekimli biçimler sayılmaz."""
+    conn = sqlite3.connect(content_db)
+    try:
+        total, unique = conn.execute("SELECT COUNT(*), COUNT(DISTINCT lemma_key) FROM vocabulary").fetchone()
+        assert total == unique >= 5000
+        levels = dict(conn.execute("SELECT level, COUNT(*) FROM vocabulary GROUP BY level"))
+        assert set(levels) == {"A1", "A2", "B1", "B2", "C1", "C2"} and min(levels.values()) >= 400
+        # her kelimenin en az bir anlamı ve çevirili bir örnek cümlesi vardır
+        assert conn.execute(
+            "SELECT COUNT(*) FROM vocabulary v WHERE NOT EXISTS (SELECT 1 FROM example_sentences e WHERE e.word_id = v.id)"
+        ).fetchone()[0] == 0
+        assert conn.execute("SELECT COUNT(*) FROM vocabulary WHERE ipa IS NOT NULL").fetchone()[0] >= 4500
+    finally:
+        conn.close()
