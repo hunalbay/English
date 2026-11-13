@@ -1,0 +1,124 @@
+id: gram.a1.to-be-present
+kind: grammar
+level: A1
+title_tr: "\"To be\" fiili: am, is, are"
+title_en: "The verb \"to be\" (present)"
+objective_tr: Bu dersin sonunda am, is, are ile olumlu, olumsuz ve soru cümleleri kurarak kendinizi, başkalarını ve nesneleri tanıtabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.subject-pronouns]
+next: [gram.a1.articles-a-an]
+vocabulary: [be, not, student, teacher, happy, tired, home, here]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **To be** fiili "olmak" demektir ve birinin ya da bir şeyin **ne olduğunu, nasıl olduğunu ya da nerede olduğunu** söylerken kullanılır. Şimdiki zamanda üç biçimi vardır: **am**, **is**, **are**.
+
+      Türkçede bu anlamı çoğunlukla bir ekle veririz ya da hiç söylemeyiz: "Ben öğrenci**yim**", "O yorgun." İngilizcede ise bu cümlelerde bir fiil bulunmak zorundadır: "I **am** a student.", "He **is** tired."
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Kimlik ve meslek:** "She is a teacher."
+
+      **Özellik ve duygu:** "They are happy."
+
+      **Yer:** "We are at home."
+
+      **Yaş:** "I am twenty years old." — İngilizcede yaş "to be" ile söylenir, "have" ile değil.
+
+      **Milliyet ve memleket:** "He is from Turkey."
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      **Olumlu:** özne + am / is / are + ...
+
+      **Olumsuz:** özne + am / is / are + **not** + ...
+
+      **Soru:** Am / Is / Are + özne + ... ?
+
+      Konuşmada ve gayriresmî yazıda kısa biçimler çok yaygındır.
+    table:
+      headers: [Özne, Olumlu, Kısa biçim, Olumsuz, Olumsuz kısa biçim]
+      rows:
+        - [I, am, "I'm", am not, "I'm not"]
+        - [you, are, "you're", are not, "you aren't / you're not"]
+        - [he / she / it, is, "he's / she's / it's", is not, "he isn't / he's not"]
+        - [we, are, "we're", are not, "we aren't / we're not"]
+        - [they, are, "they're", are not, "they aren't / they're not"]
+  - kind: positive
+    title_tr: Olumlu cümleler
+    examples:
+      - {en: "I am a student.", tr: "Ben bir öğrenciyim."}
+      - {en: "You are very kind.", tr: "Çok naziksiniz."}
+      - {en: "She is a teacher.", tr: "O bir öğretmen."}
+      - {en: "It is a big city.", tr: "Orası büyük bir şehir."}
+      - {en: "We're at home.", tr: "Evdeyiz."}
+      - {en: "They're tired.", tr: "Onlar yorgun."}
+  - kind: negative
+    title_tr: Olumsuz cümleler
+    examples:
+      - {en: "I am not tired.", tr: "Yorgun değilim."}
+      - {en: "I'm not a teacher.", tr: "Ben öğretmen değilim."}
+      - {en: "He is not here.", tr: "O burada değil."}
+      - {en: "She isn't at home.", tr: "O evde değil."}
+      - {en: "We aren't late.", tr: "Geç kalmadık.", note_tr: "Kelimesi kelimesine: Geç değiliz."}
+      - {en: "They are not students.", tr: "Onlar öğrenci değil."}
+  - kind: question
+    title_tr: Soru cümleleri ve kısa cevaplar
+    text_tr: |-
+      Soru yapmak için **am / is / are** özneden önceye alınır. Evet/hayır sorularına genellikle kısa cevap verilir: "Yes, I am." / "No, I'm not."
+
+      Olumlu kısa cevaplarda kısaltma yapılmaz: "Yes, I am." denir, "Yes, I'm." denmez.
+    examples:
+      - {en: "Are you a student? — Yes, I am.", tr: "Öğrenci misin? — Evet, öğrenciyim."}
+      - {en: "Is he a doctor? — No, he isn't.", tr: "O doktor mu? — Hayır, değil."}
+      - {en: "Is it cold? — Yes, it is.", tr: "Hava soğuk mu? — Evet, soğuk."}
+      - {en: "Are they at home? — No, they aren't.", tr: "Onlar evde mi? — Hayır, değiller."}
+      - {en: "Where are you from? — I'm from Izmir.", tr: "Nerelisin? — İzmirliyim."}
+      - {en: "How old is she? — She is ten.", tr: "O kaç yaşında? — On yaşında."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I student.", tr: "Ben öğrenciyim.", wrong: true, correction: "I am a student.", note_tr: "Fiil atlanamaz."}
+      - {en: "She are happy.", tr: "O mutlu.", wrong: true, correction: "She is happy.", note_tr: "He, she, it ile is kullanılır."}
+      - {en: "I have 25 years old.", tr: "25 yaşındayım.", wrong: true, correction: "I am 25 years old.", note_tr: "Yaş to be ile söylenir."}
+      - {en: "You are tired?", tr: "Yorgun musun?", wrong: true, correction: "Are you tired?", note_tr: "Soruda are özneden önce gelir."}
+      - {en: "Yes, I'm.", tr: "Evet, öyleyim.", wrong: true, correction: "Yes, I am.", note_tr: "Olumlu kısa cevapta kısaltma yapılmaz."}
+      - {en: "I amn't ready.", tr: "Hazır değilim.", wrong: true, correction: "I'm not ready.", note_tr: "am not kısaltılmaz; I'm not denir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Fiili atlamak.** Türkçede "O yorgun" cümlesinde ayrı bir fiil olmadığı için "He tired" demek çok yaygın bir hatadır. Doğrusu: "He **is** tired."
+
+      **Yanlış biçimi seçmek.** Kural basittir: **I → am**, **he / she / it → is**, **you / we / they → are**. Tek bir isim de he/she/it gibi davranır: "My sister **is** a nurse." Çoğul isim they gibi davranır: "My sisters **are** nurses."
+
+      **Yaşı "have" ile söylemek.** İngilizcede yaş bir sahiplik değil, bir durumdur: "I **am** 30."
+
+      **"It's" ile "its"i karıştırmak.** **It's** = it is ("It's cold."). **Its** ise "onun" anlamında bir iyelik sözcüğüdür.
+  - kind: comparison
+    title_tr: Türkçe ile karşılaştırma
+    text_tr: |-
+      Türkçede "değil" sözcüğü cümlenin sonuna gelir; İngilizcede **not**, am/is/are'dan hemen sonra gelir.
+
+      Türkçede soru "mı / mi" ile yapılır ve sözcük sırası değişmez; İngilizcede ise fiil öne geçer.
+    table:
+      headers: [Türkçe, İngilizce]
+      rows:
+        - [Ben öğretmenim., I am a teacher.]
+        - [Ben öğretmen değilim., I am not a teacher.]
+        - ["Sen öğretmen misin?", "Are you a teacher?"]
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Hello, I'm Deniz. I'm from Turkey.", tr: "Merhaba, ben Deniz. Türkiye'denim."}
+      - {en: "Are you OK? — Yes, I'm fine, thanks.", tr: "İyi misin? — Evet, iyiyim, teşekkürler."}
+      - {en: "Sorry, I'm late.", tr: "Üzgünüm, geç kaldım."}
+      - {en: "Is this seat free? — No, sorry, it isn't.", tr: "Bu koltuk boş mu? — Hayır, üzgünüm, değil."}
+      - {en: "Where are the keys? — They're in my bag.", tr: "Anahtarlar nerede? — Çantamda."}
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Kendinizle ilgili beş cümle kurun: adınız, yaşınız, mesleğiniz, memleketiniz ve şu anki ruh hâliniz. Sonra aynı cümleleri bir yakınınız için he ya da she ile kurun.
+
+      Her olumlu cümleyi önce olumsuza, sonra soruya çevirerek çalışın: "She is at home." → "She isn't at home." → "Is she at home?"

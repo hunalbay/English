@@ -1,0 +1,31 @@
+# Seviyeler ve üniteler. Ünitelerdeki ders sırası burada belirlenir.
+levels:
+  - code: A1
+    name_tr: Başlangıç
+    description_tr: Kendinizi tanıtabilir, çok temel gündelik ifadeleri anlayıp kullanabilirsiniz.
+  - code: A2
+    name_tr: Temel
+    description_tr: Alışveriş, aile, iş gibi tanıdık konularda basit ve doğrudan bilgi alışverişi yapabilirsiniz.
+  - code: B1
+    name_tr: Orta
+    description_tr: Tanıdık konularda ana fikirleri anlayabilir, deneyimlerinizi ve planlarınızı anlatabilirsiniz.
+  - code: B2
+    name_tr: Orta üstü
+    description_tr: Karmaşık metinlerin ana fikrini anlayabilir, ana dili İngilizce olanlarla akıcı biçimde iletişim kurabilirsiniz.
+  - code: C1
+    name_tr: İleri
+    description_tr: Uzun ve zorlu metinleri anlayabilir, kendinizi akıcı, esnek ve etkili biçimde ifade edebilirsiniz.
+  - code: C2
+    name_tr: Ustalık düzeyi
+    description_tr: Okuduğunuz ve duyduğunuz hemen her şeyi kolayca anlayabilir, ince anlam farklarını ayırt edebilirsiniz.
+
+units:
+  - id: a1.u01
+    level: A1
+    title_tr: İlk adımlar
+    title_en: First steps
+    description_tr: Kişi zamirleri, "to be" fiili ve a/an ile en temel cümleleri kurmayı öğrenin.
+    lessons:
+      - gram.a1.subject-pronouns
+      - gram.a1.to-be-present
+      - gram.a1.articles-a-an

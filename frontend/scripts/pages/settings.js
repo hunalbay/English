@@ -1,7 +1,7 @@
 // Ayarlar sayfası: tema, günlük hedef, programı kapatma.
 
 import * as api from "../api.js";
-import { applyTheme, h, toast } from "../dom.js";
+import { LEVEL_NAMES, add, applyTheme, h, toast } from "../dom.js";
 
 const THEMES = [
   ["system", "Sistem"],
@@ -21,7 +21,28 @@ async function save(key, value) {
 }
 
 export async function render(root) {
-  const { settings } = await api.get("/settings");
+  const [{ settings }, profile, health] = await Promise.all([
+    api.get("/settings"), api.get("/profile"), api.get("/health"),
+  ]);
+
+  const levelSelect = h("select", {
+    id: "level",
+    onchange: async () => {
+      if (!levelSelect.value) return;
+      try {
+        await api.put("/profile/level", { level: levelSelect.value });
+        toast("Seviyeniz güncellendi. Önceki kayıtlarınız korunuyor.");
+      } catch (error) {
+        toast(error.message, { error: true });
+      }
+    },
+  },
+    profile.current_level ? null : h("option", { value: "" }, "Seçilmedi"),
+    Object.entries(LEVEL_NAMES).map(([code, name]) =>
+      h("option", { value: code, selected: profile.current_level === code }, `${code} — ${name}`)));
+  const levelField = h("div", { class: "field" },
+    h("label", { for: "level" }, "Seviyeniz"), levelSelect,
+    h("p", { class: "hint" }, "Seviyenizi değiştirdiğinizde ders ve kelime kayıtlarınız silinmez."));
 
   const themeField = h(
     "fieldset",
@@ -101,9 +122,9 @@ export async function render(root) {
     "Programı kapat",
   );
 
-  root.append(
+  add(root, 
     h("div", { class: "page-header" }, h("h1", {}, "Ayarlar")),
-    h("section", { class: "card" }, themeField, goalField),
+    h("section", { class: "card" }, levelField, themeField, goalField),
     h(
       "section",
       { class: "card" },
@@ -111,5 +132,16 @@ export async function render(root) {
       h("p", { class: "muted" }, "Tarayıcı sekmesini kapatmak programı kapatmaz. Programı tamamen kapatmak için bu düğmeyi kullanın."),
       quitButton,
     ),
+    h(
+      "section",
+      { class: "card" },
+      h("h2", {}, "Program hakkında"),
+      h("p", { class: "muted", id: "about" },
+        `Program sürümü ${health.version} · `,
+        health.content.available ? `İçerik sürümü ${health.content.version}` : "Eğitim içeriği bulunamadı",
+        ` · Veri şeması ${health.user_db.schema_revision}`),
+      h("p", { class: "muted" }, "Verileriniz yalnızca bu bilgisayarda saklanır. Program hiçbir kullanım verisi toplamaz veya göndermez."),
+    ),
   );
+  return "Ayarlar";
 }

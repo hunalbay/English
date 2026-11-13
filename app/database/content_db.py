@@ -19,15 +19,20 @@ class ContentStatus:
 
 
 def connect_readonly(path: Path) -> sqlite3.Connection:
-    return sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True, check_same_thread=False)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 
 def read_content_status(path: Path) -> ContentStatus:
     if not path.is_file():
         return ContentStatus(available=False)
     try:
-        with connect_readonly(path) as conn:
-            rows = dict(conn.execute("SELECT key, value FROM content_meta").fetchall())
+        conn = connect_readonly(path)
+        try:
+            rows = {row["key"]: row["value"] for row in conn.execute("SELECT key, value FROM content_meta")}
+        finally:
+            conn.close()
     except sqlite3.Error:
         return ContentStatus(available=False)
     return ContentStatus(

@@ -1,0 +1,344 @@
+"""İçerik kaynak dosyalarını yükler, doğrular ve content.db üretir.
+
+Doğrulama iki aşamalıdır:
+1. Her dosya kendi Pydantic şemasına göre denetlenir.
+2. Dosyalar arası tutarlılık denetlenir (benzersizlik, bağlantı hedefleri vb.).
+
+Tek bir hata bile varsa veri tabanı üretilmez.
+"""
+
+from __future__ import annotations
+
+import json
+import sqlite3
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+
+import yaml
+from pydantic import ValidationError
+
+from app.content.schema import DDL, SCHEMA_VERSION
+from app.content.source_models import (
+    CurriculumFile,
+    LessonFile,
+    SourcesFile,
+    VocabularyFile,
+    WordEntry,
+)
+from app.content.text import english_tokens, fold_text, lemma_key, word_id
+
+CONTENT_VERSION = "0.2.0"
+
+
+class ContentError(Exception):
+    def __init__(self, errors: list[str]) -> None:
+        super().__init__(f"{len(errors)} içerik hatası")
+        self.errors = errors
+
+
+@dataclass
+class LoadedWord:
+    id: str
+    key: str
+    level: str
+    source: str
+    review_status: str
+    entry: WordEntry
+    origin: str
+
+
+@dataclass
+class Content:
+    sources: SourcesFile
+    curriculum: CurriculumFile
+    lessons: dict[str, LessonFile] = field(default_factory=dict)
+    words: dict[str, LoadedWord] = field(default_factory=dict)  # lemma_key -> kelime
+
+
+def _read_yaml(path: Path, model, errors: list[str]):  # noqa: ANN001
+    try:
+        raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+        return model.model_validate(raw)
+    except yaml.YAMLError as exc:
+        errors.append(f"{path}: YAML okunamadı: {exc}")
+    except ValidationError as exc:
+        for issue in exc.errors():
+            location = ".".join(str(part) for part in issue["loc"])
+            errors.append(f"{path}: {location}: {issue['msg']}")
+    return None
+
+
+def load(data_dir: Path) -> Content:
+    """Kaynak dosyaları okur ve doğrular. Hata varsa ContentError fırlatır."""
+    errors: list[str] = []
+    sources = _read_yaml(data_dir / "sources.yaml", SourcesFile, errors)
+    curriculum = _read_yaml(data_dir / "curriculum" / "curriculum.yaml", CurriculumFile, errors)
+    if sources is None or curriculum is None:
+        raise ContentError(errors)
+    content = Content(sources=sources, curriculum=curriculum)
+
+    for path in sorted((data_dir / "lessons").rglob("*.yaml")):
+        lesson = _read_yaml(path, LessonFile, errors)
+        if lesson is None:
+            continue
+        if lesson.id in content.lessons:
+            errors.append(f"{path}: ders kimliği yineleniyor: {lesson.id}")
+        content.lessons[lesson.id] = lesson
+
+    for path in sorted((data_dir / "vocabulary").rglob("*.yaml")):
+        vocab = _read_yaml(path, VocabularyFile, errors)
+        if vocab is None:
+            continue
+        for entry in vocab.words:
+            key = lemma_key(entry.lemma)
+            if key in content.words:
+                errors.append(
+                    f"{path}: '{entry.lemma}' yineleniyor (ilk kayıt: {content.words[key].origin})"
+                )
+                continue
+            content.words[key] = LoadedWord(
+                id=word_id(entry.lemma),
+                key=key,
+                level=entry.level or vocab.level,
+                source=vocab.source,
+                review_status=vocab.review_status,
+                entry=entry,
+                origin=path.name,
+            )
+
+    errors.extend(validate(content))
+    if errors:
+        raise ContentError(errors)
+    return content
+
+
+def validate(content: Content) -> list[str]:
+    """Dosyalar arası tutarlılık denetimleri."""
+    errors: list[str] = []
+    source_ids = {s.id for s in content.sources.sources}
+    if len(source_ids) != len(content.sources.sources):
+        errors.append("sources.yaml: kaynak kimlikleri benzersiz olmalıdır.")
+
+    level_codes = [level.code for level in content.curriculum.levels]
+    if level_codes != ["A1", "A2", "B1", "B2", "C1", "C2"]:
+        errors.append("curriculum.yaml: seviyeler A1…C2 sırasıyla ve eksiksiz tanımlanmalıdır.")
+
+    # Üniteler ve ders yerleşimi
+    unit_ids: set[str] = set()
+    placed: dict[str, str] = {}
+    for unit in content.curriculum.units:
+        if unit.id in unit_ids:
+            errors.append(f"curriculum.yaml: ünite kimliği yineleniyor: {unit.id}")
+        unit_ids.add(unit.id)
+        for lesson_id in unit.lessons:
+            lesson = content.lessons.get(lesson_id)
+            if lesson is None:
+                errors.append(f"curriculum.yaml: {unit.id} ünitesindeki ders bulunamadı: {lesson_id}")
+                continue
+            if lesson_id in placed:
+                errors.append(f"curriculum.yaml: {lesson_id} birden fazla ünitede ({placed[lesson_id]}, {unit.id})")
+            placed[lesson_id] = unit.id
+            if lesson.level != unit.level:
+                errors.append(f"{lesson_id}: ders seviyesi ({lesson.level}) ünite seviyesiyle ({unit.level}) uyuşmuyor")
+
+    # Dersler
+    for lesson in content.lessons.values():
+        where = f"ders {lesson.id}"
+        if lesson.id not in placed:
+            errors.append(f"{where}: hiçbir üniteye yerleştirilmemiş")
+        if lesson.source not in source_ids:
+            errors.append(f"{where}: bilinmeyen kaynak '{lesson.source}'")
+        for label, targets in (("prerequisites", lesson.prerequisites), ("next", lesson.next), ("related", lesson.related)):
+            for target in targets:
+                if target == lesson.id:
+                    errors.append(f"{where}: {label} kendisine bağlanamaz")
+                elif target not in content.lessons:
+                    errors.append(f"{where}: {label} hedefi bulunamadı: {target}")
+            if len(set(targets)) != len(targets):
+                errors.append(f"{where}: {label} içinde yinelenen bağlantı var")
+        for lemma in lesson.vocabulary:
+            if lemma_key(lemma) not in content.words:
+                errors.append(f"{where}: ilgili kelime sözlükte yok: '{lemma}'")
+        kinds = {section.kind for section in lesson.sections}
+        if lesson.kind == "grammar":
+            for required in ("explanation", "common_mistakes"):
+                if required not in kinds:
+                    errors.append(f"{where}: dil bilgisi dersinde '{required}' bölümü zorunludur")
+            if not any(section.examples for section in lesson.sections):
+                errors.append(f"{where}: en az bir örnek cümle gereklidir")
+        for section in lesson.sections:
+            if section.kind == "correct_incorrect" and not any(example.wrong for example in section.examples):
+                errors.append(f"{where}: '{section.title_tr}' bölümünde yanlış kullanım örneği yok")
+
+    # Kelimeler
+    seen_ids: dict[str, str] = {}
+    for word in content.words.values():
+        entry = word.entry
+        where = f"kelime '{entry.lemma}' ({word.origin})"
+        if word.id in seen_ids:
+            errors.append(f"{where}: kimlik çakışması ({word.id}) — '{seen_ids[word.id]}' ile")
+        seen_ids[word.id] = entry.lemma
+        if entry.lemma != " ".join(entry.lemma.split()):
+            errors.append(f"{where}: gereksiz boşluk içeriyor")
+        if word.source not in source_ids:
+            errors.append(f"{where}: bilinmeyen kaynak '{word.source}'")
+        if len({(m.pos, m.tr) for m in entry.meanings}) != len(entry.meanings):
+            errors.append(f"{where}: yinelenen anlam kaydı")
+        form_keys = [lemma_key(form) for form in entry.forms]
+        if len(set(form_keys)) != len(form_keys) or word.key in form_keys:
+            errors.append(f"{where}: çekimli biçimlerde yineleme var ya da temel biçim tekrar edilmiş")
+        # Örnek cümlede kelimenin kendisi ya da tanımlı bir çekimi geçmelidir.
+        accepted = [english_tokens(candidate) for candidate in (entry.lemma, *entry.forms)]
+        for example in entry.examples:
+            tokens = english_tokens(example.en)
+            if not any(_contains(tokens, candidate) for candidate in accepted if candidate):
+                errors.append(f"{where}: örnek cümlede kelime ya da çekimi geçmiyor: \"{example.en}\"")
+        for label, targets in (("synonyms", entry.synonyms), ("antonyms", entry.antonyms), ("related", entry.related)):
+            for target in targets:
+                target_key = lemma_key(target)
+                if target_key == word.key:
+                    errors.append(f"{where}: {label} kendisine bağlanamaz")
+                elif target_key not in content.words:
+                    errors.append(f"{where}: {label} hedefi sözlükte yok: '{target}'")
+    return errors
+
+
+def _contains(tokens: list[str], candidate: list[str]) -> bool:
+    size = len(candidate)
+    return any(tokens[i : i + size] == candidate for i in range(len(tokens) - size + 1))
+
+
+def build(data_dir: Path, output: Path) -> dict[str, int]:
+    """content.db dosyasını üretir ve kayıt sayılarını döndürür."""
+    content = load(data_dir)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    tmp = output.with_suffix(".tmp")
+    tmp.unlink(missing_ok=True)
+    conn = sqlite3.connect(tmp)
+    try:
+        conn.executescript(DDL)
+        _insert(conn, content)
+        conn.execute("PRAGMA foreign_keys=ON")
+        broken = conn.execute("PRAGMA foreign_key_check").fetchall()
+        if broken:
+            raise ContentError([f"yabancı anahtar ihlali: {row}" for row in broken[:20]])
+        if conn.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
+            raise ContentError(["veri tabanı bütünlük denetimi başarısız"])
+        conn.commit()
+        counts = {
+            table: conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]  # noqa: S608 (sabit tablo adları)
+            for table in ("units", "lessons", "lesson_sections", "vocabulary", "word_meanings", "example_sentences")
+        }
+        conn.execute("VACUUM")
+    except Exception:
+        conn.close()
+        tmp.unlink(missing_ok=True)
+        raise
+    conn.close()
+    tmp.replace(output)  # yarım kalmış bir dosya asla content.db olarak kalmaz
+    return counts
+
+
+def _insert(conn: sqlite3.Connection, content: Content) -> None:
+    conn.executemany(
+        "INSERT INTO content_meta VALUES (?, ?)",
+        [
+            ("content_version", CONTENT_VERSION),
+            ("schema_version", SCHEMA_VERSION),
+            ("built_at", datetime.now(timezone.utc).isoformat(timespec="seconds")),
+        ],
+    )
+    conn.executemany(
+        "INSERT INTO content_sources VALUES (?, ?, ?, ?, ?)",
+        [(s.id, s.name, s.license, s.url, s.notes) for s in content.sources.sources],
+    )
+    conn.executemany(
+        "INSERT INTO levels VALUES (?, ?, ?, ?)",
+        [(lv.code, i, lv.name_tr, lv.description_tr) for i, lv in enumerate(content.curriculum.levels, 1)],
+    )
+
+    unit_position: dict[str, int] = {}
+    lesson_place: dict[str, tuple[str, int]] = {}
+    for unit in content.curriculum.units:
+        unit_position[unit.level] = unit_position.get(unit.level, 0) + 1
+        conn.execute(
+            "INSERT INTO units VALUES (?, ?, ?, ?, ?, ?)",
+            (unit.id, unit.level, unit_position[unit.level], unit.title_tr, unit.title_en, unit.description_tr),
+        )
+        for position, lesson_id in enumerate(unit.lessons, 1):
+            lesson_place[lesson_id] = (unit.id, position)
+
+    for lesson in content.lessons.values():
+        unit_id, position = lesson_place[lesson.id]
+        conn.execute(
+            "INSERT INTO lessons VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (lesson.id, unit_id, position, lesson.kind, lesson.level, lesson.title_tr, lesson.title_en,
+             lesson.objective_tr, lesson.source, lesson.review_status),
+        )
+    for lesson in content.lessons.values():
+        body_parts = [lesson.objective_tr]
+        for position, section in enumerate(lesson.sections, 1):
+            cursor = conn.execute(
+                "INSERT INTO lesson_sections (lesson_id, position, kind, title_tr, text_tr, table_json) "
+                "VALUES (?, ?, ?, ?, ?, ?)",
+                (lesson.id, position, section.kind, section.title_tr, section.text_tr,
+                 json.dumps(section.table.model_dump(), ensure_ascii=False) if section.table else None),
+            )
+            conn.executemany(
+                "INSERT INTO example_sentences (section_id, position, en, tr, note_tr, is_incorrect, correction_en) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?)",
+                [(cursor.lastrowid, i, ex.en, ex.tr, ex.note_tr, int(ex.wrong), ex.correction)
+                 for i, ex in enumerate(section.examples, 1)],
+            )
+            body_parts += [section.title_tr, section.text_tr or ""]
+            body_parts += [ex.en for ex in section.examples if not ex.wrong]
+            if section.table:
+                body_parts += [cell for row in section.table.rows for cell in row]
+        for kind, targets in (("prerequisite", lesson.prerequisites), ("next", lesson.next), ("related", lesson.related)):
+            conn.executemany(
+                "INSERT INTO lesson_relations VALUES (?, ?, ?)", [(lesson.id, target, kind) for target in targets]
+            )
+        conn.execute(
+            "INSERT INTO search_index (kind, ref_id, level, title, body) VALUES ('lesson', ?, ?, ?, ?)",
+            (lesson.id, lesson.level, fold_text(f"{lesson.title_tr} {lesson.title_en}"), fold_text(" ".join(body_parts))),
+        )
+
+    for word in content.words.values():
+        entry = word.entry
+        conn.execute(
+            "INSERT INTO vocabulary VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (word.id, entry.lemma, word.key, word.level, entry.frequency_rank, entry.ipa, entry.syllables,
+             entry.notes_tr, word.source, word.review_status),
+        )
+        conn.executemany(
+            "INSERT INTO word_meanings (word_id, position, pos, meaning_tr, definition_en) VALUES (?, ?, ?, ?, ?)",
+            [(word.id, i, m.pos, m.tr, m.definition_en) for i, m in enumerate(entry.meanings, 1)],
+        )
+        conn.executemany(
+            "INSERT INTO word_forms VALUES (?, ?)", [(word.id, lemma_key(form)) for form in entry.forms]
+        )
+        conn.executemany(
+            "INSERT INTO example_sentences (word_id, position, en, tr) VALUES (?, ?, ?, ?)",
+            [(word.id, i, ex.en, ex.tr) for i, ex in enumerate(entry.examples, 1)],
+        )
+        conn.executemany(
+            "INSERT INTO collocations (word_id, phrase, meaning_tr) VALUES (?, ?, ?)",
+            [(word.id, c.phrase, c.tr) for c in entry.collocations],
+        )
+        conn.execute(
+            "INSERT INTO search_index (kind, ref_id, level, title, body) VALUES ('word', ?, ?, ?, ?)",
+            (word.id, word.level, fold_text(" ".join([entry.lemma, *entry.forms])),
+             fold_text(" ".join(m.tr for m in entry.meanings))),
+        )
+    for word in content.words.values():
+        for kind, targets in (("synonym", word.entry.synonyms), ("antonym", word.entry.antonyms), ("related", word.entry.related)):
+            conn.executemany(
+                "INSERT OR IGNORE INTO word_relations VALUES (?, ?, ?)",
+                [(word.id, content.words[lemma_key(target)].id, kind) for target in targets],
+            )
+    for lesson in content.lessons.values():
+        conn.executemany(
+            "INSERT OR IGNORE INTO lesson_vocabulary VALUES (?, ?)",
+            [(lesson.id, content.words[lemma_key(lemma)].id) for lemma in lesson.vocabulary],
+        )

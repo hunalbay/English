@@ -1,0 +1,144 @@
+# A1 çekirdek kelimeleri (başlangıç kümesi). Aşama 3'te genişletilecektir.
+# Kısa yazım: pos + tr (tek anlam), en + ex_tr (tek örnek cümle ve çevirisi).
+# forms: aynı temel kelimenin çekimli biçimleri — ayrı kelime olarak sayılmaz.
+level: A1
+source: original
+review_status: auto_checked
+words:
+  # Zamirler ve işlev sözcükleri
+  - {lemma: I, pos: pronoun, tr: ben, en: "I am from Turkey.", ex_tr: "Ben Türkiye'denim.", notes_tr: "Her zaman büyük harfle yazılır."}
+  - {lemma: you, pos: pronoun, tr: "sen, siz", en: "You are very kind.", ex_tr: "Çok naziksiniz."}
+  - {lemma: he, pos: pronoun, tr: o (erkek), en: "He is my brother.", ex_tr: "O benim erkek kardeşim."}
+  - {lemma: she, pos: pronoun, tr: o (kadın), en: "She is a doctor.", ex_tr: "O bir doktor."}
+  - {lemma: it, pos: pronoun, tr: "o (nesne, hayvan)", en: "It is on the table.", ex_tr: "O masanın üstünde."}
+  - {lemma: we, pos: pronoun, tr: biz, en: "We are at school.", ex_tr: "Biz okuldayız."}
+  - {lemma: they, pos: pronoun, tr: onlar, en: "They are my friends.", ex_tr: "Onlar benim arkadaşlarım."}
+  - {lemma: this, pos: determiner, tr: bu, forms: [these], en: "This is my room.", ex_tr: "Bu benim odam."}
+  - {lemma: that, pos: determiner, tr: "şu, o", forms: [those], en: "That is a nice car.", ex_tr: "Şu güzel bir araba."}
+  - {lemma: a, pos: article, tr: bir, en: "I have a dog.", ex_tr: "Bir köpeğim var.", notes_tr: "Ünsüz sesle başlayan sözcüklerden önce kullanılır."}
+  - {lemma: an, pos: article, tr: bir, en: "She has an idea.", ex_tr: "Onun bir fikri var.", notes_tr: "Ünlü sesle başlayan sözcüklerden önce kullanılır."}
+  - {lemma: the, pos: article, tr: "(belirli tanımlık; Türkçede tek sözcüklü karşılığı yoktur)", en: "The door is open.", ex_tr: "Kapı açık."}
+  - {lemma: and, pos: conjunction, tr: ve, en: "I have a cat and a dog.", ex_tr: "Bir kedim ve bir köpeğim var."}
+  - {lemma: but, pos: conjunction, tr: "ama, fakat", en: "The house is small but nice.", ex_tr: "Ev küçük ama güzel."}
+  - {lemma: or, pos: conjunction, tr: "ya da, veya", en: "Tea or coffee?", ex_tr: "Çay mı, kahve mi?"}
+  - {lemma: not, pos: adverb, tr: "değil; (olumsuzluk bildirir)", en: "I am not tired.", ex_tr: "Yorgun değilim."}
+  - {lemma: "yes", pos: interjection, tr: evet, en: "Yes, I am ready.", ex_tr: "Evet, hazırım."}
+  - {lemma: "no", pos: interjection, tr: hayır, en: "No, thank you.", ex_tr: "Hayır, teşekkür ederim."}
+  - {lemma: here, pos: adverb, tr: "burada, buraya", en: "Your bag is here.", ex_tr: "Çantan burada.", antonyms: [there]}
+  - {lemma: there, pos: adverb, tr: "orada, oraya", en: "The station is over there.", ex_tr: "İstasyon şurada.", antonyms: [here]}
+  - {lemma: very, pos: adverb, tr: çok, en: "It is very cold today.", ex_tr: "Bugün hava çok soğuk."}
+  - {lemma: in, pos: preposition, tr: "içinde, -de/-da", en: "The keys are in my bag.", ex_tr: "Anahtarlar çantamda."}
+  - {lemma: "on", pos: preposition, tr: "üstünde, -de/-da", en: "The book is on the table.", ex_tr: "Kitap masanın üstünde."}
+  - {lemma: at, pos: preposition, tr: "-de/-da (yer, saat)", en: "She is at work.", ex_tr: "O işte."}
+  - {lemma: from, pos: preposition, tr: "-den/-dan", en: "I am from Izmir.", ex_tr: "İzmirliyim."}
+  - {lemma: with, pos: preposition, tr: "ile, birlikte", en: "I live with my family.", ex_tr: "Ailemle yaşıyorum."}
+
+  # Temel fiiller
+  - {lemma: be, pos: verb, tr: olmak, forms: [am, is, are, was, were, been, being], en: "They are at home.", ex_tr: "Onlar evde.",
+     notes_tr: "Şimdiki zamanda am, is, are; geçmiş zamanda was, were biçimlerini alır."}
+  - {lemma: have, pos: verb, tr: sahip olmak, forms: [has, had, having], en: "I have two sisters.", ex_tr: "İki kız kardeşim var."}
+  - {lemma: do, pos: verb, tr: yapmak, forms: [does, did, done, doing], en: "I do my homework in the evening.", ex_tr: "Ödevimi akşam yaparım."}
+  - {lemma: go, pos: verb, tr: gitmek, forms: [goes, went, gone, going], en: "I go to work by bus.", ex_tr: "İşe otobüsle giderim."}
+  - {lemma: come, pos: verb, tr: gelmek, forms: [comes, came, coming], en: "Come here, please.", ex_tr: "Buraya gel, lütfen."}
+  - {lemma: like, pos: verb, tr: "sevmek, hoşlanmak", forms: [likes, liked, liking], en: "I like music.", ex_tr: "Müziği severim."}
+  - {lemma: want, pos: verb, tr: istemek, forms: [wants, wanted, wanting], en: "I want a glass of water.", ex_tr: "Bir bardak su istiyorum."}
+  - {lemma: eat, pos: verb, tr: yemek (yemek), forms: [eats, ate, eaten, eating], en: "We eat breakfast at eight.", ex_tr: "Kahvaltıyı sekizde yaparız."}
+  - {lemma: drink, pos: verb, tr: içmek, forms: [drinks, drank, drunk, drinking], en: "I drink tea every morning.", ex_tr: "Her sabah çay içerim."}
+  - {lemma: read, pos: verb, tr: okumak, forms: [reads, reading], en: "She reads a book every week.", ex_tr: "O her hafta bir kitap okur."}
+  - {lemma: write, pos: verb, tr: yazmak, forms: [writes, wrote, written, writing], en: "Please write your name here.", ex_tr: "Lütfen adınızı buraya yazın."}
+  - {lemma: speak, pos: verb, tr: konuşmak, forms: [speaks, spoke, spoken, speaking], en: "Do you speak English?", ex_tr: "İngilizce konuşuyor musunuz?"}
+  - {lemma: live, pos: verb, tr: "yaşamak, oturmak", forms: [lives, lived, living], en: "I live in Ankara.", ex_tr: "Ankara'da yaşıyorum."}
+  - {lemma: work, meanings: [{pos: verb, tr: çalışmak}, {pos: noun, tr: "iş, çalışma"}], forms: [works, worked, working],
+     examples: [{en: "He works in a bank.", tr: "O bir bankada çalışıyor."}, {en: "I am at work now.", tr: "Şu an işteyim."}]}
+  - {lemma: see, pos: verb, tr: görmek, forms: [sees, saw, seen, seeing], en: "I see a bird in the garden.", ex_tr: "Bahçede bir kuş görüyorum."}
+  - {lemma: know, pos: verb, tr: "bilmek, tanımak", forms: [knows, knew, known, knowing], en: "I know the answer.", ex_tr: "Cevabı biliyorum."}
+  - {lemma: learn, pos: verb, tr: öğrenmek, forms: [learns, learned, learnt, learning], en: "I learn new words every day.", ex_tr: "Her gün yeni kelimeler öğreniyorum."}
+  - {lemma: open, meanings: [{pos: verb, tr: açmak}, {pos: adjective, tr: açık}], forms: [opens, opened, opening],
+     en: "Please open the window.", ex_tr: "Lütfen pencereyi aç.", antonyms: [close]}
+  - {lemma: close, pos: verb, tr: kapatmak, forms: [closes, closed, closing], en: "Close the door, please.", ex_tr: "Kapıyı kapat, lütfen.", antonyms: [open]}
+  - {lemma: help, meanings: [{pos: verb, tr: yardım etmek}, {pos: noun, tr: yardım}], forms: [helps, helped, helping],
+     en: "Can you help me?", ex_tr: "Bana yardım edebilir misin?"}
+
+  # İnsanlar ve aile
+  - {lemma: man, pos: noun, tr: "adam, erkek", forms: [men], en: "That man is my uncle.", ex_tr: "Şu adam benim amcam."}
+  - {lemma: woman, pos: noun, tr: kadın, forms: [women], en: "The woman is a doctor.", ex_tr: "Kadın bir doktor."}
+  - {lemma: child, pos: noun, tr: çocuk, forms: [children], en: "The children are in the garden.", ex_tr: "Çocuklar bahçede."}
+  - {lemma: boy, pos: noun, tr: erkek çocuk, forms: [boys], en: "The boy is ten years old.", ex_tr: "Çocuk on yaşında."}
+  - {lemma: girl, pos: noun, tr: kız çocuk, forms: [girls], en: "The girl is my sister.", ex_tr: "Kız benim kardeşim."}
+  - {lemma: friend, pos: noun, tr: arkadaş, forms: [friends], en: "She is my best friend.", ex_tr: "O benim en iyi arkadaşım."}
+  - {lemma: family, pos: noun, tr: aile, forms: [families], en: "My family is big.", ex_tr: "Ailem kalabalık."}
+  - {lemma: mother, pos: noun, tr: anne, forms: [mothers], en: "My mother is a nurse.", ex_tr: "Annem hemşire."}
+  - {lemma: father, pos: noun, tr: baba, forms: [fathers], en: "My father works in a factory.", ex_tr: "Babam bir fabrikada çalışıyor."}
+  - {lemma: sister, pos: noun, tr: kız kardeş, forms: [sisters], en: "I have one sister.", ex_tr: "Bir kız kardeşim var."}
+  - {lemma: brother, pos: noun, tr: erkek kardeş, forms: [brothers], en: "My brother is a student.", ex_tr: "Erkek kardeşim öğrenci."}
+  - {lemma: name, pos: noun, tr: "ad, isim", forms: [names], en: "My name is Ayşe.", ex_tr: "Benim adım Ayşe."}
+  - {lemma: student, pos: noun, tr: öğrenci, forms: [students], en: "I am a university student.", ex_tr: "Üniversite öğrencisiyim."}
+  - {lemma: teacher, pos: noun, tr: öğretmen, forms: [teachers], en: "Our teacher is very nice.", ex_tr: "Öğretmenimiz çok iyi."}
+  - {lemma: doctor, pos: noun, tr: doktor, forms: [doctors], en: "The doctor is busy now.", ex_tr: "Doktor şu an meşgul."}
+
+  # Ev, okul, şehir
+  - {lemma: home, pos: noun, tr: "ev, yuva", forms: [homes], en: "I am at home today.", ex_tr: "Bugün evdeyim."}
+  - {lemma: house, pos: noun, tr: ev, forms: [houses], en: "They live in a big house.", ex_tr: "Büyük bir evde yaşıyorlar."}
+  - {lemma: room, pos: noun, tr: oda, forms: [rooms], en: "This is my room.", ex_tr: "Bu benim odam."}
+  - {lemma: door, pos: noun, tr: kapı, forms: [doors], en: "The door is closed.", ex_tr: "Kapı kapalı."}
+  - {lemma: window, pos: noun, tr: pencere, forms: [windows], en: "The window is open.", ex_tr: "Pencere açık."}
+  - {lemma: table, pos: noun, tr: masa, forms: [tables], en: "The phone is on the table.", ex_tr: "Telefon masanın üstünde."}
+  - {lemma: chair, pos: noun, tr: sandalye, forms: [chairs], en: "This chair is comfortable.", ex_tr: "Bu sandalye rahat."}
+  - {lemma: bed, pos: noun, tr: yatak, forms: [beds], en: "The cat is on the bed.", ex_tr: "Kedi yatağın üstünde."}
+  - {lemma: school, pos: noun, tr: okul, forms: [schools], en: "The school is near my house.", ex_tr: "Okul evime yakın."}
+  - {lemma: university, pos: noun, tr: üniversite, forms: [universities], en: "She studies at a university in Istanbul.", ex_tr: "İstanbul'da bir üniversitede okuyor."}
+  - {lemma: book, pos: noun, tr: kitap, forms: [books], en: "This book is very interesting.", ex_tr: "Bu kitap çok ilginç."}
+  - {lemma: pen, pos: noun, tr: kalem (tükenmez), forms: [pens], en: "Do you have a pen?", ex_tr: "Kalemin var mı?"}
+  - {lemma: bag, pos: noun, tr: çanta, forms: [bags], en: "My bag is heavy.", ex_tr: "Çantam ağır."}
+  - {lemma: phone, pos: noun, tr: telefon, forms: [phones], en: "Where is my phone?", ex_tr: "Telefonum nerede?"}
+  - {lemma: car, pos: noun, tr: araba, forms: [cars], en: "His car is new.", ex_tr: "Onun arabası yeni."}
+  - {lemma: bus, pos: noun, tr: otobüs, forms: [buses], en: "The bus is late.", ex_tr: "Otobüs gecikti."}
+  - {lemma: city, pos: noun, tr: şehir, forms: [cities], en: "Istanbul is a big city.", ex_tr: "İstanbul büyük bir şehir."}
+  - {lemma: street, pos: noun, tr: "sokak, cadde", forms: [streets], en: "The street is very quiet.", ex_tr: "Sokak çok sessiz."}
+  - {lemma: shop, pos: noun, tr: "dükkân, mağaza", forms: [shops], en: "The shop is open today.", ex_tr: "Dükkân bugün açık."}
+  - {lemma: umbrella, pos: noun, tr: şemsiye, forms: [umbrellas], en: "Take an umbrella with you.", ex_tr: "Yanına bir şemsiye al."}
+
+  # Yiyecek ve içecek
+  - {lemma: water, pos: noun, tr: su, en: "Can I have some water?", ex_tr: "Biraz su alabilir miyim?"}
+  - {lemma: tea, pos: noun, tr: çay, forms: [teas], en: "Would you like some tea?", ex_tr: "Biraz çay ister misiniz?"}
+  - {lemma: coffee, pos: noun, tr: kahve, forms: [coffees], en: "I drink coffee in the morning.", ex_tr: "Sabahları kahve içerim."}
+  - {lemma: bread, pos: noun, tr: ekmek, en: "We need some bread.", ex_tr: "Biraz ekmeğe ihtiyacımız var."}
+  - {lemma: milk, pos: noun, tr: süt, en: "The milk is in the fridge.", ex_tr: "Süt buzdolabında."}
+  - {lemma: apple, pos: noun, tr: elma, forms: [apples], en: "I eat an apple every day.", ex_tr: "Her gün bir elma yerim."}
+  - {lemma: egg, pos: noun, tr: yumurta, forms: [eggs], en: "I have an egg for breakfast.", ex_tr: "Kahvaltıda bir yumurta yerim."}
+  - {lemma: food, pos: noun, tr: "yiyecek, yemek", forms: [foods], en: "The food is delicious.", ex_tr: "Yemek çok lezzetli."}
+  - {lemma: breakfast, pos: noun, tr: kahvaltı, forms: [breakfasts], en: "Breakfast is at seven.", ex_tr: "Kahvaltı saat yedide."}
+
+  # Zaman
+  - {lemma: day, pos: noun, tr: gün, forms: [days], en: "Have a nice day!", ex_tr: "İyi günler!"}
+  - {lemma: week, pos: noun, tr: hafta, forms: [weeks], en: "I work five days a week.", ex_tr: "Haftada beş gün çalışırım."}
+  - {lemma: month, pos: noun, tr: ay (takvim), forms: [months], en: "This month is very busy.", ex_tr: "Bu ay çok yoğun."}
+  - {lemma: year, pos: noun, tr: "yıl, sene", forms: [years], en: "She is twenty years old.", ex_tr: "O yirmi yaşında."}
+  - {lemma: hour, pos: noun, tr: saat (süre), forms: [hours], en: "The film is two hours long.", ex_tr: "Film iki saat sürüyor.", notes_tr: "Baştaki h okunmaz; bu yüzden \"an hour\" denir."}
+  - {lemma: minute, pos: noun, tr: dakika, forms: [minutes], en: "Wait a minute, please.", ex_tr: "Bir dakika bekleyin, lütfen."}
+  - {lemma: today, pos: adverb, tr: bugün, en: "I am very busy today.", ex_tr: "Bugün çok meşgulüm."}
+  - {lemma: tomorrow, pos: adverb, tr: yarın, en: "See you tomorrow!", ex_tr: "Yarın görüşürüz!"}
+  - {lemma: now, pos: adverb, tr: "şimdi, şu an", en: "I am at home now.", ex_tr: "Şu an evdeyim."}
+  - {lemma: morning, pos: noun, tr: sabah, forms: [mornings], en: "Good morning!", ex_tr: "Günaydın!"}
+  - {lemma: evening, pos: noun, tr: akşam, forms: [evenings], en: "I watch TV in the evening.", ex_tr: "Akşamları televizyon izlerim."}
+  - {lemma: night, pos: noun, tr: gece, forms: [nights], en: "Good night!", ex_tr: "İyi geceler!"}
+
+  # Sıfatlar
+  - {lemma: good, pos: adjective, tr: iyi, forms: [better, best], en: "This is a good idea.", ex_tr: "Bu iyi bir fikir.", antonyms: [bad]}
+  - {lemma: bad, pos: adjective, tr: kötü, forms: [worse, worst], en: "The weather is bad today.", ex_tr: "Bugün hava kötü.", antonyms: [good]}
+  - {lemma: big, pos: adjective, tr: büyük, forms: [bigger, biggest], en: "They have a big garden.", ex_tr: "Büyük bir bahçeleri var.", antonyms: [small]}
+  - {lemma: small, pos: adjective, tr: küçük, forms: [smaller, smallest], en: "My room is small.", ex_tr: "Odam küçük.", antonyms: [big]}
+  - {lemma: new, pos: adjective, tr: yeni, forms: [newer, newest], en: "I have a new phone.", ex_tr: "Yeni bir telefonum var.", antonyms: [old]}
+  - {lemma: old, pos: adjective, tr: "eski; yaşlı", forms: [older, oldest], en: "This is an old house.", ex_tr: "Bu eski bir ev.", antonyms: [new, young]}
+  - {lemma: young, pos: adjective, tr: genç, forms: [younger, youngest], en: "She is very young.", ex_tr: "O çok genç.", antonyms: [old]}
+  - {lemma: happy, pos: adjective, tr: mutlu, forms: [happier, happiest], en: "I am happy today.", ex_tr: "Bugün mutluyum.", antonyms: [sad]}
+  - {lemma: sad, pos: adjective, tr: üzgün, forms: [sadder, saddest], en: "Why are you sad?", ex_tr: "Neden üzgünsün?", antonyms: [happy]}
+  - {lemma: tired, pos: adjective, tr: yorgun, en: "I am very tired tonight.", ex_tr: "Bu gece çok yorgunum."}
+  - {lemma: hungry, pos: adjective, tr: aç, forms: [hungrier, hungriest], en: "Are you hungry?", ex_tr: "Aç mısın?"}
+  - {lemma: hot, pos: adjective, tr: sıcak, forms: [hotter, hottest], en: "The tea is very hot.", ex_tr: "Çay çok sıcak.", antonyms: [cold]}
+  - {lemma: cold, pos: adjective, tr: soğuk, forms: [colder, coldest], en: "It is cold outside.", ex_tr: "Dışarısı soğuk.", antonyms: [hot]}
+  - {lemma: nice, pos: adjective, tr: "güzel, hoş", forms: [nicer, nicest], en: "It is a nice day.", ex_tr: "Güzel bir gün."}
+  - {lemma: easy, pos: adjective, tr: kolay, forms: [easier, easiest], en: "This question is easy.", ex_tr: "Bu soru kolay.", antonyms: [difficult]}
+  - {lemma: difficult, pos: adjective, tr: zor, en: "The exam is difficult.", ex_tr: "Sınav zor.", antonyms: [easy]}
+  - {lemma: late, pos: adjective, tr: geç, forms: [later, latest], en: "Sorry, I am late.", ex_tr: "Üzgünüm, geç kaldım.", antonyms: [early]}
+  - {lemma: early, pos: adjective, tr: erken, forms: [earlier, earliest], en: "It is too early.", ex_tr: "Çok erken.", antonyms: [late]}

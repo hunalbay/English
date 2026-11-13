@@ -1,0 +1,86 @@
+id: gram.a1.subject-pronouns
+kind: grammar
+level: A1
+title_tr: Kişi zamirleri (özne)
+title_en: Subject pronouns
+objective_tr: Bu dersin sonunda I, you, he, she, it, we, they zamirlerini cümlenin öznesi olarak doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+next: [gram.a1.to-be-present]
+vocabulary: [I, you, he, she, it, we, they]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Kişi zamirleri bir ismin yerine kullanılır ve cümlede **işi yapanı** (özneyi) gösterir. "Ayşe yorgun" demek yerine "O yorgun" dediğimizde "o" bir kişi zamiridir.
+
+      Türkçede özneyi çoğu zaman söylemeyiz, çünkü fiilin sonundaki ek kimin yaptığını zaten gösterir: "Geliyor**um**." İngilizcede fiil böyle bir ek almadığı için özne **mutlaka söylenir**: "**I** am coming."
+    table:
+      headers: [İngilizce, Türkçe, Açıklama]
+      rows:
+        - [I, ben, Her zaman büyük harfle yazılır.]
+        - [you, sen / siz, Tekil ve çoğul için aynıdır.]
+        - [he, o, Erkekler için.]
+        - [she, o, Kadınlar için.]
+        - [it, o, "Nesneler, hayvanlar, kavramlar için."]
+        - [we, biz, ""]
+        - [they, onlar, "İnsanlar, hayvanlar ve nesneler için ortaktır."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **1. Zamir fiilden önce gelir.** Düz cümlede özne zamiri fiilin hemen önünde durur: "**She** works here."
+
+      **2. Türkçedeki tek "o" İngilizcede üçe ayrılır.** Bir erkekten söz ediyorsanız **he**, bir kadından söz ediyorsanız **she**, bir nesne ya da hayvandan söz ediyorsanız **it** kullanırsınız.
+
+      **3. "You" hem "sen" hem "siz" demektir.** İngilizcede ayrı bir saygı biçimi yoktur; bir arkadaşınıza da, müdürünüze de **you** dersiniz.
+
+      **4. Çoğulda cinsiyet ayrımı yoktur.** İnsanlar, hayvanlar ve nesneler için çoğulda hep **they** kullanılır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I am a student.", tr: "Ben bir öğrenciyim."}
+      - {en: "You are my friend.", tr: "Sen benim arkadaşımsın."}
+      - {en: "He is a doctor.", tr: "O bir doktor.", note_tr: "Bir erkekten söz ediliyor."}
+      - {en: "She is from Ankara.", tr: "O Ankaralı.", note_tr: "Bir kadından söz ediliyor."}
+      - {en: "It is a small house.", tr: "O küçük bir ev.", note_tr: "Bir nesneden söz ediliyor."}
+      - {en: "We are at home.", tr: "Biz evdeyiz."}
+      - {en: "They are happy.", tr: "Onlar mutlu."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Is a teacher.", tr: "(O) bir öğretmen.", wrong: true, correction: "She is a teacher.", note_tr: "İngilizcede özne atlanmaz."}
+      - {en: "My brother he is tall.", tr: "Erkek kardeşim uzun boylu.", wrong: true, correction: "My brother is tall.", note_tr: "İsim ve zamir aynı özne için birlikte kullanılmaz."}
+      - {en: "This is my mother. He is a nurse.", tr: "Bu benim annem. O bir hemşire.", wrong: true, correction: "This is my mother. She is a nurse.", note_tr: "Kadınlar için she kullanılır."}
+      - {en: "Tom and i are friends.", tr: "Tom ve ben arkadaşız.", wrong: true, correction: "Tom and I are friends.", note_tr: "I her zaman büyük yazılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Özneyi atlamak.** Türkçe düşünerek "Am tired" ya da "Is cold" demek en yaygın hatadır. Her cümlede bir özne olmalıdır: "**I** am tired.", "**It** is cold."
+
+      **He ile she'yi karıştırmak.** Türkçede tek bir "o" olduğu için bu hata çok doğaldır. Konuşurken kimden söz ettiğinizi bir an düşünmek zamanla alışkanlık hâline gelir.
+
+      **Nesneler için he/she kullanmak.** Masa, kitap, araba gibi nesneler için **it** kullanılır: "This is my car. **It** is new."
+
+      **"I" zamirini küçük yazmak.** Cümlenin neresinde olursa olsun **I** büyük harfle yazılır.
+  - kind: exceptions
+    title_tr: İstisnalar ve özel durumlar
+    text_tr: |-
+      **Hava, saat ve mesafe için "it".** Bu cümlelerde "it" belirli bir nesneyi göstermez; cümlenin özne yerini doldurur: "**It** is hot today." (Bugün hava sıcak.), "**It** is five o'clock." (Saat beş.)
+
+      **Evcil hayvanlar.** Hayvanlar için genellikle **it** kullanılır; ancak insanlar cinsiyetini bildikleri evcil hayvanları için çoğu zaman **he** ya da **she** der: "This is my dog. **He** is three years old."
+    examples:
+      - {en: "It is cold today.", tr: "Bugün hava soğuk."}
+      - {en: "It is seven o'clock.", tr: "Saat yedi."}
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "This is Elif. She is my sister.", tr: "Bu Elif. O benim kız kardeşim."}
+      - {en: "Where is my phone? It is on the table.", tr: "Telefonum nerede? Masanın üstünde."}
+      - {en: "Ali and Can are not here. They are at work.", tr: "Ali ile Can burada değil. Onlar işte."}
+      - {en: "My friend and I are hungry. We are in the kitchen.", tr: "Arkadaşım ve ben açız. Mutfaktayız."}
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Çevrenizdeki kişi ve nesnelere bakıp her biri için doğru zamiri söyleyin: annem → she, telefon → it, arkadaşlarım → they.
+
+      Kısa cümleleri sesli söylerken özneyi bilerek vurgulayın; özneyi atlamama alışkanlığı böyle yerleşir.

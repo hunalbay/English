@@ -53,29 +53,51 @@ Saf ES modülleri, hash tabanlı yönlendirme, derleme adımı yok. Menüde yaln
 çalışan sayfalar bulunur (`frontend/scripts/app.js` içindeki `ROUTES`). DOM, `dom.js`
 içindeki `h()` yardımcısıyla kurulur; `innerHTML` kullanılmaz.
 
-## API (Aşama 1)
+## İçerik hattı
+
+```
+data/*.yaml ──(Pydantic şemaları)──> doğrulama ──> data/build/content.db
+```
+
+`scripts/build_content.py` kaynak dosyaları okur (`app/content/source_models.py`), dosyalar arası
+tutarlılığı denetler (`app/content/builder.py: validate`) ve veri tabanını üretir. Tek bir hata varsa
+dosya üretilmez. Uygulama kodu değişmeden yeni ders ve kelime eklenebilir; bkz. [CONTENT.md](CONTENT.md).
+
+content.db'ye erişim `app/content/repository.py` içindeki parametreli, salt okunur sorgularla yapılır.
+Arama SQLite FTS5 ile çalışır; metinler `fold_text()` ile sadeleştirildiği için Türkçe karakter
+yazmadan da arama yapılabilir (ogretmen → öğretmen).
+
+## API
 
 | Uç | Açıklama |
 |---|---|
 | `GET /api/v1/health` | Sürüm, içerik durumu, şema revizyonu |
 | `GET /api/v1/session` | Yazma istekleri için oturum belirteci |
-| `GET /api/v1/settings` | Ayarlar |
-| `PUT /api/v1/settings/{key}` | Ayar güncelle (`theme`, `daily_goal_minutes`) |
+| `GET /api/v1/settings` · `PUT /api/v1/settings/{key}` | Ayarlar (`theme`, `daily_goal_minutes`) |
 | `POST /api/v1/system/shutdown` | Programı kapat |
+| `GET /api/v1/profile` · `PUT /api/v1/profile/level` | Yerel profil ve seviye |
+| `GET /api/v1/dashboard` | Ana ekran özeti (gerçek kayıtlardan) |
+| `GET /api/v1/levels` · `GET /api/v1/levels/{code}/units` | Seviyeler, üniteler, dersler ve durumları |
+| `GET /api/v1/lessons/{id}` | Ders: bölümler, örnekler, bağlantılı dersler ve kelimeler |
+| `POST /api/v1/lessons/{id}/open` · `PUT /api/v1/lessons/{id}/completion` | Ders ilerlemesi |
+| `GET /api/v1/vocabulary` · `GET /api/v1/vocabulary/{id}` | Sözlük listesi/araması ve kelime ayrıntısı |
+| `GET /api/v1/vocabulary/lookup?form=` | Çekimli biçimden temel kelimeye |
+| `GET/PUT/DELETE /api/v1/word-list[/{id}]` | Kişisel kelime listesi |
+| `GET /api/v1/search?q=` | Derslerde ve sözlükte arama |
 
 Hata biçimi: `{"error": {"code": "...", "message": "Türkçe açıklama"}}`
 
 ## Testler
 
-- `tests/unit` — yapılandırma, güvenlik, ayarlar, migration/yedek, başlatıcı
+- `tests/unit` — yapılandırma, güvenlik, ayarlar, migration/yedek, başlatıcı, içerik doğrulayıcı
 - `tests/integration` — API uçları (FastAPI TestClient)
 - `tests/e2e` — gerçek süreç: başlatma, tek kopya, kalıcılık, kapanış; tarayıcı duman testi
   (Node + Playwright varsa çalışır, yoksa atlanır)
 
 ## Aşamalar
 
-1. Proje altyapısı ← **şu an**
-2. Temel eğitim sistemi (içerik veri modeli, ana ekran, seviye seçimi, sözlük, arama)
+1. Proje altyapısı ✔
+2. Temel eğitim sistemi (içerik veri modeli, ana ekran, seviye seçimi, sözlük, arama) ← **şu an**
 3. Kelime öğrenme (≥ 5.000 temel kelime, kartlar, aralıklı tekrar)
 4. Dil bilgisi ve test motoru
 5. Okuma, dinleme, yazma, telaffuz

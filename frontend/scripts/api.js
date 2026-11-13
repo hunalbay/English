@@ -72,3 +72,4 @@ export async function send(method, path, payload) {
 
 export const put = (path, payload) => send("PUT", path, payload);
 export const post = (path, payload) => send("POST", path, payload);
+export const del = (path) => send("DELETE", path);

@@ -1,0 +1,9 @@
+# İçerik kaynakları ve lisansları. Her ders ve kelime bir kaynağa bağlanır.
+sources:
+  - id: original
+    name: English Master özgün içeriği
+    license: Proje lisansı (özgün içerik)
+    notes: >-
+      Bu proje için yazılmış özgün açıklamalar, örnek cümleler ve çeviriler.
+      Yapay zekâ desteğiyle hazırlanmış ve otomatik denetimlerden geçirilmiştir;
+      bir İngilizce öğretmeni tarafından ayrıca gözden geçirilmemiştir.

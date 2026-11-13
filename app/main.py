@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app import __version__
-from app.api import system
+from app.api import learning, system, vocabulary
 from app.core.config import Settings, load_settings
 from app.core.logging import get_logger, setup_logging
 from app.core.security import LocalSecurityMiddleware, new_session_token
@@ -84,7 +84,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         log.error("Beklenmeyen hata: %s %s", request.method, request.url.path, exc_info=exc)
         return _error(500, "internal_error", "Beklenmeyen bir hata oluştu. Ayrıntılar log dosyasına yazıldı.")
 
-    app.include_router(system.router, prefix=API_PREFIX)
+    for module in (system, learning, vocabulary):
+        app.include_router(module.router, prefix=API_PREFIX)
 
     @app.api_route(
         "/api/{rest:path}", methods=["GET", "POST", "PUT", "PATCH", "DELETE"], include_in_schema=False

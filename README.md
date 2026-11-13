@@ -3,8 +3,9 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 1 (proje altyapısı).** Öğrenme modülleri (dersler, kelime kartları, testler…)
-> henüz eklenmedi. Windows kurulum paketi Aşama 9'da hazırlanacak.
+> **Durum: Aşama 2 (temel eğitim sistemi).** Seviye seçimi, ders sayfaları, sözlük, arama ve yerel
+> ilerleme kaydı çalışıyor. İçerik henüz başlangıç düzeyinde (3 ders, 120 kelime); kelime kartları,
+> testler, okuma/dinleme ve Windows kurulum paketi sonraki aşamalarda eklenecek.
 
 ## Geliştirme ortamı
 
@@ -43,7 +44,7 @@ Seçenekler: `--port N`, `--no-browser`, `--no-tray`.
 | `packaging/` | PyInstaller + NSIS dosyaları (Aşama 9) |
 | `docs/` | Mimari ve geliştirici belgeleri |
 
-Ayrıntılar: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+Ayrıntılar: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · İçerik ekleme: [docs/CONTENT.md](docs/CONTENT.md)
 
 ## Gizlilik
 

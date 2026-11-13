@@ -1,0 +1,88 @@
+id: gram.a1.articles-a-an
+kind: grammar
+level: A1
+title_tr: "Belirsiz tanımlıklar: a ve an"
+title_en: "Indefinite articles: a / an"
+objective_tr: Bu dersin sonunda tekil sayılabilir isimlerin önünde a ile an arasında doğru seçimi yapabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.to-be-present]
+vocabulary: [a, an, apple, book, hour, university, umbrella, teacher]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **A** ve **an**, Türkçedeki "bir" sözcüğüne benzer. Tekil ve sayılabilir bir isimden **herhangi biri** olarak ya da **ilk kez** söz ederken ismin önüne gelir: "I have **a** book." (Bir kitabım var.)
+
+      Türkçede "bir" çoğu zaman söylenmez: "O öğretmen." İngilizcede ise tekil sayılabilir bir isim tek başına kullanılamaz; önünde a / an ya da başka bir belirleyici bulunmalıdır: "She is **a** teacher."
+  - kind: usage
+    title_tr: "A mı, an mı?"
+    text_tr: |-
+      Seçimi yazılış değil, **sonraki sözcüğün ilk sesi** belirler.
+
+      **a** → sonraki sözcük **ünsüz sesle** başlıyorsa: a book, a car, a dog.
+
+      **an** → sonraki sözcük **ünlü sesle** başlıyorsa: an apple, an egg, an umbrella.
+
+      Araya bir sıfat girerse sıfatın ilk sesine bakılır: **a** book → **an** old book; **an** apple → **a** red apple.
+    table:
+      headers: [a + ünsüz ses, an + ünlü ses]
+      rows:
+        - [a book, an apple]
+        - [a teacher, an egg]
+        - [a small house, an old house]
+        - [a university, an umbrella]
+        - [a European city, an hour]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "This is a book.", tr: "Bu bir kitap."}
+      - {en: "She is a teacher.", tr: "O bir öğretmen.", note_tr: "Mesleklerden önce a / an kullanılır."}
+      - {en: "I have an apple.", tr: "Bir elmam var."}
+      - {en: "It is an old car.", tr: "O eski bir araba."}
+      - {en: "He is an engineer.", tr: "O bir mühendis."}
+      - {en: "We have a big garden.", tr: "Büyük bir bahçemiz var."}
+  - kind: exceptions
+    title_tr: "İstisnalar: yazılışa değil sese bakın"
+    text_tr: |-
+      **Okunmayan h:** "hour" ve "honest" sözcüklerinde h okunmaz; sözcük ünlü sesle başlar: **an** hour, **an** honest man. Ama h okunuyorsa a kullanılır: **a** house, **a** hotel.
+
+      **"Yu" sesiyle başlayan u ve eu:** "university", "uniform", "European" sözcükleri ünlü harfle yazılır ama "yu" sesiyle, yani ünsüz bir sesle başlar: **a** university, **a** uniform. Buna karşılık "umbrella" ve "uncle" ünlü sesle başlar: **an** umbrella, **an** uncle.
+
+      **"Wan" sesiyle başlayan o:** "one" sözcüğü "w" sesiyle başlar: **a** one-day trip.
+    examples:
+      - {en: "The lesson is an hour long.", tr: "Ders bir saat sürüyor."}
+      - {en: "He is a university student.", tr: "O bir üniversite öğrencisi."}
+      - {en: "I need an umbrella.", tr: "Bir şemsiyeye ihtiyacım var."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She is teacher.", tr: "O öğretmen.", wrong: true, correction: "She is a teacher.", note_tr: "Meslekten önce a / an gerekir."}
+      - {en: "I have a apple.", tr: "Bir elmam var.", wrong: true, correction: "I have an apple.", note_tr: "apple ünlü sesle başlar."}
+      - {en: "It is an university.", tr: "O bir üniversite.", wrong: true, correction: "It is a university.", note_tr: "university \"yu\" sesiyle başlar."}
+      - {en: "They are a students.", tr: "Onlar öğrenci.", wrong: true, correction: "They are students.", note_tr: "Çoğul isimlerle a / an kullanılmaz."}
+      - {en: "I have a water.", tr: "Suyum var.", wrong: true, correction: "I have some water.", note_tr: "Sayılamayan isimlerle a / an kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **A / an'i atlamak.** Türkçede "bir" demeden konuşabildiğimiz için "He is doctor" demek çok yaygındır. Doğrusu: "He is **a** doctor."
+
+      **Çoğul isimlerle kullanmak.** A / an "bir tane" anlamı taşır; çoğul isimlerin önüne gelmez: "They are doctors."
+
+      **Sayılamayan isimlerle kullanmak.** water, milk, money, information gibi sayılamayan isimler a / an almaz.
+
+      **Harfe göre karar vermek.** Kararı ilk harf değil ilk ses verir: **an** hour, **a** university.
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Can I have a coffee, please?", tr: "Bir kahve alabilir miyim, lütfen?"}
+      - {en: "I have a question.", tr: "Bir sorum var."}
+      - {en: "Just a minute, please.", tr: "Bir dakika, lütfen."}
+      - {en: "She has an idea.", tr: "Onun bir fikri var."}
+      - {en: "Have a nice day!", tr: "İyi günler!"}
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Odanızdaki nesneleri sesli sayın: a table, a chair, an armchair, an orange... Sözcüğü söylerken ilk sesi dinlemek doğru seçimi kolaylaştırır.
+
+      Mesleklerle kısa cümleler kurun: "My father is a driver.", "My aunt is an architect."

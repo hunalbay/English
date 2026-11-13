@@ -1,71 +1,92 @@
-// Ana sayfa. Aşama 1'de yalnızca gerçek sistem durumunu gösterir;
-// öğrenme modülleri geliştirildikçe buraya eklenecektir.
+// Ana sayfa: ilk açılışta seviye seçimi, sonrasında gerçek ilerleme özeti.
 
 import * as api from "../api.js";
-import { h } from "../dom.js";
+import { LEVEL_NAMES, add, h, lessonLink, levelBadge, pageHeader, toast } from "../dom.js";
 
-function stat(label, value, badge) {
-  return h(
-    "div",
-    { class: "card" },
-    h("p", { class: "stat-label" }, label),
-    h("p", { class: "stat-value" }, value, badge ? " " : null, badge || null),
-  );
+function progressBar(completed, total) {
+  const percent = total ? Math.round((completed / total) * 100) : 0;
+  const fill = h("div", { class: "progress-fill" });
+  fill.style.width = `${percent}%`; // CSSOM üzerinden; satır içi style özniteliği CSP tarafından engellenir
+  return h("div", { class: "progress", role: "img", "aria-label": `${total} dersten ${completed} tanesi tamamlandı` }, fill);
 }
 
-function formatDate(iso) {
-  const date = new Date(iso);
-  return Number.isNaN(date.getTime()) ? iso : date.toLocaleString("tr-TR");
+function stat(label, value, link) {
+  return h("div", { class: "card" },
+    h("p", { class: "stat-label" }, label),
+    h("p", { class: "stat-value" }, value),
+    link || null);
+}
+
+async function renderOnboarding(root) {
+  const { levels } = await api.get("/levels");
+  add(root, 
+    pageHeader("English Master'a hoş geldiniz",
+      "Başlamak için seviyenizi seçin. Seviyenizi istediğiniz zaman Ayarlar'dan değiştirebilirsiniz; kayıtlarınız silinmez."),
+    h("section", { "aria-labelledby": "seviye-baslik" },
+      h("h2", { id: "seviye-baslik" }, "Seviyemi biliyorum"),
+      h("div", { class: "grid" },
+        levels.map((level) =>
+          h("button", {
+            class: "card level-card", type: "button",
+            onclick: async () => {
+              try {
+                await api.put("/profile/level", { level: level.code });
+                root.replaceChildren();
+                await render(root);
+              } catch (error) {
+                toast(error.message, { error: true });
+              }
+            },
+          },
+            h("span", { class: "level-code" }, level.code),
+            h("span", { class: "list-title" }, level.name_tr),
+            h("span", { class: "list-sub" }, level.description_tr)))),
+    ),
+    h("section", { class: "card", "aria-labelledby": "tespit-baslik" },
+      h("h2", { id: "tespit-baslik" }, "Seviyemi bilmiyorum"),
+      h("p", { class: "muted" },
+        "Seviye tespit sınavı henüz hazır değil; ilerleyen bir sürümde eklenecek. Şimdilik emin değilseniz " +
+        "A1 ile başlayıp dersler kolay gelirse seviyenizi yükseltebilirsiniz.")),
+  );
 }
 
 export async function render(root) {
-  const health = await api.get("/health");
-  const content = health.content;
+  const data = await api.get("/dashboard");
+  if (!data.profile.current_level) {
+    await renderOnboarding(root);
+    return "Hoş geldiniz";
+  }
 
-  root.append(
-    h(
-      "div",
-      { class: "page-header" },
-      h("h1", {}, "English Master"),
-      h("p", {}, "A1'den C2'ye İngilizce öğrenmek için ücretsiz ve çevrimdışı çalışan eğitim programı."),
+  const level = data.profile.current_level;
+  const progress = data.level_progress;
+  const resume = data.continue_lesson || data.next_lesson;
+
+  add(root, 
+    pageHeader("Ana Sayfa"),
+    h("section", { class: "card", "aria-labelledby": "devam-baslik" },
+      h("h2", { id: "devam-baslik" }, data.continue_lesson ? "Öğrenmeye devam et" : "Sıradaki ders"),
+      resume
+        ? h("div", { class: "list" }, lessonLink({ ...resume, status: data.continue_lesson ? "started" : null }))
+        : h("p", { class: "muted" },
+            progress.total === 0
+              ? `${level} seviyesi için dersler henüz eklenmedi.`
+              : `${level} seviyesindeki tüm dersleri açtınız. Dersler sayfasından tekrar edebilirsiniz.`)),
+    h("div", { class: "grid" },
+      h("div", { class: "card" },
+        h("p", { class: "stat-label" }, "Seviyeniz"),
+        h("p", { class: "stat-value" }, levelBadge(level), " ", LEVEL_NAMES[level]),
+        progressBar(progress.completed, progress.total),
+        h("p", { class: "muted small" }, `${progress.total} dersten ${progress.completed} tanesi tamamlandı`),
+        h("a", { href: `#/dersler/${level}` }, "Dersleri gör")),
+      stat("Tamamladığınız dersler", String(data.completed_lessons), h("a", { href: "#/dersler" }, "Tüm seviyeler")),
+      stat("Kelime listeniz", `${data.word_list_count} kelime`, h("a", { href: "#/kelimelerim" }, "Kelimelerim")),
+      stat("Sözlük", `${data.totals.words} kelime`, h("a", { href: "#/sozluk" }, "Sözlüğü aç")),
     ),
-    h(
-      "section",
-      { "aria-labelledby": "durum-baslik" },
-      h("h2", { id: "durum-baslik" }, "Program durumu"),
-      h(
-        "div",
-        { class: "grid" },
-        stat("Program sürümü", health.version),
-        stat(
-          "Eğitim içeriği",
-          content.available ? `Sürüm ${content.version}` : "Bulunamadı",
-          h("span", { class: `badge ${content.available ? "ok" : "err"}` }, content.available ? "Hazır" : "Eksik"),
-        ),
-        stat(
-          "Kişisel verileriniz",
-          "Bu bilgisayarda saklanıyor",
-          h("span", { class: "badge ok" }, `Şema ${health.user_db.schema_revision}`),
-        ),
-      ),
-      content.available
-        ? h("p", { class: "muted", id: "content-built" }, `İçerik derleme tarihi: ${formatDate(content.built_at)}`)
-        : h(
-            "p",
-            { class: "notice error", role: "alert" },
-            "Eğitim içeriği dosyası (content.db) bulunamadı. Programı yeniden kurmayı deneyin.",
-          ),
-    ),
-    h(
-      "section",
-      { class: "card", "aria-labelledby": "gelistirme-baslik" },
-      h("h2", { id: "gelistirme-baslik" }, "Geliştirme sürümü"),
-      h(
-        "p",
-        {},
-        "Bu sürüm programın altyapısını içerir. Dersler, kelime kartları, testler ve diğer öğrenme " +
-          "modülleri henüz eklenmedi; hazır oldukça menüde görünecekler.",
-      ),
-    ),
+    h("section", { class: "card" },
+      h("h2", {}, "Geliştirme sürümü"),
+      h("p", { class: "muted" },
+        `Bu sürümde ${data.totals.lessons} ders ve ${data.totals.words} kelime bulunuyor. Kelime kartları, testler, okuma, ` +
+        "dinleme ve diğer modüller henüz eklenmedi; hazır oldukça menüde görünecekler.")),
   );
+  return "Ana Sayfa";
 }

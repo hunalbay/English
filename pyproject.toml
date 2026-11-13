@@ -1,10 +1,10 @@
 [project]
 name = "english-master"
-version = "0.1.0"
+version = "0.2.0"
 description = "Ücretsiz, çevrimdışı İngilizce eğitim sistemi"
 requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-ra"
 markers = ["e2e: tarayıcı ile uçtan uca testler (Node + Playwright gerektirir)"]

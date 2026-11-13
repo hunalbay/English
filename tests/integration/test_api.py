@@ -14,7 +14,7 @@ def test_health(client):
     assert body["version"] == __version__
     assert body["content"]["available"] is True
     assert body["content"]["version"]
-    assert body["user_db"]["schema_revision"] == "0001"
+    assert body["user_db"]["schema_revision"] == "0002"
     assert response.headers["cache-control"] == "no-store"
 
 

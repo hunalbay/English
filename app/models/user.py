@@ -53,3 +53,29 @@ class UserProfile(UserBase):
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow, nullable=False
     )
+
+
+class LessonProgress(UserBase):
+    """Bir dersin açılma ve tamamlanma durumu. lesson_id, content.db'deki kararlı kimliktir."""
+
+    __tablename__ = "lesson_progress"
+    __table_args__ = (
+        CheckConstraint("status IN ('started','completed')", name="ck_lesson_progress_status"),
+    )
+
+    lesson_id: Mapped[str] = mapped_column(String(120), primary_key=True)
+    status: Mapped[str] = mapped_column(String(16), nullable=False)
+    first_opened_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+    last_opened_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utcnow, nullable=False, index=True
+    )
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class PersonalWord(UserBase):
+    """Kullanıcının tekrar listesine eklediği kelime."""
+
+    __tablename__ = "personal_word_list"
+
+    word_id: Mapped[str] = mapped_column(String(120), primary_key=True)
+    added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
