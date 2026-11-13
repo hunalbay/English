@@ -51,7 +51,7 @@ async function renderOnboarding(root) {
 }
 
 export async function render(root) {
-  const data = await api.get("/dashboard");
+  const [data, stats] = await Promise.all([api.get("/dashboard"), api.get("/study/stats")]);
   if (!data.profile.current_level) {
     await renderOnboarding(root);
     return "Hoş geldiniz";
@@ -79,13 +79,15 @@ export async function render(root) {
         h("p", { class: "muted small" }, `${progress.total} dersten ${progress.completed} tanesi tamamlandı`),
         h("a", { href: `#/dersler/${level}` }, "Dersleri gör")),
       stat("Tamamladığınız dersler", String(data.completed_lessons), h("a", { href: "#/dersler" }, "Tüm seviyeler")),
+      stat("Tekrar zamanı gelen kart", String(stats.directions.en_tr.due + stats.directions.tr_en.due),
+        h("a", { href: "#/calis" }, "Kelime çalışması")),
       stat("Kelime listeniz", `${data.word_list_count} kelime`, h("a", { href: "#/kelimelerim" }, "Kelimelerim")),
       stat("Sözlük", `${data.totals.words} kelime`, h("a", { href: "#/sozluk" }, "Sözlüğü aç")),
     ),
     h("section", { class: "card" },
       h("h2", {}, "Geliştirme sürümü"),
       h("p", { class: "muted" },
-        `Bu sürümde ${data.totals.lessons} ders ve ${data.totals.words} kelime bulunuyor. Kelime kartları, testler, okuma, ` +
+        `Bu sürümde ${data.totals.lessons} ders ve ${data.totals.words} kelime bulunuyor. Dil bilgisi testleri, okuma, ` +
         "dinleme ve diğer modüller henüz eklenmedi; hazır oldukça menüde görünecekler.")),
   );
   return "Ana Sayfa";

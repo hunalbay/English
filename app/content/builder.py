@@ -26,9 +26,9 @@ from app.content.source_models import (
     VocabularyFile,
     WordEntry,
 )
-from app.content.text import english_tokens, fold_text, lemma_key, word_id
+from app.content.text import english_tokens, fold_text, lemma_key, regular_inflections, word_id
 
-CONTENT_VERSION = "0.2.0"
+CONTENT_VERSION = "0.3.0"
 
 
 class ContentError(Exception):
@@ -90,27 +90,108 @@ def load(data_dir: Path) -> Content:
         vocab = _read_yaml(path, VocabularyFile, errors)
         if vocab is None:
             continue
-        for entry in vocab.words:
-            key = lemma_key(entry.lemma)
-            if key in content.words:
-                errors.append(
-                    f"{path}: '{entry.lemma}' yineleniyor (ilk kayıt: {content.words[key].origin})"
-                )
-                continue
-            content.words[key] = LoadedWord(
-                id=word_id(entry.lemma),
-                key=key,
-                level=entry.level or vocab.level,
-                source=vocab.source,
-                review_status=vocab.review_status,
-                entry=entry,
-                origin=path.name,
-            )
+        _add_words(content, vocab, path, errors)
+
+    for path in sorted((data_dir / "vocabulary").rglob("*.psv")):
+        vocab = _read_psv(path, errors)
+        if vocab is not None:
+            _add_words(content, vocab, path, errors)
+
+    ipa = _read_ipa(data_dir / "pronunciation" / "ipa.tsv", errors)
+    for key, word in content.words.items():
+        if word.entry.ipa is None and key in ipa:
+            word.entry.ipa = ipa[key]
 
     errors.extend(validate(content))
     if errors:
         raise ContentError(errors)
     return content
+
+
+POS_ABBREVIATIONS = {
+    "n": "noun", "v": "verb", "adj": "adjective", "adv": "adverb", "pron": "pronoun", "prep": "preposition",
+    "conj": "conjunction", "det": "determiner", "art": "article", "int": "interjection", "num": "numeral",
+    "modal": "modal verb", "aux": "auxiliary verb", "phr": "phrase",
+}
+
+
+def _read_psv(path: Path, errors: list[str]) -> VocabularyFile | None:
+    """Sıkıştırılmış kelime dosyası: `lemma | tür | Türkçe | örnek | çeviri | çekimler`.
+
+    Başlık satırları `#! anahtar: değer` biçimindedir (level, source, review_status).
+    Birden çok anlam için tür ve Türkçe alanları ` / ` ile ayrılır: `work | v / n | çalışmak / iş | ...`
+    """
+    header: dict[str, str] = {}
+    words: list[dict] = []
+    for number, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        line = raw.strip()
+        if line.startswith("#!"):
+            key, _, value = line[2:].partition(":")
+            header[key.strip()] = value.strip()
+            continue
+        if not line or line.startswith("#"):
+            continue
+        parts = [part.strip() for part in line.split("|")]
+        if len(parts) not in (5, 6):
+            errors.append(f"{path}:{number}: 5 ya da 6 alan bekleniyor, {len(parts)} bulundu")
+            continue
+        lemma, pos_field, tr_field, en, ex_tr = parts[:5]
+        pos_list = [item.strip() for item in pos_field.split("/")]
+        tr_list = [item.strip() for item in tr_field.split(" / ")]
+        if len(pos_list) != len(tr_list):
+            errors.append(f"{path}:{number}: tür sayısı ({len(pos_list)}) ile anlam sayısı ({len(tr_list)}) uyuşmuyor")
+            continue
+        unknown = [item for item in pos_list if item not in POS_ABBREVIATIONS]
+        if unknown:
+            errors.append(f"{path}:{number}: bilinmeyen kelime türü: {', '.join(unknown)}")
+            continue
+        words.append({
+            "lemma": lemma,
+            "meanings": [{"pos": POS_ABBREVIATIONS[p], "tr": t} for p, t in zip(pos_list, tr_list)],
+            "examples": [{"en": en, "tr": ex_tr}],
+            "forms": [f.strip() for f in parts[5].split(",") if f.strip()] if len(parts) == 6 else [],
+        })
+    try:
+        return VocabularyFile.model_validate({**header, "words": words})
+    except ValidationError as exc:
+        for issue in exc.errors():
+            location = issue["loc"]
+            lemma = words[location[1]]["lemma"] if len(location) > 1 and location[0] == "words" else ""
+            errors.append(f"{path}: {lemma or '.'.join(str(part) for part in location)}: {issue['msg']}")
+        return None
+
+
+def _read_ipa(path: Path, errors: list[str]) -> dict[str, str]:
+    """`temel biçim<TAB>IPA` satırlarından oluşan telaffuz dosyası (CMUdict'ten türetilir)."""
+    if not path.is_file():
+        return {}
+    result: dict[str, str] = {}
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip() or line.startswith("#"):
+            continue
+        key, tab, value = line.partition("\t")
+        if not tab or not value.strip():
+            errors.append(f"{path}:{number}: 'kelime<TAB>IPA' biçimi bekleniyor")
+            continue
+        result[lemma_key(key)] = value.strip()
+    return result
+
+
+def _add_words(content: Content, vocab: VocabularyFile, path: Path, errors: list[str]) -> None:
+    for entry in vocab.words:
+        key = lemma_key(entry.lemma)
+        if key in content.words:
+            errors.append(f"{path}: '{entry.lemma}' yineleniyor (ilk kayıt: {content.words[key].origin})")
+            continue
+        content.words[key] = LoadedWord(
+            id=word_id(entry.lemma),
+            key=key,
+            level=entry.level or vocab.level,
+            source=vocab.source,
+            review_status=vocab.review_status,
+            entry=entry,
+            origin=path.name,
+        )
 
 
 def validate(content: Content) -> list[str]:
@@ -189,7 +270,10 @@ def validate(content: Content) -> list[str]:
         if len(set(form_keys)) != len(form_keys) or word.key in form_keys:
             errors.append(f"{where}: çekimli biçimlerde yineleme var ya da temel biçim tekrar edilmiş")
         # Örnek cümlede kelimenin kendisi ya da tanımlı bir çekimi geçmelidir.
-        accepted = [english_tokens(candidate) for candidate in (entry.lemma, *entry.forms)]
+        accepted = [
+            english_tokens(candidate)
+            for candidate in (entry.lemma, *entry.forms, *sorted(regular_inflections(entry.lemma)))
+        ]
         for example in entry.examples:
             tokens = english_tokens(example.en)
             if not any(_contains(tokens, candidate) for candidate in accepted if candidate):

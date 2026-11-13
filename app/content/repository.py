@@ -258,3 +258,70 @@ def totals(conn: sqlite3.Connection) -> Row:
         "lessons": conn.execute("SELECT COUNT(*) FROM lessons").fetchone()[0],
         "words": conn.execute("SELECT COUNT(*) FROM vocabulary").fetchone()[0],
     }
+
+
+# --- Kelime çalışması -------------------------------------------------------
+
+def word_ids_for_level(conn: sqlite3.Connection, level: str) -> list[str]:
+    """Bir seviyenin kelimeleri: önce sık kullanılanlar, sonra alfabetik."""
+    return [
+        row["id"]
+        for row in conn.execute(
+            "SELECT id FROM vocabulary WHERE level = ? ORDER BY frequency_rank IS NULL, frequency_rank, lemma_key",
+            (level,),
+        )
+    ]
+
+
+def existing_word_ids(conn: sqlite3.Connection, word_ids: list[str]) -> set[str]:
+    found: set[str] = set()
+    for start in range(0, len(word_ids), 500):
+        chunk = word_ids[start : start + 500]
+        found |= {row["id"] for row in conn.execute(
+            f"SELECT id FROM vocabulary WHERE id IN ({_placeholders(chunk)})", chunk)}  # noqa: S608
+    return found
+
+
+def study_cards(conn: sqlite3.Connection, word_ids: list[str]) -> list[Row]:
+    """Kart ve alıştırmalar için kelime verisi: özet + çekimler + ilk örnek cümle."""
+    cards = word_briefs(conn, word_ids)
+    for card in cards:
+        example = conn.execute(
+            "SELECT en, tr FROM example_sentences WHERE word_id = ? ORDER BY position LIMIT 1", (card["id"],)
+        ).fetchone()
+        card["example"] = dict(example) if example else None
+        card["forms"] = [row["form"] for row in conn.execute("SELECT form FROM word_forms WHERE word_id = ?", (card["id"],))]
+        notes = conn.execute("SELECT notes_tr FROM vocabulary WHERE id = ?", (card["id"],)).fetchone()
+        card["notes_tr"] = notes["notes_tr"]
+    return cards
+
+
+def related_word_ids(conn: sqlite3.Connection, word_id: str, kind: str | None = None) -> set[str]:
+    clause = "AND kind = ?" if kind else ""
+    params = (word_id, kind, word_id, kind) if kind else (word_id, word_id)
+    return {
+        row[0]
+        for row in conn.execute(
+            f"""SELECT related_word_id FROM word_relations WHERE word_id = ? {clause}
+                UNION SELECT word_id FROM word_relations WHERE related_word_id = ? {clause}""",  # noqa: S608
+            params,
+        )
+    }
+
+
+def distractor_pool(conn: sqlite3.Connection, level: str, pos: str, limit: int = 400) -> list[Row]:
+    """Aynı türden, yakın seviyeden çeldirici adayları."""
+    return _rows(
+        conn,
+        f"""{_WORD_BRIEF}
+            WHERE v.id IN (SELECT word_id FROM word_meanings WHERE pos = ? AND position = 1)
+            ORDER BY (v.level = ?) DESC, v.lemma_key LIMIT ?""",  # noqa: S608
+        (pos, level, limit),
+    )
+
+
+def words_with_antonyms(conn: sqlite3.Connection, word_ids: list[str]) -> list[str]:
+    candidates = set(word_ids)
+    rows = conn.execute("SELECT word_id, related_word_id FROM word_relations WHERE kind = 'antonym'").fetchall()
+    linked = {row[0] for row in rows} | {row[1] for row in rows}
+    return [word_id for word_id in word_ids if word_id in candidates & linked]

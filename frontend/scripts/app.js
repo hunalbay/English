@@ -11,6 +11,9 @@ import * as dictionary from "./pages/dictionary.js";
 import * as word from "./pages/word.js";
 import * as wordList from "./pages/word-list.js";
 import * as search from "./pages/search.js";
+import * as study from "./pages/study.js";
+import * as flashcards from "./pages/flashcards.js";
+import * as exercise from "./pages/exercise.js";
 import * as settings from "./pages/settings.js";
 
 // pattern: ":ad" parçaları parametre olarak sayfaya aktarılır. nav: menüde gösterilecek ad.
@@ -21,6 +24,9 @@ const ROUTES = [
   { pattern: "/ders/:id", page: lesson, section: "/dersler" },
   { pattern: "/sozluk", page: dictionary, nav: "Sözlük", section: "/sozluk" },
   { pattern: "/kelime/:id", page: word, section: "/sozluk" },
+  { pattern: "/calis", page: study, nav: "Kelime çalışması", section: "/calis" },
+  { pattern: "/calis/kartlar/:direction/:source/:level", page: flashcards, section: "/calis" },
+  { pattern: "/calis/alistirma/:type/:source/:level", page: exercise, section: "/calis" },
   { pattern: "/kelimelerim", page: wordList, nav: "Kelimelerim", section: "/kelimelerim" },
   { pattern: "/ara/:query", page: search, section: null },
   { pattern: "/ayarlar", page: settings, nav: "Ayarlar", section: "/ayarlar" },

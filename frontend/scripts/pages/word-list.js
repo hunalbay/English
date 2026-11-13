@@ -23,7 +23,7 @@ export async function render(root) {
   paint();
 
   add(root, 
-    pageHeader("Kelimelerim", "Tekrar etmek için seçtiğiniz kelimeler. Kelime kartları eklendiğinde bu listeyle çalışabileceksiniz."),
+    pageHeader("Kelimelerim", "Tekrar etmek için seçtiğiniz kelimeler. Kelime çalışması sayfasında kaynak olarak \"Kelime listem\" seçerek bu kelimelerle çalışabilirsiniz."),
     count, list, empty,
   );
   return "Kelimelerim";

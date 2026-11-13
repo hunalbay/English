@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from sqlalchemy import CheckConstraint, DateTime, Integer, String, Text
+from sqlalchemy import Boolean, CheckConstraint, DateTime, Float, Index, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.user_db import UserBase
@@ -79,3 +79,46 @@ class PersonalWord(UserBase):
 
     word_id: Mapped[str] = mapped_column(String(120), primary_key=True)
     added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+
+class ReviewItem(UserBase):
+    """Bir kelimenin bir yöndeki (EN→TR ya da TR→EN) aralıklı tekrar durumu."""
+
+    __tablename__ = "review_items"
+    __table_args__ = (
+        UniqueConstraint("word_id", "direction", name="uq_review_items_word_direction"),
+        CheckConstraint("direction IN ('en_tr','tr_en')", name="ck_review_items_direction"),
+        CheckConstraint("interval_days >= 0 AND repetitions >= 0 AND lapses >= 0", name="ck_review_items_counts"),
+        Index("ix_review_items_due", "direction", "due_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    word_id: Mapped[str] = mapped_column(String(120), nullable=False)
+    direction: Mapped[str] = mapped_column(String(8), nullable=False)
+    ease: Mapped[float] = mapped_column(Float, nullable=False)
+    interval_days: Mapped[int] = mapped_column(Integer, nullable=False)
+    repetitions: Mapped[int] = mapped_column(Integer, nullable=False)
+    lapses: Mapped[int] = mapped_column(Integer, nullable=False)
+    due_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+    last_reviewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+
+class ReviewHistory(UserBase):
+    """Her kart cevabı ve alıştırma sonucu için bir kayıt."""
+
+    __tablename__ = "review_history"
+    __table_args__ = (
+        Index("ix_review_history_word", "word_id", "reviewed_at"),
+        Index("ix_review_history_time", "reviewed_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    word_id: Mapped[str] = mapped_column(String(120), nullable=False)
+    direction: Mapped[str | None] = mapped_column(String(8))
+    activity: Mapped[str] = mapped_column(String(24), nullable=False)
+    grade: Mapped[int | None] = mapped_column(Integer)
+    correct: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    interval_before: Mapped[int | None] = mapped_column(Integer)
+    interval_after: Mapped[int | None] = mapped_column(Integer)
+    reviewed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)

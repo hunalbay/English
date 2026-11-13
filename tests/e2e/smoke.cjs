@@ -80,6 +80,96 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.getByText("Sayfa 2 / 4").waitFor();
   await shot("dictionary");
 
+  // 6b) Kelime kartları: EN→TR oturumu (liste kaynağı: teacher)
+  await menu.getByRole("link", { name: "Kelime çalışması", exact: true }).click();
+  await heading("Kelime çalışması").waitFor();
+  check(await page.getByText("Henüz çalışma kaydınız yok.").isVisible(), "boş istatistik mesajı görünmüyor");
+  await page.getByLabel("Hangi kelimeler?").selectOption("list");
+  await page.getByRole("link", { name: /İngilizce → Türkçe/ }).click();
+  await heading("Kartlar: İngilizce → Türkçe").waitFor();
+  check((await page.locator(".card-front").innerText()) === "teacher", "kartın ön yüzü yanlış");
+  check(await page.locator(".card-back").isHidden(), "cevap baştan görünüyor");
+  await page.keyboard.press("Space");
+  check((await page.locator(".card-answer").innerText()) === "öğretmen", "kartın arka yüzü yanlış");
+  await page.keyboard.press("1"); // Bilemedim → oturum sonunda bir kez daha sorulur
+  await page.getByText("· tekrar").waitFor();
+  await page.getByRole("button", { name: /Cevabı göster/ }).click();
+  await page.getByRole("button", { name: /Bildim/ }).click();
+  await page.getByText('2 cevap verdiniz; 1 kez "Bilemedim" dediniz.').waitFor();
+
+  // 6c) TR→EN yönü bağımsızdır
+  await page.goto(url + "#/calis/kartlar/tr_en/list/-");
+  await heading("Kartlar: Türkçe → İngilizce").waitFor();
+  check((await page.locator(".card-front").innerText()) === "öğretmen", "TR→EN kartının ön yüzü yanlış");
+  await page.getByRole("button", { name: /Cevabı göster/ }).click();
+  check((await page.locator(".card-answer").innerText()) === "teacher", "TR→EN kartının arka yüzü yanlış");
+  await page.getByRole("button", { name: /Kolay/ }).click();
+  await page.getByText("Oturum tamamlandı").waitFor();
+  await shot("flashcard-done");
+
+  // 6d) Alıştırma: anlamı seç — bilerek bir yanlış, sonra doğrular
+  await page.goto(url + "#/calis/alistirma/mc_en_tr/level/A1");
+  await heading("Anlamı seç").waitFor();
+  await page.getByText("Soru 1 / 10").waitFor();
+  for (let i = 0; i < 10; i += 1) {
+    await page.getByText(`Soru ${i + 1} / 10`).waitFor();
+    const word = await page.locator(".question-prompt").innerText();
+    const meaning = await page.evaluate(async (lemma) => {
+      const response = await fetch(`/api/v1/vocabulary?q=${encodeURIComponent(lemma)}`);
+      return (await response.json()).items.find((item) => item.lemma === lemma).meaning_tr;
+    }, word);
+    const options = page.locator(".options .btn");
+    if (i === 0) {
+      const texts = await options.allInnerTexts();
+      await options.nth(texts.findIndex((text) => text !== meaning)).click();
+      await page.getByText("Yanlış.").waitFor();
+      check(await page.getByText("Sizin cevabınız:").isVisible(), "yanlış seçeneğin açıklaması yok");
+      check((await page.locator(".btn.option.right").count()) === 1, "doğru seçenek işaretlenmedi");
+      if (shots) await shot("exercise-wrong");
+    } else {
+      await options.getByText(meaning, { exact: true }).click();
+      await page.getByText("Doğru!").waitFor();
+    }
+    check(await page.locator(".feedback .ex-en").isVisible(), "geri bildirimde örnek cümle yok");
+    await page.locator(".feedback + .btn").click();
+  }
+  await page.getByText("10 sorudan 9 tanesini doğru cevapladınız.").waitFor();
+  check((await page.locator(".chips .chip").count()) === 1, "tekrar edilecek kelime listesi yanlış");
+
+  // 6e) Yazma alıştırması: boş cevap uyarısı ve doğru cevap
+  await page.goto(url + "#/calis/alistirma/typing/list/-");
+  await heading("Kelimeyi yaz").waitFor();
+  await page.getByRole("button", { name: "Kontrol et" }).click();
+  await page.getByText("Lütfen bir cevap yazın.").waitFor();
+  await page.getByLabel("İngilizce karşılığı").fill("  Teacher ");
+  await page.getByRole("button", { name: "Kontrol et" }).click();
+  await page.getByText("Doğru!").waitFor();
+  await page.getByRole("button", { name: "Sonucu gör" }).click();
+  await page.getByText("1 sorudan 1 tanesini doğru cevapladınız.").waitFor();
+
+  // 6f) Eşleştirme, boşluk doldurma ve zıt anlam sayfaları soru üretir
+  for (const [type, name] of [["matching", "Eşleştirme"], ["cloze", "Boşluk doldurma"], ["antonym", "Zıt anlam"], ["mc_tr_en", "Kelimeyi seç"]]) {
+    await page.goto(url + `#/calis/alistirma/${type}/level/A1`);
+    await heading(name).waitFor();
+    await page.locator("#question-progress").waitFor();
+  }
+  await page.goto(url + "#/calis/alistirma/matching/list/-");
+  await page.getByText("soru üretilemedi").waitFor(); // tek kelimelik listeyle eşleştirme yapılamaz
+
+  // 6g) İstatistikler ve kelime sayfasındaki öğrenme durumu gerçek kayıtları yansıtır
+  await menu.getByRole("link", { name: "Kelime çalışması", exact: true }).click();
+  await page.locator("#stat-studied").waitFor();
+  check((await page.locator("#stat-studied").innerText()).startsWith("1 /"), "çalışılan kelime sayısı yanlış");
+  check((await page.locator(".bar-value").last().innerText()) === "14", "bugünkü cevap sayısı yanlış");
+  await shot("study");
+  await page.goto(url + "#/kelime/word.teacher");
+  await page.locator("#word-progress").waitFor();
+  check((await page.locator("#word-progress").innerText()).includes("Öğreniliyor"), "kelime öğrenme durumu görünmüyor");
+  page.once("dialog", (dialog) => dialog.accept());
+  await page.getByRole("button", { name: "Tekrar planını sıfırla" }).click();
+  await page.getByText("Tekrar planı sıfırlandı.").waitFor();
+  check(((await page.locator("#word-progress").innerText()).match(/Henüz çalışılmadı/g) || []).length === 2, "tekrar planı sıfırlanmadı");
+
   // 7) Kelimelerim
   await menu.getByRole("link", { name: "Kelimelerim", exact: true }).click();
   await heading("Kelimelerim").waitFor();
@@ -129,7 +219,7 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
 
   // 12) Küçük ekranda yatay taşma olmamalı
   await page.setViewportSize({ width: 375, height: 700 });
-  for (const hash of ["#/", "#/ders/gram.a1.to-be-present", "#/sozluk", "#/kelime/word.be", "#/ayarlar"]) {
+  for (const hash of ["#/", "#/ders/gram.a1.to-be-present", "#/sozluk", "#/kelime/word.be", "#/ayarlar", "#/calis", "#/calis/kartlar/en_tr/level/A1", "#/calis/alistirma/matching/level/A1"]) {
     await page.goto(url + hash);
     await page.locator(`main[data-route="${hash.slice(1)}"]`).waitFor();
     check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), `375px genişlikte taşma: ${hash}`);
