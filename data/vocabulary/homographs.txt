@@ -1,0 +1,8 @@
+# Başka bir kelimenin çekimli biçimiyle aynı yazılan, ama kendi anlamı olan bağımsız kelimeler.
+# Örnek: "building" hem "build" fiilinin -ing biçimi hem de "bina" anlamında ayrı bir isimdir.
+# Bu listede olmayan bir kelime, başka bir kelimenin çekimi olarak tanımlıysa içerik derlenmez;
+# böylece çekimli biçimler yanlışlıkla ayrı temel kelime olarak sayılamaz.
+building
+feeling
+left
+meeting

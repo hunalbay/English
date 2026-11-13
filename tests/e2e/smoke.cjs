@@ -68,16 +68,18 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   // 6) Sözlükte Türkçe karaktersiz arama
   await menu.getByRole("link", { name: "Sözlük", exact: true }).click();
   await heading("Sözlük").waitFor();
-  await page.getByText("120 kelime", { exact: true }).waitFor();
+  const total = await page.evaluate(async () => (await (await fetch("/api/v1/vocabulary?page_size=1")).json()).total);
+  check(total >= 800, "sözlükte beklenenden az kelime var: " + total);
+  await page.getByText(`${total} kelime`, { exact: true }).waitFor();
   await page.getByLabel("Kelime ara").fill("ogretmen");
   await page.getByText("1 kelime", { exact: true }).waitFor();
   check(await page.getByRole("button", { name: /teacher: Listemden çıkar/ }).isVisible(), "liste durumu sözlükte görünmüyor");
   await page.getByLabel("Kelime ara").fill("qqqq");
   await page.getByText("Eşleşen kelime bulunamadı.").waitFor();
   await page.getByLabel("Kelime ara").fill("");
-  await page.getByText("120 kelime", { exact: true }).waitFor();
+  await page.getByText(`${total} kelime`, { exact: true }).waitFor();
   await page.getByRole("button", { name: "Sonraki" }).click();
-  await page.getByText("Sayfa 2 / 4").waitFor();
+  await page.getByText(`Sayfa 2 / ${Math.ceil(total / 30)}`).waitFor();
   await shot("dictionary");
 
   // 6b) Kelime kartları: EN→TR oturumu (liste kaynağı: teacher)
@@ -228,9 +230,9 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
     await page.goto(url + "#/ders/gram.a1.to-be-present");
     await page.locator('main[data-route="/ders/gram.a1.to-be-present"]').waitFor();
     await page.screenshot({ path: `${shots}-mobile.png` });
-    await page.goto(url + "#/ayarlar");
-    await heading("Ayarlar").waitFor();
   }
+  await page.goto(url + "#/ayarlar");
+  await heading("Ayarlar").waitFor();
 
   // 13) Arayüzden programı kapatma
   await page.getByRole("button", { name: "Programı kapat" }).click();

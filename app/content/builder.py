@@ -102,6 +102,24 @@ def load(data_dir: Path) -> Content:
         if word.entry.ipa is None and key in ipa:
             word.entry.ipa = ipa[key]
 
+    homographs_file = data_dir / "vocabulary" / "homographs.txt"
+    homographs = set()
+    if homographs_file.is_file():
+        homographs = {
+            lemma_key(line) for line in homographs_file.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.startswith("#")
+        }
+    form_owner = {lemma_key(form): word for word in content.words.values() for form in word.entry.forms}
+    for key, word in content.words.items():
+        owner = form_owner.get(key)
+        if owner is not None and key not in homographs:
+            errors.append(
+                f"kelime '{word.entry.lemma}' ({word.origin}): '{owner.entry.lemma}' kelimesinin çekimli biçimi olarak "
+                "tanımlı. Bağımsız bir kelimeyse data/vocabulary/homographs.txt dosyasına ekleyin."
+            )
+    for key in sorted(homographs - {k for k in content.words if k in form_owner}):
+        errors.append(f"homographs.txt: '{key}' artık gerekli değil (sözlükte yok ya da bir çekimle çakışmıyor)")
+
     errors.extend(validate(content))
     if errors:
         raise ContentError(errors)

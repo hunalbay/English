@@ -120,9 +120,12 @@ def test_built_database_integrity(content_db):
     try:
         total, unique = conn.execute("SELECT COUNT(*), COUNT(DISTINCT lemma_key) FROM vocabulary").fetchone()
         assert total == unique >= 100
-        # çekimli biçimler ayrı temel kelime olarak sayılmaz
-        assert conn.execute(
-            "SELECT COUNT(*) FROM word_forms f JOIN vocabulary v ON v.lemma_key = f.form").fetchone()[0] == 0
+        # çekimli biçimle aynı yazılan temel kelimeler yalnızca açıkça izin verilenlerdir (homographs.txt)
+        overlaps = {row[0] for row in conn.execute(
+            "SELECT f.form FROM word_forms f JOIN vocabulary v ON v.lemma_key = f.form")}
+        allowed = {line.strip() for line in (DATA / "vocabulary" / "homographs.txt").read_text(encoding="utf-8").splitlines()
+                   if line.strip() and not line.startswith("#")}
+        assert overlaps == allowed
         # her kelimenin anlamı, her dersin bölümü ve örneği vardır
         assert conn.execute(
             "SELECT COUNT(*) FROM vocabulary v WHERE NOT EXISTS (SELECT 1 FROM word_meanings m WHERE m.word_id = v.id)"
@@ -137,3 +140,17 @@ def test_built_database_integrity(content_db):
         assert meta["content_version"] == builder.CONTENT_VERSION
     finally:
         conn.close()
+
+
+def test_inflected_form_cannot_be_added_as_separate_word(data_copy):
+    """'worked' gibi bir çekim, ayrı temel kelime olarak eklenemez."""
+    path = data_copy / "vocabulary" / "a1-01.psv"
+    path.write_text(path.read_text(encoding="utf-8") + "brought | v | getirdi | He brought a cake. | Bir pasta getirdi.\n", encoding="utf-8")
+    assert "çekimli biçimi olarak tanımlı" in _errors(data_copy)
+
+
+def test_psv_format_errors_are_reported(data_copy):
+    path = data_copy / "vocabulary" / "a1-01.psv"
+    path.write_text(path.read_text(encoding="utf-8") + "zzz | n | deneme\nyyy | xx | deneme | A yyy. | Bir yyy.\n", encoding="utf-8")
+    errors = _errors(data_copy)
+    assert "5 ya da 6 alan bekleniyor" in errors and "bilinmeyen kelime türü: xx" in errors

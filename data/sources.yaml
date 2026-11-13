@@ -7,3 +7,13 @@ sources:
       Bu proje için yazılmış özgün açıklamalar, örnek cümleler ve çeviriler.
       Yapay zekâ desteğiyle hazırlanmış ve otomatik denetimlerden geçirilmiştir;
       bir İngilizce öğretmeni tarafından ayrıca gözden geçirilmemiştir.
+  - id: original-cefrj
+    name: English Master özgün içeriği (seviye bilgisi CEFR-J Wordlist 1.5)
+    license: Özgün içerik; seviye bilgisi için CEFR-J (kaynak gösterilerek ücretsiz kullanım)
+    url: http://www.cefr-j.org/download.html
+    notes: >-
+      Türkçe anlamlar, örnek cümleler ve çeviriler bu proje için yazılmıştır (yapay zekâ desteğiyle,
+      otomatik denetimlerden geçirilmiş; uzman gözden geçirmesi yapılmamıştır). Kelime seçimi ve
+      A1–B2 seviye ataması: The CEFR-J Wordlist Version 1.5. Compiled by Yukio Tono, Tokyo University
+      of Foreign Studies. Telaffuz (IPA) bilgisi CMU Pronouncing Dictionary'den otomatik dönüştürülmüştür
+      (Copyright (C) 1993-2015 Carnegie Mellon University, BSD lisansı).
