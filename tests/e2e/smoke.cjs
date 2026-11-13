@@ -30,7 +30,7 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.locator(".level-card", { hasText: "A1" }).click();
   await heading("Ana Sayfa").waitFor();
   await page.getByRole("heading", { name: "Sıradaki ders" }).waitFor();
-  check(await page.getByText("3 dersten 0 tanesi tamamlandı").isVisible(), "seviye ilerlemesi görünmüyor");
+  check(await page.getByText(/^\d+ dersten 0 tanesi tamamlandı$/).isVisible(), "seviye ilerlemesi görünmüyor");
 
   // 2) Dersler → ders sayfası
   await menu.getByRole("link", { name: "Dersler", exact: true }).click();
@@ -254,7 +254,7 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.reload();
   await heading("Ana Sayfa").waitFor();
   await page.getByRole("heading", { name: "Öğrenmeye devam et" }).waitFor();
-  check(await page.getByText("3 dersten 1 tanesi tamamlandı").isVisible(), "tamamlanan ders sayısı korunmadı");
+  check(await page.getByText(/^\d+ dersten 1 tanesi tamamlandı$/).isVisible(), "tamamlanan ders sayısı korunmadı");
   check(await page.getByText("1 kelime", { exact: true }).isVisible(), "kelime listesi sayısı ana sayfada yanlış");
   check(await page.locator("#devam-baslik + .list").getByText("Kişi zamirleri (özne)").isVisible(), "devam edilecek ders yanlış");
   check((await page.locator(".progress-fill").evaluate((el) => el.getBoundingClientRect().width)) > 0, "ilerleme çubuğu boş");

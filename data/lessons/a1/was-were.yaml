@@ -1,0 +1,117 @@
+id: gram.a1.was-were
+kind: grammar
+level: A1
+title_tr: "\"To be\" fiilinin geçmiş zamanı: was, were"
+title_en: "Past Simple of \"to be\": was / were"
+objective_tr: Bu dersin sonunda was ve were ile geçmişteki durumları, yerleri ve duyguları anlatabilecek, olumsuz ve soru cümleleri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.to-be-present]
+next: [gram.a1.past-simple-regular]
+vocabulary: [be, yesterday, ago, tired, late]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Was** ve **were**, am / is / are'ın geçmiş zaman biçimleridir. Türkçedeki **-ydi / -ydı** (idi) ekine karşılık gelir: "I **was** tired." (Yorgundum.)
+
+      Kural basittir: **am** ve **is** → **was**; **are** → **were**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Özne", "Olumlu", "Olumsuz", "Soru"]
+      rows:
+        - ["I / he / she / it", "was", "wasn't (was not)", "Was I / he / she / it...?"]
+        - ["you / we / they", "were", "weren't (were not)", "Were you / we / they...?"]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Geçmişteki durum ve duygu:** "She was happy."
+
+      **Geçmişte bulunulan yer:** "We were at home last night."
+
+      **Hava, saat, yaş:** "It was cold yesterday.", "I was ten in 2010."
+
+      **Doğum:** "I **was born** in 1990." (1990'da doğdum.) — İngilizcede "doğmak" was / were born kalıbıyla söylenir.
+
+      Sık kullanılan zaman ifadeleri: yesterday, last night, last week, in 2015, two days ago.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was at work yesterday.", tr: "Dün işteydim."}
+      - {en: "The film was very good.", tr: "Film çok iyiydi."}
+      - {en: "They were late for the meeting.", tr: "Toplantıya geç kaldılar."}
+      - {en: "It wasn't cold last night.", tr: "Dün gece hava soğuk değildi."}
+      - {en: "We weren't at home on Sunday.", tr: "Pazar günü evde değildik."}
+      - {en: "Were you at the party? — Yes, I was.", tr: "Partide miydin? — Evet, oradaydım."}
+      - {en: "Where was she born? — She was born in Izmir.", tr: "O nerede doğdu? — İzmir'de doğdu."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "We was at home.", tr: "Evdeydik.", wrong: true, correction: "We were at home.", note_tr: "We ile were kullanılır."}
+      - {en: "I were tired.", tr: "Yorgundum.", wrong: true, correction: "I was tired.", note_tr: "I ile was kullanılır."}
+      - {en: "I born in 1995.", tr: "1995'te doğdum.", wrong: true, correction: "I was born in 1995.", note_tr: "Kalıp: was born."}
+      - {en: "Did you be at school?", tr: "Okulda mıydın?", wrong: true, correction: "Were you at school?", note_tr: "To be ile did kullanılmaz."}
+      - {en: "She didn't was happy.", tr: "Mutlu değildi.", wrong: true, correction: "She wasn't happy.", note_tr: "Olumsuzu wasn't'tır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **You ile was kullanmak.** Tek kişiye hitap etseniz bile you her zaman **were** alır: "You **were** right."
+
+      **Was / were ile did'i karıştırmak.** To be kendi sorusunu ve olumsuzunu kendisi yapar: "**Were** you tired?", "I **wasn't** tired."
+
+      **"Doğdum" için born'u tek başına kullanmak.** "I born" yanlıştır; "I **was** born".
+questions:
+  - id: q.a1.was-were.01
+    type: multiple_choice
+    prompt: "I ___ at home last night."
+    options:
+      - "*was :: I ile was kullanılır."
+      - "were :: Were; you, we, they ile kullanılır."
+      - "am :: Am şimdiki zamandır; \"last night\" geçmişi gösterir."
+      - "did :: Did tek başına to be'nin yerini tutmaz."
+    explanation: "I / he / she / it → was; you / we / they → were."
+  - id: q.a1.was-were.02
+    type: multiple_choice
+    prompt: "My parents ___ very happy yesterday."
+    options:
+      - "*were :: \"My parents\" çoğuldur (= they); were kullanılır."
+      - "was :: Was tekil öznelerle kullanılır."
+      - "are :: Are şimdiki zamandır; \"yesterday\" geçmişi gösterir."
+      - "be :: Be çekimlenmeden kullanılamaz."
+    explanation: "Çoğul özne → were."
+  - id: q.a1.was-were.03
+    type: fill_blank
+    prompt: "___ you at the meeting yesterday? — Yes, I was."
+    answers: [Were]
+    explanation: "Soruda were başa gelir: Were you...?"
+  - id: q.a1.was-were.04
+    type: fill_blank
+    prompt: "The weather ___ nice last weekend. It rained. (olumsuz)"
+    answers: ["wasn't", "was not"]
+    explanation: "\"The weather\" = it; olumsuzu wasn't."
+  - id: q.a1.was-were.05
+    type: error_correction
+    prompt: "I born in 1998."
+    answers: ["I was born in 1998."]
+    explanation: "\"Doğmak\" was / were born kalıbıyla söylenir."
+  - id: q.a1.was-were.06
+    type: error_correction
+    prompt: "Did you were at school yesterday?"
+    answers: ["Were you at school yesterday?"]
+    explanation: "To be'nin geçmiş zaman sorusu did ile değil, was / were başa alınarak yapılır."
+  - id: q.a1.was-were.07
+    type: dialogue_completion
+    context: "A: Was the exam difficult?\nB: ___ It was very easy."
+    prompt: "B'nin kısa cevabı hangisi?"
+    options:
+      - "*No, it wasn't. :: Soru \"was the exam\" ile soruldu; exam = it, olumsuz kısa cevap wasn't."
+      - "No, it didn't. :: Didn't, to be sorularının cevabında kullanılmaz."
+      - "No, it weren't. :: It ile weren't kullanılmaz."
+      - "No, it isn't. :: Isn't şimdiki zamandır; soru geçmiş zamanda."
+    explanation: "Kısa cevap: Yes, it was. / No, it wasn't."
+  - id: q.a1.was-were.08
+    type: translation
+    prompt: "Dün yorgundum."
+    answers: ["I was tired yesterday.", "Yesterday I was tired.", "Yesterday, I was tired."]
+    explanation: "Geçmişteki durum: I + was + sıfat."

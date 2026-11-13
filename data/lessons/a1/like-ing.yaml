@@ -1,0 +1,118 @@
+id: gram.a1.like-ing
+kind: grammar
+level: A1
+title_tr: "Hoşlanma bildirme: like, love, hate + -ing"
+title_en: "Like / love / hate + -ing"
+objective_tr: Bu dersin sonunda like, love, enjoy, hate fiillerinden sonra -ing biçimini kullanarak nelerden hoşlandığınızı anlatabilecek, would like ile kibarca istekte bulunabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple, gram.a1.present-continuous]
+next: [gram.a1.conjunctions]
+vocabulary: [like, love, hate, enjoy, read, cook]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir **etkinlikten** hoşlandığınızı ya da hoşlanmadığınızı söylerken like, love, enjoy, hate fiillerinden sonra gelen fiil **-ing** alır: "I like **reading**." (Okumayı severim.)
+
+      Buradaki -ing şimdiki zaman değildir; fiili **isim gibi** kullanmamızı sağlar. Türkçedeki **-mek / -mak** ya da **-meyi / -mayı** ekine benzer: oku**mayı** severim.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Fiil", "Anlam", "Örnek"]
+      rows:
+        - ["love + -ing", "çok sevmek, bayılmak", "I love cooking."]
+        - ["like + -ing", "sevmek, hoşlanmak", "She likes swimming."]
+        - ["enjoy + -ing", "keyif almak", "We enjoy walking."]
+        - ["don't mind + -ing", "sakıncası olmamak", "I don't mind waiting."]
+        - ["don't like + -ing", "sevmemek", "He doesn't like dancing."]
+        - ["hate + -ing", "nefret etmek", "I hate getting up early."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I like listening to music.", tr: "Müzik dinlemeyi severim."}
+      - {en: "My father loves fishing.", tr: "Babam balık tutmaya bayılır."}
+      - {en: "She doesn't like cooking.", tr: "O yemek yapmayı sevmez."}
+      - {en: "Do you like watching films? — Yes, I do.", tr: "Film izlemeyi sever misin? — Evet, severim."}
+      - {en: "We enjoy playing tennis at weekends.", tr: "Hafta sonları tenis oynamaktan keyif alırız."}
+      - {en: "I hate waiting.", tr: "Beklemekten nefret ederim."}
+  - kind: comparison
+    title_tr: "Like ile would like"
+    text_tr: |-
+      **Like** genel bir hoşlanmayı anlatır. **Would like** ise şu anki bir **isteği** kibarca bildirir ve kendisinden sonra **to + fiil** ya da bir isim gelir.
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["like + -ing", "genel olarak sevmek", "I like drinking tea. (Çay içmeyi severim.)"]
+        - ["would like + to + fiil", "şu an istemek (kibar)", "I would like to drink tea. (Çay içmek istiyorum.)"]
+        - ["would like + isim", "bir şey istemek (kibar)", "I'd like a tea, please. (Bir çay istiyorum, lütfen.)"]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I like read books.", tr: "Kitap okumayı severim.", wrong: true, correction: "I like reading books.", note_tr: "Like'tan sonra fiil -ing alır."}
+      - {en: "She enjoys to cook.", tr: "O yemek yapmaktan keyif alır.", wrong: true, correction: "She enjoys cooking.", note_tr: "Enjoy'dan sonra her zaman -ing gelir."}
+      - {en: "I am liking this song.", tr: "Bu şarkıyı seviyorum.", wrong: true, correction: "I like this song.", note_tr: "Like durum fiilidir; Continuous biçimde kullanılmaz."}
+      - {en: "I would like going home.", tr: "Eve gitmek istiyorum.", wrong: true, correction: "I would like to go home.", note_tr: "Would like'tan sonra to + fiil gelir."}
+      - {en: "He like playing football.", tr: "O futbol oynamayı sever.", wrong: true, correction: "He likes playing football.", note_tr: "He ile like -s alır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **-ing'i unutmak.** "I like swim" yanlıştır; "I like **swimming**."
+
+      **Like ile would like'ı karıştırmak.** Restoranda "I like a coffee" demek "Kahveyi severim" gibi anlaşılır. Sipariş verirken "I**'d like** a coffee" deyin.
+
+      **Çok sevmek için "very like" demek.** "I very like it" yanlıştır. Doğrusu: "I like it **very much**." ya da "I **really** like it."
+questions:
+  - id: q.a1.like-ing.01
+    type: multiple_choice
+    prompt: "I like ___ to music in the evening."
+    options:
+      - "*listening :: Like'tan sonra etkinlik bildiren fiil -ing alır."
+      - "listen :: Yalın fiil like'tan sonra doğrudan gelmez."
+      - "listens :: -s çekim ekidir; burada fiil isim gibi kullanılıyor."
+      - "to listening :: To ile -ing birlikte kullanılmaz."
+    explanation: "Like / love / enjoy / hate + fiil-ing."
+  - id: q.a1.like-ing.02
+    type: multiple_choice
+    difficulty: 2
+    prompt: "(Restoranda) Garsona ne dersiniz?"
+    options:
+      - "*I'd like a coffee, please. :: Would like şu anki isteği kibarca bildirir."
+      - "I like a coffee, please. :: Like genel bir hoşlanma bildirir; sipariş için kullanılmaz."
+      - "I am liking a coffee, please. :: Like Continuous biçimde kullanılmaz."
+      - "I like drinking coffee, please. :: Bu, genel bir alışkanlığı anlatır; sipariş değildir."
+    explanation: "Like = sevmek (genel). Would like = istemek (şu an, kibar)."
+  - id: q.a1.like-ing.03
+    type: word_formation
+    prompt: "She enjoys ___ (swim) in the sea."
+    answers: [swimming]
+    explanation: "Enjoy'dan sonra -ing gelir; swim'de son ünsüz çiftlenir."
+  - id: q.a1.like-ing.04
+    type: word_formation
+    prompt: "I would like ___ (visit) London one day."
+    answers: ["to visit"]
+    explanation: "Would like'tan sonra to + yalın fiil gelir."
+  - id: q.a1.like-ing.05
+    type: error_correction
+    prompt: "He hates get up early."
+    answers: ["He hates getting up early."]
+    explanation: "Hate'ten sonra fiil -ing alır; get'te son ünsüz çiftlenir: getting."
+  - id: q.a1.like-ing.06
+    type: error_correction
+    prompt: "I very like this film."
+    answers: ["I like this film very much.", "I really like this film."]
+    explanation: "\"Very\" doğrudan fiili nitelemez. \"very much\" cümlenin sonuna gelir ya da \"really\" fiilden önce kullanılır."
+  - id: q.a1.like-ing.07
+    type: matching
+    prompt: "Fiilleri anlamlarıyla eşleştirin."
+    pairs:
+      - [love, "çok sevmek, bayılmak"]
+      - [enjoy, keyif almak]
+      - ["don't mind", sakıncası olmamak]
+      - [hate, nefret etmek]
+    explanation: "Bu fiiller hoşlanmanın derecesini bildirir ve hepsinden sonra -ing gelir."
+  - id: q.a1.like-ing.08
+    type: translation
+    prompt: "Yemek yapmayı sevmem."
+    answers: ["I don't like cooking.", "I do not like cooking."]
+    explanation: "Olumsuz: don't like + fiil-ing."

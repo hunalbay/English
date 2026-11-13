@@ -1,0 +1,128 @@
+id: gram.a1.can-cant
+kind: grammar
+level: A1
+title_tr: "Yetenek ve izin: can, can't"
+title_en: "Can / can't"
+objective_tr: Bu dersin sonunda can ve can't ile neyi yapabildiğinizi söyleyebilecek, izin isteyebilecek ve ricada bulunabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple-negative-questions]
+next: [gram.a1.present-continuous]
+vocabulary: [can, swim, speak, drive, help]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Can**, Türkçedeki **-ebil- / -abil-** ekinin karşılığıdır: "I **can** swim." (Yüzebilirim.)
+
+      Can bir **kip fiilidir** ve diğer fiillerden farklı davranır: her özneyle aynı kalır (-s almaz), kendisinden sonra fiil **yalın** gelir (to yok) ve soru ile olumsuz için **do / does kullanılmaz**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + can + yalın fiil", "She can drive."]
+        - ["Olumsuz", "özne + can't / cannot + yalın fiil", "She can't drive."]
+        - ["Soru", "Can + özne + yalın fiil?", "Can she drive?"]
+        - ["Kısa cevap", "Yes, ... can. / No, ... can't.", "Yes, she can. / No, she can't."]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Yetenek:** "I can speak English.", "He can't cook."
+
+      **İzin:** "Can I open the window?" — "Yes, you can."
+
+      **Rica:** "Can you help me, please?"
+
+      **Olasılık / mümkün olma:** "You can buy tickets online."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I can swim, but I can't ski.", tr: "Yüzebilirim ama kayak yapamam."}
+      - {en: "My sister can speak three languages.", tr: "Kız kardeşim üç dil konuşabiliyor."}
+      - {en: "Can you drive? — No, I can't.", tr: "Araba kullanabiliyor musun? — Hayır, kullanamıyorum."}
+      - {en: "Can I use your phone?", tr: "Telefonunu kullanabilir miyim?"}
+      - {en: "Can you repeat that, please?", tr: "Onu tekrar eder misiniz, lütfen?"}
+      - {en: "We can't come tomorrow.", tr: "Yarın gelemiyoruz."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She cans swim.", tr: "O yüzebilir.", wrong: true, correction: "She can swim.", note_tr: "Can hiçbir özneyle -s almaz."}
+      - {en: "I can to drive.", tr: "Araba kullanabilirim.", wrong: true, correction: "I can drive.", note_tr: "Can'den sonra to gelmez."}
+      - {en: "Do you can help me?", tr: "Bana yardım edebilir misin?", wrong: true, correction: "Can you help me?", note_tr: "Can ile do kullanılmaz."}
+      - {en: "He doesn't can cook.", tr: "O yemek yapamaz.", wrong: true, correction: "He can't cook.", note_tr: "Olumsuzu can't'tir."}
+      - {en: "She can speaks French.", tr: "O Fransızca konuşabilir.", wrong: true, correction: "She can speak French.", note_tr: "Can'den sonra fiil yalın kalır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Can'i sıradan bir fiil gibi çekimlemek.** "He cans", "Do you can", "I don't can" yanlıştır.
+
+      **Can ile can't'in okunuşunu ayırt edememek.** Olumlu cümlede can vurgusuz ve kısa okunur; can't ise vurguludur. Dinlerken vurguya dikkat edin.
+
+      **Cannot'u ayrı yazmak.** Tam biçimi tek sözcüktür: **cannot**. Konuşmada ve gündelik yazıda **can't** kullanılır.
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Can I have the bill, please?", tr: "Hesabı alabilir miyim, lütfen?"}
+      - {en: "Sorry, I can't hear you.", tr: "Üzgünüm, seni duyamıyorum."}
+      - {en: "Can you speak more slowly, please?", tr: "Daha yavaş konuşabilir misiniz, lütfen?"}
+      - {en: "You can park here.", tr: "Buraya park edebilirsiniz."}
+questions:
+  - id: q.a1.can.01
+    type: multiple_choice
+    prompt: "My brother ___ play the guitar very well."
+    options:
+      - "*can :: Can her özneyle aynı kalır."
+      - "cans :: Can kip fiilidir; -s almaz."
+      - "can to :: Can'den sonra to gelmez."
+      - "is can :: Can ile to be birlikte kullanılmaz."
+    explanation: "Özne + can + yalın fiil."
+  - id: q.a1.can.02
+    type: multiple_choice
+    prompt: "___ you swim?"
+    options:
+      - "*Can :: Soru, can başa alınarak yapılır."
+      - "Do can :: Can ile do kullanılmaz."
+      - "Are :: \"Are you swim\" yanlıştır; swim bir eylem fiilidir."
+      - "Does :: You ile does kullanılmaz ve anlam yetenek değil alışkanlık olur."
+    explanation: "Soru: Can + özne + yalın fiil?"
+  - id: q.a1.can.03
+    type: fill_blank
+    prompt: "I ___ come tomorrow. I am busy. (olumsuz)"
+    answers: ["can't", "cannot"]
+    explanation: "Olumsuz: can't ya da cannot (tek sözcük)."
+  - id: q.a1.can.04
+    type: error_correction
+    prompt: "She can speaks English."
+    answers: ["She can speak English."]
+    explanation: "Can'den sonra fiil yalın hâlde gelir; -s almaz."
+  - id: q.a1.can.05
+    type: error_correction
+    prompt: "Do you can help me?"
+    answers: ["Can you help me?"]
+    explanation: "Can kendi sorusunu kendisi yapar; do kullanılmaz."
+  - id: q.a1.can.06
+    type: dialogue_completion
+    context: "A: Can I open the window?\nB: ___"
+    prompt: "Doğru kısa cevap hangisi?"
+    options:
+      - "*Yes, you can. :: Soru can ile soruldu; cevap da can ile verilir ve özne you olur."
+      - "Yes, you do. :: Do, can sorularının cevabında kullanılmaz."
+      - "Yes, I can. :: A izin istiyor; izin verilen kişi \"you\"dur."
+      - "Yes, you are. :: To be, can sorularının cevabında kullanılmaz."
+    explanation: "\"Can I...?\" sorusuna \"Yes, you can.\" ya da \"No, you can't.\" diye cevap verilir."
+  - id: q.a1.can.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümlede can izin bildirir?"
+    options:
+      - "*Can I sit here? :: Konuşan kişi oturmak için izin istiyor."
+      - "I can swim very well. :: Bu bir yetenek bildirir."
+      - "She can't cook. :: Bu bir yeteneğin olmadığını bildirir."
+      - "Can you speak Spanish? :: Bu bir yeteneği sorar."
+    explanation: "Can hem yetenek hem izin bildirir; anlamı bağlam belirler."
+  - id: q.a1.can.08
+    type: translation
+    prompt: "Araba kullanamam."
+    answers: ["I can't drive.", "I cannot drive.", "I can't drive a car.", "I cannot drive a car."]
+    explanation: "Yeteneğin olmadığını can't + yalın fiil ile söyleriz."

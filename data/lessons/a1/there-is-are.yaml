@@ -1,0 +1,118 @@
+id: gram.a1.there-is-are
+kind: grammar
+level: A1
+title_tr: "Var / yok: there is, there are"
+title_en: "There is / there are"
+objective_tr: Bu dersin sonunda there is ve there are ile bir yerde neyin bulunduğunu söyleyebilecek, olumsuz ve soru cümleleri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.plural-nouns, gram.a1.to-be-present]
+next: [gram.a1.prepositions-of-place]
+vocabulary: [there, room, table, chair, window]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **There is** ve **there are**, bir şeyin bir yerde **bulunduğunu** söyler; Türkçedeki "var" sözcüğünün karşılığıdır: "**There is** a book on the table." (Masanın üstünde bir kitap var.)
+
+      Türkçe cümle yerle başlar ve "var" ile biter; İngilizce cümle ise **there is / there are** ile başlar, yer bilgisi sona gelir.
+
+      Sahiplik bildiren "var" ile karıştırmayın: "Bir arabam **var**." → "I **have** a car." Bir yerde bulunma bildiren "var" → **there is / are**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["", "Tekil", "Çoğul"]
+      rows:
+        - ["Olumlu", "There is a chair. / There's a chair.", "There are two chairs."]
+        - ["Olumsuz", "There isn't a chair.", "There aren't any chairs."]
+        - ["Soru", "Is there a chair?", "Are there any chairs?"]
+        - ["Kısa cevap", "Yes, there is. / No, there isn't.", "Yes, there are. / No, there aren't."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Tekil ve sayılamayan isimlerle there is:** "There is a bank near here.", "There is some milk in the fridge."
+
+      **Çoğul isimlerle there are:** "There are three rooms."
+
+      **Liste sayarken ilk isme bakılır:** "There **is** a table and two chairs."
+
+      **Bir şeyden ilk kez söz ederken there is, sonra it / they kullanılır:** "There is a cafe on the corner. **It** is very nice."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "There is a park near my house.", tr: "Evimin yakınında bir park var."}
+      - {en: "There are five people in my family.", tr: "Ailemde beş kişi var."}
+      - {en: "There isn't a lift in the building.", tr: "Binada asansör yok."}
+      - {en: "There aren't any shops in the village.", tr: "Köyde hiç dükkân yok."}
+      - {en: "Is there a bank near here? — Yes, there is.", tr: "Buraya yakın bir banka var mı? — Evet, var."}
+      - {en: "Are there any questions?", tr: "Soru var mı?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "There is two windows in the room.", tr: "Odada iki pencere var.", wrong: true, correction: "There are two windows in the room.", note_tr: "Çoğul isimle there are kullanılır."}
+      - {en: "It has a park near my house.", tr: "Evimin yakınında bir park var.", wrong: true, correction: "There is a park near my house.", note_tr: "Bir yerde bulunma there is ile söylenir."}
+      - {en: "Have a problem.", tr: "Bir sorun var.", wrong: true, correction: "There is a problem.", note_tr: "\"Var\" burada have ile karşılanmaz."}
+      - {en: "Is there a bank? — Yes, it is.", tr: "Banka var mı? — Evet, var.", wrong: true, correction: "Is there a bank? — Yes, there is.", note_tr: "Kısa cevapta there korunur."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"Var" için have kullanmak.** "In my city has a museum" yanlıştır. Bir yerde bulunan şey için: "**There is** a museum in my city."
+
+      **There ile their ve they're'ı karıştırmak.** Okunuşları aynıdır. There is = var; their = onların; they're = they are.
+
+      **Çoğulda is kullanmak.** Konuşma dilinde "There's two..." duyulabilir, ancak yazıda ve sınavlarda çoğul isimle **there are** kullanın.
+questions:
+  - id: q.a1.there-is.01
+    type: multiple_choice
+    prompt: "___ a cafe on the corner."
+    options:
+      - "*There is :: \"A cafe\" tekildir; there is kullanılır."
+      - "There are :: There are çoğul isimlerle kullanılır."
+      - "It has :: Bir yerde bulunma bildirmek için have değil, there is kullanılır."
+      - "They are :: They are \"onlar ...-dır\" demektir; \"var\" anlamı vermez."
+    explanation: "Tekil isim → There is."
+  - id: q.a1.there-is.02
+    type: multiple_choice
+    prompt: "___ three bedrooms in our flat."
+    options:
+      - "*There are :: \"Three bedrooms\" çoğuldur; there are kullanılır."
+      - "There is :: There is tekil ve sayılamayan isimlerle kullanılır."
+      - "It is :: It is bir şeyi tanımlar; bulunma bildirmez."
+      - "Have :: Öznesi olmayan have cümle kurmaz."
+    explanation: "Çoğul isim → There are."
+  - id: q.a1.there-is.03
+    type: fill_blank
+    prompt: "___ there a bank near here? — Yes, there is."
+    answers: [Is]
+    explanation: "Soruda is başa gelir: Is there...?"
+  - id: q.a1.there-is.04
+    type: fill_blank
+    prompt: "There ___ any shops in the village. (olumsuz)"
+    answers: ["aren't", "are not"]
+    explanation: "Shops çoğuldur; olumsuz there aren't olur."
+  - id: q.a1.there-is.05
+    type: error_correction
+    prompt: "There is two chairs in the kitchen."
+    answers: ["There are two chairs in the kitchen."]
+    explanation: "Two chairs çoğuldur; there are gerekir."
+  - id: q.a1.there-is.06
+    type: nuance
+    difficulty: 2
+    prompt: "\"Bir kedim var.\" ve \"Bahçede bir kedi var.\" cümlelerinin karşılıkları hangisidir?"
+    options:
+      - "*I have a cat. / There is a cat in the garden. :: İlki sahiplik (have), ikincisi bir yerde bulunma (there is)."
+      - "There is a cat. / I have a cat in the garden. :: Tam tersi: ilk cümle sahiplik bildiriyor."
+      - "I have a cat. / It has a cat in the garden. :: \"It has\" bulunma anlamı vermez."
+      - "There is my cat. / There is a cat in the garden. :: Sahiplik there is ile söylenmez."
+    explanation: "Türkçedeki \"var\" iki farklı yapıya karşılık gelir: sahiplik → have; bir yerde bulunma → there is / are."
+    lessons: [gram.a1.have-got]
+  - id: q.a1.there-is.07
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Are, there, any, questions, "?"]
+    explanation: "Çoğul soru: Are there any + çoğul isim?"
+  - id: q.a1.there-is.08
+    type: translation
+    prompt: "Evimin yakınında bir park var."
+    answers: ["There is a park near my house.", "There's a park near my house.", "There is a park near my home."]
+    explanation: "İngilizce cümle there is ile başlar; yer bilgisi sona gelir."

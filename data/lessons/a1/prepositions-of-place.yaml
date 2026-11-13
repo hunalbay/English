@@ -1,0 +1,136 @@
+id: gram.a1.prepositions-of-place
+kind: grammar
+level: A1
+title_tr: Yer edatları
+title_en: Prepositions of place
+objective_tr: Bu dersin sonunda in, on, at, under, next to, between gibi edatlarla bir şeyin nerede olduğunu söyleyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.there-is-are]
+next: [gram.a1.prepositions-of-time]
+vocabulary: [in, "on", at, under, behind, between, near]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Yer edatları bir şeyin **nerede** olduğunu gösterir. Türkçede bu anlam çoğunlukla **-de / -da** ekiyle ya da "üstünde, altında" gibi sözcüklerle verilir. İngilizcede edat **isimden önce** gelir: masanın **üstünde** → **on** the table.
+    table:
+      headers: ["Edat", "Türkçe", "Örnek"]
+      rows:
+        - ["in", "içinde", "The keys are in the bag."]
+        - ["on", "üstünde (yüzeye değerek)", "The book is on the table."]
+        - ["under", "altında", "The cat is under the bed."]
+        - ["next to", "yanında", "The bank is next to the school."]
+        - ["between", "arasında (iki şeyin)", "The cafe is between the bank and the hotel."]
+        - ["behind", "arkasında", "The garden is behind the house."]
+        - ["in front of", "önünde", "The car is in front of the house."]
+        - ["opposite", "karşısında", "The bank is opposite the park."]
+        - ["near", "yakınında", "The hotel is near the station."]
+  - kind: usage
+    title_tr: "In, on, at: üçü de -de / -da"
+    text_tr: |-
+      Türkçedeki tek bir ek, İngilizcede üç ayrı edata karşılık gelebilir.
+
+      **in** → kapalı bir alanın ya da sınırları olan bir yerin içinde: in the room, in a box, in Ankara, in Turkey.
+
+      **on** → bir yüzeyin üstünde: on the table, on the wall, on the floor, on the second floor.
+
+      **at** → belli bir nokta ya da bir etkinlik yeri: at the bus stop, at the door, at home, at work, at school.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My phone is in my pocket.", tr: "Telefonum cebimde."}
+      - {en: "There is a picture on the wall.", tr: "Duvarda bir resim var."}
+      - {en: "I am at the bus stop.", tr: "Otobüs durağındayım."}
+      - {en: "The shoes are under the chair.", tr: "Ayakkabılar sandalyenin altında."}
+      - {en: "She is sitting next to me.", tr: "Yanımda oturuyor."}
+      - {en: "The pharmacy is opposite the bank.", tr: "Eczane bankanın karşısında."}
+  - kind: exceptions
+    title_tr: Kalıplaşmış ifadeler
+    text_tr: |-
+      Bazı ifadeler kalıp olarak öğrenilir.
+    table:
+      headers: ["at", "in", "on"]
+      rows:
+        - ["at home", "in bed", "on the bus / train / plane"]
+        - ["at work", "in hospital", "on the left / right"]
+        - ["at school", "in a car / taxi", "on TV / the internet"]
+        - ["at the cinema", "in the picture", "on the first floor"]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I am in home.", tr: "Evdeyim.", wrong: true, correction: "I am at home.", note_tr: "Kalıp: at home."}
+      - {en: "The picture is in the wall.", tr: "Resim duvarda.", wrong: true, correction: "The picture is on the wall.", note_tr: "Yüzey için on."}
+      - {en: "She lives at Izmir.", tr: "O İzmir'de yaşıyor.", wrong: true, correction: "She lives in Izmir.", note_tr: "Şehir ve ülkelerle in."}
+      - {en: "The bank is next the school.", tr: "Banka okulun yanında.", wrong: true, correction: "The bank is next to the school.", note_tr: "Next to iki sözcüktür."}
+      - {en: "I am on the car.", tr: "Arabadayım.", wrong: true, correction: "I am in the car.", note_tr: "Araba ve taksi için in; otobüs, tren, uçak için on."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her "-de" için aynı edatı kullanmak.** Önce yerin türünü düşünün: içi olan bir alan mı (in), bir yüzey mi (on), bir nokta mı (at)?
+
+      **Edatı ismin sonuna koymak.** Türkçe sıra "masa-nın üstünde"dir; İngilizce sıra "on the table"dır.
+
+      **"In front of" ile "opposite"i karıştırmak.** In front of = hemen önünde; opposite = karşısında (arada yol ya da boşluk var).
+questions:
+  - id: q.a1.prep-place.01
+    type: multiple_choice
+    prompt: "The book is ___ the table."
+    options:
+      - "*on :: Kitap masanın yüzeyinde duruyor; yüzey için on kullanılır."
+      - "in :: In bir şeyin içinde olmayı bildirir."
+      - "at :: At bir noktayı gösterir; \"at the table\" masada oturmak anlamına gelir."
+      - "between :: Between iki şeyin arasını bildirir."
+    explanation: "Yüzeyin üstünde → on."
+  - id: q.a1.prep-place.02
+    type: multiple_choice
+    prompt: "She lives ___ Ankara."
+    options:
+      - "*in :: Şehir ve ülkelerle in kullanılır."
+      - "at :: At şehirler için kullanılmaz; belirli bir nokta için kullanılır."
+      - "on :: On yüzeyler için kullanılır."
+      - "to :: To yön bildirir (Ankara'ya), bulunma yeri değil."
+    explanation: "Şehir, ülke, kapalı alan → in."
+  - id: q.a1.prep-place.03
+    type: multiple_choice
+    prompt: "I am ___ home now."
+    options:
+      - "*at :: \"At home\" kalıplaşmış bir ifadedir."
+      - "in :: \"In home\" denmez; kalıp \"at home\"dur."
+      - "on :: On yüzeyler için kullanılır."
+      - "to :: To yön bildirir."
+    explanation: "Kalıplar: at home, at work, at school."
+  - id: q.a1.prep-place.04
+    type: fill_blank
+    prompt: "The cat is sleeping ___ the bed. (yatağın altında)"
+    answers: [under]
+    explanation: "Altında = under."
+  - id: q.a1.prep-place.05
+    type: fill_blank
+    prompt: "The cafe is ___ the bank and the hotel. (ikisinin arasında)"
+    answers: [between]
+    explanation: "İki şeyin arasında = between ... and ..."
+  - id: q.a1.prep-place.06
+    type: error_correction
+    prompt: "There is a picture in the wall."
+    answers: ["There is a picture on the wall."]
+    explanation: "Duvar bir yüzeydir; on kullanılır."
+  - id: q.a1.prep-place.07
+    type: matching
+    prompt: "Edatları anlamlarıyla eşleştirin."
+    pairs:
+      - [behind, arkasında]
+      - ["in front of", önünde]
+      - ["next to", yanında]
+      - [opposite, karşısında]
+    explanation: "Bu dört edat bir şeyin başka bir şeye göre konumunu gösterir."
+  - id: q.a1.prep-place.08
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümle doğrudur?"
+    options:
+      - "*I am on the bus. :: Otobüs, tren ve uçak gibi içinde yürünebilen toplu taşıtlarla on kullanılır."
+      - "I am in the bus. :: Otobüs için alışılmış edat on'dur."
+      - "I am on the car. :: Bu, arabanın üstünde (tavanında) olmak anlamına gelir."
+      - "I am at the taxi. :: Taksi ve araba için in kullanılır."
+    explanation: "On the bus / train / plane; in the car / taxi."

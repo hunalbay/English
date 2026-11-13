@@ -1,0 +1,118 @@
+id: gram.a1.imperatives
+kind: grammar
+level: A1
+title_tr: Emir ve rica cümleleri
+title_en: Imperatives
+objective_tr: Bu dersin sonunda yalın fiille talimat verebilecek, don't ile yasak bildirebilecek ve let's ile öneride bulunabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple]
+vocabulary: [open, close, sit, wait, please]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Emir kipi **talimat, yol tarifi, uyarı, rica ve davet** için kullanılır. Kurması çok kolaydır: fiilin **yalın hâli** ile başlanır ve **özne söylenmez**: "**Open** the door." (Kapıyı aç / açın.)
+
+      Tekil ve çoğul, senli ve sizli biçim aynıdır. Kibarlığı fiil değil, **please** sözcüğü ve ses tonu sağlar.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek", "Türkçe"]
+      rows:
+        - ["Olumlu", "yalın fiil", "Sit down.", "Otur / oturun."]
+        - ["Olumsuz", "Don't + yalın fiil", "Don't touch that.", "Ona dokunma."]
+        - ["Kibar", "Please + ... / ..., please", "Please wait here.", "Lütfen burada bekleyin."]
+        - ["Öneri (biz)", "Let's + yalın fiil", "Let's go.", "Hadi gidelim."]
+        - ["Olumsuz öneri", "Let's not + yalın fiil", "Let's not argue.", "Tartışmayalım."]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Talimat:** "Open your books."
+
+      **Yol tarifi:** "Turn left at the bank. Go straight ahead."
+
+      **Uyarı:** "Be careful!", "Don't run!"
+
+      **Davet ve ikram:** "Come in.", "Have a seat.", "Help yourself."
+
+      **İyi dilek:** "Have a nice day!", "Enjoy your meal!"
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Close the window, please.", tr: "Pencereyi kapat, lütfen."}
+      - {en: "Don't be late.", tr: "Geç kalma."}
+      - {en: "Turn right at the traffic lights.", tr: "Trafik ışıklarından sağa dön."}
+      - {en: "Be quiet, the baby is sleeping.", tr: "Sessiz ol, bebek uyuyor."}
+      - {en: "Let's have lunch together.", tr: "Hadi birlikte öğle yemeği yiyelim."}
+      - {en: "Don't worry, everything is fine.", tr: "Endişelenme, her şey yolunda."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You open the door.", tr: "Kapıyı aç.", wrong: true, correction: "Open the door.", note_tr: "Emir cümlesinde özne söylenmez."}
+      - {en: "Not touch that.", tr: "Ona dokunma.", wrong: true, correction: "Don't touch that.", note_tr: "Olumsuz emir don't ile yapılır."}
+      - {en: "Don't to worry.", tr: "Endişelenme.", wrong: true, correction: "Don't worry.", note_tr: "Don't'tan sonra to gelmez."}
+      - {en: "Let's to go.", tr: "Hadi gidelim.", wrong: true, correction: "Let's go.", note_tr: "Let's'ten sonra yalın fiil gelir."}
+      - {en: "Don't late.", tr: "Geç kalma.", wrong: true, correction: "Don't be late.", note_tr: "Sıfatla birlikte be gerekir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sıfatlarda be'yi unutmak.** "Careful!" günlük dilde duyulur, ama tam biçimi "**Be** careful!"dır. Olumsuzu: "**Don't be** late."
+
+      **Emir kipini kaba sanmak.** Yol tarifi, tarif ve davetlerde emir kipi tamamen doğaldır. Bir şey isterken ise "please" ekleyin ya da "Can you...?" kalıbını tercih edin.
+
+      **Let's ile lets'i karıştırmak.** Let's = let us (hadi ...-elim). Kesme işareti gerekir.
+questions:
+  - id: q.a1.imperatives.01
+    type: multiple_choice
+    prompt: "___ the door, please. It is cold."
+    options:
+      - "*Close :: Emir cümlesi fiilin yalın hâliyle başlar."
+      - "You close :: Emir cümlesinde özne söylenmez."
+      - "Closes :: Emir kipinde fiil -s almaz."
+      - "To close :: Emir kipinde to kullanılmaz."
+    explanation: "Olumlu emir: yalın fiil + ..."
+  - id: q.a1.imperatives.02
+    type: multiple_choice
+    prompt: "___ touch the paint. It is wet."
+    options:
+      - "*Don't :: Olumsuz emir don't + yalın fiil ile yapılır."
+      - "Not :: Not tek başına emir cümlesini olumsuz yapamaz."
+      - "No :: \"No touching\" bir tabela ifadesi olabilir, ama \"No touch\" cümle olarak yanlıştır."
+      - "Doesn't :: Doesn't üçüncü tekil kişi içindir; emir kipinde kullanılmaz."
+    explanation: "Olumsuz emir: Don't + yalın fiil."
+  - id: q.a1.imperatives.03
+    type: fill_blank
+    prompt: "___ careful! The floor is wet."
+    answers: [Be]
+    explanation: "Sıfatla (careful) emir kurarken be kullanılır."
+  - id: q.a1.imperatives.04
+    type: fill_blank
+    prompt: "I am hungry. ___ have lunch. (hadi ...-elim)"
+    answers: ["Let's", "Let us"]
+    explanation: "Öneri: Let's + yalın fiil."
+  - id: q.a1.imperatives.05
+    type: error_correction
+    prompt: "Don't to forget your keys."
+    answers: ["Don't forget your keys.", "Do not forget your keys."]
+    explanation: "Don't'tan sonra to gelmez; doğrudan yalın fiil gelir."
+  - id: q.a1.imperatives.06
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [Turn, left, at, the, bank]
+    explanation: "Yol tarifi: fiil + yön + yer."
+  - id: q.a1.imperatives.07
+    type: dialogue_completion
+    context: "A: Excuse me, where is the station?\nB: ___ straight ahead and turn right at the bank."
+    prompt: "B yol tarifine nasıl başlar?"
+    options:
+      - "*Go :: Yol tarifinde emir kipi kullanılır: Go straight ahead."
+      - "You going :: -ing biçimi tek başına fiil olamaz."
+      - "To go :: Emir kipinde to kullanılmaz."
+      - "Goes :: Emir kipinde fiil -s almaz."
+    explanation: "Yol tarifi verirken emir kipi doğaldır ve kaba sayılmaz."
+  - id: q.a1.imperatives.08
+    type: translation
+    prompt: "Geç kalma."
+    answers: ["Don't be late.", "Do not be late."]
+    explanation: "Late bir sıfattır; olumsuz emir \"Don't be + sıfat\" ile kurulur."

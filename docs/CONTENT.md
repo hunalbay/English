@@ -88,7 +88,45 @@ Her bölümde `text_tr` (boş satırla ayrılmış paragraflar; `**kalın**` des
 (`headers`, `rows`) ve `examples` (`en`, `tr`, `note_tr`; yanlış kullanım için `wrong: true` +
 `correction`) bulunabilir.
 
+## Sorular
+
+Sorular ders dosyasının sonunda `questions:` altında yazılır ve o derse bağlanır.
+
+```yaml
+questions:
+  - id: q.a1.to-be.01            # kalıcı kimlik
+    type: multiple_choice
+    difficulty: 1                # 1–5 (varsayılan 1)
+    prompt: "She ___ a teacher."
+    options:                     # "metin :: açıklama"; doğru seçenek * ile başlar
+      - "*is :: He, she, it ile is kullanılır."
+      - "am :: Am yalnızca I ile kullanılır."
+      - "are :: Are; you, we, they ile kullanılır."
+    explanation: "Kural: I → am; he / she / it → is; you / we / they → are."
+    example: {en: "He is a student.", tr: "O bir öğrenci."}
+    lessons: [gram.a1.subject-pronouns]   # ilgili diğer dersler (isteğe bağlı)
+    vocabulary: [teacher]                 # ilgili kelimeler (isteğe bağlı)
+```
+
+| Değerlendirici | Soru tipleri | Gerekli alanlar |
+|---|---|---|
+| Seçenek | `multiple_choice`, `true_false`, `error_spotting`, `sentence_completion`, `dialogue_completion`, `reading_comprehension`, `listening_comprehension`, `word_in_context`, `paragraph_completion`, `nuance` | `options` (tam bir doğru; her seçenekte açıklama) |
+| Metin | `fill_blank`, `word_formation`, `error_correction`, `sentence_building`, `translation` | `answers`; yazım ölçülecekse `grading: strict` |
+| Sıralama | `word_order` | `tokens` (doğru sırada), isteğe bağlı `also` |
+| Eşleştirme | `matching` | `pairs: [[sol, sağ], ...]` |
+| Öz değerlendirme | `written_answer` | `model_answers`, isteğe bağlı `checklist` |
+
+- `dialogue_completion`, `reading_comprehension` ve `paragraph_completion` için `context` zorunludur.
+- `translation` ve `sentence_building` sorularında kabul listesiyle eşleşmeyen ama benzeyen cevap
+  "yanlış" sayılmaz; kullanıcı örnek cevapla karşılaştırıp kendini değerlendirir.
+- **YAML uyarısı:** `on`, `off`, `yes`, `no` sözcükleri tırnaksız yazılırsa mantıksal değere dönüşür;
+  `?`, `:`, `,` içeren tablo hücrelerini ve `*` ile başlayan seçenekleri tırnak içine alın.
+
 ## Doğrulayıcının denetledikleri
+
+- Sorularda: benzersiz kimlik, tam bir doğru seçenek, her seçenekte açıklama, yinelenen seçenek
+  olmaması, metin sorularında en az bir kabul edilen cevap, zorunlu `explanation`, var olan ders ve
+  kelime bağlantıları
 
 - Bilinmeyen alan, eksik zorunlu alan, geçersiz seviye / kelime türü
 - Yinelenen ders kimliği ya da temel kelime; temel biçimin `forms` içinde tekrarı

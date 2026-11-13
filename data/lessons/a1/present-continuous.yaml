@@ -1,0 +1,141 @@
+id: gram.a1.present-continuous
+kind: grammar
+level: A1
+title_tr: Şimdiki zaman
+title_en: Present Continuous
+objective_tr: Bu dersin sonunda şu anda olan olayları am / is / are + fiil-ing yapısıyla anlatabilecek ve Present Simple ile farkını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.to-be-present, gram.a1.present-simple]
+next: [gram.a1.like-ing]
+vocabulary: [now, read, write, run, sit, watch]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Present Continuous**, **şu anda** ya da **bu sıralar** devam eden işleri anlatır: "I **am reading** a book." (Bir kitap okuyorum.)
+
+      İki parçadan oluşur: **to be** (am / is / are) + fiil + **-ing**. İkisi de zorunludur; "I reading" ya da "I am read" yanlıştır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + am / is / are + fiil-ing", "She is working."]
+        - ["Olumsuz", "özne + am / is / are + not + fiil-ing", "She isn't working."]
+        - ["Soru", "Am / Is / Are + özne + fiil-ing?", "Is she working?"]
+        - ["Kısa cevap", "Yes, she is. / No, she isn't.", ""]
+  - kind: usage
+    title_tr: "-ing eklerken yazım"
+    table:
+      headers: ["Fiilin sonu", "Kural", "Örnek"]
+      rows:
+        - ["çoğu fiil", "+ -ing", "read → reading, play → playing"]
+        - ["sessiz -e", "e düşer + -ing", "write → writing, make → making"]
+        - ["tek hece: ünsüz + ünlü + ünsüz", "son ünsüz çiftlenir", "run → running, sit → sitting, swim → swimming"]
+        - ["-ie", "ie → y + -ing", "lie → lying, die → dying"]
+  - kind: comparison
+    title_tr: "Present Simple ile karşılaştırma"
+    text_tr: |-
+      Türkçede "çalışıyorum" hem "şu an" hem "genel olarak" anlamına gelebilir. İngilizcede bu ikisi ayrılır.
+    table:
+      headers: ["", "Present Simple", "Present Continuous"]
+      rows:
+        - ["Anlam", "alışkanlık, kalıcı durum", "şu an, geçici durum"]
+        - ["Örnek", "I work in a bank.", "I am working now."]
+        - ["Zaman ifadeleri", "every day, usually, often", "now, at the moment, today"]
+        - ["Türkçe", "Bir bankada çalışırım / çalışıyorum.", "Şu an çalışıyorum."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I am watching TV now.", tr: "Şu an televizyon izliyorum."}
+      - {en: "She is talking on the phone.", tr: "O telefonda konuşuyor."}
+      - {en: "They are playing in the garden.", tr: "Bahçede oynuyorlar."}
+      - {en: "He isn't listening.", tr: "O dinlemiyor."}
+      - {en: "What are you doing? — I am cooking.", tr: "Ne yapıyorsun? — Yemek pişiriyorum."}
+      - {en: "Are you coming with us?", tr: "Bizimle geliyor musun?"}
+  - kind: exceptions
+    title_tr: "-ing almayan fiiller"
+    text_tr: |-
+      Durum, duygu ve düşünce bildiren bazı fiiller genellikle Continuous biçimde kullanılmaz: **like, love, hate, want, need, know, understand, believe, have** (sahiplik anlamında).
+
+      "I **want** a coffee." (I am wanting değil), "I **know** the answer." (I am knowing değil), "I **don't understand**." (I am not understanding değil).
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I reading a book.", tr: "Bir kitap okuyorum.", wrong: true, correction: "I am reading a book.", note_tr: "To be atlanamaz."}
+      - {en: "She is work now.", tr: "O şu an çalışıyor.", wrong: true, correction: "She is working now.", note_tr: "Fiil -ing almalıdır."}
+      - {en: "I am knowing the answer.", tr: "Cevabı biliyorum.", wrong: true, correction: "I know the answer.", note_tr: "Know durum fiilidir."}
+      - {en: "He is runing.", tr: "O koşuyor.", wrong: true, correction: "He is running.", note_tr: "Son ünsüz çiftlenir."}
+      - {en: "Do you watching TV?", tr: "Televizyon mu izliyorsun?", wrong: true, correction: "Are you watching TV?", note_tr: "Soru to be ile yapılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To be'yi atlamak.** "She working" en yaygın hatadır. Yapı her zaman **be + -ing**'dir.
+
+      **Alışkanlıklar için Continuous kullanmak.** "I am getting up at seven every day" yerine "I **get up** at seven every day".
+
+      **Durum fiillerine -ing eklemek.** "I am liking", "I am wanting" doğal değildir.
+questions:
+  - id: q.a1.present-continuous.01
+    type: multiple_choice
+    prompt: "Be quiet! The baby ___."
+    options:
+      - "*is sleeping :: Şu anda süren bir eylem: is + sleeping."
+      - "sleeps :: Present Simple alışkanlık bildirir; burada şu an söz konusu."
+      - "sleeping :: To be olmadan -ing biçimi fiil olamaz."
+      - "is sleep :: To be'den sonra fiil -ing almalıdır."
+    explanation: "Şu an olan eylem → am / is / are + fiil-ing."
+  - id: q.a1.present-continuous.02
+    type: multiple_choice
+    difficulty: 2
+    prompt: "She usually ___ tea, but today she ___ coffee."
+    options:
+      - "*drinks / is drinking :: Usually alışkanlık (Present Simple); today geçici bir durum (Present Continuous)."
+      - "is drinking / drinks :: Zamanlar yer değiştirmiş: usually alışkanlık bildirir."
+      - "drinks / drinks :: İkinci cümle bugüne özgü geçici bir durumu anlatıyor."
+      - "is drinking / is drinking :: Usually ile alışkanlık anlatılır; Present Simple gerekir."
+    explanation: "Zaman ifadesi ipucudur: usually → Present Simple; today / now → Present Continuous."
+    lessons: [gram.a1.present-simple]
+  - id: q.a1.present-continuous.03
+    type: word_formation
+    prompt: "Look! He ___ (run) to the bus stop."
+    answers: ["is running", "'s running"]
+    explanation: "Run tek heceli ve ünsüz + ünlü + ünsüz ile bitiyor: son ünsüz çiftlenir → running."
+  - id: q.a1.present-continuous.04
+    type: word_formation
+    prompt: "I ___ (write) an email at the moment."
+    answers: ["am writing", "'m writing"]
+    explanation: "Sessiz -e düşer: write → writing."
+  - id: q.a1.present-continuous.05
+    type: error_correction
+    prompt: "They playing football now."
+    answers: ["They are playing football now.", "They're playing football now."]
+    explanation: "Present Continuous'ta to be zorunludur: they are playing."
+  - id: q.a1.present-continuous.06
+    type: true_false
+    prompt: "I am wanting a glass of water."
+    options:
+      - "Doğru :: Want bir durum fiilidir ve genellikle -ing almaz."
+      - "*Yanlış :: Want durum fiilidir; Present Simple kullanılır: \"I want a glass of water.\""
+    explanation: "Like, love, want, need, know, understand gibi fiiller genellikle Continuous biçimde kullanılmaz."
+  - id: q.a1.present-continuous.07
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [What, are, you, doing, "?"]
+    explanation: "Sıra: soru sözcüğü + are + özne + fiil-ing?"
+  - id: q.a1.present-continuous.08
+    type: nuance
+    difficulty: 2
+    prompt: "Bir arkadaşınız telefonda \"Ne yapıyorsun?\" diye soruyor. Hangi cevap doğrudur?"
+    options:
+      - "*I am cooking dinner. :: Şu anda yapılan iş Present Continuous ile söylenir."
+      - "I cook dinner. :: Bu, genel bir alışkanlık bildirir (akşam yemeğini ben pişiririm)."
+      - "I cooking dinner. :: To be eksik."
+      - "I am cook dinner. :: Fiil -ing almamış."
+    explanation: "\"I cook dinner\" = akşam yemeğini (genellikle) ben pişiririm. \"I am cooking dinner\" = şu an pişiriyorum."
+  - id: q.a1.present-continuous.09
+    type: translation
+    prompt: "Şu an televizyon izlemiyorum."
+    answers: ["I am not watching TV now.", "I'm not watching TV now.", "I am not watching television now.", "I'm not watching TV at the moment.", "I am not watching TV at the moment.", "I'm not watching television now."]
+    explanation: "Olumsuz: am + not + fiil-ing."

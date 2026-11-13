@@ -1,0 +1,124 @@
+id: gram.a1.prepositions-of-time
+kind: grammar
+level: A1
+title_tr: "Zaman edatları: in, on, at"
+title_en: "Prepositions of time: in / on / at"
+objective_tr: Bu dersin sonunda saat, gün, ay ve yıl bildirirken in, on, at arasında doğru seçimi yapabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.prepositions-of-place]
+next: [gram.a1.some-any]
+vocabulary: [in, "on", at, morning, night, weekend]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Zaman bildirirken de **in, on, at** kullanılır. Genel kural küçükten büyüğe gider: **at** bir an için, **on** bir gün için, **in** daha uzun bir süre için.
+    table:
+      headers: ["Edat", "Ne ile?", "Örnekler"]
+      rows:
+        - ["at", "saat, günün belirli anı", "at seven o'clock, at noon, at midnight, at night"]
+        - ["on", "gün ve tarih", "on Monday, on 5 May, on my birthday, on Friday morning"]
+        - ["in", "ay, mevsim, yıl, günün bölümü", "in June, in summer, in 2020, in the morning"]
+  - kind: exceptions
+    title_tr: İstisnalar
+    text_tr: |-
+      **Günün bölümleri:** in the morning, in the afternoon, in the evening — ama **at night**.
+
+      **Gün adı eklenince on kullanılır:** in the morning → **on** Monday morning.
+
+      **Hafta sonu:** İngiliz İngilizcesinde **at** the weekend, Amerikan İngilizcesinde **on** the weekend.
+
+      **Edat kullanılmayan ifadeler:** today, tomorrow, yesterday, tonight, **this** week, **next** month, **last** year, **every** day. "On next Monday" denmez; "next Monday" denir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The lesson starts at nine o'clock.", tr: "Ders saat dokuzda başlıyor."}
+      - {en: "I don't work on Sundays.", tr: "Pazarları çalışmam."}
+      - {en: "My birthday is in October.", tr: "Doğum günüm ekimde."}
+      - {en: "We go to the sea in summer.", tr: "Yazın denize gideriz."}
+      - {en: "She was born in 1995.", tr: "O 1995'te doğdu."}
+      - {en: "I read in the evening, but I never work at night.", tr: "Akşamları okurum ama geceleri asla çalışmam."}
+      - {en: "See you next week!", tr: "Gelecek hafta görüşürüz!", note_tr: "Next ile edat kullanılmaz."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I get up in seven o'clock.", tr: "Saat yedide kalkarım.", wrong: true, correction: "I get up at seven o'clock.", note_tr: "Saatlerle at."}
+      - {en: "The meeting is in Monday.", tr: "Toplantı pazartesi günü.", wrong: true, correction: "The meeting is on Monday.", note_tr: "Günlerle on."}
+      - {en: "My birthday is on July.", tr: "Doğum günüm temmuzda.", wrong: true, correction: "My birthday is in July.", note_tr: "Aylarla in."}
+      - {en: "I sleep well in night.", tr: "Geceleri iyi uyurum.", wrong: true, correction: "I sleep well at night.", note_tr: "İstisna: at night."}
+      - {en: "I will call you on tomorrow.", tr: "Seni yarın arayacağım.", wrong: true, correction: "I will call you tomorrow.", note_tr: "Tomorrow ile edat kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tek bir edatı her yerde kullanmak.** Türkçede hepsi "-de / -da"dır (saat yedi**de**, pazartesi**de**, haziran**da**); İngilizcede üç ayrı edat vardır.
+
+      **This, next, last, every ile edat kullanmak.** "In this week", "on last Friday" yanlıştır.
+
+      **Tam tarihte in kullanmak.** Ay tek başınaysa **in** May; gün de varsa **on** 5 May.
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Kendi haftanızı anlatın: "I get up **at** seven. I work **on** weekdays. I go on holiday **in** August." Her cümlede edatı neden seçtiğinizi kendinize sorun: an mı, gün mü, daha uzun bir süre mi?
+questions:
+  - id: q.a1.prep-time.01
+    type: multiple_choice
+    prompt: "The film starts ___ eight o'clock."
+    options:
+      - "*at :: Saatlerle at kullanılır."
+      - "in :: In ay, mevsim ve yıl gibi uzun sürelerle kullanılır."
+      - "on :: On gün ve tarihlerle kullanılır."
+      - "(edat yok) :: Saat bildirirken edat gerekir."
+    explanation: "Saat → at."
+  - id: q.a1.prep-time.02
+    type: multiple_choice
+    prompt: "We have English ___ Tuesday."
+    options:
+      - "*on :: Günlerle on kullanılır."
+      - "in :: In günlerle kullanılmaz."
+      - "at :: At saatlerle kullanılır."
+      - "to :: To zaman bildirmez; yön bildirir."
+    explanation: "Gün → on."
+  - id: q.a1.prep-time.03
+    type: multiple_choice
+    prompt: "It is very hot ___ August."
+    options:
+      - "*in :: Aylarla in kullanılır."
+      - "on :: On gün ve tam tarihlerle kullanılır: on 5 August."
+      - "at :: At saatlerle ve belirli anlarla kullanılır."
+      - "(edat yok) :: Ay adından önce edat gerekir."
+    explanation: "Ay, mevsim, yıl → in."
+  - id: q.a1.prep-time.04
+    type: fill_blank
+    prompt: "I usually read ___ night."
+    answers: [at]
+    explanation: "İstisna: in the morning / afternoon / evening, ama at night."
+  - id: q.a1.prep-time.05
+    type: fill_blank
+    prompt: "My birthday is ___ 12 May."
+    answers: ["on"]
+    explanation: "Gün içeren tam tarihlerde on kullanılır."
+  - id: q.a1.prep-time.06
+    type: error_correction
+    prompt: "See you on next Friday."
+    answers: ["See you next Friday."]
+    explanation: "Next, last, this ve every ile başlayan zaman ifadelerinde edat kullanılmaz."
+  - id: q.a1.prep-time.07
+    type: matching
+    prompt: "Zaman ifadelerini doğru edatla eşleştirin."
+    pairs:
+      - ["___ 2020", "in (yıl)"]
+      - ["___ Monday morning", "on (gün adı var)"]
+      - ["___ midnight", "at (belirli an)"]
+      - ["___ tomorrow", "edat kullanılmaz"]
+    explanation: "An → at, gün → on, uzun süre → in; tomorrow gibi sözcükler edat almaz."
+  - id: q.a1.prep-time.08
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümle doğrudur?"
+    options:
+      - "*I work in the morning, but on Friday morning I am free. :: Günün bölümü tek başınaysa in; gün adı eklenince on."
+      - "I work on the morning, but in Friday morning I am free. :: İki edat da yer değiştirmiş."
+      - "I work in the morning, but in Friday morning I am free. :: Gün adı (Friday) olduğunda on gerekir."
+      - "I work at the morning, but at Friday morning I am free. :: At saatlerle ve \"at night\" kalıbında kullanılır."
+    explanation: "In the morning, ama on Friday morning: gün adı edatı belirler."

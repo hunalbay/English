@@ -1,0 +1,115 @@
+id: gram.a1.conjunctions
+kind: grammar
+level: A1
+title_tr: "Temel bağlaçlar: and, but, or, so, because"
+title_en: "Basic conjunctions: and, but, or, so, because"
+objective_tr: Bu dersin sonunda and, but, or, so ve because ile iki fikri ya da iki cümleyi birbirine bağlayabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple]
+vocabulary: [and, but, or, so, because]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bağlaçlar sözcükleri ve cümleleri birbirine bağlar. Kısa cümleleri bağlaçlarla birleştirmek, anlatımınızı daha doğal ve akıcı yapar.
+    table:
+      headers: ["Bağlaç", "Türkçe", "Görevi", "Örnek"]
+      rows:
+        - ["and", "ve", "ekleme", "I have a cat and a dog."]
+        - ["but", "ama, fakat", "zıtlık", "The flat is small but nice."]
+        - ["or", "ya da, veya", "seçenek", "Tea or coffee?"]
+        - ["so", "bu yüzden", "sonuç", "I was tired, so I went to bed."]
+        - ["because", "çünkü", "sebep", "I went to bed because I was tired."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **So ve because aynı ilişkiyi ters yönden anlatır.** Sebep + **so** + sonuç: "It was raining, **so** I took an umbrella." Sonuç + **because** + sebep: "I took an umbrella **because** it was raining."
+
+      **Olumsuz cümlelerde "ve" yerine or kullanılır:** "I don't like tea **or** coffee." (Ne çay ne kahve severim.)
+
+      **Virgül:** İki tam cümle bağlanırken but ve so'dan önce genellikle virgül konur. Because'tan önce virgül konmaz.
+
+      **Türkçeden farkı:** Türkçede "çünkü" cümlenin başında durabilir ("Geç kaldım. Çünkü otobüsü kaçırdım."). İngilizcede because ile başlayan bölüm tek başına cümle olmaz; ana cümleye bağlanmalıdır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She speaks English and French.", tr: "O İngilizce ve Fransızca konuşuyor."}
+      - {en: "I like fish, but I don't like meat.", tr: "Balık severim ama et sevmem."}
+      - {en: "Do you want to walk or take a taxi?", tr: "Yürümek mi istersin, taksiye mi binmek?"}
+      - {en: "The shop was closed, so we went home.", tr: "Dükkân kapalıydı, bu yüzden eve gittik."}
+      - {en: "I am learning English because I need it for my job.", tr: "İngilizce öğreniyorum çünkü işim için gerekli."}
+      - {en: "He doesn't smoke or drink.", tr: "O ne sigara içer ne içki."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I was late. Because I missed the bus.", tr: "Geç kaldım çünkü otobüsü kaçırdım.", wrong: true, correction: "I was late because I missed the bus.", note_tr: "Because bölümü ana cümleye bağlanır."}
+      - {en: "I was hungry because I made a sandwich.", tr: "Açtım, bu yüzden bir sandviç yaptım.", wrong: true, correction: "I was hungry, so I made a sandwich.", note_tr: "Sandviç yapmak sebep değil, sonuçtur."}
+      - {en: "I don't have a brother and a sister.", tr: "Ne erkek ne kız kardeşim var.", wrong: true, correction: "I don't have a brother or a sister.", note_tr: "Olumsuz cümlede or."}
+      - {en: "Because it was cold, so I stayed at home.", tr: "Hava soğuk olduğu için evde kaldım.", wrong: true, correction: "Because it was cold, I stayed at home.", note_tr: "Because ve so aynı cümlede birlikte kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Because ile so'yu karıştırmak.** Kendinize sorun: Bağlaçtan sonra gelen **sebep mi, sonuç mu?** Sebep → because; sonuç → so.
+
+      **İkisini birlikte kullanmak.** Türkçedeki "...-diği için, bu yüzden..." kalıbı İngilizceye aktarılmaz. Ya because ya so.
+
+      **Because ile yarım cümle bırakmak.** Konuşmada soruya cevap verirken olur ("Why? — Because I was tired."), ama yazıda ana cümleye bağlayın.
+questions:
+  - id: q.a1.conjunctions.01
+    type: multiple_choice
+    prompt: "I like tea, ___ I don't like coffee."
+    options:
+      - "*but :: İki fikir birbirine zıt: seviyorum / sevmiyorum."
+      - "so :: So sonuç bildirir; kahveyi sevmemek çayı sevmenin sonucu değildir."
+      - "because :: Because sebep bildirir; burada sebep–sonuç ilişkisi yok."
+      - "or :: Or seçenek bildirir."
+    explanation: "Zıtlık → but."
+  - id: q.a1.conjunctions.02
+    type: multiple_choice
+    prompt: "It was raining, ___ we stayed at home."
+    options:
+      - "*so :: Evde kalmak, yağmurun sonucudur."
+      - "because :: Because'tan sonra sebep gelir; evde kalmak sebep değil sonuçtur."
+      - "but :: Zıtlık yok; beklenen sonuç gerçekleşiyor."
+      - "or :: Seçenek bildirilmiyor."
+    explanation: "Sebep, so + sonuç."
+  - id: q.a1.conjunctions.03
+    type: multiple_choice
+    prompt: "She is tired ___ she works a lot."
+    options:
+      - "*because :: Çok çalışmak yorgunluğun sebebidir."
+      - "so :: So'dan sonra sonuç gelir; çok çalışmak sonuç değil sebeptir."
+      - "but :: İki fikir zıt değil."
+      - "or :: Seçenek bildirilmiyor."
+    explanation: "Sonuç + because + sebep."
+  - id: q.a1.conjunctions.04
+    type: fill_blank
+    prompt: "Would you like tea ___ coffee?"
+    answers: [or]
+    explanation: "İki seçenek arasında or kullanılır."
+  - id: q.a1.conjunctions.05
+    type: fill_blank
+    prompt: "I don't eat meat ___ fish. (ne et ne balık)"
+    answers: [or]
+    explanation: "Olumsuz cümlelerde iki şeyi bağlarken and yerine or kullanılır."
+  - id: q.a1.conjunctions.06
+    type: error_correction
+    difficulty: 2
+    prompt: "Because I was tired, so I went to bed."
+    answers: ["Because I was tired, I went to bed.", "I was tired, so I went to bed.", "I went to bed because I was tired."]
+    explanation: "Because ve so aynı ilişkiyi anlatır; aynı cümlede birlikte kullanılmaz."
+  - id: q.a1.conjunctions.07
+    type: sentence_completion
+    prompt: "I can't come to the party because ___"
+    options:
+      - "*I have to work. :: Because'tan sonra gelememe sebebi gelir."
+      - "I will stay at home. :: Bu bir sebep değil, sonuçtur; so ile bağlanırdı."
+      - "but I am busy. :: Because'tan sonra ikinci bir bağlaç gelmez."
+      - "so I am sorry. :: Because ve so birlikte kullanılmaz."
+    explanation: "Because + sebep bildiren tam bir cümle."
+  - id: q.a1.conjunctions.08
+    type: translation
+    prompt: "Yorgunum ama mutluyum."
+    answers: ["I am tired but happy.", "I'm tired but happy.", "I am tired, but I am happy.", "I'm tired, but I'm happy.", "I am tired but I am happy."]
+    explanation: "Zıtlık bildiren iki sıfat but ile bağlanır."

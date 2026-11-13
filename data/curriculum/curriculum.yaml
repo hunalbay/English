@@ -53,3 +53,36 @@ units:
       - gram.a1.adverbs-of-frequency
       - gram.a1.question-words
       - gram.a1.object-pronouns
+
+  - id: a1.u04
+    level: A1
+    title_tr: Yer, zaman ve miktar
+    title_en: Place, time and quantity
+    description_tr: Bir şeyin nerede ve ne zaman olduğunu söyleyin; miktar bildirin ve talimat verin.
+    lessons:
+      - gram.a1.there-is-are
+      - gram.a1.prepositions-of-place
+      - gram.a1.prepositions-of-time
+      - gram.a1.some-any
+      - gram.a1.imperatives
+
+  - id: a1.u05
+    level: A1
+    title_tr: Şimdi, yetenek ve hoşlanma
+    title_en: Now, ability and likes
+    description_tr: Şu an ne yaptığınızı, neleri yapabildiğinizi ve nelerden hoşlandığınızı anlatın; cümlelerinizi bağlayın.
+    lessons:
+      - gram.a1.can-cant
+      - gram.a1.present-continuous
+      - gram.a1.like-ing
+      - gram.a1.conjunctions
+
+  - id: a1.u06
+    level: A1
+    title_tr: Geçmişten söz etmek
+    title_en: Talking about the past
+    description_tr: Geçmişteki durumları ve tamamlanmış olayları anlatın.
+    lessons:
+      - gram.a1.was-were
+      - gram.a1.past-simple-regular
+      - gram.a1.past-simple-irregular

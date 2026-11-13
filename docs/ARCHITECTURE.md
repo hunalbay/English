@@ -91,7 +91,23 @@ yazmadan da arama yapılabilir (ogretmen → öğretmen).
 | `GET /api/v1/study/stats` | Kelime istatistikleri |
 | `GET/DELETE /api/v1/study/words/{id}` | Kelimenin öğrenme geçmişi · tekrar planını sıfırlama |
 
+| `GET /api/v1/tests/overview` | Seviye ve derslere göre soru sayıları, konu başarısı, test geçmişi |
+| `POST /api/v1/tests/sessions` | Test başlat (derse ya da seviyeye göre); sorular cevap anahtarı olmadan döner |
+| `POST /api/v1/tests/sessions/{id}/answers` | Cevabı değerlendir; açıklamalı geri bildirim döner |
+| `POST /api/v1/tests/sessions/{id}/self-rating` · `/finish` | Öz değerlendirme · testi bitir |
+
 Hata biçimi: `{"error": {"code": "...", "message": "Türkçe açıklama"}}`
+
+## Test motoru
+
+- Soru tipleri ve değerlendiriciler `app/content/source_models.py` içinde tanımlıdır (18 tip, 5 değerlendirici).
+- Değerlendirme kuralları `app/assessment/grading.py` içindedir. Esnek kipte büyük/küçük harf, sondaki
+  noktalama ve kısaltma biçimi (isn't / is not) önemsenmez; `strict` kipte yazım ve noktalama da ölçülür.
+- Program kesin karar veremediği cevapları "yanlış" saymaz: sonuç `ungraded` olur, örnek cevap gösterilir
+  ve kullanıcı kendini değerlendirir. Öz değerlendirmeye dayanan sonuçlar özetlerde ayrıca belirtilir.
+- Cevap anahtarı istemciye yalnızca cevap verildikten sonra gönderilir.
+- Yeni testte önce hiç çözülmemiş, sonra yanlış yapılmış sorular seçilir.
+- `listening_comprehension` tipi tanımlıdır ancak ses dosyaları Aşama 5'te ekleneceği için henüz sorusu yoktur.
 
 ## Kelime öğrenme
 

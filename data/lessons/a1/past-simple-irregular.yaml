@@ -1,0 +1,132 @@
+id: gram.a1.past-simple-irregular
+kind: grammar
+level: A1
+title_tr: "Geçmiş zaman: düzensiz fiiller"
+title_en: "Past Simple: irregular verbs"
+objective_tr: Bu dersin sonunda en sık kullanılan düzensiz fiillerin geçmiş zaman biçimlerini tanıyacak ve bunlarla olumlu, olumsuz ve soru cümleleri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.past-simple-regular]
+vocabulary: [go, have, see, eat, buy, come, make, take, get, say]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İngilizcede en sık kullanılan fiillerin birçoğu **düzensizdir**: geçmiş zaman biçimleri -ed ile yapılmaz ve tek tek öğrenilir: go → **went**, see → **saw**, have → **had**.
+
+      İyi haber şu: Düzensizlik **yalnızca olumlu cümlede** görülür. Olumsuz ve soru cümlelerinde yine **did + yalın fiil** kullanılır: "I **went**." → "I **didn't go**." → "**Did** you **go**?"
+  - kind: formula
+    title_tr: En sık kullanılan düzensiz fiiller
+    table:
+      headers: ["Yalın", "Geçmiş", "Türkçe", "Yalın", "Geçmiş", "Türkçe"]
+      rows:
+        - ["be", "was / were", "olmak", "have", "had", "sahip olmak"]
+        - ["go", "went", "gitmek", "come", "came", "gelmek"]
+        - ["do", "did", "yapmak", "make", "made", "yapmak, üretmek"]
+        - ["see", "saw", "görmek", "say", "said", "söylemek"]
+        - ["get", "got", "almak", "give", "gave", "vermek"]
+        - ["take", "took", "almak, götürmek", "buy", "bought", "satın almak"]
+        - ["eat", "ate", "yemek", "drink", "drank", "içmek"]
+        - ["know", "knew", "bilmek", "think", "thought", "düşünmek"]
+        - ["find", "found", "bulmak", "tell", "told", "anlatmak"]
+        - ["read", "read (red diye okunur)", "okumak", "write", "wrote", "yazmak"]
+        - ["meet", "met", "buluşmak", "leave", "left", "ayrılmak"]
+        - ["put", "put", "koymak", "cut", "cut", "kesmek"]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I went to the cinema last night.", tr: "Dün gece sinemaya gittim."}
+      - {en: "She bought a new phone.", tr: "Yeni bir telefon aldı."}
+      - {en: "We had dinner at eight.", tr: "Akşam yemeğini sekizde yedik."}
+      - {en: "I saw Tom yesterday.", tr: "Dün Tom'u gördüm."}
+      - {en: "They didn't come to the party.", tr: "Partiye gelmediler."}
+      - {en: "Did you eat breakfast? — Yes, I did.", tr: "Kahvaltı ettin mi? — Evet, ettim."}
+      - {en: "What did you do at the weekend?", tr: "Hafta sonu ne yaptın?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I goed to school.", tr: "Okula gittim.", wrong: true, correction: "I went to school.", note_tr: "Go düzensizdir."}
+      - {en: "She didn't went home.", tr: "Eve gitmedi.", wrong: true, correction: "She didn't go home.", note_tr: "Didn't'tan sonra fiil yalın gelir."}
+      - {en: "Did you saw the film?", tr: "Filmi gördün mü?", wrong: true, correction: "Did you see the film?", note_tr: "Did'den sonra fiil yalın gelir."}
+      - {en: "He buyed a car.", tr: "Bir araba aldı.", wrong: true, correction: "He bought a car.", note_tr: "Buy düzensizdir."}
+      - {en: "We eated at home.", tr: "Evde yedik.", wrong: true, correction: "We ate at home.", note_tr: "Eat düzensizdir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Düzensiz fiile -ed eklemek.** goed, buyed, eated, taked yanlıştır.
+
+      **Did'den sonra geçmiş biçimi kullanmak.** "Did you went?" değil, "Did you **go**?" Düzensiz biçim yalnızca olumlu cümlede kullanılır.
+
+      **Read'in okunuşu.** Yazılışı değişmez, ama geçmiş zamanda "red" diye okunur.
+  - kind: review_tips
+    title_tr: Tekrar önerileri
+    text_tr: |-
+      Düzensiz fiilleri liste hâlinde ezberlemek yerine kısa cümleler içinde çalışın: "Yesterday I **went** to work, **had** lunch at one and **came** home at six."
+
+      Her gün dün yaptığınız beş şeyi İngilizce söyleyin. Kelime kartlarında bu fiilleri çalışırken geçmiş zaman biçimini de sesli tekrar edin.
+questions:
+  - id: q.a1.past-irregular.01
+    type: multiple_choice
+    prompt: "I ___ to the supermarket yesterday."
+    options:
+      - "*went :: Go fiilinin geçmiş zamanı düzensizdir: went."
+      - "goed :: Go düzensiz bir fiildir; -ed almaz."
+      - "go :: Yalın hâl geçmiş zaman bildirmez."
+      - "was go :: Was ile asıl fiil birlikte kullanılmaz."
+    explanation: "Go → went."
+    vocabulary: [go]
+  - id: q.a1.past-irregular.02
+    type: multiple_choice
+    prompt: "Did you ___ the film last night?"
+    options:
+      - "*see :: Did'den sonra fiil yalın hâlde gelir."
+      - "saw :: Geçmiş zaman zaten did'de var; fiil yalın kalır."
+      - "seen :: Seen fiilin üçüncü biçimidir ve burada kullanılmaz."
+      - "sees :: -s Present Simple ekidir."
+    explanation: "Did + özne + yalın fiil."
+  - id: q.a1.past-irregular.03
+    type: word_formation
+    prompt: "She ___ (buy) a new car last month."
+    answers: [bought]
+    explanation: "Buy → bought."
+  - id: q.a1.past-irregular.04
+    type: word_formation
+    prompt: "We ___ (have) a great time at the party."
+    answers: [had]
+    explanation: "Have → had."
+  - id: q.a1.past-irregular.05
+    type: word_formation
+    prompt: "They ___ (not / come) to the meeting."
+    answers: ["didn't come", "did not come"]
+    explanation: "Olumsuz cümlede düzensiz fiil de yalın hâle döner: didn't come."
+  - id: q.a1.past-irregular.06
+    type: error_correction
+    prompt: "He didn't went to work yesterday."
+    answers: ["He didn't go to work yesterday.", "He did not go to work yesterday."]
+    explanation: "Didn't'tan sonra went değil, go gelir."
+  - id: q.a1.past-irregular.07
+    type: matching
+    prompt: "Fiilleri geçmiş zaman biçimleriyle eşleştirin."
+    pairs:
+      - [take, took]
+      - [make, made]
+      - [say, said]
+      - [get, got]
+      - [know, knew]
+    explanation: "Bu fiillerin geçmiş zamanı -ed ile yapılmaz."
+  - id: q.a1.past-irregular.08
+    type: reading_comprehension
+    difficulty: 2
+    context: "Last Saturday, Elif got up at nine. She had breakfast and went to the market. She bought some fruit and vegetables. In the afternoon, she met her friend Zeynep. They drank coffee and talked for two hours. Elif came home at six and made dinner."
+    prompt: "What did Elif do in the afternoon?"
+    options:
+      - "*She met her friend. :: Metinde \"In the afternoon, she met her friend Zeynep\" deniyor."
+      - "She went to the market. :: Pazara sabah, kahvaltıdan sonra gitti."
+      - "She made dinner. :: Akşam yemeğini altıda eve geldikten sonra yaptı."
+      - "She got up at nine. :: Bu sabah oldu, öğleden sonra değil."
+    explanation: "Sorudaki \"did ... do\" yalın fiildir; cevap geçmiş zaman biçimiyle verilir: met."
+  - id: q.a1.past-irregular.09
+    type: translation
+    prompt: "Hafta sonu ne yaptın?"
+    answers: ["What did you do at the weekend?", "What did you do on the weekend?", "What did you do last weekend?", "What did you do this weekend?"]
+    explanation: "Soru: soru sözcüğü + did + özne + yalın fiil (do)."

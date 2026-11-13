@@ -1,0 +1,125 @@
+id: gram.a1.some-any
+kind: grammar
+level: A1
+title_tr: "Sayılabilen ve sayılamayan isimler; some ve any"
+title_en: "Countable and uncountable nouns; some / any"
+objective_tr: Bu dersin sonunda sayılabilen ve sayılamayan isimleri ayırt edebilecek, some ve any sözcüklerini olumlu, olumsuz ve soru cümlelerinde doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.there-is-are, gram.a1.articles-a-an]
+next: [gram.a1.imperatives]
+vocabulary: [some, any, water, bread, money, information]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İngilizcede isimler ikiye ayrılır.
+
+      **Sayılabilen isimler** tek tek sayılabilir; tekili ve çoğulu vardır: an apple, two apples.
+
+      **Sayılamayan isimler** tek tek sayılmaz; çoğul yapılmaz, a / an almaz ve tekil fiille kullanılır: water, milk, bread, rice, money, information, advice, furniture.
+
+      Dikkat: Türkçede "iki ekmek", "bir bilgi" diyebiliriz; İngilizcede **bread** ve **information** sayılamaz. Saymak için bir ölçü birimi eklenir: two **loaves of** bread, a **piece of** information, a **glass of** water.
+  - kind: formula
+    title_tr: "Some ve any"
+    text_tr: |-
+      Hem çoğul sayılabilen hem de sayılamayan isimlerle kullanılırlar ve "biraz, birkaç, hiç" anlamı verirler.
+    table:
+      headers: ["Cümle türü", "Sözcük", "Örnek"]
+      rows:
+        - ["Olumlu", "some", "I have some friends. / There is some milk."]
+        - ["Olumsuz", "any", "I don't have any friends. / There isn't any milk."]
+        - ["Soru", "any", "Do you have any friends? / Is there any milk?"]
+        - ["Teklif ve rica (soru)", "some", "Would you like some tea? / Can I have some water?"]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I need some bread and some eggs.", tr: "Biraz ekmeğe ve birkaç yumurtaya ihtiyacım var."}
+      - {en: "There isn't any sugar in the cupboard.", tr: "Dolapta hiç şeker yok."}
+      - {en: "Do you have any brothers or sisters?", tr: "Hiç kardeşin var mı?"}
+      - {en: "Would you like some coffee?", tr: "Biraz kahve ister misin?", note_tr: "Teklif: soruda some."}
+      - {en: "Can I have a glass of water, please?", tr: "Bir bardak su alabilir miyim, lütfen?"}
+      - {en: "The information is very useful.", tr: "Bilgi çok faydalı.", note_tr: "Sayılamayan isim tekil fiil alır."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I need an information.", tr: "Bir bilgiye ihtiyacım var.", wrong: true, correction: "I need some information.", note_tr: "Information sayılamaz; a / an almaz."}
+      - {en: "She has many moneys.", tr: "Onun çok parası var.", wrong: true, correction: "She has a lot of money.", note_tr: "Money çoğul yapılmaz."}
+      - {en: "I don't have some time.", tr: "Hiç vaktim yok.", wrong: true, correction: "I don't have any time.", note_tr: "Olumsuz cümlede any."}
+      - {en: "There are some milk in the fridge.", tr: "Buzdolabında biraz süt var.", wrong: true, correction: "There is some milk in the fridge.", note_tr: "Sayılamayan isim tekil fiil alır."}
+      - {en: "Can you give me an advice?", tr: "Bana bir tavsiye verebilir misin?", wrong: true, correction: "Can you give me some advice?", note_tr: "Advice sayılamaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sayılamayan isimleri çoğul yapmak.** informations, advices, furnitures, homeworks, moneys yanlıştır.
+
+      **Olumsuz cümlede some kullanmak.** "I don't have some..." yerine "I don't have **any**...".
+
+      **Teklif ve ricada any kullanmak.** Karşınızdakinin "evet" demesini bekliyorsanız soruda da **some** kullanılır: "Would you like **some** cake?"
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Excuse me, do you have any rooms for tonight?", tr: "Affedersiniz, bu gece için boş odanız var mı?"}
+      - {en: "I'd like some information about the course.", tr: "Kurs hakkında biraz bilgi almak istiyorum."}
+      - {en: "There's some soup in the kitchen. Help yourself.", tr: "Mutfakta biraz çorba var. Buyur, al."}
+      - {en: "Sorry, we don't have any bread left.", tr: "Üzgünüm, hiç ekmeğimiz kalmadı."}
+questions:
+  - id: q.a1.some-any.01
+    type: multiple_choice
+    prompt: "There isn't ___ milk in the fridge."
+    options:
+      - "*any :: Olumsuz cümlelerde any kullanılır."
+      - "some :: Some olumlu cümlelerde kullanılır."
+      - "a :: Milk sayılamayan bir isimdir; a / an almaz."
+      - "many :: Many sayılabilen çoğul isimlerle kullanılır."
+    explanation: "Olumsuz ve soru → any; olumlu → some."
+  - id: q.a1.some-any.02
+    type: multiple_choice
+    prompt: "I need ___ information about the hotel."
+    options:
+      - "*some :: Information sayılamaz; olumlu cümlede some kullanılır."
+      - "an :: Sayılamayan isimler a / an almaz."
+      - "any :: Any olumsuz ve soru cümlelerinde kullanılır."
+      - "two :: Sayılamayan isimler doğrudan sayıyla kullanılmaz."
+    explanation: "Sayılamayan isim + olumlu cümle → some."
+  - id: q.a1.some-any.03
+    type: multiple_choice
+    difficulty: 2
+    prompt: "Would you like ___ tea?"
+    options:
+      - "*some :: Teklif bildiren sorularda some kullanılır."
+      - "any :: Any soru cümlelerinde kullanılır, ancak tekliflerde some tercih edilir."
+      - "a :: Tea burada sayılamayan bir isimdir; \"a cup of tea\" denebilir ama \"a tea\" bu bağlamda uygun değildir."
+      - "many :: Many sayılabilen isimlerle kullanılır."
+    explanation: "Teklif ve ricalarda, soru olsa bile some kullanılır."
+  - id: q.a1.some-any.04
+    type: fill_blank
+    prompt: "Do you have ___ questions?"
+    answers: [any]
+    explanation: "Bilgi isteyen sorularda any kullanılır."
+  - id: q.a1.some-any.05
+    type: error_correction
+    prompt: "Can you give me an advice?"
+    answers: ["Can you give me some advice?", "Can you give me a piece of advice?"]
+    explanation: "Advice sayılamaz. \"Some advice\" ya da \"a piece of advice\" denir."
+  - id: q.a1.some-any.06
+    type: true_false
+    prompt: "She has a lot of furnitures in her flat."
+    options:
+      - "Doğru :: Furniture sayılamayan bir isimdir ve çoğul yapılamaz."
+      - "*Yanlış :: Furniture çoğul eki almaz: \"She has a lot of furniture in her flat.\""
+    explanation: "Sayılamayan isimler: furniture, information, advice, homework, money, luggage."
+  - id: q.a1.some-any.07
+    type: matching
+    prompt: "Sayılamayan isimleri ölçü birimleriyle eşleştirin."
+    pairs:
+      - [water, "a glass of"]
+      - [bread, "a loaf of"]
+      - [advice, "a piece of"]
+      - [coffee, "a cup of"]
+    explanation: "Sayılamayan isimler bir ölçü birimiyle sayılabilir hâle gelir."
+  - id: q.a1.some-any.08
+    type: translation
+    prompt: "Hiç param yok."
+    answers: ["I don't have any money.", "I haven't got any money.", "I do not have any money.", "I have no money."]
+    explanation: "Olumsuz cümlede any kullanılır; money sayılamaz ve çoğul yapılmaz."

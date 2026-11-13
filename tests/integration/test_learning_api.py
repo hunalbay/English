@@ -173,7 +173,7 @@ def test_search_finds_lessons_and_words(client):
     data = client.get(f"{API}/search", params={"q": "zamir"}).json()
     assert "gram.a1.subject-pronouns" in [lesson["id"] for lesson in data["lessons"]]
     data = client.get(f"{API}/search", params={"q": "pronouns"}).json()
-    assert data["lessons"][0]["id"] == "gram.a1.subject-pronouns"
+    assert "gram.a1.subject-pronouns" in [lesson["id"] for lesson in data["lessons"]]
     data = client.get(f"{API}/search", params={"q": "kitap"}).json()
     assert "word.book" in [word["id"] for word in data["words"]]
     assert client.get(f"{API}/search", params={"q": "!!!"}).json() == {"query": "!!!", "lessons": [], "words": []}

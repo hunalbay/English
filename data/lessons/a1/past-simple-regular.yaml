@@ -1,0 +1,127 @@
+id: gram.a1.past-simple-regular
+kind: grammar
+level: A1
+title_tr: "Geçmiş zaman: düzenli fiiller"
+title_en: "Past Simple: regular verbs"
+objective_tr: Bu dersin sonunda düzenli fiillere -ed ekleyerek geçmişte tamamlanmış olayları anlatabilecek, did ile olumsuz ve soru cümleleri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.was-were, gram.a1.present-simple-negative-questions]
+next: [gram.a1.past-simple-irregular]
+vocabulary: [work, play, watch, visit, study, stop, yesterday]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Past Simple**, geçmişte **başlamış ve bitmiş** olayları anlatır; Türkçedeki **-di / -dı** ekine karşılık gelir: "I **worked** yesterday." (Dün çalıştım.)
+
+      Düzenli fiillerde fiilin sonuna **-ed** eklenir ve bu biçim **bütün öznelerle aynıdır**: I worked, she worked, they worked. Üçüncü tekil kişi için ayrı bir ek yoktur.
+  - kind: formula
+    title_tr: "-ed eklerken yazım"
+    table:
+      headers: ["Fiilin sonu", "Kural", "Örnek"]
+      rows:
+        - ["çoğu fiil", "+ -ed", "work → worked, play → played"]
+        - ["-e", "+ -d", "live → lived, like → liked"]
+        - ["ünsüz + y", "y → -ied", "study → studied, try → tried"]
+        - ["tek hece: ünsüz + ünlü + ünsüz", "son ünsüz çiftlenir", "stop → stopped, plan → planned"]
+  - kind: usage
+    title_tr: Olumsuz ve soru
+    text_tr: |-
+      Olumsuz ve soru cümlelerinde **did** yardımcı fiili kullanılır ve asıl fiil **yalın hâle** döner. Geçmiş zaman bilgisi artık did'in üzerindedir.
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + fiil-ed", "She worked yesterday."]
+        - ["Olumsuz", "özne + didn't + yalın fiil", "She didn't work yesterday."]
+        - ["Soru", "Did + özne + yalın fiil?", "Did she work yesterday?"]
+        - ["Kısa cevap", "Yes, she did. / No, she didn't.", ""]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I watched a film last night.", tr: "Dün gece bir film izledim."}
+      - {en: "She lived in London for two years.", tr: "İki yıl Londra'da yaşadı."}
+      - {en: "We visited our grandparents last weekend.", tr: "Geçen hafta sonu büyükannemle dedemi ziyaret ettik."}
+      - {en: "He didn't call me yesterday.", tr: "Dün beni aramadı."}
+      - {en: "Did you study for the exam? — Yes, I did.", tr: "Sınava çalıştın mı? — Evet, çalıştım."}
+      - {en: "The bus stopped in front of the school.", tr: "Otobüs okulun önünde durdu."}
+  - kind: exceptions
+    title_tr: "-ed nasıl okunur?"
+    text_tr: |-
+      -ed eki üç farklı biçimde okunur ve çoğu zaman **ayrı bir hece oluşturmaz**.
+    table:
+      headers: ["Okunuş", "Ne zaman?", "Örnek"]
+      rows:
+        - ["/t/", "sert ünsüzlerden sonra (p, k, s, sh, ch, f)", "worked, watched, stopped"]
+        - ["/d/", "yumuşak seslerden ve ünlülerden sonra", "played, lived, called"]
+        - ["/ɪd/", "yalnızca t ve d'den sonra", "wanted, visited, needed"]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I didn't watched TV.", tr: "Televizyon izlemedim.", wrong: true, correction: "I didn't watch TV.", note_tr: "Didn't'tan sonra fiil yalın gelir."}
+      - {en: "Did you visited her?", tr: "Onu ziyaret ettin mi?", wrong: true, correction: "Did you visit her?", note_tr: "Did'den sonra fiil yalın gelir."}
+      - {en: "She studyed all night.", tr: "Bütün gece çalıştı.", wrong: true, correction: "She studied all night.", note_tr: "Ünsüz + y → -ied."}
+      - {en: "He stoped the car.", tr: "Arabayı durdurdu.", wrong: true, correction: "He stopped the car.", note_tr: "Son ünsüz çiftlenir."}
+      - {en: "I was work yesterday.", tr: "Dün çalıştım.", wrong: true, correction: "I worked yesterday.", note_tr: "Was ile asıl fiil birlikte kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Çift geçmiş zaman.** "I didn't worked", "Did she called?" yanlıştır. Geçmiş zaman ya did'de ya fiilde olur.
+
+      **-ed'i her zaman ayrı hece olarak okumak.** "worked" iki değil, **tek** hecedir (wörkt). Yalnızca t ve d'den sonra ek hece olur: "wanted" (won-tıd).
+
+      **Was / were ile asıl fiili birlikte kullanmak.** "I was go" ya da "I was worked" yanlıştır.
+questions:
+  - id: q.a1.past-regular.01
+    type: multiple_choice
+    prompt: "We ___ football yesterday."
+    options:
+      - "*played :: Yesterday geçmişi gösterir; düzenli fiil -ed alır."
+      - "play :: Bu Present Simple'dır; yesterday ile kullanılmaz."
+      - "plaied :: Ünlü + y ile biten fiillerde y değişmez: played."
+      - "were play :: Were ile asıl fiil birlikte kullanılmaz."
+    explanation: "Geçmişte bitmiş eylem → fiil + -ed."
+  - id: q.a1.past-regular.02
+    type: multiple_choice
+    prompt: "She ___ call me last night."
+    options:
+      - "*didn't :: Geçmiş zamanda olumsuz didn't + yalın fiil ile yapılır."
+      - "doesn't :: Doesn't şimdiki zamandır; \"last night\" geçmişi gösterir."
+      - "wasn't :: Wasn't to be'nin olumsuzudur; \"call\" gibi bir fiille kullanılmaz."
+      - "not :: Not tek başına fiili olumsuz yapamaz."
+    explanation: "Olumsuz: özne + didn't + yalın fiil."
+  - id: q.a1.past-regular.03
+    type: word_formation
+    prompt: "He ___ (study) English at university."
+    answers: [studied]
+    explanation: "Ünsüz + y → -ied: study → studied."
+  - id: q.a1.past-regular.04
+    type: word_formation
+    prompt: "The train ___ (stop) at every station."
+    answers: [stopped]
+    explanation: "Tek heceli, ünsüz + ünlü + ünsüz ile biten fiilde son ünsüz çiftlenir: stopped."
+  - id: q.a1.past-regular.05
+    type: error_correction
+    prompt: "I didn't watched the match."
+    answers: ["I didn't watch the match.", "I did not watch the match."]
+    explanation: "Didn't'tan sonra fiil yalın hâlde gelir."
+  - id: q.a1.past-regular.06
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Did, you, visit, your, grandparents, "?"]
+    explanation: "Sıra: Did + özne + yalın fiil + ...?"
+  - id: q.a1.past-regular.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi fiilde -ed ayrı bir hece olarak okunur?"
+    options:
+      - "*wanted :: Fiil t ile bitiyor; -ed /ɪd/ diye okunur ve ek bir hece oluşturur."
+      - "worked :: K'den sonra -ed /t/ diye okunur; sözcük tek hecelidir."
+      - "played :: Ünlü sesten sonra -ed /d/ diye okunur; ek hece oluşmaz."
+      - "watched :: Ch'den sonra -ed /t/ diye okunur; ek hece oluşmaz."
+    explanation: "-ed yalnızca t ve d ile biten fiillerde ayrı bir hece olur: wanted, needed, visited."
+  - id: q.a1.past-regular.08
+    type: translation
+    prompt: "Dün çalışmadım."
+    answers: ["I didn't work yesterday.", "I did not work yesterday.", "Yesterday I didn't work."]
+    explanation: "Olumsuz geçmiş: didn't + yalın fiil."
