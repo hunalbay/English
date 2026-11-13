@@ -1,0 +1,124 @@
+id: gram.a2.past-simple-vs-continuous
+kind: grammar
+level: A2
+title_tr: "Past Simple mı, Past Continuous mu?"
+title_en: "Past Simple vs Past Continuous"
+objective_tr: Bu dersin sonunda bir hikâyede süren eylem ile onu kesen olayı when ve while ile doğru zamanlarda anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.past-continuous, gram.a1.past-simple-irregular]
+next: [gram.a2.present-perfect]
+vocabulary: [when, while, suddenly, phone, arrive]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir olayı anlatırken çoğu zaman iki şey birlikte olur: **süren bir eylem** (arka plan) ve onu **kesen kısa bir olay**. Süren eylem **Past Continuous**, kesen olay **Past Simple** ile anlatılır.
+
+      "I **was watching** TV when the phone **rang**." (Televizyon izliyordum ki telefon çaldı.)
+
+      Türkçede de aynı ayrım vardır: "izli**yordum**" (süren) ve "çal**dı**" (olan).
+  - kind: formula
+    title_tr: "When ve while"
+    table:
+      headers: ["Bağlaç", "Ardından gelen", "Örnek"]
+      rows:
+        - ["when", "genellikle kısa olay (Past Simple)", "I was sleeping when you called."]
+        - ["while", "süren eylem (Past Continuous)", "You called while I was sleeping."]
+        - ["when ... , ...", "art arda iki olay (ikisi de Past Simple)", "When he arrived, we had dinner."]
+  - kind: comparison
+    title_tr: Anlam farkı
+    text_tr: |-
+      Aynı iki fiille iki farklı hikâye anlatılabilir.
+
+      "When she arrived, we **were having** dinner." → O geldiğinde yemek **yiyorduk** (yemek daha önce başlamıştı).
+
+      "When she arrived, we **had** dinner." → O gelince yemek **yedik** (önce o geldi, sonra yemeğe başladık).
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was walking home when it started to rain.", tr: "Eve yürüyordum ki yağmur başladı."}
+      - {en: "While she was cooking, she cut her finger.", tr: "Yemek yaparken parmağını kesti."}
+      - {en: "What were you doing when the earthquake happened?", tr: "Deprem olduğunda ne yapıyordun?"}
+      - {en: "He fell asleep while he was reading.", tr: "Kitap okurken uyuyakaldı."}
+      - {en: "When I got home, I made a cup of tea.", tr: "Eve gelince bir fincan çay yaptım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I watched TV when the phone was ringing.", tr: "Televizyon izliyordum ki telefon çaldı.", wrong: true, correction: "I was watching TV when the phone rang.", note_tr: "Süren eylem Continuous, kesen olay Simple."}
+      - {en: "While I walked to work, I was seeing an accident.", tr: "İşe yürürken bir kaza gördüm.", wrong: true, correction: "While I was walking to work, I saw an accident.", note_tr: "Görmek kısa bir olaydır."}
+      - {en: "When he was arriving, everybody was clapping.", tr: "O gelince herkes alkışladı.", wrong: true, correction: "When he arrived, everybody clapped.", note_tr: "Art arda iki olay: ikisi de Past Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İki zamanı ters kullanmak.** Hangisinin daha uzun sürdüğünü düşünün: uzun olan Continuous, kısa olan Simple.
+
+      **Her geçmiş eylemi Continuous yapmak.** Bir hikâyede art arda gelen olaylar Past Simple ile anlatılır: "I got up, had breakfast and left."
+
+      **While'dan sonra Past Simple kullanmak.** While süreyi vurgular; ardından çoğunlukla Continuous gelir.
+  - kind: daily_life
+    title_tr: Günlük hayattan
+    examples:
+      - {en: "Sorry, I was driving when you called.", tr: "Kusura bakma, aradığında araba kullanıyordum."}
+      - {en: "I was just thinking about you when your message arrived.", tr: "Mesajın geldiğinde tam seni düşünüyordum."}
+      - {en: "We met while we were studying at university.", tr: "Üniversitede okurken tanıştık."}
+questions:
+  - id: q.a2.ps-vs-pc.01
+    type: multiple_choice
+    prompt: "I ___ a shower when the phone ___."
+    options:
+      - "*was having / rang :: Duş almak süren eylem (Continuous), telefonun çalması kesen olay (Simple)."
+      - "had / was ringing :: Zamanlar ters: süren eylem duş almaktı."
+      - "was having / was ringing :: Telefonun çalması eylemi kesen kısa olaydır."
+      - "had / rang :: Bu, önce telefonun çaldığını sonra duş alındığını düşündürür."
+    explanation: "Süren eylem → Past Continuous; onu kesen olay → Past Simple."
+  - id: q.a2.ps-vs-pc.02
+    type: multiple_choice
+    prompt: "While we ___ in the park, it started to rain."
+    options:
+      - "*were walking :: While'dan sonra süren eylem gelir: were walking."
+      - "walked :: While süreyi vurgular; Continuous tercih edilir."
+      - "walk :: Present Simple geçmişteki bir olayı anlatmaz."
+      - "are walking :: Present Continuous şu anı anlatır."
+    explanation: "While + Past Continuous."
+  - id: q.a2.ps-vs-pc.03
+    type: word_formation
+    prompt: "She ___ (cut) her finger while she was cooking."
+    answers: [cut]
+    explanation: "Parmağını kesmek kısa, tamamlanmış bir olaydır: Past Simple. Cut düzensizdir ve değişmez."
+  - id: q.a2.ps-vs-pc.04
+    type: error_correction
+    prompt: "I was seeing an accident while I was driving home."
+    answers: ["I saw an accident while I was driving home."]
+    explanation: "Kazayı görmek anlık bir olaydır; Past Simple kullanılır."
+  - id: q.a2.ps-vs-pc.05
+    type: nuance
+    difficulty: 3
+    prompt: "\"When Tom arrived, we were having dinner.\" cümlesi ne anlatır?"
+    options:
+      - "*Tom geldiğinde yemek zaten sürüyordu. :: Were having: yemek Tom gelmeden önce başlamıştı."
+      - "Tom geldikten sonra yemeğe başladık. :: Bunun için \"we had dinner\" denirdi."
+      - "Tom yemeği bitirdikten sonra geldi. :: Yemeğin bittiğine dair bir bilgi yok."
+      - "Tom her akşam yemekte gelirdi. :: Alışkanlık anlamı yok."
+    explanation: "Past Continuous, öteki olay olduğunda eylemin sürmekte olduğunu gösterir."
+  - id: q.a2.ps-vs-pc.06
+    type: paragraph_completion
+    difficulty: 2
+    context: "Last night I was reading in bed. Everything was quiet. Suddenly, I ___ a strange noise in the kitchen. I got up and went downstairs."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*heard :: Suddenly ani bir olayı gösterir; Past Simple gerekir."
+      - "was hearing :: Hear bir algı fiilidir ve ani olay için Continuous kullanılmaz."
+      - "hear :: Hikâye geçmiş zamanda anlatılıyor."
+      - "am hearing :: Present Continuous hikâyenin zamanına uymaz."
+    explanation: "Arka plan Past Continuous ile, ani olaylar ve art arda gelen eylemler Past Simple ile anlatılır."
+  - id: q.a2.ps-vs-pc.07
+    type: sentence_building
+    prompt: "what / you / do / when / I / call / ?"
+    answers: ["What were you doing when I called?"]
+    explanation: "Aradığım anda süren eylem soruluyor: were you doing; aramak kısa olay: called."
+  - id: q.a2.ps-vs-pc.08
+    type: translation
+    prompt: "Eve yürüyordum ki yağmur başladı."
+    answers: ["I was walking home when it started to rain.", "I was walking home when it started raining.", "I was walking home when the rain started.", "I was walking home when it began to rain."]
+    explanation: "Süren eylem: was walking; kesen olay: started."

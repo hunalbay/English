@@ -86,3 +86,15 @@ units:
       - gram.a1.was-were
       - gram.a1.past-simple-regular
       - gram.a1.past-simple-irregular
+
+  - id: a2.u01
+    level: A2
+    title_tr: Geçmişi anlatmak
+    title_en: Talking about the past
+    description_tr: Süren ve tamamlanan geçmiş olayları, deneyimleri ve eski alışkanlıkları anlatın.
+    lessons:
+      - gram.a2.past-continuous
+      - gram.a2.past-simple-vs-continuous
+      - gram.a2.present-perfect
+      - gram.a2.present-perfect-vs-past-simple
+      - gram.a2.used-to

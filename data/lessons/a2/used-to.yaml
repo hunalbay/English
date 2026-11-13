@@ -1,0 +1,124 @@
+id: gram.a2.used-to
+kind: grammar
+level: A2
+title_tr: "Eski alışkanlıklar: used to"
+title_en: "Used to"
+objective_tr: Bu dersin sonunda used to ile geçmişte düzenli yaptığınız ama artık yapmadığınız şeyleri ve geçmişteki durumları anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.past-simple-regular]
+vocabulary: [use, smoke, live, child]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Used to**, geçmişte **düzenli olarak yapılan** ya da **uzun süre doğru olan** ama **artık geçerli olmayan** şeyleri anlatır; Türkçedeki **-erdi / -ardı** biçimine yakındır.
+
+      "I **used to play** football." → (Eskiden) futbol oynardım (artık oynamıyorum).
+
+      Yalnızca geçmiş için kullanılır; şimdiki alışkanlıklar için **usually** + Present Simple kullanılır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      Olumsuz ve soruda did kullanıldığı için used'un sonundaki **-d düşer**: **use to**.
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + used to + yalın fiil", "She used to live in Izmir."]
+        - ["Olumsuz", "özne + didn't use to + yalın fiil", "She didn't use to like coffee."]
+        - ["Soru", "Did + özne + use to + yalın fiil?", "Did she use to work here?"]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Eski alışkanlık:** "We used to go to the sea every summer."
+
+      **Eski durum:** "There used to be a cinema here.", "I used to have long hair."
+
+      **Tek seferlik olaylar için kullanılmaz:** "I used to go to Paris in 2015" yanlıştır; tek bir olay için "I **went** to Paris in 2015" denir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My father used to smoke, but he stopped ten years ago.", tr: "Babam eskiden sigara içerdi ama on yıl önce bıraktı."}
+      - {en: "I used to hate vegetables when I was a child.", tr: "Çocukken sebzeden nefret ederdim."}
+      - {en: "We didn't use to have a car.", tr: "Eskiden arabamız yoktu."}
+      - {en: "Did you use to play an instrument?", tr: "Eskiden bir enstrüman çalar mıydın?"}
+      - {en: "This building used to be a school.", tr: "Bu bina eskiden okuldu."}
+  - kind: comparison
+    title_tr: "Benzer görünen yapılar"
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["used to + fiil", "eskiden yapardım", "I used to drive to work."]
+        - ["usually + Present Simple", "şimdi genellikle yaparım", "I usually drive to work."]
+        - ["use + nesne", "bir şeyi kullanmak", "I use a laptop at work."]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I use to play tennis when I was young.", tr: "Gençken tenis oynardım.", wrong: true, correction: "I used to play tennis when I was young.", note_tr: "Olumlu cümlede used to."}
+      - {en: "She didn't used to eat meat.", tr: "Eskiden et yemezdi.", wrong: true, correction: "She didn't use to eat meat.", note_tr: "Didn't'tan sonra use to."}
+      - {en: "I used to going there.", tr: "Oraya giderdim.", wrong: true, correction: "I used to go there.", note_tr: "Used to'dan sonra yalın fiil."}
+      - {en: "I use to get up early every day.", tr: "Her gün erken kalkarım.", wrong: true, correction: "I usually get up early.", note_tr: "Şimdiki alışkanlık için usually."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Şimdiki zaman için kullanmak.** "I use to..." biçiminde bir şimdiki zaman yapısı yoktur.
+
+      **Tek seferlik olay için kullanmak.** Used to tekrarlanan eylemleri ve süren durumları anlatır.
+
+      **Didn't'tan sonra -d'yi korumak.** Yazıda "didn't use to" doğrudur.
+questions:
+  - id: q.a2.used-to.01
+    type: multiple_choice
+    prompt: "I ___ play football every weekend, but now I don't have time."
+    options:
+      - "*used to :: Geçmişte düzenli yapılan ama artık yapılmayan eylem."
+      - "use to :: Olumlu cümlede biçim used to'dur."
+      - "usually :: Usually şimdiki alışkanlığı bildirir; cümle \"artık vaktim yok\" diyor."
+      - "am used to :: \"Be used to\" alışkın olmak demektir ve ardından -ing gelir; farklı bir yapıdır."
+    explanation: "Eski alışkanlık → used to + yalın fiil."
+  - id: q.a2.used-to.02
+    type: multiple_choice
+    prompt: "Did you ___ live in Ankara?"
+    options:
+      - "*use to :: Did'den sonra fiil yalın hâle döner: use to."
+      - "used to :: Geçmiş zaman did'de olduğu için -d düşer."
+      - "using to :: -ing biçimi burada kullanılmaz."
+      - "uses to :: -s Present Simple ekidir."
+    explanation: "Soru: Did + özne + use to + yalın fiil?"
+  - id: q.a2.used-to.03
+    type: fill_blank
+    prompt: "There ___ to be a park here, but now there is a car park."
+    answers: [used]
+    explanation: "Eski bir durum: There used to be..."
+  - id: q.a2.used-to.04
+    type: error_correction
+    prompt: "She didn't used to drink coffee."
+    answers: ["She didn't use to drink coffee.", "She did not use to drink coffee."]
+    explanation: "Didn't'tan sonra use to yazılır."
+  - id: q.a2.used-to.05
+    type: true_false
+    prompt: "I used to go to London in 2019."
+    options:
+      - "Doğru :: Used to tekrarlanan eylemler içindir; cümle tek bir yolculuğu anlatıyor."
+      - "*Yanlış :: Tek seferlik bir olay için Past Simple kullanılır: \"I went to London in 2019.\""
+    explanation: "Used to tek seferlik olaylar için kullanılmaz."
+  - id: q.a2.used-to.06
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümle şimdiki bir alışkanlığı anlatır?"
+    options:
+      - "*I usually walk to work. :: Usually + Present Simple şimdiki alışkanlığı bildirir."
+      - "I used to walk to work. :: Eskiden yürürdüm, artık yürümüyorum."
+      - "I didn't use to walk to work. :: Eskiden yürümezdim."
+      - "I walked to work yesterday. :: Dün yaşanan tek bir olay."
+    explanation: "Used to yalnızca geçmiş içindir; şimdi için usually kullanılır."
+  - id: q.a2.used-to.07
+    type: sentence_building
+    prompt: "my grandfather / used to / be / a teacher"
+    answers: ["My grandfather used to be a teacher."]
+    explanation: "Eski bir durum: used to + be."
+  - id: q.a2.used-to.08
+    type: translation
+    prompt: "Çocukken sebze sevmezdim."
+    answers: ["I didn't use to like vegetables when I was a child.", "When I was a child, I didn't use to like vegetables.", "I did not use to like vegetables when I was a child.", "I didn't like vegetables when I was a child.", "When I was a child, I didn't like vegetables."]
+    explanation: "Eski durum: didn't use to + yalın fiil. Durum fiillerinde Past Simple da doğrudur."

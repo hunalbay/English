@@ -1,0 +1,117 @@
+id: gram.a2.past-continuous
+kind: grammar
+level: A2
+title_tr: Geçmişte süren eylemler
+title_en: Past Continuous
+objective_tr: Bu dersin sonunda geçmişte belirli bir anda sürmekte olan eylemleri was / were + fiil-ing yapısıyla anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.was-were, gram.a1.present-continuous]
+next: [gram.a2.past-simple-vs-continuous]
+vocabulary: [while, when, yesterday, rain, sleep]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Past Continuous**, geçmişte belirli bir anda **devam etmekte olan** bir eylemi anlatır; Türkçedeki **-iyordu / -ıyordu** biçimine karşılık gelir: "At eight o'clock I **was having** breakfast." (Saat sekizde kahvaltı ediyordum.)
+
+      Yapısı Present Continuous ile aynıdır; yalnızca to be geçmiş zamana çevrilir: am / is → **was**, are → **were**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + was / were + fiil-ing", "She was reading."]
+        - ["Olumsuz", "özne + wasn't / weren't + fiil-ing", "She wasn't reading."]
+        - ["Soru", "Was / Were + özne + fiil-ing?", "Was she reading?"]
+        - ["Kısa cevap", "Yes, she was. / No, she wasn't.", ""]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Geçmişte belirli bir anda süren eylem:** "At ten last night, I was watching TV."
+
+      **Bir hikâyenin arka planı:** "The sun was shining and the birds were singing."
+
+      **Aynı anda süren iki eylem (while ile):** "While I was cooking, he was setting the table."
+
+      **Başka bir olayla kesilen eylem:** "I was sleeping when the phone rang." (Bu kullanım bir sonraki derste ayrıntılı işlenir.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was working at nine o'clock yesterday.", tr: "Dün saat dokuzda çalışıyordum."}
+      - {en: "It was raining all morning.", tr: "Bütün sabah yağmur yağıyordu."}
+      - {en: "They were waiting for the bus.", tr: "Otobüs bekliyorlardı."}
+      - {en: "She wasn't listening to me.", tr: "Beni dinlemiyordu."}
+      - {en: "What were you doing at midnight?", tr: "Gece yarısı ne yapıyordun?"}
+      - {en: "While we were talking, the children were playing.", tr: "Biz konuşurken çocuklar oynuyordu."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I was work at that time.", tr: "O sırada çalışıyordum.", wrong: true, correction: "I was working at that time.", note_tr: "Fiil -ing almalıdır."}
+      - {en: "They was playing football.", tr: "Futbol oynuyorlardı.", wrong: true, correction: "They were playing football.", note_tr: "They ile were kullanılır."}
+      - {en: "Did you were sleeping?", tr: "Uyuyor muydun?", wrong: true, correction: "Were you sleeping?", note_tr: "Soru was / were ile yapılır."}
+      - {en: "I was knowing the answer.", tr: "Cevabı biliyordum.", wrong: true, correction: "I knew the answer.", note_tr: "Durum fiilleri Continuous biçimde kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tamamlanmış eylemler için kullanmak.** "Yesterday I was going to the cinema" demek, eylemin sürdüğünü vurgular. Olayın gerçekleştiğini söylemek istiyorsanız: "Yesterday I **went** to the cinema."
+
+      **Did ile soru kurmak.** Yardımcı fiil was / were'dür: "**Were** you working?"
+
+      **Durum fiillerine -ing eklemek.** know, want, like, understand gibi fiiller burada da -ing almaz.
+questions:
+  - id: q.a2.past-continuous.01
+    type: multiple_choice
+    prompt: "At eight o'clock last night, I ___ dinner."
+    options:
+      - "*was having :: Geçmişte belirli bir anda süren eylem: was + having."
+      - "have :: Present Simple geçmişi anlatmaz."
+      - "am having :: Present Continuous şu anı anlatır; \"last night\" geçmişi gösterir."
+      - "were having :: I ile were kullanılmaz."
+    explanation: "Geçmişte belirli bir saatte devam eden eylem → Past Continuous."
+  - id: q.a2.past-continuous.02
+    type: multiple_choice
+    prompt: "The children ___ in the garden all afternoon."
+    options:
+      - "*were playing :: Çoğul özne (children) ile were kullanılır; eylem öğleden sonra boyunca sürdü."
+      - "was playing :: Was tekil öznelerle kullanılır."
+      - "playing :: To be olmadan -ing biçimi fiil olamaz."
+      - "were play :: Were'den sonra fiil -ing almalıdır."
+    explanation: "Çoğul özne + were + fiil-ing."
+  - id: q.a2.past-continuous.03
+    type: word_formation
+    prompt: "It ___ (rain) when I left the house."
+    answers: ["was raining"]
+    explanation: "Evden çıktığım sırada sürmekte olan durum: was raining."
+  - id: q.a2.past-continuous.04
+    type: error_correction
+    prompt: "What did you doing at ten o'clock?"
+    answers: ["What were you doing at ten o'clock?"]
+    explanation: "Past Continuous sorusu did ile değil, was / were ile kurulur."
+  - id: q.a2.past-continuous.05
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [She, "wasn't", listening, to, me]
+    explanation: "Sıra: özne + wasn't + fiil-ing + ..."
+  - id: q.a2.past-continuous.06
+    type: true_false
+    prompt: "While I was cooking, my husband was watching TV."
+    options:
+      - "*Doğru :: Aynı anda süren iki eylem while ile bağlanır ve ikisi de Past Continuous olur."
+      - "Yanlış :: Cümlede hata yok; iki eylem de aynı anda sürüyordu."
+    explanation: "While + Past Continuous, Past Continuous: aynı anda süren iki eylem."
+  - id: q.a2.past-continuous.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümle eylemin o sırada devam ettiğini vurgular?"
+    options:
+      - "*At six, I was driving home. :: Saat altıda eylem sürüyordu (yoldaydım)."
+      - "At six, I drove home. :: Bu, eylemin saat altıda başladığını ya da gerçekleştiğini bildirir."
+      - "At six, I drive home. :: Bu bir alışkanlık bildirir (her gün altıda)."
+      - "At six, I am driving home. :: Bu şu anı ya da planlanmış bir geleceği bildirir."
+    explanation: "Past Simple olayı bir bütün olarak, Past Continuous ise o andaki akışı gösterir."
+  - id: q.a2.past-continuous.08
+    type: translation
+    prompt: "Dün gece saat onda uyuyordum."
+    answers: ["I was sleeping at ten o'clock last night.", "At ten o'clock last night, I was sleeping.", "I was sleeping at ten last night.", "Last night at ten o'clock, I was sleeping.", "At ten last night, I was sleeping."]
+    explanation: "Geçmişte belirli bir saatte süren eylem: was + sleeping."

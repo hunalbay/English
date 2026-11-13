@@ -1,0 +1,126 @@
+id: gram.a2.present-perfect-vs-past-simple
+kind: grammar
+level: A2
+title_tr: "Present Perfect mi, Past Simple mı?"
+title_en: "Present Perfect vs Past Simple"
+objective_tr: Bu dersin sonunda bir olayın ne zaman olduğu belliyse Past Simple, belli değilse ya da şimdiyle bağlantılıysa Present Perfect kullanmayı ayırt edebilecek; for ve since ile süre bildirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.present-perfect]
+next: [gram.a2.used-to]
+vocabulary: [for, since, ago, last, already]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İki zaman da geçmişteki olayları anlatır; fark **bakış açısındadır**.
+
+      **Past Simple** → Olay geçmişte kaldı ve **ne zaman** olduğu belli (ya da bağlamdan anlaşılıyor): "I **lost** my keys yesterday."
+
+      **Present Perfect** → Zaman söylenmiyor; olay **şimdiyle bağlantılı**: "I **have lost** my keys." (Hâlâ kayıplar.)
+
+      Türkçede ikisi de çoğu zaman "-di" ile çevrildiği için bu ayrım Türkçe konuşanlara zor gelir. Karar verirken çeviriye değil, **zaman ifadesine** bakın.
+  - kind: comparison
+    title_tr: Hangi zaman ifadesi hangi zamanla?
+    table:
+      headers: ["Past Simple", "Present Perfect"]
+      rows:
+        - ["yesterday, last week, in 2015", "ever, never"]
+        - ["two days ago", "just, already, yet"]
+        - ["when I was a child", "today, this week (süre bitmediyse)"]
+        - ["When...? (ne zaman sorusu)", "for, since (hâlâ sürüyorsa)"]
+  - kind: usage
+    title_tr: "For ve since"
+    text_tr: |-
+      Geçmişte başlayıp **hâlâ süren** durumlar Present Perfect ile anlatılır.
+
+      **for** + süre: for two years, for a long time, for ten minutes.
+
+      **since** + başlangıç noktası: since 2019, since Monday, since I was a child.
+
+      "I **have lived** here for five years." → Beş yıldır burada yaşıyorum (hâlâ buradayım). Türkçede şimdiki zaman kullanılır; İngilizcede Present Simple **kullanılmaz**.
+
+      "I **lived** there for five years." → Orada beş yıl yaşadım (artık yaşamıyorum).
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have been to Rome. I went there in 2018.", tr: "Roma'ya gittim. Oraya 2018'de gittim.", note_tr: "Önce deneyim, sonra ayrıntı."}
+      - {en: "She has worked here since 2020.", tr: "2020'den beri burada çalışıyor."}
+      - {en: "We have known each other for ten years.", tr: "Birbirimizi on yıldır tanıyoruz."}
+      - {en: "Did you see the match last night?", tr: "Dün geceki maçı gördün mü?"}
+      - {en: "Have you seen my phone? I can't find it.", tr: "Telefonumu gördün mü? Bulamıyorum."}
+      - {en: "When did you buy your car?", tr: "Arabanı ne zaman aldın?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I live here since 2019.", tr: "2019'dan beri burada yaşıyorum.", wrong: true, correction: "I have lived here since 2019.", note_tr: "Hâlâ süren durum + since → Present Perfect."}
+      - {en: "When have you arrived?", tr: "Ne zaman geldin?", wrong: true, correction: "When did you arrive?", note_tr: "When sorusu Past Simple ister."}
+      - {en: "I have known her since five years.", tr: "Onu beş yıldır tanıyorum.", wrong: true, correction: "I have known her for five years.", note_tr: "Süre → for."}
+      - {en: "She has gone to Spain last summer.", tr: "Geçen yaz İspanya'ya gitti.", wrong: true, correction: "She went to Spain last summer.", note_tr: "Bitmiş zaman ifadesi → Past Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"-dir / -den beri" için Present Simple kullanmak.** "I work here for two years" yanlıştır. Doğrusu: "I **have worked** here for two years."
+
+      **For ile since'i karıştırmak.** Süre mi (for), başlangıç noktası mı (since)?
+
+      **Ayrıntı verirken Present Perfect'te kalmak.** Konuşma çoğu zaman Present Perfect ile açılır, ayrıntıya geçince Past Simple'a döner: "I've been to Italy." — "Really? When **did** you **go**?"
+questions:
+  - id: q.a2.pp-vs-ps.01
+    type: multiple_choice
+    prompt: "I ___ my keys yesterday."
+    options:
+      - "*lost :: Yesterday bitmiş bir zamanı gösterir; Past Simple gerekir."
+      - "have lost :: Bitmiş zaman ifadesiyle Present Perfect kullanılmaz."
+      - "lose :: Present Simple geçmişteki bir olayı anlatmaz."
+      - "am losing :: Present Continuous şu an süren bir eylemi anlatır."
+    explanation: "Zaman belli ve bitmiş → Past Simple."
+  - id: q.a2.pp-vs-ps.02
+    type: multiple_choice
+    prompt: "She ___ in this company since 2018."
+    options:
+      - "*has worked :: 2018'de başlayıp hâlâ süren durum: Present Perfect + since."
+      - "works :: \"-den beri\" anlamı Present Simple ile verilmez."
+      - "worked :: Past Simple, artık orada çalışmadığını düşündürür ve since ile kullanılmaz."
+      - "is working :: Since ile süre bildirirken Present Continuous kullanılmaz."
+    explanation: "Geçmişte başlayıp süren durum + since / for → Present Perfect."
+  - id: q.a2.pp-vs-ps.03
+    type: fill_blank
+    prompt: "We have known each other ___ ten years."
+    answers: [for]
+    explanation: "Ten years bir süredir: for."
+  - id: q.a2.pp-vs-ps.04
+    type: fill_blank
+    prompt: "I haven't seen him ___ Monday."
+    answers: [since]
+    explanation: "Monday bir başlangıç noktasıdır: since."
+  - id: q.a2.pp-vs-ps.05
+    type: error_correction
+    prompt: "When have you bought this phone?"
+    answers: ["When did you buy this phone?"]
+    explanation: "When ile belirli bir zaman sorulur; Past Simple kullanılır."
+  - id: q.a2.pp-vs-ps.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle konuşanın artık Londra'da yaşamadığını bildirir?"
+    options:
+      - "*I lived in London for three years. :: Past Simple: o dönem bitti."
+      - "I have lived in London for three years. :: Present Perfect: hâlâ Londra'da yaşıyor."
+      - "I have lived in London since 2021. :: Since + Present Perfect: durum sürüyor."
+      - "I live in London. :: Şu an Londra'da yaşıyor."
+    explanation: "For her iki zamanla kullanılabilir; anlamı fiilin zamanı belirler."
+  - id: q.a2.pp-vs-ps.07
+    type: dialogue_completion
+    context: "A: I've been to Istanbul.\nB: Really? When ___?"
+    prompt: "B soruyu nasıl tamamlar?"
+    options:
+      - "*did you go :: Belirli bir zaman sorulduğunda Past Simple'a geçilir."
+      - "have you gone :: When ile Present Perfect kullanılmaz."
+      - "have you been :: When ile Present Perfect kullanılmaz."
+      - "do you go :: Present Simple alışkanlık sorar."
+    explanation: "Deneyim Present Perfect ile açılır; ayrıntı Past Simple ile sorulur."
+  - id: q.a2.pp-vs-ps.08
+    type: translation
+    prompt: "Beş yıldır burada yaşıyorum."
+    answers: ["I have lived here for five years.", "I've lived here for five years.", "I have been living here for five years.", "I've been living here for five years."]
+    explanation: "Türkçede şimdiki zaman kullanılsa da İngilizcede Present Perfect + for gerekir."

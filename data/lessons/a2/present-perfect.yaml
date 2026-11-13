@@ -1,0 +1,140 @@
+id: gram.a2.present-perfect
+kind: grammar
+level: A2
+title_tr: "Present Perfect: deneyimler ve sonuçlar"
+title_en: "Present Perfect: experience and results"
+objective_tr: Bu dersin sonunda have / has + fiilin üçüncü biçimiyle hayat deneyimlerinizi ve şimdiki zamanı etkileyen geçmiş olayları anlatabilecek; ever, never, just, already, yet sözcüklerini kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.past-simple-irregular, gram.a1.have-got]
+next: [gram.a2.present-perfect-vs-past-simple]
+vocabulary: [ever, never, just, already, yet, since]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Present Perfect**, geçmişte olan bir şeyi **şimdiyle ilişkilendirerek** anlatır. **Ne zaman** olduğu söylenmez; önemli olan olayın kendisi ya da şimdiki sonucudur.
+
+      "I **have lost** my keys." → Anahtarlarımı kaybettim (ve şu an yanımda yoklar).
+
+      Türkçede bu zamanın tam bir karşılığı yoktur; bağlama göre **-di** ya da **-miş** ile çevrilir. Bu yüzden ne zaman kullanılacağını Türkçe çeviriye göre değil, **anlama** göre öğrenmek gerekir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      **have / has** + fiilin **üçüncü biçimi** (past participle). Düzenli fiillerde üçüncü biçim -ed ile yapılır; düzensiz fiillerde ezberlenir (go – went – **gone**, see – saw – **seen**).
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + have / has + V3", "I have finished. / She has finished."]
+        - ["Olumsuz", "özne + haven't / hasn't + V3", "I haven't finished."]
+        - ["Soru", "Have / Has + özne + V3?", "Have you finished?"]
+        - ["Kısa cevap", "Yes, I have. / No, I haven't.", ""]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Hayat deneyimi (ever / never):** "Have you **ever** been to Japan?" — "No, I have **never** been there."
+
+      **Şimdiki sonucu olan olay:** "She has broken her arm." (Kolu şu an kırık.)
+
+      **Az önce olan şey (just):** "I have **just** had lunch."
+
+      **Beklenenden önce olan şey (already):** "I have **already** done my homework."
+
+      **Henüz olmamış ama beklenen şey (yet — olumsuz ve soruda, cümle sonunda):** "I haven't finished **yet**." / "Have you eaten **yet**?"
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have visited London twice.", tr: "Londra'yı iki kez ziyaret ettim."}
+      - {en: "She has never eaten sushi.", tr: "O hiç suşi yemedi."}
+      - {en: "Have you ever seen a whale?", tr: "Hiç balina gördün mü?"}
+      - {en: "We have just arrived.", tr: "Daha yeni geldik."}
+      - {en: "He hasn't called me yet.", tr: "Beni henüz aramadı."}
+      - {en: "I have already read this book.", tr: "Bu kitabı zaten okudum."}
+  - kind: exceptions
+    title_tr: "Been ve gone"
+    text_tr: |-
+      Go fiilinin iki üçüncü biçimi farklı anlam taşır.
+
+      "She has **been** to Paris." → Paris'e gitti ve **döndü** (deneyim).
+
+      "She has **gone** to Paris." → Paris'e gitti ve **hâlâ orada** (şu an burada değil).
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I have saw that film.", tr: "O filmi gördüm.", wrong: true, correction: "I have seen that film.", note_tr: "Have'den sonra üçüncü biçim gelir."}
+      - {en: "She have finished.", tr: "O bitirdi.", wrong: true, correction: "She has finished.", note_tr: "He, she, it ile has."}
+      - {en: "I have visited Rome last year.", tr: "Geçen yıl Roma'yı ziyaret ettim.", wrong: true, correction: "I visited Rome last year.", note_tr: "Bitmiş zaman ifadesiyle Past Simple."}
+      - {en: "I didn't finish yet.", tr: "Henüz bitirmedim.", wrong: true, correction: "I haven't finished yet.", note_tr: "Yet ile Present Perfect (İngiliz İngilizcesi)."}
+      - {en: "Have you ever went to Italy?", tr: "Hiç İtalya'ya gittin mi?", wrong: true, correction: "Have you ever been to Italy?", note_tr: "Deneyim için been to."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Bitmiş zaman ifadesiyle kullanmak.** yesterday, last week, in 2019, two days ago gibi ifadelerle Present Perfect kullanılmaz.
+
+      **İkinci biçimi kullanmak.** "I have went", "She has ate" yanlıştır; **gone / been**, **eaten** olmalıdır.
+
+      **Never ile olumsuz fiil.** "I haven't never..." çift olumsuzluktur; "I have **never**..." deyin.
+questions:
+  - id: q.a2.present-perfect.01
+    type: multiple_choice
+    prompt: "I ___ never ___ to Japan."
+    options:
+      - "*have / been :: I ile have kullanılır; deneyim için been to."
+      - "has / been :: Has; he, she, it ile kullanılır."
+      - "have / went :: Have'den sonra ikinci biçim (went) değil, üçüncü biçim gelir."
+      - "did / go :: Never ile hayat deneyimi anlatılırken Present Perfect kullanılır."
+    explanation: "Hayat deneyimi: have / has + (never) + V3."
+  - id: q.a2.present-perfect.02
+    type: multiple_choice
+    prompt: "She hasn't finished her homework ___."
+    options:
+      - "*yet :: Yet olumsuz cümlelerde ve sorularda, cümlenin sonunda kullanılır."
+      - "already :: Already olumlu cümlelerde, have ile V3 arasında kullanılır."
+      - "just :: Just olumlu cümlelerde \"az önce\" anlamında kullanılır."
+      - "ever :: Ever sorularda \"hiç\" anlamında kullanılır."
+    explanation: "Olumsuz + yet = henüz ...-medi."
+  - id: q.a2.present-perfect.03
+    type: word_formation
+    prompt: "Have you ever ___ (see) a ghost?"
+    answers: [seen]
+    explanation: "See – saw – seen. Have'den sonra üçüncü biçim gelir."
+  - id: q.a2.present-perfect.04
+    type: word_formation
+    prompt: "He ___ (just / leave). You can still catch him."
+    answers: ["has just left", "'s just left"]
+    explanation: "He → has; leave – left – left. Just, has ile üçüncü biçim arasına girer: has just left."
+  - id: q.a2.present-perfect.05
+    type: error_correction
+    prompt: "I have seen him yesterday."
+    answers: ["I saw him yesterday."]
+    explanation: "Yesterday bitmiş bir zamanı gösterir; Past Simple gerekir."
+  - id: q.a2.present-perfect.06
+    type: nuance
+    difficulty: 3
+    prompt: "\"Where is Ali?\" sorusuna hangi cevap Ali'nin şu an burada olmadığını bildirir?"
+    options:
+      - "*He has gone to the bank. :: Gone: gitti ve henüz dönmedi."
+      - "He has been to the bank. :: Been: gitti ve döndü; yani şu an burada olabilir."
+      - "He goes to the bank. :: Bu bir alışkanlık bildirir."
+      - "He went to the bank yesterday. :: Bu dünkü bir olayı anlatır; şu anki durumu söylemez."
+    explanation: "Has gone = gitti, orada. Has been = gitti ve döndü."
+  - id: q.a2.present-perfect.07
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [I, have, already, read, this, book]
+    explanation: "Already, have ile üçüncü biçim arasına gelir."
+  - id: q.a2.present-perfect.08
+    type: dialogue_completion
+    context: "A: Have you ever eaten Thai food?\nB: ___ I love it!"
+    prompt: "B'nin kısa cevabı hangisi?"
+    options:
+      - "*Yes, I have. :: Soru have ile soruldu; kısa cevap da have ile verilir."
+      - "Yes, I did. :: Did, Past Simple sorularının cevabıdır."
+      - "Yes, I do. :: Do, Present Simple sorularının cevabıdır."
+      - "Yes, I am. :: Am, to be sorularının cevabıdır."
+    explanation: "Kısa cevap: Yes, I have. / No, I haven't."
+  - id: q.a2.present-perfect.09
+    type: translation
+    prompt: "Hiç Paris'e gittin mi?"
+    answers: ["Have you ever been to Paris?"]
+    explanation: "Deneyim sorusu: Have you ever been to...?"
