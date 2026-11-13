@@ -1,0 +1,131 @@
+id: gram.a2.could
+kind: grammar
+level: A2
+title_tr: "Geçmişte yetenek ve kibar rica: could"
+title_en: "Could: past ability and polite requests"
+objective_tr: Bu dersin sonunda could ile geçmişte neleri yapabildiğinizi anlatabilecek, kibarca ricada bulunabilecek ve izin isteyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.can-cant, gram.a2.should]
+next: [gram.a2.may-might]
+vocabulary: [can, able, help, when, please]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Could**'un iki temel görevi vardır.
+
+      **1. Can'in geçmiş zamanı:** "I **could** swim when I was five." (Beş yaşındayken yüzebiliyordum.)
+
+      **2. Kibar rica ve izin:** "**Could** you help me?" (Bana yardım edebilir misiniz?) — burada geçmiş anlamı yoktur; can'e göre **daha kibar**dır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + could + yalın fiil", "She could read at four."]
+        - ["Olumsuz", "özne + couldn't + yalın fiil", "I couldn't sleep last night."]
+        - ["Soru", "Could + özne + yalın fiil?", "Could you swim as a child?"]
+        - ["Rica", "Could you + yalın fiil ..., please?", "Could you open the window, please?"]
+  - kind: usage
+    title_tr: "Could ve was able to"
+    text_tr: |-
+      Geçmişteki **genel bir yetenek** için could kullanılır: "My grandfather **could** speak five languages."
+
+      Geçmişte **tek bir seferde başarılan** bir iş için olumlu cümlede could değil **was / were able to** ya da **managed to** kullanılır: "The fire was big, but everyone **was able to** escape."
+
+      Olumsuzda bu fark yoktur; **couldn't** her iki durumda da kullanılır: "I **couldn't** find my keys."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I could ride a bike when I was six.", tr: "Altı yaşındayken bisiklete binebiliyordum."}
+      - {en: "We couldn't hear the teacher.", tr: "Öğretmeni duyamadık."}
+      - {en: "Could you repeat that, please?", tr: "Onu tekrar eder misiniz, lütfen?"}
+      - {en: "Could I use your phone?", tr: "Telefonunuzu kullanabilir miyim?"}
+      - {en: "He was able to finish the race.", tr: "Yarışı bitirmeyi başardı."}
+  - kind: comparison
+    title_tr: Rica ederken kibarlık basamakları
+    table:
+      headers: ["İfade", "Ton"]
+      rows:
+        - ["Open the window.", "emir"]
+        - ["Can you open the window?", "gündelik, arkadaşça"]
+        - ["Could you open the window, please?", "kibar"]
+        - ["Would you mind opening the window?", "çok kibar"]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I could to swim.", tr: "Yüzebiliyordum.", wrong: true, correction: "I could swim.", note_tr: "Could'dan sonra to gelmez."}
+      - {en: "I can swim when I was a child.", tr: "Çocukken yüzebiliyordum.", wrong: true, correction: "I could swim when I was a child.", note_tr: "Geçmişte could."}
+      - {en: "Did you could sleep?", tr: "Uyuyabildin mi?", wrong: true, correction: "Could you sleep?", note_tr: "Could ile did kullanılmaz."}
+      - {en: "Could you to help me?", tr: "Bana yardım eder misiniz?", wrong: true, correction: "Could you help me?", note_tr: "Yalın fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Could'u her zaman geçmiş sanmak.** "Could you help me?" şu anki bir ricadır.
+
+      **Kibar ricaya "Yes, I could" diye cevap vermek.** Doğal cevaplar: "Sure.", "Of course.", "Yes, certainly." / "I'm afraid I can't."
+
+      **L harfini okumak.** Could, should ve would'da l okunmaz.
+questions:
+  - id: q.a2.could.01
+    type: multiple_choice
+    prompt: "My grandmother ___ speak four languages when she was young."
+    options:
+      - "*could :: Geçmişteki genel yetenek: could."
+      - "can :: Can şimdiki zamandır; cümle geçmişi anlatıyor."
+      - "could to :: Could'dan sonra to gelmez."
+      - "is able to :: Şimdiki zamandır."
+    explanation: "Geçmişteki yetenek → could + yalın fiil."
+  - id: q.a2.could.02
+    type: multiple_choice
+    prompt: "(Bir yabancıya) ___ you tell me the time, please?"
+    options:
+      - "*Could :: Kibar rica: Could you...?"
+      - "Do :: \"Do you tell me\" rica anlamı vermez."
+      - "Are :: To be bu yapıda kullanılmaz."
+      - "Did :: Did geçmiş zaman sorusu yapar."
+    explanation: "Tanımadığımız kişilerden bir şey isterken could tercih edilir."
+  - id: q.a2.could.03
+    type: fill_blank
+    prompt: "It was very dark. We ___ see anything. (olumsuz)"
+    answers: ["couldn't", "could not"]
+    explanation: "Geçmişte yapamama: couldn't."
+  - id: q.a2.could.04
+    type: error_correction
+    prompt: "I can read when I was four."
+    answers: ["I could read when I was four."]
+    explanation: "\"When I was four\" geçmişi gösterir; can yerine could gerekir."
+  - id: q.a2.could.05
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede could geçmiş zaman anlamı TAŞIMAZ?"
+    options:
+      - "*Could I ask you a question? :: Şu anki bir izin isteği; could burada yalnızca kibarlık katar."
+      - "I could run fast when I was young. :: Geçmişteki yetenek."
+      - "She couldn't come to the party last night. :: Geçmişte yapamama."
+      - "We could see the sea from our old house. :: Geçmişteki durum."
+    explanation: "Could hem can'in geçmişi hem de kibar rica ve izin kalıbıdır."
+  - id: q.a2.could.06
+    type: dialogue_completion
+    context: "A: Could you help me with these bags?\nB: ___"
+    prompt: "En doğal cevap hangisi?"
+    options:
+      - "*Sure, no problem. :: Ricaya doğal ve nazik bir olumlu cevap."
+      - "Yes, I could. :: Dil bilgisi açısından mümkün, ancak ricaya cevap olarak doğal değildir."
+      - "Yes, I did. :: Did geçmiş zaman sorusunun cevabıdır."
+      - "No, I couldn't yesterday. :: Rica şu an için yapılıyor."
+    explanation: "Ricaya \"Sure / Of course / Certainly\" ya da \"I'm afraid I can't\" diye cevap verilir."
+  - id: q.a2.could.07
+    type: matching
+    prompt: "İfadeleri tonlarıyla eşleştirin."
+    pairs:
+      - ["Close the door.", "emir"]
+      - ["Can you close the door?", "gündelik rica"]
+      - ["Could you close the door, please?", "kibar rica"]
+    explanation: "Aynı istek, farklı kibarlık düzeyleriyle söylenebilir."
+  - id: q.a2.could.08
+    type: translation
+    prompt: "Dün gece uyuyamadım."
+    answers: ["I couldn't sleep last night.", "I could not sleep last night.", "Last night I couldn't sleep.", "I wasn't able to sleep last night."]
+    explanation: "Geçmişte yapamama: couldn't + yalın fiil."

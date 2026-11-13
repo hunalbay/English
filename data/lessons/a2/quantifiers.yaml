@@ -1,0 +1,119 @@
+id: gram.a2.quantifiers
+kind: grammar
+level: A2
+title_tr: "Miktar sözcükleri: much, many, a lot of, a few, a little"
+title_en: "Quantifiers: much / many / a lot of / a few / a little"
+objective_tr: Bu dersin sonunda sayılabilen ve sayılamayan isimlerle doğru miktar sözcüğünü seçebilecek, few ile a few ve little ile a little arasındaki anlam farkını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.some-any]
+next: [gram.a2.articles-the]
+vocabulary: [much, many, few, little, lot, enough]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Miktar sözcüğünü seçerken ilk soru şudur: İsim **sayılabilir mi, sayılamaz mı?**
+
+      Türkçede "çok" ve "az" her isimle kullanılır. İngilizcede ise sayılabilen ve sayılamayan isimler için ayrı sözcükler vardır.
+    table:
+      headers: ["Anlam", "Sayılabilen (çoğul)", "Sayılamayan", "İkisiyle de"]
+      rows:
+        - ["çok", "many friends", "much time", "a lot of / lots of"]
+        - ["birkaç / biraz", "a few friends", "a little time", "some"]
+        - ["çok az (yetersiz)", "few friends", "little time", "—"]
+        - ["ne kadar?", "How many...?", "How much...?", "—"]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Olumlu cümlelerde a lot of tercih edilir:** "I have **a lot of** friends." (many de mümkündür; much olumlu cümlede doğal değildir.)
+
+      **Much ve many çoğunlukla olumsuz ve soru cümlelerinde kullanılır:** "I don't have **much** money.", "Are there **many** students?"
+
+      **A few / a little olumludur** (az ama var, yeterli): "I have **a few** friends here." (Burada birkaç arkadaşım var.)
+
+      **Few / little olumsuzdur** (yetersiz, neredeyse yok): "I have **few** friends here." (Burada pek arkadaşım yok.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She has a lot of books.", tr: "Onun çok kitabı var."}
+      - {en: "We don't have much time.", tr: "Çok zamanımız yok."}
+      - {en: "How many people are coming?", tr: "Kaç kişi geliyor?"}
+      - {en: "How much does it cost?", tr: "Ne kadar tutuyor?"}
+      - {en: "I speak a little French.", tr: "Biraz Fransızca konuşurum."}
+      - {en: "There are a few apples in the fridge.", tr: "Buzdolabında birkaç elma var."}
+      - {en: "Few people know the truth.", tr: "Gerçeği çok az kişi biliyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I have much friends.", tr: "Çok arkadaşım var.", wrong: true, correction: "I have a lot of friends.", note_tr: "Friends sayılabilir; olumlu cümlede a lot of."}
+      - {en: "How many money do you need?", tr: "Ne kadar paraya ihtiyacın var?", wrong: true, correction: "How much money do you need?", note_tr: "Money sayılamaz."}
+      - {en: "I have a few time.", tr: "Biraz vaktim var.", wrong: true, correction: "I have a little time.", note_tr: "Time sayılamaz."}
+      - {en: "There are a lot people.", tr: "Çok insan var.", wrong: true, correction: "There are a lot of people.", note_tr: "İsimden önce a lot of."}
+      - {en: "She drinks many water.", tr: "Çok su içer.", wrong: true, correction: "She drinks a lot of water.", note_tr: "Water sayılamaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sayılamayan isimle many kullanmak.** many money, many information, many homework yanlıştır.
+
+      **Of'u unutmak.** "a lot people" değil, "a lot **of** people". Ancak isim yoksa of kullanılmaz: "I like it **a lot**."
+
+      **A few ile few'u aynı sanmak.** Baştaki "a" anlamı olumluya çevirir.
+questions:
+  - id: q.a2.quantifiers.01
+    type: multiple_choice
+    prompt: "How ___ sugar do you take in your tea?"
+    options:
+      - "*much :: Sugar sayılamayan bir isimdir: How much."
+      - "many :: Many sayılabilen çoğul isimlerle kullanılır."
+      - "few :: Few soru sözcüğü olarak kullanılmaz."
+      - "lot :: \"How lot\" diye bir yapı yoktur."
+    explanation: "Sayılamayan isim → How much."
+  - id: q.a2.quantifiers.02
+    type: multiple_choice
+    prompt: "There aren't ___ students in the class today."
+    options:
+      - "*many :: Students sayılabilen çoğul bir isimdir; olumsuz cümlede many."
+      - "much :: Much sayılamayan isimlerle kullanılır."
+      - "a little :: A little sayılamayan isimlerle kullanılır."
+      - "a lot :: İsimden önce of gerekir: a lot of."
+    explanation: "Sayılabilen çoğul isim + olumsuz cümle → many."
+  - id: q.a2.quantifiers.03
+    type: fill_blank
+    prompt: "I have a ___ of friends in Izmir."
+    answers: [lot]
+    explanation: "A lot of hem sayılabilen hem sayılamayan isimlerle kullanılır."
+  - id: q.a2.quantifiers.04
+    type: fill_blank
+    prompt: "Can I have a ___ milk in my coffee, please?"
+    answers: [little]
+    explanation: "Milk sayılamaz: a little (biraz)."
+  - id: q.a2.quantifiers.05
+    type: error_correction
+    prompt: "She doesn't have many money."
+    answers: ["She doesn't have much money.", "She doesn't have a lot of money.", "She does not have much money."]
+    explanation: "Money sayılamayan bir isimdir; much ya da a lot of kullanılır."
+  - id: q.a2.quantifiers.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle olumsuz bir duygu taşır (\"yetersiz\" anlamında)?"
+    options:
+      - "*I have little time to help you. :: Little (a olmadan) \"çok az, yetersiz\" demektir."
+      - "I have a little time to help you. :: A little \"biraz var, yeterli\" anlamı taşır."
+      - "I have some time to help you. :: Some tarafsızdır."
+      - "I have a lot of time to help you. :: Bol zaman olduğunu söyler."
+    explanation: "A little / a few olumlu; little / few olumsuz bir bakış bildirir."
+  - id: q.a2.quantifiers.07
+    type: matching
+    prompt: "İsimleri uygun miktar sözcüğüyle eşleştirin."
+    pairs:
+      - [books, "a few"]
+      - [water, "a little"]
+      - [people, "How many...?"]
+      - [money, "How much...?"]
+    explanation: "Sayılabilen çoğul isimler few / many; sayılamayan isimler little / much alır."
+  - id: q.a2.quantifiers.08
+    type: translation
+    prompt: "Çok zamanımız yok."
+    answers: ["We don't have much time.", "We do not have much time.", "We don't have a lot of time.", "We haven't got much time."]
+    explanation: "Time sayılamaz; olumsuz cümlede much kullanılır."

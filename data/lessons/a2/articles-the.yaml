@@ -1,0 +1,138 @@
+id: gram.a2.articles-the
+kind: grammar
+level: A2
+title_tr: "Tanımlıklar: a / an, the ve tanımlıksız kullanım"
+title_en: "Articles: a / an, the and zero article"
+objective_tr: Bu dersin sonunda bir isimden ilk kez mi yoksa bilinen bir şey olarak mı söz edildiğine göre a / an, the ya da tanımlıksız kullanım arasında seçim yapabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.articles-a-an, gram.a2.quantifiers]
+vocabulary: [the, a, an, sun, school, breakfast]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede tanımlık yoktur; bu yüzden **a / an** ile **the** arasındaki seçim Türkçe konuşanlar için İngilizcenin en zor konularından biridir.
+
+      Temel fikir şudur: **a / an** → dinleyen için **yeni**, herhangi biri. **the** → dinleyenin **hangisi olduğunu bildiği** şey.
+
+      "I saw **a** dog in the park. **The** dog was very big." (Parkta bir köpek gördüm. Köpek çok büyüktü.) İlk cümlede köpek yenidir; ikincide artık hangi köpek olduğunu biliyoruz.
+  - kind: usage
+    title_tr: "The ne zaman kullanılır?"
+    text_tr: |-
+      **Daha önce söz edilen şey:** "I bought a shirt. **The** shirt is blue."
+
+      **Bağlamdan belli olan şey:** "Can you close **the** door?" (odadaki kapı)
+
+      **Tek olan şeyler:** **the** sun, **the** moon, **the** world, **the** internet.
+
+      **En üstünlük ve sıra sayıları:** **the** best, **the** first.
+
+      **Müzik aletleri:** play **the** piano.
+
+      **Nehir, deniz, okyanus, sıradağ ve çoğul ülke adları:** **the** Nile, **the** Black Sea, **the** Alps, **the** United States.
+  - kind: exceptions
+    title_tr: Tanımlık kullanılmayan durumlar
+    text_tr: |-
+      **Genel anlamda çoğul ve sayılamayan isimler:** "**Dogs** are friendly." (genel olarak köpekler), "I love **music**."
+
+      **Öğünler:** have **breakfast**, **lunch**, **dinner**.
+
+      **Diller, dersler, sporlar:** speak **English**, study **history**, play **football**.
+
+      **Çoğu ülke, şehir ve kişi adı:** **Turkey**, **London**, **Ayşe**.
+
+      **Kalıplaşmış yer ifadeleri:** at **home**, at **work**, at **school**, in **bed**, go to **bed**, by **bus**.
+  - kind: comparison
+    title_tr: Genel mi, belirli mi?
+    table:
+      headers: ["Genel (tanımlıksız)", "Belirli (the)"]
+      rows:
+        - ["I like coffee.", "The coffee in this cafe is great."]
+        - ["Children need sleep.", "The children are in the garden."]
+        - ["Life is short.", "The life of Atatürk is interesting."]
+        - ["She goes to school by bus.", "The school is next to the bank."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "There is a cat in the garden. The cat is black.", tr: "Bahçede bir kedi var. Kedi siyah."}
+      - {en: "The sun rises in the east.", tr: "Güneş doğudan doğar."}
+      - {en: "I have breakfast at seven.", tr: "Kahvaltıyı yedide yaparım."}
+      - {en: "She plays the violin and plays tennis.", tr: "Keman çalar ve tenis oynar."}
+      - {en: "Can you pass the salt, please?", tr: "Tuzu uzatır mısın, lütfen?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I love the music.", tr: "Müziği severim.", wrong: true, correction: "I love music.", note_tr: "Genel anlamda tanımlık kullanılmaz."}
+      - {en: "She is at the home.", tr: "O evde.", wrong: true, correction: "She is at home.", note_tr: "Kalıp: at home."}
+      - {en: "Sun is very hot today.", tr: "Güneş bugün çok sıcak.", wrong: true, correction: "The sun is very hot today.", note_tr: "Tek olan şeylerle the."}
+      - {en: "I had a dinner at eight.", tr: "Akşam yemeğini sekizde yedim.", wrong: true, correction: "I had dinner at eight.", note_tr: "Öğünlerle tanımlık kullanılmaz."}
+      - {en: "He lives in the Turkey.", tr: "Türkiye'de yaşıyor.", wrong: true, correction: "He lives in Turkey.", note_tr: "Çoğu ülke adı tanımlık almaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tanımlığı tümüyle atlamak.** Türkçede olmadığı için "I bought car" demek yaygındır. Tekil sayılabilir isim tek başına kullanılamaz.
+
+      **Genel konuşurken the kullanmak.** "The life is beautiful" yerine "**Life** is beautiful".
+
+      **İlk kez söz edilen şeye the demek.** Dinleyen hangisi olduğunu bilmiyorsa a / an kullanın.
+questions:
+  - id: q.a2.articles-the.01
+    type: multiple_choice
+    prompt: "I bought a jacket and a hat. ___ jacket was expensive."
+    options:
+      - "*The :: Ceketten daha önce söz edildi; artık hangisi olduğu belli."
+      - "A :: A yeni, ilk kez söz edilen şeyler için kullanılır."
+      - "An :: An ünlü sesle başlayan sözcüklerden önce gelir ve yine belirsizlik bildirir."
+      - "(tanımlık yok) :: Tekil sayılabilir isim tanımlıksız kullanılamaz."
+    explanation: "İlk söz ediş → a / an; ikinci söz ediş → the."
+  - id: q.a2.articles-the.02
+    type: multiple_choice
+    prompt: "___ dogs are friendly animals."
+    options:
+      - "*(tanımlık yok) :: Genel olarak köpeklerden söz ediliyor; tanımlık kullanılmaz."
+      - "The :: The belirli köpekleri gösterir."
+      - "A :: A çoğul isimle kullanılmaz."
+      - "An :: An çoğul isimle kullanılmaz."
+    explanation: "Genel anlamda çoğul isim → tanımlıksız."
+  - id: q.a2.articles-the.03
+    type: multiple_choice
+    prompt: "We usually have ___ dinner at eight."
+    options:
+      - "*(tanımlık yok) :: Öğün adlarıyla tanımlık kullanılmaz."
+      - "the :: Öğün adları genel kullanımda the almaz."
+      - "a :: \"A dinner\" yalnızca özel bir yemek daveti için kullanılır."
+      - "an :: Dinner ünsüz sesle başlar ve burada tanımlık gerekmez."
+    explanation: "have breakfast / lunch / dinner."
+  - id: q.a2.articles-the.04
+    type: fill_blank
+    prompt: "___ moon is very bright tonight."
+    answers: [The]
+    explanation: "Tek olan şeylerle the kullanılır: the moon, the sun."
+  - id: q.a2.articles-the.05
+    type: error_correction
+    prompt: "She plays piano very well."
+    answers: ["She plays the piano very well."]
+    explanation: "Müzik aletleriyle the kullanılır: play the piano."
+  - id: q.a2.articles-the.06
+    type: error_correction
+    prompt: "I love the nature."
+    answers: ["I love nature."]
+    explanation: "Genel anlamda sayılamayan isim tanımlık almaz."
+  - id: q.a2.articles-the.07
+    type: paragraph_completion
+    difficulty: 3
+    context: "Yesterday I met ___ old friend in the street. We went to a cafe near the station. The cafe was full, so we sat outside."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*an :: Arkadaştan ilk kez söz ediliyor ve old ünlü sesle başlıyor."
+      - "the :: Dinleyen hangi arkadaş olduğunu bilmiyor."
+      - "a :: Old ünlü sesle başlar; an gerekir."
+      - "(tanımlık yok) :: Tekil sayılabilir isimden önce tanımlık gerekir."
+    explanation: "İlk kez söz edilen tekil isim: a / an. Sonraki cümlelerde bilinen şeyler için the."
+    lessons: [gram.a1.articles-a-an]
+  - id: q.a2.articles-the.08
+    type: translation
+    prompt: "Müziği severim."
+    answers: ["I like music.", "I love music."]
+    explanation: "Genel anlamda music tanımlık almaz."

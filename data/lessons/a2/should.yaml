@@ -1,0 +1,127 @@
+id: gram.a2.should
+kind: grammar
+level: A2
+title_tr: "Tavsiye: should, shouldn't"
+title_en: "Should / shouldn't"
+objective_tr: Bu dersin sonunda should ve shouldn't ile tavsiye verebilecek, görüş bildirebilecek ve tavsiye isteyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.must-have-to]
+next: [gram.a2.could]
+vocabulary: [should, advice, doctor, rest, think]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Should**, bir şeyin **iyi ya da doğru olduğunu** düşündüğümüzde kullanılır; tavsiye ve görüş bildirir: "You **should** see a doctor." (Bir doktora görünmelisin / görünsen iyi olur.)
+
+      Must kadar güçlü değildir: must zorunluluk, should **öneri**dir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + should + yalın fiil", "You should rest."]
+        - ["Olumsuz", "özne + shouldn't + yalın fiil", "You shouldn't worry."]
+        - ["Soru", "Should + özne + yalın fiil?", "Should I call her?"]
+        - ["Görüş", "I think / I don't think + özne + should", "I don't think you should go."]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Tavsiye vermek:** "You should drink more water."
+
+      **Tavsiye istemek:** "What should I do?", "Should I take the job?"
+
+      **Görüş bildirmek:** "I think the government should build more schools."
+
+      **Olumsuz görüş:** İngilizcede olumsuzluk genellikle **think**'e eklenir: "I **don't think** you **should** go." ("I think you shouldn't go" daha az doğaldır.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You should go to bed early.", tr: "Erken yatmalısın."}
+      - {en: "You shouldn't eat so much sugar.", tr: "Bu kadar çok şeker yememelisin."}
+      - {en: "Should I wear a tie?", tr: "Kravat takmalı mıyım?"}
+      - {en: "I think you should apologize.", tr: "Bence özür dilemelisin."}
+      - {en: "What should we do now?", tr: "Şimdi ne yapmalıyız?"}
+  - kind: comparison
+    title_tr: "Should, must, have to"
+    table:
+      headers: ["Yapı", "Güç", "Örnek"]
+      rows:
+        - ["should", "tavsiye: iyi olur", "You should wear a coat. It's cold."]
+        - ["must", "güçlü zorunluluk", "You must wear a helmet."]
+        - ["have to", "kural, dış koşul", "You have to wear a uniform at this school."]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You should to study more.", tr: "Daha çok çalışmalısın.", wrong: true, correction: "You should study more.", note_tr: "Should'dan sonra to gelmez."}
+      - {en: "He shoulds rest.", tr: "Dinlenmeli.", wrong: true, correction: "He should rest.", note_tr: "Should -s almaz."}
+      - {en: "Do I should call him?", tr: "Onu aramalı mıyım?", wrong: true, correction: "Should I call him?", note_tr: "Soru should başa alınarak yapılır."}
+      - {en: "You don't should smoke.", tr: "Sigara içmemelisin.", wrong: true, correction: "You shouldn't smoke.", note_tr: "Olumsuzu shouldn't'tır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To eklemek.** Diğer kip fiilleri gibi should'dan sonra da fiil yalın gelir.
+
+      **L harfini okumak.** Should'da l okunmaz: "şud".
+
+      **Tavsiye için must kullanmak.** Bir arkadaşa "You must see a doctor" demek çok baskın gelebilir; "You **should** see a doctor" daha uygundur.
+questions:
+  - id: q.a2.should.01
+    type: multiple_choice
+    prompt: "You look tired. You ___ go to bed."
+    options:
+      - "*should :: Tavsiye: should + yalın fiil."
+      - "should to :: Should'dan sonra to gelmez."
+      - "shoulds :: Should -s almaz."
+      - "shouldn't :: Anlam ters olur (yatmamalısın)."
+    explanation: "Tavsiye → should + yalın fiil."
+  - id: q.a2.should.02
+    type: multiple_choice
+    prompt: "You ___ drive so fast. It's dangerous."
+    options:
+      - "*shouldn't :: Olumsuz tavsiye: shouldn't."
+      - "should :: Anlam ters olur."
+      - "don't should :: Should ile do kullanılmaz."
+      - "not should :: Not, should'dan sonra gelir: should not."
+    explanation: "Olumsuz tavsiye → shouldn't + yalın fiil."
+  - id: q.a2.should.03
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [What, should, I, do, "?"]
+    explanation: "Sıra: soru sözcüğü + should + özne + yalın fiil?"
+  - id: q.a2.should.04
+    type: error_correction
+    prompt: "She should to eat more vegetables."
+    answers: ["She should eat more vegetables."]
+    explanation: "Should'dan sonra fiil yalın gelir."
+  - id: q.a2.should.05
+    type: nuance
+    difficulty: 3
+    prompt: "Bir arkadaşınıza nazikçe tavsiye vermek istiyorsunuz. Hangisi en uygun?"
+    options:
+      - "*I think you should talk to her. :: Should + \"I think\" yumuşak bir tavsiye bildirir."
+      - "You must talk to her. :: Must güçlü bir zorunluluk bildirir; emir gibi algılanabilir."
+      - "You have to talk to her. :: Dış bir zorunluluk bildirir; tavsiye tonu taşımaz."
+      - "Talk to her. :: Emir kipi doğrudan ve sert kalabilir."
+    explanation: "Should tavsiye bildirir; \"I think\" ile daha da yumuşar."
+  - id: q.a2.should.06
+    type: dialogue_completion
+    context: "A: I have a terrible headache.\nB: ___"
+    prompt: "B'nin en uygun cevabı hangisi?"
+    options:
+      - "*You should take a painkiller. :: Baş ağrısı için uygun bir tavsiye."
+      - "You shouldn't take a painkiller. :: Tavsiye bağlama uymuyor."
+      - "You should to rest. :: Should'dan sonra to gelmez."
+      - "Should you rest? :: Soru biçimi tavsiye vermez."
+    explanation: "Bir soruna karşılık tavsiye: You should + yalın fiil."
+  - id: q.a2.should.07
+    type: sentence_building
+    prompt: "I / not think / you / should / buy / it"
+    answers: ["I don't think you should buy it.", "I do not think you should buy it."]
+    explanation: "Olumsuz görüşte olumsuzluk think'e eklenir."
+  - id: q.a2.should.08
+    type: translation
+    prompt: "Bir doktora görünmelisin."
+    answers: ["You should see a doctor.", "You should go to a doctor.", "You should go to the doctor.", "You should see the doctor."]
+    explanation: "Tavsiye: should + yalın fiil."

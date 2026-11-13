@@ -1,0 +1,127 @@
+id: gram.a2.verb-patterns
+kind: grammar
+level: A2
+title_tr: "Fiil kalıpları: to + fiil mi, fiil-ing mi?"
+title_en: "Verb patterns: to-infinitive or -ing"
+objective_tr: Bu dersin sonunda want, decide, hope gibi fiillerden sonra to + fiil; enjoy, finish, mind gibi fiillerden sonra fiil-ing kullanmayı ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.like-ing]
+next: [gram.a2.relative-clauses]
+vocabulary: [want, decide, hope, enjoy, finish, mind, stop]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İki fiil art arda geldiğinde ikinci fiilin biçimini **birinci fiil** belirler. Bazı fiillerden sonra **to + yalın fiil**, bazılarından sonra **fiil-ing** gelir.
+
+      Bunun mantıksal bir kuralı yoktur; fiiller kalıplarıyla birlikte öğrenilir. Sözlükte bir fiili çalışırken hangi kalıbı aldığına da bakın.
+  - kind: formula
+    title_tr: En sık kullanılan fiiller
+    table:
+      headers: ["to + fiil alanlar", "fiil-ing alanlar", "İkisini de alanlar (anlam aynı)"]
+      rows:
+        - ["want, would like", "enjoy", "like, love, hate"]
+        - ["decide, plan", "finish", "start, begin"]
+        - ["hope, expect", "mind (don't mind)", "prefer"]
+        - ["need", "avoid", "continue"]
+        - ["learn, promise", "keep (sürdürmek)", ""]
+        - ["agree, refuse, forget", "suggest, practise", ""]
+  - kind: usage
+    title_tr: Diğer kurallar
+    text_tr: |-
+      **Edattan sonra her zaman -ing gelir:** "I'm good **at cooking**.", "Thank you **for helping**.", "She is interested **in learning** Spanish."
+
+      **Amaç bildirmek için to + fiil:** "I went to the shop **to buy** bread." (ekmek almak için)
+
+      **Sıfattan sonra to + fiil:** "It is easy **to learn**.", "Nice **to meet** you."
+
+      **Stop iki kalıpla farklı anlam taşır:** "He **stopped smoking**." (sigarayı bıraktı) / "He **stopped to smoke**." (sigara içmek için durdu)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I want to learn Spanish.", tr: "İspanyolca öğrenmek istiyorum."}
+      - {en: "She decided to change her job.", tr: "İşini değiştirmeye karar verdi."}
+      - {en: "We enjoy walking in the park.", tr: "Parkta yürümekten keyif alırız."}
+      - {en: "Have you finished reading the book?", tr: "Kitabı okumayı bitirdin mi?"}
+      - {en: "I don't mind waiting.", tr: "Beklemek benim için sorun değil."}
+      - {en: "He is good at solving problems.", tr: "Sorun çözmekte iyidir."}
+      - {en: "It started to rain. / It started raining.", tr: "Yağmur yağmaya başladı.", note_tr: "İki kalıp da doğru."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I want go home.", tr: "Eve gitmek istiyorum.", wrong: true, correction: "I want to go home.", note_tr: "Want + to + fiil."}
+      - {en: "She enjoys to read.", tr: "Okumaktan keyif alır.", wrong: true, correction: "She enjoys reading.", note_tr: "Enjoy + -ing."}
+      - {en: "He decided going abroad.", tr: "Yurt dışına gitmeye karar verdi.", wrong: true, correction: "He decided to go abroad.", note_tr: "Decide + to + fiil."}
+      - {en: "I'm interested in learn English.", tr: "İngilizce öğrenmekle ilgileniyorum.", wrong: true, correction: "I'm interested in learning English.", note_tr: "Edat + -ing."}
+      - {en: "I went there for buy a ticket.", tr: "Oraya bilet almak için gittim.", wrong: true, correction: "I went there to buy a ticket.", note_tr: "Amaç: to + fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Want'tan sonra to'yu atlamak.** "I want eat" yanlıştır.
+
+      **Amaç bildirirken "for + fiil" demek.** Türkçedeki "için" her zaman for değildir: "to buy", "for buy" değil.
+
+      **Edattan sonra yalın fiil kullanmak.** "before go", "after eat" yerine "before **going**", "after **eating**".
+questions:
+  - id: q.a2.verb-patterns.01
+    type: multiple_choice
+    prompt: "I want ___ a doctor."
+    options:
+      - "*to be :: Want'tan sonra to + yalın fiil gelir."
+      - "be :: Want'tan sonra to gerekir."
+      - "being :: Want -ing almaz."
+      - "to being :: To ile -ing birlikte kullanılmaz."
+    explanation: "want + to + fiil."
+  - id: q.a2.verb-patterns.02
+    type: multiple_choice
+    prompt: "She enjoys ___ films in English."
+    options:
+      - "*watching :: Enjoy'dan sonra her zaman -ing gelir."
+      - "to watch :: Enjoy to + fiil almaz."
+      - "watch :: Enjoy'dan sonra yalın fiil gelmez."
+      - "watches :: -s çekim ekidir; ikinci fiil çekimlenmez."
+    explanation: "enjoy + fiil-ing."
+  - id: q.a2.verb-patterns.03
+    type: word_formation
+    prompt: "We decided ___ (stay) at home."
+    answers: ["to stay"]
+    explanation: "decide + to + fiil."
+  - id: q.a2.verb-patterns.04
+    type: word_formation
+    prompt: "Have you finished ___ (write) the report?"
+    answers: [writing]
+    explanation: "finish + fiil-ing; sessiz -e düşer."
+  - id: q.a2.verb-patterns.05
+    type: word_formation
+    prompt: "She is very good at ___ (cook)."
+    answers: [cooking]
+    explanation: "Edattan (at) sonra fiil -ing alır."
+  - id: q.a2.verb-patterns.06
+    type: error_correction
+    prompt: "I went to the supermarket for buy some milk."
+    answers: ["I went to the supermarket to buy some milk."]
+    explanation: "Amaç bildirmek için to + yalın fiil kullanılır."
+  - id: q.a2.verb-patterns.07
+    type: nuance
+    difficulty: 3
+    prompt: "\"He stopped to talk to his neighbor.\" cümlesi ne anlama gelir?"
+    options:
+      - "*Komşusuyla konuşmak için durdu. :: Stop + to + fiil: bir şey yapmak için durmak."
+      - "Komşusuyla konuşmayı bıraktı. :: Bunun için \"stopped talking\" denirdi."
+      - "Komşusuyla hiç konuşmadı. :: Böyle bir anlam yok."
+      - "Komşusu onu durdurdu. :: Cümlenin öznesi \"he\"dir ve duran odur."
+    explanation: "stop + -ing = bir eylemi bırakmak; stop + to = başka bir şey yapmak için durmak."
+  - id: q.a2.verb-patterns.08
+    type: matching
+    prompt: "Fiilleri aldıkları kalıpla eşleştirin."
+    pairs:
+      - [hope, "to + fiil (hope to see)"]
+      - [avoid, "fiil-ing (avoid eating)"]
+      - [start, "ikisi de (start to rain / raining)"]
+    explanation: "Her fiilin kalıbı ayrı öğrenilir."
+  - id: q.a2.verb-patterns.09
+    type: translation
+    prompt: "Beklemek benim için sorun değil."
+    answers: ["I don't mind waiting.", "I do not mind waiting."]
+    explanation: "don't mind + fiil-ing."

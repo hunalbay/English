@@ -119,3 +119,34 @@ units:
       - gram.a2.superlatives
       - gram.a2.adverbs-of-manner
       - gram.a2.too-enough
+
+  - id: a2.u04
+    level: A2
+    title_tr: Zorunluluk, tavsiye ve olasılık
+    title_en: Obligation, advice and possibility
+    description_tr: Kip fiilleriyle zorunluluk, yasak, tavsiye, kibar rica ve olasılık bildirin.
+    lessons:
+      - gram.a2.must-have-to
+      - gram.a2.should
+      - gram.a2.could
+      - gram.a2.may-might
+
+  - id: a2.u05
+    level: A2
+    title_tr: Miktar ve tanımlıklar
+    title_en: Quantity and articles
+    description_tr: Miktar sözcüklerini ve a / an, the ile tanımlıksız kullanımı doğru seçin.
+    lessons:
+      - gram.a2.quantifiers
+      - gram.a2.articles-the
+
+  - id: a2.u06
+    level: A2
+    title_tr: Cümleleri genişletmek
+    title_en: Building longer sentences
+    description_tr: Koşul bildirin, fiilleri art arda kullanın, isimleri cümleciklerle tanımlayın.
+    lessons:
+      - gram.a2.first-conditional
+      - gram.a2.verb-patterns
+      - gram.a2.relative-clauses
+      - gram.a2.possessive-pronouns

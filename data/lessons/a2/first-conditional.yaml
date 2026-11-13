@@ -1,0 +1,117 @@
+id: gram.a2.first-conditional
+kind: grammar
+level: A2
+title_tr: "Gerçek koşul cümleleri: if + present, will"
+title_en: First conditional
+objective_tr: Bu dersin sonunda gelecekte gerçekleşmesi mümkün koşulları ve sonuçlarını if + Present Simple, will + fiil yapısıyla anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.will, gram.a1.present-simple]
+next: [gram.a2.verb-patterns]
+vocabulary: [if, unless, will, rain, late]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **First conditional**, gelecekte **gerçekleşmesi mümkün** bir koşulu ve sonucunu anlatır: "If it **rains**, we **will stay** at home." (Yağmur yağarsa evde kalacağız.)
+
+      Türkçedeki **-se / -sa** ekine karşılık gelir. En önemli kural: **if'li bölümde will kullanılmaz**; gelecekten söz edilse bile **Present Simple** gelir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Koşul bölümü", "Sonuç bölümü"]
+      rows:
+        - ["If + Present Simple,", "will / won't + yalın fiil"]
+        - ["If you study,", "you will pass."]
+        - ["If she doesn't hurry,", "she will miss the bus."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Bölümlerin sırası değişebilir.** If başta ise araya virgül konur; sonda ise konmaz: "**If** I see him, I'll tell him." = "I'll tell him **if** I see him."
+
+      **Sonuç bölümünde will yerine can, may, might ya da emir kipi gelebilir:** "If you finish early, you **can** go home.", "If you see Tom, **tell** him to call me."
+
+      **Unless = if ... not:** "**Unless** you hurry, you'll be late." = "If you **don't** hurry, you'll be late."
+
+      **When ile farkı:** if olasılık, when kesinlik bildirir: "**When** I get home, I'll call you." (eve geleceğim kesin)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "If I have time, I will help you.", tr: "Vaktim olursa sana yardım edeceğim."}
+      - {en: "If you don't eat, you will be hungry.", tr: "Yemezsen acıkacaksın."}
+      - {en: "We will go to the beach if the weather is nice.", tr: "Hava güzel olursa plaja gideceğiz."}
+      - {en: "What will you do if you miss the train?", tr: "Treni kaçırırsan ne yapacaksın?"}
+      - {en: "Unless it rains, we will have a picnic.", tr: "Yağmur yağmazsa piknik yapacağız."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "If it will rain, I will stay at home.", tr: "Yağmur yağarsa evde kalacağım.", wrong: true, correction: "If it rains, I will stay at home.", note_tr: "If'ten sonra will gelmez."}
+      - {en: "If she come, I will be happy.", tr: "Gelirse mutlu olurum.", wrong: true, correction: "If she comes, I will be happy.", note_tr: "She ile fiil -s alır."}
+      - {en: "I call you if I will have time.", tr: "Vaktim olursa seni ararım.", wrong: true, correction: "I will call you if I have time.", note_tr: "Will sonuç bölümündedir."}
+      - {en: "Unless you don't study, you will fail.", tr: "Çalışmazsan kalırsın.", wrong: true, correction: "Unless you study, you will fail.", note_tr: "Unless zaten olumsuzdur."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **If'ten sonra will kullanmak.** En yaygın hatadır; Türkçedeki "yağarsa" içinde gelecek anlamı olsa da İngilizcede Present Simple kullanılır.
+
+      **Unless ile olumsuz fiil kullanmak.** Unless zaten "if not" demektir.
+
+      **Virgülü unutmak.** If cümlenin başındaysa iki bölümün arasına virgül konur.
+questions:
+  - id: q.a2.first-conditional.01
+    type: multiple_choice
+    prompt: "If it ___ tomorrow, we will cancel the picnic."
+    options:
+      - "*rains :: If'li bölümde Present Simple kullanılır."
+      - "will rain :: If'ten sonra will gelmez."
+      - "rained :: Past Simple gerçek dışı koşullar içindir."
+      - "is going to rain :: If'li bölümde gelecek zaman yapısı kullanılmaz."
+    explanation: "If + Present Simple, will + yalın fiil."
+  - id: q.a2.first-conditional.02
+    type: multiple_choice
+    prompt: "If you study hard, you ___ the exam."
+    options:
+      - "*will pass :: Sonuç bölümünde will + yalın fiil."
+      - "pass :: Sonuç gelecekle ilgili bir tahmindir; will gerekir."
+      - "passed :: Past Simple geçmişi anlatır."
+      - "will to pass :: Will'den sonra to gelmez."
+    explanation: "Sonuç bölümü: will + yalın fiil."
+  - id: q.a2.first-conditional.03
+    type: word_formation
+    prompt: "If she ___ (not / hurry), she will miss the train."
+    answers: ["doesn't hurry", "does not hurry"]
+    explanation: "If'li bölüm Present Simple; she ile olumsuz: doesn't + yalın fiil."
+  - id: q.a2.first-conditional.04
+    type: fill_blank
+    prompt: "___ you hurry, you will be late. (acele etmezsen)"
+    answers: [Unless]
+    explanation: "Unless = if ... not."
+  - id: q.a2.first-conditional.05
+    type: error_correction
+    prompt: "If I will see him, I will give him your message."
+    answers: ["If I see him, I will give him your message.", "If I see him, I'll give him your message."]
+    explanation: "If'li bölümde will kullanılmaz."
+  - id: q.a2.first-conditional.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede konuşan, olayın gerçekleşeceğinden emindir?"
+    options:
+      - "*When I finish work, I'll call you. :: When kesinlik bildirir: iş bitecek."
+      - "If I finish work early, I'll call you. :: If olasılık bildirir: erken bitmeyebilir."
+      - "Unless I finish work, I won't call you. :: Koşula bağlı."
+      - "I might call you after work. :: Might belirsizlik bildirir."
+    explanation: "If = eğer (belki); when = -ince (kesin)."
+  - id: q.a2.first-conditional.07
+    type: sentence_completion
+    prompt: "If you don't wear a coat, ___"
+    options:
+      - "*you will catch a cold. :: Koşulun olası sonucu: will + yalın fiil."
+      - "you caught a cold. :: Past Simple geçmişi anlatır."
+      - "you will to catch a cold. :: Will'den sonra to gelmez."
+      - "if you are cold. :: Sonuç bölümü ikinci bir if ile başlamaz."
+    explanation: "Koşul + sonuç: If + Present Simple, will + yalın fiil."
+  - id: q.a2.first-conditional.08
+    type: translation
+    prompt: "Vaktim olursa seni ararım."
+    answers: ["If I have time, I will call you.", "If I have time, I'll call you.", "I will call you if I have time.", "I'll call you if I have time."]
+    explanation: "If + Present Simple, will + yalın fiil. Bölümlerin sırası değişebilir."

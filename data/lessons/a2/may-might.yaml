@@ -1,0 +1,130 @@
+id: gram.a2.may-might
+kind: grammar
+level: A2
+title_tr: "Olasılık: may, might"
+title_en: "May / might"
+objective_tr: Bu dersin sonunda may ve might ile emin olmadığınız olasılıkları anlatabilecek, bu yapıları will ve maybe ile karşılaştırabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.will, gram.a2.could]
+vocabulary: [may, maybe, perhaps, probably, possible]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **May** ve **might**, bir şeyin **olabileceğini ama emin olmadığımızı** bildirir; Türkçedeki **-ebilir / -abilir** (olasılık anlamında) ve "belki" sözcüğüne karşılık gelir: "It **might** rain tomorrow." (Yarın yağmur yağabilir.)
+
+      İkisi günlük dilde neredeyse aynı anlamdadır; **might** biraz daha zayıf bir olasılık bildirir ve konuşmada daha yaygındır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + may / might + yalın fiil", "I might be late."]
+        - ["Olumsuz", "özne + may not / might not + yalın fiil", "She might not come."]
+        - ["İzin (resmî)", "May I + yalın fiil?", "May I come in?"]
+  - kind: comparison
+    title_tr: Kesinlik basamakları
+    table:
+      headers: ["Yapı", "Ne kadar emin?", "Örnek"]
+      rows:
+        - ["will", "emin (%100)", "She will come."]
+        - ["will probably", "büyük olasılıkla", "She will probably come."]
+        - ["may / might", "belki (yaklaşık %50)", "She might come."]
+        - ["probably won't", "büyük olasılıkla hayır", "She probably won't come."]
+        - ["won't", "emin: hayır", "She won't come."]
+  - kind: usage
+    title_tr: "Maybe ile may be"
+    text_tr: |-
+      **Maybe** (tek sözcük) bir zarftır ve cümlenin başına gelir: "**Maybe** she is at home."
+
+      **May be** (iki sözcük) kip fiili + be'dir: "She **may be** at home."
+
+      İkisi aynı anlama gelir; cümledeki yerleri farklıdır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I might go to the cinema tonight.", tr: "Bu akşam sinemaya gidebilirim."}
+      - {en: "Take an umbrella. It may rain.", tr: "Şemsiye al. Yağmur yağabilir."}
+      - {en: "He might not know the answer.", tr: "Cevabı bilmiyor olabilir."}
+      - {en: "We may be a little late.", tr: "Biraz gecikebiliriz."}
+      - {en: "May I ask a question?", tr: "Bir soru sorabilir miyim?", note_tr: "Resmî izin isteği."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "It might to rain.", tr: "Yağmur yağabilir.", wrong: true, correction: "It might rain.", note_tr: "Might'tan sonra to gelmez."}
+      - {en: "She mights come.", tr: "Gelebilir.", wrong: true, correction: "She might come.", note_tr: "Might -s almaz."}
+      - {en: "Maybe she might come.", tr: "Belki gelir.", wrong: true, correction: "She might come.", note_tr: "Maybe ve might birlikte gereksizdir."}
+      - {en: "He maybe is at home.", tr: "Belki evdedir.", wrong: true, correction: "Maybe he is at home.", note_tr: "Maybe cümlenin başına gelir."}
+      - {en: "I mightn't to go.", tr: "Gitmeyebilirim.", wrong: true, correction: "I might not go.", note_tr: "Olumsuzu might not'tır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Emin olmadığınız şeyler için will kullanmak.** Karar vermediyseniz "I will go" yerine "I **might** go" deyin.
+
+      **Might ile soru kurmak.** Olasılık sorarken genellikle "Do you think it will...?" kullanılır; "Might it rain?" doğal değildir.
+
+      **May not'u kısaltmak.** "mayn't" kullanılmaz; "may not" yazılır.
+questions:
+  - id: q.a2.may-might.01
+    type: multiple_choice
+    prompt: "I'm not sure, but I ___ visit my parents this weekend."
+    options:
+      - "*might :: \"I'm not sure\" belirsizlik bildirir: might."
+      - "will :: Will kesinlik bildirir; konuşan emin değil."
+      - "might to :: Might'tan sonra to gelmez."
+      - "am :: \"I am visit\" yanlış bir yapıdır."
+    explanation: "Emin olunmayan olasılık → might / may + yalın fiil."
+  - id: q.a2.may-might.02
+    type: multiple_choice
+    prompt: "(Resmî bir ortamda) ___ I come in?"
+    options:
+      - "*May :: Resmî izin isteği: May I...?"
+      - "Might to :: Böyle bir yapı yoktur."
+      - "Do :: \"Do I come in?\" izin istemez."
+      - "Will :: \"Will I come in?\" izin istemez."
+    explanation: "May I...? kibar ve resmî bir izin isteğidir."
+  - id: q.a2.may-might.03
+    type: fill_blank
+    prompt: "She is ill, so she might ___ come to work tomorrow. (olumsuz)"
+    answers: [not]
+    explanation: "Olumsuzu might not + yalın fiil."
+  - id: q.a2.may-might.04
+    type: error_correction
+    prompt: "He maybe is in the garden."
+    answers: ["Maybe he is in the garden.", "He may be in the garden.", "He might be in the garden."]
+    explanation: "Maybe (tek sözcük) cümlenin başına gelir; ya da kip fiili olarak may be / might be kullanılır."
+  - id: q.a2.may-might.05
+    type: matching
+    prompt: "Cümleleri kesinlik dereceleriyle eşleştirin."
+    pairs:
+      - ["She will pass the exam.", "eminim"]
+      - ["She will probably pass the exam.", "büyük olasılıkla"]
+      - ["She might pass the exam.", "belki"]
+      - ["She won't pass the exam.", "eminim: hayır"]
+    explanation: "Kip fiili ve zarf seçimi konuşanın ne kadar emin olduğunu gösterir."
+    lessons: [gram.a2.will]
+  - id: q.a2.may-might.06
+    type: nuance
+    difficulty: 3
+    prompt: "\"I might not go to the party.\" cümlesi ne anlama gelir?"
+    options:
+      - "*Partiye gitmeyebilirim; henüz karar vermedim. :: Might not olasılık bildirir, kesinlik değil."
+      - "Partiye kesinlikle gitmeyeceğim. :: Bunun için \"I won't go\" denirdi."
+      - "Partiye gitmeme izin yok. :: Yasak için mustn't ya da can't kullanılır."
+      - "Partiye gitmek zorunda değilim. :: Bunun için \"I don't have to go\" denirdi."
+    explanation: "Might not = olmayabilir. Won't = olmayacak."
+  - id: q.a2.may-might.07
+    type: word_in_context
+    prompt: "___ we can meet tomorrow. I'll check my diary."
+    options:
+      - "*Maybe :: Maybe cümlenin başında \"belki\" anlamında kullanılır."
+      - "May :: May bir kip fiilidir ve özneden sonra gelir."
+      - "Might :: Might bir kip fiilidir ve özneden sonra gelir."
+      - "Possible :: Possible bir sıfattır; tek başına cümle başında böyle kullanılmaz."
+    explanation: "Maybe + tam cümle."
+  - id: q.a2.may-might.08
+    type: translation
+    prompt: "Yarın yağmur yağabilir."
+    answers: ["It might rain tomorrow.", "It may rain tomorrow.", "Tomorrow it might rain.", "Maybe it will rain tomorrow."]
+    explanation: "Olasılık: might / may + yalın fiil."

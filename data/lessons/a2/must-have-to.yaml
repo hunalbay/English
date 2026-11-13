@@ -1,0 +1,119 @@
+id: gram.a2.must-have-to
+kind: grammar
+level: A2
+title_tr: "Zorunluluk: must, have to, mustn't, don't have to"
+title_en: "Must / have to"
+objective_tr: Bu dersin sonunda must ve have to ile zorunluluk, mustn't ile yasak, don't have to ile gereksizlik bildirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.can-cant, gram.a1.have-got]
+next: [gram.a2.should]
+vocabulary: [must, have, rule, wear, necessary]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Must** ve **have to** ikisi de zorunluluk bildirir; Türkçedeki **-meli / -malı** ve **zorunda olmak** ifadelerine karşılık gelir.
+
+      Olumlu cümlede anlamları çok yakındır. Asıl fark **olumsuzda** ortaya çıkar ve çok önemlidir: **mustn't** = yasak; **don't have to** = gerek yok.
+  - kind: comparison
+    title_tr: Dört yapının anlamı
+    table:
+      headers: ["Yapı", "Anlam", "Örnek", "Türkçe"]
+      rows:
+        - ["must", "zorunluluk (konuşana göre)", "I must call my mother.", "Annemi aramalıyım."]
+        - ["have to", "zorunluluk (kural, dış koşul)", "I have to wear a uniform.", "Üniforma giymek zorundayım."]
+        - ["mustn't", "yasak", "You mustn't smoke here.", "Burada sigara içmemelisin / içmek yasak."]
+        - ["don't have to", "gerek yok, serbestsin", "You don't have to come.", "Gelmek zorunda değilsin."]
+  - kind: formula
+    title_tr: Cümle yapısı
+    text_tr: |-
+      **Must** bir kip fiilidir: her özneyle aynıdır, ardından yalın fiil gelir, do ile soru yapılmaz. Geçmiş zamanı yoktur.
+
+      **Have to** sıradan bir fiil gibi çekimlenir: he **has to**, **Do** you **have to**...?, I **don't have to**. Geçmişi **had to**, geleceği **will have to**.
+    table:
+      headers: ["", "must", "have to"]
+      rows:
+        - ["Olumlu", "She must go.", "She has to go."]
+        - ["Soru", "Must she go? (seyrek)", "Does she have to go?"]
+        - ["Geçmiş", "—", "She had to go."]
+        - ["Gelecek", "—", "She will have to go."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You must wear a seat belt.", tr: "Emniyet kemeri takmalısın."}
+      - {en: "I have to get up at six every day.", tr: "Her gün altıda kalkmak zorundayım."}
+      - {en: "You mustn't use your phone in the exam.", tr: "Sınavda telefonunu kullanmamalısın."}
+      - {en: "We don't have to work on Saturdays.", tr: "Cumartesileri çalışmak zorunda değiliz."}
+      - {en: "Do I have to pay now?", tr: "Şimdi ödemek zorunda mıyım?"}
+      - {en: "I had to wait for an hour.", tr: "Bir saat beklemek zorunda kaldım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You don't have to smoke here. It's forbidden.", tr: "Burada sigara içmemelisin. Yasak.", wrong: true, correction: "You mustn't smoke here. It's forbidden.", note_tr: "Yasak için mustn't."}
+      - {en: "She must to study.", tr: "Ders çalışmalı.", wrong: true, correction: "She must study.", note_tr: "Must'tan sonra to gelmez."}
+      - {en: "He have to go.", tr: "Gitmek zorunda.", wrong: true, correction: "He has to go.", note_tr: "He ile has to."}
+      - {en: "I musted work yesterday.", tr: "Dün çalışmak zorundaydım.", wrong: true, correction: "I had to work yesterday.", note_tr: "Must'ın geçmişi had to'dur."}
+      - {en: "Do you must leave?", tr: "Gitmek zorunda mısın?", wrong: true, correction: "Do you have to leave?", note_tr: "Soruda genellikle have to."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Mustn't ile don't have to'yu karıştırmak.** En kritik hatadır. "You mustn't come" = gelme (yasak). "You don't have to come" = gelmesen de olur.
+
+      **Must'a to eklemek.** Must + yalın fiil; ama have **to** + yalın fiil.
+
+      **Geçmişte must kullanmak.** Geçmiş zorunluluk her zaman **had to** ile söylenir.
+questions:
+  - id: q.a2.must.01
+    type: multiple_choice
+    prompt: "You ___ park here. It is not allowed."
+    options:
+      - "*mustn't :: Yasak bildirir: mustn't."
+      - "don't have to :: Bu \"gerek yok\" demektir; yasak anlamı vermez."
+      - "must :: Anlam ters olur (park etmelisin)."
+      - "have to :: Anlam ters olur (park etmek zorundasın)."
+    explanation: "Mustn't = yasak. Don't have to = zorunlu değil."
+  - id: q.a2.must.02
+    type: multiple_choice
+    prompt: "Tomorrow is Sunday, so I ___ get up early."
+    options:
+      - "*don't have to :: Zorunluluk yok: erken kalkmam gerekmiyor."
+      - "mustn't :: Bu, erken kalkmanın yasak olduğunu söyler."
+      - "must :: Pazar günü zorunluluk olmadığı belirtiliyor."
+      - "have to :: Cümle zorunluluk olmadığını anlatıyor."
+    explanation: "Gereksizlik → don't have to."
+  - id: q.a2.must.03
+    type: fill_blank
+    prompt: "She ___ to wear a uniform at work. (zorunluluk)"
+    answers: [has]
+    explanation: "She ile has to kullanılır."
+  - id: q.a2.must.04
+    type: fill_blank
+    prompt: "I ___ to work late yesterday. (geçmiş zorunluluk)"
+    answers: [had]
+    explanation: "Geçmişteki zorunluluk had to ile söylenir."
+  - id: q.a2.must.05
+    type: error_correction
+    prompt: "You must to see this film."
+    answers: ["You must see this film."]
+    explanation: "Must'tan sonra to kullanılmaz."
+  - id: q.a2.must.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle \"İstersen gelme, sorun değil\" anlamına gelir?"
+    options:
+      - "*You don't have to come. :: Zorunluluk yok; karar sana kalmış."
+      - "You mustn't come. :: Gelmen yasak ya da kesinlikle istenmiyor."
+      - "You must come. :: Gelmen gerekiyor."
+      - "You have to come. :: Gelmek zorundasın."
+    explanation: "Don't have to serbest bırakır; mustn't yasaklar."
+  - id: q.a2.must.07
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [Do, I, have, to, pay, now, "?"]
+    explanation: "Have to ile soru do / does ile kurulur."
+  - id: q.a2.must.08
+    type: translation
+    prompt: "Burada sigara içmemelisin."
+    answers: ["You mustn't smoke here.", "You must not smoke here."]
+    explanation: "Yasak: mustn't + yalın fiil."

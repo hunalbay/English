@@ -1,0 +1,123 @@
+id: gram.a2.possessive-pronouns
+kind: grammar
+level: A2
+title_tr: "İyelik zamirleri: mine, yours, his, hers..."
+title_en: Possessive pronouns
+objective_tr: Bu dersin sonunda mine, yours, his, hers, ours, theirs zamirlerini ismi tekrarlamadan sahiplik bildirmek için kullanabilecek ve iyelik sıfatlarından ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.possessive-adjectives, gram.a1.possessive-s]
+vocabulary: [mine, whose, my, your, our, their]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **İyelik sıfatı** bir isimden önce gelir: "This is **my** book."
+
+      **İyelik zamiri** ise ismin **yerini tutar** ve tek başına kullanılır: "This book is **mine**." (Bu kitap benimki / benim.)
+
+      Türkçedeki **benimki, seninki, onunki** sözcüklerine karşılık gelir. Aynı ismi tekrar etmemek için kullanılır.
+  - kind: formula
+    title_tr: Sıfat ve zamir biçimleri
+    table:
+      headers: ["Özne", "İyelik sıfatı (+ isim)", "İyelik zamiri (tek başına)"]
+      rows:
+        - ["I", "my book", "mine"]
+        - ["you", "your book", "yours"]
+        - ["he", "his book", "his"]
+        - ["she", "her book", "hers"]
+        - ["we", "our book", "ours"]
+        - ["they", "their book", "theirs"]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **İsimle birlikte kullanılmaz:** "mine book" yanlıştır.
+
+      **Kesme işareti almaz:** yours, hers, ours, theirs (your's, her's değil).
+
+      **Whose sorusuna cevap verirken:** "Whose keys are these?" — "They're **mine**."
+
+      **"A friend of mine" kalıbı:** "He is a friend **of mine**." (Arkadaşlarımdan biri.) — "a friend of me" denmez.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "This bag is mine. Where is yours?", tr: "Bu çanta benim. Seninki nerede?"}
+      - {en: "Is this pen yours or his?", tr: "Bu kalem senin mi, onun mu?"}
+      - {en: "Our house is small, but theirs is big.", tr: "Bizim evimiz küçük ama onlarınki büyük."}
+      - {en: "My phone is old. Hers is new.", tr: "Benim telefonum eski. Onunki yeni."}
+      - {en: "She is a friend of mine.", tr: "O benim bir arkadaşım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This is mine car.", tr: "Bu benim arabam.", wrong: true, correction: "This is my car.", note_tr: "İsimden önce iyelik sıfatı."}
+      - {en: "The book is my.", tr: "Kitap benim.", wrong: true, correction: "The book is mine.", note_tr: "Tek başına iyelik zamiri."}
+      - {en: "Is this your's?", tr: "Bu senin mi?", wrong: true, correction: "Is this yours?", note_tr: "Kesme işareti yok."}
+      - {en: "He is a friend of me.", tr: "O benim bir arkadaşım.", wrong: true, correction: "He is a friend of mine.", note_tr: "Kalıp: of mine."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sıfat ile zamiri karıştırmak.** Ardından isim geliyorsa my, your, her; gelmiyorsa mine, yours, hers.
+
+      **Kesme işareti eklemek.** İyelik zamirlerinde kesme işareti yoktur.
+
+      **His'in iki görevini fark etmemek.** His hem sıfat hem zamirdir: "his car" / "The car is his."
+questions:
+  - id: q.a2.possessive-pronouns.01
+    type: multiple_choice
+    prompt: "This is not my coat. ___ is black."
+    options:
+      - "*Mine :: İsim tekrarlanmıyor; iyelik zamiri tek başına kullanılır."
+      - "My :: My'dan sonra bir isim gelmelidir."
+      - "Me :: Me nesne zamiridir; sahiplik bildirmez."
+      - "I :: I özne zamiridir."
+    explanation: "İsmin yerini tutan iyelik zamiri: mine."
+  - id: q.a2.possessive-pronouns.02
+    type: multiple_choice
+    prompt: "Our flat is small, but ___ is very big."
+    options:
+      - "*theirs :: \"Onlarınki\": isim tekrarlanmıyor."
+      - "their :: Their'dan sonra bir isim gelmelidir."
+      - "them :: Them nesne zamiridir."
+      - "their's :: İyelik zamirleri kesme işareti almaz."
+    explanation: "their + isim; theirs tek başına."
+  - id: q.a2.possessive-pronouns.03
+    type: fill_blank
+    prompt: "Whose keys are these? — They're ___. (onun — kadın)"
+    answers: [hers]
+    explanation: "She → her (sıfat) → hers (zamir)."
+  - id: q.a2.possessive-pronouns.04
+    type: error_correction
+    prompt: "Is this umbrella your's?"
+    answers: ["Is this umbrella yours?"]
+    explanation: "İyelik zamirlerinde kesme işareti kullanılmaz."
+  - id: q.a2.possessive-pronouns.05
+    type: error_correction
+    prompt: "She is a friend of me."
+    answers: ["She is a friend of mine.", "She's a friend of mine."]
+    explanation: "Kalıp: a friend of mine / yours / his / hers."
+  - id: q.a2.possessive-pronouns.06
+    type: matching
+    prompt: "İyelik sıfatlarını zamir biçimleriyle eşleştirin."
+    pairs:
+      - [my, mine]
+      - [your, yours]
+      - [her, hers]
+      - [our, ours]
+      - [their, theirs]
+    explanation: "Çoğu iyelik zamiri sıfata -s eklenerek yapılır; mine istisnadır."
+  - id: q.a2.possessive-pronouns.07
+    type: nuance
+    difficulty: 2
+    prompt: "Hangi cümlede \"his\" bir iyelik zamiridir (ismin yerini tutar)?"
+    options:
+      - "*That car is his. :: His'ten sonra isim yok; \"onunki\" anlamında."
+      - "His car is new. :: His bir isimden (car) önce geliyor: iyelik sıfatı."
+      - "I know his brother. :: His bir isimden (brother) önce geliyor: iyelik sıfatı."
+      - "His name is Ali. :: His bir isimden (name) önce geliyor: iyelik sıfatı."
+    explanation: "His hem sıfat hem zamirdir; ardından isim gelmiyorsa zamirdir."
+    lessons: [gram.a1.possessive-adjectives]
+  - id: q.a2.possessive-pronouns.08
+    type: translation
+    prompt: "Bu çanta benim."
+    answers: ["This bag is mine.", "This is my bag."]
+    explanation: "İyelik zamiri tek başına kullanılır: mine."

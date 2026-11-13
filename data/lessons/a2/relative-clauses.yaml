@@ -1,0 +1,118 @@
+id: gram.a2.relative-clauses
+kind: grammar
+level: A2
+title_tr: "İlgi cümlecikleri: who, which, that, where"
+title_en: "Relative clauses: who / which / that / where"
+objective_tr: Bu dersin sonunda who, which, that ve where ile bir kişiyi, nesneyi ya da yeri tanımlayan cümlecikler kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.question-words]
+next: [gram.a2.possessive-pronouns]
+vocabulary: [who, which, that, where, person, place]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İlgi cümleciği, bir ismi **tanımlar** ve hangi kişiden ya da şeyden söz ettiğimizi belirtir: "The woman **who lives next door** is a doctor." (Yan dairede oturan kadın doktordur.)
+
+      Türkçede bu anlam **-en / -an** ve **-diği / -dığı** ekleriyle verilir ve tanımlayan bölüm isimden **önce** gelir ("yan dairede oturan kadın"). İngilizcede ise isimden **sonra** gelir ve bir ilgi zamiriyle başlar.
+  - kind: formula
+    title_tr: İlgi zamirleri
+    table:
+      headers: ["Zamir", "Ne için?", "Örnek"]
+      rows:
+        - ["who", "insanlar", "the man who called"]
+        - ["which", "nesneler, hayvanlar", "the book which is on the table"]
+        - ["that", "insanlar ve nesneler (gündelik)", "the man that called / the book that is on the table"]
+        - ["where", "yerler", "the town where I was born"]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **İlgi zamiri özneyse atılamaz:** "The girl **who** sits next to me is from Spain."
+
+      **İlgi zamiri nesneyse atılabilir:** "The film (**that**) we watched was great." — Burada "we" öznedir; that atılabilir.
+
+      **İlgi zamirinden sonra ikinci bir zamir kullanılmaz:** "The man who **he** lives here" yanlıştır.
+
+      **Tanım verirken çok kullanılır:** "A chef is a person **who** cooks in a restaurant."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have a friend who speaks five languages.", tr: "Beş dil konuşan bir arkadaşım var."}
+      - {en: "This is the phone which I bought yesterday.", tr: "Bu, dün aldığım telefon."}
+      - {en: "The bus that goes to the airport leaves from here.", tr: "Havalimanına giden otobüs buradan kalkıyor."}
+      - {en: "That is the restaurant where we had dinner.", tr: "Şurası akşam yemeği yediğimiz restoran."}
+      - {en: "The people we met were very friendly.", tr: "Tanıştığımız insanlar çok cana yakındı.", note_tr: "İlgi zamiri atılmış."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The man which lives here is a teacher.", tr: "Burada yaşayan adam öğretmen.", wrong: true, correction: "The man who lives here is a teacher.", note_tr: "İnsanlar için who."}
+      - {en: "The book who I read was good.", tr: "Okuduğum kitap iyiydi.", wrong: true, correction: "The book which I read was good.", note_tr: "Nesneler için which / that."}
+      - {en: "The woman who she called is my aunt.", tr: "Arayan kadın teyzem.", wrong: true, correction: "The woman who called is my aunt.", note_tr: "İkinci zamir kullanılmaz."}
+      - {en: "This is the house which I was born.", tr: "Bu, doğduğum ev.", wrong: true, correction: "This is the house where I was born.", note_tr: "Yer için where."}
+      - {en: "I know a girl speaks Japanese.", tr: "Japonca konuşan bir kız tanıyorum.", wrong: true, correction: "I know a girl who speaks Japanese.", note_tr: "Özne konumundaki zamir atılamaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Türkçe sözcük sırasını korumak.** "The next door living woman" gibi bir yapı İngilizcede yoktur; tanım isimden sonra gelir.
+
+      **İlgi zamirinden sonra özneyi tekrarlamak.** "The friend who he helped me" yanlıştır.
+
+      **What'ı ilgi zamiri gibi kullanmak.** "The book what I read" yanlıştır; that ya da which kullanılır.
+questions:
+  - id: q.a2.relative.01
+    type: multiple_choice
+    prompt: "The woman ___ lives next door is a nurse."
+    options:
+      - "*who :: İnsanlar için who kullanılır."
+      - "which :: Which nesneler ve hayvanlar içindir."
+      - "where :: Where yerler içindir."
+      - "what :: What ilgi zamiri olarak kullanılmaz."
+    explanation: "İnsan + who (ya da that)."
+  - id: q.a2.relative.02
+    type: multiple_choice
+    prompt: "This is the hotel ___ we stayed last summer."
+    options:
+      - "*where :: Bir yerde yapılan eylem anlatılıyor: where."
+      - "who :: Who insanlar içindir."
+      - "which :: \"Which we stayed\" eksik kalır; \"which we stayed in\" olması gerekirdi."
+      - "when :: When zaman içindir."
+    explanation: "Yer + where + özne + fiil."
+  - id: q.a2.relative.03
+    type: fill_blank
+    prompt: "A dictionary is a book ___ explains the meanings of words."
+    answers: [which, that]
+    explanation: "Nesneler için which ya da that kullanılır."
+  - id: q.a2.relative.04
+    type: error_correction
+    prompt: "The man who he lives upstairs is very noisy."
+    answers: ["The man who lives upstairs is very noisy.", "The man that lives upstairs is very noisy."]
+    explanation: "İlgi zamiri zaten özne görevindedir; ikinci bir zamir (he) eklenmez."
+  - id: q.a2.relative.05
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede ilgi zamiri atılabilir?"
+    options:
+      - "*The film that we saw was boring. :: \"We\" öznedir; that nesne konumundadır ve atılabilir."
+      - "The man who called is my uncle. :: Who özne konumundadır; atılamaz."
+      - "The bus that goes to the center is late. :: That özne konumundadır; atılamaz."
+      - "I know a girl who plays the violin. :: Who özne konumundadır; atılamaz."
+    explanation: "İlgi zamirinden hemen sonra bir özne geliyorsa zamir atılabilir."
+  - id: q.a2.relative.06
+    type: sentence_building
+    prompt: "this is / the book / that / I / tell / you about (geçmiş zaman)"
+    answers: ["This is the book that I told you about.", "This is the book I told you about.", "This is the book which I told you about."]
+    explanation: "Nesne konumundaki ilgi zamiri that / which kullanılabilir ya da atılabilir."
+  - id: q.a2.relative.07
+    type: matching
+    prompt: "Tanımları tamamlayın."
+    pairs:
+      - ["A pilot is a person", "who flies planes."]
+      - ["A bakery is a place", "where you can buy bread."]
+      - ["A key is a thing", "which opens doors."]
+    explanation: "Kişi → who; yer → where; nesne → which."
+  - id: q.a2.relative.08
+    type: translation
+    prompt: "Beş dil konuşan bir arkadaşım var."
+    answers: ["I have a friend who speaks five languages.", "I have a friend that speaks five languages.", "I've got a friend who speaks five languages."]
+    explanation: "Tanımlayan bölüm isimden sonra gelir: a friend who speaks..."
