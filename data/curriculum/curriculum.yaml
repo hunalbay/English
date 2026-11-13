@@ -98,3 +98,24 @@ units:
       - gram.a2.present-perfect
       - gram.a2.present-perfect-vs-past-simple
       - gram.a2.used-to
+
+  - id: a2.u02
+    level: A2
+    title_tr: Gelecekten söz etmek
+    title_en: Talking about the future
+    description_tr: Planlarınızı, kararlarınızı ve tahminlerinizi doğru yapıyla anlatın.
+    lessons:
+      - gram.a2.going-to
+      - gram.a2.will
+      - gram.a2.present-continuous-future
+
+  - id: a2.u03
+    level: A2
+    title_tr: Karşılaştırma ve niteleme
+    title_en: Comparing and describing
+    description_tr: Şeyleri karşılaştırın, işlerin nasıl yapıldığını anlatın, fazlalık ve yeterlilik bildirin.
+    lessons:
+      - gram.a2.comparatives
+      - gram.a2.superlatives
+      - gram.a2.adverbs-of-manner
+      - gram.a2.too-enough

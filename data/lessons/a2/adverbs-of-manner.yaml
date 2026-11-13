@@ -1,0 +1,132 @@
+id: gram.a2.adverbs-of-manner
+kind: grammar
+level: A2
+title_tr: Durum zarfları
+title_en: Adverbs of manner
+objective_tr: Bu dersin sonunda sıfatlardan -ly ile zarf türetebilecek, bir işin nasıl yapıldığını anlatabilecek ve sıfat ile zarfı doğru yerde kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-simple]
+next: [gram.a2.too-enough]
+vocabulary: [slowly, quickly, careful, well, hard, fast]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Sıfat** bir ismi niteler: "She is a **careful** driver." (Dikkatli bir sürücü.)
+
+      **Zarf** bir fiili niteler ve işin **nasıl** yapıldığını söyler: "She drives **carefully**." (Dikkatli sürer.)
+
+      Türkçede aynı sözcük hem sıfat hem zarf olabilir ("yavaş araba" / "yavaş sür"); İngilizcede çoğu zaman biçim değişir: slow → slow**ly**.
+  - kind: formula
+    title_tr: Yapım kuralları
+    table:
+      headers: ["Sıfat", "Kural", "Zarf"]
+      rows:
+        - ["slow, quick, bad", "+ -ly", "slowly, quickly, badly"]
+        - ["happy, easy", "y → -ily", "happily, easily"]
+        - ["terrible, simple", "-le → -ly", "terribly, simply"]
+        - ["good", "düzensiz", "well"]
+        - ["fast, hard, late, early", "değişmez", "fast, hard, late, early"]
+  - kind: usage
+    title_tr: Cümledeki yeri
+    text_tr: |-
+      Durum zarfı genellikle **fiilden ya da nesneden sonra** gelir: "He speaks **slowly**.", "She plays the piano **beautifully**."
+
+      Fiil ile nesnenin **arasına girmez**: "She speaks English **well**." (She speaks well English değil.)
+
+      **To be, look, feel, sound, smell, taste** fiillerinden sonra zarf değil **sıfat** kullanılır: "The soup tastes **good**.", "You look **tired**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Please speak slowly.", tr: "Lütfen yavaş konuşun."}
+      - {en: "He drives very carefully.", tr: "Çok dikkatli araba kullanır."}
+      - {en: "She speaks English well.", tr: "İyi İngilizce konuşur."}
+      - {en: "They work hard.", tr: "Çok çalışırlar."}
+      - {en: "The children were playing happily.", tr: "Çocuklar mutlu mutlu oynuyordu."}
+      - {en: "I arrived late.", tr: "Geç geldim."}
+  - kind: exceptions
+    title_tr: "Tuzaklı çiftler: hard / hardly, late / lately"
+    table:
+      headers: ["Sözcük", "Anlam", "Örnek"]
+      rows:
+        - ["hard", "çok, sıkı", "She works hard."]
+        - ["hardly", "neredeyse hiç", "She hardly works."]
+        - ["late", "geç", "He came late."]
+        - ["lately", "son zamanlarda", "I haven't seen him lately."]
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She sings beautiful.", tr: "Güzel şarkı söyler.", wrong: true, correction: "She sings beautifully.", note_tr: "Fiili zarf niteler."}
+      - {en: "He speaks English good.", tr: "İyi İngilizce konuşur.", wrong: true, correction: "He speaks English well.", note_tr: "Good'un zarfı well'dir."}
+      - {en: "I work hardly.", tr: "Çok çalışırım.", wrong: true, correction: "I work hard.", note_tr: "Hardly \"neredeyse hiç\" demektir."}
+      - {en: "She speaks very well English.", tr: "Çok iyi İngilizce konuşur.", wrong: true, correction: "She speaks English very well.", note_tr: "Zarf nesneden sonra gelir."}
+      - {en: "The food smells wonderfully.", tr: "Yemek harika kokuyor.", wrong: true, correction: "The food smells wonderful.", note_tr: "Smell'den sonra sıfat gelir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Fiili sıfatla nitelemek.** "Drive careful" yerine "Drive **carefully**".
+
+      **Good ile well'i karıştırmak.** Good bir sıfattır (a good student), well bir zarftır (she studies well). İstisna: sağlık anlamında "I'm well" denir.
+
+      **-ly ile biten her sözcüğü zarf sanmak.** friendly, lovely, lonely sıfattır: "a friendly person".
+questions:
+  - id: q.a2.adverbs-manner.01
+    type: multiple_choice
+    prompt: "Please drive ___. The road is wet."
+    options:
+      - "*carefully :: Fiili (drive) niteleyen sözcük zarf olmalıdır."
+      - "careful :: Careful bir sıfattır; ismi niteler."
+      - "care :: Care bir isim ya da fiildir."
+      - "more careful :: Sıfatın karşılaştırma derecesidir; fiili nitelemez."
+    explanation: "Nasıl? sorusunun cevabı zarftır: carefully."
+  - id: q.a2.adverbs-manner.02
+    type: multiple_choice
+    prompt: "She plays the guitar very ___."
+    options:
+      - "*well :: Good'un zarf biçimi well'dir."
+      - "good :: Good bir sıfattır; fiili nitelemez."
+      - "goodly :: Bu anlamda böyle bir zarf yoktur."
+      - "best :: Best en üstünlük derecesidir."
+    explanation: "Good (sıfat) → well (zarf)."
+  - id: q.a2.adverbs-manner.03
+    type: word_formation
+    prompt: "He answered the question ___ (easy)."
+    answers: [easily]
+    explanation: "-y ile biten sıfat: y → -ily."
+  - id: q.a2.adverbs-manner.04
+    type: word_in_context
+    difficulty: 3
+    prompt: "I was so tired that I could ___ keep my eyes open."
+    options:
+      - "*hardly :: Hardly \"neredeyse hiç, güçlükle\" demektir."
+      - "hard :: Hard \"çok, sıkı\" demektir; anlam ters olur."
+      - "lately :: Lately \"son zamanlarda\" demektir."
+      - "late :: Late \"geç\" demektir."
+    explanation: "Hard ve hardly zıt anlamlara yakın iki ayrı zarftır."
+  - id: q.a2.adverbs-manner.05
+    type: error_correction
+    prompt: "He speaks very well Spanish."
+    answers: ["He speaks Spanish very well."]
+    explanation: "Zarf, fiil ile nesnenin arasına girmez; nesneden sonra gelir."
+  - id: q.a2.adverbs-manner.06
+    type: true_false
+    prompt: "This soup tastes deliciously."
+    options:
+      - "Doğru :: Taste gibi duyu fiillerinden sonra zarf değil sıfat gelir."
+      - "*Yanlış :: Taste, look, feel, smell, sound fiillerinden sonra sıfat kullanılır: \"This soup tastes delicious.\""
+    explanation: "Duyu fiilleri öznenin özelliğini bildirir; bu yüzden sıfat alır."
+  - id: q.a2.adverbs-manner.07
+    type: matching
+    prompt: "Sıfatları zarf biçimleriyle eşleştirin."
+    pairs:
+      - [good, well]
+      - [fast, fast]
+      - [happy, happily]
+      - [terrible, terribly]
+    explanation: "Good düzensizdir; fast değişmez; diğerleri -ly kurallarına uyar."
+  - id: q.a2.adverbs-manner.08
+    type: translation
+    prompt: "Lütfen yavaş konuşun."
+    answers: ["Please speak slowly.", "Speak slowly, please.", "Please, speak slowly."]
+    explanation: "Fiili niteleyen zarf: slowly."

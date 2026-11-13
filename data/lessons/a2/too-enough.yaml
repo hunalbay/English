@@ -1,0 +1,116 @@
+id: gram.a2.too-enough
+kind: grammar
+level: A2
+title_tr: "Fazlalık ve yeterlilik: too, enough"
+title_en: "Too / enough"
+objective_tr: Bu dersin sonunda too ile bir şeyin gereğinden fazla, enough ile yeterli ya da yetersiz olduğunu söyleyebilecek ve bu sözcükleri doğru yere koyabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.adverbs-of-manner]
+vocabulary: [too, enough, very, much, many]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Too** "gereğinden fazla" demektir ve **olumsuz bir sonuç** bildirir: "The coffee is **too** hot." (Kahve fazla sıcak — içemiyorum.)
+
+      **Enough** "yeterli, yeterince" demektir: "I have **enough** money." (Yeterli param var.)
+
+      **Too ile very aynı değildir.** "It's **very** expensive" yalnızca çok pahalı olduğunu söyler. "It's **too** expensive" ise bu yüzden alamayacağınızı ima eder.
+  - kind: formula
+    title_tr: Cümledeki yeri
+    table:
+      headers: ["Yapı", "Örnek", "Türkçe"]
+      rows:
+        - ["too + sıfat / zarf", "too big, too quickly", "fazla büyük, fazla hızlı"]
+        - ["too much + sayılamayan isim", "too much sugar", "fazla şeker"]
+        - ["too many + sayılabilen isim", "too many people", "fazla insan"]
+        - ["sıfat / zarf + enough", "big enough, fast enough", "yeterince büyük, yeterince hızlı"]
+        - ["enough + isim", "enough time, enough chairs", "yeterli zaman, yeterli sandalye"]
+  - kind: usage
+    title_tr: "To + fiil ile sonuç bildirme"
+    text_tr: |-
+      **too + sıfat + to + fiil** → "He is **too young to drive**." (Araba kullanamayacak kadar genç.)
+
+      **sıfat + enough + to + fiil** → "She is **old enough to vote**." (Oy kullanacak yaşta.)
+
+      **for + kişi** eklenebilir: "This bag is too heavy **for me** to carry."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "This shirt is too small for me.", tr: "Bu gömlek bana fazla küçük."}
+      - {en: "There are too many cars in the city.", tr: "Şehirde fazla araba var."}
+      - {en: "I ate too much cake.", tr: "Fazla pasta yedim."}
+      - {en: "The room isn't big enough.", tr: "Oda yeterince büyük değil."}
+      - {en: "We don't have enough chairs.", tr: "Yeterli sandalyemiz yok."}
+      - {en: "I'm too tired to go out.", tr: "Dışarı çıkamayacak kadar yorgunum."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The soup is enough hot.", tr: "Çorba yeterince sıcak.", wrong: true, correction: "The soup is hot enough.", note_tr: "Enough sıfattan sonra gelir."}
+      - {en: "I have money enough.", tr: "Yeterli param var.", wrong: true, correction: "I have enough money.", note_tr: "Enough isimden önce gelir."}
+      - {en: "There is too many noise.", tr: "Fazla gürültü var.", wrong: true, correction: "There is too much noise.", note_tr: "Noise sayılamaz."}
+      - {en: "The film was too good!", tr: "Film çok iyiydi!", wrong: true, correction: "The film was very good!", note_tr: "Too olumsuz bir fazlalık bildirir."}
+      - {en: "He is too much tall.", tr: "O fazla uzun.", wrong: true, correction: "He is too tall.", note_tr: "Sıfattan önce yalnızca too."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Too'yu "çok" anlamında kullanmak.** Bir şeyi övüyorsanız very ya da really kullanın.
+
+      **Enough'ı yanlış yere koymak.** Sıfat ve zarftan **sonra**, isimden **önce**: good **enough**, **enough** time.
+
+      **Sıfattan önce too much demek.** "too much expensive" yanlıştır; "too expensive".
+questions:
+  - id: q.a2.too-enough.01
+    type: multiple_choice
+    prompt: "I can't drink this tea. It is ___ hot."
+    options:
+      - "*too :: Olumsuz sonucu olan fazlalık: too + sıfat."
+      - "enough :: Enough sıfattan sonra gelir ve \"yeterince\" demektir."
+      - "too much :: Sıfattan önce too much kullanılmaz."
+      - "too many :: Too many sayılabilen isimlerle kullanılır."
+    explanation: "Too + sıfat = gereğinden fazla."
+  - id: q.a2.too-enough.02
+    type: multiple_choice
+    prompt: "He isn't ___ to drive a car."
+    options:
+      - "*old enough :: Enough sıfattan sonra gelir."
+      - "enough old :: Enough sıfatın önüne gelmez."
+      - "too old :: Anlam ters olur (araba kullanamayacak kadar yaşlı)."
+      - "old too :: Too sıfattan önce gelir."
+    explanation: "Sıfat + enough + to + fiil."
+  - id: q.a2.too-enough.03
+    type: fill_blank
+    prompt: "There are too ___ people on the bus."
+    answers: [many]
+    explanation: "People sayılabilen çoğul bir isimdir: too many."
+  - id: q.a2.too-enough.04
+    type: fill_blank
+    prompt: "I drank too ___ coffee, so I can't sleep."
+    answers: [much]
+    explanation: "Coffee burada sayılamayan bir isimdir: too much."
+  - id: q.a2.too-enough.05
+    type: error_correction
+    prompt: "We don't have time enough."
+    answers: ["We don't have enough time.", "We do not have enough time."]
+    explanation: "Enough isimden önce gelir."
+  - id: q.a2.too-enough.06
+    type: nuance
+    difficulty: 3
+    prompt: "Bir arkadaşınızın yaptığı pastayı övmek istiyorsunuz. Hangisini söylersiniz?"
+    options:
+      - "*This cake is very sweet. I love it! :: Very yalnızca derecesini bildirir; olumsuz anlam taşımaz."
+      - "This cake is too sweet. :: Too, pastanın gereğinden fazla tatlı olduğunu ve bundan hoşlanmadığınızı ima eder."
+      - "This cake is enough sweet. :: Enough sıfattan sonra gelir; ayrıca övgü anlamı zayıftır."
+      - "This cake is too much sweet. :: Sıfattan önce too much kullanılmaz."
+    explanation: "Too olumsuz bir fazlalık bildirir; very tarafsız ya da olumludur."
+  - id: q.a2.too-enough.07
+    type: sentence_building
+    prompt: "I / be / too / tired / to cook"
+    answers: ["I am too tired to cook.", "I'm too tired to cook."]
+    explanation: "too + sıfat + to + fiil: \"yemek yapamayacak kadar yorgun\"."
+  - id: q.a2.too-enough.08
+    type: translation
+    prompt: "Bu oda yeterince büyük değil."
+    answers: ["This room isn't big enough.", "This room is not big enough.", "This room isn't large enough.", "This room is not large enough."]
+    explanation: "Sıfat + enough; olumsuzu isn't + sıfat + enough."

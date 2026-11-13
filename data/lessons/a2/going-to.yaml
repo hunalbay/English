@@ -1,0 +1,114 @@
+id: gram.a2.going-to
+kind: grammar
+level: A2
+title_tr: "Gelecek planları: be going to"
+title_en: "Be going to"
+objective_tr: Bu dersin sonunda be going to ile önceden verilmiş kararları, niyetleri ve belirtisi görülen tahminleri anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.present-continuous]
+next: [gram.a2.will]
+vocabulary: [plan, tomorrow, next, soon, decide]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Be going to**, konuşmadan **önce verilmiş** bir kararı ya da niyeti anlatır: "I **am going to buy** a new phone." (Yeni bir telefon alacağım — buna karar verdim.)
+
+      Ayrıca **şu an görülen bir belirtiye** dayanan tahminlerde kullanılır: "Look at those clouds. It **is going to rain**." (Şu bulutlara bak. Yağmur yağacak.)
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + am / is / are + going to + yalın fiil", "She is going to study medicine."]
+        - ["Olumsuz", "özne + am / is / are + not + going to + yalın fiil", "She isn't going to come."]
+        - ["Soru", "Am / Is / Are + özne + going to + yalın fiil?", "Is she going to come?"]
+        - ["Kısa cevap", "Yes, she is. / No, she isn't.", ""]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I am going to visit my parents this weekend.", tr: "Bu hafta sonu annemle babamı ziyaret edeceğim."}
+      - {en: "We are going to move to Izmir next year.", tr: "Gelecek yıl İzmir'e taşınacağız."}
+      - {en: "He isn't going to take the exam.", tr: "Sınava girmeyecek."}
+      - {en: "What are you going to do after school?", tr: "Okuldan sonra ne yapacaksın?"}
+      - {en: "Be careful! You are going to fall.", tr: "Dikkat et! Düşeceksin.", note_tr: "Belirtiye dayalı tahmin."}
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Going to'dan sonra fiil yalın gelir:** "I'm going to **study**" (studying değil).
+
+      **"Going to go" doğrudur, ama çoğu zaman kısaltılır:** "I'm going to go to the cinema." = "I'm going to the cinema."
+
+      **Konuşma dilinde "gonna" duyulur:** "I'm gonna call him." Bu yazıda kullanılmaz.
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I going to buy a car.", tr: "Bir araba alacağım.", wrong: true, correction: "I am going to buy a car.", note_tr: "To be atlanamaz."}
+      - {en: "She is going to studying.", tr: "Ders çalışacak.", wrong: true, correction: "She is going to study.", note_tr: "Going to'dan sonra yalın fiil."}
+      - {en: "Do you going to come?", tr: "Gelecek misin?", wrong: true, correction: "Are you going to come?", note_tr: "Soru to be ile yapılır."}
+      - {en: "They are go to travel.", tr: "Seyahat edecekler.", wrong: true, correction: "They are going to travel.", note_tr: "Yapı: be + going to."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To be'yi unutmak.** "I going to..." en yaygın hatadır.
+
+      **Anlık kararlar için kullanmak.** Konuşma anında verilen kararlar için **will** kullanılır (bir sonraki ders).
+
+      **Going to'yu "gitmek" sanmak.** Bu yapıda going "gitmek" anlamı taşımaz; yalnızca geleceği gösterir.
+questions:
+  - id: q.a2.going-to.01
+    type: multiple_choice
+    prompt: "I ___ visit my grandmother tomorrow. I promised her."
+    options:
+      - "*am going to :: Önceden verilmiş bir karar: am going to + yalın fiil."
+      - "going to :: To be eksik."
+      - "am going :: Fiilden önce to gerekir."
+      - "go to :: Bu Present Simple'dır ve plan anlamı vermez."
+    explanation: "Önceden planlanmış eylem → be going to."
+  - id: q.a2.going-to.02
+    type: multiple_choice
+    prompt: "Look at the sky! It ___ rain."
+    options:
+      - "*is going to :: Görülen bir belirtiye (gökyüzü) dayanan tahmin."
+      - "going to :: To be eksik."
+      - "are going to :: It ile is kullanılır."
+      - "is going :: To eksik."
+    explanation: "Şu anki bir belirtiye dayanan tahmin → be going to."
+  - id: q.a2.going-to.03
+    type: fill_blank
+    prompt: "___ you going to come to the party?"
+    answers: [Are]
+    explanation: "Soru to be başa alınarak yapılır: Are you going to...?"
+  - id: q.a2.going-to.04
+    type: error_correction
+    prompt: "She is going to studying law."
+    answers: ["She is going to study law.", "She's going to study law."]
+    explanation: "Going to'dan sonra fiil yalın hâlde gelir."
+  - id: q.a2.going-to.05
+    type: word_order
+    prompt: "Soru cümlesi kurun."
+    tokens: [What, are, you, going, to, do, "?"]
+    explanation: "Sıra: soru sözcüğü + are + özne + going to + yalın fiil?"
+  - id: q.a2.going-to.06
+    type: dialogue_completion
+    context: "A: Why are you saving money?\nB: Because I ___ a car next year."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*am going to buy :: Para biriktirdiğine göre karar önceden verilmiş."
+      - "buy :: Present Simple bir planı anlatmaz."
+      - "bought :: Past Simple geçmişi anlatır; \"next year\" geleceği gösterir."
+      - "am buy :: Böyle bir yapı yoktur."
+    explanation: "Önceden verilmiş karar ve hazırlık → be going to."
+  - id: q.a2.going-to.07
+    type: true_false
+    prompt: "We aren't going to stay at a hotel."
+    options:
+      - "*Doğru :: Olumsuz: are + not + going to + yalın fiil."
+      - "Yanlış :: Cümle doğru kurulmuş."
+    explanation: "Olumsuzluk to be'ye eklenir."
+  - id: q.a2.going-to.08
+    type: translation
+    prompt: "Gelecek yıl İngilizce öğreneceğim."
+    answers: ["I am going to learn English next year.", "I'm going to learn English next year.", "Next year I am going to learn English.", "Next year, I'm going to learn English.", "I will learn English next year."]
+    explanation: "Plan ya da niyet: am going to + yalın fiil."

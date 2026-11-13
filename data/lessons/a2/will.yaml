@@ -1,0 +1,128 @@
+id: gram.a2.will
+kind: grammar
+level: A2
+title_tr: "Gelecek zaman: will"
+title_en: "Will"
+objective_tr: Bu dersin sonunda will ile anlık kararlarınızı, tahminlerinizi, sözlerinizi ve tekliflerinizi anlatabilecek, will ile be going to arasındaki farkı ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.going-to]
+next: [gram.a2.present-continuous-future]
+vocabulary: [will, think, promise, probably, tomorrow]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Will**, gelecek hakkında konuşurken kullanılan bir kip fiilidir. Her özneyle aynıdır ve kendisinden sonra fiil **yalın** gelir: "I **will call** you." Kısa biçimi **'ll**, olumsuzu **won't** (will not).
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Konuşma anında verilen karar:** "The phone is ringing." — "I**'ll answer** it."
+
+      **Görüşe dayalı tahmin (I think, probably, maybe ile):** "I think it **will be** cold tomorrow."
+
+      **Söz verme:** "I **won't tell** anyone."
+
+      **Teklif ve yardım önerisi:** "I**'ll help** you with your bags."
+
+      **Kesin gelecek olgular:** "She **will be** thirty next year."
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + will / 'll + yalın fiil", "I'll see you tomorrow."]
+        - ["Olumsuz", "özne + won't + yalın fiil", "He won't come."]
+        - ["Soru", "Will + özne + yalın fiil?", "Will you help me?"]
+        - ["Kısa cevap", "Yes, I will. / No, I won't.", ""]
+  - kind: comparison
+    title_tr: "Will ile be going to"
+    table:
+      headers: ["", "will", "be going to"]
+      rows:
+        - ["Karar", "konuşma anında verilir", "önceden verilmiştir"]
+        - ["Örnek", "A: There's no milk. B: I'll buy some.", "I'm going to buy milk. It's on my list."]
+        - ["Tahmin", "görüşe dayanır (I think...)", "görülen bir belirtiye dayanır"]
+        - ["Örnek", "I think she'll pass the exam.", "Look at her face. She's going to cry."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I'm tired. I think I'll go to bed.", tr: "Yorgunum. Sanırım yatacağım."}
+      - {en: "Don't worry, I won't be late.", tr: "Merak etme, geç kalmayacağım."}
+      - {en: "Will you marry me?", tr: "Benimle evlenir misin?"}
+      - {en: "It will probably rain tomorrow.", tr: "Yarın muhtemelen yağmur yağacak."}
+      - {en: "I'll have the soup, please.", tr: "Ben çorba alacağım, lütfen.", note_tr: "Restoranda sipariş: anlık karar."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I will to call you.", tr: "Seni arayacağım.", wrong: true, correction: "I will call you.", note_tr: "Will'den sonra to gelmez."}
+      - {en: "She wills come.", tr: "Gelecek.", wrong: true, correction: "She will come.", note_tr: "Will -s almaz."}
+      - {en: "I don't will go.", tr: "Gitmeyeceğim.", wrong: true, correction: "I won't go.", note_tr: "Olumsuzu won't'tur."}
+      - {en: "I will see the doctor at ten. I have an appointment.", tr: "Saat onda doktora gideceğim. Randevum var.", wrong: true, correction: "I'm going to see the doctor at ten.", note_tr: "Önceden ayarlanmış plan için will kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her gelecek cümlesinde will kullanmak.** Türkçedeki "-ecek / -acak" her zaman will değildir. Önceden yapılmış planlar için be going to ya da Present Continuous daha doğaldır.
+
+      **Won't ile want'ı karıştırmak.** Won't = will not. Okunuşu "vount"; want ise "vont".
+
+      **Zaman cümleciklerinde will kullanmak.** when, if, before, after'dan sonra will gelmez: "I'll call you when I **arrive**." (when I will arrive değil)
+questions:
+  - id: q.a2.will.01
+    type: multiple_choice
+    prompt: "A: It's cold in here. B: I ___ the window."
+    options:
+      - "*'ll close :: Konuşma anında verilen karar: will."
+      - "am going to close :: Bu, kararın önceden verildiğini düşündürür; B daha yeni öğrendi."
+      - "close :: Present Simple anlık kararı bildirmez."
+      - "closing :: Tek başına -ing biçimi fiil olamaz."
+    explanation: "Anlık karar ve yardım teklifi → will."
+  - id: q.a2.will.02
+    type: multiple_choice
+    prompt: "I think Turkey ___ the match."
+    options:
+      - "*will win :: \"I think\" ile görüşe dayalı tahmin: will."
+      - "wins :: Present Simple gelecekle ilgili bir tahmini anlatmaz."
+      - "is winning :: Present Continuous maç şu an sürüyorsa kullanılır."
+      - "will to win :: Will'den sonra to gelmez."
+    explanation: "I think / probably / maybe + will."
+  - id: q.a2.will.03
+    type: fill_blank
+    prompt: "Don't worry. I ___ tell anyone. (olumsuz)"
+    answers: ["won't", "will not"]
+    explanation: "Söz verirken will kullanılır; olumsuzu won't."
+  - id: q.a2.will.04
+    type: error_correction
+    prompt: "She will to help you."
+    answers: ["She will help you.", "She'll help you."]
+    explanation: "Will'den sonra fiil yalın gelir; to kullanılmaz."
+  - id: q.a2.will.05
+    type: error_correction
+    difficulty: 3
+    prompt: "I'll call you when I will arrive."
+    answers: ["I'll call you when I arrive.", "I will call you when I arrive."]
+    explanation: "When ile başlayan zaman cümleciğinde will kullanılmaz; Present Simple gelir."
+  - id: q.a2.will.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi konuşmada B kararını o anda veriyor?"
+    options:
+      - "*A: We don't have any bread. B: Really? I'll get some. :: B bunu yeni öğreniyor ve kararı o anda veriyor."
+      - "A: We don't have any bread. B: I know. I'm going to get some. :: \"I know\" kararın önceden verildiğini gösterir."
+      - "A: Any plans tonight? B: I'm meeting Ali at eight. :: Önceden ayarlanmış bir buluşma."
+      - "A: Why the suitcase? B: I'm going to visit my mother. :: Önceden yapılmış bir plan."
+    explanation: "Will anlık kararı, be going to önceden verilmiş kararı gösterir."
+  - id: q.a2.will.07
+    type: word_in_context
+    prompt: "It will ___ rain tomorrow, so take an umbrella."
+    options:
+      - "*probably :: Probably \"muhtemelen\" demektir ve will ile fiil arasına gelir."
+      - "yesterday :: Yesterday geçmişi gösterir."
+      - "already :: Already \"zaten, çoktan\" demektir ve gelecek tahminiyle uyuşmaz."
+      - "ago :: Ago geçmiş zaman ifadeleriyle kullanılır."
+    explanation: "Tahminlerde will + probably sık kullanılır."
+  - id: q.a2.will.08
+    type: translation
+    prompt: "Sanırım yarın hava soğuk olacak."
+    answers: ["I think it will be cold tomorrow.", "I think it'll be cold tomorrow.", "I think tomorrow will be cold.", "I think the weather will be cold tomorrow."]
+    explanation: "Görüşe dayalı tahmin: I think + will + yalın fiil."

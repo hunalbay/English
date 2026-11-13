@@ -1,0 +1,125 @@
+id: gram.a2.superlatives
+kind: grammar
+level: A2
+title_tr: Sıfatların en üstünlük derecesi
+title_en: Superlative adjectives
+objective_tr: Bu dersin sonunda bir grubun içinde en uç olanı the -est / the most ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.comparatives]
+next: [gram.a2.adverbs-of-manner]
+vocabulary: [good, bad, most, ever, world]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir şeyi **bir grubun tamamıyla** karşılaştırıp en uç noktayı söylemek için sıfatın **en üstünlük derecesi** kullanılır; Türkçedeki "en" sözcüğünün karşılığıdır: "Everest is **the highest** mountain in the world."
+
+      Kurallar karşılaştırma derecesiyle paraleldir: kısa sıfatlara **-est**, uzun sıfatlara **most** gelir. Önünde hemen her zaman **the** bulunur.
+  - kind: formula
+    title_tr: Yapım kuralları
+    table:
+      headers: ["Sıfat", "Karşılaştırma", "En üstünlük"]
+      rows:
+        - ["tall", "taller", "the tallest"]
+        - ["big", "bigger", "the biggest"]
+        - ["happy", "happier", "the happiest"]
+        - ["expensive", "more expensive", "the most expensive"]
+        - ["good", "better", "the best"]
+        - ["bad", "worse", "the worst"]
+        - ["far", "farther / further", "the farthest / furthest"]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Yer ve gruplarla in:** "the best student **in** the class", "the biggest city **in** Turkey".
+
+      **Zaman dilimleriyle ve çoğul gruplarla of:** "the happiest day **of** my life", "the tallest **of** the three brothers".
+
+      **Present Perfect ile:** "It's the best film I **have ever seen**." (Gördüğüm en iyi film.)
+
+      **İyelik sıfatıyla the kullanılmaz:** "**my** best friend" (the my best friend değil).
+
+      **En az:** the least + sıfat → "the least expensive hotel".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She is the youngest person in our team.", tr: "O ekibimizdeki en genç kişi."}
+      - {en: "This is the most beautiful beach in the country.", tr: "Burası ülkedeki en güzel plaj."}
+      - {en: "It was the worst day of my life.", tr: "Hayatımın en kötü günüydü."}
+      - {en: "What is the best way to learn English?", tr: "İngilizce öğrenmenin en iyi yolu nedir?"}
+      - {en: "That's the funniest story I have ever heard.", tr: "Bu duyduğum en komik hikâye."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He is tallest in the class.", tr: "O sınıftaki en uzun kişi.", wrong: true, correction: "He is the tallest in the class.", note_tr: "The gerekir."}
+      - {en: "It is the most big city.", tr: "En büyük şehir.", wrong: true, correction: "It is the biggest city.", note_tr: "Kısa sıfat: -est."}
+      - {en: "She is the best student of the class.", tr: "O sınıfın en iyi öğrencisi.", wrong: true, correction: "She is the best student in the class.", note_tr: "Yer ve gruplarla in."}
+      - {en: "This is the most cheapest one.", tr: "Bu en ucuzu.", wrong: true, correction: "This is the cheapest one.", note_tr: "Most ve -est birlikte kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **The'yı unutmak.** Türkçede "en uzun" derken tanımlık yoktur; İngilizcede **the** tallest.
+
+      **İki şeyi karşılaştırırken en üstünlük kullanmak.** İki şey için karşılaştırma derecesi kullanılır: "Ali is the **taller** of the two."
+
+      **"In the world" yerine "of the world" demek.** Yerlerle **in** kullanılır.
+questions:
+  - id: q.a2.superlatives.01
+    type: multiple_choice
+    prompt: "Mount Everest is ___ mountain in the world."
+    options:
+      - "*the highest :: Bir grubun (dünyadaki dağlar) en ucu: the + -est."
+      - "higher :: Higher iki şeyi karşılaştırır."
+      - "the most high :: High kısa bir sıfattır; most almaz."
+      - "highest :: En üstünlük derecesinden önce the gerekir."
+    explanation: "Kısa sıfat: the + sıfat-est."
+  - id: q.a2.superlatives.02
+    type: multiple_choice
+    prompt: "This is ___ restaurant in the city."
+    options:
+      - "*the most expensive :: Uzun sıfat: the most + sıfat."
+      - "the expensivest :: Uzun sıfatlar -est almaz."
+      - "more expensive :: Bu karşılaştırma derecesidir."
+      - "the more expensive :: En üstünlük için most gerekir."
+    explanation: "Uzun sıfat: the most + sıfat."
+  - id: q.a2.superlatives.03
+    type: word_formation
+    prompt: "It was ___ (bad) film I have ever seen."
+    answers: ["the worst"]
+    explanation: "Bad → worse → the worst."
+  - id: q.a2.superlatives.04
+    type: fill_blank
+    prompt: "She is the best player ___ the team."
+    answers: [in]
+    explanation: "Grup ve yerlerle in kullanılır: in the team, in the world."
+  - id: q.a2.superlatives.05
+    type: error_correction
+    prompt: "Today is the most happy day of my life."
+    answers: ["Today is the happiest day of my life."]
+    explanation: "Happy, -y ile biten iki heceli bir sıfattır: the happiest."
+  - id: q.a2.superlatives.06
+    type: nuance
+    difficulty: 3
+    prompt: "İki kardeşten söz ediliyor. Hangi cümle doğrudur?"
+    options:
+      - "*Elif is the older of the two sisters. :: İki kişi arasında karşılaştırma derecesi kullanılır."
+      - "Elif is the oldest of the two sisters. :: En üstünlük derecesi üç ve daha çok şey için kullanılır."
+      - "Elif is the most old of the two sisters. :: Old kısa bir sıfattır."
+      - "Elif is oldest than her sister. :: Than karşılaştırma derecesiyle kullanılır."
+    explanation: "İki şey → karşılaştırma (older); üç ve daha çok → en üstünlük (oldest)."
+    lessons: [gram.a2.comparatives]
+  - id: q.a2.superlatives.07
+    type: sentence_completion
+    prompt: "That's the best book ___"
+    options:
+      - "*I have ever read. :: En üstünlük + Present Perfect + ever: \"okuduğum en iyi kitap\"."
+      - "I ever read. :: Ever ile Present Perfect gerekir."
+      - "than I read. :: Than karşılaştırma derecesiyle kullanılır."
+      - "I am reading ever. :: Ever bu yapıda Continuous ile kullanılmaz."
+    explanation: "the + en üstünlük + (that) + Present Perfect + ever."
+    lessons: [gram.a2.present-perfect]
+  - id: q.a2.superlatives.08
+    type: translation
+    prompt: "O sınıftaki en uzun öğrenci."
+    answers: ["He is the tallest student in the class.", "She is the tallest student in the class.", "He's the tallest student in the class.", "She's the tallest student in the class."]
+    explanation: "The + tallest; grup için in the class."

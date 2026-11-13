@@ -1,0 +1,118 @@
+id: gram.a2.comparatives
+kind: grammar
+level: A2
+title_tr: Sıfatların karşılaştırma derecesi
+title_en: Comparative adjectives
+objective_tr: Bu dersin sonunda iki şeyi -er / more ve than ile karşılaştırabilecek, as ... as ile eşitlik bildirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a1.to-be-present]
+next: [gram.a2.superlatives]
+vocabulary: [than, big, expensive, good, bad, far]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İki şeyi karşılaştırırken sıfat **karşılaştırma derecesine** girer ve ardından **than** (-den / -dan) gelir: "Ankara is **colder than** Izmir." (Ankara İzmir'den daha soğuk.)
+
+      Türkçede her sıfatın önüne "daha" konur. İngilizcede ise sıfatın uzunluğuna göre iki yol vardır: kısa sıfatlara **-er** eklenir, uzun sıfatların önüne **more** gelir.
+  - kind: formula
+    title_tr: Yapım kuralları
+    table:
+      headers: ["Sıfat türü", "Kural", "Örnek"]
+      rows:
+        - ["tek heceli", "+ -er", "cold → colder, tall → taller"]
+        - ["-e ile biten", "+ -r", "nice → nicer, large → larger"]
+        - ["tek hece: ünsüz + ünlü + ünsüz", "son ünsüz çiftlenir + -er", "big → bigger, hot → hotter"]
+        - ["-y ile biten iki heceli", "y → -ier", "happy → happier, easy → easier"]
+        - ["iki ve daha çok heceli", "more + sıfat", "expensive → more expensive, modern → more modern"]
+        - ["düzensiz", "ezberlenir", "good → better, bad → worse, far → farther / further"]
+  - kind: usage
+    title_tr: Diğer karşılaştırma kalıpları
+    text_tr: |-
+      **Eşitlik:** as + sıfat + as → "She is **as tall as** her brother." (Erkek kardeşi kadar uzun.)
+
+      **Eşitsizlik:** not as + sıfat + as → "This phone is **not as expensive as** that one."
+
+      **Farkı vurgulamak:** much / a lot / a bit + karşılaştırma → "It is **much better**.", "He is **a bit older** than me." (very kullanılmaz.)
+
+      **Daha az:** less + sıfat + than → "This book is **less interesting than** the film."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My brother is taller than me.", tr: "Erkek kardeşim benden daha uzun."}
+      - {en: "This exercise is easier than the last one.", tr: "Bu alıştırma öncekinden daha kolay."}
+      - {en: "A car is more expensive than a bike.", tr: "Araba bisikletten daha pahalıdır."}
+      - {en: "The weather is better today.", tr: "Bugün hava daha iyi."}
+      - {en: "Istanbul is much bigger than Bursa.", tr: "İstanbul Bursa'dan çok daha büyük."}
+      - {en: "I am not as young as you.", tr: "Senin kadar genç değilim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She is more tall than me.", tr: "O benden daha uzun.", wrong: true, correction: "She is taller than me.", note_tr: "Kısa sıfat: -er."}
+      - {en: "This is more better.", tr: "Bu daha iyi.", wrong: true, correction: "This is better.", note_tr: "Çift karşılaştırma yapılmaz."}
+      - {en: "He is older that me.", tr: "O benden büyük.", wrong: true, correction: "He is older than me.", note_tr: "Karşılaştırmada than."}
+      - {en: "It is very cheaper.", tr: "Çok daha ucuz.", wrong: true, correction: "It is much cheaper.", note_tr: "Karşılaştırmayı much güçlendirir."}
+      - {en: "My English is gooder now.", tr: "İngilizcem artık daha iyi.", wrong: true, correction: "My English is better now.", note_tr: "Good düzensizdir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **More ile -er'i birlikte kullanmak.** "more bigger", "more easier" yanlıştır.
+
+      **Than yerine that ya da from yazmak.** Türkçedeki "-den" eki İngilizcede **than** ile karşılanır.
+
+      **Uzun sıfata -er eklemek.** "beautifuller", "expensiver" yanlıştır; **more** beautiful, **more** expensive.
+questions:
+  - id: q.a2.comparatives.01
+    type: multiple_choice
+    prompt: "A plane is ___ than a train."
+    options:
+      - "*faster :: Fast tek heceli bir sıfattır; -er alır."
+      - "more fast :: Tek heceli sıfatlarla more kullanılmaz."
+      - "fastest :: -est en üstünlük derecesidir; burada iki şey karşılaştırılıyor."
+      - "more faster :: More ve -er birlikte kullanılmaz."
+    explanation: "Kısa sıfat + -er + than."
+  - id: q.a2.comparatives.02
+    type: multiple_choice
+    prompt: "This hotel is ___ than the other one."
+    options:
+      - "*more comfortable :: Uzun sıfatların önüne more gelir."
+      - "comfortabler :: Uzun sıfatlar -er almaz."
+      - "most comfortable :: Most en üstünlük derecesidir."
+      - "more comfortabler :: More ve -er birlikte kullanılmaz."
+    explanation: "Uzun sıfat → more + sıfat + than."
+  - id: q.a2.comparatives.03
+    type: word_formation
+    prompt: "My new job is ___ (good) than my old one."
+    answers: [better]
+    explanation: "Good düzensizdir: good → better."
+  - id: q.a2.comparatives.04
+    type: word_formation
+    prompt: "Today is ___ (hot) than yesterday."
+    answers: [hotter]
+    explanation: "Tek heceli, ünsüz + ünlü + ünsüz: son ünsüz çiftlenir → hotter."
+  - id: q.a2.comparatives.05
+    type: word_formation
+    prompt: "This test is ___ (easy) than the last one."
+    answers: [easier]
+    explanation: "-y ile biten iki heceli sıfat: y → -ier."
+  - id: q.a2.comparatives.06
+    type: error_correction
+    prompt: "My sister is more old than me."
+    answers: ["My sister is older than me.", "My sister is older than I am."]
+    explanation: "Old kısa bir sıfattır: older."
+  - id: q.a2.comparatives.07
+    type: nuance
+    difficulty: 3
+    prompt: "\"Tom is not as tall as Ali.\" cümlesiyle aynı anlama gelen hangisidir?"
+    options:
+      - "*Ali is taller than Tom. :: Tom Ali kadar uzun değilse Ali daha uzundur."
+      - "Tom is taller than Ali. :: Tam tersi anlama gelir."
+      - "Tom is as tall as Ali. :: Bu, boylarının eşit olduğunu söyler."
+      - "Ali is not as tall as Tom. :: Bu, Tom'un daha uzun olduğunu söyler."
+    explanation: "A is not as ... as B = B is more ... than A."
+  - id: q.a2.comparatives.08
+    type: translation
+    prompt: "Bu kitap filmden daha ilginç."
+    answers: ["This book is more interesting than the film.", "This book is more interesting than the movie."]
+    explanation: "Uzun sıfat: more interesting + than."

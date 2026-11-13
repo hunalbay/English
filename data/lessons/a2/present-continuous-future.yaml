@@ -1,0 +1,123 @@
+id: gram.a2.present-continuous-future
+kind: grammar
+level: A2
+title_tr: "Kesinleşmiş planlar: gelecek anlamında Present Continuous"
+title_en: "Present Continuous for future arrangements"
+objective_tr: Bu dersin sonunda zamanı ve yeri belli, başkalarıyla ayarlanmış planlarınızı Present Continuous ile anlatabilecek; tarifeler için Present Simple kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.will, gram.a1.present-continuous]
+vocabulary: [meet, tonight, tomorrow, appointment, flight]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Present Continuous** yalnızca şu anı değil, **kesinleşmiş gelecek planlarını** da anlatır: "I **am meeting** Ali at eight tonight." (Bu akşam sekizde Ali'yle buluşuyorum.)
+
+      Türkçede de aynı şeyi yaparız: "Yarın doktora **gidiyorum**." Cümlede bir **gelecek zaman ifadesi** bulunur ya da bağlamdan anlaşılır; yoksa cümle "şu an" anlamına gelir.
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Ayarlanmış buluşmalar ve randevular:** "I'm seeing the dentist on Friday."
+
+      **Bileti alınmış, rezervasyonu yapılmış planlar:** "We're flying to Antalya next week."
+
+      **Yakın gelecekteki hareketler:** "I'm leaving in ten minutes."
+
+      Hava durumu gibi **denetleyemediğimiz olaylar** için kullanılmaz: "It's raining tomorrow" doğal değildir; "It's going to rain tomorrow" denir.
+  - kind: comparison
+    title_tr: Geleceği anlatmanın dört yolu
+    table:
+      headers: ["Yapı", "Ne zaman?", "Örnek"]
+      rows:
+        - ["will", "anlık karar, görüşe dayalı tahmin, söz", "I'll call you later."]
+        - ["be going to", "önceden verilmiş karar, belirtiye dayalı tahmin", "I'm going to learn Spanish."]
+        - ["Present Continuous", "başkalarıyla ayarlanmış kesin plan", "I'm having lunch with Ayşe tomorrow."]
+        - ["Present Simple", "tarife, program", "The train leaves at 9.15."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "What are you doing this weekend?", tr: "Bu hafta sonu ne yapıyorsun?"}
+      - {en: "We are having dinner with my parents tonight.", tr: "Bu akşam annemlerle yemek yiyoruz."}
+      - {en: "She is starting her new job on Monday.", tr: "Pazartesi günü yeni işine başlıyor."}
+      - {en: "I'm not working tomorrow.", tr: "Yarın çalışmıyorum."}
+      - {en: "The film starts at eight.", tr: "Film sekizde başlıyor.", note_tr: "Program: Present Simple."}
+      - {en: "My flight leaves at six in the morning.", tr: "Uçağım sabah altıda kalkıyor.", note_tr: "Tarife: Present Simple."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I meet Tom tomorrow at five.", tr: "Yarın beşte Tom'la buluşuyorum.", wrong: true, correction: "I'm meeting Tom tomorrow at five.", note_tr: "Kişisel plan: Present Continuous."}
+      - {en: "It is snowing tomorrow.", tr: "Yarın kar yağacak.", wrong: true, correction: "It is going to snow tomorrow.", note_tr: "Denetlenemeyen olay."}
+      - {en: "The train is leaving at 9.15 every day.", tr: "Tren her gün 9.15'te kalkar.", wrong: true, correction: "The train leaves at 9.15 every day.", note_tr: "Tarife: Present Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Kişisel planlar için Present Simple kullanmak.** "I go to the cinema tonight" yanlıştır; "I'm going to the cinema tonight."
+
+      **Zaman ifadesini unutmak.** "I'm meeting Ali" tek başına "şu an Ali'yle buluşuyorum" gibi de anlaşılabilir.
+
+      **Going to ile karıştırmak.** İkisi çoğu zaman birbirinin yerine kullanılabilir; Present Continuous planın **kesinleştiğini** (saat, yer, kişi belli) daha güçlü vurgular.
+questions:
+  - id: q.a2.pc-future.01
+    type: multiple_choice
+    prompt: "I ___ the dentist at three tomorrow. I made the appointment last week."
+    options:
+      - "*am seeing :: Randevusu alınmış kesin plan: Present Continuous."
+      - "see :: Kişisel planlar için Present Simple kullanılmaz."
+      - "will see :: Will anlık kararı gösterir; randevu geçen hafta alınmış."
+      - "saw :: Past Simple geçmişi anlatır."
+    explanation: "Ayarlanmış randevu → Present Continuous."
+  - id: q.a2.pc-future.02
+    type: multiple_choice
+    prompt: "Hurry up! The film ___ at eight."
+    options:
+      - "*starts :: Sinema programı gibi tarifeler Present Simple ile söylenir."
+      - "is going to start :: Mümkün, ancak program bildirirken alışılmış biçim Present Simple'dır."
+      - "will starting :: Böyle bir yapı yoktur."
+      - "started :: Past Simple geçmişi anlatır."
+    explanation: "Tarife ve programlar → Present Simple."
+  - id: q.a2.pc-future.03
+    type: fill_blank
+    prompt: "What ___ you doing this weekend?"
+    answers: [are]
+    explanation: "Gelecek planını soran Present Continuous: What are you doing...?"
+  - id: q.a2.pc-future.04
+    type: error_correction
+    prompt: "We have dinner with friends tonight."
+    answers: ["We are having dinner with friends tonight.", "We're having dinner with friends tonight."]
+    explanation: "Bu akşam için ayarlanmış kişisel plan: Present Continuous."
+  - id: q.a2.pc-future.05
+    type: matching
+    prompt: "Cümleleri kullanım amaçlarıyla eşleştirin."
+    pairs:
+      - ["I'll carry that for you.", "anlık teklif"]
+      - ["I'm going to stop smoking.", "önceden verilmiş karar"]
+      - ["I'm flying to Rome on Friday.", "kesinleşmiş plan"]
+      - ["The bus leaves at 7.30.", "tarife"]
+    explanation: "İngilizcede geleceği anlatmak için duruma göre dört farklı yapı kullanılır."
+    lessons: [gram.a2.will, gram.a2.going-to]
+  - id: q.a2.pc-future.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle doğal DEĞİLDİR?"
+    options:
+      - "*It is raining tomorrow afternoon. :: Hava durumu ayarlanabilen bir plan değildir; going to ya da will kullanılır."
+      - "I am leaving tomorrow morning. :: Kesinleşmiş kişisel plan; doğru."
+      - "She is getting married in June. :: Ayarlanmış bir olay; doğru."
+      - "We are meeting at the station at six. :: Ayarlanmış bir buluşma; doğru."
+    explanation: "Present Continuous yalnızca insanların ayarlayabildiği planlar için gelecek anlamı taşır."
+  - id: q.a2.pc-future.07
+    type: dialogue_completion
+    context: "A: Are you free on Saturday?\nB: Sorry, ___ my cousins. They're coming from Ankara."
+    prompt: "B ne der?"
+    options:
+      - "*I'm visiting :: Ayarlanmış plan: Present Continuous."
+      - "I visit :: Present Simple alışkanlık bildirir."
+      - "I visited :: Past Simple geçmişi anlatır."
+      - "I'll visit :: Will anlık kararı gösterir; plan zaten yapılmış."
+    explanation: "Başkalarıyla ayarlanmış plan → Present Continuous."
+  - id: q.a2.pc-future.08
+    type: translation
+    prompt: "Yarın çalışmıyorum."
+    answers: ["I'm not working tomorrow.", "I am not working tomorrow.", "Tomorrow I'm not working."]
+    explanation: "Kesinleşmiş plan (olumsuz): am not + fiil-ing + gelecek zaman ifadesi."
