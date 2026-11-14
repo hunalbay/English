@@ -1,0 +1,144 @@
+id: gram.c2.fixed-structures
+kind: grammar
+level: C2
+title_tr: "Kalıplaşmış ve edebî yapılar: lest, so as to, come what may"
+title_en: "Fixed and literary structures"
+objective_tr: Bu dersin sonunda amaç ve kaçınma bildiren lest, so as (not) to, for fear of yapılarını, kalıplaşmış dilek kipi ifadelerini ve whatsoever, as yet, such as it is gibi kalıpları tanıyıp resmî ve edebî metinlerde anlayabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.subjunctive, gram.c2.concession-advanced]
+vocabulary: [lest, hence, thereby, whereby, whatsoever, henceforth]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Edebî metinlerde, hukuk dilinde, resmî konuşmalarda ve deyimlerde, günlük dil bilgisi kurallarıyla açıklanamayan **kalıplaşmış yapılar** bulunur. Çoğu eski İngilizcenin kalıntısıdır. Bunları üretmeniz nadiren gerekir; ama **tanımanız** ileri düzey okuma için şarttır.
+  - kind: formula
+    title_tr: Amaç ve kaçınma
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["so as to / in order to + fiil", "-mek için", "She left early so as to avoid the traffic."]
+        - ["so as not to + fiil", "-memek için", "He spoke quietly so as not to wake the baby."]
+        - ["lest + özne + (should) + yalın fiil", "-mesin diye (edebî)", "He hid the letter lest she (should) find it."]
+        - ["for fear of + -ing / for fear that", "korkusuyla", "I said nothing for fear of offending him."]
+        - ["with a view to + -ing", "amacıyla (resmî)", "They met with a view to resolving the dispute."]
+        - ["thereby + -ing", "böylelikle", "He resigned, thereby ending the crisis."]
+  - kind: formula
+    title_tr: Kalıplaşmış ifadeler
+    table:
+      headers: ["İfade", "Anlam"]
+      rows:
+        - ["come what may", "ne olursa olsun"]
+        - ["be that as it may", "öyle olsa bile"]
+        - ["suffice it to say", "şu kadarını söylemek yeter"]
+        - ["far be it from me to ...", "... yapmak bana düşmez, ama"]
+        - ["so be it", "öyle olsun"]
+        - ["if need be", "gerekirse"]
+        - ["as it were", "deyim yerindeyse"]
+        - ["such as it is", "pek bir şey sayılmasa da"]
+        - ["as yet / as of yet", "henüz (olumsuzda)"]
+        - ["none whatsoever", "hiç ama hiç"]
+        - ["to say nothing of / let alone", "... şöyle dursun, bir de"]
+  - kind: usage
+    title_tr: Resmî ve hukuki bağlayıcılar
+    text_tr: |-
+      **hence** = bu nedenle; **thus** = böylece; **thereby** = bu yolla; **whereby** = ki onun aracılığıyla ("a system **whereby** users can vote"); **hereby** = işbu belgeyle ("I **hereby** declare..."); **henceforth** = bundan böyle; **herein / therein** = bunun / onun içinde; **the aforementioned** = yukarıda anılan.
+
+      **Let alone** olumsuz cümlelerde bir üst basamağı dışlar: "I can't afford a bicycle, **let alone** a car." (Araba şöyle dursun, bisiklet bile alamam.)
+
+      **Whatsoever** olumsuzluğu pekiştirir ve isimden sonra gelir: "There is **no** evidence **whatsoever**."
+
+      Bu yapılar günlük konuşmada kullanıldığında çoğunlukla **şaka ya da ironi** amacı taşır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I wrote it down lest I should forget.", tr: "Unutmayayım diye yazdım."}
+      - {en: "Come what may, we will finish this project.", tr: "Ne olursa olsun bu projeyi bitireceğiz."}
+      - {en: "He can barely boil an egg, let alone cook a three-course meal.", tr: "Üç çeşit yemek pişirmek şöyle dursun, yumurta bile zor haşlar."}
+      - {en: "Suffice it to say, the meeting did not go well.", tr: "Şu kadarını söyleyeyim, toplantı iyi geçmedi."}
+      - {en: "We need a system whereby complaints can be handled quickly.", tr: "Şikâyetlerin hızla ele alınabileceği bir sisteme ihtiyacımız var."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He left early so as to not miss the train.", tr: "Treni kaçırmamak için erken çıktı.", wrong: true, correction: "He left early so as not to miss the train.", note_tr: "so as not to."}
+      - {en: "She whispered lest he didn't hear.", tr: "Duymasın diye fısıldadı.", wrong: true, correction: "She whispered lest he (should) hear.", note_tr: "Lest zaten olumsuz anlamlıdır; yalın fiil."}
+      - {en: "I have no idea whatsoever idea.", tr: "En ufak bir fikrim yok.", wrong: true, correction: "I have no idea whatsoever.", note_tr: "İsimden sonra."}
+      - {en: "With a view to resolve the issue, they met.", tr: "Sorunu çözmek amacıyla buluştular.", wrong: true, correction: "With a view to resolving the issue, they met.", note_tr: "to burada edat: -ing."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Lest'ten sonra olumsuz fiil kullanmak.** Lest "olmasın diye" anlamını kendisi taşır.
+
+      **With a view to / look forward to / object to kalıplarında yalın fiil kullanmak.**
+
+      **Bu yapıları gündelik bağlamda ciddi ciddi kullanmak.** Üslup uyumsuzluğu yaratır.
+questions:
+  - id: q.c2.fixed.01
+    type: multiple_choice
+    prompt: "He tiptoed up the stairs ___ wake his parents."
+    options:
+      - "*so as not to :: Olumsuz amaç: so as not to + yalın fiil."
+      - "so as to not :: Yerleşik sıra \"so as not to\"dur."
+      - "lest to :: Lest'ten sonra özne + fiil gelir."
+      - "for fear to :: for fear of + -ing kullanılır."
+    explanation: "so as not to / in order not to + yalın fiil."
+  - id: q.c2.fixed.02
+    type: multiple_choice
+    prompt: "She kept the documents in a safe ___ they fall into the wrong hands."
+    options:
+      - "*lest :: lest + özne + yalın fiil: -mesin diye."
+      - "unless :: Unless koşul bildirir (\"-medikçe\"); amaç değil."
+      - "so as :: So as'ten sonra to + fiil gelir, özne değil."
+      - "in case of :: In case of'tan sonra isim gelir."
+    explanation: "Lest edebî ve resmîdir; ardından yalın fiil (ya da should) gelir."
+  - id: q.c2.fixed.03
+    type: multiple_choice
+    prompt: "I don't have time to read the summary, ___ the full report."
+    options:
+      - "*let alone :: Olumsuz cümlede bir üst basamağı dışlar: ... şöyle dursun."
+      - "as well as :: Ekleme bildirir; olumsuz pekiştirme yapmaz."
+      - "rather than :: Tercih bildirir."
+      - "so as to :: Amaç bildirir."
+    explanation: "let alone / to say nothing of: ... şöyle dursun."
+  - id: q.c2.fixed.04
+    type: word_in_context
+    difficulty: 5
+    context: "\"The committee has proposed a scheme whereby employees may purchase shares at a discount.\""
+    prompt: "\"Whereby\" burada ne anlama gelir?"
+    options:
+      - "*Onun aracılığıyla, o düzenleme sayesinde (by which). :: whereby = by which."
+      - "Nerede. :: Yer bildirmez."
+      - "Oysa, buna karşın. :: Bu, whereas'ın anlamıdır."
+      - "Bu nedenle. :: Bu, hence / therefore'un anlamıdır."
+    explanation: "whereby: bir yöntemi ya da düzenlemeyi açıklar."
+  - id: q.c2.fixed.05
+    type: error_correction
+    prompt: "The two companies held talks with a view to form a partnership."
+    answers: ["The two companies held talks with a view to forming a partnership."]
+    explanation: "With a view to'daki to edattır; ardından -ing gelir."
+  - id: q.c2.fixed.06
+    type: matching
+    prompt: "Kalıpları anlamlarıyla eşleştirin."
+    pairs:
+      - ["come what may", "ne olursa olsun"]
+      - ["if need be", "gerekirse"]
+      - ["be that as it may", "öyle olsa bile"]
+      - ["suffice it to say", "şu kadarını söylemek yeter"]
+      - ["so be it", "öyle olsun"]
+    explanation: "Bu ifadeler eski dilek kipinin kalıplaşmış biçimleridir."
+  - id: q.c2.fixed.07
+    type: fill_blank
+    prompt: "There is no truth ___ in these rumours. (olumsuzluğu pekiştiren sözcük)"
+    answers: [whatsoever, whatever]
+    explanation: "no + isim + whatsoever: hiç ama hiç."
+  - id: q.c2.fixed.08
+    type: nuance
+    difficulty: 5
+    prompt: "Bir arkadaş sohbetinde biri \"Far be it from me to criticize, but that haircut is... brave.\" diyor. Bu ifadenin etkisi nedir?"
+    options:
+      - "*Resmî bir kalıbı şaka yollu kullanarak eleştirisini ironik biçimde yumuşatır. :: Resmî kalıplar gündelik konuşmada çoğunlukla mizah amacıyla kullanılır."
+      - "Gerçekten eleştirmek istemediğini bildirir. :: Ardından gelen \"but\" eleştirinin geleceğini gösterir."
+      - "Saç kesimini içtenlikle övdüğünü gösterir. :: \"Brave\" burada örtülü bir eleştiridir."
+      - "Dil bilgisi hatası yaptığını gösterir. :: Kalıp doğrudur."
+    explanation: "Kalıplaşmış resmî ifadeler ironik bir ton yaratabilir."

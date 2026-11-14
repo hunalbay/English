@@ -1,0 +1,130 @@
+id: gram.c2.concession-advanced
+kind: grammar
+level: C2
+title_tr: "İleri ödünleme yapıları: much as, however, no matter"
+title_en: "Advanced concession"
+objective_tr: Bu dersin sonunda much as, however + sıfat, no matter + soru sözcüğü, whatever, albeit, notwithstanding ve for all gibi yapılarla ince zıtlık ve ödünleme ilişkileri kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.emphasis-fronting, gram.b2.linking-advanced]
+vocabulary: [albeit, notwithstanding, regardless, admittedly, whatever, however]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Ödünleme (concession), bir şeyi **kabul edip** ona rağmen başka bir şeyin geçerli olduğunu söylemektir. Although ve despite bu işi görür; C2 düzeyinde ise aynı ilişkiyi kuran, üslup ve vurgu bakımından ayrışan çok sayıda yapı vardır.
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["Much as + özne + fiil", "ne kadar ... -se de", "Much as I admire her, I can't agree."]
+        - ["However + sıfat / zarf + özne + fiil", "ne kadar ... olursa olsun", "However hard I try, I can't remember."]
+        - ["No matter + how / what / who / where", "ne ... olursa olsun", "No matter what he says, don't believe him."]
+        - ["Whatever / Whoever / Wherever", "her ne / her kim / her nerede", "Whatever you decide, I'll support you."]
+        - ["Sıfat + though / as + özne + fiil", "-e rağmen", "Difficult though it was, we finished."]
+        - ["albeit + sıfat / zarf / öbek", "gerçi, -se de (resmî)", "It was a success, albeit a modest one."]
+        - ["notwithstanding + isim", "-e rağmen (hukuki, resmî)", "Notwithstanding the objections, the plan was approved."]
+        - ["for all + isim", "bütün ... -ına rağmen", "For all his wealth, he is not happy."]
+        - ["while / whilst + cümle", "gerçi ... ama", "While I see your point, I disagree."]
+        - ["even so / all the same / be that as it may", "yine de", "It's expensive. Even so, it's worth it."]
+        - ["granted / admittedly", "kabul, doğru; ama", "Admittedly, it was my fault."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **However'ın iki kullanımı:** bağlayıcı ("**However,** we disagreed.") ve derece zarfı ("**However tired** you are...").
+
+      **No matter ve whatever'dan sonra will kullanılmaz:** "No matter what **happens**, ..."
+
+      **Albeit bir cümleyi değil öbeği bağlar:** "albeit slowly", "albeit with difficulty". "Albeit it was slow" seyrek ve hantaldır.
+
+      **Notwithstanding** isimden sonra da gelebilir: "the objections **notwithstanding**".
+
+      **May ile ödünleme:** "He **may be** rich, **but** he's not generous." (Zengin olabilir ama cömert değil.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Much as I would like to help, I simply don't have the time.", tr: "Yardım etmeyi ne kadar istesem de vaktim yok."}
+      - {en: "However carefully you plan, something always goes wrong.", tr: "Ne kadar dikkatli planlarsan planla, mutlaka bir şey ters gider."}
+      - {en: "The results were encouraging, albeit preliminary.", tr: "Sonuçlar, ön nitelikte olsalar da, umut vericiydi."}
+      - {en: "For all its faults, the system works.", tr: "Bütün kusurlarına rağmen sistem işliyor."}
+      - {en: "No matter how many times I explain it, he doesn't understand.", tr: "Kaç kez açıklarsam açıklayayım anlamıyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "However I try hard, I fail.", tr: "Ne kadar uğraşsam da başaramıyorum.", wrong: true, correction: "However hard I try, I fail.", note_tr: "However + zarf + özne + fiil."}
+      - {en: "No matter what will happen, stay calm.", tr: "Ne olursa olsun sakin kal.", wrong: true, correction: "No matter what happens, stay calm.", note_tr: "Will kullanılmaz."}
+      - {en: "Much as I like him, but I can't trust him.", tr: "Onu ne kadar sevsem de ona güvenemiyorum.", wrong: true, correction: "Much as I like him, I can't trust him.", note_tr: "But ile birlikte olmaz."}
+      - {en: "For all of he is rich, he is unhappy.", tr: "Bütün zenginliğine rağmen mutsuz.", wrong: true, correction: "For all his wealth, he is unhappy.", note_tr: "for all + isim."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Sözcük sırası:** however'dan hemen sonra sıfat ya da zarf gelmelidir.
+
+      **Çift bağlaç:** ödünleme yapısıyla birlikte but kullanmak.
+
+      **Kayıt (register) uyumsuzluğu:** albeit ve notwithstanding gündelik konuşmada yapay durur.
+questions:
+  - id: q.c2.concession.01
+    type: multiple_choice
+    prompt: "___ I respect his experience, I think he is wrong on this point."
+    options:
+      - "*Much as :: Much as + özne + fiil: ne kadar ... -se de."
+      - "However :: However'dan sonra sıfat ya da zarf gelmelidir."
+      - "Albeit :: Albeit tam bir cümlecik başlatmaz."
+      - "For all :: For all'dan sonra isim gelir."
+    explanation: "Much as = although ... very much."
+  - id: q.c2.concession.02
+    type: multiple_choice
+    prompt: "___ late it is, call me when you arrive."
+    options:
+      - "*However :: However + sıfat + özne + fiil."
+      - "Whatever :: Whatever sıfatı bu şekilde nitelemez."
+      - "No matter :: \"No matter how late\" olmalıydı; how eksik."
+      - "Much as :: Much as'ten sonra özne + fiil gelir."
+    explanation: "However + sıfat / zarf = no matter how."
+  - id: q.c2.concession.03
+    type: multiple_choice
+    prompt: "The project was completed on time, ___ at considerable cost."
+    options:
+      - "*albeit :: Albeit bir öbeği bağlar: gerçi ... -se de."
+      - "although :: Although'dan sonra tam cümlecik beklenir (resmî yazıda)."
+      - "despite :: Despite'tan sonra isim gelir; \"at ... cost\" edat öbeğidir."
+      - "however :: However bu konumda iki ögeyi bağlamaz."
+    explanation: "albeit + sıfat / zarf / edat öbeği."
+  - id: q.c2.concession.04
+    type: sentence_building
+    prompt: "\"Although the task was difficult, they completed it.\" → Difficult ..."
+    answers: ["Difficult though the task was, they completed it.", "Difficult as the task was, they completed it."]
+    explanation: "Sıfat + though / as + özne + fiil."
+  - id: q.c2.concession.05
+    type: sentence_building
+    prompt: "\"Although he has a lot of experience, he made a basic mistake.\" → For all ..."
+    answers: ["For all his experience, he made a basic mistake."]
+    explanation: "for all + isim: bütün ... -ına rağmen."
+  - id: q.c2.concession.06
+    type: error_correction
+    prompt: "No matter how will the negotiations end, both sides have lost public trust."
+    answers: ["No matter how the negotiations end, both sides have lost public trust."]
+    explanation: "No matter + soru sözcüğü + özne + Present Simple."
+  - id: q.c2.concession.07
+    type: nuance
+    difficulty: 5
+    prompt: "\"She may be young, but she is extremely capable.\" cümlesinde may ne işlev görür?"
+    options:
+      - "*Bir olguyu kabul edip ardından gelen karşıt düşünceye zemin hazırlar. :: Ödünleme bildiren may: \"genç olabilir, doğru; ama...\""
+      - "Genç olup olmadığından emin olunmadığını bildirir. :: Konuşan onun genç olduğunu biliyor."
+      - "İzin bildirir. :: İzin anlamı yok."
+      - "Gelecekteki bir olasılığı bildirir. :: Şu anki bir durumdan söz ediliyor."
+    explanation: "may ... but: ödünleme kalıbı."
+  - id: q.c2.concession.08
+    type: word_in_context
+    difficulty: 5
+    context: "Notwithstanding the committee's reservations, the board approved the merger. The decision, controversial though it was, has since proved to be the right one."
+    prompt: "\"Notwithstanding the committee's reservations\" ne anlama gelir?"
+    options:
+      - "*Komitenin çekincelerine rağmen. :: Notwithstanding = despite (resmî)."
+      - "Komitenin çekinceleri yüzünden. :: Neden değil, ödünleme bildirir."
+      - "Komitenin çekinceleri olmadığı için. :: Çekinceler vardı; onlara rağmen karar alındı."
+      - "Komitenin çekincelerine ek olarak. :: Ekleme anlamı yok."
+    explanation: "notwithstanding + isim = despite."

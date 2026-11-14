@@ -1,0 +1,153 @@
+id: gram.c2.cohesion
+kind: grammar
+level: C2
+title_tr: "Metin dokusu: bilgi akışı ve gönderme"
+title_en: "Cohesion: information flow and reference"
+objective_tr: Bu dersin sonunda cümleleri bilinen bilgiden yeni bilgiye doğru düzenleyebilecek, it, this, that, such ve özetleyici isimlerle metin içi göndermeleri doğru kurabilecek, paragraflarınızı akıcı ve tutarlı kılabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.cleft-sentences, gram.c1.ellipsis-substitution, gram.c2.passive-nuances]
+vocabulary: [issue, factor, trend, approach, aspect, phenomenon]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Tek tek kusursuz cümleler yan yana geldiğinde her zaman iyi bir paragraf oluşturmaz. Metni **metin** yapan, cümlelerin birbirine **bağlanma** biçimidir. Bu bağ yalnızca bağlaçlarla değil, **bilginin sıralanışı** ve **göndermelerle** kurulur.
+  - kind: usage
+    title_tr: "Bilinen önce, yeni sonra"
+    text_tr: |-
+      İngilizcede cümle doğal olarak **bilinen bilgiyle başlar, yeni bilgiyle biter** (end-focus). Her cümle bir öncekinin sonunu devralır:
+
+      "We visited a small **village**. **The village** has a famous **mosque**. **The mosque** was built in the 15th century."
+
+      Edilgen çatı, cleft cümleler ve öne alma bu sıralamayı sağlamak için kullanılır:
+
+      "A new bridge is planned. **Engineers from Japan will design it**." → daha akıcı: "**It will be designed** by engineers from Japan."
+
+      Uzun ve ağır ögeler sona bırakılır (end-weight): "**It** is surprising **that so few people voted**." ("That so few people voted is surprising" hantaldır.)
+  - kind: formula
+    title_tr: Gönderme araçları
+    table:
+      headers: ["Araç", "Kullanım", "Örnek"]
+      rows:
+        - ["it", "az önce anılan belirli bir isim", "I bought a car. It was cheap."]
+        - ["this", "az önce söylenen düşüncenin tamamı; yakınlık", "Prices doubled. This caused panic."]
+        - ["that", "mesafe; karşıdakinin söylediği", "That's a good point."]
+        - ["this / these + özetleyici isim", "önceki cümleyi bir kavramla özetler", "This trend is likely to continue."]
+        - ["such + isim", "bu tür", "Such measures rarely work."]
+        - ["the former / the latter", "ilki / ikincisi", "The latter is more common."]
+        - ["do so / one / so", "yerine koyma", "Those who can do so should."]
+        - ["eş anlamlı ve üst kavram", "tekrardan kaçınma", "a lion ... the animal ... the predator"]
+  - kind: usage
+    title_tr: Özetleyici isimler
+    text_tr: |-
+      **This / these + genel isim** önceki cümleyi tek sözcükle paketler ve yorum katar:
+
+      "Sales fell for the third year. **This decline** worried investors." (yansız) / "**This disaster**..." (yorumlu)
+
+      Sık kullanılanlar: issue, problem, situation, trend, development, approach, view, argument, claim, finding, factor, process, phenomenon, tendency.
+
+      **Çıplak "this"ten kaçının:** "This is important." — neyin? Belirsizse ismini ekleyin: "**This distinction** is important."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Many young people are leaving rural areas. This trend has serious consequences for agriculture.", tr: "Birçok genç kırsal bölgeleri terk ediyor. Bu eğilimin tarım için ciddi sonuçları var."}
+      - {en: "The report makes three recommendations. The first of these concerns funding.", tr: "Rapor üç öneride bulunuyor. Bunların ilki finansmanla ilgili."}
+      - {en: "It remains unclear whether the policy will succeed.", tr: "Politikanın başarılı olup olmayacağı belirsizliğini koruyor."}
+      - {en: "Some argue that taxes should rise. Such a view is unpopular with voters.", tr: "Bazıları vergilerin artması gerektiğini savunuyor. Böyle bir görüş seçmenler arasında sevilmiyor."}
+      - {en: "The vaccine was developed in 2020. It has since been given to millions.", tr: "Aşı 2020'de geliştirildi. O zamandan beri milyonlarca kişiye uygulandı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The company lost money and fired staff. It angered the unions.", tr: "Şirket zarar etti ve çalışan çıkardı. Bu sendikaları kızdırdı.", wrong: true, correction: "The company lost money and fired staff. This angered the unions.", note_tr: "Düşüncenin tamamı: this."}
+      - {en: "That so many people came to the small village festival in the rain was a surprise.", tr: "Yağmurda bu kadar çok kişinin gelmesi şaşırtıcıydı.", wrong: true, correction: "It was a surprise that so many people came to the small village festival in the rain.", note_tr: "Ağır öge sona."}
+      - {en: "I have a dog. A dog is very friendly.", tr: "Bir köpeğim var. Çok cana yakın.", wrong: true, correction: "I have a dog. It is very friendly.", note_tr: "İkinci anışta zamir ya da the."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her cümleyi yeni bir özneyle başlatmak.** Okur, cümleler arasındaki bağı kendisi kurmak zorunda kalır.
+
+      **Bir düşüncenin tamamına "it" ile gönderme yapmak.** It bir isme, this bir düşünceye gönderme yapar.
+
+      **Bağlantıyı yalnızca bağlaçlardan beklemek.** İyi kurulmuş bir bilgi akışı, bağlaca çoğu zaman gerek bırakmaz.
+questions:
+  - id: q.c2.cohesion.01
+    type: paragraph_completion
+    difficulty: 5
+    context: "Over the past decade, the number of people working from home has tripled. ___ has transformed the way companies think about office space."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*This shift :: Önceki cümlenin tamamını özetleyen isimle gönderme."
+      - "It :: It bir isme gönderme yapar; burada düşüncenin tamamı kastediliyor."
+      - "They :: Çoğul bir isme gönderme yapardı; anlam bulanıklaşır."
+      - "Such :: Such tek başına özne olarak bu şekilde kullanılmaz."
+    explanation: "this + özetleyici isim: önceki cümleyi bir kavram olarak paketler."
+  - id: q.c2.cohesion.02
+    type: nuance
+    difficulty: 5
+    prompt: "\"The museum has acquired a rare manuscript.\" cümlesinden sonra hangisi bilgi akışı açısından en doğaldır?"
+    options:
+      - "*It was discovered in a monastery library last year. :: Bilinen öge (it = the manuscript) başta, yeni bilgi sonda."
+      - "A monk in a monastery library discovered a rare manuscript last year. :: Yeni bilgiyle başlıyor ve el yazmasını yeni bir şeymiş gibi anıyor."
+      - "Last year in a monastery library was discovered it. :: Sözcük sırası bozuk."
+      - "Discovered it in a monastery library a monk last year. :: Sözcük sırası bozuk."
+    explanation: "Cümle bilinenle başlar; edilgen çatı bunu sağlar."
+    lessons: [gram.c2.passive-nuances]
+  - id: q.c2.cohesion.03
+    type: multiple_choice
+    prompt: "Some people believe that the Earth is flat. ___ beliefs are surprisingly resistant to evidence."
+    options:
+      - "*Such :: such + çoğul isim: bu tür."
+      - "So :: So sıfat ya da zarf niteler; isim değil."
+      - "That :: That tekil isimle kullanılır."
+      - "It :: It bir ismin önüne gelmez."
+    explanation: "such + isim: bu tür, böyle."
+  - id: q.c2.cohesion.04
+    type: sentence_building
+    prompt: "Ağır ögeyi sona alarak yeniden yazın: \"That the minister knew about the problem and did nothing is shocking.\" → It is ..."
+    answers: ["It is shocking that the minister knew about the problem and did nothing."]
+    explanation: "It + be + sıfat + that: uzun cümlecik sona bırakılır."
+  - id: q.c2.cohesion.05
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi iki cümlelik dizide gönderme BELİRSİZDİR?"
+    options:
+      - "*The manager spoke to the client after the meeting. He was clearly upset. :: \"He\" müdüre de müşteriye de gönderme yapabilir."
+      - "The manager spoke to the client after the meeting. The client was clearly upset. :: İsim tekrar edilerek belirsizlik giderilmiş."
+      - "The manager spoke to the clients after the meeting. They were clearly upset. :: They yalnızca çoğul isme (clients) gönderme yapabilir."
+      - "The manager spoke to the client after the meeting. This conversation lasted an hour. :: Özetleyici isim açık."
+    explanation: "Aynı türden iki olası gönderge varsa zamir belirsiz kalır."
+    lessons: [gram.c2.modifier-placement]
+  - id: q.c2.cohesion.06
+    type: matching
+    prompt: "Cümleleri uygun özetleyici isimle eşleştirin."
+    pairs:
+      - ["Unemployment has risen every year since 2020.", "this trend"]
+      - ["Should schools ban phones?", "this question"]
+      - ["Critics say the law is unfair.", "this criticism"]
+      - ["The river flooded three villages.", "this disaster"]
+      - ["Researchers found a new species.", "this discovery"]
+    explanation: "Özetleyici isim, önceki cümleyi adlandırır ve yorum katabilir."
+  - id: q.c2.cohesion.07
+    type: reading_comprehension
+    difficulty: 5
+    context: "Urban farming has spread rapidly in recent years. Rooftops, balconies and abandoned lots are being turned into vegetable gardens. This development has obvious environmental benefits. It also brings neighbours together, and such contact is increasingly rare in large cities."
+    prompt: "\"Such contact\" neye gönderme yapar?"
+    options:
+      - "*Komşuların bir araya gelmesine. :: \"Brings neighbours together\" ifadesini özetler."
+      - "Çatıların bahçeye dönüştürülmesine. :: Bu, \"this development\" ile anılmıştı."
+      - "Çevresel yararlara. :: Contact (temas, ilişki) çevresel yararları adlandırmaz."
+      - "Büyük şehirlere. :: Şehirler cümlenin başka bir ögesidir."
+    explanation: "such + isim, hemen önceki düşünceyi bir tür olarak adlandırır."
+  - id: q.c2.cohesion.08
+    type: written_answer
+    difficulty: 5
+    prompt: "Şu kopuk cümleleri akıcı, 3–4 cümlelik tek bir paragrafa dönüştürün. Bilinen bilgiyle başlayın, en az bir özetleyici isim (this + isim) ve bir zamir göndermesi kullanın: \"A company in Konya has invented a cheap water filter. Villages without clean water can use the water filter. Children get ill less often in villages with the water filter. International organizations are interested in the water filter.\""
+    model_answers:
+      - "A company in Konya has invented a cheap water filter. It can be used in villages that have no clean water. In these villages, children now fall ill far less often. This success has attracted the interest of international organizations."
+    checklist:
+      - "\"The water filter\" ifadesini her cümlede tekrar etmedim; zamir ya da başka gönderme kullandım."
+      - "En az bir özetleyici isim kullandım (this success, this invention, this result...)."
+      - "Cümlelerim bilinen bilgiyle başlayıp yeni bilgiyle bitiyor."
+      - "Paragraf dört ayrı cümle gibi değil, tek bir metin gibi okunuyor."
+    explanation: "Bağdaşıklık; gönderme, yerine koyma ve bilgi akışıyla kurulur."

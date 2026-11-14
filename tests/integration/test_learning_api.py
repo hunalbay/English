@@ -39,7 +39,9 @@ def test_units_and_lesson_order(client):
     assert units[0]["id"] == "a1.u01"
     assert [lesson["id"] for lesson in units[0]["lessons"]][:2] == ["gram.a1.subject-pronouns", LESSON]
     assert all(lesson["status"] == "not_started" for lesson in units[0]["lessons"])
-    assert client.get(f"{API}/levels/C2/units").json()["units"] == []
+    for level in ("A2", "B1", "B2", "C1", "C2"):  # her seviyede en az bir ünite ve ders var
+        level_units = client.get(f"{API}/levels/{level}/units").json()["units"]
+        assert level_units and all(unit["lessons"] for unit in level_units)
     assert client.get(f"{API}/levels/X1/units").status_code == 422
 
 

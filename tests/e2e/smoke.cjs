@@ -122,7 +122,7 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   check(await page.getByRole("link", { name: /karışık test/ }).isVisible(), "seviye testi bağlantısı yok");
   await shot("tests");
   await page.goto(url + "#/testler/C2");
-  await page.getByText("C2 seviyesi için sorular henüz eklenmedi.").waitFor();
+  await page.getByRole("link", { name: "C2 karışık test (10 soru)" }).waitFor();
   await page.goto(url + "#/ders/gram.a1.to-be-present");
   await page.getByText("Bu dersi tamamladınız.").waitFor();
 

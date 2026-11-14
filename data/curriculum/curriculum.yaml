@@ -300,3 +300,25 @@ units:
       - gram.c1.nominalisation
       - gram.c1.ellipsis-substitution
       - gram.c1.hedging
+
+  - id: c2.u01
+    level: C2
+    title_tr: İncelik ve kesinlik
+    title_en: Subtlety and precision
+    description_tr: Ödünleme yapıları, edilgenin ve zamanların incelikleri, niteleyicilerin yeri ile anlamı tam denetleyin.
+    lessons:
+      - gram.c2.concession-advanced
+      - gram.c2.passive-nuances
+      - gram.c2.tense-nuances
+      - gram.c2.modifier-placement
+
+  - id: c2.u02
+    level: C2
+    title_tr: Üslup ve metin
+    title_en: Style and text
+    description_tr: Üslup düzeyini duruma göre seçin, konuşmayı yönlendiren ifadeleri, kalıplaşmış yapıları ve metin dokusunu ustalıkla kullanın.
+    lessons:
+      - gram.c2.register
+      - gram.c2.discourse-markers
+      - gram.c2.fixed-structures
+      - gram.c2.cohesion

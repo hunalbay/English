@@ -30,7 +30,7 @@ from app.content.source_models import (
 )
 from app.content.text import english_tokens, fold_text, lemma_key, regular_inflections, word_id
 
-CONTENT_VERSION = "0.4.0"
+CONTENT_VERSION = "0.5.0"
 
 
 class ContentError(Exception):

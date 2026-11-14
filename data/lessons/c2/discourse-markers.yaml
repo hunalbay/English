@@ -1,0 +1,142 @@
+id: gram.c2.discourse-markers
+kind: grammar
+level: C2
+title_tr: "Konuşmayı yönlendiren ifadeler"
+title_en: "Discourse markers in speech"
+objective_tr: Bu dersin sonunda actually, mind you, as it were, to be fair, having said that gibi ifadelerin konuşmada tutum, konu geçişi ve düzeltme bildiren işlevlerini tanıyıp doğal biçimde kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.linking-advanced]
+vocabulary: [actually, anyway, frankly, basically, incidentally, apparently]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Ana dili İngilizce olanların konuşması **well, actually, I mean, mind you** gibi küçük ifadelerle doludur. Bunlar cümlenin anlamına bilgi eklemez; **konuşanın tutumunu** gösterir ve dinleyene **söyleneni nasıl anlaması gerektiğini** bildirir.
+
+      Bu ifadeleri tanımak dinlediğinizi anlamak için, yerinde kullanmak ise doğal konuşmak için gereklidir. Çoğu Türkçeye sözcüğü sözcüğüne çevrilemez; **işlevleriyle** öğrenilmelidir.
+  - kind: formula
+    title_tr: İşlevlerine göre
+    table:
+      headers: ["İşlev", "İfadeler", "Örnek"]
+      rows:
+        - ["beklentiyi düzeltme", "actually, in fact, as a matter of fact", "Actually, I'm not from here."]
+        - ["dürüstlük, açık sözlülük", "to be honest, frankly, to tell you the truth", "To be honest, I didn't enjoy it."]
+        - ["sonradan akla gelen karşıt düşünce", "mind you, then again, having said that", "It's expensive. Mind you, the quality is excellent."]
+        - ["hakkını teslim etme", "to be fair, in all fairness, admittedly", "To be fair, he did apologize."]
+        - ["konuya dönme / kapatma", "anyway, anyhow, so", "Anyway, as I was saying..."]
+        - ["konu değiştirme", "by the way, incidentally, that reminds me", "By the way, have you heard from Elif?"]
+        - ["açıklama, düzeltme", "I mean, that is, or rather", "He's my boss — or rather, he was."]
+        - ["özetleme", "basically, in short, at the end of the day", "Basically, we have no choice."]
+        - ["yumuşatma", "sort of, kind of, as it were, so to speak", "He's the brains of the team, as it were."]
+        - ["duyuma dayanan bilgi", "apparently, supposedly, I gather", "Apparently, they're getting divorced."]
+        - ["zaman kazanma", "well, let me see, you know", "Well, it depends."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Actually "aslında" demektir, "aktüel / güncel" değil.** Türkçe konuşanların en sık düştüğü tuzaklardan biridir ("currently" ile karıştırılır).
+
+      **Mind you** emir değildir; "gerçi, ama şunu da söylemeli" anlamında bir geçiştir.
+
+      **Eventually** "sonunda" demektir; "belki" (eventuell) değil.
+
+      **Bu ifadeler çoğunlukla sözlü ve gündelik dile aittir.** Resmî yazıda karşılıkları kullanılır: mind you → however; anyway → in any case; basically → essentially.
+
+      **Aşırı kullanım** ("like", "you know", "basically" her cümlede) özensiz bir izlenim bırakır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I thought the film would be boring. Actually, it was brilliant.", tr: "Filmin sıkıcı olacağını sanmıştım. Aslında harikaydı."}
+      - {en: "The flat is tiny. Mind you, it's right in the centre.", tr: "Daire küçücük. Gerçi tam merkezde."}
+      - {en: "To be fair, she warned us this might happen.", tr: "Hakkını yemeyelim, bunun olabileceği konusunda bizi uyarmıştı."}
+      - {en: "Anyway, I'd better get going.", tr: "Neyse, ben artık gideyim."}
+      - {en: "He's, how shall I put it, not the easiest person to work with.", tr: "O, nasıl desem, birlikte çalışması pek kolay biri değil."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Actually I work in a bank. (kastedilen: şu sıralar)", tr: "Şu sıralar bankada çalışıyorum.", wrong: true, correction: "Currently I work in a bank.", note_tr: "Actually ≠ şu anda."}
+      - {en: "Eventually I will come tomorrow. (kastedilen: belki)", tr: "Belki yarın gelirim.", wrong: true, correction: "Perhaps I will come tomorrow.", note_tr: "Eventually = sonunda."}
+      - {en: "By the way, the main argument of this thesis is as follows. (akademik yazı)", tr: "Bu tezin ana savı şöyledir.", wrong: true, correction: "The main argument of this thesis is as follows.", note_tr: "Gündelik ifade resmî yazıya uymaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Yalancı eş değerler:** actually, eventually, sympathetic gibi sözcükleri Türkçe ya da başka bir dildeki benzerleriyle karıştırmak.
+
+      **Konuşma ifadelerini resmî yazıya taşımak.**
+
+      **Hiç kullanmamak.** Bu ifadeler olmadan konuşma dil bilgisi açısından doğru ama kitap gibi, mesafeli duyulur.
+questions:
+  - id: q.c2.discourse.01
+    type: multiple_choice
+    prompt: "A: You must be exhausted after such a long flight.\nB: ___, I slept most of the way, so I feel fine."
+    options:
+      - "*Actually :: Karşıdakinin beklentisini düzeltir."
+      - "Anyway :: Konuyu kapatır ya da konuya döner; düzeltme bildirmez."
+      - "By the way :: Yeni bir konu açar."
+      - "Basically :: Özetler."
+    explanation: "actually: beklenenin aksine."
+  - id: q.c2.discourse.02
+    type: multiple_choice
+    prompt: "The hotel was overpriced and the service was slow. ___, the view from the room was spectacular."
+    options:
+      - "*Mind you :: Önceki eleştiriyi dengeleyen, sonradan akla gelen karşıt düşünce."
+      - "By the way :: Konu değişmiyor; aynı konuda karşıt bir nokta geliyor."
+      - "Basically :: Özetleme yok."
+      - "I mean :: Açıklama ya da düzeltme yok."
+    explanation: "mind you / then again / having said that: gerçi, öte yandan."
+  - id: q.c2.discourse.03
+    type: multiple_choice
+    prompt: "Sorry, I got distracted. ___, where was I? Oh yes, the budget."
+    options:
+      - "*Anyway :: Araya giren şeyden sonra asıl konuya dönüş."
+      - "Actually :: Düzeltme bildirir."
+      - "To be fair :: Hakkını teslim etme bildirir."
+      - "Apparently :: Duyuma dayanan bilgi bildirir."
+    explanation: "anyway: konuya dönme ya da konuyu kapatma."
+  - id: q.c2.discourse.04
+    type: nuance
+    difficulty: 5
+    prompt: "\"Apparently, the manager is leaving.\" diyen kişi ne demek ister?"
+    options:
+      - "*Bunu başkalarından duydum; kendim doğrulamadım. :: Apparently duyuma dayanan, doğrulanmamış bilgiyi gösterir."
+      - "Bu çok açık ve kesin bir gerçek. :: Bu anlam \"obviously / clearly\" ile verilir."
+      - "Müdür görünüşte gidiyor ama aslında kalıyor. :: Böyle bir karşıtlık bildirmez."
+      - "Bunu ben söylemiyorum, müdür söylüyor. :: Kaynak belirtilmez."
+    explanation: "apparently = duyduğuma göre, anlaşılan."
+  - id: q.c2.discourse.05
+    type: error_correction
+    prompt: "I used to live in Bursa, but actually I live in Antalya. (kastedilen: şu anda)"
+    answers: ["I used to live in Bursa, but currently I live in Antalya.", "I used to live in Bursa, but now I live in Antalya.", "I used to live in Bursa, but I currently live in Antalya.", "I used to live in Bursa, but at the moment I live in Antalya.", "I used to live in Bursa, but I now live in Antalya."]
+    explanation: "Actually \"aslında\" demektir; \"şu anda\" için currently / now kullanılır."
+  - id: q.c2.discourse.06
+    type: matching
+    prompt: "İfadeleri işlevleriyle eşleştirin."
+    pairs:
+      - ["by the way", "konu değiştirme"]
+      - ["to be fair", "hakkını teslim etme"]
+      - ["or rather", "kendini düzeltme"]
+      - ["at the end of the day", "özetleme"]
+      - ["so to speak", "yumuşatma"]
+    explanation: "Söylem belirleyicileri işlevleriyle öğrenilir."
+  - id: q.c2.discourse.07
+    type: dialogue_completion
+    difficulty: 5
+    context: "A: I can't believe Tolga forgot the meeting again.\nB: ___, he has been working eighteen-hour days all week."
+    prompt: "B, Tolga'yı savunmak için cümleye nasıl başlar?"
+    options:
+      - "*To be fair :: Eleştirilen kişinin lehine bir noktayı teslim eder."
+      - "Frankly :: Açık sözlü bir eleştiriye başlar; savunmaya değil."
+      - "Incidentally :: Konu dışı bir bilgi ekler."
+      - "Basically :: Özetler."
+    explanation: "to be fair / in all fairness: hakkını yemeyelim."
+  - id: q.c2.discourse.08
+    type: word_in_context
+    difficulty: 5
+    context: "\"She's the mother of the department, as it were — everyone goes to her with their problems.\""
+    prompt: "\"As it were\" burada ne işlev görür?"
+    options:
+      - "*Söylenenin mecazi olduğunu, sözcüğü sözcüğüne alınmaması gerektiğini bildirir. :: as it were = deyim yerindeyse."
+      - "Geçmişteki bir durumu anlatır. :: Were burada geçmiş zaman bildirmez."
+      - "Bir koşul bildirir. :: Koşul yapısı değildir."
+      - "Söylenenin kesin doğru olduğunu vurgular. :: Tersine, ifadeyi yumuşatır."
+    explanation: "as it were / so to speak: deyim yerindeyse."

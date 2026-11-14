@@ -29,7 +29,7 @@ def _answer(client, auth, test, question_id, answer):
 def test_start_requires_token_and_existing_content(client, auth):
     assert client.post(f"{API}/tests/sessions", json={"lesson_id": LESSON}).status_code == 403
     assert client.post(f"{API}/tests/sessions", json={"lesson_id": "gram.a1.yok"}, headers=auth).status_code == 404
-    response = client.post(f"{API}/tests/sessions", json={"level": "C2"}, headers=auth)
+    response = client.post(f"{API}/tests/sessions", json={"level": "C2", "types": ["listening_comprehension"]}, headers=auth)  # ses içeriği eklenene kadar bu tipte soru yok
     assert response.status_code == 404 and "henüz soru yok" in response.json()["error"]["message"]
     assert client.post(f"{API}/tests/sessions", json={"level": "A1", "size": 500}, headers=auth).status_code == 422
 

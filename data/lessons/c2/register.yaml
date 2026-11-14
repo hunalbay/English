@@ -1,0 +1,149 @@
+id: gram.c2.register
+kind: grammar
+level: C2
+title_tr: "Üslup düzeyi: resmî, yansız ve gündelik dil"
+title_en: "Register: formal, neutral and informal"
+objective_tr: Bu dersin sonunda aynı içeriği duruma göre resmî, yansız ya da gündelik üslupla ifade edebilecek, üslup düzeyini belirleyen dil bilgisi ve sözcük seçimlerini tanıyabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.nominalisation, gram.c1.hedging]
+vocabulary: [formal, informal, appropriate, request, assist, commence]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Dil bilgisi açısından kusursuz bir cümle, **yanlış ortamda** söylendiğinde yine de hatalıdır. Bir iş başvurusunda "Hey, I wanna work for you guys" yazmak ya da bir arkadaşa "I hereby inform you of my arrival" demek üslup hatasıdır.
+
+      **Üslup düzeyi (register)** üç etkene göre seçilir: **kiminle** konuşuyorsunuz, **konu** ne, **ortam** yazılı mı sözlü mü.
+  - kind: comparison
+    title_tr: Üslubu belirleyen dil bilgisi seçimleri
+    table:
+      headers: ["Özellik", "Gündelik", "Resmî"]
+      rows:
+        - ["kısaltmalar", "I'm, don't, it's", "I am, do not, it is"]
+        - ["fiiller", "öbek fiiller: find out, put off", "tek sözcük: discover, postpone"]
+        - ["özne", "kişisel: I think, you can", "kişisiz: It is believed, One can"]
+        - ["çatı", "etken: We'll send it", "edilgen: It will be sent"]
+        - ["koşul", "If you need help", "Should you require assistance"]
+        - ["ilgi cümleciği", "the person I spoke to", "the person to whom I spoke"]
+        - ["bağlayıcılar", "but, so, also", "however, therefore, furthermore"]
+        - ["isimleştirme", "when we arrived", "upon our arrival"]
+        - ["eksiltme", "Sounds good. Seen it?", "tam cümleler"]
+        - ["belirsizlik", "stuff, a bit, kind of", "kesin terimler"]
+  - kind: comparison
+    title_tr: Sözcük seçimi
+    table:
+      headers: ["Gündelik", "Yansız", "Resmî"]
+      rows:
+        - ["get", "receive / obtain", "be in receipt of"]
+        - ["ask for", "request", "solicit"]
+        - ["help", "assist", "render assistance"]
+        - ["start", "begin", "commence"]
+        - ["need", "require", "necessitate"]
+        - ["buy", "purchase", "acquire"]
+        - ["tell", "inform", "notify / advise"]
+        - ["sorry", "I apologize", "Please accept our apologies"]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Tutarlılık esastır.** Aynı metinde "Furthermore, the stuff we got was rubbish" gibi karışık üslup en sık görülen hatadır.
+
+      **Daha resmî her zaman daha iyi değildir.** Günümüz iş yazışmalarında **açık, yansız ve kibar** bir üslup tercih edilir; aşırı resmî dil soğuk ve eski görünür.
+
+      **Kibarlık ile resmiyet aynı şey değildir.** "Could you send me the file when you get a chance?" gündelik ama kibardır.
+
+      **Whom, one, shall** gibi biçimler çok resmîdir; günlük kullanımda who, you, will tercih edilir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Thanks for getting back to me so quickly.", tr: "Bu kadar çabuk döndüğün için teşekkürler. (gündelik)"}
+      - {en: "Thank you for your prompt reply.", tr: "Hızlı yanıtınız için teşekkür ederim. (yansız / resmî)"}
+      - {en: "We regret to inform you that your application has been unsuccessful.", tr: "Başvurunuzun olumlu sonuçlanmadığını üzülerek bildiririz. (resmî)"}
+      - {en: "Can you give me a hand with this?", tr: "Şuna bir el atar mısın? (gündelik)"}
+      - {en: "I would be grateful if you could assist me with this matter.", tr: "Bu konuda bana yardımcı olabilirseniz minnettar olurum. (resmî)"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Dear Sir, I wanna apply for the job you guys advertised.", tr: "Sayın Yetkili, verdiğiniz ilandaki işe başvurmak istiyorum.", wrong: true, correction: "Dear Sir or Madam, I would like to apply for the position you advertised.", note_tr: "Başvuru mektubu: resmî üslup."}
+      - {en: "Hi mate, I hereby wish to enquire as to your availability on Saturday.", tr: "Selam, cumartesi müsait misin?", wrong: true, correction: "Hi mate, are you free on Saturday?", note_tr: "Arkadaşa mesaj: gündelik üslup."}
+      - {en: "The results were kind of surprising, and furthermore the methodology was a bit rubbish.", tr: "Sonuçlar şaşırtıcıydı ve yöntem zayıftı.", wrong: true, correction: "The results were somewhat surprising; furthermore, the methodology was weak.", note_tr: "Karışık üslup."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Üslubu karıştırmak.**
+
+      **Resmî yazıda kısaltma ve öbek fiil kullanmak** ya da tersine, sohbette kitap dili konuşmak.
+
+      **Türkçedeki resmî kalıpları sözcüğü sözcüğüne çevirmek.** "Gereğini arz ederim" gibi kalıpların İngilizcede birebir karşılığı yoktur; "I would be grateful if you could..." gibi yerleşik ifadeler kullanılır.
+questions:
+  - id: q.c2.register.01
+    type: multiple_choice
+    prompt: "Bir şirketin müşterilerine gönderdiği resmî mektup için en uygun cümle hangisidir?"
+    options:
+      - "*We regret to inform you that the event has been postponed. :: Resmî ve kibar: regret to inform, edilgen, postpone."
+      - "Sorry guys, we've had to put the event off. :: Gündelik: guys, kısaltma, öbek fiil."
+      - "Bad news – the event's off for now! :: Fazla gündelik."
+      - "We hereby do most humbly beg to notify you of the event's deferral. :: Aşırı ve eskimiş resmiyet."
+    explanation: "Resmî yazışma açık, kibar ve tutarlı olmalıdır."
+  - id: q.c2.register.02
+    type: multiple_choice
+    prompt: "Bir arkadaşınıza mesaj atıyorsunuz. En doğal cümle hangisidir?"
+    options:
+      - "*Fancy grabbing a coffee later? :: Gündelik, eksiltmeli, doğal."
+      - "I should be delighted if you would join me for coffee at your earliest convenience. :: Arkadaşa göre fazla resmî."
+      - "It is proposed that coffee be consumed later. :: Kişisiz, bürokratik."
+      - "Would it be possible to ascertain your availability for coffee? :: Gereksiz yere resmî."
+    explanation: "Üslup, alıcıya ve ortama göre seçilir."
+  - id: q.c2.register.03
+    type: matching
+    prompt: "Gündelik ifadeleri resmî karşılıklarıyla eşleştirin."
+    pairs:
+      - ["find out", "ascertain"]
+      - ["put off", "postpone"]
+      - ["go up", "increase"]
+      - ["look into", "investigate"]
+      - ["set up", "establish"]
+    explanation: "Resmî dilde öbek fiil yerine tek sözcüklü (çoğunlukla Latin kökenli) fiil tercih edilir."
+  - id: q.c2.register.04
+    type: sentence_building
+    prompt: "Resmî biçimde yeniden yazın: \"If you need more information, get in touch with us.\" → Should you ..."
+    answers: ["Should you require further information, please contact us.", "Should you require more information, please contact us.", "Should you require any further information, please contact us.", "Should you require further information, please do not hesitate to contact us.", "Should you need further information, please contact us."]
+    explanation: "Should + özne; need → require; get in touch → contact."
+    lessons: [gram.c1.conditional-inversion]
+  - id: q.c2.register.05
+    type: error_spotting
+    difficulty: 5
+    prompt: "Akademik bir denemede hangi cümle üslup açısından uygunsuzdur?"
+    options:
+      - "*Loads of people reckon the economy's gonna get worse. :: Loads of, reckon, gonna ve kısaltma akademik üsluba uymaz."
+      - "Many economists predict that the economy will deteriorate. :: Uygun."
+      - "It is widely believed that economic conditions will worsen. :: Uygun."
+      - "A further decline in economic activity is anticipated. :: Uygun."
+    explanation: "Akademik yazıda gündelik sözcükler ve kısaltmalar kullanılmaz."
+  - id: q.c2.register.06
+    type: nuance
+    difficulty: 5
+    prompt: "\"The person to whom I spoke was most helpful.\" ile \"The person I spoke to was really helpful.\" arasındaki fark nedir?"
+    options:
+      - "*Anlam aynıdır; ilki çok resmî, ikincisi yansız / gündelik üsluptadır. :: Edat + whom ve \"most\" resmiyeti artırır."
+      - "İlki yanlıştır. :: Resmî dilde doğrudur."
+      - "İkincisi yanlıştır; edat cümle sonunda kalamaz. :: Edatın sonda kalması günlük İngilizcede tamamen doğrudur."
+      - "İlki geçmişi, ikincisi şimdiyi anlatır. :: İkisi de geçmiş zamandadır."
+    explanation: "Aynı içerik farklı üslup düzeyleriyle söylenebilir."
+  - id: q.c2.register.07
+    type: error_correction
+    prompt: "Dear Ms Yılmaz, Thanks a lot for your letter. I'm writing to say sorry about the mix-up with your order."
+    answers: ["Dear Ms Yılmaz, Thank you for your letter. I am writing to apologize for the confusion regarding your order.", "Dear Ms Yılmaz, Thank you for your letter. I am writing to apologise for the confusion regarding your order.", "Dear Ms Yılmaz, Thank you for your letter. I am writing to apologize for the error with your order.", "Dear Ms Yılmaz, Thank you for your letter. I am writing to apologize for the confusion with your order."]
+    explanation: "Resmî mektupta: kısaltma yok; say sorry → apologize; mix-up → confusion / error."
+  - id: q.c2.register.08
+    type: written_answer
+    difficulty: 5
+    prompt: "Aynı içeriği iki ayrı üslupla yazın: bir toplantıya geç kalacağınızı (trafik nedeniyle yaklaşık yarım saat) (a) yakın bir iş arkadaşınıza kısa bir mesajla, (b) tanımadığınız bir müşteriye resmî bir e-postayla bildirin. Her biri 1–3 cümle olsun."
+    model_answers:
+      - "(a) Hi Ece, stuck in traffic – I'll be about half an hour late. Start without me! (b) Dear Mr Brown, I am writing to let you know that, owing to heavy traffic, I will be approximately thirty minutes late for our meeting. Please accept my apologies for any inconvenience."
+    checklist:
+      - "Gündelik mesajda kısaltma, kısa cümle ve samimi bir hitap kullandım."
+      - "Resmî e-postada kısaltma kullanmadım ve uygun hitap ve özür ifadesi yazdım."
+      - "Her metnin kendi içinde üslubu tutarlı."
+      - "İki metin de aynı bilgiyi veriyor (gecikme, süre, neden)."
+    explanation: "Üslup düzeyi alıcıya göre değişir; içerik aynı kalır."

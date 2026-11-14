@@ -1,0 +1,130 @@
+id: gram.c2.passive-nuances
+kind: grammar
+level: C2
+title_tr: "Edilgenin incelikleri: get-passive, need doing, have something happen"
+title_en: "Nuances of the passive"
+objective_tr: Bu dersin sonunda get ile kurulan edilgeni, need / want / require + -ing yapısını, deneyim bildiren have + nesne + fiil yapılarını ve edilgenin kullanılamadığı durumları ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.passive-advanced, gram.b2.causative]
+vocabulary: [damage, promote, arrest, sack, repair, attention]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Edilgen çatı yalnızca "be + V3" değildir. Konuşma dilinde **get**, gereklilik bildirirken **-ing**, başa gelen olaylarda **have** kullanılır. Bu derste ayrıca edilgenin **üslup etkisini** — sorumluluğu gizleme, bilgi akışını düzenleme — ele alıyoruz.
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Yapı", "Kullanım", "Örnek"]
+      rows:
+        - ["get + V3", "gündelik; ani, beklenmedik ya da olumsuz olay", "He got fired. / I got stuck in traffic."]
+        - ["get + V3 (dönüşlü anlam)", "kişinin kendi yaptığı", "get dressed, get married, get lost"]
+        - ["need / want / require + fiil-ing", "edilgen anlamlı gereklilik", "The car needs washing. (= needs to be washed)"]
+        - ["have + nesne + yalın fiil / -ing", "başa gelen, yaşanan olay", "I've never had anyone speak to me like that."]
+        - ["won't have + nesne + -ing", "izin vermemek", "I won't have you talking to me like that."]
+        - ["be + V3 + edat", "edat sonda kalır", "The matter is being looked into."]
+        - ["There + be + V3", "resmî anlatım", "There is believed to be a solution."]
+  - kind: usage
+    title_tr: "Be mi, get mi?"
+    text_tr: |-
+      **Get-passive** eylemi ve değişimi vurgular; çoğu zaman olayın **beklenmedik** ya da öznenin **başına geldiğini** sezdirir: "My bike **got stolen**."
+
+      **Be-passive** yansızdır ve hem eylemi hem durumu anlatabilir: "The window **was broken**." (kırıldı / kırıktı) — "The window **got broken**." (yalnızca: kırıldı)
+
+      **Get** resmî yazıda ve durum fiilleriyle kullanılmaz: "The answer is known" → "gets known" olmaz.
+  - kind: usage
+    title_tr: Edilgen ne zaman kullanılmaz?
+    text_tr: |-
+      **Nesne almayan fiiller:** happen, occur, arrive, exist, disappear, die, consist of.
+
+      **Bazı durum fiilleri:** have (sahiplik), lack, resemble, suit, fit: "This colour suits you." → "You are suited by..." olmaz.
+
+      **Üslup:** edilgen, yapanı gizleyebilir. "Mistakes **were made**." sorumluluktan kaçan bir cümledir. Açık ve dürüst yazıda yapan biliniyorsa etken yapı tercih edilir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She got promoted after only a year.", tr: "Yalnızca bir yıl sonra terfi etti."}
+      - {en: "This shirt needs ironing.", tr: "Bu gömleğin ütülenmesi gerek."}
+      - {en: "We had our flight cancelled at the last minute.", tr: "Uçuşumuz son dakikada iptal edildi."}
+      - {en: "The children were well looked after.", tr: "Çocuklara iyi bakıldı."}
+      - {en: "I won't have people smoking in my house.", tr: "Evimde sigara içilmesine izin vermem."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The roof needs to repair.", tr: "Çatının onarılması gerek.", wrong: true, correction: "The roof needs repairing.", note_tr: "need + -ing ya da needs to be repaired."}
+      - {en: "A strange thing was occurred.", tr: "Tuhaf bir şey oldu.", wrong: true, correction: "A strange thing occurred.", note_tr: "Occur edilgen olmaz."}
+      - {en: "The problem is being looked.", tr: "Sorun inceleniyor.", wrong: true, correction: "The problem is being looked into.", note_tr: "Edat korunur."}
+      - {en: "The theory got believed for centuries.", tr: "Kurama yüzyıllarca inanıldı.", wrong: true, correction: "The theory was believed for centuries.", note_tr: "Durum fiiliyle get olmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Öbek fiillerin edatını düşürmek** (was laughed **at**, is dealt **with**, was paid **for**).
+
+      **Need'den sonra etken mastar kullanmak.**
+
+      **Get-passive'i resmî yazıda kullanmak.**
+questions:
+  - id: q.c2.passive-nuances.01
+    type: multiple_choice
+    prompt: "These windows are filthy. They really need ___."
+    options:
+      - "*cleaning :: need + -ing edilgen anlam taşır (= need to be cleaned)."
+      - "to clean :: Bu, pencerelerin bir şeyi temizlemesi gerektiği anlamına gelir."
+      - "be cleaned :: To eksik."
+      - "cleaned :: Need'den sonra V3 tek başına standart değildir."
+    explanation: "need + fiil-ing = need to be + V3."
+  - id: q.c2.passive-nuances.02
+    type: multiple_choice
+    prompt: "He ___ for stealing from the company. (gündelik konuşma)"
+    options:
+      - "*got sacked :: Gündelik, ani ve olumsuz olay: get + V3."
+      - "got sack :: Üçüncü biçim gerekir."
+      - "has sacked :: Etken; kendisi birini kovmuş olur."
+      - "was sacking :: Etken Past Continuous."
+    explanation: "get-passive: konuşma dilinde, başa gelen olaylar."
+  - id: q.c2.passive-nuances.03
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*The accident was happened at the junction. :: Happen nesne almaz ve edilgen yapılamaz."
+      - "The accident was caused by ice on the road. :: Doğru."
+      - "The victims were taken care of by paramedics. :: Doğru: edat korunmuş."
+      - "The driver got injured. :: Doğru: get-passive."
+    explanation: "Geçişsiz fiiller edilgen olmaz."
+  - id: q.c2.passive-nuances.04
+    type: nuance
+    difficulty: 5
+    prompt: "Bir şirket açıklamasında \"Errors were made in the handling of customer data.\" deniyor. Edilgen yapının buradaki üslup etkisi nedir?"
+    options:
+      - "*Hatayı kimin yaptığını belirtmeden sorumluluğu belirsiz bırakır. :: Yapansız edilgen, sorumluyu gizleyebilir."
+      - "Hatayı müşterilerin yaptığını vurgular. :: Yapan hiç belirtilmemiş."
+      - "Hatanın gelecekte yapılacağını bildirir. :: Zaman geçmiş."
+      - "Cümleyi daha samimi ve kişisel kılar. :: Tersine, mesafeli ve kişisiz kılar."
+    explanation: "Edilgen çatı dil bilgisi kadar üslup ve tutum seçimidir."
+  - id: q.c2.passive-nuances.05
+    type: sentence_building
+    prompt: "Edilgene çevirin: \"Nobody has slept in this bed.\" → This bed ..."
+    answers: ["This bed has not been slept in.", "This bed hasn't been slept in."]
+    explanation: "Edat (in) fiilin ardında kalır."
+  - id: q.c2.passive-nuances.06
+    type: error_correction
+    prompt: "The proposal is being looked by the finance department."
+    answers: ["The proposal is being looked at by the finance department.", "The proposal is being looked into by the finance department."]
+    explanation: "Öbek fiilin edatı edilgende de korunur."
+  - id: q.c2.passive-nuances.07
+    type: nuance
+    difficulty: 5
+    prompt: "\"The door was locked.\" cümlesi iki biçimde anlaşılabilir. \"The door got locked.\" hangisini anlatır?"
+    options:
+      - "*Yalnızca eylemi: kapı (biri tarafından ya da kazara) kilitlendi. :: Get-passive durumu değil, olayı anlatır."
+      - "Yalnızca durumu: kapı kilitli duruyordu. :: Durum anlamı be ile verilir."
+      - "Her ikisini de. :: Get bu belirsizliği ortadan kaldırır."
+      - "Kapının kilitlenmesi gerektiğini. :: Gereklilik anlamı yok."
+    explanation: "be + V3 eylem ya da durum olabilir; get + V3 yalnızca eylemdir."
+  - id: q.c2.passive-nuances.08
+    type: translation
+    prompt: "Bu gömleğin ütülenmesi gerek. (need + -ing ile)"
+    answers: ["This shirt needs ironing."]
+    explanation: "need + fiil-ing."

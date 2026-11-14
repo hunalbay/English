@@ -1,0 +1,145 @@
+id: gram.c2.tense-nuances
+kind: grammar
+level: C2
+title_tr: "Zamanların ince kullanımları"
+title_en: "Subtle uses of tense and aspect"
+objective_tr: Bu dersin sonunda anlatıda şimdiki zamanı, durum fiillerinin sürekli biçimlerini, kibarlık için geçmiş zamanı ve always ile sürekli zamanın bildirdiği tutumu tanıyıp kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.narrative-tenses, gram.c1.future-in-the-past]
+vocabulary: [constantly, forever, wonder, hope, headline]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Zaman biçimleri yalnızca "ne zaman" sorusunu yanıtlamaz; konuşanın **tutumunu, mesafesini ve bakış açısını** da gösterir. Bu derste kuralların dışına çıkıyormuş gibi görünen ama düzenli olan kullanımları ele alıyoruz.
+  - kind: formula
+    title_tr: Kullanımlar
+    table:
+      headers: ["Kullanım", "Yapı", "Örnek"]
+      rows:
+        - ["anlatıda canlılık (historic present)", "Present Simple", "So I walk in, and there he is, sitting at my desk."]
+        - ["gazete başlıkları", "Present Simple (geçmiş olay)", "Minister resigns over scandal"]
+        - ["özet, eleştiri, maç anlatımı", "Present Simple", "In the final chapter, the hero returns home."]
+        - ["rahatsızlık bildiren alışkanlık", "always / forever / constantly + sürekli zaman", "He's always losing his keys."]
+        - ["geçici davranış", "be + being + sıfat", "You're being very quiet today."]
+        - ["kibar, çekingen istek", "geçmiş zaman", "I was wondering if you could help me."]
+        - ["daha da kibar", "geçmiş + sürekli", "I was hoping we might discuss my salary."]
+        - ["söz edimleri", "Present Simple", "I apologize. / I promise. / I suggest we wait."]
+        - ["yeni öğrenilen bilgi", "hear, gather, understand (present)", "I hear you're getting married."]
+  - kind: usage
+    title_tr: Durum fiilleri sürekli biçimde
+    text_tr: |-
+      Durum fiilleri "normalde" sürekli zaman almaz; aldıklarında **anlam değişir** ya da **geçicilik** vurgulanır:
+
+      "I **think** it's wrong." (kanı) / "I'**m thinking** about it." (düşünme eylemi)
+
+      "She **has** a car." (sahiplik) / "She'**s having** lunch." (eylem)
+
+      "He **is** rude." (kişiliği) / "He'**s being** rude." (şu anki davranışı)
+
+      "I **see** what you mean." (anlamak) / "I'**m seeing** the doctor tomorrow." (görüşmek)
+
+      "I'**m loving** this!" (gündelik; şu anki yoğun duygu)
+  - kind: usage
+    title_tr: Geçmiş zaman ve mesafe
+    text_tr: |-
+      Geçmiş biçim yalnızca zamanda değil, **toplumsal ilişkide ve gerçeklikte** de uzaklık kurar:
+
+      **Zaman:** "I **lived** there." · **Gerçek dışılık:** "If I **lived** there..." · **Kibarlık:** "**Did** you **want** to see me?" / "I **wondered** if you **had** a moment."
+
+      Bu yüzden "Could you...?" "Can you...?"dan, "I was wondering..." "I wonder..."dan daha kibardır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She's forever complaining about the weather.", tr: "Durmadan havadan şikâyet ediyor."}
+      - {en: "I was wondering whether you might be free on Thursday.", tr: "Perşembe günü müsait olup olmadığınızı merak ediyordum."}
+      - {en: "The film tells the story of a family who lose everything.", tr: "Film, her şeyini kaybeden bir ailenin öyküsünü anlatıyor."}
+      - {en: "Why are you being so difficult?", tr: "Neden bu kadar zorluk çıkarıyorsun?"}
+      - {en: "I gather you've already met my colleague.", tr: "Anladığım kadarıyla meslektaşımla zaten tanışmışsınız."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I am promising to pay you back.", tr: "Sana geri ödeyeceğime söz veriyorum.", wrong: true, correction: "I promise to pay you back.", note_tr: "Söz edimi: Present Simple."}
+      - {en: "He always is leaving the lights on.", tr: "Hep ışıkları açık bırakıyor.", wrong: true, correction: "He is always leaving the lights on.", note_tr: "be + always + -ing."}
+      - {en: "This soup is tasting wonderful.", tr: "Bu çorbanın tadı harika.", wrong: true, correction: "This soup tastes wonderful.", note_tr: "Algı (durum) anlamı: Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her durum fiilini sürekli zamanda yasak saymak** ya da tersine, her birini serbestçe kullanmak. Anlam değişimine bakın.
+
+      **Always + sürekli zamanı yansız alışkanlık sanmak.** Bu yapı neredeyse her zaman bir **tutum** (çoğunlukla rahatsızlık) taşır.
+
+      **Kibarlık bildiren geçmiş zamanı gerçek geçmiş sanmak.**
+questions:
+  - id: q.c2.tense-nuances.01
+    type: nuance
+    difficulty: 5
+    prompt: "\"My flatmate is always borrowing my things without asking.\" cümlesi neyi bildirir?"
+    options:
+      - "*Tekrarlanan ve konuşanı rahatsız eden bir davranışı. :: always + sürekli zaman çoğunlukla rahatsızlık bildirir."
+      - "Şu anda sürmekte olan tek bir eylemi. :: Always tekrarı gösterir."
+      - "Yansız bir alışkanlığı. :: Yansız alışkanlık Present Simple ile verilir."
+      - "Gelecekteki bir planı. :: Plan anlamı yok."
+    explanation: "be + always / forever / constantly + -ing: tutum bildiren alışkanlık."
+  - id: q.c2.tense-nuances.02
+    type: nuance
+    difficulty: 5
+    prompt: "\"Mert is selfish.\" ile \"Mert is being selfish.\" arasındaki fark nedir?"
+    options:
+      - "*İlki onun kişiliğini, ikincisi şu anki (geçici) davranışını anlatır. :: be + being + sıfat geçici davranışı gösterir."
+      - "İkisi de kişiliğini anlatır. :: Sürekli biçim geçicilik bildirir."
+      - "İlki geçici, ikincisi kalıcıdır. :: Tam tersi."
+      - "İkincisi dil bilgisi açısından yanlıştır. :: Doğrudur."
+    explanation: "is + sıfat: özellik; is being + sıfat: şu anki davranış."
+  - id: q.c2.tense-nuances.03
+    type: multiple_choice
+    prompt: "Yöneticinizden izin isteyeceksiniz. En kibar başlangıç hangisidir?"
+    options:
+      - "*I was wondering if I could take Friday off. :: Geçmiş + sürekli biçim mesafe ve kibarlık kurar."
+      - "I want Friday off. :: Doğrudan ve sert."
+      - "I wonder if I can take Friday off. :: Kibar, ama geçmiş biçim kadar çekingen değil."
+      - "Give me Friday off. :: Emir kipi."
+    explanation: "Geçmiş zaman toplumsal mesafe kurarak isteği yumuşatır."
+  - id: q.c2.tense-nuances.04
+    type: word_in_context
+    difficulty: 5
+    context: "PM RESIGNS AFTER VOTE — Thousands gather outside parliament"
+    prompt: "Bu gazete başlığındaki \"resigns\" hangi zamanı anlatır?"
+    options:
+      - "*Yakın geçmişte olmuş bir olayı; başlıklarda Present Simple kullanılır. :: Başlık dili geçmiş olayları şimdiki zamanla verir."
+      - "Düzenli tekrarlanan bir alışkanlığı. :: Tek bir olaydan söz ediliyor."
+      - "Gelecekte olacak bir olayı. :: Bunun için başlıklarda \"to resign\" kullanılır."
+      - "Genel bir doğruyu. :: Belirli bir haber olayı."
+    explanation: "Başlıklarda: Present Simple = geçmiş olay; to + fiil = gelecek olay."
+  - id: q.c2.tense-nuances.05
+    type: error_correction
+    prompt: "I'm apologizing for the delay in replying to your email."
+    answers: ["I apologize for the delay in replying to your email.", "I apologise for the delay in replying to your email."]
+    explanation: "Söz edimi bildiren fiiller (apologize, promise, suggest) Present Simple ile kullanılır."
+  - id: q.c2.tense-nuances.06
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["I think you're right.", "kanı bildirme"]
+      - ["I'm thinking of moving.", "üzerinde düşünme"]
+      - ["I see your point.", "anlama"]
+      - ["I'm seeing her on Friday.", "buluşma"]
+      - ["He's having a shower.", "eylem"]
+    explanation: "Durum fiilleri sürekli biçimde farklı bir anlam kazanır."
+  - id: q.c2.tense-nuances.07
+    type: reading_comprehension
+    difficulty: 5
+    context: "So yesterday I'm standing at the bus stop, minding my own business, when this man comes up to me and asks if I remember him. I look at him and I have absolutely no idea who he is. Then he says, \"We were at school together.\""
+    prompt: "Anlatıcı neden şimdiki zamanı kullanıyor?"
+    options:
+      - "*Geçmişte olmuş bir olayı canlı ve dolaysız kılmak için. :: Sözlü anlatıda \"historic present\" olayı dinleyenin gözünün önüne getirir."
+      - "Olay şu anda gerçekleştiği için. :: \"Yesterday\" olayın geçmişte olduğunu gösteriyor."
+      - "Olay her gün tekrarlandığı için. :: Tek bir olay anlatılıyor."
+      - "Anlatıcı dil bilgisi hatası yaptığı için. :: Bu, yerleşik bir anlatım tekniğidir."
+    explanation: "Gündelik anlatıda geçmiş olaylar canlılık için şimdiki zamanla verilebilir."
+  - id: q.c2.tense-nuances.08
+    type: translation
+    prompt: "Durmadan şikâyet ediyor. (kadın; rahatsızlık bildirerek)"
+    answers: ["She is always complaining.", "She's always complaining.", "She is constantly complaining.", "She's constantly complaining.", "She is forever complaining.", "She's forever complaining."]
+    explanation: "be + always / constantly / forever + -ing."

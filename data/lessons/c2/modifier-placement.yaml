@@ -1,0 +1,134 @@
+id: gram.c2.modifier-placement
+kind: grammar
+level: C2
+title_tr: "Kesinlik: niteleyicilerin yeri ve belirsizlik"
+title_en: "Precision: modifier placement and ambiguity"
+objective_tr: Bu dersin sonunda only, even, just gibi odak zarflarını anlamı değiştirecek biçimde doğru yere koyabilecek, asılı ve yanlış yerleştirilmiş niteleyicileri ve belirsiz göndermeleri fark edip düzeltebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.participle-clauses, gram.c1.ellipsis-substitution]
+vocabulary: [only, even, merely, nearly, ambiguous, clarify]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İleri düzeyde hata çoğu zaman dil bilgisi yanlışı değil, **belirsizliktir**: cümle doğrudur ama iki biçimde anlaşılabilir ya da yazarın kastetmediği şeyi söyler. Sözleşme, rapor ve akademik yazıda bu ciddi sonuçlar doğurur.
+
+      Temel ilke: **niteleyici, nitelediği sözcüğün hemen yanında durmalıdır.**
+  - kind: usage
+    title_tr: "Only'nin yeri"
+    table:
+      headers: ["Cümle", "Anlam"]
+      rows:
+        - ["Only I lent him the book.", "Başka kimse vermedi; yalnızca ben."]
+        - ["I only lent him the book.", "Vermedim, satmadım; yalnızca ödünç verdim."]
+        - ["I lent only him the book.", "Başkasına değil; yalnızca ona."]
+        - ["I lent him only the book.", "Başka bir şey değil; yalnızca kitabı."]
+  - kind: usage
+    title_tr: Sık görülen belirsizlik türleri
+    text_tr: |-
+      **Yanlış yerleştirilmiş niteleyici:** "She **almost** drove her children to school every day." (Neredeyse götürüyordu?) → "She drove her children to school **almost** every day."
+
+      **Asılı ortaç:** "**Having finished** the report, the computer was switched off." (Raporu bilgisayar mı bitirdi?) → "Having finished the report, **I** switched off the computer."
+
+      **İki yöne bakan niteleyici:** "Students who study **often** get good marks." (Sık çalışanlar mı, yoksa sık sık mı iyi not alıyor?)
+
+      **Belirsiz zamir:** "Ali told Mert that **he** had won." (Kim kazandı?) → "Ali told Mert, 'You have won.'" ya da ismi tekrar edin.
+
+      **Belirsiz kapsam:** "old men and women" (yaşlı olan yalnızca erkekler mi?) · "I didn't go because of the rain." (Gitmedim, nedeni yağmur / Gittim ama nedeni yağmur değil.)
+
+      **Edat öbeğinin bağlandığı yer:** "I saw the man **with the telescope**." (Teleskop kimde?)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Even Deniz laughed at the joke.", tr: "Espriye Deniz bile güldü."}
+      - {en: "Deniz even laughed at the joke.", tr: "Deniz espriye güldü bile."}
+      - {en: "We nearly lost all our money.", tr: "Az kalsın bütün paramızı kaybediyorduk. (Kaybetmedik.)"}
+      - {en: "We lost nearly all our money.", tr: "Paramızın neredeyse tamamını kaybettik. (Kaybettik.)"}
+      - {en: "Walking along the beach, we saw the sun set.", tr: "Kumsalda yürürken güneşin batışını gördük."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Covered in chocolate, I ate the strawberries.", tr: "Çikolata kaplı çilekleri yedim.", wrong: true, correction: "I ate the strawberries covered in chocolate.", note_tr: "Çikolata kaplı olan çilekler."}
+      - {en: "He only eats vegetables on Mondays. (kastedilen: yalnızca pazartesi günleri)", tr: "Yalnızca pazartesi günleri sebze yer.", wrong: true, correction: "He eats vegetables only on Mondays.", note_tr: "Yazıda only odağın yanına."}
+      - {en: "At the age of five, my father taught me to swim.", tr: "Beş yaşındayken babam bana yüzmeyi öğretti.", wrong: true, correction: "When I was five, my father taught me to swim.", note_tr: "Beş yaşında olan baba değil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Only'yi alışkanlıkla fiilin önüne koymak.** Konuşmada vurgu belirsizliği giderir; yazıda gidermez.
+
+      **Ortaç cümleciğinin öznesini denetlememek.**
+
+      **Zamirin neye gönderme yaptığını okurun bileceğini varsaymak.** Kuşku varsa ismi tekrar edin.
+questions:
+  - id: q.c2.modifier.01
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi cümle \"Başka hiç kimse aramadı; arayan tek kişi Selin'di\" anlamına gelir?"
+    options:
+      - "*Only Selin called me yesterday. :: Only özneyi niteliyor: yalnızca Selin."
+      - "Selin only called me yesterday. :: Yalnızca aradı (başka bir şey yapmadı) ya da daha dün aradı."
+      - "Selin called only me yesterday. :: Yalnızca beni aradı."
+      - "Selin called me only yesterday. :: Daha dün aradı."
+    explanation: "Only, hemen ardından gelen ögeyi niteler."
+  - id: q.c2.modifier.02
+    type: nuance
+    difficulty: 5
+    prompt: "\"We nearly sold all the tickets.\" ile \"We sold nearly all the tickets.\" arasındaki fark nedir?"
+    options:
+      - "*İlkine göre az kalsın satacaktık (belki hiç satılmadı); ikincisine göre biletlerin çoğu satıldı. :: Nearly'nin nitelediği öge değişiyor: fiil / miktar."
+      - "İkisi de biletlerin çoğunun satıldığını söyler. :: İlk cümle satışın gerçekleştiğini garanti etmez."
+      - "İlki biletlerin tamamının satıldığını söyler. :: Nearly \"neredeyse\" demektir."
+      - "İkisi arasında fark yoktur. :: Zarfın yeri anlamı değiştirir."
+    explanation: "Zarf, nitelediği sözcüğün yanında olmalıdır."
+  - id: q.c2.modifier.03
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi cümlede asılı (yanlış bağlanan) ortaç vardır?"
+    options:
+      - "*Driving to work, a deer ran across the road. :: Araba kullanan geyik değil; özne uyuşmuyor."
+      - "Driving to work, I saw a deer run across the road. :: Doğru: süren de gören de I."
+      - "As I was driving to work, a deer ran across the road. :: Doğru: özne açık."
+      - "A deer ran across the road while I was driving to work. :: Doğru."
+    explanation: "Ortacın gizli öznesi ana cümlenin öznesidir."
+    lessons: [gram.b2.participle-clauses]
+  - id: q.c2.modifier.04
+    type: error_correction
+    prompt: "Having been repaired, I collected my car from the garage."
+    answers: ["After my car had been repaired, I collected it from the garage.", "When my car had been repaired, I collected it from the garage.", "I collected my car from the garage after it had been repaired.", "Once my car had been repaired, I collected it from the garage.", "I collected my car from the garage once it had been repaired."]
+    explanation: "Onarılan araba, toplayan kişi; ortaç cümleciği özneyle uyuşmuyor."
+  - id: q.c2.modifier.05
+    type: nuance
+    difficulty: 5
+    prompt: "\"The manager told the assistant that she would be promoted.\" cümlesindeki sorun nedir?"
+    options:
+      - "*\"She\" müdüre de asistana da gönderme yapabilir; cümle belirsizdir. :: Belirsiz zamir göndermesi."
+      - "Would yerine will kullanılmalıydı. :: Aktarmada would doğrudur."
+      - "Told'dan sonra to gelmeliydi. :: Tell doğrudan kişi alır."
+      - "Cümlede hiçbir sorun yoktur. :: Dil bilgisi doğru, ama anlam belirsiz."
+    explanation: "Zamirin neye gönderme yaptığı açık olmalıdır."
+  - id: q.c2.modifier.06
+    type: sentence_building
+    prompt: "Belirsizliği giderin (kastedilen: yaşıyken yüzmeyi öğrenen benim): \"At the age of six, my mother taught me to swim.\" → When I ..."
+    answers: ["When I was six, my mother taught me to swim.", "When I was six years old, my mother taught me to swim."]
+    explanation: "Zaman ifadesinin kime ait olduğu açıkça belirtilir."
+  - id: q.c2.modifier.07
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["Even I understood it.", "Ben bile anladım."]
+      - ["I even understood it.", "Onu anladım bile."]
+      - ["I understood even that.", "Onu bile anladım."]
+      - ["Just I understood it.", "Yalnızca ben anladım."]
+    explanation: "Odak zarfı, önünde durduğu ögeyi öne çıkarır."
+  - id: q.c2.modifier.08
+    type: written_answer
+    difficulty: 5
+    prompt: "Şu üç cümle belirsiz ya da hatalı. Her birini anlamı açık olacak biçimde yeniden yazın: (1) \"Walking into the room, the lights went out.\" (2) \"She almost failed every exam.\" (kastedilen: sınavların neredeyse hepsinden kaldı) (3) \"Emre told Can that his car had been stolen.\" (kastedilen: çalınan Can'ın arabası)"
+    model_answers:
+      - "(1) As I walked into the room, the lights went out. (2) She failed almost every exam. (3) Emre told Can, \"Your car has been stolen.\""
+    checklist:
+      - "Birinci cümlede ortacın öznesini açıkça belirttim."
+      - "İkinci cümlede almost'u nitelediği sözcüğün (every) hemen önüne koydum."
+      - "Üçüncü cümlede zamirin kime gönderme yaptığını belirsizlik kalmayacak biçimde gösterdim."
+    explanation: "Niteleyiciyi nitelediği sözcüğün yanına koyun; zamir belirsizse ismi tekrar edin ya da doğrudan anlatıma geçin."
