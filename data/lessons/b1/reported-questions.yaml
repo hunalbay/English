@@ -1,0 +1,116 @@
+id: gram.b1.reported-questions
+kind: grammar
+level: B1
+title_tr: "Dolaylı anlatım: sorular, emirler ve ricalar"
+title_en: "Reported questions, commands and requests"
+objective_tr: Bu dersin sonunda soruları asked + if / soru sözcüğü ile, emir ve ricaları told / asked + kişi + to + fiil ile aktarabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.reported-statements]
+next: [gram.b1.indirect-questions]
+vocabulary: [ask, whether, want, wonder, warn]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Aktarılan soru artık **soru değildir**; düz cümle sırası kullanılır ve soru işareti konmaz.
+
+      "Where **do you live**?" → She asked me where **I lived**.
+
+      Yardımcı fiil **do / does / did** kaybolur, özne fiilden önce gelir, zaman kayması yine uygulanır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Evet / hayır sorusu", "asked (+ kişi) + if / whether + özne + fiil", "\"Are you OK?\" → He asked if I was OK."]
+        - ["Soru sözcüklü soru", "asked (+ kişi) + soru sözcüğü + özne + fiil", "\"What do you want?\" → She asked what I wanted."]
+        - ["Emir", "told + kişi + to + yalın fiil", "\"Sit down.\" → He told me to sit down."]
+        - ["Olumsuz emir", "told + kişi + not to + yalın fiil", "\"Don't move.\" → He told me not to move."]
+        - ["Rica", "asked + kişi + to + yalın fiil", "\"Can you help me?\" → She asked me to help her."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Sözcük sırası:** "He asked where **was the station**" yanlıştır → "He asked where **the station was**."
+
+      **If ile whether** evet / hayır sorularında aynı anlamdadır; whether biraz daha resmîdir.
+
+      **Not'ın yeri:** olumsuz emirde **not, to'dan önce** gelir: "She told me **not to** worry."
+
+      **Diğer aktarma fiilleri:** warn (uyarmak), advise (tavsiye etmek), invite (davet etmek), remind (hatırlatmak) da **kişi + to + fiil** alır: "He warned us not to swim there."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She asked me where I worked.", tr: "Bana nerede çalıştığımı sordu."}
+      - {en: "He asked if I had seen his glasses.", tr: "Gözlüğünü görüp görmediğimi sordu."}
+      - {en: "The teacher told us to open our books.", tr: "Öğretmen kitaplarımızı açmamızı söyledi."}
+      - {en: "My mother told me not to be late.", tr: "Annem geç kalmamamı söyledi."}
+      - {en: "I asked her to close the window.", tr: "Ondan pencereyi kapatmasını rica ettim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She asked me where did I live.", tr: "Bana nerede yaşadığımı sordu.", wrong: true, correction: "She asked me where I lived.", note_tr: "Düz cümle sırası; did yok."}
+      - {en: "He asked me was I hungry.", tr: "Aç olup olmadığımı sordu.", wrong: true, correction: "He asked me if I was hungry.", note_tr: "If / whether gerekir."}
+      - {en: "She told me to not touch it.", tr: "Ona dokunmamamı söyledi.", wrong: true, correction: "She told me not to touch it.", note_tr: "not + to + fiil."}
+      - {en: "He said me to wait.", tr: "Beklememi söyledi.", wrong: true, correction: "He told me to wait.", note_tr: "Emir aktarımında tell + kişi."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Soru sırasını korumak.** En yaygın hatadır; aktarılan soruda yardımcı fiil öne geçmez.
+
+      **Evet / hayır sorularında if'i unutmak.**
+
+      **Soru işareti koymak.** Aktarılan soru bir düz cümledir.
+questions:
+  - id: q.b1.reported-questions.01
+    type: multiple_choice
+    prompt: "\"Where do you work?\" → She asked me where ___."
+    options:
+      - "*I worked :: Düz cümle sırası ve zaman kayması."
+      - "did I work :: Aktarılan soruda yardımcı fiil öne geçmez."
+      - "do I work :: Soru sırası ve şimdiki zaman korunmuş."
+      - "I work did :: Böyle bir sıra yoktur."
+    explanation: "asked + soru sözcüğü + özne + fiil."
+  - id: q.b1.reported-questions.02
+    type: multiple_choice
+    prompt: "\"Do you like coffee?\" → He asked me ___ I liked coffee."
+    options:
+      - "*if :: Evet / hayır soruları if ya da whether ile aktarılır."
+      - "that :: That düz cümleleri aktarır, soruları değil."
+      - "what :: What, soru sözcüklü sorular içindir."
+      - "do :: Yardımcı fiil aktarılan soruda kullanılmaz."
+    explanation: "Evet / hayır sorusu → if / whether."
+  - id: q.b1.reported-questions.03
+    type: multiple_choice
+    prompt: "\"Don't open the window.\" → She told me ___ the window."
+    options:
+      - "*not to open :: Olumsuz emir: not + to + yalın fiil."
+      - "to not open :: Not, to'dan önce gelir."
+      - "don't open :: Aktarılan emirde don't kullanılmaz."
+      - "not opening :: Tell + kişi + to + fiil kalıbı gerekir."
+    explanation: "told + kişi + not to + yalın fiil."
+  - id: q.b1.reported-questions.04
+    type: sentence_building
+    prompt: "Dolaylı anlatıma çevirin: \"What time does the film start?\" → I asked ..."
+    answers: ["I asked what time the film started.", "I asked what time the film starts."]
+    explanation: "Does kaybolur; özne + fiil sırası kullanılır."
+  - id: q.b1.reported-questions.05
+    type: error_correction
+    prompt: "The police officer asked me where was I going."
+    answers: ["The police officer asked me where I was going."]
+    explanation: "Aktarılan soruda özne fiilden önce gelir."
+  - id: q.b1.reported-questions.06
+    type: sentence_building
+    prompt: "Dolaylı anlatıma çevirin: \"Please wait outside,\" the nurse said to us. → The nurse asked ..."
+    answers: ["The nurse asked us to wait outside."]
+    explanation: "Rica: asked + kişi + to + yalın fiil."
+  - id: q.b1.reported-questions.07
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [He, asked, me, if, I, could, drive]
+    explanation: "asked + kişi + if + özne + fiil."
+  - id: q.b1.reported-questions.08
+    type: translation
+    prompt: "Bana nerede yaşadığımı sordu. (erkek)"
+    answers: ["He asked me where I lived.", "He asked me where I live.", "He asked where I lived."]
+    explanation: "asked me where I lived."

@@ -1,0 +1,137 @@
+id: gram.b1.second-conditional
+kind: grammar
+level: B1
+title_tr: "Hayali durumlar: second conditional"
+title_en: Second conditional
+objective_tr: Bu dersin sonunda şimdiki ya da gelecekteki gerçek dışı, hayali durumları if + Past Simple, would + fiil yapısıyla anlatabilecek ve first conditional ile farkını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.first-conditional, gram.b1.zero-conditional]
+next: [gram.b1.wish]
+vocabulary: [if, rich, win, advice, travel, world]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Second conditional**, şu an gerçek olmayan ya da gerçekleşmesi pek olası görülmeyen durumları ve bunların hayali sonuçlarını anlatır: "If I **had** a car, I **would drive** to work." (Arabam olsaydı işe arabayla giderdim. — Arabam yok.)
+
+      If bölümünde **Past Simple** kullanılır ama anlam **geçmiş değildir**; geçmiş biçim burada "gerçek dışılık" bildirir. Türkçedeki **-se / -sa + -(e)rdi** yapısına karşılık gelir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Koşul", "Sonuç", "Örnek"]
+      rows:
+        - ["If + Past Simple,", "would ('d) + yalın fiil", "If I knew, I would tell you."]
+        - ["If + Past Simple,", "wouldn't + yalın fiil", "If I were you, I wouldn't go."]
+        - ["Soru", "What would you do if + Past Simple?", "What would you do if you won?"]
+        - ["Olasılık / yetenek", "could / might + yalın fiil", "If I had time, I could help."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **To be fiili bütün öznelerle "were" olabilir:** "If I **were** rich...", "If she **were** here...". Günlük konuşmada "was" da duyulur, ancak tavsiye kalıbı **"If I were you"** her zaman were ile kurulur.
+
+      **If bölümünde would kullanılmaz:** "If I would have money" yanlıştır.
+
+      **Tavsiye vermek:** "If I were you, I would talk to her." (Yerinde olsam onunla konuşurdum.)
+  - kind: comparison
+    title_tr: "First mü, second mı?"
+    table:
+      headers: ["", "First conditional", "Second conditional"]
+      rows:
+        - ["Bakış", "gerçekleşebilir", "hayali, olası görülmüyor"]
+        - ["Yapı", "if + present, will", "if + past, would"]
+        - ["Örnek", "If I have time, I will call you.", "If I had time, I would call you."]
+        - ["Anlam", "Vaktim olabilir.", "Vaktim yok."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "If I won the lottery, I would travel around the world.", tr: "Piyangoyu kazansaydım dünyayı gezerdim."}
+      - {en: "If she spoke English, she would get a better job.", tr: "İngilizce konuşsaydı daha iyi bir iş bulurdu."}
+      - {en: "If I were you, I would see a doctor.", tr: "Yerinde olsam doktora giderdim."}
+      - {en: "What would you do if you lost your passport?", tr: "Pasaportunu kaybetsen ne yapardın?"}
+      - {en: "We could go to the beach if it weren't so cold.", tr: "Hava bu kadar soğuk olmasaydı plaja gidebilirdik."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "If I would have more time, I would read more.", tr: "Daha çok vaktim olsaydı daha çok okurdum.", wrong: true, correction: "If I had more time, I would read more.", note_tr: "If bölümünde would yok."}
+      - {en: "If I had a car, I will drive to work.", tr: "Arabam olsaydı işe arabayla giderdim.", wrong: true, correction: "If I had a car, I would drive to work.", note_tr: "Past Simple ile would."}
+      - {en: "If I am you, I would apologize.", tr: "Yerinde olsam özür dilerdim.", wrong: true, correction: "If I were you, I would apologize.", note_tr: "Kalıp: If I were you."}
+      - {en: "If he studied, he would passes.", tr: "Çalışsaydı geçerdi.", wrong: true, correction: "If he studied, he would pass.", note_tr: "Would + yalın fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Past Simple'ı geçmiş sanmak.** "If I had a car" şu anla ilgilidir. Geçmişteki gerçek dışı durumlar için third conditional kullanılır (B2).
+
+      **İki bölümde de would kullanmak.** Türkçede iki bölümde de ek olduğu için bu hata sık yapılır.
+
+      **Gerçekleşebilir durumlar için second conditional seçmek.** Konuşan durumu mümkün görüyorsa first conditional kullanır.
+questions:
+  - id: q.b1.second-conditional.01
+    type: multiple_choice
+    prompt: "If I ___ more money, I would buy a bigger flat."
+    options:
+      - "*had :: Hayali şimdiki durum: if + Past Simple."
+      - "have :: Present Simple, first conditional yapısıdır; would ile uyuşmaz."
+      - "would have :: If bölümünde would kullanılmaz."
+      - "will have :: If bölümünde will kullanılmaz."
+    explanation: "Second conditional: if + past, would + yalın fiil."
+  - id: q.b1.second-conditional.02
+    type: multiple_choice
+    prompt: "If she lived nearer, we ___ her more often."
+    options:
+      - "*would see :: Hayali sonuç: would + yalın fiil."
+      - "will see :: Will, first conditional içindir."
+      - "saw :: Sonuç bölümünde Past Simple kullanılmaz."
+      - "see :: Present Simple genel doğrular içindir."
+    explanation: "Sonuç bölümü: would + yalın fiil."
+  - id: q.b1.second-conditional.03
+    type: fill_blank
+    prompt: "If I ___ you, I would take the job."
+    answers: [were]
+    explanation: "Tavsiye kalıbı: If I were you."
+  - id: q.b1.second-conditional.04
+    type: error_correction
+    prompt: "If I would know the answer, I would tell you."
+    answers: ["If I knew the answer, I would tell you.", "If I knew the answer, I'd tell you."]
+    explanation: "If bölümünde would değil Past Simple kullanılır."
+  - id: q.b1.second-conditional.05
+    type: nuance
+    difficulty: 3
+    prompt: "\"If I had time, I would help you.\" diyen kişi için hangisi doğrudur?"
+    options:
+      - "*Şu an vakti yok, bu yüzden yardım etmiyor. :: Second conditional gerçek dışı bir şimdiki durumu anlatır."
+      - "Geçmişte vakti yoktu. :: Past Simple burada geçmişi göstermez."
+      - "Büyük olasılıkla vakti olacak ve yardım edecek. :: Bunun için first conditional kullanılırdı."
+      - "Her zaman vakti olduğunda yardım eder. :: Bu, zero conditional ile anlatılır."
+    explanation: "If + past, would: şimdiki gerçek dışı durum."
+  - id: q.b1.second-conditional.06
+    type: nuance
+    difficulty: 4
+    prompt: "Bir iş görüşmesinden çıkan ve işi almayı mümkün gören biri hangisini söyler?"
+    options:
+      - "*If I get the job, I will move to İzmir. :: Olası gördüğü durum: first conditional."
+      - "If I got the job, I would move to İzmir. :: Bu, işi almayı pek olası görmediğini düşündürür."
+      - "If I get the job, I would move to İzmir. :: İki yapı karıştırılmış."
+      - "If I will get the job, I move to İzmir. :: If'ten sonra will gelmez."
+    explanation: "Aynı gelecek durumu, konuşanın olasılık yargısına göre first ya da second conditional ile söylenir."
+    lessons: [gram.a2.first-conditional]
+  - id: q.b1.second-conditional.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [What, would, you, do, if, you, lost, your, job]
+    explanation: "What would + özne + fiil + if + Past Simple?"
+  - id: q.b1.second-conditional.08
+    type: dialogue_completion
+    context: "A: I have a terrible headache, but I have so much work.\nB: If I were you, I ___ home and rest."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*would go :: Tavsiye: If I were you, I would..."
+      - "will go :: Were ile will kullanılmaz."
+      - "went :: Sonuç bölümünde would gerekir."
+      - "go :: Yalın biçim tek başına sonuç bölümünü kurmaz."
+    explanation: "If I were you, I would + yalın fiil."
+  - id: q.b1.second-conditional.09
+    type: translation
+    prompt: "Arabam olsaydı işe arabayla giderdim."
+    answers: ["If I had a car, I would drive to work.", "If I had a car, I'd drive to work.", "I would drive to work if I had a car.", "If I had a car, I would go to work by car.", "I'd drive to work if I had a car."]
+    explanation: "if + Past Simple, would + yalın fiil."

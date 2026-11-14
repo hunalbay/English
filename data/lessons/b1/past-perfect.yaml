@@ -1,0 +1,125 @@
+id: gram.b1.past-perfect
+kind: grammar
+level: B1
+title_tr: "Geçmişin geçmişi: Past Perfect"
+title_en: Past Perfect
+objective_tr: Bu dersin sonunda geçmişteki bir olaydan daha önce olmuş başka bir olayı had + fiilin üçüncü biçimiyle anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.present-perfect, gram.a2.past-simple-vs-continuous]
+next: [gram.b1.used-to-be-used-to]
+vocabulary: [already, before, after, when, never, just]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Geçmişteki iki olaydan hangisinin **daha önce** olduğunu göstermek için **Past Perfect** kullanılır: "When I arrived, the film **had started**." (Ben vardığımda film başlamıştı.)
+
+      Türkçedeki **-mişti / -mıştı** biçimine karşılık gelir. Yapısı her özneyle aynıdır: **had** + fiilin üçüncü biçimi.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + had ('d) + V3", "She had left."]
+        - ["Olumsuz", "özne + hadn't + V3", "She hadn't left."]
+        - ["Soru", "Had + özne + V3?", "Had she left?"]
+  - kind: comparison
+    title_tr: Anlam farkı
+    text_tr: |-
+      "When I arrived, the film **started**." → Ben vardım, **sonra** film başladı.
+
+      "When I arrived, the film **had started**." → Film **önce** başlamıştı, ben sonra vardım (başını kaçırdım).
+
+      **Before** ve **after** sırayı zaten belli ettiğinde Past Simple da kullanılabilir: "After she (had) finished work, she went home."
+  - kind: usage
+    title_tr: Sık kullanılan sözcükler
+    text_tr: |-
+      **already, just, never, ever:** "The train had **already** left.", "I had **never** seen snow before."
+
+      **by the time:** "**By the time** we got there, the shop had closed." (Biz oraya varana kadar dükkân kapanmıştı.)
+
+      **because ile neden bildirirken:** "I was tired because I **hadn't slept** well."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "When we got to the station, the train had already left.", tr: "İstasyona vardığımızda tren çoktan gitmişti."}
+      - {en: "I didn't recognize her because she had changed a lot.", tr: "Onu tanıyamadım çünkü çok değişmişti."}
+      - {en: "He had never flown before that trip.", tr: "O yolculuktan önce hiç uçağa binmemişti."}
+      - {en: "Had you met him before the party?", tr: "Partiden önce onunla tanışmış mıydın?"}
+      - {en: "She was hungry because she hadn't eaten all day.", tr: "Açtı çünkü bütün gün bir şey yememişti."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "When I arrived, they already left.", tr: "Ben vardığımda çoktan gitmişlerdi.", wrong: true, correction: "When I arrived, they had already left.", note_tr: "Önceki olay Past Perfect."}
+      - {en: "I had went to bed early.", tr: "Erken yatmıştım.", wrong: true, correction: "I had gone to bed early.", note_tr: "Had + üçüncü biçim."}
+      - {en: "Yesterday I had visited my aunt.", tr: "Dün teyzemi ziyaret ettim.", wrong: true, correction: "Yesterday I visited my aunt.", note_tr: "Tek bir geçmiş olay için Past Simple."}
+      - {en: "She has finished before I called.", tr: "Ben aramadan önce bitirmişti.", wrong: true, correction: "She had finished before I called.", note_tr: "Geçmişteki olaydan öncesi: had."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tek başına geçmiş olaylar için kullanmak.** Past Perfect ancak geçmişte başka bir olaya **göre daha önce** olan bir şey varsa kullanılır.
+
+      **Present Perfect ile karıştırmak.** Present Perfect şimdiye, Past Perfect geçmişteki bir ana bağlanır.
+
+      **'d kısaltmasını yanlış çözmek.** "I'd gone" = I **had** gone; "I'd go" = I **would** go. Ardından gelen fiilin biçimine bakın.
+questions:
+  - id: q.b1.past-perfect.01
+    type: multiple_choice
+    prompt: "When we arrived at the cinema, the film ___."
+    options:
+      - "*had already started :: Film, biz varmadan önce başlamıştı: Past Perfect."
+      - "already started :: Sıranın açık olması için had gerekir."
+      - "has already started :: Present Perfect şimdiye bağlanır; hikâye geçmişte."
+      - "was already starting :: Bu, tam o sırada başlamakta olduğunu söyler."
+    explanation: "Geçmişteki bir olaydan önce olan olay → had + V3."
+  - id: q.b1.past-perfect.02
+    type: multiple_choice
+    prompt: "I was very tired because I ___ well the night before."
+    options:
+      - "*hadn't slept :: Yorgunluğun nedeni daha önce olmuş bir durum."
+      - "didn't sleep :: Kabul edilebilir, ancak \"the night before\" ile önceliği göstermek için Past Perfect tercih edilir."
+      - "haven't slept :: Present Perfect şimdiye bağlanır."
+      - "wasn't sleeping :: Continuous burada nedeni açıklamaz."
+    explanation: "Geçmişteki bir durumun daha önceki nedeni: Past Perfect."
+  - id: q.b1.past-perfect.03
+    type: word_formation
+    prompt: "By the time I got home, my family ___ (eat) dinner."
+    answers: ["had eaten", "had already eaten"]
+    explanation: "By the time + Past Simple, Past Perfect."
+  - id: q.b1.past-perfect.04
+    type: error_correction
+    prompt: "She told me she has lost her keys."
+    answers: ["She told me she had lost her keys.", "She told me that she had lost her keys."]
+    explanation: "\"Told\" geçmişte; anahtarların kaybolması ondan da öncedir: had lost."
+  - id: q.b1.past-perfect.05
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede Ali, konuşan gelmeden ÖNCE ayrılmıştır?"
+    options:
+      - "*When I arrived, Ali had left. :: Had left: ayrılma varıştan önce."
+      - "When I arrived, Ali left. :: Önce ben vardım, sonra Ali ayrıldı."
+      - "When I arrived, Ali was leaving. :: Ben vardığımda ayrılmak üzereydi."
+      - "When I arrive, Ali will leave. :: Gelecekle ilgili bir cümle."
+    explanation: "Past Perfect iki geçmiş olaydan önce olanı gösterir."
+  - id: q.b1.past-perfect.06
+    type: paragraph_completion
+    difficulty: 3
+    context: "Elif opened her bag and looked for her phone. It wasn't there. Then she remembered: she ___ it on the kitchen table that morning."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*had left :: Telefonu bırakma, hatırlama anından önce olmuştur."
+      - "has left :: Present Perfect geçmişteki bir hikâyede kullanılmaz."
+      - "leaves :: Present Simple hikâyenin zamanına uymaz."
+      - "was leaving :: Continuous tamamlanmış bir eylemi anlatmaz."
+    explanation: "Hikâyede geriye dönüş Past Perfect ile yapılır."
+  - id: q.b1.past-perfect.07
+    type: sentence_building
+    prompt: "I / never / see / the sea / before that day (Past Perfect)"
+    answers: ["I had never seen the sea before that day."]
+    explanation: "had + never + V3."
+  - id: q.b1.past-perfect.08
+    type: translation
+    prompt: "İstasyona vardığımızda tren gitmişti."
+    answers: ["When we arrived at the station, the train had left.", "When we got to the station, the train had left.", "The train had left when we arrived at the station.", "When we arrived at the station, the train had already left.", "When we got to the station, the train had already left."]
+    explanation: "Önce olan olay: had left; sonra olan: arrived."

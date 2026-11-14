@@ -150,3 +150,37 @@ units:
       - gram.a2.verb-patterns
       - gram.a2.relative-clauses
       - gram.a2.possessive-pronouns
+
+  - id: b1.u01
+    level: B1
+    title_tr: Zamanlarda derinleşme
+    title_en: Going deeper into tenses
+    description_tr: Süregelen eylemleri, geçmişin geçmişini, alışkanlıkları ve gelecek anlatımlarını ayrıntılı kullanın.
+    lessons:
+      - gram.b1.present-perfect-continuous
+      - gram.b1.past-perfect
+      - gram.b1.used-to-be-used-to
+      - gram.b1.future-forms
+
+  - id: b1.u02
+    level: B1
+    title_tr: Koşullar ve dilekler
+    title_en: Conditions and wishes
+    description_tr: Genel doğruları, hayali durumları ve dilekleri anlatın; koşul ve zaman bağlaçlarını kullanın.
+    lessons:
+      - gram.b1.zero-conditional
+      - gram.b1.second-conditional
+      - gram.b1.wish
+      - gram.b1.unless-time-clauses
+
+  - id: b1.u03
+    level: B1
+    title_tr: Edilgen çatı ve dolaylı anlatım
+    title_en: Passive and reported speech
+    description_tr: Eylemi yapanı öne çıkarmadan anlatın, başkalarının sözlerini ve sorularını aktarın, kibar sorular sorun.
+    lessons:
+      - gram.b1.passive-basics
+      - gram.b1.passive-other-tenses
+      - gram.b1.reported-statements
+      - gram.b1.reported-questions
+      - gram.b1.indirect-questions

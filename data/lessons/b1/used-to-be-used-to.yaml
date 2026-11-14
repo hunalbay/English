@@ -1,0 +1,119 @@
+id: gram.b1.used-to-be-used-to
+kind: grammar
+level: B1
+title_tr: "Used to, be used to, get used to"
+title_en: "Used to / be used to / get used to"
+objective_tr: Bu dersin sonunda eski alışkanlık bildiren used to ile alışkın olmak (be used to) ve alışmak (get used to) yapılarını birbirinden ayırt edip doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.used-to, gram.a2.verb-patterns]
+vocabulary: [use, early, noise, weather, difficult]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bu üç yapı birbirine çok benzer ama anlamları ve ardından gelen biçim farklıdır.
+
+      **used to + yalın fiil** → eskiden yapardım (artık yapmıyorum).
+
+      **be used to + isim / fiil-ing** → alışkınım (benim için normal).
+
+      **get used to + isim / fiil-ing** → alışıyorum, alışmak (süreç).
+  - kind: comparison
+    title_tr: Üç yapı yan yana
+    table:
+      headers: ["Yapı", "Anlam", "Ardından", "Örnek"]
+      rows:
+        - ["used to", "eski alışkanlık", "yalın fiil", "I used to get up late."]
+        - ["be used to", "alışkın olmak", "isim / -ing", "I am used to getting up early."]
+        - ["get used to", "alışmak", "isim / -ing", "I am getting used to getting up early."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Be used to ve get used to'daki "to" bir edattır**, bu yüzden ardından fiil gelirse **-ing** alır: "I'm used to **driving** on the left."
+
+      **Be used to her zamanda kullanılabilir:** "I **wasn't** used to the cold.", "You **will be** used to it soon."
+
+      **Get used to değişimi anlatır:** "It took me a year to **get used to** the weather."
+
+      **Used to yalnızca geçmiş içindir** ve to be almaz: "I used to smoke." (I am used to smoke değil.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I used to live in a small village.", tr: "Eskiden küçük bir köyde yaşardım."}
+      - {en: "She is used to working at night.", tr: "Gece çalışmaya alışkın."}
+      - {en: "I'm not used to this kind of food.", tr: "Bu tür yemeklere alışkın değilim."}
+      - {en: "You will get used to the noise.", tr: "Gürültüye alışacaksın."}
+      - {en: "He never got used to living alone.", tr: "Yalnız yaşamaya hiç alışamadı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I am used to get up early.", tr: "Erken kalkmaya alışkınım.", wrong: true, correction: "I am used to getting up early.", note_tr: "Be used to + -ing."}
+      - {en: "I am used to smoke, but I stopped.", tr: "Eskiden sigara içerdim ama bıraktım.", wrong: true, correction: "I used to smoke, but I stopped.", note_tr: "Eski alışkanlık: used to (to be yok)."}
+      - {en: "She used to working here.", tr: "Eskiden burada çalışırdı.", wrong: true, correction: "She used to work here.", note_tr: "Used to + yalın fiil."}
+      - {en: "I can't get used to drive on the left.", tr: "Soldan araba kullanmaya alışamıyorum.", wrong: true, correction: "I can't get used to driving on the left.", note_tr: "Get used to + -ing."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To be'nin varlığına dikkat etmemek.** "I used to..." ile "I **am** used to..." tamamen farklı anlamlar taşır.
+
+      **Be used to'dan sonra yalın fiil kullanmak.** Buradaki to, "look forward to" kalıbındaki gibi bir edattır.
+
+      **Get used to yerine "be used to" kullanmak.** Sürecin içindeyseniz get, sonuca ulaştıysanız be kullanın.
+questions:
+  - id: q.b1.used-to-forms.01
+    type: multiple_choice
+    prompt: "I ___ the cold weather. I was born in Erzurum."
+    options:
+      - "*am used to :: Alışkın olmak: be used to + isim."
+      - "used to :: Used to'dan sonra fiil gelir ve eski alışkanlık bildirir."
+      - "get used :: To eksik ve anlam uymuyor."
+      - "use to :: Böyle bir şimdiki zaman yapısı yoktur."
+    explanation: "Benim için normal → be used to."
+  - id: q.b1.used-to-forms.02
+    type: multiple_choice
+    prompt: "She is used to ___ long hours."
+    options:
+      - "*working :: Be used to'dan sonra fiil -ing alır."
+      - "work :: Buradaki to bir edattır; yalın fiil gelmez."
+      - "worked :: Geçmiş biçim burada kullanılmaz."
+      - "works :: Çekimli fiil edattan sonra gelmez."
+    explanation: "be used to + fiil-ing."
+  - id: q.b1.used-to-forms.03
+    type: fill_blank
+    prompt: "When I moved to London, it took me months to ___ used to the traffic."
+    answers: [get]
+    explanation: "Alışma süreci: get used to."
+  - id: q.b1.used-to-forms.04
+    type: error_correction
+    prompt: "I am used to live in a big city when I was young."
+    answers: ["I used to live in a big city when I was young."]
+    explanation: "Eski durum: used to + yalın fiil; to be kullanılmaz."
+  - id: q.b1.used-to-forms.05
+    type: nuance
+    difficulty: 4
+    prompt: "\"I used to drive to work.\" ile \"I am used to driving to work.\" arasındaki fark nedir?"
+    options:
+      - "*İlki eskiden arabayla gittiğimi (artık gitmediğimi), ikincisi arabayla gitmeye alışkın olduğumu söyler. :: Used to = eski alışkanlık; be used to = alışkın olmak."
+      - "İkisi de aynı anlama gelir. :: To be'nin varlığı anlamı tamamen değiştirir."
+      - "İlki alışkın olduğumu, ikincisi eskiden yaptığımı söyler. :: Tam tersi."
+      - "İlki gelecekle, ikincisi geçmişle ilgilidir. :: İlki geçmişle, ikincisi şimdiki durumla ilgilidir."
+    explanation: "Used to + yalın fiil geçmişi; be used to + -ing şimdiki alışkanlık durumunu anlatır."
+  - id: q.b1.used-to-forms.06
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["I used to wear glasses.", "Eskiden gözlük takardım."]
+      - ["I am used to wearing glasses.", "Gözlük takmaya alışkınım."]
+      - ["I am getting used to wearing glasses.", "Gözlük takmaya alışıyorum."]
+    explanation: "Üç yapı üç ayrı anlam taşır."
+  - id: q.b1.used-to-forms.07
+    type: word_formation
+    prompt: "Don't worry. You'll soon get used to ___ (speak) English every day."
+    answers: [speaking]
+    explanation: "get used to + fiil-ing."
+  - id: q.b1.used-to-forms.08
+    type: translation
+    prompt: "Erken kalkmaya alışkınım."
+    answers: ["I am used to getting up early.", "I'm used to getting up early.", "I am used to waking up early.", "I'm used to waking up early."]
+    explanation: "be used to + fiil-ing."

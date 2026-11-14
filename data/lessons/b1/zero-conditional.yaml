@@ -1,0 +1,115 @@
+id: gram.b1.zero-conditional
+kind: grammar
+level: B1
+title_tr: "Genel doğrular: zero conditional"
+title_en: Zero conditional
+objective_tr: Bu dersin sonunda her zaman geçerli olan sonuçları ve genel doğruları if / when + Present Simple, Present Simple yapısıyla anlatabilecek, bu yapıyı first conditional ile karşılaştırabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.first-conditional]
+next: [gram.b1.second-conditional]
+vocabulary: [if, when, water, ice, heat]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Zero conditional**, koşul gerçekleştiğinde sonucun **her zaman** aynı olduğu durumları anlatır: bilimsel gerçekler, genel doğrular, alışkanlıklar ve talimatlar.
+
+      "If you **heat** ice, it **melts**." (Buzu ısıtırsan erir.)
+
+      İki bölümde de **Present Simple** kullanılır. If yerine **when** de kullanılabilir, çünkü sonuç kesindir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Koşul", "Sonuç", "Örnek"]
+      rows:
+        - ["If / When + Present Simple,", "Present Simple", "If it rains, the ground gets wet."]
+        - ["If + Present Simple,", "emir kipi", "If you feel ill, see a doctor."]
+  - kind: comparison
+    title_tr: "Zero mu, first mü?"
+    table:
+      headers: ["", "Zero conditional", "First conditional"]
+      rows:
+        - ["Anlam", "her zaman doğru", "belirli bir gelecek durumu"]
+        - ["Yapı", "if + present, present", "if + present, will"]
+        - ["Örnek", "If I drink coffee at night, I can't sleep.", "If I drink this coffee now, I won't sleep tonight."]
+        - ["Türkçe", "Gece kahve içersem uyuyamam. (genel)", "Bu kahveyi şimdi içersem bu gece uyuyamayacağım."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "If you mix red and yellow, you get orange.", tr: "Kırmızı ile sarıyı karıştırırsan turuncu elde edersin."}
+      - {en: "When I am tired, I go to bed early.", tr: "Yorgun olduğumda erken yatarım."}
+      - {en: "Plants die if they don't get water.", tr: "Bitkiler su almazsa ölür."}
+      - {en: "If you have any questions, ask me.", tr: "Sorunuz olursa bana sorun."}
+      - {en: "If I eat too much, I feel sleepy.", tr: "Çok yersem uykum gelir."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "If you heat water to 100 degrees, it will boil.", tr: "Suyu 100 dereceye ısıtırsan kaynar.", wrong: true, correction: "If you heat water to 100 degrees, it boils.", note_tr: "Genel doğru: iki bölüm de Present Simple."}
+      - {en: "If it will rain, the streets get wet.", tr: "Yağmur yağarsa sokaklar ıslanır.", wrong: true, correction: "If it rains, the streets get wet.", note_tr: "If'ten sonra will gelmez."}
+      - {en: "When she is angry, she not speaks.", tr: "Kızgın olduğunda konuşmaz.", wrong: true, correction: "When she is angry, she doesn't speak.", note_tr: "Olumsuz: doesn't + yalın fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Genel doğrularda will kullanmak.** Türkçede iki durumda da geniş zaman kullanıldığı için ayrım gözden kaçabilir.
+
+      **If ile when'i her yerde eş sanmak.** Zero conditional'da ikisi yakın anlamdadır; first conditional'da if "olursa", when "olunca" demektir.
+questions:
+  - id: q.b1.zero-conditional.01
+    type: multiple_choice
+    prompt: "If you ___ ice, it melts."
+    options:
+      - "*heat :: Genel doğru: if + Present Simple."
+      - "will heat :: If'ten sonra will gelmez."
+      - "heated :: Past Simple gerçek dışı koşullar içindir."
+      - "are heating :: Genel doğrularda Continuous kullanılmaz."
+    explanation: "Zero conditional: if + present, present."
+  - id: q.b1.zero-conditional.02
+    type: multiple_choice
+    prompt: "When I drink coffee late at night, I ___ sleep."
+    options:
+      - "*can't :: Her seferinde aynı sonuç: Present Simple (can't)."
+      - "won't :: Won't belirli bir gelecek durumu için kullanılır."
+      - "couldn't :: Couldn't geçmiş zamandır."
+      - "wouldn't :: Wouldn't varsayımsal durumlar içindir."
+    explanation: "Alışılmış sonuç → Present Simple."
+  - id: q.b1.zero-conditional.03
+    type: word_formation
+    prompt: "Plants die if they ___ (not / get) enough water."
+    answers: ["don't get", "do not get"]
+    explanation: "Genel doğru: Present Simple; they → don't."
+  - id: q.b1.zero-conditional.04
+    type: error_correction
+    prompt: "If you press this button, the machine will start. (her zaman geçerli bir talimat olarak)"
+    answers: ["If you press this button, the machine starts."]
+    explanation: "Her zaman geçerli bir sonuç için sonuç bölümünde de Present Simple kullanılır."
+  - id: q.b1.zero-conditional.05
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle belirli bir gelecek durumundan söz eder?"
+    options:
+      - "*If it rains tomorrow, I will take the car. :: \"Tomorrow\" ve will: tek bir gelecek durumu (first conditional)."
+      - "If it rains, I take the car. :: Her seferinde yaptığım şey (zero conditional)."
+      - "When it rains, the roads are dangerous. :: Genel bir doğru."
+      - "If you heat metal, it expands. :: Bilimsel bir gerçek."
+    explanation: "Zero: her zaman. First: belirli bir gelecek olasılığı."
+    lessons: [gram.a2.first-conditional]
+  - id: q.b1.zero-conditional.06
+    type: sentence_completion
+    prompt: "If you feel dizzy, ___"
+    options:
+      - "*sit down and drink some water. :: Talimat: if + present, emir kipi."
+      - "you sat down. :: Past Simple uymuyor."
+      - "you would sit down. :: Would varsayımsal durumlar içindir."
+      - "if you sit down. :: Sonuç bölümü ikinci bir if ile başlamaz."
+    explanation: "Koşula bağlı talimatlarda sonuç bölümünde emir kipi kullanılır."
+  - id: q.b1.zero-conditional.07
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [Water, boils, if, you, heat, it]
+    explanation: "Sonuç başta olduğunda virgül kullanılmaz."
+  - id: q.b1.zero-conditional.08
+    type: translation
+    prompt: "Yorgun olduğumda erken yatarım."
+    answers: ["When I am tired, I go to bed early.", "When I'm tired, I go to bed early.", "If I am tired, I go to bed early.", "I go to bed early when I am tired.", "I go to bed early when I'm tired.", "If I'm tired, I go to bed early."]
+    explanation: "Alışkanlık: when / if + Present Simple, Present Simple."

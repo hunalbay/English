@@ -1,0 +1,140 @@
+id: gram.b1.reported-statements
+kind: grammar
+level: B1
+title_tr: "Dolaylı anlatım: aktarılan cümleler"
+title_en: "Reported speech: statements"
+objective_tr: Bu dersin sonunda birinin söylediklerini said / told ile aktarabilecek, zaman kaymasını, zamir ve zaman ifadesi değişikliklerini uygulayabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.past-perfect]
+next: [gram.b1.reported-questions]
+vocabulary: [say, tell, that, explain, promise]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Birinin sözünü iki biçimde aktarabiliriz. **Doğrudan:** Ali said, "I am tired." **Dolaylı:** Ali said (that) he **was** tired. (Ali yorgun olduğunu söyledi.)
+
+      Aktarma fiili geçmişte olduğunda (said, told), aktarılan cümledeki fiil genellikle **bir zaman geriye** kayar. Buna **zaman kayması (backshift)** denir. **That** söylenmeyebilir.
+  - kind: formula
+    title_tr: Zaman kayması
+    table:
+      headers: ["Doğrudan", "Dolaylı", "Örnek"]
+      rows:
+        - ["Present Simple", "Past Simple", "\"I work here.\" → He said he worked there."]
+        - ["Present Continuous", "Past Continuous", "\"I'm reading.\" → She said she was reading."]
+        - ["Past Simple", "Past Perfect", "\"I saw him.\" → She said she had seen him."]
+        - ["Present Perfect", "Past Perfect", "\"I've finished.\" → He said he had finished."]
+        - ["will", "would", "\"I'll call.\" → He said he would call."]
+        - ["can", "could", "\"I can swim.\" → She said she could swim."]
+        - ["must / have to", "had to", "\"I must go.\" → He said he had to go."]
+  - kind: usage
+    title_tr: Zamir, yer ve zaman değişiklikleri
+    table:
+      headers: ["Doğrudan", "Dolaylı"]
+      rows:
+        - ["I / my", "he, she / his, her (konuşana göre)"]
+        - ["this / these", "that / those"]
+        - ["here", "there"]
+        - ["now", "then"]
+        - ["today", "that day"]
+        - ["tomorrow", "the next day / the following day"]
+        - ["yesterday", "the day before"]
+        - ["last week", "the week before"]
+        - ["next week", "the following week"]
+  - kind: usage
+    title_tr: "Say mi, tell mi?"
+    text_tr: |-
+      **Tell'den sonra kişi gelir:** "She **told me** (that) she was busy."
+
+      **Say'den sonra kişi gelmez** (gelecekse "to" ile): "She **said** (that) she was busy.", "She said **to me** that..."
+
+      "She said me..." ve "She told that..." yanlıştır.
+
+      **Zaman kayması ne zaman yapılmaz?** Söylenen şey hâlâ geçerliyse kayma isteğe bağlıdır: "He said he **lives** / **lived** in İzmir." Aktarma fiili şimdiki zamandaysa kayma olmaz: "She **says** she **is** tired."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "He said he was hungry.", tr: "Aç olduğunu söyledi."}
+      - {en: "She told me she had lost her phone.", tr: "Bana telefonunu kaybettiğini söyledi."}
+      - {en: "They said they would come the next day.", tr: "Ertesi gün geleceklerini söylediler."}
+      - {en: "Mert told us he couldn't find his keys.", tr: "Mert bize anahtarlarını bulamadığını söyledi."}
+      - {en: "The teacher said that we had to finish the project.", tr: "Öğretmen projeyi bitirmemiz gerektiğini söyledi."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She said me she was tired.", tr: "Bana yorgun olduğunu söyledi.", wrong: true, correction: "She told me she was tired.", note_tr: "Kişi varsa tell."}
+      - {en: "He told that he was busy.", tr: "Meşgul olduğunu söyledi.", wrong: true, correction: "He said that he was busy.", note_tr: "Kişi yoksa say."}
+      - {en: "She said she will call me.", tr: "Beni arayacağını söyledi.", wrong: true, correction: "She said she would call me.", note_tr: "will → would."}
+      - {en: "He said he is coming tomorrow. (bir hafta sonra aktarılıyor)", tr: "Ertesi gün geleceğini söyledi.", wrong: true, correction: "He said he was coming the next day.", note_tr: "Zaman ifadesi de değişir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Zaman kaymasını unutmak.** Türkçede "yorgun olduğunu söyledi" derken zaman değişmediği için İngilizcede de değiştirmemek yaygın bir hatadır.
+
+      **Zamirleri değiştirmemek.** "I" kim tarafından söylendiyse ona göre he / she olur.
+
+      **Say ile tell'i karıştırmak.**
+questions:
+  - id: q.b1.reported-statements.01
+    type: multiple_choice
+    prompt: "\"I am tired,\" she said. → She said she ___ tired."
+    options:
+      - "*was :: Present Simple (am) → Past Simple (was)."
+      - "is :: Aktarma fiili geçmişte olduğunda genellikle zaman kayar."
+      - "has been :: Present Perfect burada kayma kuralına uymaz."
+      - "will be :: Will anlamı değiştirir."
+    explanation: "am / is / are → was / were."
+  - id: q.b1.reported-statements.02
+    type: multiple_choice
+    prompt: "\"I'll help you,\" he said. → He said he ___ me."
+    options:
+      - "*would help :: will → would."
+      - "will help :: Zaman kayması gerekir."
+      - "helped :: Bu, \"I help you\" cümlesinin aktarımı olurdu."
+      - "had helped :: Bu, \"I helped you\" cümlesinin aktarımı olurdu."
+    explanation: "will → would."
+  - id: q.b1.reported-statements.03
+    type: multiple_choice
+    prompt: "She ___ me that she was moving to Ankara."
+    options:
+      - "*told :: Kişi (me) geldiği için tell kullanılır."
+      - "said :: Say'den sonra doğrudan kişi gelmez."
+      - "spoke :: Speak aktarma fiili olarak böyle kullanılmaz."
+      - "talked :: Talk aktarma fiili olarak böyle kullanılmaz."
+    explanation: "tell + kişi + (that) ...; say + (that) ..."
+  - id: q.b1.reported-statements.04
+    type: sentence_building
+    prompt: "Dolaylı anlatıma çevirin: Deniz said, \"I have finished my homework.\" → Deniz said (that) ..."
+    answers: ["Deniz said that he had finished his homework.", "Deniz said he had finished his homework.", "Deniz said that she had finished her homework.", "Deniz said she had finished her homework."]
+    explanation: "Present Perfect → Past Perfect; I → he / she, my → his / her."
+  - id: q.b1.reported-statements.05
+    type: error_correction
+    prompt: "My boss said me that I could leave early."
+    answers: ["My boss told me that I could leave early.", "My boss told me I could leave early.", "My boss said that I could leave early.", "My boss said I could leave early."]
+    explanation: "Kişi belirtiliyorsa tell kullanılır."
+  - id: q.b1.reported-statements.06
+    type: matching
+    prompt: "Doğrudan anlatımdaki ifadeleri dolaylı karşılıklarıyla eşleştirin."
+    pairs:
+      - ["tomorrow", "the next day"]
+      - ["yesterday", "the day before"]
+      - ["now", "then"]
+      - ["here", "there"]
+      - ["today", "that day"]
+    explanation: "Aktarma başka bir zamanda ve yerde yapılıyorsa bu ifadeler değişir."
+  - id: q.b1.reported-statements.07
+    type: nuance
+    difficulty: 4
+    prompt: "Selin dün \"I saw the film\" dedi. Doğru aktarım hangisidir?"
+    options:
+      - "*Selin said she had seen the film. :: Past Simple → Past Perfect."
+      - "Selin said she saw the film yesterday before. :: \"Yesterday before\" diye bir ifade yoktur."
+      - "Selin said she has seen the film. :: Present Perfect kayma kuralına uymaz."
+      - "Selin said I had seen the film. :: Zamir değişmemiş: I → she."
+    explanation: "Past Simple bir zaman geriye kayarak Past Perfect olur (günlük konuşmada Past Simple da duyulur)."
+  - id: q.b1.reported-statements.08
+    type: translation
+    prompt: "Bana meşgul olduğunu söyledi. (kadın)"
+    answers: ["She told me that she was busy.", "She told me she was busy.", "She said to me that she was busy."]
+    explanation: "told me (that) she was busy."

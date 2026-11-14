@@ -1,0 +1,120 @@
+id: gram.b1.wish
+kind: grammar
+level: B1
+title_tr: "Keşke: wish ve if only"
+title_en: Wish and if only (present)
+objective_tr: Bu dersin sonunda şimdiki durumla ilgili pişmanlık ve dilekleri wish / if only + Past Simple ile, başkalarının davranışıyla ilgili şikâyetleri wish + would ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.second-conditional]
+vocabulary: [wish, hope, tall, noise, stop]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Şu anki durumun **farklı olmasını istediğimizde** **wish** kullanırız. Türkçedeki **"keşke"** anlamını verir.
+
+      "I **wish** I **had** more time." (Keşke daha çok vaktim olsa. — Vaktim yok.)
+
+      Second conditional'daki gibi, fiil **bir zaman geriye** gider: şimdiki durum için **Past Simple** kullanılır. **If only** aynı anlamı daha güçlü verir: "**If only** I had more time!"
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Anlam", "Yapı", "Örnek"]
+      rows:
+        - ["Şimdiki durumla ilgili dilek", "wish + Past Simple", "I wish I lived by the sea."]
+        - ["Yetenek", "wish + could + yalın fiil", "I wish I could swim."]
+        - ["To be", "wish + were (was)", "I wish I were taller."]
+        - ["Başkasının davranışı, şikâyet", "wish + özne + would + yalın fiil", "I wish you would listen to me."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Wish + would** başka birinin ya da bir şeyin **davranışının değişmesini** istediğimizde kullanılır, çoğu zaman rahatsızlık bildirir: "I wish it **would stop** raining."
+
+      **Kendi öznemizle would kullanılmaz:** "I wish I would be taller" yanlıştır → "I wish I **were** taller."
+
+      **Wish ile hope farklıdır.** Gerçekleşmesi mümkün gelecek dilekleri için **hope** kullanılır: "I **hope** you pass the exam." ("I wish you pass" yanlıştır.)
+
+      **Kalıp iyi dilekler:** "I wish you luck.", "We wish you a happy birthday." — burada wish + isim kullanılır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I wish I had a bigger flat.", tr: "Keşke daha büyük bir dairem olsa."}
+      - {en: "She wishes she could speak French.", tr: "Fransızca konuşabilmeyi çok isterdi."}
+      - {en: "I wish it weren't so cold today.", tr: "Keşke bugün bu kadar soğuk olmasa."}
+      - {en: "I wish you wouldn't leave your clothes on the floor.", tr: "Keşke kıyafetlerini yerde bırakmasan."}
+      - {en: "If only I knew the answer!", tr: "Ah, cevabı bir bilsem!"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I wish I have more free time.", tr: "Keşke daha çok boş vaktim olsa.", wrong: true, correction: "I wish I had more free time.", note_tr: "Wish + Past Simple."}
+      - {en: "I wish I can drive.", tr: "Keşke araba kullanabilsem.", wrong: true, correction: "I wish I could drive.", note_tr: "Can → could."}
+      - {en: "I wish you pass your exam tomorrow.", tr: "Umarım yarın sınavını geçersin.", wrong: true, correction: "I hope you pass your exam tomorrow.", note_tr: "Mümkün gelecek dileği: hope."}
+      - {en: "I wish I would be rich.", tr: "Keşke zengin olsam.", wrong: true, correction: "I wish I were rich.", note_tr: "Kendi öznemizle would yok."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Wish'ten sonra şimdiki zaman kullanmak.** Türkçede "olsa" dediğimiz için geçmiş biçim akla gelmeyebilir.
+
+      **Hope yerine wish kullanmak.** Wish gerçek dışı ya da olası görülmeyen şeyler içindir.
+
+      **Olumlu-olumsuz ilişkisini kaçırmak.** "I wish I **didn't** have to work" → gerçekte çalışmak zorundayım.
+questions:
+  - id: q.b1.wish.01
+    type: multiple_choice
+    prompt: "I wish I ___ a bit taller."
+    options:
+      - "*were :: Şimdiki durumla ilgili dilek: wish + geçmiş biçim (were)."
+      - "am :: Wish'ten sonra şimdiki zaman kullanılmaz."
+      - "would be :: Kendi öznemizle wish + would kullanılmaz."
+      - "will be :: Wish'ten sonra will gelmez."
+    explanation: "wish + Past Simple (to be için were / was)."
+  - id: q.b1.wish.02
+    type: multiple_choice
+    prompt: "I wish my neighbours ___ making so much noise at night."
+    options:
+      - "*would stop :: Başkasının davranışıyla ilgili şikâyet: wish + would."
+      - "stop :: Wish'ten sonra Present Simple kullanılmaz."
+      - "will stop :: Will değil would kullanılır."
+      - "are stopping :: Şimdiki zaman dilek yapısına uymaz."
+    explanation: "Birinin davranışının değişmesini istemek: wish + özne + would."
+  - id: q.b1.wish.03
+    type: word_formation
+    prompt: "I wish I ___ (can) play the guitar."
+    answers: [could]
+    explanation: "Wish'ten sonra can → could."
+  - id: q.b1.wish.04
+    type: error_correction
+    prompt: "I wish I don't have to work on Saturdays."
+    answers: ["I wish I didn't have to work on Saturdays.", "I wish I did not have to work on Saturdays."]
+    explanation: "Wish + Past Simple: don't → didn't."
+  - id: q.b1.wish.05
+    type: nuance
+    difficulty: 4
+    prompt: "Arkadaşınızın yarınki sınavı için iyi dilekte bulunuyorsunuz. Hangisi doğrudur?"
+    options:
+      - "*I hope you do well tomorrow. :: Gerçekleşmesi mümkün bir gelecek dileği: hope."
+      - "I wish you did well tomorrow. :: Wish + past gerçek dışı durum bildirir; iyi dilek anlamı vermez."
+      - "I wish you do well tomorrow. :: Wish'ten sonra Present Simple kullanılmaz."
+      - "I hope you would do well tomorrow. :: Hope ile would kullanılmaz."
+    explanation: "Hope mümkün olanı, wish gerçek dışı olanı anlatır."
+  - id: q.b1.wish.06
+    type: nuance
+    difficulty: 3
+    prompt: "\"I wish I lived in Istanbul.\" diyen kişi için hangisi doğrudur?"
+    options:
+      - "*Şu an İstanbul'da yaşamıyor. :: Wish + past, gerçeğin tersini dile getirir."
+      - "Eskiden İstanbul'da yaşadı. :: Past Simple burada geçmişi göstermez."
+      - "İstanbul'da yaşıyor ve mutlu. :: Öyle olsaydı dilek bildirmezdi."
+      - "Yakında İstanbul'a taşınacak. :: Cümlede plan değil gerçek dışı dilek var."
+    explanation: "Wish'ten sonraki geçmiş biçim gerçek dışılık bildirir."
+  - id: q.b1.wish.07
+    type: sentence_building
+    prompt: "Gerçek: \"I don't know her phone number.\" → I wish ..."
+    answers: ["I wish I knew her phone number."]
+    explanation: "Olumsuz gerçek → olumlu dilek, Past Simple ile."
+  - id: q.b1.wish.08
+    type: translation
+    prompt: "Keşke daha çok vaktim olsa."
+    answers: ["I wish I had more time.", "If only I had more time.", "If only I had more time!"]
+    explanation: "wish / if only + Past Simple."

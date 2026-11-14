@@ -1,0 +1,127 @@
+id: gram.b1.present-perfect-continuous
+kind: grammar
+level: B1
+title_tr: "Süregelen eylemler: Present Perfect Continuous"
+title_en: Present Perfect Continuous
+objective_tr: Bu dersin sonunda geçmişte başlayıp hâlâ süren ya da yeni bitmiş ve izi görülen eylemleri have / has been + fiil-ing ile anlatabilecek, Present Perfect Simple ile farkını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.present-perfect-vs-past-simple]
+next: [gram.b1.past-perfect]
+vocabulary: [for, since, recently, lately, wait, tired]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Present Perfect Continuous**, geçmişte başlayan ve **şu ana kadar süren** bir eylemin **süresini ve sürekliliğini** vurgular: "I **have been waiting** for an hour." (Bir saattir bekliyorum.)
+
+      Türkçede bu anlam çoğunlukla şimdiki zamanla ve "-dir / -den beri" ile verilir. İngilizcede Present Continuous **kullanılmaz**: "I am waiting for an hour" yanlıştır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + have / has + been + fiil-ing", "She has been working all day."]
+        - ["Olumsuz", "özne + haven't / hasn't + been + fiil-ing", "I haven't been sleeping well."]
+        - ["Soru", "Have / Has + özne + been + fiil-ing?", "Have you been crying?"]
+        - ["Süre sorusu", "How long + have / has + özne + been + fiil-ing?", "How long have you been learning English?"]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Geçmişte başlayıp hâlâ süren eylem (for / since ile):** "We have been living here since 2015."
+
+      **Yeni bitmiş ve sonucu görülen eylem:** "Your eyes are red. Have you been crying?", "The ground is wet. It has been raining."
+
+      **Son zamanlarda tekrarlanan eylem:** "I have been going to the gym a lot lately."
+  - kind: comparison
+    title_tr: "Simple mı, Continuous mu?"
+    table:
+      headers: ["", "Present Perfect Simple", "Present Perfect Continuous"]
+      rows:
+        - ["Vurgu", "sonuç, tamamlanmışlık", "süreç, süre"]
+        - ["Örnek", "I have read the book. (bitti)", "I have been reading the book. (bitmemiş olabilir)"]
+        - ["Soru", "How many / how much?", "How long?"]
+        - ["Örnek", "I have written three emails.", "I have been writing emails all morning."]
+        - ["Durum fiilleri", "I have known him for years.", "kullanılmaz (know, like, have...)"]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I have been studying English for two years.", tr: "İki yıldır İngilizce çalışıyorum."}
+      - {en: "She has been working here since March.", tr: "Marttan beri burada çalışıyor."}
+      - {en: "It has been raining all day.", tr: "Bütün gün yağmur yağıyor."}
+      - {en: "How long have you been waiting?", tr: "Ne zamandır bekliyorsun?"}
+      - {en: "I'm tired because I have been running.", tr: "Yorgunum çünkü koşuyordum."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I am waiting for two hours.", tr: "İki saattir bekliyorum.", wrong: true, correction: "I have been waiting for two hours.", note_tr: "Süre bildiren for ile Present Perfect Continuous."}
+      - {en: "I have been knowing her for years.", tr: "Onu yıllardır tanıyorum.", wrong: true, correction: "I have known her for years.", note_tr: "Durum fiili: Simple."}
+      - {en: "She has been written three reports.", tr: "Üç rapor yazdı.", wrong: true, correction: "She has written three reports.", note_tr: "Sayı verilince Simple."}
+      - {en: "He have been working.", tr: "Çalışıyor.", wrong: true, correction: "He has been working.", note_tr: "He ile has."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"-dir" anlamını Present Continuous ile vermek.** "I am living here for five years" yanlıştır.
+
+      **Durum fiillerini Continuous yapmak.** know, be, have (sahiplik), like, want bu yapıda kullanılmaz.
+
+      **Tamamlanan iş sayısını Continuous ile söylemek.** Kaç tane bittiğini söylüyorsanız Simple kullanın.
+questions:
+  - id: q.b1.ppc.01
+    type: multiple_choice
+    prompt: "I ___ for the bus for forty minutes!"
+    options:
+      - "*have been waiting :: Geçmişte başlayıp hâlâ süren eylem ve süre: Present Perfect Continuous."
+      - "am waiting :: Present Continuous süre bildiren for ile kullanılmaz."
+      - "wait :: Present Simple alışkanlık bildirir."
+      - "waited :: Past Simple eylemin bittiğini düşündürür."
+    explanation: "Süre (for / since) + hâlâ süren eylem → have / has been + -ing."
+  - id: q.b1.ppc.02
+    type: multiple_choice
+    prompt: "She ___ three emails this morning."
+    options:
+      - "*has written :: Tamamlanan iş sayısı verildiğinde Simple kullanılır."
+      - "has been writing :: Continuous süreci vurgular; sayı (three) ile kullanılmaz."
+      - "is writing :: Present Continuous şu anki eylemi anlatır."
+      - "writes :: Present Simple alışkanlık bildirir."
+    explanation: "Kaç tane? → Present Perfect Simple. Ne kadar süredir? → Continuous."
+  - id: q.b1.ppc.03
+    type: word_formation
+    prompt: "How long ___ you ___ (learn) English? — tek cevap olarak yazın: have you been ..."
+    answers: ["have you been learning"]
+    explanation: "How long + have + özne + been + fiil-ing."
+  - id: q.b1.ppc.04
+    type: error_correction
+    prompt: "I have been knowing him since 2010."
+    answers: ["I have known him since 2010.", "I've known him since 2010."]
+    explanation: "Know bir durum fiilidir ve Continuous biçimde kullanılmaz."
+  - id: q.b1.ppc.05
+    type: nuance
+    difficulty: 3
+    prompt: "\"I have been painting the kitchen.\" cümlesi neyi vurgular?"
+    options:
+      - "*Eylemin sürecini; boyama işi bitmemiş olabilir. :: Continuous süreci ve harcanan zamanı vurgular."
+      - "Mutfağın boyanmasının bittiğini. :: Bunun için \"I have painted the kitchen\" denirdi."
+      - "Mutfağı dün boyadığımı. :: Belirli geçmiş zaman için Past Simple kullanılır."
+      - "Mutfağı her yıl boyadığımı. :: Alışkanlık için Present Simple kullanılır."
+    explanation: "Simple sonucu, Continuous süreci gösterir."
+  - id: q.b1.ppc.06
+    type: dialogue_completion
+    context: "A: You look exhausted.\nB: Yes, I ___ all day."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*have been working :: Yeni bitmiş ya da süren ve izi görülen eylem."
+      - "work :: Present Simple genel alışkanlık bildirir."
+      - "am working :: Present Continuous \"all day\" süresini karşılamaz."
+      - "had worked :: Past Perfect, geçmişteki başka bir olaydan önceyi anlatır."
+    explanation: "Şu anki durumun (yorgunluk) nedeni olan süregelen eylem."
+  - id: q.b1.ppc.07
+    type: fill_blank
+    prompt: "It has been snowing ___ this morning."
+    answers: [since]
+    explanation: "\"This morning\" bir başlangıç noktasıdır: since."
+  - id: q.b1.ppc.08
+    type: translation
+    prompt: "İki yıldır burada çalışıyorum."
+    answers: ["I have been working here for two years.", "I've been working here for two years.", "I have worked here for two years.", "I've worked here for two years."]
+    explanation: "\"-dir\" + hâlâ süren eylem: have been + -ing + for."

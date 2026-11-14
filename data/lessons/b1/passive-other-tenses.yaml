@@ -1,0 +1,118 @@
+id: gram.b1.passive-other-tenses
+kind: grammar
+level: B1
+title_tr: "Edilgen çatı: diğer zamanlar ve kip fiilleri"
+title_en: "The passive: other tenses and modals"
+objective_tr: Bu dersin sonunda edilgen çatıyı Present Continuous, Present Perfect, will ve kip fiilleriyle kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.passive-basics]
+vocabulary: [repair, deliver, announce, must, can, already]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Edilgen çatının mantığı her zamanda aynıdır: **to be** fiili zamanı taşır, asıl fiil hep **üçüncü biçimdedir**. Yapmanız gereken tek şey to be'yi istenen zamana sokmaktır.
+  - kind: formula
+    title_tr: Zamanlara göre edilgen
+    table:
+      headers: ["Zaman", "Etken", "Edilgen"]
+      rows:
+        - ["Present Continuous", "They are repairing the road.", "The road is being repaired."]
+        - ["Past Continuous", "They were painting the room.", "The room was being painted."]
+        - ["Present Perfect", "They have sold the house.", "The house has been sold."]
+        - ["Will", "They will announce the results.", "The results will be announced."]
+        - ["Be going to", "They are going to close the shop.", "The shop is going to be closed."]
+        - ["Kip fiili", "You must wear a helmet.", "A helmet must be worn."]
+        - ["Kip fiili", "We can do it.", "It can be done."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Sürekli zamanlarda "being":** "is **being** repaired" (onarılıyor). Being atlanırsa anlam değişir: "The road is repaired" → yol onarılmış durumda / düzenli olarak onarılır.
+
+      **Perfect zamanlarda "been":** "has **been** sold" (satıldı).
+
+      **Kip fiillerinden sonra yalın "be":** "must **be** done", "can **be** seen", "should **be** checked".
+
+      **Zarflar** yardımcı fiil ile asıl fiil arasına girer: "has **already** been sent", "will **probably** be cancelled".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My car is being repaired at the moment.", tr: "Arabam şu anda tamir ediliyor."}
+      - {en: "The package has already been delivered.", tr: "Paket çoktan teslim edildi."}
+      - {en: "The winner will be announced tomorrow.", tr: "Kazanan yarın açıklanacak."}
+      - {en: "This form must be completed in ink.", tr: "Bu form mürekkepli kalemle doldurulmalıdır."}
+      - {en: "The problem can't be solved easily.", tr: "Sorun kolayca çözülemez."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The house has sold.", tr: "Ev satıldı.", wrong: true, correction: "The house has been sold.", note_tr: "Perfect edilgen: has been + V3."}
+      - {en: "The road is repairing now.", tr: "Yol şu anda onarılıyor.", wrong: true, correction: "The road is being repaired now.", note_tr: "is being + V3."}
+      - {en: "The work must to be finished today.", tr: "İş bugün bitirilmeli.", wrong: true, correction: "The work must be finished today.", note_tr: "Must'tan sonra to gelmez."}
+      - {en: "The results will announced soon.", tr: "Sonuçlar yakında açıklanacak.", wrong: true, correction: "The results will be announced soon.", note_tr: "will be + V3."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Been ile being'i karıştırmak.** Been perfect zamanlarda (has been done), being sürekli zamanlarda (is being done) kullanılır.
+
+      **Be'yi tümüyle atlamak.** "It can done" yanlıştır.
+
+      **Edilgeni gereğinden çok kullanmak.** Yapan biliniyor ve önemliyse etken cümle çoğu zaman daha doğaldır.
+questions:
+  - id: q.b1.passive-tenses.01
+    type: multiple_choice
+    prompt: "Sorry about the noise. The kitchen ___ at the moment."
+    options:
+      - "*is being painted :: Şu anda sürmekte olan edilgen eylem: is being + V3."
+      - "is painted :: Bu, düzenli yapılan bir işi ya da boyanmış durumu anlatır."
+      - "has painted :: Etken yapı; mutfak boyamaz."
+      - "is painting :: Etken Present Continuous."
+    explanation: "Present Continuous edilgen: am / is / are being + V3."
+  - id: q.b1.passive-tenses.02
+    type: multiple_choice
+    prompt: "All the tickets ___. There are none left."
+    options:
+      - "*have been sold :: Şimdiye etkisi olan tamamlanmış eylem: have been + V3."
+      - "have sold :: Etken yapı; biletler satmaz."
+      - "are being sold :: Bu, satışın hâlâ sürdüğünü söyler; oysa bilet kalmamış."
+      - "were sell :: Üçüncü biçim gerekir."
+    explanation: "Present Perfect edilgen: have / has been + V3."
+  - id: q.b1.passive-tenses.03
+    type: word_formation
+    prompt: "Mobile phones must ___ (switch) off during the exam."
+    answers: ["be switched"]
+    explanation: "Kip fiili + be + V3."
+  - id: q.b1.passive-tenses.04
+    type: sentence_building
+    prompt: "Edilgene çevirin: \"They will open the new hospital next year.\""
+    answers: ["The new hospital will be opened next year."]
+    explanation: "will be + V3."
+  - id: q.b1.passive-tenses.05
+    type: error_correction
+    prompt: "My laptop has being repaired three times this year."
+    answers: ["My laptop has been repaired three times this year."]
+    explanation: "Perfect zamanda been kullanılır: has been repaired."
+  - id: q.b1.passive-tenses.06
+    type: nuance
+    difficulty: 4
+    prompt: "\"The road is being repaired.\" ile \"The road has been repaired.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde onarım sürüyor, ikincisinde onarım bitmiş. :: is being + V3 süreci, has been + V3 tamamlanmayı gösterir."
+      - "İkisi de onarımın sürdüğünü söyler. :: Has been repaired tamamlanmış bir eylemdir."
+      - "İlkinde onarım bitmiş, ikincisinde sürüyor. :: Tam tersi."
+      - "İlki gelecekle, ikincisi geçmişle ilgilidir. :: İlki şu anla ilgilidir."
+    explanation: "Being → sürüyor; been → tamamlandı."
+  - id: q.b1.passive-tenses.07
+    type: matching
+    prompt: "Etken cümleleri edilgen karşılıklarıyla eşleştirin."
+    pairs:
+      - ["They are building a school.", "A school is being built."]
+      - ["They have built a school.", "A school has been built."]
+      - ["They will build a school.", "A school will be built."]
+      - ["They can build a school.", "A school can be built."]
+    explanation: "To be zamanı taşır; asıl fiil hep üçüncü biçimdedir."
+  - id: q.b1.passive-tenses.08
+    type: translation
+    prompt: "Sonuçlar yarın açıklanacak."
+    answers: ["The results will be announced tomorrow.", "The results are going to be announced tomorrow."]
+    explanation: "will be + announced."

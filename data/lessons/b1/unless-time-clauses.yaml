@@ -1,0 +1,118 @@
+id: gram.b1.unless-time-clauses
+kind: grammar
+level: B1
+title_tr: "Unless, as soon as, until: koşul ve zaman bağlaçları"
+title_en: "Unless and future time clauses"
+objective_tr: Bu dersin sonunda unless, as long as, in case ile koşul; when, as soon as, until, before, after ile gelecekle ilgili zaman cümlecikleri kurabilecek ve bu bağlaçlardan sonra will kullanılmadığını bileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.first-conditional]
+vocabulary: [unless, until, soon, before, after]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      If'in yanında, koşul ve zaman bildiren başka bağlaçlar da vardır. Hepsinde aynı kural geçerlidir: gelecekten söz edilse bile bağlaçtan sonra **will kullanılmaz**, **Present Simple** kullanılır.
+
+      "I'll call you **as soon as** I **arrive**." (Varır varmaz seni arayacağım.)
+  - kind: usage
+    title_tr: Bağlaçlar ve anlamları
+    table:
+      headers: ["Bağlaç", "Anlamı", "Örnek"]
+      rows:
+        - ["unless", "-mezse, -madıkça (= if not)", "We'll be late unless we hurry."]
+        - ["as long as", "-dığı sürece, şartıyla", "You can go as long as you are back by ten."]
+        - ["in case", "olur diye, ihtimaline karşı", "Take an umbrella in case it rains."]
+        - ["when", "-ınca (kesin)", "I'll tell him when I see him."]
+        - ["as soon as", "-ır -maz", "Call me as soon as you get home."]
+        - ["until / till", "-ene kadar", "Wait here until I come back."]
+        - ["before / after", "-meden önce / -dıktan sonra", "Finish your work before you leave."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Unless zaten olumsuzdur;** ardından olumsuz fiil gelmez: "unless you **don't** hurry" yanlıştır.
+
+      **In case ile if farklıdır.** "Take a coat **in case** it gets cold." (Soğuk olur diye şimdiden al.) / "Take a coat **if** it gets cold." (Soğuk olursa, o zaman al.)
+
+      **Eylemin tamamlanması vurgulanacaksa Present Perfect kullanılabilir:** "I'll call you when I **have finished**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I won't go unless you come with me.", tr: "Sen benimle gelmezsen gitmem."}
+      - {en: "I'll wait until the rain stops.", tr: "Yağmur durana kadar bekleyeceğim."}
+      - {en: "As soon as I know, I'll tell you.", tr: "Öğrenir öğrenmez sana söyleyeceğim."}
+      - {en: "Write the address down in case you forget it.", tr: "Unutursun diye adresi yaz."}
+      - {en: "You can borrow my car as long as you drive carefully.", tr: "Dikkatli sürmen şartıyla arabamı ödünç alabilirsin."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I'll phone you when I will arrive.", tr: "Varınca seni arayacağım.", wrong: true, correction: "I'll phone you when I arrive.", note_tr: "When'den sonra will yok."}
+      - {en: "Unless you don't study, you will fail.", tr: "Çalışmazsan kalırsın.", wrong: true, correction: "Unless you study, you will fail.", note_tr: "Unless zaten olumsuz."}
+      - {en: "Wait here until I will come back.", tr: "Ben dönene kadar burada bekle.", wrong: true, correction: "Wait here until I come back.", note_tr: "Until'den sonra will yok."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Zaman bağlacından sonra will kullanmak.** Türkçede "varacağım zaman" denebildiği için bu hata yaygındır.
+
+      **Unless ile çift olumsuzluk kurmak.**
+
+      **Until ile "by" karıştırmak.** Until bir durumun o ana kadar **sürdüğünü**, by ise bir işin o andan **önce bittiğini** anlatır.
+questions:
+  - id: q.b1.unless-time.01
+    type: multiple_choice
+    prompt: "I'll send you a message as soon as I ___ at the hotel."
+    options:
+      - "*arrive :: Zaman bağlacından sonra gelecek anlamında Present Simple kullanılır."
+      - "will arrive :: As soon as'ten sonra will gelmez."
+      - "arrived :: Past Simple gelecek anlamı vermez."
+      - "would arrive :: Would varsayımsal durumlar içindir."
+    explanation: "when / as soon as / until / before / after + Present Simple (gelecek anlamı)."
+  - id: q.b1.unless-time.02
+    type: multiple_choice
+    prompt: "You won't pass the exam ___ you study harder."
+    options:
+      - "*unless :: \"Daha çok çalışmazsan\" = unless you study harder."
+      - "if :: If ile cümle \"çalışırsan geçemezsin\" anlamına gelirdi."
+      - "until :: Until süre bildirir; burada koşul var."
+      - "in case :: In case \"olur diye\" anlamındadır."
+    explanation: "unless = if ... not."
+  - id: q.b1.unless-time.03
+    type: fill_blank
+    prompt: "Take your phone with you in ___ you get lost."
+    answers: [case]
+    explanation: "in case: olur diye, ihtimaline karşı."
+  - id: q.b1.unless-time.04
+    type: error_correction
+    prompt: "We'll stay at home unless it doesn't stop raining."
+    answers: ["We'll stay at home unless it stops raining.", "We will stay at home unless it stops raining.", "We'll stay at home if it doesn't stop raining.", "We will stay at home if it doesn't stop raining."]
+    explanation: "Unless zaten olumsuzluk içerir; ardından olumlu fiil gelir."
+  - id: q.b1.unless-time.05
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede konuşan, yağmur yağıp yağmayacağını bilmeden şemsiyeyi ŞİMDİDEN alır?"
+    options:
+      - "*I'll take an umbrella in case it rains. :: In case: ihtimale karşı önceden yapılan hazırlık."
+      - "I'll take an umbrella if it rains. :: If: yalnızca yağmur yağarsa alır."
+      - "I'll take an umbrella when it rains. :: When: yağmur yağdığı zaman alır."
+      - "I'll take an umbrella unless it rains. :: Unless: yağmur yağmazsa alır (mantıksız)."
+    explanation: "In case önlem, if koşul bildirir."
+  - id: q.b1.unless-time.06
+    type: sentence_building
+    prompt: "\"If you don't leave now, you'll miss the train.\" cümlesini unless ile yeniden yazın."
+    answers: ["Unless you leave now, you'll miss the train.", "Unless you leave now, you will miss the train.", "You'll miss the train unless you leave now.", "You will miss the train unless you leave now."]
+    explanation: "if ... don't → unless + olumlu fiil."
+  - id: q.b1.unless-time.07
+    type: matching
+    prompt: "Bağlaçları Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["unless", "-mezse, -madıkça"]
+      - ["as soon as", "-ır -maz"]
+      - ["until", "-ene kadar"]
+      - ["in case", "olur diye"]
+      - ["as long as", "-dığı sürece"]
+    explanation: "Hepsinden sonra gelecek anlamında Present Simple kullanılır."
+  - id: q.b1.unless-time.08
+    type: translation
+    prompt: "Ben dönene kadar burada bekle."
+    answers: ["Wait here until I come back.", "Wait here till I come back.", "Wait here until I get back.", "Wait here until I return."]
+    explanation: "until + Present Simple."

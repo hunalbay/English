@@ -1,0 +1,114 @@
+id: gram.b1.indirect-questions
+kind: grammar
+level: B1
+title_tr: "Kibar sorular: dolaylı sorular"
+title_en: Indirect questions
+objective_tr: Bu dersin sonunda Could you tell me..., Do you know..., I wonder... gibi kalıplarla daha kibar sorular sorabilecek ve bu sorularda düz cümle sırasını kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.reported-questions]
+vocabulary: [wonder, know, tell, idea, station]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Tanımadığımız birine ya da resmî bir ortamda doğrudan soru sormak sert kaçabilir. Soruyu bir giriş kalıbının içine yerleştirerek yumuşatırız:
+
+      "Where is the station?" → "**Could you tell me** where the station **is**?"
+
+      Aktarılan sorulardaki gibi, giriş kalıbından sonra **düz cümle sırası** kullanılır. Fark: burada **zaman kayması yoktur**.
+  - kind: formula
+    title_tr: Giriş kalıpları
+    table:
+      headers: ["Kalıp", "Örnek"]
+      rows:
+        - ["Could you tell me ...?", "Could you tell me what time it is?"]
+        - ["Do you know ...?", "Do you know where she lives?"]
+        - ["Do you have any idea ...?", "Do you have any idea how much it costs?"]
+        - ["I wonder ...", "I wonder why he left."]
+        - ["I'd like to know ...", "I'd like to know when the course starts."]
+        - ["Can you remember ...?", "Can you remember where you put it?"]
+  - kind: usage
+    title_tr: Kurallar
+    text_tr: |-
+      **Do / does / did kullanılmaz:** "Where **does** he work?" → "Do you know where he **works**?"
+
+      **Evet / hayır sorularında if / whether eklenir:** "Is the bank open?" → "Do you know **if** the bank is open?"
+
+      **Soru işareti giriş kalıbına bağlıdır.** Kalıp soruysa (Could you tell me...) soru işareti konur; düz cümleyse (I wonder...) nokta konur.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Could you tell me where the nearest pharmacy is?", tr: "En yakın eczanenin nerede olduğunu söyler misiniz?"}
+      - {en: "Do you know what time the museum opens?", tr: "Müzenin saat kaçta açıldığını biliyor musunuz?"}
+      - {en: "I wonder if she got my message.", tr: "Mesajımı alıp almadığını merak ediyorum."}
+      - {en: "Do you have any idea how long it takes?", tr: "Ne kadar sürdüğü hakkında bir fikriniz var mı?"}
+      - {en: "I'd like to know whether breakfast is included.", tr: "Kahvaltının dahil olup olmadığını öğrenmek istiyorum."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Could you tell me where is the bank?", tr: "Bankanın nerede olduğunu söyler misiniz?", wrong: true, correction: "Could you tell me where the bank is?", note_tr: "Düz cümle sırası."}
+      - {en: "Do you know what time does it start?", tr: "Saat kaçta başladığını biliyor musun?", wrong: true, correction: "Do you know what time it starts?", note_tr: "Does yok; fiil -s alır."}
+      - {en: "I wonder is he at home.", tr: "Evde mi acaba.", wrong: true, correction: "I wonder if he is at home.", note_tr: "If gerekir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Soru sırasını iki kez kurmak.** Giriş kalıbı zaten soruyu taşır; ardından gelen bölüm düz cümledir.
+
+      **Does kalkınca fiildeki -s'yi unutmak.** "where he work" değil "where he **works**".
+
+      **Aktarılan sorularla karıştırıp zamanı geriye kaydırmak.** "Do you know where he **lived**?" başka bir anlam (geçmiş) taşır.
+questions:
+  - id: q.b1.indirect-questions.01
+    type: multiple_choice
+    prompt: "Could you tell me where ___?"
+    options:
+      - "*the post office is :: Dolaylı soruda düz cümle sırası: özne + fiil."
+      - "is the post office :: Soru sırası yalnızca doğrudan soruda kullanılır."
+      - "does the post office be :: Böyle bir yapı yoktur."
+      - "the post office does :: To be fiilinin yerine do gelmez."
+    explanation: "Giriş kalıbı + soru sözcüğü + özne + fiil."
+  - id: q.b1.indirect-questions.02
+    type: multiple_choice
+    prompt: "Do you know what time ___?"
+    options:
+      - "*the train leaves :: Does kalkar, fiil -s alır."
+      - "does the train leave :: Dolaylı soruda yardımcı fiil kullanılmaz."
+      - "the train leave :: Üçüncü tekil kişide -s gerekir."
+      - "leaves the train :: Özne fiilden önce gelmelidir."
+    explanation: "Do you know + soru sözcüğü + özne + fiil?"
+  - id: q.b1.indirect-questions.03
+    type: fill_blank
+    prompt: "Do you know ___ this bus goes to the airport? (evet / hayır sorusu)"
+    answers: [if, whether]
+    explanation: "Evet / hayır sorusu dolaylı yapıldığında if ya da whether eklenir."
+  - id: q.b1.indirect-questions.04
+    type: sentence_building
+    prompt: "Dolaylı soruya çevirin: \"How much does this cost?\" → Could you tell me ..."
+    answers: ["Could you tell me how much this costs?", "Could you tell me how much this costs"]
+    explanation: "Does kalkar; cost → costs."
+  - id: q.b1.indirect-questions.05
+    type: error_correction
+    prompt: "I wonder why did she leave so early."
+    answers: ["I wonder why she left so early."]
+    explanation: "Did kalkar, fiil geçmiş biçime girer: left."
+  - id: q.b1.indirect-questions.06
+    type: nuance
+    difficulty: 3
+    prompt: "Sokakta tanımadığınız birine yol soruyorsunuz. En kibar seçenek hangisidir?"
+    options:
+      - "*Excuse me, could you tell me how to get to the station? :: Dolaylı soru ve \"excuse me\" en kibar seçenektir."
+      - "Where is the station? :: Doğru ama tanımadığınız birine sert kaçabilir."
+      - "Tell me where the station is. :: Emir kipi kaba duyulur."
+      - "You know where is the station? :: Hem dil bilgisi yanlış hem kibar değil."
+    explanation: "Dolaylı sorular resmî ve kibar durumlar için uygundur."
+  - id: q.b1.indirect-questions.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Do, you, know, where, she, lives]
+    explanation: "Do you know + where + özne + fiil?"
+  - id: q.b1.indirect-questions.08
+    type: translation
+    prompt: "Bankanın nerede olduğunu söyler misiniz?"
+    answers: ["Could you tell me where the bank is?", "Can you tell me where the bank is?", "Would you tell me where the bank is?"]
+    explanation: "Could you tell me + where + özne + fiil?"

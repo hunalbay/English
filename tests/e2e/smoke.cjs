@@ -111,7 +111,11 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   }
   await page.locator("#test-summary").waitFor();
   check(/10 sorudan \d+ doğru, \d+ yanlış\./.test(await page.locator("#test-summary").innerText()), "test özeti hatalı");
-  check(seenTypes.size >= 4, "testte yeterince farklı soru tipi görülmedi: " + [...seenTypes].join(","));
+  // Sorular rastgele seçilir (13 sorudan 10'u); yalnızca her seçimde mutlaka çıkan tipler zorunlu tutulur.
+  // Sıralama, eşleştirme ve öz değerlendirme tipleri çıktıklarında yukarıda ayrıca doğrulanır;
+  // tümü tests/integration/test_tests_api.py içinde kesin olarak sınanır.
+  check(seenTypes.has("choice") && seenTypes.has("text"),
+    "testte seçmeli ve yazmalı sorular birlikte görülmedi: " + [...seenTypes].join(","));
   await menu.getByRole("link", { name: "Testler", exact: true }).click();
   await heading("Testler").waitFor();
   check((await page.locator("#test-history .list-item").count()) === 1, "test geçmişi görünmüyor");

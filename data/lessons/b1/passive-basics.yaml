@@ -1,0 +1,135 @@
+id: gram.b1.passive-basics
+kind: grammar
+level: B1
+title_tr: "Edilgen çatı: Present ve Past Simple"
+title_en: "The passive: present and past simple"
+objective_tr: Bu dersin sonunda eylemi yapanın önemli olmadığı ya da bilinmediği durumları am / is / are / was / were + fiilin üçüncü biçimiyle anlatabilecek, etken cümleleri edilgene çevirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.present-perfect]
+next: [gram.b1.passive-other-tenses]
+vocabulary: [make, build, invent, produce, by, steal]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Etken (active) cümlede özne eylemi **yapar**: "Shakespeare **wrote** Hamlet." Edilgen (passive) cümlede özne eylemden **etkilenir**: "Hamlet **was written** by Shakespeare."
+
+      Edilgen çatı, Türkçedeki **-ıl / -ın** eklerine karşılık gelir (yazıldı, yapılır, görüldü). Yapısı: **to be** (zamana göre çekilir) + **fiilin üçüncü biçimi**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Zaman", "Yapı", "Örnek"]
+      rows:
+        - ["Present Simple", "am / is / are + V3", "Cheese is made from milk."]
+        - ["Past Simple", "was / were + V3", "The bridge was built in 1973."]
+        - ["Olumsuz", "to be + not + V3", "The room wasn't cleaned."]
+        - ["Soru", "to be + özne + V3?", "Where are these cars made?"]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Yapan bilinmiyorsa:** "My bike was stolen last night."
+
+      **Yapan önemli değilse ya da belliyse:** "The streets are cleaned every day."
+
+      **Asıl ilgi eylemden etkilenen şeydeyse:** "This photo was taken in 1950."
+
+      **Yapanı belirtmek gerekiyorsa "by" kullanılır:** "The telephone was invented **by** Bell." Yapan kişi önemsiz ya da belirsizse (by someone, by people) söylenmez.
+  - kind: usage
+    title_tr: Etkenden edilgene
+    text_tr: |-
+      1. Etken cümlenin **nesnesi** edilgen cümlenin öznesi olur.
+      2. **To be** aynı zamanda çekilir ve yeni özneye uyar.
+      3. Asıl fiil **üçüncü biçime** girer.
+      4. Gerekirse eski özne **by** ile eklenir.
+
+      "They **clean** the offices every night." → "The offices **are cleaned** every night."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "English is spoken in many countries.", tr: "İngilizce birçok ülkede konuşulur."}
+      - {en: "This house was built by my grandfather.", tr: "Bu ev dedem tarafından yapıldı."}
+      - {en: "The windows are cleaned once a month.", tr: "Camlar ayda bir temizlenir."}
+      - {en: "Was the letter sent yesterday?", tr: "Mektup dün gönderildi mi?"}
+      - {en: "We weren't invited to the wedding.", tr: "Düğüne davet edilmedik."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The car was stole last night.", tr: "Araba dün gece çalındı.", wrong: true, correction: "The car was stolen last night.", note_tr: "Üçüncü biçim: stolen."}
+      - {en: "English speaks in Australia.", tr: "Avustralya'da İngilizce konuşulur.", wrong: true, correction: "English is spoken in Australia.", note_tr: "To be + V3 gerekir."}
+      - {en: "I was born in 1990 by my mother.", tr: "1990'da doğdum.", wrong: true, correction: "I was born in 1990.", note_tr: "Gereksiz by."}
+      - {en: "The accident was happened yesterday.", tr: "Kaza dün oldu.", wrong: true, correction: "The accident happened yesterday.", note_tr: "Happen nesne almaz; edilgen olmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To be'yi unutmak** ya da üçüncü biçim yerine ikinci biçimi kullanmak.
+
+      **Nesne almayan fiilleri edilgen yapmak.** happen, arrive, die, go gibi fiillerin edilgen biçimi yoktur.
+
+      **Her cümleye "by" eklemek.** Yapan yeni ve önemli bir bilgi değilse söylenmez.
+
+      **"Doğmak" fiili:** İngilizcede her zaman edilgendir: "I **was born**..."
+questions:
+  - id: q.b1.passive-basics.01
+    type: multiple_choice
+    prompt: "This bridge ___ in 1890."
+    options:
+      - "*was built :: Geçmişte tamamlanmış eylem, özne etkilenen: was + V3."
+      - "built :: Köprü bir şey inşa etmez; edilgen yapı gerekir."
+      - "is built :: 1890 geçmişte; was gerekir."
+      - "was build :: Üçüncü biçim \"built\" olmalı."
+    explanation: "Past Simple edilgen: was / were + V3."
+  - id: q.b1.passive-basics.02
+    type: multiple_choice
+    prompt: "Millions of emails ___ every day."
+    options:
+      - "*are sent :: Genel durum, çoğul özne: are + V3."
+      - "is sent :: Özne çoğul (emails)."
+      - "send :: E-postalar bir şey göndermez; edilgen gerekir."
+      - "are sending :: Bu etken Present Continuous'tur."
+    explanation: "Present Simple edilgen: am / is / are + V3."
+  - id: q.b1.passive-basics.03
+    type: word_formation
+    prompt: "Coffee ___ (grow) in Brazil."
+    answers: ["is grown"]
+    explanation: "Genel doğru, tekil özne: is + V3 (grown)."
+  - id: q.b1.passive-basics.04
+    type: sentence_building
+    prompt: "Edilgene çevirin: \"Somebody stole my wallet yesterday.\""
+    answers: ["My wallet was stolen yesterday."]
+    explanation: "Nesne özne olur; yapan belirsiz olduğu için by kullanılmaz."
+  - id: q.b1.passive-basics.05
+    type: error_correction
+    prompt: "The film was directed from a young Turkish director."
+    answers: ["The film was directed by a young Turkish director."]
+    explanation: "Edilgen cümlede yapan \"by\" ile belirtilir."
+  - id: q.b1.passive-basics.06
+    type: error_spotting
+    difficulty: 3
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*The meeting was happened on Monday. :: Happen nesne almaz, edilgen yapılamaz: The meeting happened / took place."
+      - "The meeting was held on Monday. :: Doğru: hold → was held."
+      - "The meeting was cancelled on Monday. :: Doğru edilgen yapı."
+      - "The meeting took place on Monday. :: Doğru etken yapı."
+    explanation: "Nesne almayan fiiller (happen, arrive, die...) edilgen yapılmaz."
+  - id: q.b1.passive-basics.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Where, was, this, photo, taken]
+    explanation: "Soru sözcüğü + to be + özne + V3?"
+  - id: q.b1.passive-basics.08
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede \"by ...\" bölümü gereksizdir?"
+    options:
+      - "*My car was stolen by someone. :: \"Someone\" yeni bilgi vermez; söylenmez."
+      - "The novel was written by Orhan Pamuk. :: Yazarın kim olduğu önemli bir bilgidir."
+      - "The radio was invented by Marconi. :: Mucidin adı önemli bir bilgidir."
+      - "The goal was scored by the youngest player. :: Golü kimin attığı yeni bilgidir."
+    explanation: "Yapan belirsiz ya da önemsizse by ile belirtilmez."
+  - id: q.b1.passive-basics.09
+    type: translation
+    prompt: "Bu ev 1950'de yapıldı."
+    answers: ["This house was built in 1950."]
+    explanation: "was + built."

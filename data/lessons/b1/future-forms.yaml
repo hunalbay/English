@@ -1,0 +1,132 @@
+id: gram.b1.future-forms
+kind: grammar
+level: B1
+title_tr: "Gelecek anlatımları: toplu bakış ve Future Continuous"
+title_en: "Future forms review and Future Continuous"
+objective_tr: Bu dersin sonunda will, going to, Present Continuous ve Present Simple'ın gelecek kullanımlarını duruma göre seçebilecek, will be + fiil-ing ile gelecekte belli bir anda sürmekte olacak eylemleri anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.going-to, gram.a2.will, gram.a2.present-continuous-future]
+vocabulary: [tomorrow, plan, decide, leave, timetable]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İngilizcede tek bir "gelecek zaman" yoktur; konuşanın olaya **nasıl baktığına** göre farklı yapılar seçilir. A2'de öğrendiğiniz yapıları burada bir araya getiriyor ve iki yeni kullanım ekliyoruz: **tarifeler için Present Simple** ve **Future Continuous**.
+  - kind: comparison
+    title_tr: Hangi yapı ne zaman?
+    table:
+      headers: ["Durum", "Yapı", "Örnek"]
+      rows:
+        - ["Konuşma anında verilen karar, teklif, söz", "will", "I'll help you with that."]
+        - ["Kanıta dayanmayan tahmin, görüş", "will", "I think it will be a good year."]
+        - ["Önceden verilmiş karar, niyet", "be going to", "I'm going to look for a new job."]
+        - ["Görünen kanıta dayalı tahmin", "be going to", "Look out! You're going to fall."]
+        - ["Ayarlanmış program, randevu", "Present Continuous", "I'm seeing the dentist at four."]
+        - ["Tarife, resmî program", "Present Simple", "The train leaves at 9.15."]
+        - ["Gelecekte belli bir anda sürüyor olacak eylem", "will be + fiil-ing", "This time tomorrow I'll be flying to Rome."]
+  - kind: formula
+    title_tr: Future Continuous
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + will be + fiil-ing", "I will be working at ten."]
+        - ["Olumsuz", "özne + won't be + fiil-ing", "She won't be coming tonight."]
+        - ["Soru", "Will + özne + be + fiil-ing?", "Will you be using the car tomorrow?"]
+  - kind: usage
+    title_tr: Future Continuous ne zaman?
+    text_tr: |-
+      **Gelecekte belli bir anda devam ediyor olacak eylem:** "Don't call at eight. We **will be having** dinner."
+
+      **Kibar soru:** "Will you be using the car?" sorusu, karşıdakinin planını baskı yapmadan öğrenmenin yoludur ("Will you use...?" rica gibi duyulabilir).
+
+      **Zaten olacak, olağan akışın parçası olan olaylar:** "I'll be seeing Ali tomorrow anyway, so I can give him the book."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The film starts at half past eight.", tr: "Film sekiz buçukta başlıyor."}
+      - {en: "This time next week I'll be lying on a beach.", tr: "Gelecek hafta bu saatlerde bir kumsalda uzanıyor olacağım."}
+      - {en: "I've decided. I'm going to learn to drive.", tr: "Kararımı verdim. Araba kullanmayı öğreneceğim."}
+      - {en: "We're meeting the clients on Thursday.", tr: "Perşembe günü müşterilerle buluşuyoruz."}
+      - {en: "The phone is ringing. — I'll get it.", tr: "Telefon çalıyor. — Ben bakarım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The phone is ringing. I'm going to answer it.", tr: "Telefon çalıyor. Ben bakarım.", wrong: true, correction: "The phone is ringing. I'll answer it.", note_tr: "Anlık karar: will."}
+      - {en: "This time tomorrow I will lie on the beach.", tr: "Yarın bu saatte kumsalda uzanıyor olacağım.", wrong: true, correction: "This time tomorrow I will be lying on the beach.", note_tr: "Belli anda süren eylem: will be + -ing."}
+      - {en: "The plane will leaves at six.", tr: "Uçak altıda kalkıyor.", wrong: true, correction: "The plane leaves at six.", note_tr: "Tarife: Present Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her gelecek cümlesinde will kullanmak.** Planlanmış işlerde will, kararı o an veriyormuşsunuz izlenimi yaratır.
+
+      **Present Simple'ı kişisel planlar için kullanmak.** "I meet Ayşe tomorrow" doğal değildir; "I'm meeting Ayşe tomorrow" deyin.
+
+      **Future Continuous'ta be'yi unutmak.** "I will working" yanlıştır.
+questions:
+  - id: q.b1.future-forms.01
+    type: multiple_choice
+    prompt: "According to the timetable, the next bus ___ at 10.45."
+    options:
+      - "*leaves :: Tarifeler için Present Simple kullanılır."
+      - "is going to leave :: Going to niyet ve kanıta dayalı tahmin içindir; tarifede doğal değildir."
+      - "will be leaving :: Olası, ancak tarife bilgisi için olağan seçim Present Simple'dır."
+      - "leave :: Üçüncü tekil kişide -s gerekir."
+    explanation: "Resmî program ve tarifeler: Present Simple."
+  - id: q.b1.future-forms.02
+    type: multiple_choice
+    prompt: "Don't phone me between seven and eight. We ___ dinner then."
+    options:
+      - "*will be having :: Gelecekte belli bir zaman aralığında sürmekte olacak eylem."
+      - "will have :: Bu, yemeğin o saatte başlayacağını düşündürür; süreci vurgulamaz."
+      - "have :: Present Simple alışkanlık bildirir."
+      - "are having had :: Böyle bir yapı yoktur."
+    explanation: "will be + fiil-ing: gelecekte belli bir anda devam eden eylem."
+  - id: q.b1.future-forms.03
+    type: dialogue_completion
+    context: "A: We've run out of milk.\nB: Oh, have we? I ___ some on my way home."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*'ll get :: B bunu yeni öğrendi ve o an karar verdi: will."
+      - "'m going to get :: Going to önceden verilmiş karar bildirir; B'nin haberi yoktu."
+      - "get :: Present Simple alışkanlık bildirir."
+      - "'m getting :: Present Continuous önceden ayarlanmış program bildirir."
+    explanation: "Konuşma anında verilen karar → will."
+    lessons: [gram.a2.will]
+  - id: q.b1.future-forms.04
+    type: dialogue_completion
+    context: "A: We've run out of milk.\nB: I know. I ___ some after work. It's on my list."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*'m going to get :: B zaten biliyordu ve karar vermişti: be going to."
+      - "'ll get :: Will, kararın o an verildiğini düşündürür; oysa listede yazıyor."
+      - "get :: Present Simple alışkanlık bildirir."
+      - "got :: Past Simple geçmişi anlatır."
+    explanation: "Önceden verilmiş karar → be going to."
+    lessons: [gram.a2.going-to]
+  - id: q.b1.future-forms.05
+    type: word_formation
+    prompt: "This time next year I ___ (study) at university."
+    answers: ["will be studying", "'ll be studying"]
+    explanation: "This time + gelecek zaman ifadesi: will be + fiil-ing."
+  - id: q.b1.future-forms.06
+    type: error_correction
+    prompt: "I can't come on Friday. I will fly to Ankara that day — I already have the ticket."
+    answers: ["I can't come on Friday. I am flying to Ankara that day — I already have the ticket.", "I can't come on Friday. I'm flying to Ankara that day — I already have the ticket.", "I can't come on Friday. I'm flying to Ankara that day - I already have the ticket.", "I can't come on Friday. I am flying to Ankara that day - I already have the ticket."]
+    explanation: "Bileti alınmış, ayarlanmış program: Present Continuous."
+    lessons: [gram.a2.present-continuous-future]
+  - id: q.b1.future-forms.07
+    type: matching
+    prompt: "Cümleleri kullanım amaçlarıyla eşleştirin."
+    pairs:
+      - ["I'll carry that for you.", "anlık teklif"]
+      - ["I'm going to start a course.", "önceden verilmiş karar"]
+      - ["The lesson starts at nine.", "tarife, resmî program"]
+      - ["I'm meeting Deniz at six.", "ayarlanmış buluşma"]
+      - ["At six I'll be driving home.", "belli anda sürmekte olan eylem"]
+    explanation: "Yapı, konuşanın olaya bakışına göre seçilir."
+  - id: q.b1.future-forms.08
+    type: translation
+    prompt: "Yarın bu saatte çalışıyor olacağım."
+    answers: ["This time tomorrow I will be working.", "This time tomorrow I'll be working.", "I will be working this time tomorrow.", "I'll be working this time tomorrow.", "At this time tomorrow I will be working.", "At this time tomorrow I'll be working."]
+    explanation: "will be + fiil-ing."
