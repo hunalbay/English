@@ -1,0 +1,122 @@
+id: gram.c1.subjunctive
+kind: grammar
+level: C1
+title_tr: "Dilek-gereklilik kipi: I suggest that he go"
+title_en: "The subjunctive and formal structures"
+objective_tr: Bu dersin sonunda öneri, talep ve gereklilik bildiren fiil ve sıfatlardan sonra yalın fiille kurulan resmî yapıyı ve should'lu karşılığını kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.reporting-verbs]
+vocabulary: [insist, demand, recommend, propose, essential, vital]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Öneri, talep, ısrar ve gereklilik bildiren bazı sözcüklerden sonra gelen **that** cümleciğinde fiil, özne ne olursa olsun **yalın biçimde** kalır. Buna **subjunctive** denir.
+
+      "The doctor recommended that he **stop** smoking." — "stops" değil.
+
+      Bu yapı resmîdir ve özellikle Amerikan İngilizcesinde yaygındır. İngiliz İngilizcesinde aynı anlam çoğunlukla **should** ile verilir: "...that he **should stop** smoking."
+  - kind: formula
+    title_tr: Yapı
+    table:
+      headers: ["Tetikleyen", "Sözcükler", "Örnek"]
+      rows:
+        - ["fiiller", "suggest, recommend, propose, insist, demand, request, ask, require, urge", "They demanded that she resign."]
+        - ["sıfatlar (It is ... that)", "essential, vital, important, necessary, crucial, imperative", "It is essential that everyone be present."]
+        - ["isimler", "suggestion, recommendation, requirement, demand, proposal", "Our recommendation is that the project be delayed."]
+        - ["olumsuz", "not + yalın fiil", "I suggest that he not attend."]
+        - ["edilgen", "be + V3", "She insisted that the room be cleaned."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Zaman değişse de fiil yalın kalır:** "He **insisted** that she **come**." (came değil)
+
+      **To be fiili "be" olarak kalır:** "It is vital that he **be** informed."
+
+      **Olumsuzda do / does / did kullanılmaz:** "I recommend that you **not sign**."
+
+      **Insist ve suggest'in iki anlamı vardır.** "She insisted that he **leave**." (gitmesini talep etti) / "She insisted that he **had left**." (gitmiş olduğunu iddia etti — olgu; subjunctive yok)
+
+      **Kalıplaşmış ifadeler:** "God **save** the Queen", "**Be** that as it may", "Long **live** the Republic", "if need **be**", "so **be** it".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The committee recommended that the proposal be rejected.", tr: "Komite önerinin reddedilmesini tavsiye etti."}
+      - {en: "It is essential that every employee complete the training.", tr: "Her çalışanın eğitimi tamamlaması şarttır."}
+      - {en: "She insisted that I stay for dinner.", tr: "Akşam yemeğine kalmam için ısrar etti."}
+      - {en: "The lawyer advised that he not speak to the press.", tr: "Avukat basınla konuşmamasını tavsiye etti."}
+      - {en: "I suggest that we should postpone the meeting.", tr: "Toplantıyı ertelememizi öneriyorum."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I suggest that he goes to a specialist.", tr: "Bir uzmana gitmesini öneriyorum.", wrong: true, correction: "I suggest that he go to a specialist.", note_tr: "Resmî dilde yalın fiil (gündelik İngiliz İngilizcesinde goes de duyulur)."}
+      - {en: "It is vital that she is told immediately.", tr: "Ona derhal haber verilmesi çok önemli.", wrong: true, correction: "It is vital that she be told immediately.", note_tr: "be + V3."}
+      - {en: "They demanded that he doesn't leave.", tr: "Gitmemesini talep ettiler.", wrong: true, correction: "They demanded that he not leave.", note_tr: "Olumsuz: not + yalın fiil."}
+      - {en: "She demanded him to apologize.", tr: "Özür dilemesini talep etti.", wrong: true, correction: "She demanded that he apologize.", note_tr: "Demand kişi + to almaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Üçüncü tekil kişide -s eklemek.**
+
+      **Geçmiş zamanda fiili de geçmişe çekmek.**
+
+      **Suggest / demand / insist'i "tell" gibi kullanmak** (kişi + to + fiil).
+questions:
+  - id: q.c1.subjunctive.01
+    type: multiple_choice
+    prompt: "The board insisted that the CEO ___ immediately."
+    options:
+      - "*resign :: Talep bildiren insist'ten sonra yalın fiil (subjunctive)."
+      - "resigned :: Bu, istifa ettiğini iddia ettikleri anlamına gelirdi (olgu)."
+      - "resigns :: Resmî yapıda -s eklenmez."
+      - "to resign :: Insist kişi + to kalıbı almaz."
+    explanation: "insist / demand / recommend + that + özne + yalın fiil."
+  - id: q.c1.subjunctive.02
+    type: multiple_choice
+    prompt: "It is imperative that all passengers ___ seated during take-off."
+    options:
+      - "*be :: Gereklilik bildiren sıfattan sonra to be \"be\" olarak kalır."
+      - "are :: Resmî subjunctive yapıda \"be\" kullanılır."
+      - "will be :: Will bu yapıda kullanılmaz."
+      - "being :: -ing biçimi çekimli fiilin yerini tutmaz."
+    explanation: "It is essential / vital / imperative that + özne + be."
+  - id: q.c1.subjunctive.03
+    type: multiple_choice
+    prompt: "The doctor recommended that she ___ any heavy objects for six weeks."
+    options:
+      - "*not lift :: Olumsuz subjunctive: not + yalın fiil."
+      - "doesn't lift :: Do / does kullanılmaz."
+      - "didn't lift :: Geçmiş biçim kullanılmaz."
+      - "not to lift :: \"Recommend that she\" yapısından sonra to gelmez."
+    explanation: "that + özne + not + yalın fiil."
+  - id: q.c1.subjunctive.04
+    type: nuance
+    difficulty: 5
+    prompt: "\"He insisted that she pay the bill.\" ile \"He insisted that she paid the bill.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde hesabı ödemesini talep etti; ikincisinde hesabı ödemiş olduğunu ileri sürdü. :: Yalın fiil talebi, geçmiş zaman bir olgu iddiasını gösterir."
+      - "İkisi de aynı anlamdadır. :: Fiilin biçimi anlamı değiştirir."
+      - "İlki geçmişteki, ikincisi gelecekteki bir ödemeyi anlatır. :: Tam tersine yakındır."
+      - "İkincisi dil bilgisi açısından yanlıştır. :: Doğrudur, ama farklı bir anlam taşır."
+    explanation: "Insist: talep (subjunctive) ya da iddia (normal zaman)."
+  - id: q.c1.subjunctive.05
+    type: error_correction
+    prompt: "The inspector demanded us to show our documents."
+    answers: ["The inspector demanded that we show our documents.", "The inspector demanded that we should show our documents."]
+    explanation: "Demand + that + özne + yalın fiil."
+  - id: q.c1.subjunctive.06
+    type: sentence_building
+    prompt: "Resmî biçimde yeniden yazın: \"They should cancel the event,\" the police recommended. → The police recommended that the event ..."
+    answers: ["The police recommended that the event be cancelled.", "The police recommended that the event be canceled.", "The police recommended that the event should be cancelled."]
+    explanation: "Edilgen subjunctive: be + V3."
+  - id: q.c1.subjunctive.07
+    type: word_formation
+    prompt: "It is essential that every applicant ___ (submit) the form by Friday."
+    answers: [submit, "should submit"]
+    explanation: "Üçüncü tekil kişide de yalın fiil."
+  - id: q.c1.subjunctive.08
+    type: translation
+    prompt: "Bir doktora görünmesini öneriyorum. (kadın; resmî yapı)"
+    answers: ["I suggest that she see a doctor.", "I suggest that she should see a doctor.", "I recommend that she see a doctor.", "I suggest she see a doctor.", "I recommend that she should see a doctor."]
+    explanation: "suggest + that + she + see."

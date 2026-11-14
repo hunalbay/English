@@ -1,0 +1,139 @@
+id: gram.c1.ellipsis-substitution
+kind: grammar
+level: C1
+title_tr: "Tekrardan kaçınmak: eksiltme ve yerine koyma"
+title_en: "Ellipsis and substitution"
+objective_tr: Bu dersin sonunda tekrar eden sözcükleri atarak ya da one, do so, so, not gibi sözcüklerle değiştirerek daha doğal ve akıcı cümleler kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.both-either-neither]
+vocabulary: [one, so, such, former, latter]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Akıcı konuşanlar aynı sözcükleri tekrar etmez. İki yol vardır: **eksiltme** (ellipsis) — bağlamdan anlaşılan sözcükleri atmak; **yerine koyma** (substitution) — uzun bir ifadeyi kısa bir sözcükle değiştirmek.
+
+      "I haven't read the report, but I will read the report." → "I haven't read the report, but **I will**."
+
+      "I need a pen. Do you have a pen?" → "Do you have **one**?"
+  - kind: formula
+    title_tr: Yerine koyma
+    table:
+      headers: ["Sözcük", "Neyin yerine", "Örnek"]
+      rows:
+        - ["one / ones", "sayılabilir isim", "I prefer the red one. / The old ones are better."]
+        - ["do / does / did", "fiil öbeği", "She earns more than I do."]
+        - ["do so", "fiil öbeği (resmî)", "Anyone wishing to leave may do so."]
+        - ["so", "olumlu cümlecik", "Is he coming? — I think so."]
+        - ["not", "olumsuz cümlecik", "Will it rain? — I hope not."]
+        - ["the former / the latter", "ilki / ikincisi", "Tea and coffee: I prefer the latter."]
+        - ["that / those", "karşılaştırmada isim", "The climate is like that of Spain."]
+  - kind: formula
+    title_tr: Eksiltme
+    table:
+      headers: ["Tür", "Örnek"]
+      rows:
+        - ["yardımcı fiilden sonra", "I can't swim, but my brother can."]
+        - ["to'dan sonra", "I didn't want to go, but I had to."]
+        - ["and / but / or'dan sonra aynı özne", "She opened the door and (she) walked in."]
+        - ["karşılaştırmada", "He works harder than (he) used to."]
+        - ["soru sözcüğünden sonra", "Someone called, but I don't know who."]
+        - ["günlük konuşmada baştan", "(Have you) Finished? / (I) Hope so."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **"I think so" / "I don't think so"** — ama **hope, be afraid, guess** ile olumsuz: "I hope **not**.", "I'm afraid **not**." ("I don't hope so" yanlıştır.)
+
+      **To'dan sonra be ve have (yardımcı) genellikle atılmaz:** "He isn't rich, but he **used to be**."
+
+      **One sayılamayan isimlerin yerine geçmez:** "I prefer red wine to white (wine)." — "white one" olmaz.
+
+      **So do I / Neither do I** yapıları da yerine koymadır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I've never been to Japan, but I'd love to.", tr: "Japonya'ya hiç gitmedim ama çok isterdim."}
+      - {en: "These shoes are too small. Do you have any bigger ones?", tr: "Bu ayakkabılar çok küçük. Daha büyükleri var mı?"}
+      - {en: "Will the shop be open tomorrow? — I'm afraid not.", tr: "Dükkân yarın açık olacak mı? — Maalesef hayır."}
+      - {en: "Those who wish to apply should do so before Friday.", tr: "Başvurmak isteyenler cumadan önce başvurmalıdır."}
+      - {en: "The population of Istanbul is larger than that of many countries.", tr: "İstanbul'un nüfusu birçok ülkeninkinden büyüktür."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Is it going to rain? — I don't hope so.", tr: "Yağmur yağacak mı? — Umarım yağmaz.", wrong: true, correction: "Is it going to rain? — I hope not.", note_tr: "hope + not."}
+      - {en: "I like this jacket more than that.", tr: "Bu ceketi ondan daha çok beğendim.", wrong: true, correction: "I like this jacket more than that one.", note_tr: "Sayılabilir isim yerine one."}
+      - {en: "The price of gold is higher than silver.", tr: "Altının fiyatı gümüşünkinden yüksek.", wrong: true, correction: "The price of gold is higher than that of silver.", note_tr: "Fiyat fiyatla karşılaştırılır."}
+      - {en: "She told me to wait, but I didn't want.", tr: "Beklememi söyledi ama istemedim.", wrong: true, correction: "She told me to wait, but I didn't want to.", note_tr: "To kalır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **To'yu da atmak.** "I'd like to" derken to kalır.
+
+      **Karşılaştırmada that of / those of'u atlamak.** Mantıksal olarak benzer şeyler karşılaştırılmalıdır.
+
+      **Her tekrarı atmak.** Anlam belirsizleşiyorsa tekrar etmek daha iyidir.
+questions:
+  - id: q.c1.ellipsis.01
+    type: multiple_choice
+    prompt: "A: Do you think they'll accept our offer?\nB: I hope ___."
+    options:
+      - "*so :: Olumlu cümleciğin yerine: I hope so."
+      - "it :: Hope bu şekilde \"it\" almaz."
+      - "that :: \"I hope that\" tek başına tamamlanmış sayılmaz."
+      - "yes :: \"I hope yes\" denmez."
+    explanation: "think / hope / expect / suppose + so."
+  - id: q.c1.ellipsis.02
+    type: multiple_choice
+    prompt: "A: Is the flight going to be delayed?\nB: I hope ___. I have a connection to catch."
+    options:
+      - "*not :: Olumsuz cümleciğin yerine: I hope not."
+      - "so :: Bu, rötar olmasını umduğu anlamına gelirdi."
+      - "no :: \"I hope no\" denmez."
+      - "it doesn't :: Yardımcı fiil soruyla uyuşmuyor (is going to)."
+    explanation: "I hope not / I'm afraid not."
+  - id: q.c1.ellipsis.03
+    type: multiple_choice
+    prompt: "The cost of living in London is much higher than ___ Manchester."
+    options:
+      - "*that of :: \"The cost of living\" yerine that; of ile bağlanır."
+      - "one of :: One bu şekilde sayılamayan / soyut bir ismin yerine geçmez."
+      - "it of :: It ardından of almaz."
+      - "those in :: Those çoğul isimlerin yerine geçer; cost tekil."
+    explanation: "Karşılaştırmada tekil isim yerine that (of), çoğul yerine those (of)."
+  - id: q.c1.ellipsis.04
+    type: error_correction
+    prompt: "I didn't apply for the job, although my manager encouraged me."
+    answers: ["I didn't apply for the job, although my manager encouraged me to."]
+    explanation: "Mastar atıldığında to yerinde kalır: encouraged me to (apply)."
+  - id: q.c1.ellipsis.05
+    type: sentence_building
+    prompt: "Tekrarı giderin: \"Passengers who need to change their booking should change their booking online.\" → Passengers who need to change their booking should ..."
+    answers: ["Passengers who need to change their booking should do so online."]
+    explanation: "Resmî dilde fiil öbeği yerine do so."
+  - id: q.c1.ellipsis.06
+    type: word_in_context
+    difficulty: 5
+    context: "The hotel offers two types of room: standard and deluxe. The former has a view of the car park; the latter overlooks the sea."
+    prompt: "\"The latter\" neyi gösterir?"
+    options:
+      - "*Deluxe odayı (ikinci sayılanı). :: The latter = ikincisi, sonuncusu."
+      - "Standart odayı (ilk sayılanı). :: Bu, \"the former\" olurdu."
+      - "İki odayı birden. :: Latter tek bir ögeyi gösterir."
+      - "Oteli. :: Otel sayılan iki ögeden biri değildir."
+    explanation: "the former = ilki; the latter = ikincisi."
+  - id: q.c1.ellipsis.07
+    type: fill_blank
+    prompt: "These glasses are dirty. Could you bring us some clean ___?"
+    answers: [ones]
+    explanation: "Çoğul sayılabilir isim yerine ones."
+  - id: q.c1.ellipsis.08
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi cümlede one YANLIŞ kullanılmıştır?"
+    options:
+      - "*I prefer brown bread to white one. :: Bread sayılamaz; one kullanılmaz: ...to white (bread)."
+      - "I'd like a coffee. — I'll have one too. :: A coffee (bir fincan) sayılabilir: doğru."
+      - "Which bag is yours? — The blue one. :: Doğru."
+      - "This chair is broken. Take another one. :: Doğru."
+    explanation: "One yalnızca sayılabilir isimlerin yerine geçer."

@@ -1,0 +1,127 @@
+id: gram.c1.perfect-forms
+kind: grammar
+level: C1
+title_tr: "Tamamlanmışlık bildiren mastar ve -ing: to have done, having done"
+title_en: "Perfect infinitives and perfect -ing forms"
+objective_tr: Bu dersin sonunda ana fiilden önce olmuş eylemleri to have + V3 ve having + V3 ile anlatabilecek, bu biçimlerin edilgen ve sürekli hâllerini kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.passive-advanced, gram.b2.participle-clauses]
+vocabulary: [seem, appear, claim, pretend, deny, regret]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Mastar (to do) ve -ing biçimi (doing) tek başına zaman bildirmez; zamanı ana fiilden alır. Eylemin ana fiilden **daha önce** olduğunu göstermek için **perfect** biçimler kullanılır.
+
+      "He seems **to be** ill." (Hasta görünüyor. — şimdi)
+
+      "He seems **to have been** ill." (Hasta olmuş gibi görünüyor. — daha önce)
+  - kind: formula
+    title_tr: Biçimler
+    table:
+      headers: ["Biçim", "Etken", "Edilgen"]
+      rows:
+        - ["yalın mastar", "to do", "to be done"]
+        - ["sürekli mastar", "to be doing", "—"]
+        - ["perfect mastar", "to have done", "to have been done"]
+        - ["perfect sürekli mastar", "to have been doing", "—"]
+        - ["yalın -ing", "doing", "being done"]
+        - ["perfect -ing", "having done", "having been done"]
+  - kind: usage
+    title_tr: Nerede kullanılır?
+    text_tr: |-
+      **seem, appear, claim, pretend, happen'dan sonra:** "She claims **to have met** the president."
+
+      **Edilgen aktarma yapılarında:** "He is believed **to have left** the country."
+
+      **Would like / love / hate / prefer'den sonra (gerçekleşmemiş istek):** "I would like **to have seen** her face." (Yüzünü görmek isterdim. — Göremedim.)
+
+      **Sıfatlardan sonra:** "I'm sorry **to have kept** you waiting."
+
+      **Edat ve fiillerden sonra -ing:** "He was accused of **having stolen** the money.", "She denied **having seen** him."
+
+      **Ortaç cümleciğinde:** "**Having been warned** about the weather, we took coats."
+
+      Yalın -ing çoğu zaman yeterlidir; **having + V3** önceliği açıkça vurgular.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You seem to have lost weight.", tr: "Kilo vermiş görünüyorsun."}
+      - {en: "I'm glad to have had the chance to work with you.", tr: "Sizinle çalışma fırsatı bulduğum için mutluyum."}
+      - {en: "He pretended to have read the book.", tr: "Kitabı okumuş gibi yaptı."}
+      - {en: "She appears to have been crying.", tr: "Ağlıyormuş gibi görünüyor."}
+      - {en: "Having been rejected twice, he decided not to apply again.", tr: "İki kez reddedildiği için bir daha başvurmamaya karar verdi."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He seems to lose his keys yesterday.", tr: "Dün anahtarlarını kaybetmiş görünüyor.", wrong: true, correction: "He seems to have lost his keys yesterday.", note_tr: "Önceki eylem: to have + V3."}
+      - {en: "I would like to saw that film.", tr: "O filmi görmek isterdim.", wrong: true, correction: "I would like to have seen that film.", note_tr: "to have + V3."}
+      - {en: "She was proud of have won the prize.", tr: "Ödülü kazanmış olmaktan gurur duyuyordu.", wrong: true, correction: "She was proud of having won the prize.", note_tr: "Edat + having."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Önceki eylemi yalın mastarla vermek.** "He seems to be rich" (şimdi zengin) ile "He seems to have been rich" (eskiden zenginmiş) farklıdır.
+
+      **To have'den sonra üçüncü biçimi kullanmamak.**
+
+      **Perfect biçimi gereksiz yere kullanmak.** Sıra zaten açıksa yalın biçim daha doğaldır: "After leaving school..." yeterlidir.
+questions:
+  - id: q.c1.perfect-forms.01
+    type: multiple_choice
+    prompt: "The burglars appear ___ through a window at the back."
+    options:
+      - "*to have entered :: Görünme anından önceki eylem: to have + V3."
+      - "to enter :: Bu, şu an ya da genel olarak girdiklerini söylerdi."
+      - "having entered :: Appear'dan sonra mastar gelir."
+      - "to be entered :: Edilgen anlam uymuyor; hırsızlar giriyor."
+    explanation: "seem / appear + to have + V3: önce olmuş eylem."
+  - id: q.c1.perfect-forms.02
+    type: multiple_choice
+    prompt: "He denied ___ any money from the company."
+    options:
+      - "*having taken :: Deny + -ing; perfect biçim önceliği vurgular."
+      - "to have taken :: Deny mastar almaz."
+      - "have taken :: Çekimli biçim gelmez."
+      - "to take :: Deny mastar almaz."
+    explanation: "deny + (having +) -ing."
+  - id: q.c1.perfect-forms.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"She is said to work for the secret service.\" ile \"She is said to have worked for the secret service.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde şu an çalıştığı, ikincisinde geçmişte çalıştığı söyleniyor. :: Perfect mastar, söylenme anından önceki dönemi gösterir."
+      - "İkisi de şu an çalıştığını söyler. :: To have worked geçmişe işaret eder."
+      - "İlki kesin bilgi, ikincisi söylentidir. :: İkisi de söylentiyi aktarır."
+      - "İkincisi gelecekte çalışacağını söyler. :: Perfect mastar geleceği göstermez."
+    explanation: "to + fiil: aynı zaman; to have + V3: daha önce."
+  - id: q.c1.perfect-forms.04
+    type: word_formation
+    prompt: "I'm sorry ___ (keep) you waiting so long. Please come in."
+    answers: ["to have kept"]
+    explanation: "Özür dilenen eylem önce olmuş: to have + V3."
+  - id: q.c1.perfect-forms.05
+    type: sentence_building
+    prompt: "\"It seems that someone has moved my papers.\" → Someone seems ..."
+    answers: ["Someone seems to have moved my papers."]
+    explanation: "seem + to have + V3."
+  - id: q.c1.perfect-forms.06
+    type: error_correction
+    prompt: "I would love to meet your grandfather, but he died before I was born."
+    answers: ["I would love to have met your grandfather, but he died before I was born.", "I would have loved to meet your grandfather, but he died before I was born."]
+    explanation: "Gerçekleşmemiş geçmiş istek: would love to have + V3 / would have loved to + fiil."
+  - id: q.c1.perfect-forms.07
+    type: sentence_completion
+    difficulty: 4
+    prompt: "___, the building was finally reopened to the public."
+    options:
+      - "*Having been restored :: Edilgen ve önceki eylem: having been + V3."
+      - "Having restored :: Etken; bina bir şeyi restore etmez."
+      - "Restoring :: Etken ve eş zamanlı anlam verir."
+      - "To have restored :: Mastar bu şekilde neden / zaman cümleciği kurmaz."
+    explanation: "Edilgen perfect ortaç: having been + V3."
+  - id: q.c1.perfect-forms.08
+    type: translation
+    prompt: "Kilo vermiş görünüyorsun."
+    answers: ["You seem to have lost weight.", "You appear to have lost weight.", "You look like you have lost weight.", "You look as if you have lost weight."]
+    explanation: "seem + to have + lost."

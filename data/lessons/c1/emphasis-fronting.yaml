@@ -1,0 +1,122 @@
+id: gram.c1.emphasis-fronting
+kind: grammar
+level: C1
+title_tr: "Öne alma ve diğer devrik yapılar"
+title_en: "Fronting and other inversion"
+objective_tr: Bu dersin sonunda yer bildiren ifadelerden, so / such ifadelerinden ve as / though yapılarından sonra devrik düzen kurabilecek, bir ögeyi vurgu için cümle başına alabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.inversion]
+vocabulary: [such, so, though, corner, hill, opposite]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Olumsuz zarflar dışında da devrik yapı kuran durumlar vardır. Bunların çoğu **anlatıda ve betimlemede** kullanılır; okurun dikkatini cümlenin sonuna, yeni bilgiye yöneltir.
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["yer / yön ifadesi + fiil + özne", "asıl fiil doğrudan öne geçer", "On the hill stood an old castle."]
+        - ["Here / There + fiil + özne", "", "Here comes the bus."]
+        - ["So + sıfat + be + özne + that", "o kadar ... ki", "So great was the damage that the road was closed."]
+        - ["Such + be + özne + that", "öylesine ... ki", "Such was his anger that he couldn't speak."]
+        - ["sıfat + as / though + özne + fiil", "-e rağmen", "Tired as she was, she kept working."]
+        - ["Try as I might", "ne kadar uğraşsam da", "Try as I might, I couldn't open it."]
+        - ["nesneyi öne alma", "sıra değişmez, vurgu değişir", "That I can't accept."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Yer ifadesiyle devrik yapıda do / did kullanılmaz;** asıl fiil doğrudan özneden önce gelir: "Into the room **walked** a tall man." Fiiller çoğunlukla hareket ve konum bildirir (come, go, stand, sit, lie, hang).
+
+      **Özne zamir ise devrik yapı olmaz:** "Here **comes the bus**." ama "Here **it comes**."
+
+      **Sıfat + as + özne + fiil** bir zıtlık yapısıdır (= although): "**Strange as it may seem**, I enjoyed it."
+
+      **So do I / Neither do I** yapıları da aynı ilkenin gündelik örnekleridir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "In the corner sat a man reading a newspaper.", tr: "Köşede gazete okuyan bir adam oturuyordu."}
+      - {en: "So complicated was the form that nobody could fill it in.", tr: "Form o kadar karmaşıktı ki kimse dolduramadı."}
+      - {en: "Hard as he tried, he couldn't remember her name.", tr: "Ne kadar uğraşsa da adını hatırlayamadı."}
+      - {en: "There goes my last chance.", tr: "İşte son şansım da gitti."}
+      - {en: "Such is the power of advertising that we buy things we don't need.", tr: "Reklamın gücü öyledir ki ihtiyacımız olmayan şeyleri alırız."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "On the table did lie a letter.", tr: "Masanın üstünde bir mektup duruyordu.", wrong: true, correction: "On the table lay a letter.", note_tr: "Yer ifadesiyle did yok."}
+      - {en: "Here comes he.", tr: "İşte geliyor.", wrong: true, correction: "Here he comes.", note_tr: "Zamirle devrik yapı olmaz."}
+      - {en: "So was heavy the rain that we stopped.", tr: "Yağmur o kadar şiddetliydi ki durduk.", wrong: true, correction: "So heavy was the rain that we stopped.", note_tr: "So + sıfat + be + özne."}
+      - {en: "Although tired as he was, he continued.", tr: "Yorgun olmasına rağmen devam etti.", wrong: true, correction: "Tired as he was, he continued.", note_tr: "Although ile birlikte kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İki devrik türü karıştırmak:** olumsuz zarflarda **yardımcı fiil** öne geçer (Never did I...); yer ifadelerinde **asıl fiil** öne geçer (On the hill stood...).
+
+      **Zamir öznelerle devrik yapı kurmak.**
+
+      **Aşırı kullanım.** Bu yapılar anlatıya renk katar; sık kullanılırsa yapay durur.
+questions:
+  - id: q.c1.fronting.01
+    type: multiple_choice
+    prompt: "At the end of the street ___ a small bakery."
+    options:
+      - "*stood :: Yer ifadesi başta: asıl fiil + özne."
+      - "did stand :: Yer ifadesiyle devrik yapıda did kullanılmaz."
+      - "it stood :: Özne (a small bakery) fiilden sonra geliyor; it fazla."
+      - "standing :: Çekimli bir fiil gerekir."
+    explanation: "Yer ifadesi + fiil + özne."
+  - id: q.c1.fronting.02
+    type: multiple_choice
+    prompt: "___ was the noise that we had to shout to hear each other."
+    options:
+      - "*So loud :: So + sıfat + be + özne + that."
+      - "Such loud :: Such'tan sonra sıfat tek başına gelmez."
+      - "Very loud :: Very ... that yapısı kurulmaz."
+      - "Too loud :: Too ... that yapısı kurulmaz."
+    explanation: "So + sıfat + was + özne + that."
+  - id: q.c1.fronting.03
+    type: multiple_choice
+    prompt: "___, she managed to finish the marathon."
+    options:
+      - "*Exhausted as she was :: sıfat + as + özne + fiil = although."
+      - "As exhausted she was :: Sıra: sıfat + as + özne + fiil."
+      - "Although exhausted as she was :: Although ile bu yapı birlikte kullanılmaz."
+      - "Exhausted was she as :: Böyle bir sıra yoktur."
+    explanation: "Zıtlık: sıfat + as / though + özne + fiil."
+  - id: q.c1.fronting.04
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*Down the stairs came she. :: Özne zamir olduğunda devrik yapı kurulmaz: Down the stairs she came."
+      - "Down the stairs came the bride. :: Doğru: isim özneyle devrik yapı."
+      - "Here comes the train. :: Doğru."
+      - "There it goes. :: Doğru: zamirle düz sıra."
+    explanation: "Zamir özneyle devrik yapı olmaz."
+  - id: q.c1.fronting.05
+    type: sentence_building
+    prompt: "Vurgulu biçimde yeniden yazın: \"His reputation was such that nobody dared to argue with him.\" → Such ..."
+    answers: ["Such was his reputation that nobody dared to argue with him.", "Such was his reputation that nobody dared argue with him."]
+    explanation: "Such + be + özne + that."
+  - id: q.c1.fronting.06
+    type: sentence_building
+    prompt: "\"Although I tried hard, I couldn't solve the problem.\" → Try as ..."
+    answers: ["Try as I might, I couldn't solve the problem.", "Try as I did, I couldn't solve the problem.", "Try as I might, I could not solve the problem."]
+    explanation: "Try as I might = ne kadar uğraşsam da."
+  - id: q.c1.fronting.07
+    type: matching
+    prompt: "Cümle başlarını devamlarıyla eşleştirin."
+    pairs:
+      - ["Never", "have I seen such chaos."]
+      - ["On the wall", "hung a faded photograph."]
+      - ["So severe", "was the storm that flights were cancelled."]
+      - ["Strange", "as it sounds, I miss the noise."]
+    explanation: "Her devrik türün kendi sırası vardır."
+  - id: q.c1.fronting.08
+    type: translation
+    prompt: "Tepede eski bir kale duruyordu. (yer ifadesini başa alarak)"
+    answers: ["On the hill stood an old castle.", "On top of the hill stood an old castle.", "On the hill there stood an old castle."]
+    explanation: "Yer ifadesi + stood + özne."

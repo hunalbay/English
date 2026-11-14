@@ -1,0 +1,122 @@
+id: gram.c1.unreal-past
+kind: grammar
+level: C1
+title_tr: "Gerçek dışı geçmiş: it's time, would rather, as if"
+title_en: "Unreal past: it's time, would rather, as if / as though"
+objective_tr: Bu dersin sonunda it's (high) time, would rather / would sooner, as if / as though, suppose ve imagine kalıplarından sonra gerçek dışılık bildiren geçmiş biçimleri kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.wish-past]
+vocabulary: [rather, prefer, pretend, behave, treat, suppose]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Wish ve second conditional'da gördüğünüz ilke — **geçmiş biçim = gerçek dışılık** — başka kalıplarda da geçerlidir. Bu kalıplardan sonra gelen Past Simple **geçmişi değil**, şu an gerçek olmayan ya da istenen bir durumu anlatır.
+  - kind: formula
+    title_tr: Kalıplar
+    table:
+      headers: ["Kalıp", "Yapı", "Örnek"]
+      rows:
+        - ["it's (high / about) time", "+ özne + Past Simple", "It's time you went to bed."]
+        - ["it's time", "+ (for kişi) + to + fiil", "It's time (for us) to go."]
+        - ["would rather / would sooner (aynı özne)", "+ yalın fiil", "I'd rather stay at home."]
+        - ["would rather (farklı özne, şimdi / gelecek)", "+ özne + Past Simple", "I'd rather you didn't smoke here."]
+        - ["would rather (farklı özne, geçmiş)", "+ özne + Past Perfect", "I'd rather you hadn't told her."]
+        - ["as if / as though (gerçek dışı)", "+ Past Simple / Past Perfect", "He talks as if he knew everything."]
+        - ["suppose / supposing / imagine", "+ Past Simple", "Suppose you won the lottery..."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **It's time + Past Simple** gecikmişlik ve eleştiri bildirir: "It's high time you **got** a job." (Artık bir iş bulmanın zamanı geldi de geçiyor.)
+
+      **Would rather'da özne değişince zaman da değişir:** "I'd rather **go**." (ben) / "I'd rather **you went**." (sen)
+
+      **As if'ten sonraki zaman, olasılığa bağlıdır.** "He looks as if he **is** ill." (gerçekten hasta olabilir) / "He talks as if he **were** the boss." (patron değil)
+
+      **Prefer ile karşılaştırın:** "I'd prefer **to stay**." / "I'd prefer **you to stay**." / "I'd prefer it **if you stayed**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "It's about time we had a serious talk.", tr: "Ciddi bir konuşma yapmamızın zamanı geldi."}
+      - {en: "I'd rather you didn't mention this to anyone.", tr: "Bundan kimseye söz etmemeni tercih ederim."}
+      - {en: "She behaves as though nothing had happened.", tr: "Hiçbir şey olmamış gibi davranıyor."}
+      - {en: "I'd sooner walk than wait for the bus.", tr: "Otobüs beklemektense yürümeyi tercih ederim."}
+      - {en: "Imagine you could live anywhere in the world.", tr: "Dünyanın herhangi bir yerinde yaşayabildiğini hayal et."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "It's time you go home.", tr: "Eve gitmenin zamanı geldi.", wrong: true, correction: "It's time you went home.", note_tr: "it's time + özne + Past Simple."}
+      - {en: "I'd rather you don't tell him.", tr: "Ona söylememeni tercih ederim.", wrong: true, correction: "I'd rather you didn't tell him.", note_tr: "Farklı özne: Past Simple."}
+      - {en: "I'd rather to stay here.", tr: "Burada kalmayı tercih ederim.", wrong: true, correction: "I'd rather stay here.", note_tr: "Would rather + yalın fiil."}
+      - {en: "He treats me as if I am a child.", tr: "Bana çocukmuşum gibi davranıyor.", wrong: true, correction: "He treats me as if I were a child.", note_tr: "Gerçek dışı: were."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Bu kalıplardan sonra şimdiki zaman kullanmak.**
+
+      **Would rather'dan sonra to eklemek.**
+
+      **'d kısaltmasını had sanmak.** "I'd rather" = I **would** rather; "I'd better" = I **had** better.
+questions:
+  - id: q.c1.unreal-past.01
+    type: multiple_choice
+    prompt: "It's high time the government ___ something about housing prices."
+    options:
+      - "*did :: it's (high) time + özne + Past Simple."
+      - "does :: Bu kalıptan sonra şimdiki zaman kullanılmaz."
+      - "will do :: Will bu kalıpla kullanılmaz."
+      - "to do :: \"to\" yapısı özne olmadan ya da \"for + kişi\" ile kullanılır."
+    explanation: "Gecikmişlik: it's high time + Past Simple."
+  - id: q.c1.unreal-past.02
+    type: multiple_choice
+    prompt: "I'd rather you ___ your shoes off before coming in."
+    options:
+      - "*took :: Farklı özne (I / you): would rather + özne + Past Simple."
+      - "take :: Yalın fiil yalnızca özne aynıysa kullanılır."
+      - "to take :: Would rather'dan sonra to gelmez."
+      - "will take :: Will bu kalıpla kullanılmaz."
+    explanation: "would rather + başka özne + Past Simple."
+  - id: q.c1.unreal-past.03
+    type: multiple_choice
+    prompt: "He spends money as if he ___ a millionaire. He's actually a student."
+    options:
+      - "*were :: Gerçek dışı karşılaştırma: as if + were."
+      - "is :: Is, gerçekten milyoner olabileceğini düşündürür; ikinci cümle bunu yalanlıyor."
+      - "will be :: Gelecek zaman uymuyor."
+      - "has been :: Present Perfect gerçek dışılık bildirmez."
+    explanation: "as if + geçmiş biçim = gerçekte öyle değil."
+  - id: q.c1.unreal-past.04
+    type: nuance
+    difficulty: 5
+    prompt: "\"She looks as if she is tired.\" ile \"She acts as if she were the manager.\" arasındaki fark nedir?"
+    options:
+      - "*İlki gerçek olabilecek bir izlenimi, ikincisi gerçek olmayan bir durumu anlatır. :: Şimdiki zaman olasılığı, geçmiş biçim gerçek dışılığı gösterir."
+      - "İkisi de gerçek dışı durumları anlatır. :: İlki gerçek olabilir."
+      - "İlki geçmiş, ikincisi şimdiki zamandır. :: İkisi de şu anla ilgilidir."
+      - "İkincisi dil bilgisi açısından yanlıştır. :: Were burada doğrudur."
+    explanation: "As if'ten sonraki zaman seçimi, konuşanın inancını gösterir."
+  - id: q.c1.unreal-past.05
+    type: error_correction
+    prompt: "I'd rather you hadn't told anyone until the contract is signed, so please keep it secret."
+    answers: ["I'd rather you didn't tell anyone until the contract is signed, so please keep it secret.", "I would rather you didn't tell anyone until the contract is signed, so please keep it secret."]
+    explanation: "İstek geleceğe yönelik: Past Simple. Past Perfect olmuş bir şeyden pişmanlık bildirir."
+  - id: q.c1.unreal-past.06
+    type: sentence_building
+    prompt: "\"You should start saving money now; you've waited too long.\" → It's high time ..."
+    answers: ["It's high time you started saving money.", "It is high time you started saving money.", "It's high time you started saving money now."]
+    explanation: "it's high time + özne + Past Simple."
+  - id: q.c1.unreal-past.07
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["I'd rather go alone.", "Yalnız gitmeyi tercih ederim."]
+      - ["I'd rather you went alone.", "Senin yalnız gitmeni tercih ederim."]
+      - ["I'd rather you had gone alone.", "Keşke yalnız gitseydin."]
+      - ["I'd better go alone.", "Yalnız gitsem iyi olur."]
+    explanation: "Özne ve zaman değişince yapı da değişir."
+  - id: q.c1.unreal-past.08
+    type: translation
+    prompt: "Burada sigara içmemeni tercih ederim."
+    answers: ["I'd rather you didn't smoke here.", "I would rather you didn't smoke here.", "I'd rather you did not smoke here.", "I'd prefer it if you didn't smoke here."]
+    explanation: "would rather + you + didn't."

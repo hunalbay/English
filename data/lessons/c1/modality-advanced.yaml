@@ -1,0 +1,128 @@
+id: gram.c1.modality-advanced
+kind: grammar
+level: C1
+title_tr: "Olasılık ve kesinlik: bound to, likely to, will / would"
+title_en: "Advanced modality: probability and tendency"
+objective_tr: Bu dersin sonunda olasılık derecelerini be bound to, be likely to, be sure to, may well, might as well gibi yapılarla ifade edebilecek, will ve would'un alışkanlık ve varsayım kullanımlarını tanıyabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.modals-past]
+vocabulary: [likely, certain, tend, inevitable, doubt]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İleri düzeyde olasılığı yalnızca must / might / can't ile değil, daha ince derecelerle ifade ederiz. Ayrıca **will** ve **would** her zaman gelecek ya da koşul bildirmez; **alışılmış davranışı** ve **şu anki varsayımı** da anlatabilir.
+  - kind: formula
+    title_tr: Olasılık yapıları
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["be bound to + fiil", "kesinlikle olacak, kaçınılmaz", "He's bound to find out sooner or later."]
+        - ["be sure / certain to + fiil", "kesinlikle", "She's sure to pass."]
+        - ["be likely / unlikely to + fiil", "büyük olasılıkla / pek olası değil", "Prices are likely to rise."]
+        - ["It is likely that + cümle", "büyük olasılıkla", "It is likely that prices will rise."]
+        - ["may / might well + fiil", "pekâlâ olabilir", "You may well be right."]
+        - ["could conceivably", "akla yatkın biçimde olabilir", "It could conceivably work."]
+        - ["might as well + fiil", "bari, daha iyi bir seçenek yok", "The bus isn't coming. We might as well walk."]
+        - ["there's every / little chance (that)", "büyük / küçük olasılık", "There's little chance that he'll agree."]
+  - kind: usage
+    title_tr: "Will ve would'un diğer kullanımları"
+    text_tr: |-
+      **Şu an hakkında varsayım:** "That **will be** the postman." (Postacı olmalı.) / "They **will have arrived** by now."
+
+      **Tipik, alışılmış davranış:** "He **will sit** for hours without saying a word." (Saatlerce tek söz etmeden oturur.)
+
+      **Geçmişteki alışkanlık:** "Every summer we **would go** to my grandmother's village."
+
+      **Rahatsız edici ısrar (vurgulu):** "She **will** leave the door open!" / "He **would** say that, wouldn't he?"
+
+      **Reddetme:** "The car **won't** start." / "He **wouldn't** listen." (Dinlemek istemedi.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "With that attitude, he's bound to get into trouble.", tr: "Bu tavırla başının derde girmesi kaçınılmaz."}
+      - {en: "The new law is unlikely to have much effect.", tr: "Yeni yasanın büyük bir etki yaratması pek olası değil."}
+      - {en: "You may well find that the cheaper option is better.", tr: "Ucuz seçeneğin daha iyi olduğunu pekâlâ görebilirsiniz."}
+      - {en: "There's nothing on TV. We might as well go to bed.", tr: "Televizyonda bir şey yok. Bari yatalım."}
+      - {en: "When he was young, he would spend hours reading.", tr: "Gençken saatlerce kitap okurdu."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "It is likely to rain that tomorrow.", tr: "Yarın büyük olasılıkla yağmur yağacak.", wrong: true, correction: "It is likely to rain tomorrow.", note_tr: "be likely to + fiil."}
+      - {en: "He is bound finding out.", tr: "Mutlaka öğrenecek.", wrong: true, correction: "He is bound to find out.", note_tr: "bound to + yalın fiil."}
+      - {en: "She probably will not to come.", tr: "Büyük olasılıkla gelmeyecek.", wrong: true, correction: "She is unlikely to come.", note_tr: "be unlikely to."}
+      - {en: "I would live in Ankara when I was a child.", tr: "Çocukken Ankara'da yaşardım.", wrong: true, correction: "I used to live in Ankara when I was a child.", note_tr: "Durum fiilleriyle would kullanılmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Would'u geçmişteki durumlar için kullanmak.** Would yalnızca tekrarlanan **eylemler** içindir; durumlar (live, be, have, know) için used to gerekir.
+
+      **Might as well'i "belki" sanmak.** Bu yapı olasılık değil, isteksiz bir öneri bildirir.
+
+      **Likely'yi zarf gibi kullanmak.** "He will likely come" Amerikan İngilizcesinde kabul edilir; resmî yazıda "He is likely to come" daha güvenlidir.
+questions:
+  - id: q.c1.modality.01
+    type: multiple_choice
+    prompt: "If you keep driving that fast, you're ___ have an accident."
+    options:
+      - "*bound to :: Kaçınılmaz sonuç: be bound to + fiil."
+      - "likely :: To eksik."
+      - "might as well :: \"Bari\" anlamı uymuyor."
+      - "unlikely to :: Anlam ters."
+    explanation: "be bound to = kesinlikle olacak."
+  - id: q.c1.modality.02
+    type: multiple_choice
+    prompt: "The shop is closed and there's nothing else to do here. We ___ go home."
+    options:
+      - "*might as well :: Daha iyi bir seçenek olmadığında isteksiz öneri."
+      - "may well :: \"Pekâlâ olabilir\" anlamındadır; öneri bildirmez."
+      - "are bound to :: Kaçınılmazlık anlamı uymuyor."
+      - "are likely :: To eksik ve anlam uymuyor."
+    explanation: "might as well + yalın fiil: bari."
+  - id: q.c1.modality.03
+    type: nuance
+    difficulty: 5
+    prompt: "Kapı çalıyor ve bir paket bekliyorsunuz. \"That will be the courier.\" cümlesinde will ne bildirir?"
+    options:
+      - "*Şu an hakkında güçlü bir varsayım. :: Will burada gelecek değil, şimdiki tahmini anlatır."
+      - "Gelecekteki bir olay. :: Kurye zaten kapıda."
+      - "Bir söz ya da vaat. :: Söz verme anlamı yok."
+      - "Bir alışkanlık. :: Tek bir andan söz ediliyor."
+    explanation: "Will + be, must be'ye yakın bir çıkarım bildirebilir."
+  - id: q.c1.modality.04
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi cümlede would YANLIŞ kullanılmıştır?"
+    options:
+      - "*As a child, I would have long blond hair. :: Have (sahiplik) durum bildirir; would kullanılmaz: I used to have."
+      - "As a child, I would climb every tree in the garden. :: Tekrarlanan eylem: doğru."
+      - "On Sundays my father would make pancakes. :: Tekrarlanan eylem: doğru."
+      - "He would often fall asleep in front of the TV. :: Tekrarlanan eylem: doğru."
+    explanation: "Geçmiş alışkanlıkta would yalnızca eylemler içindir."
+    lessons: [gram.a2.used-to]
+  - id: q.c1.modality.05
+    type: sentence_building
+    prompt: "\"Interest rates will probably fall next year.\" → Interest rates are ..."
+    answers: ["Interest rates are likely to fall next year."]
+    explanation: "be likely to + yalın fiil."
+  - id: q.c1.modality.06
+    type: error_correction
+    prompt: "It's unlikely that she comes to the meeting tomorrow."
+    answers: ["It's unlikely that she will come to the meeting tomorrow.", "She is unlikely to come to the meeting tomorrow.", "It is unlikely that she will come to the meeting tomorrow."]
+    explanation: "It is (un)likely that + will; ya da özne + be (un)likely to."
+  - id: q.c1.modality.07
+    type: matching
+    prompt: "İfadeleri olasılık dereceleriyle eşleştirin."
+    pairs:
+      - ["is bound to happen", "kesin"]
+      - ["is likely to happen", "büyük olasılık"]
+      - ["may well happen", "pekâlâ olabilir"]
+      - ["is unlikely to happen", "düşük olasılık"]
+      - ["can't possibly happen", "olanaksız"]
+    explanation: "Olasılık bir derecelenme içinde ifade edilir."
+  - id: q.c1.modality.08
+    type: translation
+    prompt: "Er ya da geç mutlaka öğrenecek. (erkek; bound to ile)"
+    answers: ["He is bound to find out sooner or later.", "He's bound to find out sooner or later.", "Sooner or later he is bound to find out.", "He is bound to learn sooner or later."]
+    explanation: "be bound to + find out."

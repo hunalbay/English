@@ -1,0 +1,124 @@
+id: gram.c1.conditional-inversion
+kind: grammar
+level: C1
+title_tr: "If'siz koşul cümleleri: Had I known, Should you need, Were it not for"
+title_en: "Inverted conditionals"
+objective_tr: Bu dersin sonunda resmî dilde if yerine devrik yapı kullanarak Should ..., Were ... ve Had ... ile koşul cümleleri kurabilecek, but for ve were it not for yapılarını kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.third-conditional, gram.c1.inversion]
+vocabulary: [should, require, assistance, hesitate, contact, otherwise]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Resmî yazışmalarda ve edebî dilde **if atılabilir**; yerine yardımcı fiil cümle başına geçer. Üç yardımcı fiille yapılır: **should, were, had**.
+
+      "**If you should** need help, call me." → "**Should you** need help, call me."
+
+      "**If I had** known, I would have come." → "**Had I** known, I would have come."
+
+      Anlam aynıdır; ton daha resmî ve daha kibardır.
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Tür", "If ile", "Devrik"]
+      rows:
+        - ["First (olası)", "If you should have any questions, ...", "Should you have any questions, ..."]
+        - ["Second (hayali)", "If I were in your position, ...", "Were I in your position, ..."]
+        - ["Second (eylem)", "If the company were to close, ...", "Were the company to close, ..."]
+        - ["Third (geçmiş)", "If we had left earlier, ...", "Had we left earlier, ..."]
+        - ["Olumsuz", "If I had not seen it, ...", "Had I not seen it, ... (Hadn't I değil)"]
+  - kind: usage
+    title_tr: "But for ve were it not for"
+    text_tr: |-
+      **But for + isim** = "... olmasaydı": "**But for** your help, I would have failed." (= If you hadn't helped me...)
+
+      **Were it not for + isim** (şimdi): "**Were it not for** the traffic, I would enjoy living here."
+
+      **Had it not been for + isim** (geçmiş): "**Had it not been for** the storm, we would have arrived on time."
+
+      **If it weren't for / If it hadn't been for** aynı yapıların if'li biçimleridir.
+
+      **Olumsuzda kısaltma yapılmaz:** "Hadn't I known" yanlıştır → "Had I **not** known".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Should you require any further information, please do not hesitate to contact us.", tr: "Daha fazla bilgiye ihtiyaç duymanız hâlinde lütfen bizimle iletişime geçmekten çekinmeyin."}
+      - {en: "Were I to accept the offer, I would have to move abroad.", tr: "Teklifi kabul edecek olsam yurt dışına taşınmam gerekirdi."}
+      - {en: "Had they checked the figures, they would have noticed the error.", tr: "Rakamları kontrol etselerdi hatayı fark ederlerdi."}
+      - {en: "But for his quick thinking, the accident would have been much worse.", tr: "Onun hızlı düşünmesi olmasaydı kaza çok daha kötü olurdu."}
+      - {en: "Had it not been for the scholarship, I could not have studied abroad.", tr: "Burs olmasaydı yurt dışında okuyamazdım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Had I would known, I would have helped.", tr: "Bilseydim yardım ederdim.", wrong: true, correction: "Had I known, I would have helped.", note_tr: "Had + özne + V3."}
+      - {en: "Hadn't we booked early, we wouldn't have got seats.", tr: "Erken yer ayırtmasaydık yer bulamazdık.", wrong: true, correction: "Had we not booked early, we wouldn't have got seats.", note_tr: "Olumsuzda kısaltma yok."}
+      - {en: "Should you will need help, ask me.", tr: "Yardıma ihtiyacınız olursa bana sorun.", wrong: true, correction: "Should you need help, ask me.", note_tr: "Should + özne + yalın fiil."}
+      - {en: "But for you helped me, I would have failed.", tr: "Yardımın olmasaydı başaramazdım.", wrong: true, correction: "But for your help, I would have failed.", note_tr: "But for + isim."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Devrik yapıda if'i de kullanmak.** "If had I known" yanlıştır.
+
+      **Olumsuz kısaltma kullanmak.**
+
+      **Bu yapıyı günlük konuşmada kullanmak.** İş mektupları, sözleşmeler ve resmî konuşmalar için uygundur.
+questions:
+  - id: q.c1.cond-inversion.01
+    type: multiple_choice
+    prompt: "___ you have any difficulty accessing your account, please contact our support team."
+    options:
+      - "*Should :: Resmî dilde olası koşul: Should + özne + yalın fiil."
+      - "Had :: Had'den sonra V3 gelir ve geçmişi anlatır."
+      - "Were :: Were'den sonra \"to have\" gerekirdi."
+      - "Would :: Would ile devrik koşul kurulmaz."
+    explanation: "Should you ... = If you (should) ..."
+  - id: q.c1.cond-inversion.02
+    type: multiple_choice
+    prompt: "___ the warning signs earlier, the crisis could have been avoided."
+    options:
+      - "*Had we noticed :: Geçmişte gerçekleşmemiş koşul: Had + özne + V3."
+      - "Were we to notice :: Bu, şimdiki ya da gelecekteki hayali durum için kullanılır."
+      - "Should we notice :: Bu, olası bir gelecek durumu anlatır."
+      - "If had we noticed :: Devrik yapıda if kullanılmaz."
+    explanation: "Had + özne + V3 = If + özne + had + V3."
+  - id: q.c1.cond-inversion.03
+    type: sentence_building
+    prompt: "If kullanmadan yeniden yazın: \"If I were you, I would reconsider.\" → Were ..."
+    answers: ["Were I you, I would reconsider.", "Were I in your position, I would reconsider."]
+    explanation: "Were + özne ..., would + fiil."
+  - id: q.c1.cond-inversion.04
+    type: sentence_building
+    prompt: "\"If the doctor hadn't acted so quickly, he would have died.\" → But for ..."
+    answers: ["But for the doctor's quick action, he would have died.", "But for the doctor, he would have died.", "But for the doctor acting so quickly, he would have died.", "But for the doctor's quick actions, he would have died."]
+    explanation: "But for + isim öbeği."
+  - id: q.c1.cond-inversion.05
+    type: error_correction
+    prompt: "Hadn't it been for the delay, we would have caught the connecting flight."
+    answers: ["Had it not been for the delay, we would have caught the connecting flight."]
+    explanation: "Devrik koşulda olumsuz kısaltma kullanılmaz."
+  - id: q.c1.cond-inversion.06
+    type: nuance
+    difficulty: 5
+    prompt: "Bir banka müşterilerine yazıyor. En uygun cümle hangisidir?"
+    options:
+      - "*Should you wish to discuss this matter further, please call our helpline. :: Resmî ve kibar; kurumsal yazışmaya uygun."
+      - "If you wanna talk about it more, give us a ring. :: Fazla gündelik."
+      - "Had you wished to discuss this matter, please call. :: Had geçmişteki gerçekleşmemiş durumu anlatır; anlam uymuyor."
+      - "Were you wish to discuss this, call us. :: Were'den sonra \"to wish\" gerekirdi."
+    explanation: "Should + özne + fiil, resmî yazışmada if'in kibar karşılığıdır."
+  - id: q.c1.cond-inversion.07
+    type: matching
+    prompt: "Devrik koşulları if'li karşılıklarıyla eşleştirin."
+    pairs:
+      - ["Should it rain, ...", "If it rains, ..."]
+      - ["Were it to rain, ...", "If it rained, ..."]
+      - ["Had it rained, ...", "If it had rained, ..."]
+      - ["Were it not for the rain, ...", "If it weren't for the rain, ..."]
+    explanation: "should → first, were → second, had → third conditional."
+  - id: q.c1.cond-inversion.08
+    type: translation
+    prompt: "Bilseydim gelirdim. (if kullanmadan, devrik yapıyla)"
+    answers: ["Had I known, I would have come.", "Had I known, I'd have come."]
+    explanation: "Had + özne + V3, would have + V3."

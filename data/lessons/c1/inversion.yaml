@@ -1,0 +1,130 @@
+id: gram.c1.inversion
+kind: grammar
+level: C1
+title_tr: "Devrik yapı: olumsuz zarflarla vurgu"
+title_en: "Inversion after negative adverbials"
+objective_tr: Bu dersin sonunda never, rarely, hardly, not only, no sooner, under no circumstances gibi olumsuz ya da sınırlayıcı ifadeleri cümle başına alarak soru düzeninde devrik cümle kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.linking-advanced, gram.b1.past-perfect]
+next: [gram.c1.cleft-sentences]
+vocabulary: [rarely, seldom, hardly, never, circumstance]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Resmî yazıda ve etkili konuşmada, olumsuz ya da sınırlayıcı bir zarf **vurgu için cümle başına** alınabilir. Bu durumda özne ile yardımcı fiil **soru cümlesindeki gibi yer değiştirir**:
+
+      "I have **never** seen such a mess." → "**Never have I** seen such a mess."
+
+      Anlam aynıdır; ikinci cümle daha güçlü ve daha resmîdir. Cümle soru değildir, soru işareti konmaz.
+  - kind: formula
+    title_tr: Devrik yapı gerektiren ifadeler
+    table:
+      headers: ["İfade", "Anlam", "Örnek"]
+      rows:
+        - ["Never / Never before", "hiçbir zaman", "Never had she felt so alone."]
+        - ["Rarely / Seldom", "nadiren", "Rarely do we see such talent."]
+        - ["Hardly / Scarcely ... when", "tam -mıştı ki", "Hardly had I sat down when the phone rang."]
+        - ["No sooner ... than", "-ır -maz", "No sooner had we left than it began to rain."]
+        - ["Not only ... but also", "yalnızca ... değil", "Not only did he apologize, but he also paid for the damage."]
+        - ["Under no circumstances / On no account", "hiçbir koşulda", "Under no circumstances should you open this door."]
+        - ["Not until / Only when / Only after", "ancak -dığında", "Not until I got home did I realize my mistake."]
+        - ["Little", "hiç (bilmemek)", "Little did he know what was waiting for him."]
+        - ["At no time / Nowhere", "hiçbir zaman / hiçbir yerde", "At no time did they mention the cost."]
+  - kind: usage
+    title_tr: Kurallar
+    text_tr: |-
+      **Yardımcı fiil yoksa do / does / did eklenir:** "He rarely **speaks**." → "Rarely **does he speak**."
+
+      **Not until / Only when / Only after** ile devrik yapı **ana cümlede** olur, zaman cümleciğinde değil: "Only when the results came **did we understand**."
+
+      **Hardly ... when** ve **no sooner ... than** eşleşmelerine dikkat edin; bunlar çoğunlukla Past Perfect ile kullanılır.
+
+      **Only** tek başına özneyi niteliyorsa devrik yapı olmaz: "Only Ali knows the answer."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Never have I heard such nonsense.", tr: "Hiç böyle saçmalık duymadım."}
+      - {en: "Not only is she a brilliant scientist, but she is also a gifted writer.", tr: "Yalnızca parlak bir bilim insanı değil, aynı zamanda yetenekli bir yazar."}
+      - {en: "No sooner had the meeting started than the fire alarm went off.", tr: "Toplantı başlar başlamaz yangın alarmı çaldı."}
+      - {en: "Only later did I understand what he meant.", tr: "Ne demek istediğini ancak sonradan anladım."}
+      - {en: "Under no circumstances are visitors allowed beyond this point.", tr: "Ziyaretçilerin bu noktadan öteye geçmesine hiçbir koşulda izin verilmez."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Never I have seen such a thing.", tr: "Hiç böyle bir şey görmedim.", wrong: true, correction: "Never have I seen such a thing.", note_tr: "Yardımcı fiil özneden önce."}
+      - {en: "Rarely he arrives on time.", tr: "Nadiren zamanında gelir.", wrong: true, correction: "Rarely does he arrive on time.", note_tr: "does + özne + yalın fiil."}
+      - {en: "No sooner had I arrived when she left.", tr: "Ben varır varmaz o gitti.", wrong: true, correction: "No sooner had I arrived than she left.", note_tr: "no sooner ... than."}
+      - {en: "Not until did I see him I recognized him.", tr: "Onu görene kadar tanımadım.", wrong: true, correction: "Not until I saw him did I recognize him.", note_tr: "Devrik yapı ana cümlede."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Zarfı başa alıp sözcük sırasını değiştirmemek.**
+
+      **Hardly ... than / no sooner ... when eşleştirmesi.** Doğrusu: hardly ... **when**, no sooner ... **than**.
+
+      **Devrik yapıyı günlük konuşmada aşırı kullanmak.** Bu yapı resmî ve edebî bir hava taşır.
+questions:
+  - id: q.c1.inversion.01
+    type: multiple_choice
+    prompt: "Never ___ such a beautiful sunset."
+    options:
+      - "*have I seen :: Olumsuz zarf başta: yardımcı fiil + özne."
+      - "I have seen :: Never başa alındığında düz sıra kullanılmaz."
+      - "I saw :: Devrik yapı gerekir."
+      - "did I saw :: Did'den sonra yalın fiil gelir."
+    explanation: "Never + yardımcı fiil + özne + fiil."
+  - id: q.c1.inversion.02
+    type: multiple_choice
+    prompt: "No sooner had we sat down to eat ___ the doorbell rang."
+    options:
+      - "*than :: No sooner ... than."
+      - "when :: When, hardly / scarcely ile eşleşir."
+      - "that :: Bu yapıda that kullanılmaz."
+      - "then :: Then zaman zarfıdır; karşılaştırma bağlacı than gerekir."
+    explanation: "no sooner ... than; hardly ... when."
+  - id: q.c1.inversion.03
+    type: multiple_choice
+    prompt: "Not until the following morning ___ how serious the situation was."
+    options:
+      - "*did we realize :: Not until + zaman, ardından ana cümlede devrik yapı."
+      - "we realized :: Ana cümlede devrik yapı gerekir."
+      - "we did realize :: Yardımcı fiil özneden önce gelmelidir."
+      - "realized we :: Asıl fiil öne geçmez; did kullanılır."
+    explanation: "Not until ... + did + özne + yalın fiil."
+  - id: q.c1.inversion.04
+    type: sentence_building
+    prompt: "Vurgulu biçimde yeniden yazın: \"She not only speaks Russian, but she also writes it perfectly.\" → Not only ..."
+    answers: ["Not only does she speak Russian, but she also writes it perfectly.", "Not only does she speak Russian but she also writes it perfectly."]
+    explanation: "Not only + does + özne + yalın fiil."
+  - id: q.c1.inversion.05
+    type: sentence_building
+    prompt: "Vurgulu biçimde yeniden yazın: \"You should not leave your luggage unattended under any circumstances.\" → Under no circumstances ..."
+    answers: ["Under no circumstances should you leave your luggage unattended."]
+    explanation: "Under no circumstances + should + özne + fiil (not düşer)."
+  - id: q.c1.inversion.06
+    type: error_correction
+    prompt: "Hardly I had closed my eyes when the baby started crying."
+    answers: ["Hardly had I closed my eyes when the baby started crying."]
+    explanation: "Hardly + had + özne + V3 ... when."
+  - id: q.c1.inversion.07
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*Only when did the rain stop we went outside. :: Devrik yapı zaman cümleciğinde değil ana cümlede olmalı: Only when the rain stopped did we go outside."
+      - "Only after the film had ended did I notice the time. :: Doğru."
+      - "Little did they suspect that the house was being watched. :: Doğru."
+      - "Seldom has a decision caused so much debate. :: Doğru."
+    explanation: "Only when / not until yapılarında devrik düzen ana cümlededir."
+  - id: q.c1.inversion.08
+    type: nuance
+    difficulty: 4
+    prompt: "\"Rarely do we receive complaints.\" cümlesi \"We rarely receive complaints.\" cümlesinden nasıl ayrılır?"
+    options:
+      - "*Anlam aynıdır; devrik biçim daha vurgulu ve resmîdir. :: Devrik yapı bilgiyi değil üslubu değiştirir."
+      - "Devrik biçim bir sorudur. :: Soru düzeni kullanılsa da cümle sorudan ibaret değildir."
+      - "Devrik biçim şikâyetlerin sık geldiğini söyler. :: Rarely iki cümlede de \"nadiren\" demektir."
+      - "Devrik biçim günlük konuşmada daha yaygındır. :: Tersine, resmî ve yazılı dilde kullanılır."
+    explanation: "Devrik yapı vurgu ve resmiyet katar."

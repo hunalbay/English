@@ -260,3 +260,43 @@ units:
       - gram.b2.linking-advanced
       - gram.b2.verb-object-infinitive
       - gram.b2.articles-advanced
+
+  - id: c1.u01
+    level: C1
+    title_tr: Vurgu ve sözcük sırası
+    title_en: Emphasis and word order
+    description_tr: Devrik yapılar, vurgu cümleleri ve öne alma ile anlatımınıza güç ve resmiyet katın.
+    lessons:
+      - gram.c1.inversion
+      - gram.c1.cleft-sentences
+      - gram.c1.emphasis-fronting
+
+  - id: c1.u02
+    level: C1
+    title_tr: Varsayım ve resmî yapılar
+    title_en: Hypothesis and formal structures
+    description_tr: If'siz koşul cümleleri, gerçek dışı geçmiş ve dilek-gereklilik kipiyle resmî dilde ustalaşın.
+    lessons:
+      - gram.c1.conditional-inversion
+      - gram.c1.unreal-past
+      - gram.c1.subjunctive
+
+  - id: c1.u03
+    level: C1
+    title_tr: İnce zaman ve kip ayrımları
+    title_en: Fine distinctions in tense and modality
+    description_tr: Geçmişteki geleceği, olasılık derecelerini ve tamamlanmışlık bildiren mastarları kullanın.
+    lessons:
+      - gram.c1.future-in-the-past
+      - gram.c1.modality-advanced
+      - gram.c1.perfect-forms
+
+  - id: c1.u04
+    level: C1
+    title_tr: Akademik ve mesleki üslup
+    title_en: Academic and professional style
+    description_tr: İsimleştirme, tekrardan kaçınma ve ihtiyatlı dil ile resmî yazıda ustalaşın.
+    lessons:
+      - gram.c1.nominalisation
+      - gram.c1.ellipsis-substitution
+      - gram.c1.hedging

@@ -1,0 +1,124 @@
+id: gram.c1.future-in-the-past
+kind: grammar
+level: C1
+title_tr: "Geçmişteki gelecek: was going to, was about to, was to"
+title_en: "Future in the past"
+objective_tr: Bu dersin sonunda geçmişteki bir noktadan bakıldığında gelecekte olan olayları was going to, would, was about to, was to ve was on the point of ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.future-forms, gram.b2.narrative-tenses]
+vocabulary: [intend, plan, about, due, verge, eventually]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir hikâye anlatırken, o andaki **planlardan, niyetlerden ve sonradan olacaklardan** söz etmemiz gerekir. Bunun için gelecek yapılarının **geçmiş biçimleri** kullanılır.
+
+      "I **was going to** call you, but I forgot." (Seni arayacaktım ama unuttum.)
+
+      Türkçedeki **-ecekti** yapısına karşılık gelir.
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Şimdiden bakış", "Geçmişten bakış", "Anlam", "Örnek"]
+      rows:
+        - ["am / is / are going to", "was / were going to", "niyet, plan (çoğu zaman gerçekleşmemiş)", "I was going to tell her, but she left."]
+        - ["will", "would", "sonradan olan olay, tahmin", "I knew she would be late."]
+        - ["Present Continuous", "Past Continuous", "ayarlanmış program", "We were leaving the next morning."]
+        - ["am / is about to", "was / were about to", "tam -mek üzereydi", "I was about to leave when you rang."]
+        - ["am / is to", "was / were to", "resmî plan; kader", "He was to become president years later."]
+        - ["", "was / were to have + V3", "planlandı ama olmadı", "They were to have met in May."]
+        - ["", "was on the point / verge of + -ing", "eşiğindeydi", "She was on the verge of quitting."]
+        - ["am / is due to", "was / were due to", "tarifeli bekleniyordu", "The train was due to arrive at six."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Was going to** çoğunlukla planın **gerçekleşmediğini** düşündürür; ardından sık sık "but" gelir.
+
+      **Would** anlatıcının sonradan bildiği şeyi aktarır: "He left home at sixteen. He **would** never **see** his father again." (Bir daha babasını göremeyecekti.)
+
+      **Was to + yalın fiil** olayın gerçekleştiğini, **was to have + V3** gerçekleşmediğini bildirir.
+
+      **Was supposed to** beklentiyi ve çoğunlukla yerine gelmemiş yükümlülüğü anlatır: "You **were supposed to** be here at nine."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "We were going to move to Izmir, but the job fell through.", tr: "İzmir'e taşınacaktık ama iş olmadı."}
+      - {en: "I was just about to go to bed when the phone rang.", tr: "Tam yatmak üzereydim ki telefon çaldı."}
+      - {en: "Little did he know that this meeting would change his life.", tr: "Bu buluşmanın hayatını değiştireceğini hiç bilmiyordu."}
+      - {en: "The conference was to have taken place in March, but it was cancelled.", tr: "Konferans martta yapılacaktı ama iptal edildi."}
+      - {en: "She was on the point of signing when she noticed the mistake.", tr: "Tam imzalamak üzereydi ki hatayı fark etti."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I will call you yesterday, but I forgot.", tr: "Dün seni arayacaktım ama unuttum.", wrong: true, correction: "I was going to call you yesterday, but I forgot.", note_tr: "Geçmişteki niyet."}
+      - {en: "She said she will come.", tr: "Geleceğini söyledi.", wrong: true, correction: "She said she would come.", note_tr: "will → would."}
+      - {en: "I was about leaving when he arrived.", tr: "O geldiğinde çıkmak üzereydim.", wrong: true, correction: "I was about to leave when he arrived.", note_tr: "about to + yalın fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Geçmişteki plan için will ya da am going to kullanmak.**
+
+      **Was to ile was to have'i karıştırmak.**
+
+      **Would'u yalnızca koşul anlamıyla düşünmek.** Anlatıda would çok sık "sonradan olacaktı" anlamı taşır.
+questions:
+  - id: q.c1.future-past.01
+    type: multiple_choice
+    prompt: "I ___ you last night, but my battery died."
+    options:
+      - "*was going to text :: Gerçekleşmemiş geçmiş niyet: was going to."
+      - "will text :: Will geçmişteki niyet için kullanılmaz."
+      - "would have texting :: Böyle bir yapı yoktur."
+      - "am going to text :: Şimdiki niyet bildirir; \"last night\" ile uyuşmaz."
+    explanation: "Geçmişteki niyet → was / were going to."
+  - id: q.c1.future-past.02
+    type: multiple_choice
+    prompt: "She had no idea that the small company she joined ___ one of the biggest in the world."
+    options:
+      - "*would become :: Geçmişten bakıldığında sonradan olan olay: would."
+      - "will become :: Anlatı geçmişte; will uymaz."
+      - "becomes :: Present Simple geçmiş anlatıya uymaz."
+      - "had become :: Past Perfect, katıldığı andan önceyi anlatırdı."
+    explanation: "Anlatıda geleceğe bakış → would."
+  - id: q.c1.future-past.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"The two leaders were to meet in Geneva.\" ile \"The two leaders were to have met in Geneva.\" arasındaki fark nedir?"
+    options:
+      - "*İlki planı bildirir (buluşma gerçekleşmiş olabilir); ikincisi planın gerçekleşmediğini bildirir. :: was to have + V3: planlandı ama olmadı."
+      - "İkisi de buluşmanın gerçekleştiğini söyler. :: İkinci yapı gerçekleşmediğini bildirir."
+      - "İlki gerçekleşmediğini, ikincisi gerçekleştiğini söyler. :: Tam tersi."
+      - "İkincisi dil bilgisi açısından yanlıştır. :: Resmî dilde doğru bir yapıdır."
+    explanation: "were to + fiil / were to have + V3."
+  - id: q.c1.future-past.04
+    type: fill_blank
+    prompt: "We were just ___ to give up when we finally found the path. (tam -mek üzereydik)"
+    answers: [about]
+    explanation: "was / were about to + yalın fiil."
+  - id: q.c1.future-past.05
+    type: error_correction
+    prompt: "He promised that he will pay me back by the end of the month, but he never did."
+    answers: ["He promised that he would pay me back by the end of the month, but he never did."]
+    explanation: "Geçmişten bakışta will → would."
+  - id: q.c1.future-past.06
+    type: sentence_building
+    prompt: "\"She almost resigned.\" cümlesini \"on the verge of\" ile yeniden yazın. → She was ..."
+    answers: ["She was on the verge of resigning."]
+    explanation: "on the verge of + fiil-ing."
+  - id: q.c1.future-past.07
+    type: reading_comprehension
+    difficulty: 5
+    context: "In 1998 Selim was about to accept a safe job at a bank when a friend suggested starting a small software company. His parents thought he was going to regret it. The company was to have opened an office in Ankara that year, but there was no money. Nobody could have guessed that it would be sold for millions a decade later."
+    prompt: "Metne göre hangisi doğrudur?"
+    options:
+      - "*Ankara ofisi o yıl açılmadı. :: \"Was to have opened ... but there was no money\": planlandı ama gerçekleşmedi."
+      - "Selim bankadaki işi kabul etti. :: \"Was about to accept ... when\": kabul etmek üzereydi, ama araya başka bir şey girdi."
+      - "Ailesi şirketin başarılı olacağından emindi. :: Pişman olacağını düşünüyorlardı."
+      - "Şirket 1998'de milyonlara satıldı. :: On yıl sonra satıldı."
+    explanation: "Geçmişteki gelecek yapıları, planların gerçekleşip gerçekleşmediğini gösterir."
+  - id: q.c1.future-past.08
+    type: translation
+    prompt: "Seni arayacaktım ama unuttum."
+    answers: ["I was going to call you, but I forgot.", "I was going to call you but I forgot.", "I was going to phone you, but I forgot.", "I was going to ring you, but I forgot."]
+    explanation: "was going to + yalın fiil."

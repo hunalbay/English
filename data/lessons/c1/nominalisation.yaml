@@ -1,0 +1,140 @@
+id: gram.c1.nominalisation
+kind: grammar
+level: C1
+title_tr: "İsimleştirme: akademik ve resmî üslup"
+title_en: Nominalisation
+objective_tr: Bu dersin sonunda fiil ve sıfatlarla kurulan cümleleri isim öbeklerine dönüştürerek daha yoğun, nesnel ve resmî bir üslupla yazabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.linking-advanced]
+vocabulary: [increase, decline, failure, improvement, reduction, growth]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Günlük dil **fiillerle** ilerler: kim ne yaptı? Akademik ve resmî dil ise **isimlerle** ilerler: hangi olgu, hangi süreç? Fiil ya da sıfatı isme dönüştürmeye **isimleştirme** denir.
+
+      "Prices **rose** sharply, so people **protested**." (gündelik)
+
+      "The sharp **rise** in prices led to **protests**." (resmî)
+
+      İkinci cümle daha kısa ve nesneldir; eylemi yapan kişi arka plana geçer, olgu öne çıkar.
+  - kind: formula
+    title_tr: Sık kullanılan dönüşümler
+    table:
+      headers: ["Fiil / sıfat", "İsim", "Ek"]
+      rows:
+        - ["decide, discuss, reduce", "decision, discussion, reduction", "-ion / -sion"]
+        - ["develop, improve, agree", "development, improvement, agreement", "-ment"]
+        - ["fail, depart", "failure, departure", "-ure"]
+        - ["arrive, refuse, propose", "arrival, refusal, proposal", "-al"]
+        - ["able, similar, possible", "ability, similarity, possibility", "-ity"]
+        - ["aware, weak, effective", "awareness, weakness, effectiveness", "-ness"]
+        - ["important, significant", "importance, significance", "-ance / -ence"]
+        - ["rise, increase, change, lack", "rise, increase, change, lack", "değişmez"]
+        - ["grow, lose, choose", "growth, loss, choice", "düzensiz"]
+  - kind: usage
+    title_tr: Cümleyi dönüştürmek
+    text_tr: |-
+      1. **Fiili isme çevirin:** increased → increase.
+      2. **Zarfı sıfata çevirin:** rapidly → rapid.
+      3. **Özneyi "of" ya da iyelikle bağlayın:** unemployment increased → the increase **in** unemployment.
+      4. **Yeni bir fiil seçin:** lead to, result in, cause, reflect, be due to.
+
+      "Unemployment **increased rapidly** because factories **closed**." → "The **rapid increase in** unemployment was due to factory **closures**."
+
+      **Edatlara dikkat:** an increase **in**, a reduction **in**, a need **for**, a lack **of**, the reason **for**, an effect **on**, a solution **to**.
+  - kind: usage
+    title_tr: Ne zaman kullanmamalı?
+    text_tr: |-
+      İsimleştirme metni yoğunlaştırır, ama aşırı kullanıldığında **anlaşılmaz** kılar. "The implementation of the facilitation of the utilisation of resources" gibi yapılar kaçınılması gereken bürokratik dildir.
+
+      Günlük e-posta, sohbet ve talimatlarda fiilli anlatım daha açık ve doğaldır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The discovery of oil transformed the region's economy.", tr: "Petrolün bulunması bölge ekonomisini dönüştürdü."}
+      - {en: "There has been a significant improvement in air quality.", tr: "Hava kalitesinde belirgin bir iyileşme oldu."}
+      - {en: "His refusal to cooperate delayed the investigation.", tr: "İş birliği yapmayı reddetmesi soruşturmayı geciktirdi."}
+      - {en: "The failure of the talks came as no surprise.", tr: "Görüşmelerin başarısızlıkla sonuçlanması kimseyi şaşırtmadı."}
+      - {en: "Lack of sleep affects concentration.", tr: "Uykusuzluk dikkati etkiler."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The increase of prices worried everyone.", tr: "Fiyatlardaki artış herkesi endişelendirdi.", wrong: true, correction: "The increase in prices worried everyone.", note_tr: "increase in."}
+      - {en: "There is a lack in information.", tr: "Bilgi eksikliği var.", wrong: true, correction: "There is a lack of information.", note_tr: "lack of."}
+      - {en: "The rapidly growth of the city caused problems.", tr: "Şehrin hızlı büyümesi sorunlara yol açtı.", wrong: true, correction: "The rapid growth of the city caused problems.", note_tr: "İsimden önce sıfat."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İsimden önce zarf bırakmak** (rapidly growth).
+
+      **Yanlış edat seçmek.** İsimle birlikte edatını da öğrenin.
+
+      **Her cümleyi isimleştirmek.** Açıklık her zaman önce gelir.
+questions:
+  - id: q.c1.nominalisation.01
+    type: multiple_choice
+    prompt: "There has been a sharp ___ in the number of tourists this year."
+    options:
+      - "*decline :: \"A sharp ... in\" yapısı isim gerektirir; decline hem fiil hem isimdir."
+      - "declined :: Geçmiş biçim isim olarak kullanılmaz."
+      - "declining :: \"A sharp declining\" doğal bir isim öbeği değildir."
+      - "declines :: A ile tekil isim gerekir."
+    explanation: "a + sıfat + isim + in."
+  - id: q.c1.nominalisation.02
+    type: multiple_choice
+    prompt: "The government's ___ to act quickly made the crisis worse."
+    options:
+      - "*failure :: fail → failure; \"failure to + fiil\"."
+      - "fail :: Fail fiildir; iyelikten sonra isim gerekir."
+      - "failing :: Olası ama \"failing\" kusur anlamına kayar; standart isim failure'dır."
+      - "failed :: Geçmiş biçim isim değildir."
+    explanation: "fail → failure (to do something)."
+  - id: q.c1.nominalisation.03
+    type: sentence_building
+    prompt: "İsimleştirin: \"The company decided to close the factory, and this angered the workers.\" → The company's ... angered the workers."
+    answers: ["The company's decision to close the factory angered the workers."]
+    explanation: "decide → decision (to + fiil)."
+  - id: q.c1.nominalisation.04
+    type: sentence_building
+    prompt: "İsimleştirin: \"Sales grew rapidly.\" → There was ..."
+    answers: ["There was rapid growth in sales.", "There was a rapid growth in sales.", "There was a rapid increase in sales.", "There was rapid sales growth."]
+    explanation: "grew → growth; rapidly → rapid; growth in."
+  - id: q.c1.nominalisation.05
+    type: error_correction
+    prompt: "The report highlights the need of better training."
+    answers: ["The report highlights the need for better training."]
+    explanation: "need + for."
+  - id: q.c1.nominalisation.06
+    type: matching
+    prompt: "Sözcükleri isim biçimleriyle eşleştirin."
+    pairs:
+      - ["arrive", "arrival"]
+      - ["weak", "weakness"]
+      - ["choose", "choice"]
+      - ["significant", "significance"]
+      - ["lose", "loss"]
+    explanation: "İsim yapım ekleri fiile ve sıfata göre değişir."
+  - id: q.c1.nominalisation.07
+    type: nuance
+    difficulty: 5
+    prompt: "Bir arkadaşınıza kısa bir mesaj yazıyorsunuz. Hangisi en uygundur?"
+    options:
+      - "*Sorry, I can't come tonight. I have to work late. :: Gündelik iletişimde fiilli, açık anlatım doğaldır."
+      - "My non-attendance this evening is due to the necessity of working late. :: Gereksiz yere resmî ve hantal."
+      - "The cancellation of my participation results from professional obligations. :: Bir arkadaşa yazılacak üslup değil."
+      - "Regrettably, the fulfilment of work duties precludes my presence. :: Aşırı resmî."
+    explanation: "İsimleştirme resmî yazı içindir; günlük iletişimde yapay durur."
+  - id: q.c1.nominalisation.08
+    type: written_answer
+    difficulty: 5
+    prompt: "Şu gündelik cümleleri bir rapora uygun, isimleştirilmiş biçimde yeniden yazın (2–3 cümle): \"More people are using public transport because petrol got much more expensive. The city decided to buy more buses. People who live in the suburbs reacted positively.\""
+    model_answers:
+      - "The sharp rise in petrol prices has led to an increase in the use of public transport. In response, the city's decision to purchase additional buses has been well received by suburban residents."
+    checklist:
+      - "En az üç fiili ya da sıfatı isme dönüştürdüm (ör. rise, increase, use, decision, reaction)."
+      - "İsimlerle doğru edatı kullandım (rise in, increase in, decision to)."
+      - "İsimlerden önce zarf değil sıfat kullandım (sharp rise)."
+      - "Cümleler arasındaki neden-sonuç ilişkisini lead to, result in, due to gibi ifadelerle verdim."
+    explanation: "İsimleştirmede eylem isim olur, zarf sıfata dönüşür ve neden-sonuç ilişkisi yeni bir fiille kurulur."

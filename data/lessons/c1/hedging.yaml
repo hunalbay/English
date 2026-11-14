@@ -1,0 +1,142 @@
+id: gram.c1.hedging
+kind: grammar
+level: C1
+title_tr: "İhtiyatlı dil: iddiaları yumuşatmak"
+title_en: "Hedging and distancing"
+objective_tr: Bu dersin sonunda akademik ve mesleki yazıda iddialarınızı kip fiilleri, zarflar, seem / appear / tend ve kişisiz yapılarla yumuşatabilecek, kesin olmayan bilgiyi kesinmiş gibi sunmaktan kaçınabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c1.modality-advanced, gram.b2.passive-advanced]
+vocabulary: [suggest, indicate, tend, apparently, evidence]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      "Social media **causes** depression." kesin bir iddiadır ve kanıtlanması zordur. Akademik ve mesleki yazıda iddia, kanıtın gücüyle **orantılı** olmalıdır:
+
+      "Social media **may contribute to** depression **in some users**."
+
+      Buna **hedging** (ihtiyatlı dil) denir. Zayıflık değil, **doğruluk** göstergesidir: yazar ne kadarını bildiğini dürüstçe belirtir.
+  - kind: formula
+    title_tr: İhtiyat araçları
+    table:
+      headers: ["Araç", "Örnekler", "Cümle"]
+      rows:
+        - ["kip fiilleri", "may, might, could, can, would", "This could explain the difference."]
+        - ["fiiller", "seem, appear, tend, suggest, indicate", "The results suggest that..."]
+        - ["zarflar", "probably, possibly, apparently, arguably, generally", "This is arguably the best solution."]
+        - ["sıfatlar", "likely, possible, probable", "It is likely that costs will rise."]
+        - ["niceleyiciler", "some, many, most, a number of", "Most studies support this view."]
+        - ["sıklık", "often, usually, in most cases, tend to", "Children tend to learn languages quickly."]
+        - ["kişisiz yapılar", "It is said / believed / thought that", "It is widely believed that..."]
+        - ["sınırlama", "to some extent, in many respects, as far as we know", "To some extent, this is true."]
+  - kind: usage
+    title_tr: Uzaklaşma (distancing)
+    text_tr: |-
+      Doğruluğundan emin olmadığınız bilgiyi aktarırken kendinizle bilgi arasına mesafe koyarsınız:
+
+      "**According to** the report, sales fell." · "The minister **is reported to have** resigned." · "**Apparently**, the meeting was cancelled." · "There **appears to be** a mistake."
+
+      **Kibar düzeltme:** "I think there **might be** a small error here." / "**It seems** we have a misunderstanding."
+
+      **Denge önemlidir.** Aşırı ihtiyat ("It might possibly perhaps be the case that...") yazıyı kaçamak ve boş kılar. Bir iddia için **bir** ihtiyat ifadesi genellikle yeterlidir. Kanıtı güçlü olan şeyi düz söyleyin.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The data suggest that the treatment is effective.", tr: "Veriler tedavinin etkili olduğuna işaret ediyor."}
+      - {en: "There appears to be a link between sleep and memory.", tr: "Uyku ile bellek arasında bir bağ var gibi görünüyor."}
+      - {en: "This approach tends to work well with younger learners.", tr: "Bu yaklaşım genç öğrencilerde genellikle iyi sonuç verir."}
+      - {en: "It could be argued that the policy has failed.", tr: "Politikanın başarısız olduğu ileri sürülebilir."}
+      - {en: "Apparently, the company is planning to close two branches.", tr: "Görünüşe göre şirket iki şubeyi kapatmayı planlıyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This proves that all teenagers are addicted to their phones.", tr: "Bu, bütün gençlerin telefon bağımlısı olduğunu kanıtlıyor.", wrong: true, correction: "This suggests that many teenagers use their phones excessively.", note_tr: "Aşırı genelleme ve kesinlik."}
+      - {en: "It seems that there might possibly be some kind of problem, perhaps.", tr: "Belki bir tür sorun olabilir gibi görünüyor.", wrong: true, correction: "There seems to be a problem.", note_tr: "Aşırı ihtiyat."}
+      - {en: "The results are suggesting that prices will rise.", tr: "Sonuçlar fiyatların yükseleceğine işaret ediyor.", wrong: true, correction: "The results suggest that prices will rise.", note_tr: "Suggest burada Continuous olmaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Hiç ihtiyat kullanmamak:** always, never, all, prove, obviously gibi mutlak sözcüklerle genelleme yapmak.
+
+      **Aşırı ihtiyat:** aynı iddiaya üç dört yumuşatıcı eklemek.
+
+      **Olguları yumuşatmak.** "Water may boil at 100°C" tuhaftır; bilinen gerçekler düz söylenir.
+questions:
+  - id: q.c1.hedging.01
+    type: multiple_choice
+    prompt: "Bir araştırma raporunda en uygun cümle hangisidir?"
+    options:
+      - "*The findings suggest that regular exercise may reduce stress. :: Kanıtla orantılı, ihtiyatlı bir iddia."
+      - "The findings prove that exercise always eliminates stress. :: \"Prove\" ve \"always\" kanıtın gösterebileceğinden fazlasını iddia eder."
+      - "Everybody knows exercise stops stress. :: Genelleme ve gündelik üslup."
+      - "It might perhaps possibly be that exercise could maybe help. :: Aşırı ihtiyat cümleyi boşaltır."
+    explanation: "İddia kanıtın gücüyle orantılı olmalıdır."
+  - id: q.c1.hedging.02
+    type: multiple_choice
+    prompt: "Older employees ___ to be more loyal to their companies."
+    options:
+      - "*tend :: Genel eğilim: tend to + fiil."
+      - "always :: Always bir fiil değildir ve aşırı genelleme yapar."
+      - "are tending :: Tend bu anlamda Continuous kullanılmaz."
+      - "must :: Must'tan sonra to gelmez ve kesinlik bildirir."
+    explanation: "tend to: genellikle öyledir (her zaman değil)."
+  - id: q.c1.hedging.03
+    type: sentence_building
+    prompt: "İhtiyatlı biçimde yeniden yazın: \"There is a mistake in the invoice.\" → There appears ..."
+    answers: ["There appears to be a mistake in the invoice."]
+    explanation: "There appears / seems to be + isim."
+  - id: q.c1.hedging.04
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi cümlede yazar bilgiyle arasına EN ÇOK mesafe koyar?"
+    options:
+      - "*The CEO is alleged to have misled investors. :: \"Is alleged to have\" bunun yalnızca bir iddia olduğunu açıkça belirtir."
+      - "The CEO misled investors. :: Yazar bunu olgu olarak sunar."
+      - "The CEO clearly misled investors. :: \"Clearly\" kesinliği artırır."
+      - "As everyone knows, the CEO misled investors. :: Olgu olarak sunar ve genelleme yapar."
+    explanation: "Edilgen aktarma yapıları (is alleged / reported / said to) uzaklaşma sağlar."
+    lessons: [gram.b2.passive-advanced]
+  - id: q.c1.hedging.05
+    type: error_spotting
+    difficulty: 5
+    prompt: "Akademik bir yazıda hangi cümle sorunludur?"
+    options:
+      - "*This study proves that all bilingual children are more intelligent. :: \"Proves\" ve \"all\" tek bir çalışmanın destekleyemeyeceği kesinlikte iddialardır."
+      - "This study indicates that bilingual children may have certain cognitive advantages. :: Uygun ihtiyat."
+      - "Most participants reported an improvement. :: Uygun niceleyici."
+      - "These results should be interpreted with caution. :: Uygun sınırlama."
+    explanation: "Mutlak ifadelerden (prove, all, always) kaçının."
+  - id: q.c1.hedging.06
+    type: matching
+    prompt: "Kesin ifadeleri ihtiyatlı karşılıklarıyla eşleştirin."
+    pairs:
+      - ["proves", "suggests"]
+      - ["all", "most"]
+      - ["always", "tends to"]
+      - ["is", "appears to be"]
+      - ["will", "is likely to"]
+    explanation: "Her kesin ifadenin daha ölçülü bir karşılığı vardır."
+  - id: q.c1.hedging.07
+    type: paragraph_completion
+    difficulty: 5
+    context: "Remote work has become far more common in recent years. Early evidence ___ that productivity does not necessarily fall when employees work from home, although more research is needed."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*suggests :: \"Early evidence\" ve \"more research is needed\" ihtiyatlı bir fiil gerektirir."
+      - "proves :: Erken kanıt bir şeyi kanıtlamaz; cümlenin sonu da bununla çelişir."
+      - "guarantees :: Kanıt garanti vermez."
+      - "is suggesting :: Suggest bu anlamda Continuous kullanılmaz."
+    explanation: "evidence suggests / indicates that..."
+  - id: q.c1.hedging.08
+    type: written_answer
+    difficulty: 5
+    prompt: "Şu kesin iddiaları ihtiyatlı, akademik bir dille yeniden yazın (3 cümle): \"Video games make children violent. Everyone who works from home is happier. Electric cars will solve the climate problem.\""
+    model_answers:
+      - "Some studies suggest that violent video games may increase aggressive behaviour in certain children. Many people who work from home report higher levels of satisfaction. Electric cars are likely to play an important role in reducing emissions, although they are unlikely to solve the problem alone."
+    checklist:
+      - "Her cümlede en az bir ihtiyat ifadesi kullandım (may, suggest, tend to, likely, some, many)."
+      - "\"All, everyone, always, prove\" gibi mutlak sözcüklerden kaçındım."
+      - "Aynı iddiaya gereğinden çok yumuşatıcı eklemedim."
+      - "Cümlelerim hâlâ açık bir şey söylüyor."
+    explanation: "İhtiyatlı dil iddiayı ortadan kaldırmaz; kanıtın izin verdiği ölçüde söyler."

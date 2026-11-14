@@ -1,0 +1,123 @@
+id: gram.c1.cleft-sentences
+kind: grammar
+level: C1
+title_tr: "Vurgu cümleleri: It is ... that, What ... is"
+title_en: Cleft sentences
+objective_tr: Bu dersin sonunda cümlenin bir ögesini It is / was ... that ve What ... is / was yapılarıyla öne çıkarabilecek, do / does / did ile fiili vurgulayabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.relative-clauses]
+vocabulary: [emphasize, reason, matter, annoy, fact, thing]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede vurguyu sözcük sırasıyla veririz: vurgulanan öge fiilin hemen önüne gelir ("Camı **Ali** kırdı"). İngilizcede sözcük sırası sabittir; vurgu için cümle **ikiye bölünür** (cleft = yarılmış).
+
+      "Ali broke the window." → "**It was Ali who** broke the window." (Camı kıran Ali'ydi.)
+
+      "I need a holiday." → "**What I need is** a holiday." (İhtiyacım olan şey tatil.)
+  - kind: formula
+    title_tr: Yapılar
+    table:
+      headers: ["Yapı", "Vurgulanan", "Örnek"]
+      rows:
+        - ["It is / was + X + that / who ...", "özne, nesne, zaman, yer, neden", "It was in Paris that we first met."]
+        - ["What + cümle + is / was + X", "nesne ya da eylem", "What surprised me was his attitude."]
+        - ["What + özne + do + is / was + (to) fiil", "eylem", "What he did was (to) call the police."]
+        - ["The thing / reason / place / person ... is", "ilgili öge", "The reason I left was the salary."]
+        - ["All + cümle + is / was + X", "yalnızca", "All I want is some peace."]
+        - ["özne + do / does / did + yalın fiil", "fiilin gerçekliği", "I do understand your concern."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **It-cleft çoğunlukla düzeltme ya da karşılaştırma yapar:** "It wasn't Ali who called; **it was Mert**."
+
+      **It is ... that yapısında fiil**, vurgulanan özneye uyar: "It is **the managers who are** responsible."
+
+      **What-cleft'te to be tekildir:** "What we need **is** more volunteers." (Günlük dilde "are" de duyulur.)
+
+      **Vurgu do'su** karşı çıkarken ya da ısrar ederken kullanılır: "You didn't call. — I **did** call!"
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "It was my sister who told me the news.", tr: "Haberi bana veren kız kardeşimdi."}
+      - {en: "It is only recently that I have started to enjoy cooking.", tr: "Yemek yapmaktan keyif almaya ancak son zamanlarda başladım."}
+      - {en: "What I don't understand is why she lied.", tr: "Anlamadığım şey neden yalan söylediği."}
+      - {en: "What we did was postpone the launch.", tr: "Yaptığımız şey lansmanı ertelemek oldu."}
+      - {en: "All he cares about is money.", tr: "Umursadığı tek şey para."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "It was yesterday when I saw him.", tr: "Onu gördüğüm gün dündü.", wrong: true, correction: "It was yesterday that I saw him.", note_tr: "It-cleft'te that tercih edilir."}
+      - {en: "What I need it is a rest.", tr: "İhtiyacım olan şey dinlenmek.", wrong: true, correction: "What I need is a rest.", note_tr: "It fazla."}
+      - {en: "I did went there.", tr: "Oraya gerçekten gittim.", wrong: true, correction: "I did go there.", note_tr: "Did + yalın fiil."}
+      - {en: "The reason why I called is because I need help.", tr: "Aramamın nedeni yardıma ihtiyacım olması.", wrong: true, correction: "The reason I called is that I need help.", note_tr: "The reason ... is that (resmî dilde)."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Türkçe sözcük sırasını taklit ederek vurgulamaya çalışmak.** "The window Ali broke" İngilizcede bu anlamı vermez.
+
+      **What-cleft'te gereksiz zamir eklemek.**
+
+      **Vurgu do'sundan sonra çekimli fiil kullanmak.**
+questions:
+  - id: q.c1.cleft.01
+    type: multiple_choice
+    prompt: "It was the manager ___ made the final decision."
+    options:
+      - "*who :: It-cleft'te kişi vurgulanırken who ya da that kullanılır."
+      - "which :: Which insanlar için kullanılmaz."
+      - "what :: What it-cleft yapısında kullanılmaz."
+      - "whom :: Vurgulanan öge özne görevinde; whom nesne içindir."
+    explanation: "It is / was + kişi + who / that + fiil."
+  - id: q.c1.cleft.02
+    type: multiple_choice
+    prompt: "___ I really admire about her is her patience."
+    options:
+      - "*What :: What-cleft: What + cümle + is + vurgulanan öge."
+      - "That :: That tek başına bu yapıyı kurmaz."
+      - "It :: It-cleft \"It is her patience that...\" biçiminde olurdu."
+      - "Which :: Which bu şekilde cümle başlatmaz."
+    explanation: "What + özne + fiil + is / was + X."
+  - id: q.c1.cleft.03
+    type: sentence_building
+    prompt: "Zamanı vurgulayın: \"I met her in 2015.\" → It was ..."
+    answers: ["It was in 2015 that I met her."]
+    explanation: "It was + zaman ifadesi + that + cümle."
+  - id: q.c1.cleft.04
+    type: sentence_building
+    prompt: "Eylemi vurgulayın: \"She resigned.\" → What she did ..."
+    answers: ["What she did was resign.", "What she did was to resign."]
+    explanation: "What + özne + did + was + (to) yalın fiil."
+  - id: q.c1.cleft.05
+    type: error_correction
+    prompt: "What annoys me most it is the noise from the street."
+    answers: ["What annoys me most is the noise from the street."]
+    explanation: "What cümleciği öznedir; ayrıca it kullanılmaz."
+  - id: q.c1.cleft.06
+    type: dialogue_completion
+    difficulty: 4
+    context: "A: You never told me about the meeting.\nB: But I ___ you! I sent you a message on Monday."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*did tell :: Karşı çıkarken vurgu do'su: did + yalın fiil."
+      - "did told :: Did'den sonra yalın fiil gelir."
+      - "was telling :: Continuous burada itirazı vurgulamaz."
+      - "do tell :: Olay geçmişte; did gerekir."
+    explanation: "Vurgu: do / does / did + yalın fiil."
+  - id: q.c1.cleft.07
+    type: nuance
+    difficulty: 5
+    prompt: "\"It was Deniz who paid the bill.\" cümlesi en çok hangi durumda söylenir?"
+    options:
+      - "*Biri hesabı başkasının ödediğini sandığında, düzeltmek için. :: It-cleft çoğunlukla karşıtlık ve düzeltme bildirir."
+      - "Deniz'in hesabı ödeyip ödemediği bilinmediğinde, soru sormak için. :: Cümle soru değildir."
+      - "Hesabın ne zaman ödendiğini vurgulamak için. :: Vurgulanan öge kişidir (Deniz)."
+      - "Deniz'in hesabı ödemediğini söylemek için. :: Cümle olumlu."
+    explanation: "It-cleft, vurgulanan ögeyi diğer olasılıklardan ayırır."
+  - id: q.c1.cleft.08
+    type: translation
+    prompt: "İhtiyacım olan şey biraz zaman."
+    answers: ["What I need is some time.", "What I need is a little time.", "What I need is a bit of time.", "All I need is some time.", "The thing I need is some time."]
+    explanation: "What I need is..."
