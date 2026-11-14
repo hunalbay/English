@@ -1,0 +1,128 @@
+id: gram.b2.third-conditional
+kind: grammar
+level: B2
+title_tr: "Geçmişteki hayali durumlar: third conditional"
+title_en: Third conditional
+objective_tr: Bu dersin sonunda geçmişte gerçekleşmemiş bir koşulu ve onun hayali sonucunu if + Past Perfect, would have + V3 yapısıyla anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.second-conditional, gram.b1.past-perfect]
+next: [gram.b2.mixed-conditionals]
+vocabulary: [if, regret, miss, accident, early, otherwise]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Third conditional**, geçmişte **olmamış** bir şeyi olmuş gibi düşünür ve hayali sonucunu söyler. Geçmiş artık değiştirilemez; bu yapı çoğunlukla **pişmanlık, eleştiri ya da rahatlama** bildirir.
+
+      "If I **had studied**, I **would have passed**." (Çalışsaydım geçerdim. — Çalışmadım, geçemedim.)
+
+      Türkçedeki **-seydi ... -erdi / -miş olurdu** yapısına karşılık gelir.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Koşul", "Sonuç", "Örnek"]
+      rows:
+        - ["If + Past Perfect,", "would have + V3", "If you had told me, I would have helped."]
+        - ["If + hadn't + V3,", "wouldn't have + V3", "If it hadn't rained, we wouldn't have stayed in."]
+        - ["Olasılık / yetenek", "could have / might have + V3", "If I had known, I could have come earlier."]
+        - ["Soru", "What would you have done if ...?", "What would you have done if you had lost it?"]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Gerçek, cümlenin tersidir.** "If I **had left** earlier, I **wouldn't have missed** the train." → Erken çıkmadım ve treni kaçırdım.
+
+      **'d kısaltması iki farklı sözcük olabilir:** "If I**'d** known (= had), I**'d** have told you (= would)."
+
+      **If bölümünde would have kullanılmaz:** "If I would have known" yanlıştır.
+
+      **Konuşma dilinde:** "would've", "wouldn't've" biçimleri duyulur; "would of" yazımı yanlıştır.
+  - kind: comparison
+    title_tr: Üç koşul türü
+    table:
+      headers: ["Tür", "Zaman", "Örnek"]
+      rows:
+        - ["First", "gelecek, olası", "If I see her, I will tell her."]
+        - ["Second", "şimdi / gelecek, hayali", "If I saw her, I would tell her."]
+        - ["Third", "geçmiş, gerçekleşmemiş", "If I had seen her, I would have told her."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "If we had taken a taxi, we would have arrived on time.", tr: "Taksiye binseydik zamanında varırdık."}
+      - {en: "I wouldn't have got lost if I had had a map.", tr: "Haritam olsaydı kaybolmazdım."}
+      - {en: "If she hadn't helped me, I couldn't have finished.", tr: "O bana yardım etmeseydi bitiremezdim."}
+      - {en: "What would you have done if you had been in my place?", tr: "Benim yerimde olsaydın ne yapardın?"}
+      - {en: "If you had asked, I might have said yes.", tr: "Sorsaydın belki evet derdim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "If I would have known, I would have called.", tr: "Bilseydim arardım.", wrong: true, correction: "If I had known, I would have called.", note_tr: "If bölümünde Past Perfect."}
+      - {en: "If I had seen him, I would tell him.", tr: "Onu görseydim söylerdim.", wrong: true, correction: "If I had seen him, I would have told him.", note_tr: "Geçmiş sonuç: would have + V3."}
+      - {en: "If she studied harder last year, she would have passed.", tr: "Geçen yıl daha çok çalışsaydı geçerdi.", wrong: true, correction: "If she had studied harder last year, she would have passed.", note_tr: "Geçmişteki koşul: had + V3."}
+      - {en: "I would of gone if I had known.", tr: "Bilseydim giderdim.", wrong: true, correction: "I would have gone if I had known.", note_tr: "Would have (would've)."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Second ile third conditional'ı karıştırmak.** Türkçede "çalışsaydım" hem şimdiki hem geçmiş hayali durum için kullanılabildiğinden ayrım zorlaşır. Koşul **geçmişte** ise had + V3 kullanın.
+
+      **İki bölümde de would have kullanmak.**
+
+      **Have'den sonra üçüncü biçimi unutmak.**
+questions:
+  - id: q.b2.third-conditional.01
+    type: multiple_choice
+    prompt: "If I ___ about the meeting, I would have come."
+    options:
+      - "*had known :: Geçmişte gerçekleşmemiş koşul: if + Past Perfect."
+      - "would have known :: If bölümünde would have kullanılmaz."
+      - "knew :: Past Simple şimdiki hayali durumlar içindir (second conditional)."
+      - "have known :: Present Perfect koşul yapısına uymaz."
+    explanation: "Third conditional: if + had + V3, would have + V3."
+  - id: q.b2.third-conditional.02
+    type: multiple_choice
+    prompt: "If we had left earlier, we ___ the flight."
+    options:
+      - "*wouldn't have missed :: Geçmişteki hayali sonuç: wouldn't have + V3."
+      - "wouldn't miss :: Bu, şimdiki ya da gelecekteki sonuç olurdu."
+      - "hadn't missed :: Sonuç bölümünde Past Perfect kullanılmaz."
+      - "didn't miss :: Past Simple gerçek bir geçmiş olayı anlatır."
+    explanation: "Sonuç bölümü: would (not) have + V3."
+  - id: q.b2.third-conditional.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"If Zeynep had applied, she would have got the job.\" cümlesine göre hangisi doğrudur?"
+    options:
+      - "*Zeynep başvurmadı ve işi alamadı. :: Third conditional gerçeğin tersini anlatır."
+      - "Zeynep başvurdu ve işi aldı. :: Öyle olsaydı koşul cümlesine gerek olmazdı."
+      - "Zeynep başvurdu ama işi alamadı. :: Koşul bölümü başvurmadığını gösteriyor."
+      - "Zeynep başvurursa işi alacak. :: Bu, first conditional ile söylenirdi."
+    explanation: "If + had V3: gerçekte olmadı."
+  - id: q.b2.third-conditional.04
+    type: sentence_building
+    prompt: "Gerçek: \"I didn't see the red light, so I didn't stop.\" → If I had ..."
+    answers: ["If I had seen the red light, I would have stopped.", "If I had seen the red light, I'd have stopped."]
+    explanation: "Olumsuz gerçek → olumlu hayali koşul ve sonuç."
+  - id: q.b2.third-conditional.05
+    type: error_correction
+    prompt: "If you would have told me earlier, I could have changed the booking."
+    answers: ["If you had told me earlier, I could have changed the booking."]
+    explanation: "If bölümünde would have değil Past Perfect kullanılır."
+  - id: q.b2.third-conditional.06
+    type: word_formation
+    prompt: "If the weather had been better, we ___ (go) to the beach."
+    answers: ["would have gone", "could have gone", "might have gone", "would've gone"]
+    explanation: "would / could / might have + V3."
+  - id: q.b2.third-conditional.07
+    type: matching
+    prompt: "Koşul cümlelerini anlattıkları durumla eşleştirin."
+    pairs:
+      - ["If it rains, we'll cancel.", "gelecekte olası durum"]
+      - ["If it rained, we'd cancel.", "olası görülmeyen hayali durum"]
+      - ["If it had rained, we'd have cancelled.", "geçmişte gerçekleşmemiş durum"]
+      - ["If it rains, we cancel.", "her zaman geçerli kural"]
+    explanation: "Koşul türü, zamanı ve gerçeklik derecesini gösterir."
+  - id: q.b2.third-conditional.08
+    type: translation
+    prompt: "Taksiye binseydik zamanında varırdık."
+    answers: ["If we had taken a taxi, we would have arrived on time.", "We would have arrived on time if we had taken a taxi.", "If we had taken a taxi, we'd have arrived on time.", "If we'd taken a taxi, we would have arrived on time.", "If we had taken a taxi, we would have been on time.", "If we'd taken a taxi, we'd have arrived on time."]
+    explanation: "if + had + V3, would have + V3."

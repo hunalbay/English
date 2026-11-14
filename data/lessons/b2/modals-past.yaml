@@ -1,0 +1,126 @@
+id: gram.b2.modals-past
+kind: grammar
+level: B2
+title_tr: "Geçmiş hakkında çıkarım: must have, might have, can't have"
+title_en: "Past modals of deduction"
+objective_tr: Bu dersin sonunda geçmişte olmuş olaylar hakkında ne kadar emin olduğunuzu must have, may / might / could have ve can't / couldn't have + V3 ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.modals-deduction]
+next: [gram.b2.should-have]
+vocabulary: [must, evidence, probably, possible, certain, guess]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      B1'de şimdiki durum hakkında çıkarım yapmayı öğrendiniz: "He **must be** at home." Çıkarım **geçmiş** bir olayla ilgiliyse kip fiilinden sonra **have + V3** gelir:
+
+      "The ground is wet. It **must have rained**." (Yer ıslak. Yağmur yağmış olmalı.)
+
+      Türkçede **-miş olmalı, -miş olabilir, -miş olamaz** ile karşılanır.
+  - kind: formula
+    title_tr: Eminlik derecesi
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["must have + V3", "eminim oldu", "She must have forgotten."]
+        - ["may / might / could have + V3", "belki oldu", "He might have missed the bus."]
+        - ["may / might not have + V3", "belki olmadı", "She might not have seen the message."]
+        - ["can't / couldn't have + V3", "eminim olmadı, olamaz", "He can't have finished already."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Süren eylemler için:** kip fiili + **have been + -ing**: "He **must have been sleeping** when I called."
+
+      **Edilgen:** kip fiili + **have been + V3**: "The window **must have been broken** during the storm."
+
+      **Had to ile must have farklıdır.** "He **had to** leave." (Gitmek zorunda kaldı. — zorunluluk) / "He **must have left**." (Gitmiş olmalı. — çıkarım)
+
+      **Olumsuz çıkarımda mustn't have kullanılmaz** → can't have / couldn't have.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I can't find my wallet. I must have left it at home.", tr: "Cüzdanımı bulamıyorum. Evde bırakmış olmalıyım."}
+      - {en: "She didn't reply. She might not have got my email.", tr: "Cevap vermedi. E-postamı almamış olabilir."}
+      - {en: "You can't have seen Murat yesterday. He's in Japan.", tr: "Dün Murat'ı görmüş olamazsın. O Japonya'da."}
+      - {en: "They could have taken a different road.", tr: "Farklı bir yoldan gitmiş olabilirler."}
+      - {en: "He must have been working late; his light was on.", tr: "Geç saate kadar çalışıyor olmalıydı; ışığı açıktı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He must forgot the meeting.", tr: "Toplantıyı unutmuş olmalı.", wrong: true, correction: "He must have forgotten the meeting.", note_tr: "must have + V3."}
+      - {en: "She mustn't have heard me.", tr: "Beni duymuş olamaz.", wrong: true, correction: "She can't have heard me.", note_tr: "Olumsuz çıkarım: can't have."}
+      - {en: "They might has left.", tr: "Gitmiş olabilirler.", wrong: true, correction: "They might have left.", note_tr: "Kip fiilinden sonra hep have."}
+      - {en: "He must have went home.", tr: "Eve gitmiş olmalı.", wrong: true, correction: "He must have gone home.", note_tr: "Üçüncü biçim."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Have'i atlamak** ya da ikinci biçim kullanmak.
+
+      **Must have ile had to'yu karıştırmak.**
+
+      **Could have'in iki anlamını ayırt etmemek.** "He could have taken the bus" hem "binmiş olabilir" (çıkarım) hem "binebilirdi ama binmedi" (kaçırılmış olanak) anlamına gelebilir; bağlam belirler.
+questions:
+  - id: q.b2.modals-past.01
+    type: multiple_choice
+    prompt: "The lights are off and nobody is answering. They ___ out."
+    options:
+      - "*must have gone :: Güçlü kanıta dayalı geçmiş çıkarımı: must have + V3."
+      - "must go :: Bu, zorunluluk bildirir (gitmeliler)."
+      - "had to go :: Bu, zorunluluk bildirir; çıkarım değil."
+      - "can't have gone :: Kanıtlar gittiklerini gösteriyor."
+    explanation: "Eminim oldu → must have + V3."
+  - id: q.b2.modals-past.02
+    type: multiple_choice
+    prompt: "She ___ the exam. She didn't study at all and the questions were very hard."
+    options:
+      - "*can't have passed :: Güçlü kanıta dayalı olumsuz çıkarım: can't have + V3."
+      - "mustn't have passed :: Çıkarımda mustn't have kullanılmaz."
+      - "must have passed :: Kanıtlar tersini gösteriyor."
+      - "didn't have to pass :: Bu, zorunluluk olmadığını söyler."
+    explanation: "Eminim olmadı → can't / couldn't have + V3."
+  - id: q.b2.modals-past.03
+    type: multiple_choice
+    prompt: "I'm not sure why he's late. He ___ the train."
+    options:
+      - "*might have missed :: Emin değilim, olabilir: might have + V3."
+      - "must have missed :: Konuşan emin olmadığını söylüyor."
+      - "can't have missed :: Olamayacağına dair kanıt yok."
+      - "should miss :: Should tavsiye ya da beklenti bildirir."
+    explanation: "Belki oldu → may / might / could have + V3."
+  - id: q.b2.modals-past.04
+    type: nuance
+    difficulty: 4
+    prompt: "\"He had to sell his car.\" ile \"He must have sold his car.\" arasındaki fark nedir?"
+    options:
+      - "*İlki zorunluluk bildirir (satmak zorunda kaldı); ikincisi çıkarımdır (satmış olmalı). :: Had to: zorunluluk; must have + V3: çıkarım."
+      - "İkisi de zorunluluk bildirir. :: Must have + V3 zorunluluk bildirmez."
+      - "İkisi de çıkarımdır. :: Had to bir olguyu bildirir."
+      - "İlki çıkarım, ikincisi zorunluluktur. :: Tam tersi."
+    explanation: "Must'ın zorunluluk anlamının geçmişi had to; çıkarım anlamının geçmişi must have + V3."
+    lessons: [gram.b1.obligation-forms]
+  - id: q.b2.modals-past.05
+    type: error_correction
+    prompt: "I can't find my keys. I must left them in the car."
+    answers: ["I can't find my keys. I must have left them in the car."]
+    explanation: "Geçmiş çıkarımı: must have + V3."
+  - id: q.b2.modals-past.06
+    type: word_formation
+    prompt: "The road is closed. There ___ (must / be) an accident."
+    answers: ["must have been"]
+    explanation: "must have + been."
+  - id: q.b2.modals-past.07
+    type: dialogue_completion
+    context: "A: I saw Elif in the supermarket this morning.\nB: You ___ her. She's been in hospital since Monday."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*can't have seen :: B elindeki bilgiye dayanarak bunun olamayacağından emin."
+      - "must have seen :: B'nin verdiği bilgi tersini gösteriyor."
+      - "might have seen :: B kararsız değil, emin."
+      - "shouldn't see :: Should tavsiye bildirir."
+    explanation: "Olamaz → can't have + V3."
+  - id: q.b2.modals-past.08
+    type: translation
+    prompt: "Evde bırakmış olmalıyım."
+    answers: ["I must have left it at home.", "I must have left them at home.", "I must have left it at the house."]
+    explanation: "must have + left."

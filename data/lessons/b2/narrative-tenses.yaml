@@ -1,0 +1,141 @@
+id: gram.b2.narrative-tenses
+kind: grammar
+level: B2
+title_tr: "Hikâye anlatmak: geçmiş zamanları birlikte kullanmak"
+title_en: Narrative tenses
+objective_tr: Bu dersin sonunda bir olayı anlatırken Past Simple, Past Continuous, Past Perfect ve Past Perfect Continuous'u işlevlerine göre birlikte kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.past-perfect-continuous, gram.a2.past-simple-vs-continuous]
+vocabulary: [suddenly, while, meanwhile, eventually, realize, notice]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İyi bir anlatıda dört geçmiş zaman da görev alır. Her birinin ayrı bir işi vardır:
+
+      **Past Simple** olayları sırasıyla ilerletir. **Past Continuous** sahneyi kurar, arka planı verir. **Past Perfect** geriye döner, önceki olayı anlatır. **Past Perfect Continuous** o ana kadar süren arka plan eylemini verir.
+  - kind: formula
+    title_tr: Zamanların görevleri
+    table:
+      headers: ["Zaman", "Görev", "Örnek"]
+      rows:
+        - ["Past Simple", "ana olaylar, sırayla", "I opened the door and walked in."]
+        - ["Past Continuous", "sahne, arka plan, yarıda kesilen eylem", "It was raining and people were hurrying home."]
+        - ["Past Perfect", "önceki olay, geriye dönüş", "Someone had left the window open."]
+        - ["Past Perfect Continuous", "o ana kadar süren eylem", "I had been working since dawn."]
+  - kind: usage
+    title_tr: Bir örnek üzerinde
+    text_tr: |-
+      "It **was getting** dark and the wind **was blowing** hard. (sahne) Selim **had been walking** for hours (o ana kadar süren eylem) and he **was** exhausted. Suddenly he **saw** a light in the distance. (ana olay) He **realized** that he **had taken** the wrong path. (geriye dönüş) He **turned** round and **started** walking back. (sıralı olaylar)"
+
+      **Zaman zarfları yardımcı olur:** suddenly, then, eventually, in the end (Past Simple) · while, as, at that moment (Past Continuous) · already, by the time, earlier, previously (Past Perfect).
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **When + Past Simple, Past Simple** → olaylar art arda: "When she saw me, she smiled."
+
+      **When + Past Simple, Past Continuous** → biri sürerken diğeri oldu: "When she saw me, I was talking on the phone."
+
+      **When + Past Simple, Past Perfect** → diğeri daha önce olmuştu: "When she saw me, I had already finished."
+
+      Olaylar zaten sırasıyla anlatılıyorsa Past Perfect'e **gerek yoktur**; yalnızca sıra bozulduğunda kullanılır.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was having a shower when the lights went out.", tr: "Işıklar söndüğünde duş alıyordum."}
+      - {en: "She looked pale because she hadn't slept.", tr: "Solgun görünüyordu çünkü uyumamıştı."}
+      - {en: "While we were waiting, it started to snow.", tr: "Biz beklerken kar yağmaya başladı."}
+      - {en: "He got up, made coffee and left the house.", tr: "Kalktı, kahve yaptı ve evden çıktı."}
+      - {en: "They had been travelling for days before they reached the village.", tr: "Köye ulaşmadan önce günlerdir yoldaydılar."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I walked home when I was seeing an accident.", tr: "Eve yürürken bir kaza gördüm.", wrong: true, correction: "I was walking home when I saw an accident.", note_tr: "Uzun eylem Continuous, kısa olay Simple."}
+      - {en: "I had got up, had had breakfast and had gone to work.", tr: "Kalktım, kahvaltı ettim ve işe gittim.", wrong: true, correction: "I got up, had breakfast and went to work.", note_tr: "Sıralı olaylarda Past Simple yeter."}
+      - {en: "When I got to the party, Ali went home, so I didn't see him.", tr: "Partiye vardığımda Ali eve gitmişti, o yüzden onu göremedim.", wrong: true, correction: "When I got to the party, Ali had gone home, so I didn't see him.", note_tr: "Önceki olay: Past Perfect."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Past Perfect'i gereğinden çok kullanmak.** Bir kez geriye dönüş yapıldıktan sonra anlatı çoğunlukla Past Simple ile devam eder.
+
+      **Sahneyi Past Simple ile kurmak.** "It rained and people hurried" bir olay dizisi gibi okunur; arka plan için Continuous gerekir.
+
+      **Uzun ve kısa eylemin zamanlarını ters çevirmek.**
+questions:
+  - id: q.b2.narrative.01
+    type: reading_comprehension
+    difficulty: 4
+    context: "When Defne got to the office, she noticed that the door was open. That was strange, because she had locked it the night before. She went in slowly. Papers were lying all over the floor, and the computer was still running. Someone had been looking for something."
+    prompt: "Metne göre hangisi doğrudur?"
+    options:
+      - "*Defne ofise varmadan önce biri ofisi aramıştı. :: \"Someone had been looking for something\" varıştan önceki eylemi anlatır."
+      - "Defne içeri girdiğinde biri hâlâ bir şey arıyordu. :: Bunun için \"was looking\" kullanılırdı."
+      - "Defne kapıyı o sabah kilitlemişti. :: Metinde \"the night before\" deniyor."
+      - "Defne içeri girdikten sonra kâğıtlar yere düştü. :: \"Were lying\" girdiği andaki durumu betimler."
+    explanation: "Past Perfect (Continuous) hikâyedeki andan öncesini, Past Continuous o andaki sahneyi anlatır."
+  - id: q.b2.narrative.02
+    type: multiple_choice
+    prompt: "The sun ___ and the birds ___ when we set off that morning."
+    options:
+      - "*was shining / were singing :: Sahneyi kuran arka plan eylemleri: Past Continuous."
+      - "shone / sang :: Past Simple bunları sıralı olaylar gibi gösterir."
+      - "had shone / had sung :: Past Perfect bunların bittiğini düşündürür."
+      - "is shining / are singing :: Şimdiki zaman geçmiş anlatıya uymaz."
+    explanation: "Arka plan betimlemesi → Past Continuous."
+  - id: q.b2.narrative.03
+    type: multiple_choice
+    prompt: "I recognized him immediately because I ___ his photo in the newspaper."
+    options:
+      - "*had seen :: Tanımadan önce olmuş olay: Past Perfect."
+      - "saw :: Sıra belirsiz kalır; neden ilişkisi için Past Perfect gerekir."
+      - "was seeing :: See burada durum fiilidir; Continuous kullanılmaz."
+      - "have seen :: Present Perfect geçmiş anlatıya uymaz."
+    explanation: "Geriye dönüş → Past Perfect."
+  - id: q.b2.narrative.04
+    type: paragraph_completion
+    difficulty: 4
+    context: "We ___ dinner when the doorbell rang. It was my cousin Emre. He looked terrible. He told us that he had lost his job that morning."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*were having :: Zil çaldığında sürmekte olan eylem: Past Continuous."
+      - "had :: Bu, zil çaldıktan sonra yemeğe başladığımızı düşündürür."
+      - "had had :: Bu, yemeğin zilden önce bittiğini söyler; metin bunu belirtmiyor."
+      - "have :: Şimdiki zaman anlatıya uymaz."
+    explanation: "Yarıda kesilen eylem → Past Continuous."
+  - id: q.b2.narrative.05
+    type: error_correction
+    prompt: "When I arrived at the station, the train already left, so I had to wait for the next one."
+    answers: ["When I arrived at the station, the train had already left, so I had to wait for the next one."]
+    explanation: "Varıştan önce olan olay Past Perfect ile anlatılır."
+  - id: q.b2.narrative.06
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede iki olay ART ARDA (önce biri, hemen sonra diğeri) gerçekleşir?"
+    options:
+      - "*When the teacher came in, the students stood up. :: İki Past Simple: önce geldi, sonra ayağa kalktılar."
+      - "When the teacher came in, the students were standing up. :: O sırada ayağa kalkmaktaydılar."
+      - "When the teacher came in, the students had stood up. :: Öğretmen gelmeden önce kalkmışlardı."
+      - "When the teacher came in, the students had been standing. :: Bir süredir ayakta bekliyorlardı."
+    explanation: "When + Past Simple, Past Simple → sıralı olaylar."
+  - id: q.b2.narrative.07
+    type: matching
+    prompt: "Zamanları anlatıdaki görevleriyle eşleştirin."
+    pairs:
+      - ["Past Simple", "ana olayları sırayla anlatır"]
+      - ["Past Continuous", "sahneyi ve arka planı verir"]
+      - ["Past Perfect", "önceki bir olaya döner"]
+      - ["Past Perfect Continuous", "o ana kadar süren eylemi verir"]
+    explanation: "Dört zamanın anlatıdaki işlevleri farklıdır."
+  - id: q.b2.narrative.08
+    type: written_answer
+    difficulty: 4
+    prompt: "Başınıza gelen şaşırtıcı ya da komik bir olayı 4–6 cümleyle anlatın. Sahneyi Past Continuous ile kurun, olayları Past Simple ile anlatın ve en az bir kez Past Perfect ile geriye dönün."
+    model_answers:
+      - "It was raining heavily and I was running to catch the bus. When I finally got on, I reached for my wallet. It wasn't there. I had left it on the kitchen table. The driver smiled and let me travel for free. I had never been so embarrassed."
+    checklist:
+      - "Arka planı Past Continuous ile verdim (was / were + -ing)."
+      - "Ana olayları Past Simple ile sırayla anlattım."
+      - "Önceki bir olay için en az bir kez Past Perfect kullandım (had + V3)."
+      - "Sıralı olaylarda gereksiz yere Past Perfect kullanmadım."
+    explanation: "Anlatıda her geçmiş zamanın ayrı bir görevi vardır: sahne, olay, geriye dönüş."

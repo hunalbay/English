@@ -1,0 +1,118 @@
+id: gram.b2.wish-past
+kind: grammar
+level: B2
+title_tr: "Geçmişle ilgili pişmanlık: wish, if only, should have"
+title_en: "Regrets: wish / if only + past perfect"
+objective_tr: Bu dersin sonunda geçmişle ilgili pişmanlıkları wish / if only + Past Perfect ile anlatabilecek, wish'in üç kullanımını (şimdi, geçmiş, şikâyet) birbirinden ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.wish, gram.b2.third-conditional]
+vocabulary: [regret, wish, mistake, advice, careful, chance]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      B1'de şimdiki durumla ilgili dilekleri **wish + Past Simple** ile kurmuştunuz. **Geçmişte** olan ya da olmayan bir şeyden pişmanlık duyuyorsanız fiil bir adım daha geriye gider: **wish + Past Perfect**.
+
+      "I wish I **had studied** harder." (Keşke daha çok çalışsaydım. — Çalışmadım.)
+
+      **If only** aynı yapıyı alır ve daha güçlü bir duygu bildirir.
+  - kind: formula
+    title_tr: Wish'in üç kullanımı
+    table:
+      headers: ["Zaman", "Yapı", "Örnek", "Gerçek"]
+      rows:
+        - ["Şimdi", "wish + Past Simple", "I wish I had a car.", "Arabam yok."]
+        - ["Geçmiş", "wish + Past Perfect", "I wish I had bought that car.", "O arabayı almadım."]
+        - ["Şikâyet / istek", "wish + would", "I wish you would drive more slowly.", "Hızlı sürüyorsun, rahatsızım."]
+  - kind: usage
+    title_tr: Pişmanlık bildirmenin diğer yolları
+    text_tr: |-
+      **should have + V3:** "I **should have listened** to you." (Seni dinlemeliydim.)
+
+      **shouldn't have + V3:** "I **shouldn't have said** that." (Onu söylememeliydim.)
+
+      **regret + -ing:** "I **regret telling** him." (Ona söylediğime pişmanım.)
+
+      **Third conditional:** "If I had listened to you, this wouldn't have happened."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I wish I hadn't eaten so much.", tr: "Keşke o kadar çok yemeseydim."}
+      - {en: "If only we had left earlier!", tr: "Keşke daha erken çıksaydık!"}
+      - {en: "She wishes she had taken the job.", tr: "O işi kabul etmediğine pişman."}
+      - {en: "I wish you had told me the truth.", tr: "Keşke bana doğruyu söyleseydin."}
+      - {en: "I regret not learning a second language.", tr: "İkinci bir dil öğrenmediğime pişmanım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I wish I didn't say that yesterday.", tr: "Keşke dün onu söylemeseydim.", wrong: true, correction: "I wish I hadn't said that yesterday.", note_tr: "Geçmiş: had + V3."}
+      - {en: "I wish I would have known.", tr: "Keşke bilseydim.", wrong: true, correction: "I wish I had known.", note_tr: "Wish'ten sonra would have yok."}
+      - {en: "If only I have listened to her.", tr: "Keşke onu dinleseydim.", wrong: true, correction: "If only I had listened to her.", note_tr: "Past Perfect."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Geçmiş pişmanlık için Past Simple kullanmak.** "I wish I studied" şimdiki (genel) bir dilek olur.
+
+      **Wish'ten sonra would have kullanmak.**
+
+      **Olumlu-olumsuz ilişkisini karıştırmak.** "I wish I **hadn't** gone" → gittim ve pişmanım.
+questions:
+  - id: q.b2.wish-past.01
+    type: multiple_choice
+    prompt: "I failed the exam. I wish I ___ harder."
+    options:
+      - "*had studied :: Geçmişle ilgili pişmanlık: wish + Past Perfect."
+      - "studied :: Wish + Past Simple şimdiki durumla ilgili dilek bildirir."
+      - "would study :: Wish + would başkasının davranışı için kullanılır."
+      - "have studied :: Wish'ten sonra Present Perfect kullanılmaz."
+    explanation: "Geçmiş pişmanlık → wish + had + V3."
+  - id: q.b2.wish-past.02
+    type: multiple_choice
+    prompt: "It's freezing in here. I wish I ___ a jumper with me."
+    options:
+      - "*had :: Şimdiki durumla ilgili dilek: wish + Past Simple (had = sahip olsam)."
+      - "had had :: Bu, geçmişteki bir anla ilgili pişmanlık olurdu; durum şu an."
+      - "have :: Wish'ten sonra Present Simple kullanılmaz."
+      - "would have :: Kendi öznemizle would kullanılmaz."
+    explanation: "Şimdi → wish + Past Simple."
+    lessons: [gram.b1.wish]
+  - id: q.b2.wish-past.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"I wish I hadn't sold my old guitar.\" diyen kişi için hangisi doğrudur?"
+    options:
+      - "*Gitarını sattı ve buna pişman. :: Olumsuz dilek (hadn't sold) → gerçekte sattı."
+      - "Gitarını satmadı ve buna pişman. :: Bunun için \"I wish I had sold\" denirdi."
+      - "Gitarını satmayı düşünüyor. :: Cümle geçmişteki bir eylemle ilgili."
+      - "Gitarı hâlâ onda. :: Satmış olduğu anlaşılıyor."
+    explanation: "Wish + Past Perfect gerçeğin tersini söyler."
+  - id: q.b2.wish-past.04
+    type: sentence_building
+    prompt: "Gerçek: \"I didn't take any photos.\" → I wish ..."
+    answers: ["I wish I had taken some photos.", "I wish I had taken photos.", "I wish I'd taken some photos."]
+    explanation: "Olumsuz gerçek → olumlu dilek, Past Perfect ile."
+  - id: q.b2.wish-past.05
+    type: error_correction
+    prompt: "If only I didn't forget her birthday last week."
+    answers: ["If only I hadn't forgotten her birthday last week.", "If only I had not forgotten her birthday last week."]
+    explanation: "\"Last week\" geçmişi gösterir: hadn't + V3."
+  - id: q.b2.wish-past.06
+    type: matching
+    prompt: "Cümleleri gerçek durumlarla eşleştirin."
+    pairs:
+      - ["I wish I lived in Rome.", "Roma'da yaşamıyorum."]
+      - ["I wish I had lived in Rome.", "Roma'da hiç yaşamadım."]
+      - ["I wish she would call.", "Aramıyor ve bu beni üzüyor."]
+      - ["I wish I hadn't called.", "Aradım ve pişmanım."]
+    explanation: "Fiilin biçimi, dileğin hangi zamanla ilgili olduğunu gösterir."
+  - id: q.b2.wish-past.07
+    type: word_formation
+    prompt: "I regret ___ (not / go) to university when I had the chance."
+    answers: ["not going"]
+    explanation: "regret + (not) + fiil-ing."
+  - id: q.b2.wish-past.08
+    type: translation
+    prompt: "Keşke bana doğruyu söyleseydin."
+    answers: ["I wish you had told me the truth.", "If only you had told me the truth.", "I wish you'd told me the truth.", "If only you had told me the truth!"]
+    explanation: "wish + Past Perfect."

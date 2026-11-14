@@ -1,0 +1,123 @@
+id: gram.b2.conditional-alternatives
+kind: grammar
+level: B2
+title_tr: "If dışındaki koşul yapıları"
+title_en: "Alternatives to if"
+objective_tr: Bu dersin sonunda provided (that), as long as, unless, otherwise, in case, supposing, even if ve whether ... or not ile farklı türde koşullar kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.unless-time-clauses, gram.b1.second-conditional]
+vocabulary: [provide, unless, otherwise, suppose, condition, whether]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Koşul bildirmenin tek yolu if değildir. Aşağıdaki bağlaçlar koşula **ek bir anlam** katar: sınırlama, tek şart, varsayım ya da koşuldan bağımsızlık. Zaman kuralları if ile aynıdır: gelecek anlamında **Present Simple**, hayali durumda **Past Simple**.
+  - kind: formula
+    title_tr: Bağlaçlar ve anlamları
+    table:
+      headers: ["Bağlaç", "Anlam", "Örnek"]
+      rows:
+        - ["provided / providing (that)", "şartıyla, yeter ki", "You can borrow it provided that you return it."]
+        - ["as long as / so long as", "-dığı sürece, şartıyla", "I'll come as long as I can bring a friend."]
+        - ["on condition that", "koşuluyla (resmî)", "He was released on condition that he left the country."]
+        - ["unless", "-medikçe", "I won't sign unless I read it first."]
+        - ["otherwise / or else", "yoksa, aksi takdirde", "Hurry up, otherwise we'll be late."]
+        - ["supposing / suppose / imagine", "diyelim ki", "Supposing you lost your job, what would you do?"]
+        - ["even if", "-se bile", "I wouldn't do it even if you paid me."]
+        - ["whether ... or not", "-se de -mese de", "We're going whether it rains or not."]
+        - ["in case", "olur diye", "I'll take cash in case they don't accept cards."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Even if ile even though farklıdır.** "**Even if** it rains, we'll go." (Yağmur yağsa bile — yağıp yağmayacağı belli değil.) / "**Even though** it's raining, we'll go." (Yağmur yağmasına rağmen — yağıyor.)
+
+      **Otherwise cümle bağlamaz;** yeni bir cümle ya da noktalı virgülden sonra gelir, ya da "or" ile aynı işi görür.
+
+      **Provided that olumlu şartlar için kullanılır;** olumsuz sonuçlarla doğal değildir: "Provided that you're late, you'll miss it" denmez.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You can stay here as long as you keep quiet.", tr: "Sessiz olduğun sürece burada kalabilirsin."}
+      - {en: "Provided that the weather is good, we'll eat outside.", tr: "Hava güzel olursa dışarıda yeriz."}
+      - {en: "Write it down; otherwise you'll forget.", tr: "Yaz, yoksa unutursun."}
+      - {en: "Supposing he says no, what will you do?", tr: "Diyelim ki hayır dedi, ne yapacaksın?"}
+      - {en: "I'll finish this tonight even if I have to stay up late.", tr: "Geç saate kadar kalmam gerekse bile bunu bu gece bitireceğim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You can go provided that you will be back by ten.", tr: "Ona kadar dönmen şartıyla gidebilirsin.", wrong: true, correction: "You can go provided that you are back by ten.", note_tr: "Bağlaçtan sonra will yok."}
+      - {en: "Even it rains, we'll play.", tr: "Yağmur yağsa bile oynayacağız.", wrong: true, correction: "Even if it rains, we'll play.", note_tr: "Even tek başına bağlaç değildir."}
+      - {en: "Take a coat, unless you'll be cold.", tr: "Mont al, yoksa üşürsün.", wrong: true, correction: "Take a coat, otherwise you'll be cold.", note_tr: "Yoksa: otherwise."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Bu bağlaçlardan sonra will kullanmak.**
+
+      **Even if yerine yalnızca "even" demek.**
+
+      **Unless ile otherwise'ı karıştırmak.** Unless koşulu, otherwise koşul yerine gelmezse olacak sonucu başlatır.
+questions:
+  - id: q.b2.cond-alt.01
+    type: multiple_choice
+    prompt: "You can use my laptop ___ you don't install anything on it."
+    options:
+      - "*as long as :: Tek şart: -dığı sürece, şartıyla."
+      - "unless :: Unless zaten olumsuzdur; anlam ters olur."
+      - "otherwise :: Otherwise koşul cümleciği başlatmaz."
+      - "even if :: \"-se bile\" anlamı buraya uymaz."
+    explanation: "as long as / provided (that): şartıyla."
+  - id: q.b2.cond-alt.02
+    type: multiple_choice
+    prompt: "We'd better leave now; ___ we'll get stuck in traffic."
+    options:
+      - "*otherwise :: Aksi takdirde, yoksa."
+      - "unless :: Unless'ten sonra koşul gelir, sonuç değil."
+      - "provided :: Provided şart bildirir."
+      - "in case :: In case önlem bildirir ve bu yapıya uymaz."
+    explanation: "otherwise = if not, or else."
+  - id: q.b2.cond-alt.03
+    type: multiple_choice
+    prompt: "I wouldn't work for that company ___ they doubled my salary."
+    options:
+      - "*even if :: -se bile: koşul sonucu değiştirmez."
+      - "provided that :: Bu, maaşı ikiye katlarlarsa çalışmayacağı gibi mantıksız bir anlam verir."
+      - "in case :: Önlem anlamı uymuyor."
+      - "even though :: Even though gerçek bir durumu anlatır; burada varsayım var (doubled)."
+    explanation: "even if + varsayım; even though + gerçek."
+  - id: q.b2.cond-alt.04
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede konuşan, yağmurun YAĞDIĞINI biliyor?"
+    options:
+      - "*Even though it's raining, I'm going for a run. :: Even though gerçek bir durumu kabul eder."
+      - "Even if it rains, I'm going for a run. :: Yağmur yağıp yağmayacağı belli değil."
+      - "Whether it rains or not, I'm going for a run. :: İki olasılık da açık."
+      - "Unless it rains, I'm going for a run. :: Yağmur yağmazsa koşacak."
+    explanation: "even though = although (gerçek); even if = varsayım."
+    lessons: [gram.b1.linking-words]
+  - id: q.b2.cond-alt.05
+    type: error_correction
+    prompt: "You'll get a refund provided that you will keep the receipt."
+    answers: ["You'll get a refund provided that you keep the receipt.", "You will get a refund provided that you keep the receipt.", "You'll get a refund provided you keep the receipt."]
+    explanation: "Koşul bağlacından sonra will kullanılmaz."
+  - id: q.b2.cond-alt.06
+    type: sentence_building
+    prompt: "\"If you don't book early, you won't get a seat.\" cümlesini \"Book early, otherwise ...\" biçiminde yeniden yazın."
+    answers: ["Book early, otherwise you won't get a seat.", "Book early; otherwise you won't get a seat.", "Book early, otherwise you will not get a seat.", "Book early; otherwise, you won't get a seat."]
+    explanation: "Emir + otherwise + olumsuz sonuç."
+  - id: q.b2.cond-alt.07
+    type: matching
+    prompt: "Bağlaçları Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["provided that", "şartıyla"]
+      - ["otherwise", "aksi takdirde"]
+      - ["even if", "-se bile"]
+      - ["supposing", "diyelim ki"]
+      - ["whether or not", "-se de -mese de"]
+    explanation: "Her bağlaç koşula farklı bir anlam katar."
+  - id: q.b2.cond-alt.08
+    type: translation
+    prompt: "Sessiz olduğun sürece burada kalabilirsin."
+    answers: ["You can stay here as long as you are quiet.", "You can stay here as long as you keep quiet.", "You can stay here as long as you're quiet.", "You can stay here provided that you are quiet.", "You can stay here so long as you are quiet.", "As long as you are quiet, you can stay here.", "You can stay here provided you keep quiet."]
+    explanation: "as long as + Present Simple."

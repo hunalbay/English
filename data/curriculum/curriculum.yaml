@@ -208,3 +208,43 @@ units:
       - gram.b1.so-such
       - gram.b1.linking-words
       - gram.b1.both-either-neither
+
+  - id: b2.u01
+    level: B2
+    title_tr: Anlatı ve ileri zamanlar
+    title_en: Narrative and advanced tenses
+    description_tr: Geçmiş zamanları birlikte kullanarak hikâye anlatın, gelecekte tamamlanmış olacak eylemleri ifade edin.
+    lessons:
+      - gram.b2.past-perfect-continuous
+      - gram.b2.narrative-tenses
+      - gram.b2.future-perfect
+
+  - id: b2.u02
+    level: B2
+    title_tr: Gerçek dışı geçmiş ve ileri koşullar
+    title_en: Unreal past and advanced conditionals
+    description_tr: Geçmişteki hayali durumları, pişmanlıkları ve farklı koşul türlerini anlatın.
+    lessons:
+      - gram.b2.third-conditional
+      - gram.b2.mixed-conditionals
+      - gram.b2.wish-past
+      - gram.b2.conditional-alternatives
+
+  - id: b2.u03
+    level: B2
+    title_tr: Edilgen, ettirgen ve aktarma
+    title_en: Passive, causative and reporting
+    description_tr: Haber dilindeki edilgen yapıları, bir işi yaptırmayı ve sözün amacını gösteren aktarma fiillerini kullanın.
+    lessons:
+      - gram.b2.passive-advanced
+      - gram.b2.causative
+      - gram.b2.reporting-verbs
+
+  - id: b2.u04
+    level: B2
+    title_tr: Geçmişe bakan kip fiilleri
+    title_en: Modals about the past
+    description_tr: Geçmiş olaylar hakkında çıkarım yapın, eleştiri ve pişmanlık bildirin.
+    lessons:
+      - gram.b2.modals-past
+      - gram.b2.should-have

@@ -1,0 +1,129 @@
+id: gram.b2.past-perfect-continuous
+kind: grammar
+level: B2
+title_tr: "Geçmişte süregelen eylemler: Past Perfect Continuous"
+title_en: Past Perfect Continuous
+objective_tr: Bu dersin sonunda geçmişteki bir andan önce bir süredir devam etmekte olan eylemleri had been + fiil-ing ile anlatabilecek ve Past Perfect Simple ile farkını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.past-perfect, gram.b1.present-perfect-continuous]
+next: [gram.b2.narrative-tenses]
+vocabulary: [exhausted, for, since, wait, explain]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Past Perfect Continuous**, Present Perfect Continuous'un geçmişe taşınmış biçimidir: geçmişteki bir andan **önce başlamış ve o ana kadar sürmüş** bir eylemi anlatır.
+
+      "When the bus finally came, we **had been waiting** for an hour." (Otobüs nihayet geldiğinde bir saattir bekliyorduk.)
+
+      Türkçede çoğunlukla **-iyordu** ile ve bir süre ifadesiyle karşılanır; İngilizcede Past Continuous burada **kullanılmaz**.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Yapı", "Örnek"]
+      rows:
+        - ["Olumlu", "özne + had been + fiil-ing", "She had been crying."]
+        - ["Olumsuz", "özne + hadn't been + fiil-ing", "I hadn't been sleeping well."]
+        - ["Soru", "Had + özne + been + fiil-ing?", "Had you been waiting long?"]
+  - kind: usage
+    title_tr: Ne zaman kullanılır?
+    text_tr: |-
+      **Geçmişteki bir ana kadar süren eylemin süresi:** "He **had been working** there for ten years when the company closed."
+
+      **Geçmişteki bir durumun görünen nedeni:** "Her eyes were red. She **had been crying**.", "The streets were wet. It **had been raining**."
+  - kind: comparison
+    title_tr: "Simple mı, Continuous mu?"
+    table:
+      headers: ["", "Past Perfect Simple", "Past Perfect Continuous"]
+      rows:
+        - ["Vurgu", "tamamlanma, sonuç", "süreç, süre"]
+        - ["Örnek", "She had written three chapters.", "She had been writing all morning."]
+        - ["Soru", "how many / how much", "how long"]
+        - ["Durum fiilleri", "I had known him for years.", "kullanılmaz"]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I had been driving for six hours, so I was exhausted.", tr: "Altı saattir araba kullanıyordum, o yüzden bitkindim."}
+      - {en: "They had been arguing before I arrived.", tr: "Ben gelmeden önce tartışıyorlardı."}
+      - {en: "How long had you been living there when you met her?", tr: "Onunla tanıştığında ne zamandır orada yaşıyordun?"}
+      - {en: "He was out of breath because he had been running.", tr: "Nefes nefeseydi çünkü koşuyordu."}
+      - {en: "We hadn't been waiting long when the doctor called us in.", tr: "Doktor bizi içeri çağırdığında uzun süredir beklemiyorduk."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "When he arrived, I was waiting for two hours.", tr: "O geldiğinde iki saattir bekliyordum.", wrong: true, correction: "When he arrived, I had been waiting for two hours.", note_tr: "Geçmişteki ana kadar geçen süre."}
+      - {en: "She had been knowing him for a long time.", tr: "Onu uzun zamandır tanıyordu.", wrong: true, correction: "She had known him for a long time.", note_tr: "Durum fiili: Simple."}
+      - {en: "He had been reading three books that month.", tr: "O ay üç kitap okumuştu.", wrong: true, correction: "He had read three books that month.", note_tr: "Sayı verilince Simple."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Süre ifadesiyle Past Continuous kullanmak.** "I was waiting for two hours when..." yapısı İngilizcede bu anlamı vermez.
+
+      **Durum fiillerini Continuous yapmak.**
+
+      **Tek başına geçmiş olaylarda kullanmak.** Bu zaman ancak başka bir geçmiş ana göre anlam kazanır.
+questions:
+  - id: q.b2.ppc-past.01
+    type: multiple_choice
+    prompt: "By the time the ambulance arrived, he ___ on the floor for twenty minutes."
+    options:
+      - "*had been lying :: Geçmişteki ana kadar süren eylem ve süre: had been + -ing."
+      - "was lying :: Past Continuous süre bildiren for ile bu anlamı vermez."
+      - "has been lying :: Present Perfect Continuous şimdiye bağlanır."
+      - "lay :: Past Simple süreci ve önceliği göstermez."
+    explanation: "Geçmişteki bir ana kadar geçen süre → Past Perfect Continuous."
+  - id: q.b2.ppc-past.02
+    type: multiple_choice
+    prompt: "When I got home, I saw that someone ___ my window."
+    options:
+      - "*had broken :: Tamamlanmış tek bir eylem ve sonucu: Past Perfect Simple."
+      - "had been breaking :: Kırmak anlık bir eylemdir; süreç olarak anlatılmaz."
+      - "was breaking :: Bu, tam o sırada kırmakta olduğunu söyler."
+      - "has broken :: Present Perfect geçmişteki hikâyeye uymaz."
+    explanation: "Sonuç vurgulanıyorsa Simple kullanılır."
+  - id: q.b2.ppc-past.03
+    type: word_formation
+    prompt: "The ground was white. It ___ (snow) all night."
+    answers: ["had been snowing"]
+    explanation: "Geçmişteki bir durumun görünen nedeni olan süreç."
+  - id: q.b2.ppc-past.04
+    type: error_correction
+    prompt: "We were married for five years when our first child was born."
+    answers: ["We had been married for five years when our first child was born."]
+    explanation: "Geçmişteki bir ana kadar süren durum: Past Perfect (be durum fiili olduğu için Simple)."
+  - id: q.b2.ppc-past.05
+    type: nuance
+    difficulty: 4
+    prompt: "\"When I came in, she had been cooking.\" ile \"When I came in, she was cooking.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde ben girmeden önce yemek yapıyordu (izleri vardı, belki bitmişti); ikincisinde girdiğim anda yemek yapmaktaydı. :: Had been -ing öncesini, was -ing o anı anlatır."
+      - "İkisi de girdiğim anda yemek yaptığını söyler. :: Past Perfect Continuous o andan önceki süreci anlatır."
+      - "İlkinde yemeği bitirmişti ve bu kesin; ikincisinde hiç başlamamıştı. :: Was cooking başladığını ve sürdüğünü gösterir."
+      - "İlki gelecekle ilgilidir. :: İkisi de geçmişle ilgilidir."
+    explanation: "Past Continuous: o anda sürüyor. Past Perfect Continuous: o ana kadar sürmüş."
+  - id: q.b2.ppc-past.06
+    type: paragraph_completion
+    difficulty: 4
+    context: "Kerem finally sat down. His legs hurt and his shirt was soaked. He ___ around the city since early morning, looking for a flat, and he still hadn't found one."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*had been walking :: Geçmişteki ana kadar süren ve izi görülen eylem; since ile."
+      - "was walking :: Since ile Past Continuous kullanılmaz."
+      - "walked :: Past Simple süreci ve önceliği vermez."
+      - "has been walking :: Anlatı geçmişte; Present Perfect uymaz."
+    explanation: "Anlatıda geriye dönük süreç: had been + -ing."
+  - id: q.b2.ppc-past.07
+    type: sentence_completion
+    prompt: "Her hands were dirty because ___"
+    options:
+      - "*she had been working in the garden. :: Geçmişteki durumun nedeni olan süreç."
+      - "she has been working in the garden. :: Present Perfect geçmiş anlatıya uymaz."
+      - "she is working in the garden. :: Şimdiki zaman geçmişteki durumu açıklamaz."
+      - "she had been worked in the garden. :: Fiil -ing biçiminde olmalıdır."
+    explanation: "had been + fiil-ing."
+  - id: q.b2.ppc-past.08
+    type: translation
+    prompt: "O geldiğinde bir saattir bekliyorduk. (erkek)"
+    answers: ["When he arrived, we had been waiting for an hour.", "When he came, we had been waiting for an hour.", "We had been waiting for an hour when he arrived.", "We had been waiting for an hour when he came."]
+    explanation: "had been waiting + for."

@@ -1,0 +1,129 @@
+id: gram.b2.future-perfect
+kind: grammar
+level: B2
+title_tr: "Gelecekte tamamlanmış olacaklar: Future Perfect"
+title_en: "Future Perfect and Future Perfect Continuous"
+objective_tr: Bu dersin sonunda gelecekteki bir andan önce tamamlanmış olacak eylemleri will have + V3 ile, o ana kadar sürmüş olacak eylemleri will have been + fiil-ing ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.future-forms, gram.b1.past-perfect]
+vocabulary: [by, deadline, retire, graduate, complete, decade]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Future Perfect**, gelecekteki bir noktadan geriye bakar: o noktaya gelindiğinde bir işin **bitmiş olacağını** söyler.
+
+      "By Friday I **will have finished** the report." (Cumaya kadar raporu bitirmiş olacağım.)
+
+      Türkçedeki **-miş olacak** yapısına karşılık gelir. Çoğunlukla **by** (-e kadar), **by the time**, **in two years' time** gibi ifadelerle kullanılır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Zaman", "Yapı", "Örnek"]
+      rows:
+        - ["Future Perfect", "will have + V3", "She will have left by six."]
+        - ["Olumsuz", "won't have + V3", "I won't have finished by then."]
+        - ["Soru", "Will + özne + have + V3?", "Will you have eaten by eight?"]
+        - ["Future Perfect Continuous", "will have been + fiil-ing", "In June I will have been working here for ten years."]
+  - kind: comparison
+    title_tr: Üç gelecek yapısı yan yana
+    table:
+      headers: ["Yapı", "Anlam", "Örnek (saat 8'de)"]
+      rows:
+        - ["will + fiil", "o anda başlar / olur", "At eight I will have dinner."]
+        - ["will be + -ing", "o anda sürüyor olacak", "At eight I will be having dinner."]
+        - ["will have + V3", "o andan önce bitmiş olacak", "By eight I will have had dinner."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **By the time'dan sonra Present Simple gelir:** "By the time you **arrive**, we will have eaten."
+
+      **Future Perfect Continuous süreyi vurgular** ve neredeyse her zaman **for** ile kullanılır: "Next month we **will have been living** here for a year."
+
+      **Tahmin anlamı:** "Don't call now. They **will have gone** to bed." (Yatmış olmalılar.) Burada will have + V3, şu an hakkında güçlü bir tahmin bildirir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "By 2030 I will have paid off the loan.", tr: "2030'a kadar krediyi ödemiş olacağım."}
+      - {en: "The film will have started by the time we get there.", tr: "Biz oraya varana kadar film başlamış olacak."}
+      - {en: "Will you have finished by five?", tr: "Beşe kadar bitirmiş olur musun?"}
+      - {en: "In May they will have been married for twenty years.", tr: "Mayısta evleneli yirmi yıl olmuş olacak."}
+      - {en: "By tonight I will have been driving for twelve hours.", tr: "Bu akşam on iki saattir araba kullanıyor olacağım."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "By next year I will finish my degree.", tr: "Gelecek yıla kadar bölümümü bitirmiş olacağım.", wrong: true, correction: "By next year I will have finished my degree.", note_tr: "By + gelecek nokta: Future Perfect."}
+      - {en: "By the time you will arrive, I will have cooked.", tr: "Sen varana kadar yemeği yapmış olacağım.", wrong: true, correction: "By the time you arrive, I will have cooked.", note_tr: "By the time + Present Simple."}
+      - {en: "She will has left by then.", tr: "O zamana kadar gitmiş olacak.", wrong: true, correction: "She will have left by then.", note_tr: "Will'den sonra hep have."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **By ile will + fiil kullanmak.** "By" bir son noktayı gösterir; işin o noktadan önce bitmiş olacağı Future Perfect ile anlatılır.
+
+      **By ile until'i karıştırmak.** "I'll have finished **by** six." (altıdan önce bitmiş olur) / "I'll work **until** six." (altıya kadar sürer)
+
+      **Üçüncü tekil kişide "has" kullanmak.**
+questions:
+  - id: q.b2.future-perfect.01
+    type: multiple_choice
+    prompt: "By the end of this month, I ___ all my exams."
+    options:
+      - "*will have taken :: Gelecekteki bir noktadan önce tamamlanmış olacak eylem."
+      - "will take :: Will + fiil tamamlanmışlığı vurgulamaz; by ile Future Perfect beklenir."
+      - "am taking :: Present Continuous ayarlanmış programı anlatır, tamamlanmayı değil."
+      - "have taken :: Present Perfect gelecekteki bir noktaya bağlanmaz."
+    explanation: "by + gelecek zaman → will have + V3."
+  - id: q.b2.future-perfect.02
+    type: multiple_choice
+    prompt: "By the time she ___, we will have finished dinner."
+    options:
+      - "*arrives :: By the time'dan sonra gelecek anlamında Present Simple kullanılır."
+      - "will arrive :: Zaman bağlacından sonra will gelmez."
+      - "will have arrived :: Zaman cümleciğinde will kullanılmaz."
+      - "arrived :: Past Simple gelecek anlamı vermez."
+    explanation: "by the time + Present Simple, will have + V3."
+    lessons: [gram.b1.unless-time-clauses]
+  - id: q.b2.future-perfect.03
+    type: word_formation
+    prompt: "Next March we ___ (live) in this house for exactly ten years."
+    answers: ["will have been living", "will have lived", "'ll have been living", "'ll have lived"]
+    explanation: "Gelecekteki bir noktaya kadar geçen süre: will have been + -ing (ya da will have + V3)."
+  - id: q.b2.future-perfect.04
+    type: error_correction
+    prompt: "Don't worry, I will finish the report by the time you get back."
+    answers: ["Don't worry, I will have finished the report by the time you get back.", "Don't worry, I'll have finished the report by the time you get back."]
+    explanation: "By the time ile tamamlanmışlık Future Perfect ile verilir."
+  - id: q.b2.future-perfect.05
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["At nine I'll watch the match.", "Dokuzda izlemeye başlayacağım."]
+      - ["At nine I'll be watching the match.", "Dokuzda izliyor olacağım."]
+      - ["By nine I'll have watched the match.", "Dokuza kadar izlemiş olacağım."]
+    explanation: "will: o anda başlar; will be -ing: o anda sürer; will have V3: o andan önce biter."
+    lessons: [gram.b1.future-forms]
+  - id: q.b2.future-perfect.06
+    type: nuance
+    difficulty: 4
+    prompt: "\"I'll have finished by six.\" ile \"I'll be working until six.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde iş altıdan önce biter; ikincisinde iş altıya kadar sürer. :: By son teslim noktasını, until sürenin bitişini gösterir."
+      - "İkisi de işin altıda başlayacağını söyler. :: Hiçbiri başlangıç bildirmez."
+      - "İlkinde iş altıda sürüyor olacak. :: Future Perfect tamamlanmışlık bildirir."
+      - "Aralarında anlam farkı yoktur. :: By ve until farklı anlam taşır."
+    explanation: "by = en geç; until = -e kadar sürekli."
+  - id: q.b2.future-perfect.07
+    type: sentence_completion
+    prompt: "It's midnight in Tokyo now, so ___"
+    options:
+      - "*they will have gone to bed. :: Şu an hakkında güçlü tahmin: will have + V3."
+      - "they will go to bed by now. :: \"By now\" ile will + fiil kullanılmaz."
+      - "they had gone to bed. :: Past Perfect başka bir geçmiş ana göre kullanılır."
+      - "they will have go to bed. :: Have'den sonra üçüncü biçim gerekir."
+    explanation: "Will have + V3, şu ana kadar olmuş olması beklenen şeyi de anlatır."
+  - id: q.b2.future-perfect.08
+    type: translation
+    prompt: "Cumaya kadar raporu bitirmiş olacağım."
+    answers: ["By Friday I will have finished the report.", "I will have finished the report by Friday.", "I'll have finished the report by Friday.", "By Friday I'll have finished the report.", "I will have completed the report by Friday.", "By Friday I will have completed the report."]
+    explanation: "will have + V3 + by."

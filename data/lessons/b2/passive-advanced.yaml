@@ -1,0 +1,121 @@
+id: gram.b2.passive-advanced
+kind: grammar
+level: B2
+title_tr: "İleri edilgen yapılar: It is said that..., He is said to..."
+title_en: "Advanced passive structures"
+objective_tr: Bu dersin sonunda iki nesneli fiilleri edilgen yapabilecek, haber dilinde sık kullanılan It is said that... ve He is said to... yapılarını kurabilecek, -ing ve to'lu edilgen biçimleri kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.passive-other-tenses]
+next: [gram.b2.causative]
+vocabulary: [report, believe, expect, claim, allege, consider]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bu derste edilgen çatının üç ileri kullanımını göreceksiniz: **iki nesneli fiiller**, **aktarma fiilleriyle kişisiz yapılar** ve **edilgen mastar / -ing**.
+
+      Aktarma yapıları özellikle haber dilinde yaygındır, çünkü bilginin kaynağını belirtmeden "söyleniyor, sanılıyor, bildiriliyor" demeyi sağlar.
+  - kind: formula
+    title_tr: İki nesneli fiiller
+    text_tr: |-
+      give, send, offer, show, tell, pay, teach gibi fiillerin iki nesnesi vardır: "They gave **Ali** **a prize**." İki nesne de özne olabilir:
+
+      "**Ali** was given a prize." (daha yaygın — kişi özne olur)
+
+      "**A prize** was given **to** Ali."
+  - kind: formula
+    title_tr: Aktarma fiilleriyle edilgen
+    table:
+      headers: ["Yapı", "Örnek"]
+      rows:
+        - ["It + is said / believed / thought / reported + that + cümle", "It is said that he is very rich."]
+        - ["özne + is said + to + yalın fiil (şimdi)", "He is said to be very rich."]
+        - ["özne + is said + to have + V3 (geçmiş)", "He is said to have made a fortune."]
+        - ["özne + is said + to be + fiil-ing (sürmekte)", "He is said to be living abroad."]
+  - kind: usage
+    title_tr: Edilgen mastar ve -ing
+    text_tr: |-
+      **to be + V3:** "I want **to be told** the truth.", "She expects **to be promoted**."
+
+      **being + V3:** "I don't like **being told** what to do.", "He hates **being interrupted**."
+
+      Hangi biçimin geleceği, baştaki fiile bağlıdır (want + to, enjoy / hate / avoid + -ing; edatlardan sonra -ing): "She left **without being seen**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was offered a job in Berlin.", tr: "Bana Berlin'de bir iş teklif edildi."}
+      - {en: "It is believed that the painting was stolen in the 1990s.", tr: "Tablonun 1990'larda çalındığına inanılıyor."}
+      - {en: "The company is reported to be losing money.", tr: "Şirketin zarar ettiği bildiriliyor."}
+      - {en: "He is thought to have left the country.", tr: "Ülkeden ayrıldığı düşünülüyor."}
+      - {en: "Nobody likes being criticized in public.", tr: "Kimse herkesin önünde eleştirilmekten hoşlanmaz."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He is said that he is a genius.", tr: "Dâhi olduğu söyleniyor.", wrong: true, correction: "He is said to be a genius.", note_tr: "Kişi özne ise: to + fiil."}
+      - {en: "It is said him to be rich.", tr: "Zengin olduğu söyleniyor.", wrong: true, correction: "It is said that he is rich.", note_tr: "It ile: that + cümle."}
+      - {en: "The thief is believed to escape last night.", tr: "Hırsızın dün gece kaçtığına inanılıyor.", wrong: true, correction: "The thief is believed to have escaped last night.", note_tr: "Geçmiş: to have + V3."}
+      - {en: "I don't like to be shout at.", tr: "Bana bağırılmasından hoşlanmam.", wrong: true, correction: "I don't like being shouted at.", note_tr: "being + V3."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İki yapıyı karıştırmak:** "It is said that..." ile "He is said to..." birbirinin parçalarıyla birleştirilmez.
+
+      **Geçmiş olaylar için "to have + V3" kullanmamak.**
+
+      **İki nesneli fiillerde kişiyi özne yapmaktan kaçınmak.** Türkçede "Bana ... verildi" dendiği için "To me was given" gibi yapılar kurulur; doğrusu "**I was given**..." biçimidir.
+questions:
+  - id: q.b2.passive-adv.01
+    type: multiple_choice
+    prompt: "The minister ___ to be considering resignation."
+    options:
+      - "*is said :: Kişi özne: is said + to + fiil."
+      - "says :: Etken yapı anlamı değiştirir ve to be ile uyuşmaz."
+      - "is said that :: That'ten sonra cümle gelir, to değil."
+      - "it is said :: Özne zaten var (the minister)."
+    explanation: "özne + is said / believed / reported + to + fiil."
+  - id: q.b2.passive-adv.02
+    type: multiple_choice
+    prompt: "The fire is thought ___ by an electrical fault last night."
+    options:
+      - "*to have been caused :: Geçmişteki edilgen eylem: to have been + V3."
+      - "to be caused :: Bu, şimdiki ya da genel durumu anlatır; olay dün gece oldu."
+      - "to have caused :: Etken; yangın bir şeye neden olmuyor, bir şey yangına neden oluyor."
+      - "that was caused :: Is thought'tan sonra bu yapı gelmez."
+    explanation: "Geçmiş + edilgen: to have been + V3."
+  - id: q.b2.passive-adv.03
+    type: sentence_building
+    prompt: "Kişiyi özne yaparak edilgene çevirin: \"They offered Selin a scholarship.\""
+    answers: ["Selin was offered a scholarship."]
+    explanation: "İki nesneli fiilde kişi özne olabilir."
+  - id: q.b2.passive-adv.04
+    type: sentence_building
+    prompt: "\"People believe that the company is in trouble.\" → The company ..."
+    answers: ["The company is believed to be in trouble."]
+    explanation: "özne + is believed + to + yalın fiil."
+  - id: q.b2.passive-adv.05
+    type: error_correction
+    prompt: "She is known that she speaks six languages."
+    answers: ["She is known to speak six languages.", "It is known that she speaks six languages."]
+    explanation: "Kişi özne ise to + fiil; that'li yapı It ile başlar."
+  - id: q.b2.passive-adv.06
+    type: word_formation
+    prompt: "He hates ___ (tell) what to do."
+    answers: ["being told"]
+    explanation: "hate + being + V3."
+  - id: q.b2.passive-adv.07
+    type: reading_comprehension
+    difficulty: 4
+    context: "Three people are reported to have been injured in an explosion at a factory near İzmit. The explosion is believed to have been caused by a gas leak. The factory is said to employ around two hundred workers. An investigation is expected to begin tomorrow."
+    prompt: "Metne göre hangisi doğrudur?"
+    options:
+      - "*Patlamanın nedeni kesin değil; gaz kaçağı olduğu düşünülüyor. :: \"Is believed to have been caused\" kesinlik değil kanı bildirir."
+      - "Soruşturma dün başladı. :: \"Is expected to begin tomorrow\": yarın başlaması bekleniyor."
+      - "Fabrikada iki yüz kişi yaralandı. :: Üç kişinin yaralandığı bildiriliyor; iki yüz, çalışan sayısıdır."
+      - "Fabrika artık kimseyi çalıştırmıyor. :: \"Is said to employ\" şimdiki durumu anlatır."
+    explanation: "Haber dilindeki aktarma edilgenleri, bilginin doğrulanmamış olduğunu gösterir."
+  - id: q.b2.passive-adv.08
+    type: translation
+    prompt: "Çok zengin olduğu söyleniyor. (erkek)"
+    answers: ["He is said to be very rich.", "It is said that he is very rich.", "He is said to be very wealthy."]
+    explanation: "He is said to be... / It is said that he is..."

@@ -1,0 +1,117 @@
+id: gram.b2.causative
+kind: grammar
+level: B2
+title_tr: "Ettirgen yapı: have / get something done"
+title_en: "Causative: have / get something done"
+objective_tr: Bu dersin sonunda bir işi başkasına yaptırdığınızı have / get + nesne + V3 ile anlatabilecek, bu yapıyı işi kendiniz yaptığınız durumlardan ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.passive-basics]
+vocabulary: [repair, cut, deliver, service, install, decorate]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede bir işi başkasına yaptırdığımızı **-dır / -t** ekleriyle söyleriz: saçımı **kestirdim**, arabayı **tamir ettirdim**. İngilizcede bunun için özel bir ek yoktur; **have + nesne + V3** yapısı kullanılır.
+
+      "I **cut** my hair." → Saçımı (kendim) kestim.
+
+      "I **had my hair cut**." → Saçımı kestirdim.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Zaman", "Yapı", "Örnek"]
+      rows:
+        - ["Present Simple", "have + nesne + V3", "I have my car serviced every year."]
+        - ["Present Continuous", "am / is / are having + nesne + V3", "We are having the kitchen painted."]
+        - ["Past Simple", "had + nesne + V3", "She had her eyes tested."]
+        - ["Present Perfect", "have / has had + nesne + V3", "I have had my phone repaired."]
+        - ["Gelecek", "will have / be going to have + nesne + V3", "I'm going to have my teeth checked."]
+        - ["Kip fiili", "should / must + have + nesne + V3", "You should have that looked at."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Get daha gündelik bir seçenektir:** "I need to **get my hair cut**."
+
+      **Soru ve olumsuzda do / did kullanılır:** "Where **do** you **have** your hair cut?", "I **didn't have** it repaired."
+
+      **İşi yapanı belirtmek için:** "have + kişi + yalın fiil" ya da "get + kişi + to + fiil": "I **had the mechanic check** the brakes." / "I **got the mechanic to check** the brakes."
+
+      **İstenmeyen olaylar:** aynı yapı, başımıza gelen kötü şeyleri de anlatır: "She **had her bag stolen**." (Çantası çalındı.)
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I had my hair cut yesterday.", tr: "Dün saçımı kestirdim."}
+      - {en: "We're having a new heating system installed.", tr: "Yeni bir ısıtma sistemi taktırıyoruz."}
+      - {en: "You should get your eyes tested.", tr: "Gözlerini muayene ettirmelisin."}
+      - {en: "How often do you have your car serviced?", tr: "Arabana ne sıklıkla bakım yaptırıyorsun?"}
+      - {en: "He had his passport stolen in Barcelona.", tr: "Barselona'da pasaportu çalındı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I cut my hair at the hairdresser's.", tr: "Saçımı kuaförde kestirdim.", wrong: true, correction: "I had my hair cut at the hairdresser's.", note_tr: "Başkası yaptıysa causative."}
+      - {en: "I had repaired my car.", tr: "Arabamı tamir ettirdim.", wrong: true, correction: "I had my car repaired.", note_tr: "Nesne araya girer; aksi hâlde Past Perfect olur."}
+      - {en: "She had her house paint.", tr: "Evini boyattı.", wrong: true, correction: "She had her house painted.", note_tr: "Üçüncü biçim."}
+      - {en: "Had you your hair cut?", tr: "Saçını kestirdin mi?", wrong: true, correction: "Did you have your hair cut?", note_tr: "Soru: did + have."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Etken cümle kurmak.** "I repaired my car" işi sizin yaptığınızı söyler.
+
+      **Sözcük sırasını bozmak.** "I had cut my hair" Past Perfect'tir ve saçı kendinizin kestiğini söyler.
+
+      **Kişi belirtilince fiil biçimini karıştırmak:** have + kişi + **yalın fiil**; get + kişi + **to** + fiil.
+questions:
+  - id: q.b2.causative.01
+    type: multiple_choice
+    prompt: "My car broke down, so I ___ at the garage."
+    options:
+      - "*had it repaired :: İşi başkasına yaptırmak: had + nesne + V3."
+      - "repaired it :: Bu, arabayı kendinizin tamir ettiğini söyler."
+      - "had repaired it :: Bu Past Perfect'tir; yine kendiniz tamir etmiş olursunuz."
+      - "had it repair :: Üçüncü biçim gerekir."
+    explanation: "have + nesne + V3: yaptırmak."
+  - id: q.b2.causative.02
+    type: multiple_choice
+    prompt: "We ___ the living room decorated at the moment, so the house is a mess."
+    options:
+      - "*are having :: Şu anda süren yaptırma eylemi: are having + nesne + V3."
+      - "have :: Present Simple düzenli yapılan işi anlatır."
+      - "are :: Bu, edilgen bir yapıya benzerdi ama özne \"we\" boyanmıyor."
+      - "had :: \"At the moment\" şimdiyi gösteriyor."
+    explanation: "Zaman have fiiliyle gösterilir."
+  - id: q.b2.causative.03
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede konuşan pencereyi KENDİSİ temizlemiştir?"
+    options:
+      - "*I had cleaned the windows before the guests arrived. :: Past Perfect: işi konuşan yapmıştı."
+      - "I had the windows cleaned before the guests arrived. :: Causative: başkasına temizletti."
+      - "I got the windows cleaned before the guests arrived. :: Causative (gündelik): temizletti."
+      - "I had someone clean the windows before the guests arrived. :: Başkasına temizletti."
+    explanation: "Nesnenin yeri anlamı değiştirir: had + V3 + nesne (Past Perfect) / had + nesne + V3 (causative)."
+  - id: q.b2.causative.04
+    type: sentence_building
+    prompt: "Causative ile yeniden yazın: \"A photographer took our photo.\" → We had ..."
+    answers: ["We had our photo taken.", "We had our photo taken by a photographer."]
+    explanation: "had + nesne + V3."
+  - id: q.b2.causative.05
+    type: error_correction
+    prompt: "I must cut my hair. I have an appointment at the hairdresser's at three."
+    answers: ["I must have my hair cut. I have an appointment at the hairdresser's at three.", "I must get my hair cut. I have an appointment at the hairdresser's at three."]
+    explanation: "Kuaför kesecek: have / get my hair cut."
+  - id: q.b2.causative.06
+    type: fill_blank
+    prompt: "I got the plumber ___ fix the tap. (tek sözcük)"
+    answers: [to]
+    explanation: "get + kişi + to + fiil; have + kişi + yalın fiil."
+  - id: q.b2.causative.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Where, did, you, have, your, suit, made]
+    explanation: "Soru sözcüğü + did + özne + have + nesne + V3?"
+  - id: q.b2.causative.08
+    type: translation
+    prompt: "Dün saçımı kestirdim."
+    answers: ["I had my hair cut yesterday.", "I got my hair cut yesterday.", "Yesterday I had my hair cut.", "Yesterday I got my hair cut."]
+    explanation: "had / got + my hair + cut."

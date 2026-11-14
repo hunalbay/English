@@ -1,0 +1,117 @@
+id: gram.b2.mixed-conditionals
+kind: grammar
+level: B2
+title_tr: "Karma koşul cümleleri"
+title_en: Mixed conditionals
+objective_tr: Bu dersin sonunda geçmişteki bir koşulun şimdiki sonucunu ve şimdiki genel bir durumun geçmişteki sonucunu karma koşul yapılarıyla anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.third-conditional]
+vocabulary: [if, now, still, career, decision, afraid]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Koşul ile sonuç her zaman aynı zaman diliminde olmaz. **Karma koşul cümlelerinde** second ve third conditional'ın parçaları birleştirilir.
+
+      **Geçmiş koşul → şimdiki sonuç:** "If I **had taken** that job, I **would be** rich now." (O işi kabul etseydim şimdi zengin olurdum.)
+
+      **Şimdiki / genel koşul → geçmiş sonuç:** "If I **spoke** French, I **would have understood** him." (Fransızca bilseydim onu anlardım. — Genel olarak bilmiyorum; o an anlamadım.)
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Tür", "Koşul", "Sonuç", "Örnek"]
+      rows:
+        - ["Geçmiş → şimdi", "if + Past Perfect", "would + yalın fiil", "If I had slept well, I wouldn't be tired now."]
+        - ["Şimdi → geçmiş", "if + Past Simple", "would have + V3", "If I were braver, I would have spoken to her."]
+  - kind: usage
+    title_tr: Hangisini seçmeli?
+    text_tr: |-
+      Her bölüm için ayrı ayrı sorun: **Bu bölüm ne zamanla ilgili?**
+
+      Koşul **geçmişteki tek bir olay** mı? → had + V3. **Şu anki ya da kalıcı bir durum** mu? → Past Simple.
+
+      Sonuç **şimdi** mi geçerli? → would + fiil. **Geçmişte** mi kaldı? → would have + V3.
+
+      İpucu sözcükler: **now, today, still** şimdiki sonucu; **yesterday, last year, then** geçmişteki sonucu gösterir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "If I had studied medicine, I would be a doctor now.", tr: "Tıp okusaydım şimdi doktor olurdum."}
+      - {en: "If you hadn't eaten so much, you wouldn't feel sick.", tr: "O kadar çok yemeseydin miden bulanmazdı."}
+      - {en: "If she weren't so shy, she would have asked a question.", tr: "Bu kadar utangaç olmasaydı soru sorardı."}
+      - {en: "If I didn't have a meeting today, I would have gone with them yesterday.", tr: "Bugün toplantım olmasaydı dün onlarla giderdim."}
+      - {en: "We would still be living there if the landlord hadn't sold the flat.", tr: "Ev sahibi daireyi satmasaydı hâlâ orada yaşıyor olurduk."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "If I had saved money, I would have been able to buy a car now.", tr: "Para biriktirseydim şimdi araba alabilirdim.", wrong: true, correction: "If I had saved money, I would be able to buy a car now.", note_tr: "Now: şimdiki sonuç → would + fiil."}
+      - {en: "If I was born in Italy, I would speak Italian.", tr: "İtalya'da doğsaydım İtalyanca konuşurdum.", wrong: true, correction: "If I had been born in Italy, I would speak Italian.", note_tr: "Doğum geçmişte: had been born."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her koşul cümlesini tek bir kalıba sokmaya çalışmak.** İki bölümün zamanı bağımsız düşünülmelidir.
+
+      **Şimdiki sonuç için would have kullanmak.** "Now" görürseniz sonuç bölümünde would + yalın fiil bekleyin.
+questions:
+  - id: q.b2.mixed-conditionals.01
+    type: multiple_choice
+    prompt: "If I had gone to bed earlier last night, I ___ so tired now."
+    options:
+      - "*wouldn't be :: Geçmiş koşul, şimdiki sonuç (now): would + yalın fiil."
+      - "wouldn't have been :: Bu, geçmişteki bir sonuç olurdu; \"now\" şimdiyi gösteriyor."
+      - "won't be :: Will, gerçek dışı koşullarda kullanılmaz."
+      - "am not :: Gerçek dışı sonuç would ile verilir."
+    explanation: "Geçmiş → şimdi: if + had V3, would + fiil."
+  - id: q.b2.mixed-conditionals.02
+    type: multiple_choice
+    prompt: "If she ___ so impatient, she would have waited for the results."
+    options:
+      - "*weren't :: Sabırsızlık kalıcı bir özellik (şimdi de geçerli): Past Simple; sonuç geçmişte."
+      - "hadn't been :: Olabilir, ancak bu yalnızca o günkü sabırsızlığı anlatır; kalıcı özellik için weren't beklenir."
+      - "isn't :: Gerçek dışı koşulda Present Simple kullanılmaz."
+      - "wouldn't be :: If bölümünde would kullanılmaz."
+    explanation: "Şimdi / genel → geçmiş: if + Past Simple, would have + V3."
+  - id: q.b2.mixed-conditionals.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"If I had learned to drive, I would have a better job.\" cümlesine göre hangisi doğrudur?"
+    options:
+      - "*Araba kullanmayı öğrenmedim; şu an daha iyi bir işim yok. :: Geçmiş koşul, şimdiki sonuç."
+      - "Araba kullanmayı öğrendim ve iyi bir işim var. :: Cümle gerçeğin tersini anlatır."
+      - "Araba kullanmayı öğrenmedim; geçmişte iyi bir işim olmadı ama şimdi var. :: Sonuç bölümü (would have) şimdiyi anlatır."
+      - "Araba kullanmayı öğrenirsem daha iyi bir iş bulacağım. :: Bu, first conditional olurdu."
+    explanation: "Dikkat: \"would have a job\" = would + have (sahip olmak); would have + V3 değildir."
+  - id: q.b2.mixed-conditionals.04
+    type: sentence_building
+    prompt: "Gerçek: \"I didn't take the medicine, so I still have a headache.\" → If I had ..."
+    answers: ["If I had taken the medicine, I wouldn't still have a headache.", "If I had taken the medicine, I wouldn't have a headache.", "If I had taken the medicine, I wouldn't have a headache now.", "If I had taken the medicine, I would not have a headache.", "If I had taken the medicine, I wouldn't have a headache any more."]
+    explanation: "Geçmiş koşul (had taken), şimdiki sonuç (wouldn't have = sahip olmazdım)."
+  - id: q.b2.mixed-conditionals.05
+    type: error_correction
+    prompt: "If we had bought that house, we would have lived by the sea now."
+    answers: ["If we had bought that house, we would live by the sea now.", "If we had bought that house, we would be living by the sea now.", "If we had bought that house, we'd be living by the sea now.", "If we had bought that house, we'd live by the sea now."]
+    explanation: "\"Now\" şimdiki sonucu gösterir: would + yalın fiil."
+  - id: q.b2.mixed-conditionals.06
+    type: matching
+    prompt: "Cümleleri zaman ilişkileriyle eşleştirin."
+    pairs:
+      - ["If I had eaten, I wouldn't be hungry.", "geçmiş koşul, şimdiki sonuç"]
+      - ["If I were taller, I would have joined the team.", "şimdiki koşul, geçmiş sonuç"]
+      - ["If I had eaten, I wouldn't have fainted.", "geçmiş koşul, geçmiş sonuç"]
+      - ["If I were taller, I would join the team.", "şimdiki koşul, şimdiki sonuç"]
+    explanation: "Her bölümün zamanı ayrı ayrı belirlenir."
+  - id: q.b2.mixed-conditionals.07
+    type: sentence_completion
+    prompt: "If I spoke better English, ___"
+    options:
+      - "*I would have applied for that job last month. :: Şimdiki genel durum, geçmişteki sonuç."
+      - "I will apply for that job. :: Will gerçek dışı koşulla kullanılmaz."
+      - "I had applied for that job. :: Sonuç bölümünde Past Perfect kullanılmaz."
+      - "I would have apply for that job. :: Have'den sonra üçüncü biçim gerekir."
+    explanation: "if + Past Simple, would have + V3."
+  - id: q.b2.mixed-conditionals.08
+    type: translation
+    prompt: "Tıp okusaydım şimdi doktor olurdum."
+    answers: ["If I had studied medicine, I would be a doctor now.", "If I had studied medicine, I'd be a doctor now.", "I would be a doctor now if I had studied medicine.", "If I'd studied medicine, I'd be a doctor now.", "If I had studied medicine, I would be a doctor."]
+    explanation: "if + had + V3, would + yalın fiil."

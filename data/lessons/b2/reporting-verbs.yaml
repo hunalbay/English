@@ -1,0 +1,124 @@
+id: gram.b2.reporting-verbs
+kind: grammar
+level: B2
+title_tr: "Aktarma fiilleri: admit, deny, suggest, accuse..."
+title_en: Reporting verbs
+objective_tr: Bu dersin sonunda konuşmayı yalnızca said / told ile değil, sözün amacını gösteren aktarma fiilleriyle ve her fiilin gerektirdiği yapıyla aktarabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.reported-questions, gram.b1.gerund-infinitive]
+vocabulary: [admit, deny, accuse, apologize, refuse, threaten]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      "She said she was sorry" doğrudur, ama "She **apologized**" hem daha kısa hem daha güçlüdür. Aktarma fiilleri, sözün **amacını** (özür, tehdit, öneri, inkâr) tek sözcükle verir.
+
+      Zorluk şuradadır: her fiilin ardından gelen **yapı farklıdır**. Fiilleri kalıplarıyla birlikte öğrenmek gerekir.
+  - kind: formula
+    title_tr: Fiil kalıpları
+    table:
+      headers: ["Kalıp", "Fiiller", "Örnek"]
+      rows:
+        - ["fiil + to + yalın fiil", "agree, offer, promise, refuse, threaten", "He promised to call."]
+        - ["fiil + kişi + to + yalın fiil", "advise, ask, encourage, invite, persuade, remind, warn", "She reminded me to lock the door."]
+        - ["fiil + fiil-ing", "admit, deny, suggest, recommend", "He denied taking the money."]
+        - ["fiil + edat + fiil-ing", "apologize for, insist on", "She apologized for being late."]
+        - ["fiil + kişi + edat + fiil-ing", "accuse of, blame for, congratulate on, thank for", "They accused him of lying."]
+        - ["fiil + that + cümle", "admit, claim, complain, explain, suggest", "He explained that he was busy."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Suggest kişi + to almaz.** "He suggested me to go" yanlıştır → "He suggested **going**" / "He suggested **(that) I go**."
+
+      **Explain'den sonra doğrudan kişi gelmez:** "She explained **to me** that..." ("explained me" yanlıştır.)
+
+      **Olumsuz:** "not" fiilin önüne gelir: "He promised **not to** tell.", "She admitted **not knowing**."
+
+      **Önceki eylem için -ing ya da having + V3:** "He denied **taking** / **having taken** the money."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "She refused to answer the question.", tr: "Soruyu cevaplamayı reddetti."}
+      - {en: "He admitted breaking the window.", tr: "Camı kırdığını itiraf etti."}
+      - {en: "They warned us not to swim there.", tr: "Orada yüzmememiz konusunda bizi uyardılar."}
+      - {en: "My boss congratulated me on finishing the project.", tr: "Patronum projeyi bitirdiğim için beni tebrik etti."}
+      - {en: "The doctor suggested that I take a few days off.", tr: "Doktor birkaç gün izin almamı önerdi."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "He suggested me to see a doctor.", tr: "Doktora gitmemi önerdi.", wrong: true, correction: "He suggested that I see a doctor.", note_tr: "Suggest + that / -ing."}
+      - {en: "She accused him to steal her idea.", tr: "Onu fikrini çalmakla suçladı.", wrong: true, correction: "She accused him of stealing her idea.", note_tr: "accuse + kişi + of + -ing."}
+      - {en: "He apologized to be late.", tr: "Geç kaldığı için özür diledi.", wrong: true, correction: "He apologized for being late.", note_tr: "apologize for + -ing."}
+      - {en: "They explained me the rules.", tr: "Bana kuralları açıkladılar.", wrong: true, correction: "They explained the rules to me.", note_tr: "explain + şey + to + kişi."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Bütün aktarma fiillerini "tell" gibi kullanmak** (kişi + to + fiil).
+
+      **Edatı unutmak ya da yanlış seçmek:** accuse **of**, blame **for**, congratulate **on**, insist **on**.
+
+      **Deny ile refuse'u karıştırmak.** Deny = bir şeyi yaptığını **inkâr etmek**; refuse = bir şeyi yapmayı **reddetmek**.
+questions:
+  - id: q.b2.reporting-verbs.01
+    type: multiple_choice
+    prompt: "\"I didn't take your phone!\" → He denied ___ my phone."
+    options:
+      - "*taking :: Deny'den sonra -ing gelir."
+      - "to take :: Deny + to kalıbı yoktur."
+      - "that take :: That'ten sonra özneli bir cümle gerekir."
+      - "of taking :: Deny edat almaz."
+    explanation: "deny + fiil-ing."
+  - id: q.b2.reporting-verbs.02
+    type: multiple_choice
+    prompt: "\"You should apply for the job.\" → She encouraged ___ for the job."
+    options:
+      - "*me to apply :: encourage + kişi + to + fiil."
+      - "me applying :: Encourage -ing almaz."
+      - "to apply :: Kişi belirtilmelidir."
+      - "that I applying :: Yapı bozuk."
+    explanation: "advise / encourage / persuade / remind / warn + kişi + to + fiil."
+  - id: q.b2.reporting-verbs.03
+    type: multiple_choice
+    prompt: "\"I'm sorry I forgot your birthday.\" → He apologized ___ my birthday."
+    options:
+      - "*for forgetting :: apologize + for + -ing."
+      - "to forget :: Apologize to + fiil kalıbı yoktur."
+      - "about forget :: Edattan sonra -ing gelir; ayrıca edat for olmalı."
+      - "forgetting :: For edatı gerekir."
+    explanation: "apologize (to someone) for + fiil-ing."
+  - id: q.b2.reporting-verbs.04
+    type: nuance
+    difficulty: 4
+    prompt: "\"He refused to sign the contract.\" ile \"He denied signing the contract.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde imzalamayı kabul etmedi; ikincisinde imzaladığını inkâr etti. :: Refuse = yapmayı reddetmek; deny = yaptığını inkâr etmek."
+      - "İkisi de imzalamadığını söyler, fark yoktur. :: Fiillerin anlamı farklıdır."
+      - "İlkinde imzaladığını inkâr etti; ikincisinde imzalamayı reddetti. :: Tam tersi."
+      - "İlkinde imzaladı; ikincisinde imzalamadı. :: Refuse imzalamadığını gösterir."
+    explanation: "refuse + to (gelecek eylem); deny + -ing (geçmiş eylem)."
+  - id: q.b2.reporting-verbs.05
+    type: error_correction
+    prompt: "My teacher suggested me to read more English books."
+    answers: ["My teacher suggested that I read more English books.", "My teacher suggested reading more English books.", "My teacher suggested I read more English books.", "My teacher suggested that I should read more English books."]
+    explanation: "Suggest kişi + to almaz."
+  - id: q.b2.reporting-verbs.06
+    type: sentence_building
+    prompt: "Aktarın: \"You broke my camera!\" she said to him. → She accused ..."
+    answers: ["She accused him of breaking her camera.", "She accused him of having broken her camera."]
+    explanation: "accuse + kişi + of + -ing."
+  - id: q.b2.reporting-verbs.07
+    type: matching
+    prompt: "Doğrudan sözleri uygun aktarma fiiliyle eşleştirin."
+    pairs:
+      - ["\"I'll definitely be there.\"", "promise"]
+      - ["\"Don't touch that, it's hot!\"", "warn"]
+      - ["\"Well done on passing!\"", "congratulate"]
+      - ["\"Yes, it was me who did it.\"", "admit"]
+      - ["\"No, I won't do it.\"", "refuse"]
+    explanation: "Aktarma fiili sözün amacını gösterir."
+  - id: q.b2.reporting-verbs.08
+    type: translation
+    prompt: "Camı kırdığını itiraf etti. (erkek)"
+    answers: ["He admitted breaking the window.", "He admitted that he had broken the window.", "He admitted having broken the window.", "He admitted he had broken the window.", "He admitted that he broke the window."]
+    explanation: "admit + -ing / that + cümle."

@@ -1,0 +1,125 @@
+id: gram.b2.should-have
+kind: grammar
+level: B2
+title_tr: "Eleştiri ve kaçırılan olanaklar: should have, could have, needn't have"
+title_en: "Should have, could have, needn't have"
+objective_tr: Bu dersin sonunda geçmişte yapılmış ya da yapılmamış şeyleri should / shouldn't have ile eleştirebilecek, could have ile kaçırılmış olanakları, needn't have ile gereksiz yere yapılan işleri anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b2.modals-past, gram.b1.advice-forms]
+vocabulary: [should, regret, blame, warn, opportunity, necessary]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir önceki derste kip fiili + have + V3 ile **çıkarım** yapmıştınız. Aynı kalıp, başka kip fiilleriyle geçmişi **değerlendirmeye** yarar: ne yapılmalıydı, ne yapılabilirdi, neye gerek yoktu.
+
+      "You **should have called** me." (Beni aramalıydın. — Aramadın.)
+  - kind: formula
+    title_tr: Yapılar ve anlamları
+    table:
+      headers: ["Yapı", "Anlam", "Gerçek", "Örnek"]
+      rows:
+        - ["should have + V3", "yapmalıydın", "yapmadın", "You should have told me."]
+        - ["shouldn't have + V3", "yapmamalıydın", "yaptın", "I shouldn't have eaten so much."]
+        - ["could have + V3", "yapabilirdin", "yapmadın", "We could have gone by train."]
+        - ["needn't have + V3", "yapmana gerek yoktu", "yaptın (boşuna)", "You needn't have brought wine."]
+        - ["didn't need to + fiil", "gerek yoktu", "genellikle yapmadın", "I didn't need to get up early."]
+        - ["would have + V3", "yapardım", "yapmadım", "I would have helped, but I was away."]
+  - kind: usage
+    title_tr: "Needn't have mi, didn't need to mu?"
+    text_tr: |-
+      "I **needn't have taken** an umbrella." → Şemsiye **aldım**, ama yağmur yağmadı; boşuna almışım.
+
+      "I **didn't need to take** an umbrella." → Gerek yoktu; büyük olasılıkla **almadım**.
+
+      **Could have + V3** eleştiri de bildirebilir: "You **could have told** me!" (Bana söyleyebilirdin!)
+
+      **Ought to have + V3**, should have ile aynı anlamdadır ve daha resmîdir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I should have studied harder for the exam.", tr: "Sınava daha çok çalışmalıydım."}
+      - {en: "You shouldn't have shouted at her.", tr: "Ona bağırmamalıydın."}
+      - {en: "We could have won if we had played better.", tr: "Daha iyi oynasaydık kazanabilirdik."}
+      - {en: "You needn't have cooked. I've already eaten.", tr: "Yemek yapmana gerek yoktu. Ben zaten yedim."}
+      - {en: "They should have arrived by now.", tr: "Şimdiye kadar varmış olmalıydılar."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You should told me earlier.", tr: "Bana daha önce söylemeliydin.", wrong: true, correction: "You should have told me earlier.", note_tr: "should have + V3."}
+      - {en: "I shouldn't have went there.", tr: "Oraya gitmemeliydim.", wrong: true, correction: "I shouldn't have gone there.", note_tr: "Üçüncü biçim."}
+      - {en: "You mustn't have paid; it was free.", tr: "Ödemene gerek yoktu; ücretsizdi.", wrong: true, correction: "You needn't have paid; it was free.", note_tr: "Gereksiz yere yapılan iş: needn't have."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Have'i atlamak** ya da "should of" yazmak.
+
+      **Should have ile must have'i karıştırmak.** "He should have left" = gitmeliydi (ama gitmedi). "He must have left" = gitmiş olmalı.
+
+      **Needn't have ile didn't need to'yu eş sanmak.**
+questions:
+  - id: q.b2.should-have.01
+    type: multiple_choice
+    prompt: "I feel terrible. I ___ that third piece of cake."
+    options:
+      - "*shouldn't have eaten :: Yapılmış ve pişman olunan eylem: shouldn't have + V3."
+      - "shouldn't eat :: Bu, şimdiki ya da genel tavsiye olurdu."
+      - "mustn't have eaten :: Bu yapı pişmanlık bildirmez."
+      - "didn't have to eat :: Bu yalnızca zorunluluk olmadığını söyler."
+    explanation: "Yaptım, yapmamalıydım → shouldn't have + V3."
+  - id: q.b2.should-have.02
+    type: multiple_choice
+    prompt: "You ___ a taxi. I would have picked you up from the station."
+    options:
+      - "*needn't have taken :: Taksiye binildi ama gereksizdi: needn't have + V3."
+      - "didn't need to take :: Bu, çoğunlukla taksiye binilmediğini düşündürür."
+      - "mustn't have taken :: Çıkarım ya da yasak anlamı uymuyor."
+      - "couldn't have taken :: Bu, binmiş olamayacağını söyler."
+    explanation: "Yapıldı ama gereksizdi → needn't have + V3."
+  - id: q.b2.should-have.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"He should have arrived at six.\" ile \"He must have arrived at six.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde altıda varması bekleniyordu (ama varmadı); ikincisinde altıda varmış olduğu sonucuna varılıyor. :: Should have: gerçekleşmemiş beklenti; must have: çıkarım."
+      - "İkisi de altıda vardığını söyler. :: Should have gerçekleşmediğini düşündürür."
+      - "İkisi de varmadığını söyler. :: Must have vardığına dair güçlü kanı bildirir."
+      - "İlki çıkarım, ikincisi eleştiridir. :: Tam tersi."
+    explanation: "should have ≠ must have."
+    lessons: [gram.b2.modals-past]
+  - id: q.b2.should-have.04
+    type: sentence_building
+    prompt: "Gerçek: \"You didn't lock the door. That was a mistake.\" → You should ..."
+    answers: ["You should have locked the door."]
+    explanation: "should have + V3: yapılmamış doğru davranış."
+  - id: q.b2.should-have.05
+    type: error_correction
+    prompt: "We could of caught the earlier train if you had hurried."
+    answers: ["We could have caught the earlier train if you had hurried.", "We could've caught the earlier train if you had hurried."]
+    explanation: "Doğru yazım \"could have\"dir; \"could of\" yanlıştır."
+  - id: q.b2.should-have.06
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["You should have come.", "Gelmedin; gelmeliydin."]
+      - ["You shouldn't have come.", "Geldin; gelmemeliydin."]
+      - ["You could have come.", "Gelebilirdin ama gelmedin."]
+      - ["You needn't have come.", "Geldin ama gerek yoktu."]
+      - ["You must have come.", "Gelmiş olmalısın."]
+    explanation: "Kip fiili + have + V3 geçmişi farklı açılardan değerlendirir."
+  - id: q.b2.should-have.07
+    type: dialogue_completion
+    context: "A: I waited for you for an hour outside the cinema!\nB: I'm so sorry. I ___ you. My phone was dead."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*should have called :: Yapılması gereken ama yapılmayan eylem."
+      - "must have called :: Bu, aradığına dair çıkarım olurdu."
+      - "needn't have called :: Bu, aradığını ama gereksiz olduğunu söyler."
+      - "shouldn't have called :: Bu, aradığını ve pişman olduğunu söyler."
+    explanation: "should have + V3."
+  - id: q.b2.should-have.08
+    type: translation
+    prompt: "Bana daha önce söylemeliydin."
+    answers: ["You should have told me earlier.", "You should have told me before.", "You should have told me sooner.", "You ought to have told me earlier."]
+    explanation: "should have + told."
