@@ -1,0 +1,137 @@
+id: gram.b2.linking-advanced
+kind: grammar
+level: B2
+title_tr: "Yazıda akış: ileri bağlayıcılar"
+title_en: "Advanced linkers and discourse markers"
+objective_tr: Bu dersin sonunda whereas, while, nevertheless, furthermore, moreover, consequently, in contrast, on the other hand gibi bağlayıcılarla düşünceleri resmî bir yazıda düzenleyebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.linking-words]
+vocabulary: [whereas, nevertheless, furthermore, moreover, therefore]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      B1'de although, because, so gibi temel bağlaçları öğrendiniz. Rapor, deneme ve iş yazışmalarında daha **resmî** bağlayıcılar kullanılır. Bunların çoğu iki cümleyi dil bilgisi olarak bağlamaz; **yeni bir cümlenin başında** durur ve önceki cümleyle anlam ilişkisi kurar.
+  - kind: formula
+    title_tr: İşlevlerine göre bağlayıcılar
+    table:
+      headers: ["İşlev", "Bağlayıcılar", "Örnek"]
+      rows:
+        - ["ekleme", "furthermore, moreover, in addition, besides", "The flat is small. Moreover, it is far from the centre."]
+        - ["zıtlık", "however, nevertheless, nonetheless, even so", "It was risky. Nevertheless, they went ahead."]
+        - ["karşılaştırma", "whereas, while, in contrast, on the other hand", "I prefer tea, whereas my wife prefers coffee."]
+        - ["sonuç", "therefore, consequently, as a result, thus", "Sales fell. Consequently, the shop closed."]
+        - ["örnek", "for instance, for example, such as", "Some cities, such as Bursa, have grown fast."]
+        - ["açıklama", "in other words, that is to say", "He was let go; in other words, he was fired."]
+        - ["özet", "in conclusion, to sum up, overall", "To sum up, the plan has more benefits than risks."]
+  - kind: usage
+    title_tr: Noktalama ve yapı
+    text_tr: |-
+      **Cümle bağlayıcıları (however, moreover, therefore...)** nokta ya da noktalı virgülden sonra gelir ve ardından virgül alır: "Prices rose**. However,** demand stayed high."
+
+      **Whereas ve while** gerçek bağlaçtır; iki cümleciği tek cümlede bağlar: "He is outgoing**, whereas** his brother is shy."
+
+      **In addition to, as well as, apart from** edat gibi davranır; ardından **isim ya da -ing** gelir: "**In addition to working** full-time, she studies."
+
+      **However ile nevertheless:** ikisi de zıtlık bildirir; nevertheless "buna rağmen" anlamıyla daha güçlüdür ve bir engelin aşıldığını vurgular.
+
+      **On the other hand** bir konunun iki yanını tartar; **in contrast** iki farklı şeyi karşılaştırır. "On the contrary" ise önceki savı **reddeder** ("tam tersine").
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The hotel was expensive. Furthermore, the rooms were dirty.", tr: "Otel pahalıydı. Üstelik odalar kirliydi."}
+      - {en: "The north is cold and wet, whereas the south is hot and dry.", tr: "Kuzey soğuk ve yağışlıyken güney sıcak ve kurudur."}
+      - {en: "The weather was awful. Nevertheless, we enjoyed the trip.", tr: "Hava berbattı. Yine de geziden keyif aldık."}
+      - {en: "He missed several deadlines. As a result, he lost the contract.", tr: "Birkaç teslim tarihini kaçırdı. Sonuç olarak sözleşmeyi kaybetti."}
+      - {en: "In addition to speaking English, she knows Arabic.", tr: "İngilizce konuşmasının yanı sıra Arapça da biliyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The plan is cheap, however it is risky.", tr: "Plan ucuz, ancak riskli.", wrong: true, correction: "The plan is cheap. However, it is risky.", note_tr: "However cümle bağlamaz."}
+      - {en: "In addition to work full-time, she studies.", tr: "Tam zamanlı çalışmasının yanı sıra okuyor.", wrong: true, correction: "In addition to working full-time, she studies.", note_tr: "In addition to + -ing."}
+      - {en: "I like football. On the contrary, my brother likes tennis.", tr: "Ben futbolu severim. Kardeşim ise tenisi sever.", wrong: true, correction: "I like football. In contrast, my brother likes tennis.", note_tr: "On the contrary reddetmek içindir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Cümle bağlayıcısını virgülle iki cümlenin arasına koymak** (comma splice).
+
+      **Her cümleyi bir bağlayıcıyla başlatmak.** Aşırı kullanım yazıyı yapay kılar; ilişkinin açık olmadığı yerlerde kullanın.
+
+      **On the contrary ile on the other hand'i karıştırmak.**
+
+      **Resmî bağlayıcıları günlük konuşmada kullanmak.** "Moreover" bir sohbette tuhaf kaçar; "also", "and" yeterlidir.
+questions:
+  - id: q.b2.linking-adv.01
+    type: paragraph_completion
+    difficulty: 4
+    context: "Working from home has clear advantages. Employees save time and money on travel. ___, they can organize their day more flexibly."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*Furthermore :: Aynı yönde yeni bir bilgi ekleniyor."
+      - "Nevertheless :: Zıtlık bildirir; burada ek bilgi var."
+      - "Consequently :: Sonuç bildirir; ikinci cümle birincinin sonucu değil."
+      - "Whereas :: İki cümleciği tek cümlede bağlar; cümle başında bu şekilde kullanılmaz."
+    explanation: "Ekleme: furthermore / moreover / in addition."
+  - id: q.b2.linking-adv.02
+    type: paragraph_completion
+    difficulty: 4
+    context: "The company invested heavily in advertising last year. ___, sales fell by ten percent."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*Nevertheless :: Beklenenin tersi bir sonuç: buna rağmen."
+      - "Therefore :: Reklam yatırımının mantıksal sonucu satış düşüşü değildir."
+      - "Moreover :: Aynı yönde ek bilgi değil, beklentiye aykırı bir durum var."
+      - "For instance :: Örnek verilmiyor."
+    explanation: "Beklentiye aykırı sonuç: nevertheless / however."
+  - id: q.b2.linking-adv.03
+    type: multiple_choice
+    prompt: "My sister is very organized, ___ I am always losing things."
+    options:
+      - "*whereas :: İki kişiyi tek cümlede karşılaştıran bağlaç."
+      - "however :: However virgülle iki cümleyi bağlamaz."
+      - "nevertheless :: Cümle bağlayıcısıdır; virgülle bağlamaz."
+      - "moreover :: Ekleme bildirir; burada karşıtlık var."
+    explanation: "whereas / while: iki şeyi karşılaştırır ve cümlecikleri bağlar."
+  - id: q.b2.linking-adv.04
+    type: error_correction
+    prompt: "The product is excellent, however the price is too high."
+    answers: ["The product is excellent. However, the price is too high.", "The product is excellent; however, the price is too high.", "The product is excellent, but the price is too high."]
+    explanation: "However iki cümleyi virgülle bağlayamaz; nokta ya da noktalı virgül gerekir."
+  - id: q.b2.linking-adv.05
+    type: nuance
+    difficulty: 5
+    prompt: "A: \"You must be exhausted after the trip.\" B: \"___, I feel full of energy.\" Hangisi uygundur?"
+    options:
+      - "*On the contrary :: Önceki savı reddeder: tam tersine."
+      - "On the other hand :: Bir konunun diğer yanını tartar; reddetmez."
+      - "In addition :: Ekleme bildirir."
+      - "As a result :: Sonuç bildirir."
+    explanation: "On the contrary = tam tersine (karşı çıkma)."
+  - id: q.b2.linking-adv.06
+    type: word_formation
+    prompt: "In addition to ___ (manage) the team, she handles all the accounts."
+    answers: [managing]
+    explanation: "In addition to bir edat öbeğidir: ardından -ing gelir."
+  - id: q.b2.linking-adv.07
+    type: matching
+    prompt: "Bağlayıcıları işlevleriyle eşleştirin."
+    pairs:
+      - ["moreover", "ekleme"]
+      - ["nevertheless", "zıtlık"]
+      - ["consequently", "sonuç"]
+      - ["for instance", "örnek"]
+      - ["to sum up", "özet"]
+    explanation: "Bağlayıcı, iki cümle arasındaki anlam ilişkisini gösterir."
+  - id: q.b2.linking-adv.08
+    type: written_answer
+    difficulty: 4
+    prompt: "\"Büyük şehirde yaşamak\" konusunda 5–6 cümlelik kısa bir paragraf yazın. Bir avantaj, ona ek ikinci bir avantaj, bir dezavantaj ve bir sonuç cümlesi bulunsun. En az üç resmî bağlayıcı kullanın (ör. furthermore, however, whereas, therefore, to sum up)."
+    model_answers:
+      - "Living in a big city offers many opportunities. There are more jobs and better salaries. Furthermore, cities have excellent hospitals, universities and cultural events. However, the cost of living is very high, and traffic can be exhausting. Small towns are quiet and cheap, whereas cities are noisy and expensive. To sum up, city life suits people who value opportunity more than peace."
+    checklist:
+      - "En az üç resmî bağlayıcı kullandım."
+      - "Cümle bağlayıcılarından (however, furthermore, therefore) önce nokta, sonra virgül koydum."
+      - "Ekleme, zıtlık ve sonuç ilişkilerini doğru bağlayıcıyla verdim."
+      - "Paragrafımın bir giriş ve bir sonuç cümlesi var."
+    explanation: "Resmî yazıda bağlayıcılar düşüncelerin ilişkisini açıkça gösterir; noktalama kurallarına dikkat edin."

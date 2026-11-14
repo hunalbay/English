@@ -1,0 +1,120 @@
+id: gram.b2.verb-object-infinitive
+kind: grammar
+level: B2
+title_tr: "Fiil + nesne + mastar: want someone to, make, let"
+title_en: "Verb + object + infinitive; make and let"
+objective_tr: Bu dersin sonunda want / expect / would like + kişi + to + fiil yapısını, make ve let ile yalın mastarı ve algı fiillerinden sonra gelen biçimleri doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.gerund-infinitive]
+vocabulary: [want, expect, allow, force, let, persuade]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede "Gelmeni istiyorum" derken iyelik ekli bir fiilimsi kullanırız. İngilizcede bu anlam **that'li cümleyle değil**, **fiil + kişi + to + yalın fiil** ile verilir:
+
+      "I want **you to come**." — "I want that you come" yanlıştır.
+  - kind: formula
+    title_tr: Kalıplar
+    table:
+      headers: ["Kalıp", "Fiiller", "Örnek"]
+      rows:
+        - ["fiil + kişi + to + yalın fiil", "want, would like, expect, need, ask, tell, allow, force, persuade, teach", "I expect you to be on time."]
+        - ["fiil + kişi + yalın fiil (to yok)", "make, let, have", "She made me wait. / Let me help."]
+        - ["help + kişi + (to) + yalın fiil", "help", "He helped me (to) move."]
+        - ["algı fiili + kişi + yalın fiil", "see, hear, watch, notice, feel", "I saw him leave. (eylemin tamamı)"]
+        - ["algı fiili + kişi + fiil-ing", "see, hear, watch, notice, feel", "I saw him leaving. (eylemin bir anı)"]
+  - kind: usage
+    title_tr: "Make, let ve edilgenleri"
+    text_tr: |-
+      **make + kişi + yalın fiil** = zorlamak, -dırmak: "The film **made me cry**."
+
+      **let + kişi + yalın fiil** = izin vermek: "My parents **let me stay** out late."
+
+      **Edilgende make "to" alır:** "I **was made to wait** for two hours."
+
+      **Let'in edilgeni yoktur;** yerine **be allowed to** kullanılır: "I **was allowed to stay** out late."
+
+      **Olumsuz mastar:** "I told him **not to** worry.", "She asked me **not to** say anything."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I want you to listen carefully.", tr: "Dikkatle dinlemeni istiyorum."}
+      - {en: "My boss expects me to work at weekends.", tr: "Patronum hafta sonları çalışmamı bekliyor."}
+      - {en: "The teacher made us repeat the exercise.", tr: "Öğretmen bize alıştırmayı tekrarlattı."}
+      - {en: "Would you like me to open the window?", tr: "Pencereyi açmamı ister misiniz?"}
+      - {en: "I heard someone knocking on the door.", tr: "Birinin kapıyı çaldığını duydum."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I want that you help me.", tr: "Bana yardım etmeni istiyorum.", wrong: true, correction: "I want you to help me.", note_tr: "want + kişi + to."}
+      - {en: "She made me to apologize.", tr: "Bana özür dilettirdi.", wrong: true, correction: "She made me apologize.", note_tr: "Make + yalın fiil."}
+      - {en: "They didn't let us to go in.", tr: "İçeri girmemize izin vermediler.", wrong: true, correction: "They didn't let us go in.", note_tr: "Let + yalın fiil."}
+      - {en: "I was made wait outside.", tr: "Dışarıda bekletildim.", wrong: true, correction: "I was made to wait outside.", note_tr: "Edilgende to gelir."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Want'tan sonra that kullanmak.** Türkçe düşünce yapısından kaynaklanan en yaygın hatadır.
+
+      **Make ve let'ten sonra to eklemek.**
+
+      **Suggest, say, explain fiillerini bu kalıba sokmak.** Bunlar kişi + to almaz.
+questions:
+  - id: q.b2.verb-object.01
+    type: multiple_choice
+    prompt: "My parents want ___ a doctor."
+    options:
+      - "*me to become :: want + kişi + to + fiil."
+      - "that I become :: Want'tan sonra that'li cümle kullanılmaz."
+      - "me become :: To gerekir."
+      - "I to become :: Nesne zamiri (me) gerekir."
+    explanation: "want / expect / would like + nesne + to + yalın fiil."
+  - id: q.b2.verb-object.02
+    type: multiple_choice
+    prompt: "The customs officer made us ___ all our bags."
+    options:
+      - "*open :: make + kişi + yalın fiil."
+      - "to open :: Etken yapıda make'ten sonra to gelmez."
+      - "opening :: Make -ing almaz."
+      - "opened :: Geçmiş biçim gelmez."
+    explanation: "make / let + nesne + yalın fiil."
+  - id: q.b2.verb-object.03
+    type: multiple_choice
+    prompt: "We were made ___ for three hours at the border."
+    options:
+      - "*to wait :: Edilgen yapıda make'ten sonra to gelir."
+      - "wait :: Etken yapıda yalın fiil gelir; burada yapı edilgen."
+      - "waiting :: Make -ing almaz."
+      - "waited :: Geçmiş biçim gelmez."
+    explanation: "be made + to + yalın fiil."
+  - id: q.b2.verb-object.04
+    type: nuance
+    difficulty: 4
+    prompt: "\"I saw her cross the road.\" ile \"I saw her crossing the road.\" arasındaki fark nedir?"
+    options:
+      - "*İlkinde karşıya geçişin tamamını gördüm; ikincisinde geçerken (bir anını) gördüm. :: Yalın fiil eylemin tamamını, -ing sürmekte olan bir anını gösterir."
+      - "İlki şimdiki, ikincisi geçmiş zamandır. :: İkisi de geçmişte."
+      - "İlkinde karşıya geçmedi. :: Yalın fiil eylemin tamamlandığını gösterir."
+      - "Aralarında hiçbir fark yoktur. :: Küçük ama gerçek bir anlam farkı vardır."
+    explanation: "see / hear + nesne + yalın fiil (tamamı) / -ing (süreç)."
+  - id: q.b2.verb-object.05
+    type: error_correction
+    prompt: "Our teacher doesn't let us to use dictionaries in the exam."
+    answers: ["Our teacher doesn't let us use dictionaries in the exam.", "Our teacher doesn't allow us to use dictionaries in the exam."]
+    explanation: "Let + nesne + yalın fiil; allow + nesne + to + fiil."
+  - id: q.b2.verb-object.06
+    type: sentence_building
+    prompt: "Edilgene çevirin: \"They didn't let me see the report.\" → I wasn't ..."
+    answers: ["I wasn't allowed to see the report.", "I was not allowed to see the report."]
+    explanation: "Let'in edilgeni yoktur; be allowed to kullanılır."
+  - id: q.b2.verb-object.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Would, you, like, me, to, call, a, taxi]
+    explanation: "Would you like + nesne + to + fiil?"
+  - id: q.b2.verb-object.08
+    type: translation
+    prompt: "Bana yardım etmeni istiyorum."
+    answers: ["I want you to help me.", "I would like you to help me.", "I'd like you to help me."]
+    explanation: "want + you + to + help."

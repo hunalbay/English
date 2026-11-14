@@ -248,3 +248,15 @@ units:
     lessons:
       - gram.b2.modals-past
       - gram.b2.should-have
+
+  - id: b2.u05
+    level: B2
+    title_tr: Yazıda ustalık
+    title_en: Precision in writing
+    description_tr: Cümlecikleri kısaltın, ince karşılaştırmalar yapın, resmî bağlayıcıları ve tanımlıkları doğru kullanın.
+    lessons:
+      - gram.b2.participle-clauses
+      - gram.b2.comparatives-advanced
+      - gram.b2.linking-advanced
+      - gram.b2.verb-object-infinitive
+      - gram.b2.articles-advanced

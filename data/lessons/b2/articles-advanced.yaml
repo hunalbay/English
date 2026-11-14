@@ -1,0 +1,138 @@
+id: gram.b2.articles-advanced
+kind: grammar
+level: B2
+title_tr: "Tanımlıklar: ileri kullanım"
+title_en: "Articles: advanced uses"
+objective_tr: Bu dersin sonunda genelleme yaparken, coğrafi adlarda, kurum adlarında ve soyut isimlerde a / an, the ve tanımlıksız kullanım arasında doğru seçimi yapabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.articles-the]
+vocabulary: [the, society, nature, government, hospital, prison]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede tanımlık bulunmadığı için bu konu ileri düzeyde bile hata kaynağıdır. Temel soru her zaman aynıdır: **Dinleyen hangisinden söz ettiğimi biliyor mu?** Biliyorsa **the**; bilmiyorsa ve tekil sayılabilir bir şeyse **a / an**; genel olarak söz ediyorsam **tanımlık yok**.
+  - kind: formula
+    title_tr: Genelleme yapmak
+    table:
+      headers: ["Yapı", "Kullanım", "Örnek"]
+      rows:
+        - ["tanımlıksız çoğul", "en yaygın genelleme", "Dogs are loyal animals."]
+        - ["tanımlıksız sayılamayan", "genel kavram", "Life is short. / Money can't buy happiness."]
+        - ["a / an + tekil", "türün herhangi bir örneği", "A dog needs exercise."]
+        - ["the + tekil", "tür olarak (resmî, bilimsel)", "The tiger is in danger of extinction."]
+        - ["the + sıfat", "bir insan grubu", "the rich, the poor, the unemployed"]
+  - kind: formula
+    title_tr: Yer adları
+    table:
+      headers: ["Tanımlıksız", "The ile"]
+      rows:
+        - ["çoğu ülke: Türkiye, France", "çoğul ya da birleşik adlar: the Netherlands, the USA, the UK"]
+        - ["şehirler, kıtalar: Paris, Asia", "nehir, deniz, okyanus: the Nile, the Black Sea, the Pacific"]
+        - ["tek dağ, göl: Mount Ararat, Lake Van", "sıradağlar, ada grupları: the Alps, the Canaries"]
+        - ["cadde, meydan, park: Oxford Street, Hyde Park", "otel, müze, tiyatro: the Hilton, the Louvre"]
+        - ["havaalanı, istasyon: Heathrow Airport", "çöller, bölgeler: the Sahara, the Middle East"]
+  - kind: usage
+    title_tr: Kurumlar ve özel durumlar
+    text_tr: |-
+      **Kurumun amacına uygun kullanım → tanımlıksız:** "He is **in hospital**." (hasta olarak), "She goes **to school**." (öğrenci olarak), "He's **in prison**." (mahkûm olarak)
+
+      **Binanın kendisinden söz ediliyorsa → the:** "I went **to the hospital** to visit him.", "The meeting is **at the school**."
+
+      **Soyut isim genelse tanımlıksız, belirliyse the:** "**History** is fascinating." / "**The history of** Anatolia is fascinating."
+
+      **Benzersiz şeyler:** the sun, the moon, the internet, the environment, the government.
+
+      **Öğünler, diller, sporlar, dersler tanımlıksızdır:** have breakfast, speak Turkish, play tennis, study physics. Ama **çalgılar the alır:** play **the** piano.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Young people today spend a lot of time online.", tr: "Bugünün gençleri internette çok vakit geçiriyor."}
+      - {en: "The young people I met in Izmir were very friendly.", tr: "İzmir'de tanıştığım gençler çok cana yakındı."}
+      - {en: "The government should do more for the unemployed.", tr: "Hükûmet işsizler için daha fazlasını yapmalı."}
+      - {en: "We sailed across the Aegean to the Greek islands.", tr: "Ege'yi geçip Yunan adalarına yelken açtık."}
+      - {en: "My brother is at university; he studies law.", tr: "Erkek kardeşim üniversitede; hukuk okuyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The life is difficult.", tr: "Hayat zordur.", wrong: true, correction: "Life is difficult.", note_tr: "Genel soyut kavram: tanımlıksız."}
+      - {en: "I love the nature.", tr: "Doğayı severim.", wrong: true, correction: "I love nature.", note_tr: "Nature tanımlıksız kullanılır."}
+      - {en: "She lives in United States.", tr: "Amerika Birleşik Devletleri'nde yaşıyor.", wrong: true, correction: "She lives in the United States.", note_tr: "Birleşik ülke adı: the."}
+      - {en: "He is in the prison for robbery.", tr: "Soygundan hapiste.", wrong: true, correction: "He is in prison for robbery.", note_tr: "Mahkûm olarak: tanımlıksız."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Genel kavramlara the eklemek** (the life, the love, the nature, the society).
+
+      **"of" ile belirlenen isimde the'yı unutmak.** "History of Türkiye" değil "**the** history of Türkiye".
+
+      **Tekil sayılabilir ismi tanımlıksız bırakmak.** "She is teacher" yanlıştır → "She is **a** teacher."
+questions:
+  - id: q.b2.articles.01
+    type: multiple_choice
+    prompt: "___ money doesn't always bring ___ happiness."
+    options:
+      - "*— / — :: Genel anlamdaki sayılamayan ve soyut isimler tanımlıksızdır."
+      - "The / the :: The belirli bir para ya da mutluluktan söz edildiğini gösterir."
+      - "A / a :: Sayılamayan isimler a / an almaz."
+      - "The / — :: İlk isim de genel anlamda kullanılmış."
+    explanation: "Genelleme: tanımlıksız sayılamayan isim."
+  - id: q.b2.articles.02
+    type: multiple_choice
+    prompt: "We crossed ___ Atlantic and landed in ___ New York."
+    options:
+      - "*the / — :: Okyanus adları the alır; şehir adları almaz."
+      - "— / — :: Okyanus adı the gerektirir."
+      - "the / the :: Şehir adları tanımlık almaz."
+      - "— / the :: İkisi de ters."
+    explanation: "Okyanus, deniz, nehir: the. Şehir, çoğu ülke: tanımlıksız."
+  - id: q.b2.articles.03
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede Ayşe HASTA olarak hastanededir?"
+    options:
+      - "*Ayşe is in hospital. :: Tanımlıksız kullanım kurumun asıl amacını (tedavi görme) bildirir."
+      - "Ayşe is at the hospital. :: Binada bulunuyor; ziyaretçi ya da çalışan olabilir."
+      - "Ayşe went to the hospital to see a friend. :: Ziyaret amacıyla gitmiş."
+      - "Ayşe works at the hospital. :: Çalışan olarak orada."
+    explanation: "in hospital / at school / in prison: kurumun amacına uygun kullanım (İngiliz İngilizcesi)."
+  - id: q.b2.articles.04
+    type: multiple_choice
+    prompt: "___ history of ___ Ottoman Empire is taught in most schools."
+    options:
+      - "*The / the :: \"of\" ile belirlenen isim the alır; imparatorluk adı da the alır."
+      - "— / the :: History burada \"of\" ile belirlenmiş."
+      - "The / — :: İmparatorluk ve krallık adları the alır."
+      - "A / the :: Tek ve belirli bir tarihten söz ediliyor."
+    explanation: "Genel: history. Belirli: the history of..."
+  - id: q.b2.articles.05
+    type: error_correction
+    prompt: "The society should take better care of the elderly."
+    answers: ["Society should take better care of the elderly."]
+    explanation: "Genel anlamda society tanımlıksızdır; \"the elderly\" (yaşlılar) doğrudur."
+  - id: q.b2.articles.06
+    type: error_spotting
+    difficulty: 4
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*I usually have the breakfast at seven. :: Öğün adları tanımlıksız kullanılır: have breakfast."
+      - "She plays the violin in an orchestra. :: Çalgılar the alır: doğru."
+      - "The rich should pay more tax. :: the + sıfat bir grubu anlatır: doğru."
+      - "He studies physics at university. :: Dersler ve kurum kullanımı tanımlıksız: doğru."
+    explanation: "Öğünler, diller, sporlar, dersler tanımlıksızdır."
+  - id: q.b2.articles.07
+    type: matching
+    prompt: "Yer adlarını doğru kullanımla eşleştirin."
+    pairs:
+      - ["Nile", "the (nehir)"]
+      - ["Lake Van", "tanımlıksız (tek göl)"]
+      - ["Alps", "the (sıradağlar)"]
+      - ["Netherlands", "the (çoğul ülke adı)"]
+      - ["Asia", "tanımlıksız (kıta)"]
+    explanation: "Nehir, deniz, sıradağ ve çoğul adlar the alır."
+  - id: q.b2.articles.08
+    type: translation
+    prompt: "Hayat kısa."
+    answers: ["Life is short."]
+    explanation: "Genel soyut kavram tanımlıksızdır."

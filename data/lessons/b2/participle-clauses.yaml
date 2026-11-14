@@ -1,0 +1,120 @@
+id: gram.b2.participle-clauses
+kind: grammar
+level: B2
+title_tr: "Kısaltılmış ilgi cümlecikleri: -ing ve -ed"
+title_en: "Reduced relative clauses and participle clauses"
+objective_tr: Bu dersin sonunda ilgi cümleciklerini -ing (etken) ve V3 (edilgen) biçimleriyle kısaltabilecek, aynı özneyi paylaşan iki cümleyi ortaç yapısıyla birleştirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.b1.relative-clauses, gram.b1.passive-basics]
+vocabulary: [contain, belong, injure, damage, involve, include]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Yazı dilinde ilgi cümlecikleri çoğu zaman **kısaltılır**: ilgi zamiri ve yardımcı fiil atılır, geriye yalnızca ortaç kalır.
+
+      "The man **who is standing** by the door is my uncle." → "The man **standing** by the door is my uncle."
+
+      "The car **which was stolen** last week has been found." → "The car **stolen** last week has been found."
+
+      Seçim basittir: anlam **etken** ise **-ing**, **edilgen** ise **V3** kullanılır.
+  - kind: formula
+    title_tr: Hangi ortaç?
+    table:
+      headers: ["Anlam", "Biçim", "Tam hâli", "Kısaltılmış"]
+      rows:
+        - ["etken, sürmekte", "fiil-ing", "people who are waiting outside", "people waiting outside"]
+        - ["etken, genel durum", "fiil-ing", "a box which contains books", "a box containing books"]
+        - ["edilgen", "V3", "goods which are made in Türkiye", "goods made in Türkiye"]
+        - ["edilgen, sürmekte", "being + V3", "the house which is being built", "the house being built"]
+  - kind: usage
+    title_tr: Ortaç cümlecikleri
+    text_tr: |-
+      İki eylemin **öznesi aynıysa**, biri ortaçla verilebilir:
+
+      **Aynı anda:** "She sat by the window **reading** a book."
+
+      **Neden:** "**Feeling** tired, I went to bed early." (= Because I felt tired...)
+
+      **Önce olan eylem:** "**Having finished** the report, he went home." (= After he had finished...)
+
+      **Edilgen:** "**Built** in 1890, the bridge is still in use."
+
+      **Dikkat:** ortacın öznesi ana cümlenin öznesiyle **aynı olmalıdır**. "Walking home, the rain started" yanlıştır (yürüyen yağmur değildir).
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The woman talking to Deniz is our new manager.", tr: "Deniz'le konuşan kadın yeni müdürümüz."}
+      - {en: "Most of the people invited to the party didn't come.", tr: "Partiye davet edilenlerin çoğu gelmedi."}
+      - {en: "I received a letter containing important documents.", tr: "İçinde önemli belgeler olan bir mektup aldım."}
+      - {en: "Not knowing what to say, I kept quiet.", tr: "Ne diyeceğimi bilmediğim için sustum."}
+      - {en: "Having lived in Germany, she speaks German fluently.", tr: "Almanya'da yaşamış olduğu için Almancayı akıcı konuşuyor."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The window breaking in the storm has been repaired.", tr: "Fırtınada kırılan pencere onarıldı.", wrong: true, correction: "The window broken in the storm has been repaired.", note_tr: "Edilgen anlam: V3."}
+      - {en: "The students sat at the back were talking.", tr: "Arkada oturan öğrenciler konuşuyordu.", wrong: true, correction: "The students sitting at the back were talking.", note_tr: "Etken anlam: -ing."}
+      - {en: "Looking out of the window, the mountains were beautiful.", tr: "Pencereden bakınca dağlar çok güzeldi.", wrong: true, correction: "Looking out of the window, I saw the beautiful mountains.", note_tr: "Ortacın öznesi ana cümlenin öznesi olmalı."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **-ing ile V3'ü karıştırmak.** Kendinize sorun: isim eylemi **yapıyor mu**, yoksa eylem ona **yapılıyor mu**?
+
+      **Asılı ortaç (dangling participle).** Ortacın gizli öznesi ana cümlenin öznesiyle uyuşmalıdır.
+
+      **Nesne olan ilgi zamirini bu yolla kısaltmaya çalışmak.** "The book which I bought" → "the book I bought" olur; "the book buying" olmaz.
+questions:
+  - id: q.b2.participle.01
+    type: multiple_choice
+    prompt: "The road ___ the two villages is very narrow."
+    options:
+      - "*connecting :: Yol bağlar (etken): -ing."
+      - "connected :: V3 edilgen anlam verir; yol bağlanmıyor, bağlıyor."
+      - "connects :: Cümlede zaten bir çekimli fiil (is) var."
+      - "which connecting :: İlgi zamiriyle birlikte çekimli fiil gerekir."
+    explanation: "Etken anlam → fiil-ing."
+  - id: q.b2.participle.02
+    type: multiple_choice
+    prompt: "Some of the paintings ___ from the museum have never been found."
+    options:
+      - "*stolen :: Tablolar çalındı (edilgen): V3."
+      - "stealing :: -ing etken anlam verir; tablolar çalmaz."
+      - "stole :: İkinci biçim ortaç olarak kullanılmaz."
+      - "were stolen :: İkinci bir çekimli fiil cümleyi bozar (have ... been found zaten var)."
+    explanation: "Edilgen anlam → V3."
+  - id: q.b2.participle.03
+    type: sentence_building
+    prompt: "Kısaltın: \"The man who was arrested by the police is my neighbour.\" → The man ..."
+    answers: ["The man arrested by the police is my neighbour.", "The man arrested by the police is my neighbor."]
+    explanation: "who was atılır; V3 kalır."
+  - id: q.b2.participle.04
+    type: sentence_building
+    prompt: "Ortaçla birleştirin: \"She felt ill. She decided to go home.\" → Feeling ..."
+    answers: ["Feeling ill, she decided to go home."]
+    explanation: "Neden bildiren ortaç cümleciği; iki eylemin öznesi aynı."
+  - id: q.b2.participle.05
+    type: error_spotting
+    difficulty: 4
+    prompt: "Hangi cümle yanlıştır?"
+    options:
+      - "*Walking through the park, a dog bit me. :: Asılı ortaç: yürüyen köpek değil konuşandır."
+      - "Walking through the park, I was bitten by a dog. :: Doğru: yürüyen de ısırılan da I."
+      - "While I was walking through the park, a dog bit me. :: Doğru: özne açıkça belirtilmiş."
+      - "A dog bit me as I was walking through the park. :: Doğru."
+    explanation: "Ortacın gizli öznesi ana cümlenin öznesiyle aynı olmalıdır."
+  - id: q.b2.participle.06
+    type: error_correction
+    prompt: "The languages speaking in Switzerland are German, French, Italian and Romansh."
+    answers: ["The languages spoken in Switzerland are German, French, Italian and Romansh."]
+    explanation: "Diller konuşulur (edilgen): spoken."
+  - id: q.b2.participle.07
+    type: word_formation
+    prompt: "___ (finish) all her work, she switched off the computer."
+    answers: ["Having finished"]
+    explanation: "Önce tamamlanan eylem: having + V3."
+  - id: q.b2.participle.08
+    type: translation
+    prompt: "Kapının yanında duran adam benim amcam."
+    answers: ["The man standing by the door is my uncle.", "The man who is standing by the door is my uncle.", "The man standing next to the door is my uncle.", "The man standing near the door is my uncle.", "The man standing at the door is my uncle."]
+    explanation: "the man (who is) standing..."

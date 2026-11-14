@@ -1,0 +1,126 @@
+id: gram.b2.comparatives-advanced
+kind: grammar
+level: B2
+title_tr: "İleri karşılaştırma yapıları"
+title_en: "Advanced comparison"
+objective_tr: Bu dersin sonunda karşılaştırmaları much, far, slightly gibi sözcüklerle derecelendirebilecek, the ... the ..., as ... as ve giderek artışı bildiren yapıları kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.comparatives, gram.a2.superlatives]
+vocabulary: [far, slightly, nearly, twice, similar, compare]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      A2'de -er / more ve -est / most ile temel karşılaştırmayı öğrendiniz. Bu derste farkın **ne kadar** olduğunu belirtmeyi ve karşılaştırmanın daha ince biçimlerini göreceksiniz.
+  - kind: formula
+    title_tr: Farkı derecelendirmek
+    table:
+      headers: ["Fark", "Sözcükler", "Örnek"]
+      rows:
+        - ["büyük fark", "much, far, a lot, considerably", "This flat is far bigger than ours."]
+        - ["küçük fark", "a bit, a little, slightly", "It's slightly more expensive."]
+        - ["eşitlik", "as + sıfat + as", "She is as tall as her brother."]
+        - ["neredeyse eşit", "nearly / almost / not quite as ... as", "It's not quite as good as the first one."]
+        - ["kat bildirme", "twice / three times as ... as", "It costs twice as much as mine."]
+        - ["en üstünlükte vurgu", "by far, easily", "It's by far the best film this year."]
+  - kind: formula
+    title_tr: Özel yapılar
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["the + karş., the + karş.", "ne kadar ... o kadar ...", "The more you practise, the better you get."]
+        - ["karş. + and + karş.", "giderek", "It's getting colder and colder."]
+        - ["more and more + sıfat", "giderek", "Life is becoming more and more expensive."]
+        - ["the same as", "ile aynı", "My phone is the same as yours."]
+        - ["similar to / different from", "benzer / farklı", "Her job is similar to mine."]
+        - ["like / as", "gibi / olarak", "He works like a machine. / He works as a waiter."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Very karşılaştırma biçimiyle kullanılmaz:** "very bigger" yanlıştır → "**much** bigger".
+
+      **Like + isim** benzetme yapar; **as + isim** gerçek rolü bildirir. "He spoke **like** a teacher." (öğretmen gibi — öğretmen değil) / "He spoke **as** a teacher." (öğretmen olarak — öğretmen)
+
+      **Olumsuz eşitlik:** "not as ... as" = daha az: "He isn't **as** tall **as** me." = I'm taller.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Istanbul is much more crowded than Ankara.", tr: "İstanbul Ankara'dan çok daha kalabalık."}
+      - {en: "The sooner we leave, the earlier we'll arrive.", tr: "Ne kadar erken çıkarsak o kadar erken varırız."}
+      - {en: "This laptop is twice as fast as my old one.", tr: "Bu dizüstü bilgisayar eskisinden iki kat hızlı."}
+      - {en: "The weather is getting worse and worse.", tr: "Hava giderek kötüleşiyor."}
+      - {en: "The exam wasn't nearly as difficult as I expected.", tr: "Sınav beklediğim kadar zor değildi; çok daha kolaydı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "This one is very better.", tr: "Bu çok daha iyi.", wrong: true, correction: "This one is much better.", note_tr: "Karşılaştırmada much / far."}
+      - {en: "The more you eat, more you want.", tr: "Ne kadar çok yersen o kadar çok istersin.", wrong: true, correction: "The more you eat, the more you want.", note_tr: "İki bölümde de the."}
+      - {en: "My bag is the same like yours.", tr: "Çantam seninkiyle aynı.", wrong: true, correction: "My bag is the same as yours.", note_tr: "the same as."}
+      - {en: "She is as tall than me.", tr: "Benim kadar uzun.", wrong: true, correction: "She is as tall as me.", note_tr: "as ... as."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Karşılaştırma biçimini very ile güçlendirmek.**
+
+      **The ... the ... yapısında the'yı ya da sözcük sırasını bozmak.** Her bölüm "the + karşılaştırma biçimi" ile başlar.
+
+      **Like ile as'i karıştırmak.**
+questions:
+  - id: q.b2.comparatives.01
+    type: multiple_choice
+    prompt: "The new model is ___ more efficient than the old one."
+    options:
+      - "*far :: Büyük farkı vurgular: far / much + karşılaştırma biçimi."
+      - "very :: Very karşılaştırma biçimiyle kullanılmaz."
+      - "too :: Too karşılaştırma biçimini bu şekilde nitelemez."
+      - "so :: So karşılaştırma biçimiyle kullanılmaz (so much more denir)."
+    explanation: "much / far / a lot + karşılaştırma biçimi."
+  - id: q.b2.comparatives.02
+    type: multiple_choice
+    prompt: "___ you study, ___ results you will get."
+    options:
+      - "*The harder / the better :: the + karşılaştırma, the + karşılaştırma."
+      - "Harder / better :: İki bölümde de the gerekir."
+      - "The hardest / the best :: En üstünlük değil karşılaştırma biçimi kullanılır."
+      - "More hard / more good :: Hard ve good düzensiz / kısa sıfatlardır."
+    explanation: "Ne kadar ... o kadar ...: the + -er, the + -er."
+  - id: q.b2.comparatives.03
+    type: multiple_choice
+    prompt: "A ticket to London costs three times ___ a ticket to Athens."
+    options:
+      - "*as much as :: Kat bildirme: three times as much as."
+      - "more as :: \"More as\" diye bir yapı yoktur."
+      - "much than :: Than'den önce karşılaştırma biçimi gerekir."
+      - "as more as :: As ... as arasında yalın biçim gelir."
+    explanation: "twice / three times + as + much / many + as."
+  - id: q.b2.comparatives.04
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede Kemal gerçekten bir garsondur?"
+    options:
+      - "*Kemal works as a waiter in the evenings. :: As + isim gerçek görevi bildirir."
+      - "Kemal runs around like a waiter. :: Like benzetme yapar; garson değildir."
+      - "Kemal was dressed like a waiter. :: Garson gibi giyinmişti; garson olduğu anlamına gelmez."
+      - "Kemal talks like a waiter. :: Benzetme."
+    explanation: "as = olarak (gerçek rol); like = gibi (benzetme)."
+  - id: q.b2.comparatives.05
+    type: error_correction
+    prompt: "Flats in the centre are very more expensive than flats in the suburbs."
+    answers: ["Flats in the centre are much more expensive than flats in the suburbs.", "Flats in the centre are far more expensive than flats in the suburbs.", "Flats in the centre are a lot more expensive than flats in the suburbs."]
+    explanation: "Karşılaştırma biçimi much / far / a lot ile güçlendirilir."
+  - id: q.b2.comparatives.06
+    type: sentence_building
+    prompt: "Aynı anlamı \"not as ... as\" ile verin: \"The film was worse than the book.\" → The film wasn't ..."
+    answers: ["The film wasn't as good as the book.", "The film was not as good as the book."]
+    explanation: "worse than = not as good as."
+  - id: q.b2.comparatives.07
+    type: fill_blank
+    prompt: "The traffic in this city is getting worse and ___."
+    answers: [worse]
+    explanation: "Giderek artış: karşılaştırma + and + karşılaştırma."
+  - id: q.b2.comparatives.08
+    type: translation
+    prompt: "Ne kadar çok okursan o kadar çok öğrenirsin."
+    answers: ["The more you read, the more you learn.", "The more you read, the more you will learn.", "The more you read, the more you'll learn."]
+    explanation: "the more ..., the more ..."
