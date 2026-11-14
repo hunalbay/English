@@ -1,0 +1,129 @@
+id: gram.b1.modals-deduction
+kind: grammar
+level: B1
+title_tr: "Çıkarım yapmak: must, might, can't"
+title_en: "Modals of deduction: must, might, could, can't"
+objective_tr: Bu dersin sonunda eldeki ipuçlarına dayanarak şimdiki durum hakkında ne kadar emin olduğunuzu must, may, might, could ve can't ile anlatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.must-have-to, gram.a2.may-might]
+vocabulary: [must, may, sure, perhaps, certain, probably]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bir şeyi kesin olarak bilmediğimizde, eldeki ipuçlarından **çıkarım** yaparız. İngilizcede ne kadar emin olduğumuzu kip fiili gösterir.
+
+      "The lights are on. She **must** be at home." (Işıklar açık. Evde olmalı.)
+
+      Buradaki must zorunluluk bildirmez; **"eminim ki öyle"** anlamındadır.
+  - kind: formula
+    title_tr: Eminlik derecesi
+    table:
+      headers: ["Kip fiili", "Anlam", "Örnek"]
+      rows:
+        - ["must", "eminim öyle (%95)", "He must be tired. He worked all night."]
+        - ["may / might / could", "olabilir, belki (%50)", "She might be in a meeting."]
+        - ["may not / might not", "olmayabilir", "He might not know the answer."]
+        - ["can't", "eminim öyle değil, olamaz (%95)", "That can't be Ali. He's in Berlin."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Must'ın çıkarımdaki olumsuzu "mustn't" değil "can't"tır.** "It mustn't be true" yanlıştır → "It **can't** be true." (Mustn't yasak bildirir.)
+
+      **Sürmekte olan eylemler için be + -ing:** "He isn't answering. He **must be driving**."
+
+      **Could not ≠ might not.** "It **couldn't** be true" = olamaz (can't gibi). "It **might not** be true" = doğru olmayabilir.
+
+      Türkçede bu anlamlar **-meli (olmalı), olabilir, olamaz** ile verilir.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You've been travelling all day. You must be exhausted.", tr: "Bütün gün yoldaydın. Çok yorgun olmalısın."}
+      - {en: "I'm not sure where Ece is. She might be at the gym.", tr: "Ece'nin nerede olduğundan emin değilim. Spor salonunda olabilir."}
+      - {en: "This can't be the right address. There's no house here.", tr: "Bu doğru adres olamaz. Burada ev yok."}
+      - {en: "The phone is ringing. It could be your mother.", tr: "Telefon çalıyor. Annen olabilir."}
+      - {en: "He's not picking up. He must be sleeping.", tr: "Açmıyor. Uyuyor olmalı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "She mustn't be at home. The lights are off.", tr: "Evde olamaz. Işıklar kapalı.", wrong: true, correction: "She can't be at home. The lights are off.", note_tr: "Olumsuz çıkarım: can't."}
+      - {en: "He must to be rich.", tr: "Zengin olmalı.", wrong: true, correction: "He must be rich.", note_tr: "Must'tan sonra to yok."}
+      - {en: "It can be Ali at the door.", tr: "Kapıdaki Ali olabilir.", wrong: true, correction: "It could be Ali at the door.", note_tr: "Belirli bir olasılık için could / might."}
+      - {en: "She mights be late.", tr: "Geç kalabilir.", wrong: true, correction: "She might be late.", note_tr: "Kip fiilleri -s almaz."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Olumsuz çıkarımda mustn't kullanmak.**
+
+      **Belirli bir olasılık için can kullanmak.** Can genel olasılığı anlatır ("It can be cold here in winter"); şu anki belirli bir durum için could / might / may kullanılır.
+
+      **Maybe ile may be'yi karıştırmak.** "**Maybe** he is ill." (zarf) / "He **may be** ill." (kip fiili + be)
+questions:
+  - id: q.b1.deduction.01
+    type: multiple_choice
+    prompt: "She has three houses and a private plane. She ___ be very rich."
+    options:
+      - "*must :: Güçlü kanıta dayalı olumlu çıkarım: must."
+      - "can't :: Can't \"olamaz\" demektir; kanıtlar tersini gösteriyor."
+      - "might not :: Kanıtlar güçlü; \"olmayabilir\" uymuyor."
+      - "mustn't :: Mustn't yasak bildirir, çıkarım değil."
+    explanation: "Eminim öyle → must."
+  - id: q.b1.deduction.02
+    type: multiple_choice
+    prompt: "That ___ be Mr Kaya. He's on holiday in Spain this week."
+    options:
+      - "*can't :: Güçlü kanıta dayalı olumsuz çıkarım: can't."
+      - "mustn't :: Çıkarımda mustn't kullanılmaz."
+      - "must :: Kanıt tersini gösteriyor."
+      - "might :: Konuşan emin; \"olabilir\" yeterince güçlü değil."
+    explanation: "Eminim öyle değil → can't."
+  - id: q.b1.deduction.03
+    type: multiple_choice
+    prompt: "I don't know where my keys are. They ___ be in the car."
+    options:
+      - "*might :: Emin değilim, olabilir: might / may / could."
+      - "must :: Konuşan bilmediğini söylüyor; emin değil."
+      - "can't :: Olamayacağına dair kanıt yok."
+      - "can :: Belirli bir olasılık için can kullanılmaz."
+    explanation: "Belki → may / might / could."
+  - id: q.b1.deduction.04
+    type: error_correction
+    prompt: "You've just eaten a huge meal. You mustn't be hungry!"
+    answers: ["You've just eaten a huge meal. You can't be hungry!", "You've just eaten a huge meal. You can't be hungry.", "You have just eaten a huge meal. You can't be hungry!"]
+    explanation: "Olumsuz çıkarım can't ile yapılır."
+  - id: q.b1.deduction.05
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["He must be at work.", "İşte olduğundan eminim."]
+      - ["He might be at work.", "Belki iştedir."]
+      - ["He can't be at work.", "İşte olmadığından eminim."]
+      - ["He might not be at work.", "Belki işte değildir."]
+    explanation: "Kip fiili, konuşanın ne kadar emin olduğunu gösterir."
+  - id: q.b1.deduction.06
+    type: dialogue_completion
+    context: "A: Whose jacket is this?\nB: I'm not sure. It ___ be Burak's. He has one like that."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*could :: B emin değil ama bir olasılık görüyor."
+      - "can't :: B olasılığı destekleyen bir neden veriyor."
+      - "mustn't :: Çıkarımda kullanılmaz."
+      - "has to :: \"I'm not sure\" ile kesinlik bildiren has to çelişir."
+    explanation: "Emin olmadığımız olasılık: could / might / may."
+  - id: q.b1.deduction.07
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede must zorunluluk DEĞİL çıkarım bildirir?"
+    options:
+      - "*You must be Selin's brother. You look just like her. :: Benzerlikten yola çıkan bir çıkarım."
+      - "You must be at the airport two hours before the flight. :: Bir kural, zorunluluk."
+      - "You must be quiet in the library. :: Bir kural, zorunluluk."
+      - "You must be careful with that knife. :: Güçlü bir uyarı, zorunluluk."
+    explanation: "Must + be çıkarım da zorunluluk da bildirebilir; bağlam belirler."
+    lessons: [gram.a2.must-have-to]
+  - id: q.b1.deduction.08
+    type: translation
+    prompt: "Çok yorgun olmalısın."
+    answers: ["You must be very tired.", "You must be so tired.", "You must be exhausted."]
+    explanation: "Çıkarım: must + be."

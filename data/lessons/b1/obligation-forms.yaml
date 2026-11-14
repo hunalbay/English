@@ -1,0 +1,126 @@
+id: gram.b1.obligation-forms
+kind: grammar
+level: B1
+title_tr: "Zorunluluk ve gereklilik: had to, needn't, be allowed to"
+title_en: "Obligation and necessity in different tenses"
+objective_tr: Bu dersin sonunda zorunluluğu geçmiş ve gelecekte anlatabilecek, mustn't ile don't have to / needn't farkını kullanabilecek, izin bildirmek için be allowed to yapısını kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.must-have-to]
+vocabulary: [need, allow, necessary, rule, uniform, permission]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Must**'ın geçmiş ya da gelecek biçimi yoktur. Bu zamanlarda **have to** kullanılır: "I **had to** work last weekend.", "You **will have to** wait."
+
+      Bu derste ayrıca gereklilik bildiren **need to / needn't** ve izin bildiren **be allowed to** yapılarını göreceksiniz.
+  - kind: formula
+    title_tr: Zamanlara göre zorunluluk
+    table:
+      headers: ["Zaman", "Zorunlu", "Zorunlu değil"]
+      rows:
+        - ["Şimdi", "must / have to", "don't have to / needn't / don't need to"]
+        - ["Geçmiş", "had to", "didn't have to / didn't need to"]
+        - ["Gelecek", "will have to", "won't have to"]
+        - ["Present Perfect", "have had to", "haven't had to"]
+  - kind: comparison
+    title_tr: "Yasak mı, gereksiz mi?"
+    table:
+      headers: ["Yapı", "Anlam", "Örnek"]
+      rows:
+        - ["mustn't", "yasak, yapma", "You mustn't park here."]
+        - ["don't have to", "gerek yok, istersen yap", "You don't have to pay. It's free."]
+        - ["needn't", "gerek yok (= don't have to)", "You needn't worry."]
+        - ["be allowed to", "izinli olmak", "We are allowed to use dictionaries."]
+        - ["not be allowed to", "izinli olmamak", "You aren't allowed to smoke here."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Needn't bir kip fiilidir:** ardından **to gelmez** ("You needn't come"). **Need to** ise normal bir fiildir: "You **don't need to** come."
+
+      **Be allowed to her zamanda kullanılır:** "I **wasn't allowed to** go out late.", "Will we **be allowed to** take photos?"
+
+      **Soru:** "**Did** you **have to** wear a uniform?" — "Had you to..." denmez.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I had to get up at five yesterday.", tr: "Dün beşte kalkmak zorunda kaldım."}
+      - {en: "We didn't have to wait long.", tr: "Uzun süre beklemek zorunda kalmadık."}
+      - {en: "You needn't bring anything. We have everything.", tr: "Bir şey getirmene gerek yok. Her şeyimiz var."}
+      - {en: "You'll have to show your passport.", tr: "Pasaportunuzu göstermeniz gerekecek."}
+      - {en: "Children aren't allowed to enter without an adult.", tr: "Çocukların yanlarında bir yetişkin olmadan girmesine izin verilmez."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I must go to the dentist yesterday.", tr: "Dün dişçiye gitmek zorunda kaldım.", wrong: true, correction: "I had to go to the dentist yesterday.", note_tr: "Geçmiş: had to."}
+      - {en: "You mustn't come if you are busy.", tr: "Meşgulsen gelmek zorunda değilsin.", wrong: true, correction: "You don't have to come if you are busy.", note_tr: "Gerek yok: don't have to."}
+      - {en: "You needn't to hurry.", tr: "Acele etmene gerek yok.", wrong: true, correction: "You needn't hurry.", note_tr: "Needn't + yalın fiil."}
+      - {en: "We weren't allowed use our phones.", tr: "Telefonlarımızı kullanmamıza izin verilmedi.", wrong: true, correction: "We weren't allowed to use our phones.", note_tr: "allowed + to."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Mustn't ile don't have to'yu eş sanmak.** Olumluları yakın anlamlı olsa da olumsuzları tamamen farklıdır.
+
+      **Must'ı geçmişte kullanmak.**
+
+      **Needn't ile don't need to'yu karıştırıp "needn't to" demek.**
+questions:
+  - id: q.b1.obligation.01
+    type: multiple_choice
+    prompt: "The buses weren't running, so we ___ walk home."
+    options:
+      - "*had to :: Geçmişteki zorunluluk: had to."
+      - "must :: Must'ın geçmiş biçimi yoktur."
+      - "have to :: Hikâye geçmişte."
+      - "must to :: Böyle bir yapı yoktur."
+    explanation: "must / have to → geçmişte had to."
+  - id: q.b1.obligation.02
+    type: multiple_choice
+    prompt: "Tomorrow is a holiday. I ___ get up early."
+    options:
+      - "*don't have to :: Gerek yok: don't have to."
+      - "mustn't :: Mustn't yasak bildirir; erken kalkmak yasak değil."
+      - "haven't to :: Böyle bir olumsuz biçim kullanılmaz."
+      - "am not allowed to :: İzin değil, gereklilik söz konusu."
+    explanation: "Gerekli değil → don't have to / needn't."
+  - id: q.b1.obligation.03
+    type: multiple_choice
+    prompt: "You ___ touch that wire. It's dangerous!"
+    options:
+      - "*mustn't :: Güçlü yasak ya da uyarı: mustn't."
+      - "don't have to :: Bu, \"dokunmak zorunda değilsin\" anlamına gelir; tehlikeyi anlatmaz."
+      - "needn't :: \"Gerek yok\" anlamındadır; yasak bildirmez."
+      - "didn't have to :: Geçmiş zaman uymuyor."
+    explanation: "Yapma, yasak → mustn't."
+  - id: q.b1.obligation.04
+    type: fill_blank
+    prompt: "When I was at school, we weren't ___ to wear jeans."
+    answers: [allowed, permitted]
+    explanation: "not be allowed to: izinli olmamak."
+  - id: q.b1.obligation.05
+    type: error_correction
+    prompt: "You needn't to book a table. The restaurant is never full."
+    answers: ["You needn't book a table. The restaurant is never full.", "You don't need to book a table. The restaurant is never full.", "You don't have to book a table. The restaurant is never full."]
+    explanation: "Needn't bir kip fiilidir; ardından to gelmez."
+  - id: q.b1.obligation.06
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Did, you, have, to, wear, a, uniform]
+    explanation: "Did + özne + have to + fiil?"
+  - id: q.b1.obligation.07
+    type: nuance
+    difficulty: 3
+    prompt: "Müze girişinde şu yazı var: \"Entrance is free.\" Hangisi doğrudur?"
+    options:
+      - "*You don't have to pay. :: Ödeme gerekmiyor."
+      - "You mustn't pay. :: Bu, ödemenin yasak olduğunu söyler."
+      - "You aren't allowed to pay. :: Bu da ödemenin yasak olduğunu söyler."
+      - "You had to pay. :: Geçmişte zorunluluk bildirir."
+    explanation: "Gerek yok → don't have to; yasak → mustn't."
+    lessons: [gram.a2.must-have-to]
+  - id: q.b1.obligation.08
+    type: translation
+    prompt: "Dün çalışmak zorunda kaldım."
+    answers: ["I had to work yesterday.", "Yesterday I had to work."]
+    explanation: "had to + yalın fiil."

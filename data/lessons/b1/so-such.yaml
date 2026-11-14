@@ -1,0 +1,121 @@
+id: gram.b1.so-such
+kind: grammar
+level: B1
+title_tr: "O kadar ... ki: so, such, too, enough"
+title_en: "So and such; result clauses"
+objective_tr: Bu dersin sonunda so + sıfat ve such + isim öbeği ile vurgu yapabilecek, so / such ... that ile sonuç bildirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.too-enough]
+vocabulary: [so, such, result, crowded, delicious, tired]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **So** ve **such** ikisi de "o kadar, öyle" anlamında vurgu yapar. Fark, ardından gelen sözcüktedir:
+
+      **so + sıfat / zarf:** "The film was **so boring**."
+
+      **such + (a / an) + (sıfat) + isim:** "It was **such a boring film**."
+
+      Ardından **that** ile sonuç eklenebilir: "It was **so** cold **that** we stayed at home." (Hava o kadar soğuktu ki evde kaldık.)
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Yapı", "Örnek"]
+      rows:
+        - ["so + sıfat / zarf (+ that)", "He spoke so quickly that I couldn't follow."]
+        - ["such + a / an + sıfat + tekil isim", "She is such a kind person."]
+        - ["such + sıfat + çoğul / sayılamayan isim", "They are such nice people. / It was such awful weather."]
+        - ["so much / so many + isim", "There were so many people."]
+        - ["so little / so few + isim", "We have so little time."]
+  - kind: comparison
+    title_tr: "So, too, very"
+    table:
+      headers: ["Sözcük", "Anlam", "Örnek"]
+      rows:
+        - ["very", "çok (yansız)", "The coffee is very hot."]
+        - ["so", "o kadar (vurgu, çoğu zaman sonuçla)", "The coffee is so hot that I can't hold the cup."]
+        - ["too", "fazla, gereğinden çok (olumsuz)", "The coffee is too hot to drink."]
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I was so tired that I fell asleep on the sofa.", tr: "O kadar yorgundum ki kanepede uyuyakaldım."}
+      - {en: "It was such a good book that I read it twice.", tr: "O kadar iyi bir kitaptı ki iki kez okudum."}
+      - {en: "We had such lovely weather on holiday.", tr: "Tatilde öyle güzel bir hava vardı ki."}
+      - {en: "There was so much noise that I couldn't sleep.", tr: "O kadar çok gürültü vardı ki uyuyamadım."}
+      - {en: "Why are you driving so fast?", tr: "Neden bu kadar hızlı sürüyorsun?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "It was so nice day.", tr: "Çok güzel bir gündü.", wrong: true, correction: "It was such a nice day.", note_tr: "İsim varsa such."}
+      - {en: "The food was such delicious.", tr: "Yemek çok lezzetliydi.", wrong: true, correction: "The food was so delicious.", note_tr: "Yalnızca sıfat varsa so."}
+      - {en: "She has such many friends.", tr: "O kadar çok arkadaşı var ki.", wrong: true, correction: "She has so many friends.", note_tr: "many / much ile so."}
+      - {en: "It was a such good idea.", tr: "Çok iyi bir fikirdi.", wrong: true, correction: "It was such a good idea.", note_tr: "Sıra: such + a."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İsimden önce so kullanmak.** Ardından isim geliyorsa such kullanın.
+
+      **A / an'in yerini karıştırmak.** "such a" sırası değişmez.
+
+      **So ile too'yu eş kullanmak.** "I'm too happy" tuhaftır; too bir sorunu, fazlalığı anlatır.
+questions:
+  - id: q.b1.so-such.01
+    type: multiple_choice
+    prompt: "It was ___ beautiful day that we decided to have a picnic."
+    options:
+      - "*such a :: Sıfat + tekil isim (beautiful day) → such a."
+      - "so :: So yalnızca sıfat ya da zarftan önce kullanılır."
+      - "a such :: Sıra \"such a\" olmalıdır."
+      - "so a :: \"So a\" bu sırayla kullanılmaz."
+    explanation: "such + a / an + sıfat + isim."
+  - id: q.b1.so-such.02
+    type: multiple_choice
+    prompt: "The exam was ___ difficult that nobody finished it."
+    options:
+      - "*so :: Yalnızca sıfat var: so + sıfat + that."
+      - "such :: Such'tan sonra isim gerekir."
+      - "such a :: Ardından isim yok."
+      - "too :: Too ... that yapısı kurulmaz (too ... to kullanılır)."
+    explanation: "so + sıfat + that + sonuç."
+  - id: q.b1.so-such.03
+    type: multiple_choice
+    prompt: "There were ___ people at the concert that we couldn't see the stage."
+    options:
+      - "*so many :: Sayılabilir çoğul isim: so many."
+      - "such many :: Many ile such kullanılmaz."
+      - "so much :: Much sayılamayan isimlerle kullanılır."
+      - "too :: Too tek başına isimden önce gelmez."
+    explanation: "so many + çoğul isim; so much + sayılamayan isim."
+  - id: q.b1.so-such.04
+    type: error_correction
+    prompt: "They are so friendly people."
+    answers: ["They are such friendly people.", "They are so friendly."]
+    explanation: "Sıfat + isim varsa such kullanılır."
+  - id: q.b1.so-such.05
+    type: sentence_building
+    prompt: "so ... that ile birleştirin: \"The suitcase was very heavy. I couldn't lift it.\""
+    answers: ["The suitcase was so heavy that I couldn't lift it.", "The suitcase was so heavy I couldn't lift it.", "The suitcase was so heavy that I could not lift it."]
+    explanation: "so + sıfat + that + sonuç."
+  - id: q.b1.so-such.06
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümle bir SORUN (fazlalık) bildirir?"
+    options:
+      - "*The tea is too sweet. :: Too: gereğinden fazla, istenmeyen durum."
+      - "The tea is so sweet! :: So yalnızca vurgu yapar; olumlu da olabilir."
+      - "The tea is very sweet. :: Very yansız bir derecelendirmedir."
+      - "It's such sweet tea! :: Such vurgu yapar."
+    explanation: "Too olumsuz bir fazlalık bildirir."
+    lessons: [gram.a2.too-enough]
+  - id: q.b1.so-such.07
+    type: fill_blank
+    prompt: "We had ___ terrible weather that we came home early."
+    answers: [such]
+    explanation: "Sıfat + sayılamayan isim (terrible weather) → such (a / an olmadan)."
+  - id: q.b1.so-such.08
+    type: translation
+    prompt: "O kadar yorgundum ki hemen uyudum."
+    answers: ["I was so tired that I fell asleep immediately.", "I was so tired that I slept immediately.", "I was so tired that I fell asleep straight away.", "I was so tired that I went to sleep immediately.", "I was so tired that I fell asleep at once.", "I was so tired I fell asleep immediately.", "I was so tired that I immediately fell asleep."]
+    explanation: "so + sıfat + that + sonuç."

@@ -1,0 +1,132 @@
+id: gram.b1.gerund-infinitive
+kind: grammar
+level: B1
+title_tr: "Fiil-ing mi, to + fiil mi? Anlamı değiştiren fiiller"
+title_en: "Gerund or infinitive: verbs that change meaning"
+objective_tr: Bu dersin sonunda edatlardan sonra -ing kullanabilecek, stop, remember, forget ve try fiillerinin -ing ve to ile değişen anlamlarını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.verb-patterns]
+vocabulary: [remember, forget, stop, try, avoid, suggest]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      A2'de bazı fiillerden sonra **-ing** (enjoy, finish), bazılarından sonra **to + fiil** (want, decide) geldiğini öğrendiniz. Bu derste listeyi genişletiyor ve iki yapıyla da kullanılıp **anlamı değişen** fiilleri ele alıyoruz.
+  - kind: formula
+    title_tr: Hangi yapıdan sonra ne gelir?
+    table:
+      headers: ["Yapı", "Ardından", "Örnek"]
+      rows:
+        - ["avoid, suggest, mind, keep, practise, consider, miss, risk", "fiil-ing", "He suggested going by train."]
+        - ["agree, refuse, offer, promise, manage, afford, seem, expect", "to + fiil", "She refused to answer."]
+        - ["edatlar (in, of, at, about, without, before, after)", "fiil-ing", "I'm interested in learning Spanish."]
+        - ["sıfatlar (happy, easy, difficult, important)", "to + fiil", "It's difficult to understand him."]
+        - ["amaç bildirirken", "to + fiil", "I went out to buy bread."]
+        - ["cümlenin öznesi olarak", "fiil-ing", "Swimming is good for you."]
+  - kind: comparison
+    title_tr: Anlamı değişen fiiller
+    table:
+      headers: ["Fiil", "+ fiil-ing", "+ to + fiil"]
+      rows:
+        - ["stop", "bir şeyi bırakmak: He stopped smoking.", "bir şey yapmak için durmak: He stopped to smoke."]
+        - ["remember", "geçmişi hatırlamak: I remember locking the door.", "yapmayı unutmamak: Remember to lock the door."]
+        - ["forget", "geçmişi unutmak: I'll never forget meeting her.", "yapmayı unutmak: I forgot to call her."]
+        - ["try", "denemek (işe yarar mı diye): Try restarting it.", "çabalamak: I tried to open it."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Like, love, hate, start, begin** iki yapıyla da kullanılır ve anlam hemen hemen aynıdır: "It started **raining** / **to rain**."
+
+      **Would like / would love / would prefer** her zaman **to** alır: "I'd like **to go**."
+
+      **Look forward to, be used to, get used to** kalıplarındaki to bir **edattır**: "I look forward to **seeing** you."
+
+      **Olumsuz:** "**not** + -ing / **not to** + fiil": "I enjoy **not working**.", "She decided **not to go**."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "I stopped eating meat two years ago.", tr: "İki yıl önce et yemeyi bıraktım."}
+      - {en: "We stopped to have a coffee on the way.", tr: "Yolda kahve içmek için durduk."}
+      - {en: "Did you remember to buy milk?", tr: "Süt almayı unutmadın, değil mi?"}
+      - {en: "I remember visiting this place as a child.", tr: "Çocukken burayı ziyaret ettiğimi hatırlıyorum."}
+      - {en: "She left without saying goodbye.", tr: "Hoşça kal demeden gitti."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I'm looking forward to see you.", tr: "Seni görmeyi dört gözle bekliyorum.", wrong: true, correction: "I'm looking forward to seeing you.", note_tr: "Bu to bir edat."}
+      - {en: "He suggested to go by bus.", tr: "Otobüsle gitmeyi önerdi.", wrong: true, correction: "He suggested going by bus.", note_tr: "Suggest + -ing."}
+      - {en: "She is good at to draw.", tr: "Resim çizmede iyidir.", wrong: true, correction: "She is good at drawing.", note_tr: "Edat + -ing."}
+      - {en: "I forgot locking the door, so I went back.", tr: "Kapıyı kilitlemeyi unuttum, o yüzden geri döndüm.", wrong: true, correction: "I forgot to lock the door, so I went back.", note_tr: "Yapmayı unutmak: forget to."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Edattan sonra to + fiil kullanmak.** Edatlardan sonra her zaman -ing gelir.
+
+      **Stop to ile stop -ing'i karıştırmak.** Anlam neredeyse zıttır.
+
+      **Suggest'ten sonra to ya da kişi + to kullanmak.** "He suggested me to go" yanlıştır → "He suggested (that) I go" / "He suggested going".
+questions:
+  - id: q.b1.gerund-inf.01
+    type: multiple_choice
+    prompt: "I'm really looking forward to ___ you again."
+    options:
+      - "*seeing :: Look forward to kalıbındaki to bir edattır; ardından -ing gelir."
+      - "see :: Bu to mastar eki değildir."
+      - "saw :: Edattan sonra geçmiş biçim gelmez."
+      - "have seen :: Edattan sonra çekimli fiil gelmez."
+    explanation: "Edat + fiil-ing."
+  - id: q.b1.gerund-inf.02
+    type: multiple_choice
+    prompt: "My doctor told me to stop ___, so I haven't had a cigarette for a month."
+    options:
+      - "*smoking :: Bir alışkanlığı bırakmak: stop + -ing."
+      - "to smoke :: Stop to smoke = sigara içmek için durmak."
+      - "smoke :: Stop'tan sonra yalın fiil gelmez."
+      - "smoked :: Geçmiş biçim burada kullanılmaz."
+    explanation: "stop + -ing: bırakmak; stop + to: bir şey yapmak için durmak."
+  - id: q.b1.gerund-inf.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"I remembered to post the letter.\" ne anlama gelir?"
+    options:
+      - "*Mektubu postalamam gerektiğini unutmadım ve postaladım. :: Remember to: yapılacak bir işi unutmamak."
+      - "Mektubu postaladığım anı aklımda. :: Bunun için \"I remember posting the letter\" denir."
+      - "Mektubu postalamayı unuttum. :: Bu, \"I forgot to post\" olurdu."
+      - "Mektubu postalamaya çalıştım. :: Bu, \"I tried to post\" olurdu."
+    explanation: "remember to: önce hatırla, sonra yap. remember -ing: önce yap, sonra hatırla."
+  - id: q.b1.gerund-inf.04
+    type: word_in_context
+    difficulty: 4
+    context: "The computer wasn't working. I tried to fix it for an hour, but I couldn't. Then my brother said, \"Try turning it off and on again.\""
+    prompt: "\"Try turning it off and on again\" cümlesinde try + -ing ne anlama gelir?"
+    options:
+      - "*İşe yarayıp yaramayacağını görmek için bir yöntemi denemek. :: Try + -ing: bir çözümü denemek."
+      - "Zor bir şeyi yapmak için çabalamak. :: Bu, try + to anlamıdır (I tried to fix it)."
+      - "Bir şeyi yapmayı bırakmak. :: Bu, stop + -ing anlamıdır."
+      - "Bir şeyi yapmaktan kaçınmak. :: Bu, avoid + -ing anlamıdır."
+    explanation: "try to: çabalamak; try -ing: denemek."
+  - id: q.b1.gerund-inf.05
+    type: error_correction
+    prompt: "She suggested to take a taxi."
+    answers: ["She suggested taking a taxi.", "She suggested that we take a taxi.", "She suggested we take a taxi."]
+    explanation: "Suggest'ten sonra -ing gelir."
+  - id: q.b1.gerund-inf.06
+    type: word_formation
+    prompt: "He left the room without ___ (say) a word."
+    answers: [saying]
+    explanation: "Edat (without) + fiil-ing."
+  - id: q.b1.gerund-inf.07
+    type: matching
+    prompt: "Cümleleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["He stopped to talk.", "Konuşmak için durdu."]
+      - ["He stopped talking.", "Konuşmayı kesti."]
+      - ["I forgot to call.", "Aramayı unuttum."]
+      - ["I'll never forget calling.", "Aradığım günü hiç unutmayacağım."]
+    explanation: "-ing geçmişe ya da süren eyleme, to ileriye dönük eyleme bakar."
+  - id: q.b1.gerund-inf.08
+    type: translation
+    prompt: "Yolda kahve içmek için durduk."
+    answers: ["We stopped to have a coffee on the way.", "We stopped to have coffee on the way.", "We stopped to drink coffee on the way.", "We stopped to drink a coffee on the way.", "We stopped for a coffee on the way.", "On the way, we stopped to have a coffee."]
+    explanation: "stop + to + fiil: bir şey yapmak için durmak."

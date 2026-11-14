@@ -1,0 +1,150 @@
+id: gram.b1.linking-words
+kind: grammar
+level: B1
+title_tr: "Bağlaçlar: zıtlık, neden ve amaç"
+title_en: "Linking words: contrast, reason and purpose"
+objective_tr: Bu dersin sonunda although, however, despite, in spite of ile zıtlık; because, because of, so, as, since ile neden ve sonuç; to, in order to, so that ile amaç bildirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.first-conditional]
+vocabulary: [although, however, despite, because, therefore, so]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Bağlaçlar fikirler arasındaki ilişkiyi gösterir ve yazınızı akıcı kılar. Aynı anlamı taşıyan bağlaçlar **ardından gelen yapıya** göre ayrılır: bazıları **cümle** (özne + fiil), bazıları **isim ya da -ing** ister.
+  - kind: formula
+    title_tr: Zıtlık
+    table:
+      headers: ["Bağlaç", "Ardından", "Örnek"]
+      rows:
+        - ["although / even though / though", "cümle", "Although it was raining, we went out."]
+        - ["despite / in spite of", "isim / fiil-ing", "Despite the rain, we went out."]
+        - ["but", "cümle (iki cümleyi bağlar)", "It was raining, but we went out."]
+        - ["however", "yeni cümle, virgülle", "It was raining. However, we went out."]
+  - kind: formula
+    title_tr: Neden ve sonuç
+    table:
+      headers: ["Bağlaç", "Ardından", "Örnek"]
+      rows:
+        - ["because / as / since", "cümle", "We stayed in because it was cold."]
+        - ["because of / due to", "isim", "We stayed in because of the cold."]
+        - ["so", "cümle (sonuç)", "It was cold, so we stayed in."]
+        - ["therefore / as a result", "yeni cümle, virgülle", "It was cold. Therefore, we stayed in."]
+  - kind: formula
+    title_tr: Amaç
+    table:
+      headers: ["Bağlaç", "Ardından", "Örnek"]
+      rows:
+        - ["to / in order to", "yalın fiil", "I went to the shop to buy bread."]
+        - ["so that", "cümle (çoğunlukla can / could / will / would ile)", "I spoke slowly so that everyone could understand."]
+        - ["for", "isim", "We went out for a meal."]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Although ile but birlikte kullanılmaz.** Türkçede "-e rağmen ... ama" denebildiği için bu hata yaygındır.
+
+      **Despite'tan sonra of gelmez;** in spite **of**'ta gelir. İkisinden sonra cümle kurmak için **the fact that** eklenir: "Despite **the fact that** it was raining..."
+
+      **Amaç bildirirken "for to" ya da "for + -ing" kullanılmaz:** "I went there **to see** him."
+
+      **However cümle bağlamaz;** nokta ya da noktalı virgülden sonra gelir ve ardından virgül konur.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Although she was tired, she finished the report.", tr: "Yorgun olmasına rağmen raporu bitirdi."}
+      - {en: "In spite of the traffic, we arrived on time.", tr: "Trafiğe rağmen zamanında vardık."}
+      - {en: "The flight was cancelled because of the fog.", tr: "Uçuş sis yüzünden iptal edildi."}
+      - {en: "I'm saving money so that I can buy a car.", tr: "Araba alabilmek için para biriktiriyorum."}
+      - {en: "The hotel was expensive. However, the service was poor.", tr: "Otel pahalıydı. Ancak hizmet kötüydü."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Although it was late, but we continued.", tr: "Geç olmasına rağmen devam ettik.", wrong: true, correction: "Although it was late, we continued.", note_tr: "Although ile but birlikte olmaz."}
+      - {en: "Despite of the rain, we played.", tr: "Yağmura rağmen oynadık.", wrong: true, correction: "Despite the rain, we played.", note_tr: "Despite + isim (of yok)."}
+      - {en: "We were late because the traffic.", tr: "Trafik yüzünden geç kaldık.", wrong: true, correction: "We were late because of the traffic.", note_tr: "İsimden önce because of."}
+      - {en: "I went to the bank for to get money.", tr: "Para çekmek için bankaya gittim.", wrong: true, correction: "I went to the bank to get money.", note_tr: "Amaç: to + fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Bağlacın istediği yapıyı karıştırmak:** because + cümle, because of + isim; although + cümle, despite + isim.
+
+      **Çift bağlaç kullanmak:** although ... but, because ... so.
+
+      **However'ı virgülle iki cümlenin arasına koymak.** "It was late, however we continued" yazım hatası sayılır.
+questions:
+  - id: q.b1.linking.01
+    type: multiple_choice
+    prompt: "___ the bad weather, the match continued."
+    options:
+      - "*Despite :: Ardından isim öbeği geliyor: despite + isim."
+      - "Although :: Although'dan sonra cümle (özne + fiil) gerekir."
+      - "However :: However bir isim öbeğine bağlanmaz."
+      - "Because :: Because neden bildirir ve ardından cümle gelir."
+    explanation: "despite / in spite of + isim; although + cümle."
+  - id: q.b1.linking.02
+    type: multiple_choice
+    prompt: "___ he studied hard, he didn't pass the exam."
+    options:
+      - "*Although :: Ardından cümle geliyor ve zıtlık var."
+      - "Despite :: Despite'tan sonra isim ya da -ing gelir."
+      - "Because :: Neden değil zıtlık ilişkisi var."
+      - "In spite :: Of eksik ve ardından cümle gelemez."
+    explanation: "although + özne + fiil."
+  - id: q.b1.linking.03
+    type: multiple_choice
+    prompt: "The road was closed ___ an accident."
+    options:
+      - "*because of :: Ardından isim geliyor: because of + isim."
+      - "because :: Because'tan sonra cümle gerekir."
+      - "so :: So sonuç bildirir."
+      - "although :: Zıtlık değil neden ilişkisi var."
+    explanation: "because + cümle; because of + isim."
+  - id: q.b1.linking.04
+    type: error_correction
+    prompt: "Although the hotel was cheap, but it was very comfortable."
+    answers: ["Although the hotel was cheap, it was very comfortable.", "The hotel was cheap, but it was very comfortable."]
+    explanation: "Although ile but aynı cümlede birlikte kullanılmaz."
+  - id: q.b1.linking.05
+    type: sentence_building
+    prompt: "so that ile birleştirin: \"I wrote the address down. I wanted to remember it.\" → I wrote the address down so that I ..."
+    answers: ["I wrote the address down so that I would remember it.", "I wrote the address down so that I could remember it.", "I wrote the address down so that I wouldn't forget it."]
+    explanation: "so that + özne + would / could + fiil."
+  - id: q.b1.linking.06
+    type: paragraph_completion
+    difficulty: 3
+    context: "The new phone has an excellent camera and a large screen. ___, the battery only lasts about six hours, which is disappointing."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*However :: İki cümle arasında zıtlık var ve yeni cümle başlıyor."
+      - "Therefore :: Therefore sonuç bildirir; burada zıtlık var."
+      - "Because :: Because yeni bir cümleyi tek başına başlatıp virgül almaz."
+      - "Despite :: Despite'tan sonra isim gelir."
+    explanation: "Yeni cümlede zıtlık: However, ..."
+  - id: q.b1.linking.07
+    type: matching
+    prompt: "Bağlaçları işlevleriyle eşleştirin."
+    pairs:
+      - ["although", "zıtlık (+ cümle)"]
+      - ["in spite of", "zıtlık (+ isim)"]
+      - ["because of", "neden (+ isim)"]
+      - ["therefore", "sonuç"]
+      - ["in order to", "amaç"]
+    explanation: "Bağlaç seçerken hem anlama hem ardından gelen yapıya bakın."
+  - id: q.b1.linking.08
+    type: written_answer
+    difficulty: 3
+    prompt: "Yaşadığınız şehrin bir iyi ve bir kötü yanını anlatan 3–4 cümle yazın. En az bir zıtlık bağlacı (although, however, despite) ve bir neden bağlacı (because, because of) kullanın."
+    model_answers:
+      - "I live in İzmir. I love it because the weather is warm and the sea is close. Although it is a big city, people are relaxed and friendly. However, the traffic is terrible in summer because of the tourists."
+    checklist:
+      - "En az bir zıtlık bağlacı kullandım (although, however, despite, in spite of)."
+      - "Although'dan sonra cümle, despite'tan sonra isim kullandım."
+      - "Although ile but'ı aynı cümlede birlikte kullanmadım."
+      - "Because'tan sonra cümle, because of'tan sonra isim kullandım."
+    explanation: "Bağlaçlar, ardından gelen yapıya göre seçilir: although / because + cümle; despite / because of + isim."
+  - id: q.b1.linking.09
+    type: translation
+    prompt: "Yorgun olmasına rağmen çalışmaya devam etti. (kadın)"
+    answers: ["Although she was tired, she continued working.", "Although she was tired, she kept working.", "Although she was tired, she continued to work.", "Even though she was tired, she continued working.", "She continued working although she was tired.", "Despite being tired, she continued working.", "Although she was tired, she went on working.", "Even though she was tired, she kept working.", "Though she was tired, she continued working."]
+    explanation: "although + cümle / despite + -ing."

@@ -1,0 +1,127 @@
+id: gram.b1.advice-forms
+kind: grammar
+level: B1
+title_tr: "Tavsiye ve uyarı: should, ought to, had better"
+title_en: "Advice: should, ought to, had better"
+objective_tr: Bu dersin sonunda tavsiye ve görüş bildirirken should ve ought to'yu, olumsuz sonucu ima eden güçlü uyarılarda had better'ı kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.should]
+vocabulary: [should, advice, suggest, recommend, apologize]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Should**'u A2'de öğrendiniz. **Ought to** aynı anlamı taşır, biraz daha resmîdir: "You **ought to** see a doctor."
+
+      **Had better ('d better)** daha güçlüdür: belirli bir durumda, "yapmazsan sonucu kötü olur" anlamı taşıyan tavsiye ya da uyarıdır. "You**'d better** hurry or you'll miss the bus." (Acele etsen iyi olur, yoksa otobüsü kaçırırsın.)
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Yapı", "Olumlu", "Olumsuz"]
+      rows:
+        - ["should", "You should rest.", "You shouldn't work so late."]
+        - ["ought to", "You ought to rest.", "You ought not to work so late. (seyrek)"]
+        - ["had better", "You'd better rest.", "You'd better not work so late."]
+  - kind: usage
+    title_tr: Kullanım kuralları
+    text_tr: |-
+      **Had better'daki "had" geçmiş zaman değildir;** şimdi ya da yakın gelecek için kullanılır. Ardından **to olmadan yalın fiil** gelir.
+
+      **Olumsuzu "had better not"tır:** "You'd better **not** be late." ("hadn't better" denmez.)
+
+      **Had better genel tavsiyelerde kullanılmaz.** "People should eat more vegetables." (genel) — burada had better doğal değildir.
+
+      **Tavsiye sormak ve yumuşatmak:** "**Do you think I should** apply?", "**I think you should** talk to her.", "**I don't think you should** go." (Olumsuzluk think'e taşınır.)
+
+      **Diğer tavsiye kalıpları:** "**If I were you, I would**...", "**Why don't you**...?", "**How about** + fiil-ing?"
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "You ought to apologize to her.", tr: "Ondan özür dilemelisin."}
+      - {en: "We'd better leave now. It's getting dark.", tr: "Artık çıksak iyi olur. Hava kararıyor."}
+      - {en: "You'd better not tell him. He'll be angry.", tr: "Ona söylemesen iyi olur. Kızar."}
+      - {en: "I don't think you should buy that car.", tr: "Bence o arabayı almamalısın."}
+      - {en: "Why don't you ask your teacher?", tr: "Neden öğretmenine sormuyorsun?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You had better to see a doctor.", tr: "Doktora gitsen iyi olur.", wrong: true, correction: "You had better see a doctor.", note_tr: "Had better + yalın fiil."}
+      - {en: "You hadn't better be late.", tr: "Geç kalmasan iyi olur.", wrong: true, correction: "You had better not be late.", note_tr: "Olumsuz: had better not."}
+      - {en: "You ought see a dentist.", tr: "Dişçiye gitmelisin.", wrong: true, correction: "You ought to see a dentist.", note_tr: "Ought + to."}
+      - {en: "I think you shouldn't go.", tr: "Bence gitmemelisin.", wrong: true, correction: "I don't think you should go.", note_tr: "Olumsuzluk think'e taşınır (daha doğal)."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Had better'dan sonra to kullanmak** ya da 'd kısaltmasını would sanmak ("You'd better" = You **had** better).
+
+      **Had better'ı her tavsiyede kullanmak.** Tehdit ya da baskı gibi duyulabilir; nazik tavsiyede should tercih edilir.
+
+      **Ought'tan sonra to'yu unutmak.**
+questions:
+  - id: q.b1.advice.01
+    type: multiple_choice
+    prompt: "It's going to rain. You ___ take an umbrella."
+    options:
+      - "*'d better :: Belirli durumda, olumsuz sonucu olan güçlü tavsiye; ardından yalın fiil."
+      - "'d better to :: Had better'dan sonra to gelmez."
+      - "ought :: Ought'tan sonra to gerekir."
+      - "should to :: Should'dan sonra to gelmez."
+    explanation: "had better + yalın fiil."
+  - id: q.b1.advice.02
+    type: multiple_choice
+    prompt: "You ___ to drink more water. It's good for you."
+    options:
+      - "*ought :: Ought + to + fiil."
+      - "should :: Should'dan sonra to gelmez."
+      - "had better :: Had better'dan sonra to gelmez."
+      - "must :: Must'tan sonra to gelmez."
+    explanation: "ought to = should."
+  - id: q.b1.advice.03
+    type: multiple_choice
+    prompt: "You'd better ___ late for the interview."
+    options:
+      - "*not be :: Olumsuz: had better + not + yalın fiil."
+      - "not to be :: To kullanılmaz."
+      - "don't be :: Had better'dan sonra don't gelmez."
+      - "be not :: Not yalın fiilden önce gelir."
+    explanation: "had better not + yalın fiil."
+  - id: q.b1.advice.04
+    type: error_correction
+    prompt: "We had better to book the tickets today."
+    answers: ["We had better book the tickets today.", "We'd better book the tickets today."]
+    explanation: "Had better'dan sonra to olmadan yalın fiil gelir."
+  - id: q.b1.advice.05
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede had better kullanmak doğal DEĞİLDİR?"
+    options:
+      - "*Genel bir görüş: \"Herkes günde sekiz saat uyumalı.\" :: Genel tavsiyelerde should kullanılır; had better belirli bir durum içindir."
+      - "Arkadaşınız treni kaçırmak üzere. :: Belirli durum ve olumsuz sonuç: had better uygundur."
+      - "Hava kararıyor ve dağdasınız. :: Belirli durum ve risk: had better uygundur."
+      - "Arkadaşınızın ateşi çok yüksek. :: Belirli durum ve risk: had better uygundur."
+    explanation: "Had better belirli, acil durumlar içindir; genel doğrular için should."
+  - id: q.b1.advice.06
+    type: dialogue_completion
+    context: "A: I've had this cough for three weeks.\nB: Three weeks? You really ___ see a doctor."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*ought to :: Tavsiye: ought to + fiil."
+      - "ought :: To eksik."
+      - "had better to :: To fazla."
+      - "would :: Would tek başına tavsiye bildirmez."
+    explanation: "ought to / should / had better + yalın fiil."
+  - id: q.b1.advice.07
+    type: matching
+    prompt: "Tavsiye kalıplarını devamlarıyla eşleştirin."
+    pairs:
+      - ["If I were you,", "I would talk to him."]
+      - ["Why don't you", "talk to him?"]
+      - ["How about", "talking to him?"]
+      - ["You ought", "to talk to him."]
+    explanation: "Her kalıbın ardından gelen fiil biçimi farklıdır."
+  - id: q.b1.advice.08
+    type: translation
+    prompt: "Şimdi çıksak iyi olur."
+    answers: ["We had better leave now.", "We'd better leave now.", "We had better go now.", "We'd better go now."]
+    explanation: "had better + yalın fiil."

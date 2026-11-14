@@ -1,0 +1,135 @@
+id: gram.b1.relative-clauses
+kind: grammar
+level: B1
+title_tr: "İlgi cümlecikleri: tanımlayan ve ek bilgi veren"
+title_en: "Relative clauses: defining and non-defining"
+objective_tr: Bu dersin sonunda who, which, that, whose, where, when ile ilgi cümlecikleri kurabilecek, tanımlayan ve ek bilgi veren cümlecikleri virgül kullanımıyla ayırt edebilecek, ilgi zamirinin ne zaman atılabileceğini bileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.relative-clauses]
+vocabulary: [who, which, whose, where, that]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      İlgi cümleciği bir ismi niteler. Türkçede bu iş **-en / -dığı** ekleriyle ve isimden **önce** yapılır ("yan evde yaşayan kadın"); İngilizcede cümlecik isimden **sonra** gelir: "the woman **who lives next door**".
+
+      İki türü vardır: **tanımlayan** (hangi kişi ya da şeyden söz edildiğini belirler) ve **ek bilgi veren** (zaten belli olan bir şey hakkında fazladan bilgi verir).
+  - kind: formula
+    title_tr: İlgi zamirleri
+    table:
+      headers: ["Zamir", "Kullanım", "Örnek"]
+      rows:
+        - ["who", "insanlar", "the doctor who treated me"]
+        - ["which", "nesneler, hayvanlar", "the book which won the prize"]
+        - ["that", "insanlar ve nesneler (yalnızca tanımlayan)", "the book that I bought"]
+        - ["whose", "sahiplik (-ın ... -ı)", "the man whose car was stolen"]
+        - ["where", "yer", "the town where I grew up"]
+        - ["when", "zaman", "the day when we met"]
+  - kind: comparison
+    title_tr: Tanımlayan ve ek bilgi veren cümlecikler
+    table:
+      headers: ["", "Tanımlayan", "Ek bilgi veren"]
+      rows:
+        - ["İşlev", "hangi kişi / şey olduğunu belirler", "fazladan bilgi ekler"]
+        - ["Virgül", "yok", "iki yanında virgül"]
+        - ["that", "kullanılabilir", "kullanılamaz"]
+        - ["Zamir atılabilir mi?", "nesne ise evet", "hayır"]
+        - ["Örnek", "The students who studied passed.", "The students, who studied, passed."]
+        - ["Anlam", "Yalnızca çalışan öğrenciler geçti.", "Öğrencilerin hepsi çalıştı ve geçti."]
+  - kind: usage
+    title_tr: Zamir ne zaman atılır?
+    text_tr: |-
+      Tanımlayan cümlecikte ilgi zamiri cümleciğin **nesnesiyse** atılabilir:
+
+      "The film **(that) we saw** was great." — we özne, that nesne → atılabilir.
+
+      Zamir cümleciğin **öznesiyse** atılamaz: "The man **who called** you is here." — who özne → atılamaz.
+
+      Pratik kural: zamirden hemen sonra **bir özne** (I, you, we, the man...) geliyorsa zamir atılabilir; **fiil** geliyorsa atılamaz.
+
+      **Edatlar** günlük dilde sona gider: "the person (who) I spoke **to**", "the house (that) we live **in**".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "The woman who lives next door is a nurse.", tr: "Yan evde yaşayan kadın hemşire."}
+      - {en: "My brother, who lives in Canada, is visiting us.", tr: "Kanada'da yaşayan ağabeyim bizi ziyarete geliyor. (Tek ağabeyim var.)"}
+      - {en: "That's the girl whose mother is a pilot.", tr: "Annesi pilot olan kız bu."}
+      - {en: "The hotel where we stayed was very clean.", tr: "Kaldığımız otel çok temizdi."}
+      - {en: "Have you found the keys you lost?", tr: "Kaybettiğin anahtarları buldun mu?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "The man who he lives here is a doctor.", tr: "Burada yaşayan adam doktor.", wrong: true, correction: "The man who lives here is a doctor.", note_tr: "Who zaten özne; he fazla."}
+      - {en: "Istanbul, that is a huge city, is very old.", tr: "Kocaman bir şehir olan İstanbul çok eskidir.", wrong: true, correction: "Istanbul, which is a huge city, is very old.", note_tr: "Ek bilgide that olmaz."}
+      - {en: "The book which I bought it is boring.", tr: "Aldığım kitap sıkıcı.", wrong: true, correction: "The book which I bought is boring.", note_tr: "It fazla."}
+      - {en: "That's the man who's dog bit me.", tr: "Köpeği beni ısıran adam bu.", wrong: true, correction: "That's the man whose dog bit me.", note_tr: "Sahiplik: whose."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Zamiri iki kez söylemek** (who he, which ... it).
+
+      **Ek bilgi veren cümleciklerde that kullanmak** ya da virgülleri unutmak.
+
+      **Whose ile who's'u karıştırmak.** Who's = who is / who has.
+
+      **Öznesi olan zamiri atmak.** "The man called you is here" yanlıştır.
+questions:
+  - id: q.b1.relative.01
+    type: multiple_choice
+    prompt: "That's the woman ___ son plays for Galatasaray."
+    options:
+      - "*whose :: Sahiplik bildirir: kadının oğlu."
+      - "who :: Who özne ya da nesne yerine geçer; sahiplik bildirmez."
+      - "who's :: Who's = who is / who has."
+      - "which :: Which insanlar için kullanılmaz."
+    explanation: "whose + isim: -ın ... -ı."
+  - id: q.b1.relative.02
+    type: multiple_choice
+    prompt: "Ankara, ___ is the capital of Türkiye, is in the centre of the country."
+    options:
+      - "*which :: Virgüllü, ek bilgi veren cümlecikte nesneler için which kullanılır."
+      - "that :: Ek bilgi veren (virgüllü) cümleciklerde that kullanılmaz."
+      - "where :: Where'den sonra özne + fiil gelir; burada zamir özne görevinde."
+      - "what :: What ilgi zamiri olarak böyle kullanılmaz."
+    explanation: "Ek bilgi veren cümlecik: who / which; that kullanılmaz."
+  - id: q.b1.relative.03
+    type: nuance
+    difficulty: 3
+    prompt: "Hangi cümlede ilgi zamiri ATILABİLİR?"
+    options:
+      - "*The jacket that I bought yesterday is too small. :: That cümleciğin nesnesi (özne: I) → atılabilir."
+      - "The man who lives upstairs is very noisy. :: Who cümleciğin öznesi → atılamaz."
+      - "The bus that goes to the airport leaves from here. :: That özne → atılamaz."
+      - "My sister, who you met last week, is a lawyer. :: Ek bilgi veren cümlecikte zamir atılamaz."
+    explanation: "Zamirden sonra özne geliyorsa (tanımlayan cümlecikte) zamir atılabilir."
+  - id: q.b1.relative.04
+    type: nuance
+    difficulty: 4
+    prompt: "\"My sister who lives in Ankara is a teacher.\" (virgülsüz) cümlesinden ne anlaşılır?"
+    options:
+      - "*Konuşanın birden fazla kız kardeşi vardır; Ankara'da yaşayanı öğretmendir. :: Tanımlayan cümlecik hangi kız kardeş olduğunu belirler."
+      - "Konuşanın tek kız kardeşi vardır. :: Bunun için virgüllü yapı kullanılırdı."
+      - "Kız kardeşi eskiden Ankara'da yaşardı. :: Lives şimdiki durumu anlatır."
+      - "Cümle yanlıştır; virgül zorunludur. :: Virgülsüz biçim de doğrudur, anlamı farklıdır."
+    explanation: "Virgül yoksa cümlecik tanımlar; virgül varsa ek bilgi verir."
+  - id: q.b1.relative.05
+    type: error_correction
+    prompt: "The people who they live next door are very friendly."
+    answers: ["The people who live next door are very friendly.", "The people that live next door are very friendly."]
+    explanation: "Who zaten öznedir; they tekrar edilmez."
+  - id: q.b1.relative.06
+    type: sentence_building
+    prompt: "İki cümleyi where ile birleştirin: \"This is the café. We first met there.\""
+    answers: ["This is the café where we first met.", "This is the cafe where we first met."]
+    explanation: "Yer + where + özne + fiil; there düşer."
+  - id: q.b1.relative.07
+    type: fill_blank
+    prompt: "I'll never forget the day ___ my daughter was born."
+    answers: [when, that]
+    explanation: "Zaman bildiren isimlerden sonra when kullanılır."
+  - id: q.b1.relative.08
+    type: translation
+    prompt: "Kaldığımız otel çok temizdi."
+    answers: ["The hotel where we stayed was very clean.", "The hotel we stayed in was very clean.", "The hotel we stayed at was very clean.", "The hotel that we stayed in was very clean.", "The hotel which we stayed in was very clean.", "The hotel that we stayed at was very clean."]
+    explanation: "the hotel where we stayed / the hotel (that) we stayed in."

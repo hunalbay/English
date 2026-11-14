@@ -1,0 +1,123 @@
+id: gram.b1.ability-forms
+kind: grammar
+level: B1
+title_tr: "Yetenek: can, could, be able to, managed to"
+title_en: "Ability: can, could, be able to, managed to"
+objective_tr: Bu dersin sonunda yeteneği her zamanda be able to ile anlatabilecek, geçmişteki genel yetenek (could) ile tek seferlik başarı (was able to / managed to) arasındaki farkı ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.could]
+vocabulary: [able, manage, succeed, escape, swim]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **Can**'in yalnızca iki biçimi vardır: can (şimdi) ve could (geçmiş). Gelecek zaman, Present Perfect ya da başka bir kip fiilinden sonra yetenek bildirmek için **be able to** kullanılır.
+
+      "I **will be able to** drive next year." (Gelecek yıl araba kullanabileceğim.) — "I will can" yanlıştır.
+  - kind: formula
+    title_tr: Be able to
+    table:
+      headers: ["Zaman", "Yapı", "Örnek"]
+      rows:
+        - ["Gelecek", "will be able to", "You'll be able to see the sea from the room."]
+        - ["Present Perfect", "have / has been able to", "I haven't been able to sleep recently."]
+        - ["Kip fiilinden sonra", "might / should + be able to", "I might be able to help."]
+        - ["Mastar / -ing", "to be able to / being able to", "I'd like to be able to cook."]
+        - ["Geçmiş", "was / were able to", "We were able to get tickets."]
+  - kind: comparison
+    title_tr: "Geçmişte: could mu, was able to mu?"
+    table:
+      headers: ["Durum", "Yapı", "Örnek"]
+      rows:
+        - ["Geçmişteki genel yetenek", "could", "I could read when I was four."]
+        - ["Tek bir olayda başarmak", "was able to / managed to", "The door was locked, but I was able to open it."]
+        - ["Olumsuz (ikisi de olur)", "couldn't / wasn't able to", "I couldn't find my keys."]
+        - ["Algı fiilleri (see, hear, smell)", "could", "I could hear music."]
+  - kind: usage
+    title_tr: Managed to
+    text_tr: |-
+      **Manage to + yalın fiil**, bir şeyin **zor olduğunu ama başarıldığını** vurgular: "It was heavy, but I **managed to** carry it." (Ağırdı ama taşımayı başardım.)
+
+      Tek seferlik olumlu başarılarda **could kullanılmaz**: "The fire spread quickly, but everyone **could escape**" yanlıştır → "everyone **was able to / managed to** escape."
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "My grandfather could speak four languages.", tr: "Dedem dört dil konuşabilirdi."}
+      - {en: "After a long search, we were able to find a hotel.", tr: "Uzun bir aramadan sonra bir otel bulabildik."}
+      - {en: "Will you be able to come on Saturday?", tr: "Cumartesi gelebilecek misin?"}
+      - {en: "I've never been able to draw well.", tr: "Hiçbir zaman iyi resim çizemedim."}
+      - {en: "She managed to finish the report on time.", tr: "Raporu zamanında bitirmeyi başardı."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "I will can help you tomorrow.", tr: "Yarın sana yardım edebileceğim.", wrong: true, correction: "I will be able to help you tomorrow.", note_tr: "Will + be able to."}
+      - {en: "The exam was hard, but I could pass it.", tr: "Sınav zordu ama geçebildim.", wrong: true, correction: "The exam was hard, but I managed to pass it.", note_tr: "Tek seferlik başarı."}
+      - {en: "I haven't could call him.", tr: "Onu arayamadım.", wrong: true, correction: "I haven't been able to call him.", note_tr: "Present Perfect: been able to."}
+      - {en: "She managed finishing early.", tr: "Erken bitirmeyi başardı.", wrong: true, correction: "She managed to finish early.", note_tr: "Manage + to + fiil."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **İki kip fiilini art arda kullanmak** (will can, might can).
+
+      **Tek seferlik başarı için could kullanmak.** Türkçede iki durumda da "-ebildi" dendiği için fark gözden kaçar.
+
+      **Be able to'yu şimdiki zamanda gereksiz kullanmak.** "I am able to swim" doğrudur ama günlük dilde "I can swim" çok daha doğaldır.
+questions:
+  - id: q.b1.ability.01
+    type: multiple_choice
+    prompt: "If you practise every day, you ___ speak fluently in a year."
+    options:
+      - "*will be able to :: Gelecekteki yetenek: will be able to."
+      - "will can :: İki kip fiili art arda kullanılmaz."
+      - "can to :: Can'den sonra to gelmez."
+      - "could :: Could geçmiş ya da varsayımsal anlam taşır."
+    explanation: "Gelecek: will be able to."
+  - id: q.b1.ability.02
+    type: multiple_choice
+    prompt: "The traffic was terrible, but we ___ catch our flight."
+    options:
+      - "*managed to :: Zor bir durumda tek seferlik başarı: managed to / were able to."
+      - "could :: Tek seferlik olumlu başarıda could kullanılmaz."
+      - "can :: Hikâye geçmişte."
+      - "managed :: Manage'den sonra to gerekir."
+    explanation: "Geçmişte belirli bir başarı: managed to / was able to."
+  - id: q.b1.ability.03
+    type: multiple_choice
+    prompt: "When I was a child, I ___ climb any tree in the garden."
+    options:
+      - "*could :: Geçmişteki genel yetenek: could."
+      - "managed to :: Managed to tek bir olayı anlatır; burada genel yetenek var."
+      - "can :: Geçmiş için could gerekir."
+      - "was able :: To eksik."
+    explanation: "Geçmişteki genel yetenek → could."
+  - id: q.b1.ability.04
+    type: word_formation
+    prompt: "I haven't ___ (be able to) contact her since Monday."
+    answers: ["been able to"]
+    explanation: "Present Perfect: have / has been able to."
+  - id: q.b1.ability.05
+    type: error_correction
+    prompt: "I might can come to the party."
+    answers: ["I might be able to come to the party."]
+    explanation: "Kip fiilinden sonra can değil be able to kullanılır."
+  - id: q.b1.ability.06
+    type: nuance
+    difficulty: 4
+    prompt: "Hangi cümlede could YANLIŞ kullanılmıştır?"
+    options:
+      - "*The lake was deep, but the boy could swim to the shore and was saved. :: Tek bir olaydaki başarı için was able to / managed to gerekir."
+      - "She could play the violin when she was six. :: Geçmişteki genel yetenek: doğru."
+      - "I could smell something burning. :: Algı fiilleriyle could doğrudur."
+      - "We couldn't open the window. :: Olumsuzda couldn't her zaman kullanılabilir."
+    explanation: "Could genel yetenek içindir; belirli bir başarı için kullanılmaz."
+  - id: q.b1.ability.07
+    type: word_order
+    prompt: "Soru kurun."
+    tokens: [Will, you, be, able, to, help, me, tomorrow]
+    explanation: "Will + özne + be able to + fiil?"
+  - id: q.b1.ability.08
+    type: translation
+    prompt: "Raporu zamanında bitirmeyi başardım."
+    answers: ["I managed to finish the report on time.", "I was able to finish the report on time."]
+    explanation: "managed to + yalın fiil."

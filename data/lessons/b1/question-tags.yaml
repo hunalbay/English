@@ -1,0 +1,139 @@
+id: gram.b1.question-tags
+kind: grammar
+level: B1
+title_tr: "Değil mi? Eklenti soruları"
+title_en: Question tags
+objective_tr: Bu dersin sonunda cümle sonuna yardımcı fiil + zamir ekleyerek onay isteyebilecek ya da bilgiyi doğrulatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.present-perfect, gram.a2.will]
+vocabulary: [right, agree, sure, "true", lovely]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      Türkçede her cümlenin sonuna **"değil mi?"** ekleyebiliriz. İngilizcede bu eklenti cümlenin **yardımcı fiiline ve öznesine göre değişir**:
+
+      "You **are** tired, **aren't you**?" · "She **doesn't** smoke, **does she**?"
+
+      Temel kural: **olumlu cümle → olumsuz eklenti**, **olumsuz cümle → olumlu eklenti**.
+  - kind: formula
+    title_tr: Nasıl kurulur?
+    table:
+      headers: ["Cümle", "Eklenti", "Örnek"]
+      rows:
+        - ["to be", "aynı fiil", "It's cold, isn't it?"]
+        - ["Present Simple", "do / does", "You live here, don't you?"]
+        - ["Past Simple", "did", "She called, didn't she?"]
+        - ["Present Perfect", "have / has", "They've left, haven't they?"]
+        - ["will", "will / won't", "You'll come, won't you?"]
+        - ["kip fiili", "aynı kip fiili", "He can swim, can't he?"]
+        - ["olumsuz cümle", "olumlu eklenti", "You don't know him, do you?"]
+  - kind: usage
+    title_tr: Özel durumlar
+    text_tr: |-
+      **I am → aren't I?** "I'm late, **aren't I**?"
+
+      **Emir kipi → will you?** "Close the door, **will you**?"
+
+      **Let's → shall we?** "Let's go, **shall we**?"
+
+      **There is / are → there:** "There's a problem, **isn't there**?"
+
+      **Never, nobody, nothing, hardly** cümleyi olumsuz yapar → olumlu eklenti: "He **never** calls, **does he**?"
+
+      **Somebody, everybody, nobody → they:** "Everybody is here, **aren't they**?"
+
+      **Tonlama anlamı değiştirir.** Ses **düşerse** onay bekliyorsunuzdur (emin gibisiniz); ses **yükselirse** gerçekten soruyorsunuzdur.
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "It's a lovely day, isn't it?", tr: "Güzel bir gün, değil mi?"}
+      - {en: "You haven't seen my keys, have you?", tr: "Anahtarlarımı görmedin, değil mi?"}
+      - {en: "She works in a bank, doesn't she?", tr: "Bankada çalışıyor, değil mi?"}
+      - {en: "They won't be late, will they?", tr: "Geç kalmazlar, değil mi?"}
+      - {en: "Let's have a break, shall we?", tr: "Bir mola verelim, olur mu?"}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "You are a teacher, isn't it?", tr: "Öğretmensin, değil mi?", wrong: true, correction: "You are a teacher, aren't you?", note_tr: "Eklenti özneye ve fiile uyar."}
+      - {en: "She likes tea, isn't she?", tr: "Çay sever, değil mi?", wrong: true, correction: "She likes tea, doesn't she?", note_tr: "Present Simple: does."}
+      - {en: "You don't smoke, don't you?", tr: "Sigara içmiyorsun, değil mi?", wrong: true, correction: "You don't smoke, do you?", note_tr: "Olumsuz cümle, olumlu eklenti."}
+      - {en: "Ali is here, isn't Ali?", tr: "Ali burada, değil mi?", wrong: true, correction: "Ali is here, isn't he?", note_tr: "Eklentide zamir kullanılır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Her cümlede "isn't it?" kullanmak.** Türkçedeki sabit "değil mi?" alışkanlığından kaynaklanır.
+
+      **Olumsuz sorulara cevap verirken karıştırmak.** "You don't like fish, do you?" — sevmiyorsanız cevap "**No**, I don't"tur (Türkçedeki "evet, sevmem" gibi düşünmeyin).
+
+      **Eklentide isim kullanmak.** Her zaman zamir kullanılır.
+questions:
+  - id: q.b1.question-tags.01
+    type: multiple_choice
+    prompt: "You're coming to the party, ___?"
+    options:
+      - "*aren't you :: Olumlu cümle (are) → olumsuz eklenti, aynı özne."
+      - "isn't it :: Eklenti cümlenin öznesine (you) uymalıdır."
+      - "are you :: Olumlu cümleye olumsuz eklenti gelir."
+      - "don't you :: Cümlenin yardımcı fiili are, do değil."
+    explanation: "Olumlu cümle → olumsuz eklenti; yardımcı fiil ve zamir korunur."
+  - id: q.b1.question-tags.02
+    type: multiple_choice
+    prompt: "Your parents live in Bursa, ___?"
+    options:
+      - "*don't they :: Present Simple, çoğul özne: don't they."
+      - "aren't they :: Cümlede to be yok; fiil live."
+      - "doesn't they :: They ile does kullanılmaz."
+      - "do they :: Olumlu cümleye olumsuz eklenti gelir."
+    explanation: "Present Simple → do / does ile eklenti."
+  - id: q.b1.question-tags.03
+    type: multiple_choice
+    prompt: "He never eats breakfast, ___?"
+    options:
+      - "*does he :: Never cümleyi olumsuz yapar → olumlu eklenti."
+      - "doesn't he :: Cümle zaten olumsuz anlamda."
+      - "is he :: Cümlenin fiili eat; yardımcı fiil does."
+      - "eats he :: Eklentide asıl fiil kullanılmaz."
+    explanation: "never, hardly, nobody → olumsuz sayılır."
+  - id: q.b1.question-tags.04
+    type: fill_blank
+    prompt: "Let's go for a walk, ___ we?"
+    answers: [shall]
+    explanation: "Let's → shall we?"
+  - id: q.b1.question-tags.05
+    type: fill_blank
+    prompt: "I'm next, ___ I? (iki sözcük yerine tek sözcük: yardımcı fiil)"
+    answers: ["aren't"]
+    explanation: "I am → aren't I?"
+  - id: q.b1.question-tags.06
+    type: error_correction
+    prompt: "She has finished the report, isn't it?"
+    answers: ["She has finished the report, hasn't she?"]
+    explanation: "Present Perfect: has → hasn't; özne she."
+  - id: q.b1.question-tags.07
+    type: matching
+    prompt: "Cümleleri eklentileriyle eşleştirin."
+    pairs:
+      - ["You can drive,", "can't you?"]
+      - ["She called you,", "didn't she?"]
+      - ["They won't mind,", "will they?"]
+      - ["There's enough time,", "isn't there?"]
+      - ["Open the window,", "will you?"]
+    explanation: "Eklenti cümlenin yardımcı fiiline göre kurulur."
+  - id: q.b1.question-tags.08
+    type: dialogue_completion
+    difficulty: 3
+    context: "A: You don't eat meat, do you?\nB: ___ I've been a vegetarian for ten years."
+    prompt: "B nasıl cevap verir?"
+    options:
+      - "*No, I don't. :: Et yemiyor; İngilizcede cevap gerçeğe göre verilir: No."
+      - "Yes, I don't. :: Yes ile olumsuz fiil birlikte kullanılmaz."
+      - "Yes, I do. :: Bu, et yediği anlamına gelir."
+      - "No, I do. :: No ile olumlu fiil birlikte kullanılmaz."
+    explanation: "Cevap sorunun biçimine değil gerçeğe göre verilir."
+  - id: q.b1.question-tags.09
+    type: translation
+    prompt: "Güzel bir gün, değil mi?"
+    answers: ["It's a lovely day, isn't it?", "It is a lovely day, isn't it?", "It's a nice day, isn't it?", "It's a beautiful day, isn't it?", "It is a nice day, isn't it?", "It is a beautiful day, isn't it?"]
+    explanation: "It's ..., isn't it?"

@@ -184,3 +184,27 @@ units:
       - gram.b1.reported-statements
       - gram.b1.reported-questions
       - gram.b1.indirect-questions
+
+  - id: b1.u04
+    level: B1
+    title_tr: Kip fiillerinde ustalaşma
+    title_en: Mastering modals
+    description_tr: Çıkarım yapın, yeteneği ve zorunluluğu her zamanda anlatın, tavsiye ve uyarıda bulunun.
+    lessons:
+      - gram.b1.modals-deduction
+      - gram.b1.ability-forms
+      - gram.b1.obligation-forms
+      - gram.b1.advice-forms
+
+  - id: b1.u05
+    level: B1
+    title_tr: Cümleleri bağlamak ve zenginleştirmek
+    title_en: Connecting and enriching sentences
+    description_tr: İlgi cümlecikleri ve bağlaçlarla fikirleri birleştirin, fiil kalıplarını ve onay sorularını doğru kullanın.
+    lessons:
+      - gram.b1.relative-clauses
+      - gram.b1.gerund-infinitive
+      - gram.b1.question-tags
+      - gram.b1.so-such
+      - gram.b1.linking-words
+      - gram.b1.both-either-neither

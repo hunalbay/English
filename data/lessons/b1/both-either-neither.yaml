@@ -1,0 +1,132 @@
+id: gram.b1.both-either-neither
+kind: grammar
+level: B1
+title_tr: "İkisi de, hiçbiri: both, either, neither; so do I"
+title_en: "Both, either, neither; so do I / neither do I"
+objective_tr: Bu dersin sonunda iki şeyden söz ederken both, either ve neither'ı kullanabilecek, “ben de” ve “ben de değil” anlamlarını so / neither + yardımcı fiil + özne ile verebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.a2.quantifiers]
+vocabulary: [both, either, neither, each, all, none]
+sections:
+  - kind: explanation
+    title_tr: Konu anlatımı
+    text_tr: |-
+      **İki** kişi ya da şeyden söz ederken üç sözcük kullanılır:
+
+      **both** = ikisi de (olumlu) · **either** = ikisinden biri, hangisi olursa · **neither** = ikisi de değil, hiçbiri.
+
+      İkiden fazla için bunların yerine **all, any, none** kullanılır.
+  - kind: formula
+    title_tr: Cümle yapısı
+    table:
+      headers: ["Yapı", "Fiil", "Örnek"]
+      rows:
+        - ["both + çoğul isim / both of + the / my / them", "çoğul", "Both restaurants are good. / Both of them are good."]
+        - ["either + tekil isim / either of + çoğul", "tekil", "Either day is fine. / Either of the days is fine."]
+        - ["neither + tekil isim / neither of + çoğul", "tekil (olumlu biçimde)", "Neither answer is correct. / Neither of us knows."]
+        - ["both ... and ...", "çoğul", "Both Ali and Can speak German."]
+        - ["either ... or ...", "yakın özneye uyar", "You can have either tea or coffee."]
+        - ["neither ... nor ...", "yakın özneye uyar", "Neither my mother nor my father drives."]
+  - kind: usage
+    title_tr: "Ben de / ben de değil"
+    table:
+      headers: ["Söylenen", "Katılma", "Açıklama"]
+      rows:
+        - ["I love coffee.", "So do I.", "olumlu cümleye katılma: so + yardımcı fiil + özne"]
+        - ["I'm tired.", "So am I.", "yardımcı fiil cümleye uyar"]
+        - ["I've finished.", "So have I.", ""]
+        - ["I don't like fish.", "Neither do I.", "olumsuz cümleye katılma: neither + olumlu yardımcı fiil"]
+        - ["I can't swim.", "Neither can I.", ""]
+        - ["I didn't go.", "I didn't either.", "aynı anlam, either sonda"]
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Neither zaten olumsuzdur;** fiil olumlu kalır: "Neither of them **came**." ("didn't come" değil.)
+
+      **Olumsuz fiille either kullanılır:** "I **don't** like **either** of them." = "I like **neither** of them."
+
+      **Too ile either:** olumlu cümlede "Me **too**" / "I do **too**"; olumsuz cümlede "Me **neither**" / "I don't **either**".
+  - kind: examples
+    title_tr: Örnek cümleler
+    examples:
+      - {en: "Both of my parents are teachers.", tr: "Annem de babam da öğretmen."}
+      - {en: "Neither of the films was very good.", tr: "Filmlerin ikisi de pek iyi değildi."}
+      - {en: "You can take either bus. They both go to the centre.", tr: "İki otobüsten birine binebilirsin. İkisi de merkeze gidiyor."}
+      - {en: "I'm hungry. — So am I.", tr: "Acıktım. — Ben de."}
+      - {en: "I haven't seen that film. — Neither have I.", tr: "O filmi görmedim. — Ben de görmedim."}
+  - kind: correct_incorrect
+    title_tr: Doğru ve yanlış kullanım
+    examples:
+      - {en: "Neither of them didn't call.", tr: "İkisi de aramadı.", wrong: true, correction: "Neither of them called.", note_tr: "Neither ile olumlu fiil."}
+      - {en: "Both of them is here.", tr: "İkisi de burada.", wrong: true, correction: "Both of them are here.", note_tr: "Both çoğul fiil alır."}
+      - {en: "I don't like fish. — So do I.", tr: "Balık sevmem. — Ben de sevmem.", wrong: true, correction: "I don't like fish. — Neither do I.", note_tr: "Olumsuza katılma: neither."}
+      - {en: "I can swim. — So do I.", tr: "Yüzebilirim. — Ben de.", wrong: true, correction: "I can swim. — So can I.", note_tr: "Yardımcı fiil aynı kalır."}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Neither ile çift olumsuzluk kurmak.**
+
+      **"So do I" kalıbını her cümleye uygulamak.** Yardımcı fiil, ilk cümlenin yardımcı fiiline göre değişir.
+
+      **Olumsuz cümleye "Me too" diye katılmak.** Doğrusu "Me neither"dır.
+
+      **İkiden fazla şey için both / neither kullanmak.** Üç ve daha fazlası için all / none kullanın.
+questions:
+  - id: q.b1.both-either.01
+    type: multiple_choice
+    prompt: "I asked two people the way, but ___ of them knew."
+    options:
+      - "*neither :: İkisi de bilmiyordu; fiil olumlu (knew) → neither."
+      - "both :: Both olumludur; \"but\" zıtlık bildiriyor."
+      - "either :: Either olumlu fiille \"hiçbiri\" anlamı vermez."
+      - "none :: None ikiden fazla kişi için kullanılır."
+    explanation: "neither of + çoğul + olumlu fiil = ikisi de değil."
+  - id: q.b1.both-either.02
+    type: multiple_choice
+    prompt: "A: I really enjoyed the concert.\nB: ___"
+    options:
+      - "*So did I. :: Olumlu Past Simple cümleye katılma: so + did + özne."
+      - "So do I. :: Yardımcı fiil geçmiş zamana uymalı: did."
+      - "Neither did I. :: Neither olumsuz cümlelere katılmak içindir."
+      - "So I did. :: Sıra: so + yardımcı fiil + özne."
+    explanation: "so + yardımcı fiil + özne: ben de."
+  - id: q.b1.both-either.03
+    type: multiple_choice
+    prompt: "A: I can't stand horror films.\nB: ___"
+    options:
+      - "*Neither can I. :: Olumsuz cümleye katılma: neither + can + özne."
+      - "So can I. :: So olumlu cümlelere katılmak içindir."
+      - "Neither can't I. :: Neither'dan sonra olumlu yardımcı fiil gelir."
+      - "Me too. :: Olumsuz cümleye \"Me neither\" ile katılınır."
+    explanation: "neither + olumlu yardımcı fiil + özne: ben de değil."
+  - id: q.b1.both-either.04
+    type: fill_blank
+    prompt: "You can pay ___ in cash or by card."
+    answers: [either]
+    explanation: "either ... or ...: ya ... ya ..."
+  - id: q.b1.both-either.05
+    type: error_correction
+    prompt: "Neither of my brothers doesn't live in Türkiye."
+    answers: ["Neither of my brothers lives in Türkiye.", "Neither of my brothers live in Türkiye."]
+    explanation: "Neither zaten olumsuzdur; fiil olumlu kalır."
+  - id: q.b1.both-either.06
+    type: sentence_building
+    prompt: "both ... and ile birleştirin: \"Elif speaks French. Mert speaks French too.\""
+    answers: ["Both Elif and Mert speak French."]
+    explanation: "Both ... and ... çoğul fiil alır."
+  - id: q.b1.both-either.07
+    type: matching
+    prompt: "Cümleleri uygun karşılıklarıyla eşleştirin."
+    pairs:
+      - ["I'm cold.", "So am I."]
+      - ["I've been to Rome.", "So have I."]
+      - ["I don't drink coffee.", "Neither do I."]
+      - ["I won't be late.", "Neither will I."]
+      - ["I went home early.", "So did I."]
+    explanation: "Yardımcı fiil ilk cümleden alınır."
+  - id: q.b1.both-either.08
+    type: translation
+    prompt: "Annem de babam da doktor."
+    answers: ["Both my mother and my father are doctors.", "Both of my parents are doctors.", "Both my parents are doctors.", "Both my mother and father are doctors.", "My mother and my father are both doctors.", "My parents are both doctors."]
+    explanation: "both ... and ... + çoğul fiil."
