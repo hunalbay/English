@@ -1,0 +1,60 @@
+id: listen.a1.at-the-cafe
+kind: listening
+level: A1
+title_tr: "Kafede sipariş"
+title_en: Ordering at a café
+objective_tr: Bir kafedeki kısa sipariş konuşmasını dinleyip ne istendiğini ve fiyatı anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.can-cant]
+vocabulary: [coffee, tea, sandwich, cheese, sugar, please]
+passage:
+  mode: dialogue
+  voices: {Waiter: m1, Customer: f1}
+  lines:
+    - {speaker: Waiter, en: "Good morning. What would you like?", tr: "Günaydın. Ne alırsınız?"}
+    - {speaker: Customer, en: "Good morning. Can I have a coffee, please?", tr: "Günaydın. Bir kahve alabilir miyim lütfen?"}
+    - {speaker: Waiter, en: "Of course. With milk?", tr: "Elbette. Sütlü mü?"}
+    - {speaker: Customer, en: "Yes, please. But no sugar.", tr: "Evet, lütfen. Ama şekersiz."}
+    - {speaker: Waiter, en: "Would you like something to eat?", tr: "Yiyecek bir şey ister misiniz?"}
+    - {speaker: Customer, en: "Yes. A cheese sandwich, please.", tr: "Evet. Bir peynirli sandviç lütfen."}
+    - {speaker: Waiter, en: "I'm sorry, we don't have cheese sandwiches today. We have chicken sandwiches.", tr: "Üzgünüm, bugün peynirli sandviçimiz yok. Tavuklu sandviçimiz var."}
+    - {speaker: Customer, en: "OK. A chicken sandwich, then. How much is it?", tr: "Peki. O zaman bir tavuklu sandviç. Ne kadar?"}
+    - {speaker: Waiter, en: "That's twelve pounds.", tr: "On iki pound."}
+    - {speaker: Customer, en: "Here you are. Thank you.", tr: "Buyurun. Teşekkür ederim."}
+questions:
+  - id: q.listen.a1.cafe.01
+    type: listening_comprehension
+    prompt: "What does the customer want to drink?"
+    options:
+      - "*Coffee with milk :: Müşteri kahve istiyor ve sütlü olmasını kabul ediyor."
+      - "Tea with sugar :: Çay istenmiyor."
+      - "Coffee with sugar :: \"No sugar\" diyor."
+      - "Orange juice :: Kayıtta meyve suyu geçmiyor."
+    explanation: "\"Can I have a coffee, please?\" — \"With milk?\" — \"Yes, please. But no sugar.\""
+  - id: q.listen.a1.cafe.02
+    type: listening_comprehension
+    prompt: "What does the customer eat?"
+    options:
+      - "*A chicken sandwich :: Peynirli sandviç olmadığı için tavukluyu alıyor."
+      - "A cheese sandwich :: Bunu istiyor ama kafede yok."
+      - "A cake :: Kayıtta pasta geçmiyor."
+      - "Nothing :: Sandviç alıyor."
+    explanation: "\"We don't have cheese sandwiches today.\" — \"A chicken sandwich, then.\""
+  - id: q.listen.a1.cafe.03
+    type: listening_comprehension
+    prompt: "How much does the customer pay?"
+    options:
+      - "*Twelve pounds :: \"That's twelve pounds.\""
+      - "Two pounds :: Twelve ile two karıştırılmamalı."
+      - "Twenty pounds :: Twelve ile twenty karıştırılmamalı."
+      - "Ten pounds :: Kayıtta on iki deniyor."
+    explanation: "twelve = 12"
+  - id: q.listen.a1.cafe.04
+    type: true_false
+    instruction_tr: "Kayda göre cümle doğru mu, yanlış mı?"
+    prompt: "The café has cheese sandwiches today."
+    options:
+      - "Doğru :: Garson bugün peynirli sandviç olmadığını söylüyor."
+      - "*Yanlış :: \"I'm sorry, we don't have cheese sandwiches today.\""
+    explanation: "Bugün yalnızca tavuklu sandviç var."

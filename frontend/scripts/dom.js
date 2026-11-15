@@ -46,8 +46,15 @@ function inline(text) {
 }
 
 // Boş satırla ayrılmış paragrafları <p> öğelerine çevirir.
+// Her satırı "1. ", "2. " ... ile başlayan paragraflar numaralı listeye dönüşür.
 export function richText(text) {
-  return (text || "").split(/\n\s*\n/).map((paragraph) => h("p", {}, inline(paragraph.trim())));
+  return (text || "").split(/\n\s*\n/).map((paragraph) => {
+    const lines = paragraph.trim().split("\n").map((line) => line.trim());
+    if (lines.length > 1 && lines.every((line) => /^\d+\.\s/.test(line))) {
+      return h("ol", {}, lines.map((line) => h("li", {}, inline(line.replace(/^\d+\.\s+/, "")))));
+    }
+    return h("p", {}, inline(paragraph.trim()));
+  });
 }
 
 export const LEVEL_NAMES = {

@@ -1,0 +1,92 @@
+id: read.b1.city-or-countryside
+kind: reading
+level: B1
+title_tr: "Şehir mi, kırsal mı?"
+title_en: City or countryside?
+objective_tr: İki farklı görüşü aktaran metinde kimin neyi savunduğunu ve hangi gerekçeleri kullandığını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.second-conditional, gram.b1.used-to-be-used-to]
+vocabulary: [city, countryside, traffic, peaceful, opportunity, neighbor]
+passage:
+  mode: text
+  lines:
+    - {en: "We asked two readers the same question: would you rather live in a big city or in the countryside?", tr: "İki okurumuza aynı soruyu sorduk: büyük bir şehirde mi yoksa kırsalda mı yaşamayı tercih ederdiniz?"}
+    - {en: "Burcu, 29, graphic designer: \"I grew up in a village, and I couldn't wait to leave. In Istanbul there is always something to do: concerts, exhibitions, restaurants from every country. I have met people here that I would never have met at home.\"", tr: "Burcu, 29, grafik tasarımcı: \"Bir köyde büyüdüm ve ayrılmak için sabırsızlanıyordum. İstanbul'da her zaman yapacak bir şey var: konserler, sergiler, her ülkeden restoranlar. Burada, memlekette asla tanışamayacağım insanlarla tanıştım.\""}
+    - {en: "\"Of course the traffic is terrible and the rent is ridiculous. But I am used to the noise now, and if I moved back to the village, I would be bored within a week.\"", tr: "\"Elbette trafik berbat ve kiralar akıl almaz. Ama artık gürültüye alışkınım ve köye geri taşınsam bir hafta içinde sıkılırdım.\""}
+    - {en: "Hasan, 47, former bank manager: \"I lived in Ankara for twenty years. I used to spend three hours a day in my car, and I hardly ever saw my children awake. Five years ago we bought an old house near Ayvalık.\"", tr: "Hasan, 47, eski banka müdürü: \"Yirmi yıl Ankara'da yaşadım. Günde üç saatimi arabada geçirirdim ve çocuklarımı neredeyse hiç uyanıkken göremezdim. Beş yıl önce Ayvalık yakınlarında eski bir ev aldık.\""}
+    - {en: "\"I earn much less now, but I need much less too. We grow our own vegetables, and I know all my neighbours by name. It took me a year to get used to the silence, but now I can't sleep in a city.\"", tr: "\"Artık çok daha az kazanıyorum ama çok daha azına da ihtiyacım var. Kendi sebzelerimizi yetiştiriyoruz ve bütün komşularımı adıyla tanıyorum. Sessizliğe alışmam bir yılımı aldı ama şimdi şehirde uyuyamıyorum.\""}
+    - {en: "\"The only thing I miss is a good hospital nearby. If we had one, life here would be perfect.\"", tr: "\"Özlediğim tek şey yakınlarda iyi bir hastane olması. Bir tane olsaydı buradaki hayat mükemmel olurdu.\""}
+  glossary:
+    - {en: "would rather", tr: "tercih etmek"}
+    - {en: "exhibition", tr: "sergi"}
+    - {en: "ridiculous", tr: "akıl almaz, saçma"}
+    - {en: "former", tr: "eski, önceki"}
+    - {en: "hardly ever", tr: "neredeyse hiç"}
+    - {en: "earn", tr: "kazanmak"}
+    - {en: "silence", tr: "sessizlik"}
+questions:
+  - id: q.read.b1.city.01
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "Why did Burcu want to leave her village?"
+    options:
+      - "*There was not enough to do there. :: Şehirde \"always something to do\" olmasını övüyor ve köyde sıkılacağını söylüyor."
+      - "The rent was too high. :: Yüksek kira şehrin sakıncası olarak geçiyor."
+      - "She couldn't find a job. :: Metinde iş bulamamaktan söz edilmiyor."
+      - "Her family moved to Istanbul. :: Ailesinden söz edilmiyor."
+    explanation: "Burcu için şehrin çekiciliği etkinliklerin ve insanların çeşitliliği."
+  - id: q.read.b1.city.02
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "What does Hasan say about money?"
+    options:
+      - "*He earns less, but he also needs less. :: \"I earn much less now, but I need much less too.\""
+      - "He earns more in the countryside. :: Daha az kazandığını söylüyor."
+      - "He regrets leaving his job at the bank. :: Pişmanlıktan söz etmiyor."
+      - "He cannot afford vegetables. :: Sebzelerini kendileri yetiştiriyor."
+    explanation: "Gelirin azalması, ihtiyaçların azalmasıyla dengeleniyor."
+  - id: q.read.b1.city.03
+    type: nuance
+    difficulty: 3
+    prompt: "Burcu says \"I am used to the noise now\" and Hasan says \"I used to spend three hours a day in my car\". What do these sentences tell us?"
+    options:
+      - "*Burcu finds the noise normal now; Hasan no longer spends three hours in his car. :: be used to = alışkın olmak; used to = eskiden yapardı."
+      - "Both of them are talking about past habits. :: Burcu şimdiki durumunu anlatıyor."
+      - "Both of them are talking about things they find normal now. :: Hasan eski bir alışkanlığı anlatıyor."
+      - "Burcu no longer hears noise; Hasan still drives three hours a day. :: Tam tersi anlamlar."
+    explanation: "be used to + isim / -ing ≠ used to + fiil."
+    lessons: [gram.b1.used-to-be-used-to]
+  - id: q.read.b1.city.04
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "What does Hasan miss about city life?"
+    options:
+      - "*A good hospital nearby :: \"The only thing I miss is a good hospital nearby.\""
+      - "His old job :: İşinden özlemle söz etmiyor."
+      - "Restaurants and concerts :: Bunlar Burcu'nun sevdiği şeyler."
+      - "Nothing at all :: Tek bir şeyi özlediğini söylüyor."
+    explanation: "\"The only thing\" tek istisnayı gösteriyor."
+  - id: q.read.b1.city.05
+    type: matching
+    instruction_tr: "Metne göre ifadeleri kişilerle eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["would be bored in a village", "Burcu"]
+      - ["knows all the neighbours by name", "Hasan"]
+      - ["complains about the rent", "the graphic designer"]
+      - ["took a year to get used to the silence", "the former bank manager"]
+    explanation: "Her görüş bir kişiye ait; bazı kişiler meslekleriyle anılıyor."
+  - id: q.read.b1.city.06
+    type: written_answer
+    difficulty: 3
+    prompt: "Siz hangisini tercih ederdiniz: büyük şehir mi, kırsal mı? 3–4 cümleyle görüşünüzü ve en az iki gerekçenizi yazın. En az bir kez \"If I lived..., I would...\" yapısını kullanın."
+    model_answers:
+      - "I would rather live in the countryside. Cities are exciting, but they are too noisy and expensive for me. If I lived in a village, I would grow my own vegetables and spend more time outdoors. However, I would miss going to the cinema."
+    checklist:
+      - "Tercihimi açıkça belirttim."
+      - "En az iki gerekçe yazdım."
+      - "If + Past Simple, would + fiil yapısını en az bir kez kullandım."
+      - "Bağlaç kullandım (because, but, however)."
+    explanation: "Hayali durumlar için second conditional kullanılır: If I lived..., I would..."
+    lessons: [gram.b1.second-conditional]

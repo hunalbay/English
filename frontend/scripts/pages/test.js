@@ -1,6 +1,7 @@
 // Test çözme: soru tipine göre arayüz, açıklamalı geri bildirim, ilgili derse geçiş.
 
 import * as api from "../api.js";
+import { audioPlayer } from "../audio.js";
 import { wordChip } from "../components.js";
 import { add, h, levelBadge, pageHeader, toast } from "../dom.js";
 
@@ -170,6 +171,11 @@ export async function render(root, params) {
 
     add(area,
       question.context ? h("pre", { class: "context", lang: "en" }, question.context) : null,
+      question.passage
+        ? h("div", { class: "context passage", lang: "en" }, question.passage.lines.map((line) =>
+            h("p", {}, line.speaker ? h("strong", {}, `${line.speaker}: `) : null, line.en)))
+        : null,
+      question.type === "listening_comprehension" ? audioPlayer(question.audio) : null,
       h("p", { class: "question-prompt", lang: /[ğşıİçöü]/i.test(question.prompt) ? "tr" : "en" }, question.prompt));
 
     if (question.evaluator === "choice") {

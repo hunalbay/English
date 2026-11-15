@@ -26,10 +26,16 @@ def _answer(client, auth, test, question_id, answer):
                        json={"question_id": question_id, "answer": answer}, headers=auth)
 
 
-def test_start_requires_token_and_existing_content(client, auth):
+def test_start_requires_token_and_existing_content(client, auth, content_db):
     assert client.post(f"{API}/tests/sessions", json={"lesson_id": LESSON}).status_code == 403
     assert client.post(f"{API}/tests/sessions", json={"lesson_id": "gram.a1.yok"}, headers=auth).status_code == 404
-    response = client.post(f"{API}/tests/sessions", json={"level": "C2", "types": ["listening_comprehension"]}, headers=auth)  # ses içeriği eklenene kadar bu tipte soru yok
+    # içerikte hiç sorusu olmayan bir seviye + soru tipi çifti (içerik büyüdükçe değişebilir)
+    conn = sqlite3.connect(content_db)
+    have = set(conn.execute("SELECT level, type FROM questions"))
+    types = [row[0] for row in conn.execute("SELECT DISTINCT type FROM questions")]
+    conn.close()
+    level, kind = next((lv, t) for lv in ("A1", "A2", "B1", "B2", "C1", "C2") for t in types if (lv, t) not in have)
+    response = client.post(f"{API}/tests/sessions", json={"level": level, "types": [kind]}, headers=auth)
     assert response.status_code == 404 and "henüz soru yok" in response.json()["error"]["message"]
     assert client.post(f"{API}/tests/sessions", json={"level": "A1", "size": 500}, headers=auth).status_code == 422
 

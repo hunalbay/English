@@ -19,6 +19,7 @@ from app.database.user_db import create_session_factory, create_user_engine
 from app.services.migrations import run_migrations
 
 API_PREFIX = "/api/v1"
+MEDIA_PREFIX = "/media/"
 
 # FastAPI'nin yerleşik OpenTelemetry desteği tamamen kapalıdır:
 # uygulama hiçbir kullanım verisi toplamaz veya göndermez.
@@ -92,6 +93,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     async def api_not_found(rest: str) -> JSONResponse:
         return _error(404, "http_404", "İstenen kaynak bulunamadı.")
+
+    # Önceden üretilmiş ses dosyaları (salt okunur). Klasör yoksa uygulama sessiz çalışır;
+    # arayüz ilgili içerikte "ses dosyası yok" uyarısı gösterir.
+    if (settings.audio_dir / "clips").is_dir():
+        app.mount(MEDIA_PREFIX + "clips", StaticFiles(directory=settings.audio_dir / "clips"), name="media")
 
     app.mount("/", StaticFiles(directory=settings.frontend_dir, html=True), name="frontend")
     return app

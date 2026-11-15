@@ -16,6 +16,7 @@ from app.services import progress
 router = APIRouter(tags=["learning"])
 
 LevelCode = Literal["A1", "A2", "B1", "B2", "C1", "C2"]
+TrackCode = Literal["grammar", "reading", "listening", "writing", "pronunciation"]
 
 
 class LevelUpdate(BaseModel):
@@ -96,14 +97,39 @@ def list_levels(
 
 @router.get("/levels/{code}/units")
 def list_units(
-    code: LevelCode, session: Session = Depends(get_user_session), content: sqlite3.Connection = Depends(get_content)
+    code: LevelCode,
+    track: TrackCode = "grammar",
+    session: Session = Depends(get_user_session),
+    content: sqlite3.Connection = Depends(get_content),
 ) -> dict:
     statuses = progress.lesson_statuses(session)
-    units = repo.units(content, code)
+    units = repo.units(content, code, track)
     for unit in units:
         for lesson in unit["lessons"]:
             lesson["status"] = statuses.get(lesson["id"], "not_started")
-    return {"level": code, "units": units}
+    return {"level": code, "track": track, "units": units}
+
+
+@router.get("/tracks/{track}")
+def read_track(
+    track: TrackCode, session: Session = Depends(get_user_session), content: sqlite3.Connection = Depends(get_content)
+) -> dict:
+    """Bir alanın (okuma, dinleme...) seviyelere göre ders ve tamamlama sayıları."""
+    statuses = progress.lesson_statuses(session)
+    by_level = repo.lesson_ids_by_level(content, track)
+    return {
+        "track": track,
+        "levels": [
+            {
+                "code": level["code"], "name_tr": level["name_tr"],
+                "lesson_count": len(by_level.get(level["code"], [])),
+                "completed_lessons": sum(
+                    1 for lesson_id in by_level.get(level["code"], []) if statuses.get(lesson_id) == "completed"
+                ),
+            }
+            for level in repo.levels(content)
+        ],
+    }
 
 
 @router.get("/lessons/{lesson_id}")

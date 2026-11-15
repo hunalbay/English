@@ -18,6 +18,7 @@ DEFAULT_PORT = 8765
 
 ENV_DATA_DIR = "ENGLISH_MASTER_DATA_DIR"
 ENV_CONTENT_DB = "ENGLISH_MASTER_CONTENT_DB"
+ENV_AUDIO_DIR = "ENGLISH_MASTER_AUDIO_DIR"
 
 
 def resource_root() -> Path:
@@ -45,6 +46,7 @@ def default_data_dir() -> Path:
 class Settings:
     data_dir: Path
     content_db_path: Path
+    audio_dir: Path
     frontend_dir: Path
     migrations_dir: Path
     host: str = DEFAULT_HOST
@@ -74,10 +76,12 @@ def load_settings(
 ) -> Settings:
     root = resource_root()
     content_override = os.environ.get(ENV_CONTENT_DB)
+    audio_override = os.environ.get(ENV_AUDIO_DIR)
     return Settings(
         data_dir=data_dir or default_data_dir(),
         content_db_path=content_db_path
         or (Path(content_override) if content_override else root / "data" / "build" / "content.db"),
+        audio_dir=Path(audio_override) if audio_override else root / "data" / "audio",
         frontend_dir=root / "frontend",
         migrations_dir=root / "migrations",
         port=port,

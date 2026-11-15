@@ -373,3 +373,23 @@ textarea {
 .btn.token:disabled { opacity: 0.35; }
 #token-bank { margin: var(--space-3) 0; }
 .question-area form { margin-top: var(--space-2); }
+
+/* --- Okuma, dinleme, telaffuz --- */
+.passage { display: grid; gap: var(--space-3); margin: var(--space-3) 0; }
+.passage-line p { margin: 0; }
+.passage-en { font-size: 1.05rem; line-height: 1.7; }
+.passage-tr { color: var(--text-muted); font-size: 0.95rem; margin-top: var(--space-1) !important; }
+.context.passage { white-space: normal; max-height: 22rem; overflow-y: auto; }
+.context.passage p { margin: 0 0 var(--space-2); }
+.glossary { margin-top: var(--space-3); }
+.glossary ul { columns: 2 16rem; padding-left: var(--space-4); }
+.audio-box { display: grid; gap: var(--space-2); margin: var(--space-3) 0; }
+.audio-box .player { width: 100%; }
+.speed { padding: var(--space-1) var(--space-2); border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.practice { list-style: none; padding: 0; display: grid; gap: var(--space-3); }
+.practice-item { border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-3); }
+.practice-item p { margin: 0 0 var(--space-1); }
+.practice-en { font-size: 1.15rem; font-weight: 600; }
+.ipa { font-weight: 400; }
+.btn.recording { background: var(--danger); color: #fff; border-color: var(--danger); }
+.btn.listen.fallback { border-style: dashed; }

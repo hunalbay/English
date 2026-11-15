@@ -1,0 +1,96 @@
+id: read.c1.a-letter-of-complaint
+kind: reading
+level: C1
+title_tr: "Bir şikâyet mektubu"
+title_en: A letter of complaint
+objective_tr: Resmî bir mektupta yazarın amacını, taleplerini ve kibar ama kararlı üslubu sağlayan dil seçimlerini belirleyebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c1.conditional-inversion, gram.c1.subjunctive, gram.c1.nominalisation]
+vocabulary: [complaint, refund, delay, compensation, inconvenience, response]
+passage:
+  mode: text
+  lines:
+    - {en: "Dear Sir or Madam,", tr: "Sayın Yetkili,"}
+    - {en: "I am writing to express my dissatisfaction with the service I received from your airline on 14 March, when I travelled from Istanbul to Manchester (booking reference KT5527).", tr: "14 Mart'ta İstanbul'dan Manchester'a yaptığım yolculukta (rezervasyon numarası KT5527) hava yolunuzdan aldığım hizmetle ilgili memnuniyetsizliğimi bildirmek için yazıyorum."}
+    - {en: "The flight, which was due to depart at 09.40, did not leave until 16.15. During this delay of more than six hours, passengers were given no explanation whatsoever, nor were we offered refreshments until I asked a member of staff directly.", tr: "09.40'ta kalkması gereken uçuş ancak 16.15'te hareket etti. Altı saati aşan bu gecikme boyunca yolculara hiçbir açıklama yapılmadı; ben bir görevliye doğrudan sorana kadar ikram da sunulmadı."}
+    - {en: "As a result of the late arrival, I missed a business meeting that had been arranged several weeks in advance, and I was obliged to pay for a taxi, since the last train had already departed. The receipt is enclosed.", tr: "Geç varış yüzünden haftalar önce ayarlanmış bir iş toplantısını kaçırdım ve son tren çoktan kalkmış olduğu için taksi parası ödemek zorunda kaldım. Makbuz ektedir."}
+    - {en: "I appreciate that delays are sometimes unavoidable. What I find unacceptable is the complete lack of communication. Had we been informed of the likely length of the delay, I could at least have rearranged my meeting.", tr: "Gecikmelerin bazen kaçınılmaz olduğunu anlıyorum. Kabul edilemez bulduğum şey, iletişimin tümüyle yokluğudur. Gecikmenin olası süresi hakkında bilgilendirilmiş olsaydık en azından toplantımı yeniden düzenleyebilirdim."}
+    - {en: "I understand that passengers are entitled to compensation for delays of this length. I would therefore request that the compensation due, together with the cost of the taxi, be paid within twenty-eight days.", tr: "Yolcuların bu uzunluktaki gecikmeler için tazminat hakkı olduğunu biliyorum. Bu nedenle hak edilen tazminatın, taksi ücretiyle birlikte, yirmi sekiz gün içinde ödenmesini talep ediyorum."}
+    - {en: "Should I not receive a satisfactory response within that period, I shall have no alternative but to refer the matter to the relevant authority.", tr: "Bu süre içinde tatmin edici bir yanıt alamamam hâlinde, konuyu ilgili makama iletmekten başka seçeneğim kalmayacaktır."}
+    - {en: "I look forward to hearing from you.", tr: "Yanıtınızı bekliyorum."}
+    - {en: "Yours faithfully, Ayşe Korkmaz", tr: "Saygılarımla, Ayşe Korkmaz"}
+  glossary:
+    - {en: "dissatisfaction", tr: "memnuniyetsizlik"}
+    - {en: "refreshments", tr: "ikram, yiyecek içecek"}
+    - {en: "be obliged to", tr: "zorunda kalmak"}
+    - {en: "enclosed", tr: "ekte"}
+    - {en: "be entitled to", tr: "hakkı olmak"}
+    - {en: "compensation", tr: "tazminat"}
+    - {en: "refer the matter to", tr: "konuyu ...-e iletmek"}
+    - {en: "Yours faithfully", tr: "Saygılarımla (alıcının adı bilinmediğinde)"}
+questions:
+  - id: q.read.c1.complaint.01
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "What is the writer's main complaint?"
+    options:
+      - "*That passengers were told nothing during the delay :: \"What I find unacceptable is the complete lack of communication.\""
+      - "That the flight was delayed at all :: Gecikmelerin bazen kaçınılmaz olduğunu kabul ediyor."
+      - "That the ticket was too expensive :: Bilet fiyatından söz edilmiyor."
+      - "That the staff were rude :: Kabalıktan söz edilmiyor."
+    explanation: "Vurgu cümlesi (What ... is ...) asıl şikâyeti öne çıkarıyor."
+    lessons: [gram.c1.cleft-sentences]
+  - id: q.read.c1.complaint.02
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "What does the writer ask the airline to do?"
+    options:
+      - "*Pay compensation and the taxi fare within twenty-eight days :: Altıncı paragraftaki talep."
+      - "Refund the full price of the ticket :: Bilet iadesi istenmiyor."
+      - "Give her a free flight :: Böyle bir talep yok."
+      - "Dismiss the member of staff :: Böyle bir talep yok."
+    explanation: "\"I would therefore request that the compensation due, together with the cost of the taxi, be paid...\""
+  - id: q.read.c1.complaint.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"I would therefore request that the compensation ... be paid within twenty-eight days.\" Why is \"be paid\" used rather than \"is paid\"?"
+    options:
+      - "*After \"request that\", formal English uses the subjunctive (base form). :: request / demand / insist that + yalın fiil."
+      - "It is a mistake in the letter. :: Resmî dilde doğru yapıdır."
+      - "Because the payment happened in the past. :: Ödeme henüz yapılmadı."
+      - "Because \"compensation\" is plural. :: Compensation sayılamaz ve tekildir."
+    explanation: "Talep bildiren fiillerden sonra dilek-gereklilik kipi."
+    lessons: [gram.c1.subjunctive]
+  - id: q.read.c1.complaint.04
+    type: nuance
+    difficulty: 5
+    prompt: "What is the function of the sentence beginning \"Should I not receive a satisfactory response...\"?"
+    options:
+      - "*It is a polite but firm warning of further action. :: Resmî koşul yapısı (Should I ...) ile ölçülü bir uyarı."
+      - "It is an apology. :: Özür içermiyor."
+      - "It is a request for information. :: Bilgi istenmiyor."
+      - "It expresses doubt about whether she was right to complain. :: Kararlılık bildiriyor."
+    explanation: "Should + özne + fiil = If ... (resmî)."
+    lessons: [gram.c1.conditional-inversion]
+  - id: q.read.c1.complaint.05
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "Which of these is a consequence of the delay mentioned in the letter?"
+    options:
+      - "*She missed a meeting and had to pay for a taxi. :: Dördüncü paragraf."
+      - "She lost her luggage. :: Bagajdan söz edilmiyor."
+      - "She had to stay in a hotel. :: Otelden söz edilmiyor."
+      - "She missed her flight. :: Uçağa bindi; uçuş geç kalktı."
+    explanation: "Sonuçlar \"As a result of...\" ile veriliyor."
+  - id: q.read.c1.complaint.06
+    type: matching
+    instruction_tr: "Mektuptaki resmî ifadeleri gündelik karşılıklarıyla eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["I am writing to express my dissatisfaction", "I want to complain"]
+      - ["I was obliged to pay", "I had to pay"]
+      - ["The receipt is enclosed", "I'm sending the receipt with this letter"]
+      - ["refer the matter to the relevant authority", "take it further"]
+    explanation: "Resmî mektup üslubu: tam biçimler, edilgen yapılar, kalıp ifadeler."
+    lessons: [gram.c2.register]

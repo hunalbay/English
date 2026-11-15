@@ -1,0 +1,102 @@
+id: pron.b1.sentence-stress
+kind: pronunciation
+level: B1
+title_tr: "Cümle vurgusu, zayıf biçimler ve bağlama"
+title_en: "Sentence stress, weak forms and linking"
+objective_tr: Cümlede anlam taşıyan sözcükleri vurgulayıp işlev sözcüklerini zayıf söyleyebilecek, sözcükleri birbirine bağlayarak İngilizcenin ritmine yaklaşabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [pron.b1.word-stress]
+vocabulary: [can, want, go, cup, lot, talk]
+sections:
+  - kind: explanation
+    title_tr: İngilizcenin ritmi
+    text_tr: |-
+      Türkçede her hece aşağı yukarı eşit süre alır; cümle düzgün bir tempoda ilerler. İngilizcede ritmi **vurgulu heceler** belirler: vurgular arasındaki süre benzer kalır, aradaki vurgusuz sözcükler **sıkıştırılır**.
+
+      Bu yüzden anadili İngilizce olanlar "hızlı konuşuyor" ve "sözcükleri yutuyor" gibi gelir. Aslında yutulan şey, önemsiz sözcüklerin sesli harfleridir. Bu ritmi tanımak **dinlediğinizi anlamanızı**, kullanmak ise **anlaşılırlığınızı** artırır.
+  - kind: formula
+    title_tr: Hangi sözcükler vurgulanır?
+    table:
+      headers: ["Vurgulanır (içerik sözcükleri)", "Zayıf söylenir (işlev sözcükleri)"]
+      rows:
+        - ["isimler: coffee, friend", "tanımlıklar: a, an, the"]
+        - ["asıl fiiller: want, bought", "yardımcı fiiller: am, is, do, have, can"]
+        - ["sıfatlar: big, tired", "edatlar: to, of, for, at, from"]
+        - ["zarflar: quickly, never", "zamirler: he, her, them, you"]
+        - ["soru sözcükleri: what, where", "bağlaçlar: and, but, that"]
+        - ["olumsuzlar: not, can't, don't", ""]
+  - kind: usage
+    title_tr: Zayıf biçimler
+    text_tr: |-
+      İşlev sözcüklerinin cümle içinde **zayıf biçimi** vardır; sesli harf /ə/ olur ya da düşer:
+
+      **to** → /tə/: "I want **to** go." · **of** → /əv/: "a cup **of** tea" · **for** → /fər/ · **and** → /ən/: "fish **and** chips" · **can** → /kən/: "I **can** swim." · **from** → /frəm/ · **a** → /ə/ · **the** → /ðə/
+
+      **can / can't ayrımı** büyük ölçüde vurguyla duyulur: "I **can** swim" cümlesinde can zayıftır (/kən/) ve vurgu swim'dedir; "I **CAN'T** swim" cümlesinde can't vurguludur ve sesli harfi nettir.
+
+      İşlev sözcükleri **cümle sonunda** ya da **vurgulanmak istendiğinde** güçlü okunur: "Yes, I **can**."
+  - kind: usage
+    title_tr: Bağlama
+    text_tr: |-
+      Sözcükler arasında durulmaz; bir sözcüğün son ünsüzü, ardından gelen sözcüğün ilk ünlüsüne **bağlanır**:
+
+      "an‿apple" → "a-napple" · "turn‿it‿off" → "tur-ni-toff" · "a lot‿of" → "a lo-tof" · "not‿at‿all" → "no-ta-tall"
+
+      Günlük konuşmada bazı kalıplar kaynaşır: **going to** → "gonna", **want to** → "wanna", **have to** → "hafta". Bunları **tanımanız** gerekir; resmî konuşmada kendiniz kullanmak zorunda değilsiniz ve yazıda kullanılmazlar.
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Bir cümleyi önce yalnızca içerik sözcükleriyle söyleyin: "**WANT** ... **CUP** ... **TEA**". Sonra aynı ritmi bozmadan küçük sözcükleri araya sıkıştırın: "I **WANT** a **CUP** of **TEA**."
+
+      Kaydınızı dinlerken şunu denetleyin: "to", "of", "and", "a" sözcüklerini fazla net ve uzun mu söylüyorum?
+practice:
+  - {en: "a cup of tea", tr: "bir fincan çay", ipa: "ə ˈkʌp əv ˈtiː", note_tr: "of zayıf: /əv/. Vurgu cup ve tea'de."}
+  - {en: "fish and chips", tr: "balık ve patates kızartması", note_tr: "and zayıf: /ən/."}
+  - {en: "I want to go home.", tr: "Eve gitmek istiyorum.", note_tr: "to zayıf: /tə/. Vurgu: want, go, home."}
+  - {en: "I can swim.", tr: "Yüzebilirim.", note_tr: "can zayıf: /kən/. Vurgu swim'de."}
+  - {en: "I can't swim.", tr: "Yüzemem.", note_tr: "can't vurgulu ve net."}
+  - {en: "Turn it off.", tr: "Onu kapat.", note_tr: "Bağlama: tur-ni-toff."}
+  - {en: "Not at all.", tr: "Hiç de değil; rica ederim.", note_tr: "Bağlama: no-ta-tall."}
+  - {en: "What are you going to do?", tr: "Ne yapacaksın?", note_tr: "Vurgu: what, do. are, you, to zayıf."}
+  - {en: "I've got a lot of work to do.", tr: "Yapacak çok işim var.", note_tr: "Bağlama: lo-tof. Vurgu: got, lot, work, do."}
+  - {en: "She bought a book for her brother.", tr: "Erkek kardeşi için bir kitap aldı.", note_tr: "Vurgu: bought, book, brother."}
+  - {en: "Can you tell me where the station is?", tr: "İstasyonun nerede olduğunu söyler misiniz?", note_tr: "Vurgu: tell, where, station."}
+questions:
+  - id: q.pron.b1.sentence.01
+    type: multiple_choice
+    prompt: "\"I want a cup of tea.\" cümlesinde hangi sözcükler vurgulanır?"
+    options:
+      - "*want, cup, tea :: İçerik sözcükleri: asıl fiil ve isimler."
+      - "I, a, of :: Bunlar işlev sözcükleridir; zayıf söylenir."
+      - "Bütün sözcükler eşit :: İngilizcede işlev sözcükleri zayıflar."
+      - "Yalnızca tea :: Asıl fiil ve diğer isim de vurgulanır."
+    explanation: "İsim, asıl fiil, sıfat, zarf vurgulanır; tanımlık, edat, zamir zayıflar."
+  - id: q.pron.b1.sentence.02
+    type: nuance
+    difficulty: 3
+    prompt: "Dinlerken \"I can swim\" ile \"I can't swim\" cümlelerini ayırt etmenin en güvenilir yolu nedir?"
+    options:
+      - "*can zayıf ve kısa (/kən/), can't ise vurgulu ve net söylenir. :: Sondaki t çoğu zaman belli belirsiz duyulur; asıl ipucu vurgudur."
+      - "can't her zaman daha yüksek sesle bağırılır. :: Bağırma değil, vurgu ve sesli harfin netliği önemlidir."
+      - "can cümlede hiç söylenmez. :: Söylenir ama zayıflar."
+      - "Aralarında duyulabilir bir fark yoktur. :: Vurgu farkı belirgindir."
+    explanation: "Olumsuz yardımcı fiiller vurgulanır; olumlular zayıflar."
+  - id: q.pron.b1.sentence.03
+    type: matching
+    prompt: "Yazılı biçimleri bağlanmış söyleyişleriyle eşleştirin."
+    pairs:
+      - ["an apple", "a-napple"]
+      - ["turn it off", "tur-ni-toff"]
+      - ["a lot of", "a lo-tof"]
+      - ["not at all", "no-ta-tall"]
+    explanation: "Son ünsüz, sonraki sözcüğün ilk ünlüsüne bağlanır."
+  - id: q.pron.b1.sentence.04
+    type: multiple_choice
+    prompt: "\"gonna\" ve \"wanna\" biçimleri için hangisi doğrudur?"
+    options:
+      - "*Günlük konuşmada duyulur; tanımak gerekir, ama yazıda ve resmî konuşmada kullanılmaz. :: going to / want to'nun kaynaşmış söyleyişleridir."
+      - "Resmî yazışmalarda tercih edilir. :: Resmî yazıda kullanılmaz."
+      - "Yanlıştır ve hiç kimse kullanmaz. :: Günlük konuşmada çok yaygındır."
+      - "Yalnızca geçmiş zamanda kullanılır. :: Zamanla ilgisi yoktur."
+    explanation: "Kaynaşmış biçimler konuşma diline aittir."

@@ -1,0 +1,105 @@
+id: read.c1.the-attention-economy
+kind: reading
+level: C1
+title_tr: "Dikkat ekonomisi"
+title_en: The attention economy
+objective_tr: Soyut bir savı geliştiren denemede yazarın akıl yürütmesini, örtük varsayımlarını ve üslup tercihlerini değerlendirebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c1.cleft-sentences, gram.c1.hedging, gram.c1.inversion]
+vocabulary: [attention, distraction, advertise, design, profit, scarce]
+passage:
+  mode: text
+  lines:
+    - {en: "It is often said that if you are not paying for a product, you are the product. The phrase has become a cliché, but like many clichés it conceals a more precise truth. What is actually being sold is not you; it is your attention.", tr: "Bir ürüne para ödemiyorsanız ürünün siz olduğunuz sık sık söylenir. Bu söz bir klişeye dönüştü, ama birçok klişe gibi daha kesin bir gerçeği gizliyor. Aslında satılan şey siz değilsiniz; dikkatiniz."}
+    - {en: "Attention has one property that makes it uniquely valuable: it is scarce. Information can be copied without limit, yet no technology has added a single hour to the day. As the supply of things to look at has exploded, the capacity to look has stayed exactly where it was.", tr: "Dikkatin onu benzersiz biçimde değerli kılan bir özelliği var: kıt olması. Bilgi sınırsızca kopyalanabilir, oysa hiçbir teknoloji güne tek bir saat bile eklemedi. Bakılacak şeylerin arzı patlarken bakma kapasitesi tam olduğu yerde kaldı."}
+    - {en: "Not until we grasp this imbalance does the design of much modern software begin to make sense. A service that earns money from advertising is rewarded not for informing or satisfying its users but for keeping them present. Features that might seem trivial, such as a feed with no end or a notification that arrives at an unpredictable moment, are rarely accidental.", tr: "Günümüz yazılımlarının çoğunun tasarımı ancak bu dengesizliği kavradığımızda anlam kazanmaya başlar. Reklamdan para kazanan bir hizmet, kullanıcılarını bilgilendirdiği ya da tatmin ettiği için değil, onları orada tuttuğu için ödüllendirilir. Önemsiz görünebilecek özellikler — sonu olmayan bir akış ya da öngörülemeyen bir anda gelen bildirim — nadiren tesadüftür."}
+    - {en: "It would be too simple, however, to cast users as helpless victims. We are, after all, perfectly capable of closing an application. The difficulty is that the contest is unequal: on one side, an individual with limited willpower at the end of a tiring day; on the other, a system refined through millions of small experiments to discover what that individual finds hardest to resist.", tr: "Ne var ki kullanıcıları çaresiz kurbanlar olarak göstermek fazla basit olur. Sonuçta bir uygulamayı kapatmayı pekâlâ becerebiliriz. Güçlük, mücadelenin eşit olmamasında: bir yanda yorucu bir günün sonunda iradesi sınırlı bir birey; öte yanda o bireyin en çok neye direnemediğini bulmak için milyonlarca küçük deneyle inceltilmiş bir sistem."}
+    - {en: "Nor is the cost merely a matter of wasted time. Sustained attention appears to be the condition for much of what we value: following a complex argument, learning a language, listening to a friend. A mind that is interrupted every few minutes may still collect facts, but it tends to lose the ability to connect them.", tr: "Bedel yalnızca boşa harcanan zamandan da ibaret değil. Kesintisiz dikkat, değer verdiğimiz pek çok şeyin koşulu gibi görünüyor: karmaşık bir akıl yürütmeyi izlemek, bir dil öğrenmek, bir dostu dinlemek. Birkaç dakikada bir bölünen bir zihin yine de bilgi toplayabilir, ama bunları birbirine bağlama yetisini yitirmeye yatkındır."}
+    - {en: "What, then, is to be done? Individual discipline helps, though it is arguably the least reliable remedy. More promising are changes to the environment: removing applications from the first screen of a phone, silencing notifications by default, keeping devices out of the bedroom. Such measures work precisely because they do not depend on willpower.", tr: "Peki ne yapmalı? Bireysel disiplin işe yarar, gerçi en az güvenilir çare olduğu ileri sürülebilir. Daha umut verici olan, ortamda yapılan değişikliklerdir: uygulamaları telefonun ilk ekranından kaldırmak, bildirimleri varsayılan olarak susturmak, cihazları yatak odasının dışında tutmak. Bu tür önlemler tam da iradeye dayanmadıkları için işe yarar."}
+    - {en: "In the end, attention is not simply a resource to be managed. To decide what we attend to is, in a quite literal sense, to decide what our lives consist of.", tr: "Sonuçta dikkat yalnızca yönetilecek bir kaynak değildir. Neye dikkat edeceğimize karar vermek, sözcüğün tam anlamıyla, hayatımızın nelerden oluşacağına karar vermektir."}
+  glossary:
+    - {en: "conceal", tr: "gizlemek"}
+    - {en: "scarce", tr: "kıt"}
+    - {en: "grasp", tr: "kavramak"}
+    - {en: "trivial", tr: "önemsiz"}
+    - {en: "cast someone as", tr: "birini ... olarak göstermek"}
+    - {en: "willpower", tr: "irade"}
+    - {en: "sustained", tr: "kesintisiz, sürekli"}
+    - {en: "remedy", tr: "çare"}
+questions:
+  - id: q.read.c1.attention.01
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "How does the writer refine the cliché in the first paragraph?"
+    options:
+      - "*By arguing that it is the user's attention, not the user, that is sold :: \"What is actually being sold is not you; it is your attention.\""
+      - "By arguing that the cliché is completely false :: Yazar klişenin bir gerçeği gizlediğini söylüyor; tümüyle reddetmiyor."
+      - "By arguing that users should pay for every product :: Böyle bir öneri yok."
+      - "By arguing that products are free because companies are generous :: Metnin savıyla çelişir."
+    explanation: "Yazar klişeyi düzeltip kesinleştiriyor (cleft cümle ile)."
+    lessons: [gram.c1.cleft-sentences]
+  - id: q.read.c1.attention.02
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "Why, according to the writer, is attention \"uniquely valuable\"?"
+    options:
+      - "*Because, unlike information, it cannot be increased :: Bilgi sınırsız kopyalanır; günün saati artmaz."
+      - "Because it can be copied without limit :: Bu özellik bilgiye aittir."
+      - "Because technology has created more hours of free time :: Yazar tersini söylüyor."
+      - "Because people enjoy paying attention :: Metinde böyle bir gerekçe yok."
+    explanation: "Kıtlık değeri belirliyor: arz patladı, kapasite sabit kaldı."
+  - id: q.read.c1.attention.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"Not until we grasp this imbalance does the design of much modern software begin to make sense.\" What is the effect of this structure?"
+    options:
+      - "*It emphasizes that understanding the imbalance is the necessary condition for understanding the design. :: Not until + devrik yapı, koşulu vurgular."
+      - "It turns the sentence into a question. :: Soru düzeni kullanılsa da cümle soru değildir."
+      - "It suggests the design will never make sense. :: Tersine, ne zaman anlam kazandığını söylüyor."
+      - "It makes the sentence informal. :: Bu yapı resmî üsluba aittir."
+    explanation: "Olumsuz zarf başa alındığında yardımcı fiil özneden önce gelir."
+    lessons: [gram.c1.inversion]
+  - id: q.read.c1.attention.04
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What is the writer's position on personal responsibility?"
+    options:
+      - "*Users are not helpless, but the contest between an individual and an optimized system is unequal. :: Dördüncü paragraf iki yanı da ortaya koyuyor."
+      - "Users are entirely to blame for their distraction. :: Yazar mücadelenin eşit olmadığını vurguluyor."
+      - "Users have no ability to resist at all. :: \"We are perfectly capable of closing an application.\""
+      - "Responsibility is not discussed in the text. :: Dördüncü paragrafın konusu budur."
+    explanation: "Yazar basit bir kurban-suçlu ayrımını reddediyor."
+  - id: q.read.c1.attention.05
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "Why does the writer prefer changes to the environment over individual discipline?"
+    options:
+      - "*Because they work without relying on willpower :: \"Such measures work precisely because they do not depend on willpower.\""
+      - "Because discipline never helps anyone :: \"Individual discipline helps\" deniyor."
+      - "Because they are required by law :: Yasal düzenlemeden söz edilmiyor."
+      - "Because they are more expensive :: Maliyetten söz edilmiyor."
+    explanation: "İrade sınırlı bir kaynaktır; ortam değişikliği ona yük bindirmez."
+  - id: q.read.c1.attention.06
+    type: word_in_context
+    difficulty: 5
+    prompt: "In \"though it is arguably the least reliable remedy\", the word \"arguably\" signals that the writer:"
+    options:
+      - "*presents the claim as defensible but not beyond dispute :: arguably = ileri sürülebilir ki; ihtiyatlı bir iddia."
+      - "is certain the claim is true :: Kesinlik bildirmez."
+      - "believes the claim is false :: Yazar iddiayı savunuyor."
+      - "is quoting an opponent :: Alıntı değil, yazarın kendi ihtiyatlı yargısı."
+    explanation: "Arguably bir ihtiyat (hedging) aracıdır."
+    lessons: [gram.c1.hedging]
+  - id: q.read.c1.attention.07
+    type: written_answer
+    difficulty: 5
+    prompt: "Yazarın son cümlesine katılıyor musunuz? (\"To decide what we attend to is to decide what our lives consist of.\") 4–5 cümleyle görüşünüzü yazın; bir örnek verin ve en az bir ihtiyat ifadesi (arguably, tend to, may) kullanın."
+    model_answers:
+      - "I largely agree with the writer. Our days are, after all, made up of the things we notice and think about. Someone who spends every evening scrolling through short videos may well feel busy, yet remember almost nothing of it. That said, the claim is arguably too strong: we cannot always choose what demands our attention, particularly at work. Even so, we tend to have more choice than we admit."
+    checklist:
+      - "Görüşümü açıkça belirttim (katılıyorum / kısmen katılıyorum / katılmıyorum)."
+      - "Somut bir örnek verdim."
+      - "En az bir ihtiyat ifadesi kullandım."
+      - "Karşı görüşe ya da bir sınırlamaya değindim."
+    explanation: "İleri düzey bir görüş yazısında sav, örnek ve ölçülü bir karşı görüş birlikte bulunur."

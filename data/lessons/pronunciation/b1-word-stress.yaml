@@ -1,0 +1,104 @@
+id: pron.b1.word-stress
+kind: pronunciation
+level: B1
+title_tr: "Sözcük vurgusu ve schwa"
+title_en: "Word stress and the schwa"
+objective_tr: Çok heceli sözcüklerde vurgulu heceyi belirleyip güçlü söyleyebilecek, vurgusuz hecelerdeki zayıf /ə/ sesini (schwa) kullanabileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [photograph, comfortable, important, banana, about, record]
+sections:
+  - kind: explanation
+    title_tr: Vurgu neden bu kadar önemli?
+    text_tr: |-
+      Türkçede heceler aşağı yukarı eşit uzunlukta ve netlikte söylenir; vurgu hafiftir ve çoğunlukla son hecededir. İngilizcede ise her sözcüğün **bir hecesi** öbürlerinden belirgin biçimde **daha uzun, daha yüksek ve daha net** söylenir. Diğer heceler kısalır ve bulanıklaşır.
+
+      Anadili İngilizce olanlar sözcükleri büyük ölçüde **vurgu kalıbından** tanır. Bütün sesleri doğru çıkarsanız bile vurguyu yanlış heceye koyarsanız anlaşılmayabilirsiniz: "**ho**tel" değil "ho**tel**"; "com**for**table" değil "**com**fortable".
+  - kind: usage
+    title_tr: "Schwa: /ə/"
+    text_tr: |-
+      Vurgusuz hecelerdeki sesli harf çoğunlukla **/ə/** (schwa) sesine dönüşür. Bu, İngilizcenin **en sık kullanılan** sesli harf sesidir. Kısa, gevşek ve belirsiz bir sestir; Türkçedeki "ı"ya benzer ama daha gevşektir.
+
+      **banana** → /bəˈnænə/: yazıda üç "a" var, ama yalnızca ortadaki net okunur.
+
+      **about** → /əˈbaʊt/, **problem** → /ˈprɒbləm/, **doctor** → /ˈdɒktər/, **today** → /təˈdeɪ/.
+
+      Türkçe konuşanlar her sesli harfi yazıldığı gibi net okuma eğilimindedir ("ba-na-na", "dok-tor"). Vurgusuz heceleri **bilerek zayıflatmak** konuşmanızı çok daha doğal kılar.
+  - kind: formula
+    title_tr: Yararlı eğilimler
+    table:
+      headers: ["Tür", "Vurgu", "Örnekler"]
+      rows:
+        - ["iki heceli isim ve sıfatların çoğu", "ilk hece", "TAble, HAPpy, DOCtor, YELlow"]
+        - ["iki heceli fiillerin çoğu", "ikinci hece", "beGIN, deCIDE, forGET, arRIVE"]
+        - ["-tion, -sion, -ic ile bitenler", "ekten önceki hece", "inforMAtion, deCIsion, ecoNOmic"]
+        - ["-ee, -eer, -ese ile bitenler", "ekin kendisi", "employEE, engiNEER, JapaNESE"]
+        - ["isim / fiil çiftleri", "isim: ilk; fiil: ikinci", "a REcord / to reCORD; a PREsent / to preSENT"]
+  - kind: comparison
+    title_tr: Türkçeden tanıdık ama vurgusu farklı sözcükler
+    table:
+      headers: ["Sözcük", "Doğru vurgu", "Yaygın hata"]
+      rows:
+        - ["hotel", "hoTEL", "HOtel"]
+        - ["comfortable", "COMfortable (3 hece: /ˈkʌmftəbəl/)", "comFORtable (4 hece)"]
+        - ["vegetable", "VEGetable (3 hece)", "ve-ge-TA-ble (4 hece)"]
+        - ["interesting", "INteresting (3 hece)", "in-te-RES-ting"]
+        - ["develop", "deVELop", "DEvelop"]
+        - ["photograph / photographer", "PHOtograph / phoTOGrapher", "aynı heceyi vurgulamak"]
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Yeni bir sözcük öğrenirken anlamıyla birlikte **vurgulu hecesini** de öğrenin. Sözlükteki telaffuz yazımında vurgulu heceden önce **ˈ** işareti bulunur.
+
+      Vurgulu heceyi **abartarak** çalışın: uzatın ve sesinizi yükseltin. Öbür heceleri hızlı ve silik geçin: "ba-**NAAA**-na".
+practice:
+  - {en: "banana", tr: "muz", ipa: "bəˈnænə", note_tr: "Vurgu ortada; ilk ve son hece schwa."}
+  - {en: "about", tr: "hakkında", ipa: "əˈbaʊt", note_tr: "İlk hece zayıf /ə/."}
+  - {en: "hotel", tr: "otel", ipa: "hoʊˈtel", note_tr: "Vurgu ikinci hecede."}
+  - {en: "comfortable", tr: "rahat", ipa: "ˈkʌmftəbəl", note_tr: "Üç hece; vurgu başta."}
+  - {en: "vegetable", tr: "sebze", ipa: "ˈvedʒtəbəl", note_tr: "Üç hece; vurgu başta."}
+  - {en: "important", tr: "önemli", ipa: "ɪmˈpɔːrtənt"}
+  - {en: "information", tr: "bilgi", ipa: "ˌɪnfərˈmeɪʃən", note_tr: "Vurgu -tion'dan önceki hecede."}
+  - {en: "photograph", tr: "fotoğraf", ipa: "ˈfoʊtəɡræf"}
+  - {en: "photographer", tr: "fotoğrafçı", ipa: "fəˈtɒɡrəfər", note_tr: "Vurgu yer değiştirir."}
+  - {en: "The hotel was very comfortable.", tr: "Otel çok rahattı."}
+  - {en: "I need some information about vegetables.", tr: "Sebzeler hakkında biraz bilgiye ihtiyacım var."}
+  - {en: "Please record the record.", tr: "Lütfen rekoru kaydet.", note_tr: "Fiil: reCORD; isim: REcord."}
+questions:
+  - id: q.pron.b1.stress.01
+    type: multiple_choice
+    prompt: "\"hotel\" sözcüğünde vurgu hangi hecededir?"
+    options:
+      - "*İkinci hecede: hoTEL :: /hoʊˈtel/"
+      - "İlk hecede: HOtel :: Yaygın bir hatadır."
+      - "İki hece eşit vurgulanır :: İngilizcede hecelerden biri belirgin biçimde güçlüdür."
+      - "Sözcük tek hecelidir :: İki hecelidir."
+    explanation: "Vurgu işareti (ˈ) vurgulu heceden önce yazılır."
+  - id: q.pron.b1.stress.02
+    type: multiple_choice
+    prompt: "\"banana\" sözcüğünde hangi \"a\" net (vurgulu) okunur?"
+    options:
+      - "*Ortadaki :: /bəˈnænə/ — ilk ve son hece schwa."
+      - "İlki :: İlk hece zayıf /ə/ okunur."
+      - "Sonuncusu :: Son hece zayıf /ə/ okunur."
+      - "Üçü de :: Vurgusuz heceler zayıflar."
+    explanation: "Vurgusuz hecelerdeki sesli harf çoğunlukla /ə/ olur."
+  - id: q.pron.b1.stress.03
+    type: nuance
+    difficulty: 3
+    prompt: "\"record\" sözcüğü hangi cümlede ikinci hecesi vurgulu (reCORD) okunur?"
+    options:
+      - "*Can I record this meeting? :: Fiil: vurgu ikinci hecede."
+      - "She broke the world record. :: İsim: vurgu ilk hecede."
+      - "I bought an old record. :: İsim: vurgu ilk hecede."
+      - "Keep a record of your expenses. :: İsim: vurgu ilk hecede."
+    explanation: "İsim / fiil çiftlerinde isim ilk, fiil ikinci heceden vurgulanır."
+  - id: q.pron.b1.stress.04
+    type: matching
+    prompt: "Sözcükleri vurgulu heceleriyle eşleştirin."
+    pairs:
+      - ["decide", "ikinci hece"]
+      - ["doctor", "ilk hece"]
+      - ["information", "üçüncü hece"]
+      - ["engineer", "son hece"]
+    explanation: "Fiil: deCIDE; isim: DOCtor; -tion: inforMAtion; -eer: engiNEER."

@@ -1,0 +1,87 @@
+id: read.b1.working-from-home
+kind: reading
+level: B1
+title_tr: "Evden çalışmak"
+title_en: Working from home
+objective_tr: Bir konunun olumlu ve olumsuz yanlarını tartışan metinde yazarın görüşünü, gerekçelerini ve karşıt görüşleri ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.linking-words, gram.b1.present-perfect-continuous]
+vocabulary: [office, colleague, advantage, lonely, routine, balance]
+passage:
+  mode: text
+  lines:
+    - {en: "I have been working from home for three years now, and people often ask me whether I miss the office. The honest answer is: sometimes.", tr: "Üç yıldır evden çalışıyorum ve insanlar bana sık sık ofisi özleyip özlemediğimi soruyor. Dürüst cevap şu: bazen."}
+    - {en: "The advantages are obvious. I don't waste two hours a day on crowded buses, I can wear comfortable clothes, and I have lunch in my own kitchen. I also get more work done, because nobody interrupts me every ten minutes.", tr: "Üstünlükleri ortada. Günde iki saatimi kalabalık otobüslerde harcamıyorum, rahat kıyafetler giyebiliyorum ve öğle yemeğimi kendi mutfağımda yiyorum. Ayrıca daha çok iş çıkarıyorum, çünkü kimse on dakikada bir beni bölmüyor."}
+    - {en: "However, working from home is not as easy as it sounds. At first, I used to work in my pyjamas and start late. I quickly realized that I needed a routine, so now I get dressed and sit at my desk at nine, just as I did in the office.", tr: "Ancak evden çalışmak göründüğü kadar kolay değil. Başlangıçta pijamayla çalışır, geç başlardım. Bir düzene ihtiyacım olduğunu çabucak fark ettim; şimdi tıpkı ofisteyken olduğu gibi giyiniyor ve dokuzda masama oturuyorum."}
+    - {en: "The biggest problem is loneliness. Although I talk to my colleagues online every day, it is not the same as having a coffee together. Some days I don't leave the flat at all.", tr: "En büyük sorun yalnızlık. İş arkadaşlarımla her gün internet üzerinden konuşsam da bu, birlikte kahve içmekle aynı şey değil. Bazı günler daireden hiç çıkmıyorum."}
+    - {en: "It is also hard to stop working. When your office is in your living room, you are tempted to check your emails at eleven at night.", tr: "İşi bırakmak da zor. Ofisiniz oturma odanızdaysa gece on birde e-postalarınıza bakma isteğine kapılırsınız."}
+    - {en: "In spite of these problems, I would not go back to the office full-time. My solution is simple: I work in a café twice a week, I meet a friend for lunch on Fridays, and I switch off my laptop at six.", tr: "Bu sorunlara rağmen tam zamanlı olarak ofise dönmezdim. Çözümüm basit: haftada iki gün bir kafede çalışıyorum, cuma günleri bir arkadaşımla öğle yemeğinde buluşuyorum ve altıda dizüstü bilgisayarımı kapatıyorum."}
+  glossary:
+    - {en: "obvious", tr: "açık, belli"}
+    - {en: "waste", tr: "boşa harcamak"}
+    - {en: "interrupt", tr: "sözünü / işini kesmek"}
+    - {en: "routine", tr: "düzen, rutin"}
+    - {en: "loneliness", tr: "yalnızlık"}
+    - {en: "be tempted to", tr: "-me isteğine kapılmak"}
+    - {en: "switch off", tr: "kapatmak"}
+questions:
+  - id: q.read.b1.home.01
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "What is the writer's overall opinion of working from home?"
+    options:
+      - "*It has problems, but it is better than working in an office full-time. :: \"In spite of these problems, I would not go back to the office full-time.\""
+      - "It is perfect and has no disadvantages. :: Yazar yalnızlık ve işi bırakamama sorunlarını anlatıyor."
+      - "It is a mistake, and the writer wants to return to the office. :: Yazar ofise dönmeyeceğini söylüyor."
+      - "The writer has no clear opinion. :: Son paragrafta net bir görüş bildiriyor."
+    explanation: "Yazar sorunları kabul ediyor ama evden çalışmayı tercih ediyor."
+  - id: q.read.b1.home.02
+    type: reading_comprehension
+    difficulty: 2
+    prompt: "Why does the writer get more work done at home?"
+    options:
+      - "*Nobody interrupts them. :: \"...because nobody interrupts me every ten minutes.\""
+      - "They work longer hours. :: Geç saatte çalışmak bir sorun olarak anlatılıyor, verimlilik nedeni olarak değil."
+      - "They wear comfortable clothes. :: Bu bir üstünlük ama verimliliğin nedeni olarak verilmiyor."
+      - "They have a better computer. :: Metinde böyle bir bilgi yok."
+    explanation: "Neden \"because\" ile veriliyor."
+  - id: q.read.b1.home.03
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "What did the writer change after the first period of working from home?"
+    options:
+      - "*They started following a routine and getting dressed for work. :: \"I needed a routine, so now I get dressed and sit at my desk at nine.\""
+      - "They began working in their pyjamas. :: Bu, başlangıçta yaptığı ve bıraktığı şeydir."
+      - "They started working later in the day. :: Geç başlamak eski alışkanlığıydı."
+      - "They moved to a bigger flat. :: Metinde böyle bir bilgi yok."
+    explanation: "\"I used to work in my pyjamas\" eski alışkanlığı, \"now\" yeni düzeni gösteriyor."
+    lessons: [gram.a2.used-to]
+  - id: q.read.b1.home.04
+    type: word_in_context
+    difficulty: 3
+    prompt: "In the text, \"you are tempted to check your emails\" means:"
+    options:
+      - "*you feel that you want to check them, although you shouldn't :: be tempted to: yapmaması gereken bir şeyi yapma isteği duymak."
+      - "you are forced to check them by your boss :: Zorlama anlamı yok."
+      - "you forget to check them :: Tam tersi."
+      - "you are not allowed to check them :: Yasak anlamı yok."
+    explanation: "tempt: ayartmak, cezbetmek."
+  - id: q.read.b1.home.05
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "Which of these is NOT part of the writer's solution?"
+    options:
+      - "*Going to the office once a week :: Çözümler arasında ofise gitmek yok."
+      - "Working in a café twice a week :: Çözümlerden biri."
+      - "Meeting a friend for lunch on Fridays :: Çözümlerden biri."
+      - "Switching off the laptop at six :: Çözümlerden biri."
+    explanation: "Son paragrafta üç çözüm sayılıyor."
+  - id: q.read.b1.home.06
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "The writer never speaks to colleagues."
+    options:
+      - "Doğru :: Yazar iş arkadaşlarıyla her gün internet üzerinden konuşuyor."
+      - "*Yanlış :: \"Although I talk to my colleagues online every day...\""
+    explanation: "Konuşuyor, ama yüz yüze görüşmenin yerini tutmadığını söylüyor."

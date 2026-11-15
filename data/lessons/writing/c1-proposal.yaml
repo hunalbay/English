@@ -1,0 +1,116 @@
+id: write.c1.proposal
+kind: writing
+level: C1
+title_tr: "Öneri raporu"
+title_en: A proposal
+objective_tr: Bir sorunu ortaya koyan, çözüm öneren ve önerinin yararlarını gerekçelendiren başlıklı, nesnel üsluplu bir öneri metni yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c1.nominalisation, gram.c1.hedging, gram.c1.subjunctive]
+vocabulary: [propose, recommend, benefit, implement, budget, staff]
+sections:
+  - kind: explanation
+    title_tr: Öneri metni nedir?
+    text_tr: |-
+      Öneri (proposal), bir karar vericiyi **belirli bir şeyi yapmaya ikna etmek** için yazılır: bir yöneticiye, bir kurula, bir belediyeye. Rapordan farkı **geleceğe dönük** olmasıdır; rapor olanı anlatır, öneri olması gerekeni savunur.
+
+      Metin **başlıklarla** bölünür, üslup **nesnel ve ölçülüdür**, öneriler **somut ve uygulanabilir** olmalıdır. Okurun zamanı kısıtlıdır: ne istediğinizi ilk bölümde anlamalıdır.
+  - kind: formula
+    title_tr: Bölümler
+    table:
+      headers: ["Başlık", "İçerik", "Kalıplar"]
+      rows:
+        - ["Introduction", "amaç ve kapsam", "The aim of this proposal is to ... / This proposal outlines ..."]
+        - ["Current situation", "sorun ve kanıtı", "At present, ... / A recent survey indicated that ..."]
+        - ["Recommendations", "somut öneriler", "It is recommended that ... (should) be ... / I would suggest ...-ing"]
+        - ["Benefits", "beklenen sonuçlar", "This would allow ... / The scheme is likely to result in ..."]
+        - ["Conclusion", "özet ve çağrı", "I am confident that ... / I therefore urge the committee to ..."]
+  - kind: examples
+    title_tr: Örnek bölümler
+    examples:
+      - {en: "The aim of this proposal is to suggest ways of reducing staff turnover in the customer service department.", tr: "Bu önerinin amacı, müşteri hizmetleri bölümünde çalışan devrini azaltmanın yollarını önermektir.", note_tr: "Introduction"}
+      - {en: "At present, almost a third of new employees leave within their first year. Exit interviews suggest that the main causes are a lack of training and limited opportunities for promotion.", tr: "Hâlihazırda yeni çalışanların neredeyse üçte biri ilk yılı içinde ayrılıyor. Çıkış görüşmeleri, başlıca nedenlerin eğitim eksikliği ve sınırlı terfi olanakları olduğuna işaret ediyor.", note_tr: "Current situation"}
+      - {en: "It is recommended that every new member of staff be assigned an experienced mentor for the first six months.", tr: "Her yeni çalışana ilk altı ay için deneyimli bir rehber atanması önerilmektedir.", note_tr: "Recommendations"}
+      - {en: "This would not only shorten the time needed for training but also be likely to improve morale across the department.", tr: "Bu, yalnızca eğitim için gereken süreyi kısaltmakla kalmayacak, büyük olasılıkla bölüm genelinde morali de yükseltecektir.", note_tr: "Benefits"}
+      - {en: "Given the modest cost involved, I am confident that these measures would pay for themselves within a year.", tr: "Söz konusu maliyetin düşüklüğü göz önüne alındığında, bu önlemlerin bir yıl içinde kendini amorti edeceğinden eminim.", note_tr: "Conclusion"}
+  - kind: usage
+    title_tr: Üslup araçları
+    text_tr: |-
+      **Kişisiz öneri:** "It is recommended that training **be provided**." / "Consideration should be given to ...-ing."
+
+      **İsimleştirme:** "because employees leave" → "owing to high staff **turnover**"; "if we introduce" → "the **introduction** of".
+
+      **İhtiyat:** "would", "is likely to", "should" kullanın; "will definitely" demeyin.
+
+      **Varsayımsal sonuç:** öneri henüz kabul edilmediği için sonuçlar **would** ile anlatılır: "This **would** reduce costs."
+
+      **Somutluk:** "improve communication" yerine "hold a fifteen-minute team meeting every Monday".
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Öneriyi sona saklamak.** Amaç ilk bölümde belirtilir.
+
+      **Belirsiz öneriler:** "We should do something about training."
+
+      **Kişisel ve duygusal dil:** "I really hate the current system."
+
+      **Sonuçları kesinmiş gibi sunmak:** "This will solve all our problems."
+
+      **Başlıkları atlamak.** Öneri metni bir deneme değildir; okur bölümler arasında gezinebilmelidir.
+questions:
+  - id: q.write.c1.proposal.01
+    type: matching
+    prompt: "Cümleleri ait oldukları bölümle eşleştirin."
+    pairs:
+      - ["The aim of this proposal is to ...", "Introduction"]
+      - ["At present, only one printer serves forty people.", "Current situation"]
+      - ["It is recommended that two further printers be purchased.", "Recommendations"]
+      - ["This would save an estimated three hours a week.", "Benefits"]
+    explanation: "Her bölümün kendine özgü işlevi ve kalıpları vardır."
+  - id: q.write.c1.proposal.02
+    type: sentence_building
+    prompt: "Kişisiz ve resmî biçimde yeniden yazın: \"We should give all staff a laptop.\" → It is recommended that all staff ..."
+    answers: ["It is recommended that all staff be given a laptop.", "It is recommended that all staff should be given a laptop."]
+    explanation: "It is recommended that + özne + (should) be + V3."
+    lessons: [gram.c1.subjunctive]
+  - id: q.write.c1.proposal.03
+    type: multiple_choice
+    difficulty: 4
+    prompt: "Bir öneri metninde yararları anlatırken hangisi en uygundur?"
+    options:
+      - "*This would be likely to reduce complaints by a significant margin. :: Varsayımsal (would) ve ihtiyatlı (likely) bir ifade."
+      - "This will definitely end all complaints forever. :: Aşırı kesin ve gerçekçi değil."
+      - "I'm sure everyone will love it! :: Gündelik ve duygusal."
+      - "Complaints are bad, so we must stop them. :: Belirsiz ve gerekçesiz."
+    explanation: "Öneri henüz uygulanmadığı için sonuçlar would ile ve ölçülü biçimde anlatılır."
+    lessons: [gram.c1.hedging]
+  - id: q.write.c1.proposal.04
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi öneri cümlesi en somut ve uygulanabilirdir?"
+    options:
+      - "*It is recommended that a weekly fifteen-minute briefing be held for each team on Monday mornings. :: Ne, ne sıklıkla, ne kadar ve ne zaman sorularını yanıtlıyor."
+      - "Communication should be improved. :: Nasıl yapılacağı belirsiz."
+      - "Management ought to think about staff more. :: Somut bir eylem içermiyor."
+      - "Something needs to be done about meetings. :: Belirsiz."
+    explanation: "İyi bir öneri ölçülebilir ve uygulanabilir olmalıdır."
+  - id: q.write.c1.proposal.05
+    type: sentence_building
+    prompt: "İsimleştirerek yeniden yazın: \"Because employees leave so often, costs have increased.\" → High staff turnover has led to ..."
+    answers: ["High staff turnover has led to an increase in costs.", "High staff turnover has led to increased costs.", "High staff turnover has led to a rise in costs.", "High staff turnover has led to higher costs."]
+    explanation: "leave → turnover; increased → an increase in."
+    lessons: [gram.c1.nominalisation]
+  - id: q.write.c1.proposal.06
+    type: written_answer
+    difficulty: 5
+    prompt: "İş yerinizde, okulunuzda ya da mahallenizde gördüğünüz bir sorun için 180–220 sözcüklük bir öneri metni yazın. Şu başlıkları kullanın: Introduction, Current situation, Recommendations, Benefits. En az iki somut öneri sunun."
+    model_answers:
+      - "Introduction. The aim of this proposal is to suggest how the company could reduce the amount of time lost in internal meetings. Current situation. At present, most departments hold meetings without a written agenda, and these frequently overrun. A short survey carried out last month indicated that staff spend an average of nine hours a week in meetings, and that fewer than half of those attending consider them useful. Recommendations. It is recommended that every meeting be limited to forty-five minutes and that an agenda be circulated at least one day in advance. I would also suggest introducing one meeting-free afternoon each week, so that staff are able to concentrate on longer tasks without interruption. Benefits. These measures would cost nothing to implement. They would be likely to free several hours a week for each employee and, in time, to improve the quality of decisions, since participants would arrive better prepared. Given the scale of the problem, I am confident that a three-month trial in two departments would demonstrate clear results."
+    checklist:
+      - "Dört başlığı kullandım ve amacımı ilk bölümde belirttim."
+      - "Sorunu en az bir veri ya da gözlemle destekledim."
+      - "En az iki somut, uygulanabilir öneri yazdım."
+      - "Önerilerde kişisiz yapı kullandım (It is recommended that ... be ...)."
+      - "Yararları would ve ihtiyatlı ifadelerle anlattım."
+      - "Kısaltma ve duygusal ifade kullanmadım."
+    explanation: "Öneri metni: amaç → sorun ve kanıt → somut öneriler → beklenen yararlar."

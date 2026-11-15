@@ -1,0 +1,73 @@
+id: listen.a2.lost-in-the-city
+kind: listening
+level: A2
+title_tr: "Yol sormak"
+title_en: Asking for directions
+objective_tr: Yol tarifi içeren bir konuşmayı dinleyip yönleri, mesafeyi ve ulaşım seçeneğini anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.imperatives, gram.a2.comparatives]
+vocabulary: [museum, straight, corner, bridge, far, minute]
+passage:
+  mode: dialogue
+  voices: {Tourist: f1, Local: m2}
+  lines:
+    - {speaker: Tourist, en: "Excuse me. Could you help me? I'm looking for the City Museum.", tr: "Affedersiniz. Yardımcı olabilir misiniz? Şehir Müzesi'ni arıyorum."}
+    - {speaker: Local, en: "The City Museum? Yes, of course. It's not far from here.", tr: "Şehir Müzesi mi? Evet, tabii. Buraya uzak değil."}
+    - {speaker: Tourist, en: "Great. How do I get there?", tr: "Harika. Oraya nasıl giderim?"}
+    - {speaker: Local, en: "Go straight along this street until you see a big bank on the corner.", tr: "Köşede büyük bir banka görene kadar bu caddeden dümdüz gidin."}
+    - {speaker: Tourist, en: "A bank on the corner. OK.", tr: "Köşede bir banka. Tamam."}
+    - {speaker: Local, en: "Turn left at the bank, and then walk across the bridge.", tr: "Bankadan sola dönün, sonra köprüden karşıya geçin."}
+    - {speaker: Tourist, en: "Turn left, then across the bridge.", tr: "Sola dön, sonra köprüden geç."}
+    - {speaker: Local, en: "That's right. After the bridge, the museum is on your right, next to a small park.", tr: "Doğru. Köprüden sonra müze sağınızda, küçük bir parkın yanında."}
+    - {speaker: Tourist, en: "How long does it take on foot?", tr: "Yürüyerek ne kadar sürer?"}
+    - {speaker: Local, en: "About fifteen minutes. You can take the bus, but walking is faster because of the traffic.", tr: "Yaklaşık on beş dakika. Otobüse binebilirsiniz ama trafik yüzünden yürümek daha hızlı."}
+    - {speaker: Tourist, en: "Then I'll walk. Thank you so much!", tr: "O zaman yürürüm. Çok teşekkür ederim!"}
+    - {speaker: Local, en: "You're welcome. Enjoy the museum. It closes at five, so don't be late.", tr: "Rica ederim. Müzenin tadını çıkarın. Beşte kapanıyor, geç kalmayın."}
+questions:
+  - id: q.listen.a2.directions.01
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "Where should the tourist turn left?"
+    options:
+      - "*At the bank :: \"Turn left at the bank.\""
+      - "At the bridge :: Köprüden karşıya geçmesi gerekiyor, dönmesi değil."
+      - "At the park :: Park müzenin yanında."
+      - "At the museum :: Müze varış noktası."
+    explanation: "Önce dümdüz, bankadan sola, sonra köprü."
+  - id: q.listen.a2.directions.02
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "Where exactly is the museum?"
+    options:
+      - "*On the right after the bridge, next to a small park :: \"After the bridge, the museum is on your right, next to a small park.\""
+      - "On the left before the bridge :: Köprüden sonra ve sağda."
+      - "Opposite the bank :: Banka dönülecek yer."
+      - "Inside the park :: Parkın yanında, içinde değil."
+    explanation: "on your right = sağınızda; next to = yanında"
+  - id: q.listen.a2.directions.03
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "Why is walking faster than taking the bus?"
+    options:
+      - "*Because of the traffic :: \"Walking is faster because of the traffic.\""
+      - "Because there is no bus :: Otobüs var."
+      - "Because the bus is expensive :: Fiyattan söz edilmiyor."
+      - "Because the museum is very far :: Yakın olduğu söyleniyor."
+    explanation: "because of + isim: ... yüzünden"
+  - id: q.listen.a2.directions.04
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "What time does the museum close?"
+    options:
+      - "*At five :: \"It closes at five.\""
+      - "At fifteen :: On beş, yürüme süresidir (dakika)."
+      - "At four :: Kayıtta beş deniyor."
+      - "At nine :: Kayıtta geçmiyor."
+    explanation: "\"It closes at five, so don't be late.\""
+  - id: q.listen.a2.directions.05
+    type: word_order
+    instruction_tr: "Kayıttaki yol tarifini doğru sıraya dizin."
+    prompt: "Cümle kurun."
+    tokens: [Turn, left, at, the, bank]
+    explanation: "\"Turn left at the bank, and then walk across the bridge.\""

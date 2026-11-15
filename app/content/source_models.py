@@ -49,9 +49,13 @@ class LevelDef(Strict):
     description_tr: str = NonEmpty
 
 
+Track = Literal["grammar", "reading", "listening", "writing", "pronunciation"]
+
+
 class UnitDef(Strict):
     id: str = Field(pattern=ID_PATTERN)
     level: Level
+    track: Track = "grammar"
     title_tr: str = NonEmpty
     title_en: str | None = None
     description_tr: str | None = None
@@ -104,6 +108,37 @@ class Section(Strict):
         return self
 
 
+class PassageLine(Strict):
+    speaker: str | None = None
+    en: str = NonEmpty
+    tr: str = NonEmpty
+
+
+class GlossaryItem(Strict):
+    en: str = NonEmpty
+    tr: str = NonEmpty
+
+
+class Passage(Strict):
+    """Okuma metni ya da dinleme kaydının yazılı hâli. Her satırın Türkçe çevirisi vardır."""
+
+    mode: Literal["text", "dialogue"] = "text"
+    lines: list[PassageLine] = Field(min_length=1)
+    glossary: list[GlossaryItem] = Field(default_factory=list)
+    voices: dict[str, Literal["f1", "f2", "m1", "m2"]] = Field(
+        default_factory=dict, description="konuşmacı -> ses; boş anahtar anlatıcıdır"
+    )
+
+
+class PracticeItem(Strict):
+    """Telaffuz çalışması öğesi: dinlenip tekrar edilecek sözcük ya da cümle."""
+
+    en: str = NonEmpty
+    tr: str = NonEmpty
+    ipa: str | None = None
+    note_tr: str | None = None
+
+
 class LessonFile(Strict):
     id: str = Field(pattern=ID_PATTERN)
     kind: LessonKind
@@ -117,7 +152,9 @@ class LessonFile(Strict):
     next: list[str] = Field(default_factory=list)
     related: list[str] = Field(default_factory=list)
     vocabulary: list[str] = Field(default_factory=list, description="İlgili kelimelerin temel biçimleri")
-    sections: list[Section] = Field(min_length=1)
+    sections: list[Section] = Field(default_factory=list)
+    passage: Passage | None = None
+    practice: list[PracticeItem] = Field(default_factory=list)
     questions: list[Question] = Field(default_factory=list)
 
 

@@ -1,0 +1,74 @@
+id: read.a2.healthy-habits
+kind: reading
+level: A2
+title_tr: "Sağlıklı alışkanlıklar"
+title_en: Healthy habits
+objective_tr: Tavsiyeler içeren kısa bir yazıda ana fikri ve verilen önerileri bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.should, gram.a2.quantifiers]
+vocabulary: [healthy, habit, sleep, exercise, water, tired]
+passage:
+  mode: text
+  lines:
+    - {en: "Many people want to be healthier, but they think it is difficult. In fact, small changes can make a big difference.", tr: "Birçok insan daha sağlıklı olmak ister ama bunun zor olduğunu düşünür. Aslında küçük değişiklikler büyük fark yaratabilir."}
+    - {en: "First, you should sleep enough. Most adults need seven or eight hours a night. If you don't sleep well, you feel tired and it is harder to concentrate.", tr: "Öncelikle yeterince uyumalısınız. Yetişkinlerin çoğunun gecede yedi ya da sekiz saate ihtiyacı vardır. İyi uyumazsanız yorgun hissedersiniz ve dikkatinizi toplamak zorlaşır."}
+    - {en: "Second, drink more water. A lot of people drink too much tea and coffee and not enough water.", tr: "İkinci olarak daha çok su için. Pek çok insan fazla çay ve kahve içer, yeterince su içmez."}
+    - {en: "Third, move your body. You don't have to go to a gym. Walking for thirty minutes a day is enough for most people.", tr: "Üçüncü olarak hareket edin. Spor salonuna gitmek zorunda değilsiniz. Günde otuz dakika yürümek çoğu insan için yeterlidir."}
+    - {en: "Finally, you shouldn't eat late at night. Try to have dinner at least two hours before you go to bed.", tr: "Son olarak gece geç saatte yemek yememelisiniz. Akşam yemeğini yatmadan en az iki saat önce yemeye çalışın."}
+    - {en: "You don't need to change everything at once. Choose one habit, practise it for a month, and then add another.", tr: "Her şeyi bir anda değiştirmeniz gerekmez. Bir alışkanlık seçin, bir ay uygulayın, sonra bir başkasını ekleyin."}
+  glossary:
+    - {en: "in fact", tr: "aslında"}
+    - {en: "make a difference", tr: "fark yaratmak"}
+    - {en: "adult", tr: "yetişkin"}
+    - {en: "concentrate", tr: "dikkatini toplamak"}
+    - {en: "at least", tr: "en az"}
+    - {en: "at once", tr: "bir anda, aynı anda"}
+questions:
+  - id: q.read.a2.habits.01
+    type: reading_comprehension
+    difficulty: 2
+    prompt: "What is the main idea of the text?"
+    options:
+      - "*Small changes can make you healthier. :: Giriş ve sonuç paragrafları bu fikri veriyor."
+      - "Being healthy is very difficult. :: Yazar bunun yaygın ama yanlış bir düşünce olduğunu söylüyor."
+      - "Everyone should go to a gym. :: \"You don't have to go to a gym.\""
+      - "You must change all your habits at once. :: \"You don't need to change everything at once.\""
+    explanation: "Ana fikir ilk paragrafta: \"small changes can make a big difference\"."
+  - id: q.read.a2.habits.02
+    type: reading_comprehension
+    prompt: "How much sleep do most adults need?"
+    options:
+      - "*Seven or eight hours :: \"Most adults need seven or eight hours a night.\""
+      - "Five or six hours :: Metinde böyle bir bilgi yok."
+      - "Thirty minutes :: Bu, önerilen günlük yürüyüş süresidir."
+      - "Two hours :: Bu, akşam yemeği ile yatma arasındaki süredir."
+    explanation: "İkinci paragraftaki bilgi."
+  - id: q.read.a2.habits.03
+    type: reading_comprehension
+    prompt: "According to the text, what do a lot of people do?"
+    options:
+      - "*They drink too much tea and coffee. :: \"A lot of people drink too much tea and coffee and not enough water.\""
+      - "They drink too much water. :: Tersine, yeterince su içmiyorlar."
+      - "They walk too much. :: Metinde böyle bir bilgi yok."
+      - "They sleep too much. :: Metinde böyle bir bilgi yok."
+    explanation: "too much = gereğinden fazla; not enough = yetersiz."
+    lessons: [gram.a2.too-enough]
+  - id: q.read.a2.habits.04
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "The writer says you must go to a gym."
+    options:
+      - "Doğru :: Yazar spor salonunun zorunlu olmadığını söylüyor."
+      - "*Yanlış :: \"You don't have to go to a gym.\""
+    explanation: "don't have to = zorunda değilsiniz."
+  - id: q.read.a2.habits.05
+    type: reading_comprehension
+    difficulty: 2
+    prompt: "What does the writer suggest in the last paragraph?"
+    options:
+      - "*Start with one habit and add another later. :: \"Choose one habit, practise it for a month, and then add another.\""
+      - "Change everything in one month. :: Yazar bunun gerekmediğini söylüyor."
+      - "Stop after a month. :: Bir aydan sonra yeni bir alışkanlık eklenmesi öneriliyor."
+      - "Ask a doctor first. :: Metinde böyle bir öneri yok."
+    explanation: "Yazar adım adım ilerlemeyi öneriyor."

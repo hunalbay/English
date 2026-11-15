@@ -1,0 +1,88 @@
+id: listen.c1.lecture-cities
+kind: listening
+level: C1
+title_tr: "Konferans: Şehirler neden büyür?"
+title_en: "A lecture: why cities grow"
+objective_tr: Akademik bir konuşmanın yapısını izleyip ana savı, destekleyici örnekleri ve konuşmacının çekincelerini anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c1.hedging, gram.c1.nominalisation, gram.c1.cleft-sentences]
+vocabulary: [population, economy, innovation, infrastructure]
+passage:
+  mode: text
+  voices: {"": m2}
+  lines:
+    - {en: "Good morning, everyone. Today I want to address a question that sounds simple but turns out to be surprisingly difficult: why do cities exist at all?", tr: "Herkese günaydın. Bugün, kulağa basit gelen ama şaşırtıcı ölçüde zor olduğu ortaya çıkan bir soruyu ele almak istiyorum: şehirler neden var?"}
+    - {en: "After all, cities are expensive, crowded and noisy. And yet, for the first time in history, more than half of humanity lives in one.", tr: "Ne de olsa şehirler pahalı, kalabalık ve gürültülüdür. Yine de tarihte ilk kez insanlığın yarısından fazlası bir şehirde yaşıyor."}
+    - {en: "The traditional explanation is economic. When firms and workers are close together, transport costs fall, and it becomes easier for employers to find the skills they need.", tr: "Geleneksel açıklama ekonomiktir. Firmalar ve çalışanlar birbirine yakın olduğunda ulaşım maliyetleri düşer ve işverenlerin ihtiyaç duydukları becerileri bulması kolaylaşır."}
+    - {en: "That is true, but it is not the whole story. What really distinguishes cities is the speed at which ideas travel within them.", tr: "Bu doğru, ama hikâyenin tamamı değil. Şehirleri gerçekten ayırt eden şey, fikirlerin onların içinde yol alma hızıdır."}
+    - {en: "A great deal of knowledge cannot be written down. It is passed on through conversation, observation and chance meetings, and these happen far more often where people are densely packed.", tr: "Bilginin büyük bir bölümü yazıya dökülemez. Sohbet, gözlem ve rastlantısal karşılaşmalar yoluyla aktarılır; bunlar da insanların sıkışık yaşadığı yerlerde çok daha sık gerçekleşir."}
+    - {en: "There is some evidence that when a city doubles in size, measures of innovation, such as new patents, rise by more than double. I say some evidence, because the figures are disputed and should be treated with caution.", tr: "Bir şehrin büyüklüğü iki katına çıktığında, yeni patentler gibi yenilik ölçütlerinin iki kattan fazla arttığına dair bazı kanıtlar var. Bazı kanıtlar diyorum, çünkü rakamlar tartışmalı ve ihtiyatla ele alınmalı."}
+    - {en: "Unfortunately, the same appears to be true of less welcome things. Crime, disease and inequality also tend to increase faster than population.", tr: "Ne yazık ki aynı şey daha az hoşa giden şeyler için de geçerli görünüyor. Suç, hastalık ve eşitsizlik de nüfustan daha hızlı artma eğiliminde."}
+    - {en: "So growth is not simply good or bad. The real question for planners is whether infrastructure, by which I mean housing, transport and public services, can keep pace.", tr: "Dolayısıyla büyüme basitçe iyi ya da kötü değildir. Planlamacılar için asıl soru, altyapının — bununla konutu, ulaşımı ve kamu hizmetlerini kastediyorum — bu hıza ayak uydurup uyduramayacağıdır."}
+    - {en: "Where it does, cities become engines of opportunity. Where it does not, the benefits of density are swallowed by its costs.", tr: "Uydurduğu yerde şehirler fırsat motoruna dönüşür. Uyduramadığı yerde yoğunluğun yararları maliyetleri tarafından yutulur."}
+    - {en: "Next week we will look at two cities that illustrate each of these outcomes. Thank you.", tr: "Gelecek hafta bu iki sonucun her birine örnek olan iki şehre bakacağız. Teşekkür ederim."}
+questions:
+  - id: q.listen.c1.cities.01
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What does the lecturer consider the most distinctive feature of cities?"
+    options:
+      - "*The speed at which ideas spread within them :: \"What really distinguishes cities is the speed at which ideas travel within them.\""
+      - "The low cost of transport :: Bu geleneksel açıklamanın bir parçası; konuşmacı \"hikâyenin tamamı değil\" diyor."
+      - "The high cost of living :: Bir özellik olarak anılıyor ama ayırt edici özellik olarak sunulmuyor."
+      - "The number of universities :: Kayıtta böyle bir bilgi yok."
+    explanation: "Vurgu cümlesi (What ... is ...) ana savı işaret ediyor."
+    lessons: [gram.c1.cleft-sentences]
+  - id: q.listen.c1.cities.02
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "Why, according to the lecturer, does density matter for knowledge?"
+    options:
+      - "*Much knowledge is passed on informally through contact between people. :: \"It is passed on through conversation, observation and chance meetings.\""
+      - "Books are cheaper in cities. :: Kayıtta böyle bir bilgi yok."
+      - "People in cities read more. :: Kayıtta böyle bir bilgi yok."
+      - "Knowledge can only be written down in cities. :: Konuşmacı bilginin çoğunun yazıya dökülemediğini söylüyor."
+    explanation: "Yazıya dökülemeyen bilgi, yüz yüze temasla aktarılır."
+  - id: q.listen.c1.cities.03
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "How does the lecturer treat the claim about innovation more than doubling?"
+    options:
+      - "*As supported by some evidence, but disputed and to be treated with caution :: \"I say some evidence, because the figures are disputed.\""
+      - "As a proven scientific law :: Konuşmacı açıkça ihtiyat belirtiyor."
+      - "As a myth with no evidence :: \"Some evidence\" olduğunu söylüyor."
+      - "As irrelevant to the topic :: Savının bir parçası olarak sunuyor."
+    explanation: "Akademik konuşmada ihtiyatlı dil."
+    lessons: [gram.c1.hedging]
+  - id: q.listen.c1.cities.04
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What does the lecturer say about the negative effects of growth?"
+    options:
+      - "*Crime, disease and inequality also tend to rise faster than population. :: Olumsuzlar da nüfustan hızlı artıyor."
+      - "They disappear as cities become richer. :: Kayıtta böyle bir bilgi yok."
+      - "They grow more slowly than population. :: Tersini söylüyor."
+      - "They are caused by poor planning alone. :: Planlama sonuçları etkiliyor ama tek neden olarak sunulmuyor."
+    explanation: "\"The same appears to be true of less welcome things.\""
+  - id: q.listen.c1.cities.05
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What is \"the real question for planners\"?"
+    options:
+      - "*Whether housing, transport and public services can keep up with growth :: Altyapının büyümeye ayak uydurup uyduramayacağı."
+      - "How to stop cities from growing :: Konuşmacı büyümeyi durdurmayı önermiyor."
+      - "How to move people back to villages :: Kayıtta böyle bir öneri yok."
+      - "Whether patents should be counted :: Patentler yalnızca bir ölçüt örneği."
+    explanation: "\"...whether infrastructure ... can keep pace.\""
+  - id: q.listen.c1.cities.06
+    type: sentence_completion
+    difficulty: 5
+    instruction_tr: "Kayda göre cümleyi tamamlayın."
+    prompt: "Where infrastructure fails to keep pace, ___"
+    options:
+      - "*the benefits of density are swallowed by its costs. :: Konuşmanın sondan bir önceki cümlesi."
+      - "cities become engines of opportunity. :: Bu, altyapının ayak uydurduğu durum için söyleniyor."
+      - "innovation more than doubles. :: Bu, şehir büyüklüğüyle ilgili ayrı bir iddia."
+      - "transport costs fall. :: Bu, yakınlığın geleneksel açıklaması."
+    explanation: "İki karşıt sonuç: \"Where it does...\" / \"Where it does not...\""

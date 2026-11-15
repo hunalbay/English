@@ -322,3 +322,207 @@ units:
       - gram.c2.discourse-markers
       - gram.c2.fixed-structures
       - gram.c2.cohesion
+
+  # --- Okuma ---------------------------------------------------------------
+  - id: a1.read
+    level: A1
+    track: reading
+    title_tr: A1 okuma metinleri
+    title_en: A1 reading
+    description_tr: Kısa ve basit cümlelerle yazılmış, günlük hayatla ilgili metinler.
+    lessons:
+      - read.a1.my-family
+      - read.a1.a-day-at-school
+      - read.a1.at-the-market
+
+  - id: a2.read
+    level: A2
+    track: reading
+    title_tr: A2 okuma metinleri
+    title_en: A2 reading
+    description_tr: Geçmiş olaylar, karşılaştırmalar ve tavsiyeler içeren kısa metinler.
+    lessons:
+      - read.a2.a-weekend-trip
+      - read.a2.a-new-flat
+      - read.a2.healthy-habits
+
+  - id: b1.read
+    level: B1
+    track: reading
+    title_tr: B1 okuma metinleri
+    title_en: B1 reading
+    description_tr: Görüş bildiren yazılar ve kısa öyküler; olay sırasını, nedenleri ve tutumları izleyin.
+    lessons:
+      - read.b1.working-from-home
+      - read.b1.the-lost-wallet
+      - read.b1.city-or-countryside
+
+  - id: b2.read
+    level: B2
+    track: reading
+    title_tr: B2 okuma metinleri
+    title_en: B2 reading
+    description_tr: Güncel ve bilimsel konularda yazılar; ana savı, kanıtları ve yazarın tutumunu belirleyin.
+    lessons:
+      - read.b2.the-price-of-fast-fashion
+      - read.b2.why-we-forget
+
+  - id: c1.read
+    level: C1
+    track: reading
+    title_tr: C1 okuma metinleri
+    title_en: C1 reading
+    description_tr: Denemeler ve resmî yazılar; akıl yürütmeyi, örtük anlamı ve üslup seçimlerini değerlendirin.
+    lessons:
+      - read.c1.the-attention-economy
+      - read.c1.a-letter-of-complaint
+
+  - id: c2.read
+    level: C2
+    track: reading
+    title_tr: C2 okuma metinleri
+    title_en: C2 reading
+    description_tr: Yoğun ve edebî denemeler; benzetmeleri, tonu ve ince ayrımları çözümleyin.
+    lessons:
+      - read.c2.the-map-and-the-territory
+      - read.c2.on-translation
+
+  # --- Dinleme -------------------------------------------------------------
+  - id: a1.listen
+    level: A1
+    track: listening
+    title_tr: A1 dinleme
+    title_en: A1 listening
+    description_tr: Yavaş ve açık konuşulan kısa günlük diyaloglar.
+    lessons:
+      - listen.a1.at-the-cafe
+      - listen.a1.new-neighbour
+
+  - id: a2.listen
+    level: A2
+    track: listening
+    title_tr: A2 dinleme
+    title_en: A2 listening
+    description_tr: Rezervasyon, yol tarifi gibi günlük durumlarda ayrıntıları yakalayın.
+    lessons:
+      - listen.a2.booking-a-table
+      - listen.a2.lost-in-the-city
+
+  - id: b1.listen
+    level: B1
+    track: listening
+    title_tr: B1 dinleme
+    title_en: B1 listening
+    description_tr: İş görüşmesi ve radyo yayını gibi daha uzun kayıtlarda ana fikri ve ayrıntıları izleyin.
+    lessons:
+      - listen.b1.job-interview
+      - listen.b1.weather-and-plans
+
+  - id: b2.listen
+    level: B2
+    track: listening
+    title_tr: B2 dinleme
+    title_en: B2 listening
+    description_tr: Söyleşi ve telefon görüşmelerinde görüşleri, seçenekleri ve varılan sonucu anlayın.
+    lessons:
+      - listen.b2.podcast-sleep
+      - listen.b2.customer-call
+
+  - id: c1.listen
+    level: C1
+    track: listening
+    title_tr: C1 dinleme
+    title_en: C1 listening
+    description_tr: Akademik bir konuşmanın yapısını, savını ve konuşmacının çekincelerini izleyin.
+    lessons:
+      - listen.c1.lecture-cities
+
+  - id: c2.listen
+    level: C2
+    track: listening
+    title_tr: C2 dinleme
+    title_en: C2 listening
+    description_tr: Tartışmalarda örtük tutumu, ironiyi ve ince itiraz biçimlerini yakalayın.
+    lessons:
+      - listen.c2.debate-remote-education
+
+  # --- Yazma ---------------------------------------------------------------
+  - id: a1.write
+    level: A1
+    track: writing
+    title_tr: A1 yazma
+    title_en: A1 writing
+    description_tr: Basit cümlelerle kendinizi anlatın.
+    lessons: [write.a1.introducing-yourself]
+
+  - id: a2.write
+    level: A2
+    track: writing
+    title_tr: A2 yazma
+    title_en: A2 writing
+    description_tr: Arkadaşlara kısa, samimi e-postalar yazın.
+    lessons: [write.a2.informal-email]
+
+  - id: b1.write
+    level: B1
+    track: writing
+    title_tr: B1 yazma
+    title_en: B1 writing
+    description_tr: Görüşünüzü düzenli bir paragrafta savunun.
+    lessons: [write.b1.opinion-paragraph]
+
+  - id: b2.write
+    level: B2
+    track: writing
+    title_tr: B2 yazma
+    title_en: B2 writing
+    description_tr: Kurumlara resmî e-postalar yazın.
+    lessons: [write.b2.formal-email]
+
+  - id: c1.write
+    level: C1
+    track: writing
+    title_tr: C1 yazma
+    title_en: C1 writing
+    description_tr: Mesleki ortamda öneri metinleri hazırlayın.
+    lessons: [write.c1.proposal]
+
+  - id: c2.write
+    level: C2
+    track: writing
+    title_tr: C2 yazma
+    title_en: C2 writing
+    description_tr: İkna edici, üslubu denetimli denemeler yazın.
+    lessons: [write.c2.argumentative-essay]
+
+  # --- Telaffuz ------------------------------------------------------------
+  - id: a1.pron
+    level: A1
+    track: pronunciation
+    title_tr: Türkçede olmayan sesler
+    title_en: Sounds that Turkish does not have
+    description_tr: th, w ve iki farklı i sesi; Türkçe konuşanların en sık karıştırdığı sesler.
+    lessons:
+      - pron.a1.th-sounds
+      - pron.a1.w-and-v
+      - pron.a1.short-and-long-i
+
+  - id: a2.pron
+    level: A2
+    track: pronunciation
+    title_tr: Takılar ve ünsüz kümeleri
+    title_en: Endings and clusters
+    description_tr: -ed takısının okunuşu ve araya sesli harf eklemeden ünsüz kümeleri.
+    lessons:
+      - pron.a2.ed-endings
+      - pron.a2.consonant-clusters
+
+  - id: b1.pron
+    level: B1
+    track: pronunciation
+    title_tr: Vurgu ve ritim
+    title_en: Stress and rhythm
+    description_tr: Sözcük vurgusu, zayıf heceler, cümle vurgusu ve bağlama.
+    lessons:
+      - pron.b1.word-stress
+      - pron.b1.sentence-stress

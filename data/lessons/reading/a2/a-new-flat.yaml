@@ -1,0 +1,77 @@
+id: read.a2.a-new-flat
+kind: reading
+level: A2
+title_tr: "Yeni bir daire"
+title_en: A new flat
+objective_tr: İki şeyi karşılaştıran bir e-postada üstünlükleri, sakıncaları ve yazarın kararını bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.comparatives, gram.a2.superlatives]
+vocabulary: [flat, rent, quiet, noisy, neighbor, decide]
+passage:
+  mode: text
+  lines:
+    - {en: "Hi Deniz,", tr: "Selam Deniz,"}
+    - {en: "I have some news: I'm going to move next month! I looked at two flats last week, and I finally made a decision.", tr: "Haberlerim var: gelecek ay taşınıyorum! Geçen hafta iki daireye baktım ve sonunda kararımı verdim."}
+    - {en: "The first flat is in the city centre. It is closer to my office, and there are lots of cafés and shops nearby. However, it is smaller and much noisier than my flat now.", tr: "İlk daire şehir merkezinde. Ofisime daha yakın ve yakınında bir sürü kafe ve dükkân var. Ancak şimdiki dairemden daha küçük ve çok daha gürültülü."}
+    - {en: "The second flat is in a quiet street near the park. It is bigger and it has a balcony. The rent is a little higher, but the neighbours seem friendly.", tr: "İkinci daire parkın yakınında sessiz bir sokakta. Daha büyük ve balkonu var. Kirası biraz daha yüksek ama komşular cana yakın görünüyor."}
+    - {en: "The only problem is the distance. I will have to take the bus to work, and it takes forty minutes.", tr: "Tek sorun mesafe. İşe otobüsle gitmem gerekecek ve bu kırk dakika sürüyor."}
+    - {en: "In the end I chose the second one, because a quiet home is more important to me than a short journey. You must come and see it!", tr: "Sonunda ikincisini seçtim, çünkü sessiz bir ev benim için kısa bir yolculuktan daha önemli. Gelip görmelisin!"}
+    - {en: "Love, Aylin", tr: "Sevgiler, Aylin"}
+  glossary:
+    - {en: "move", tr: "taşınmak"}
+    - {en: "make a decision", tr: "karar vermek"}
+    - {en: "nearby", tr: "yakında"}
+    - {en: "rent", tr: "kira"}
+    - {en: "seem", tr: "görünmek"}
+    - {en: "distance", tr: "mesafe"}
+    - {en: "in the end", tr: "sonunda"}
+questions:
+  - id: q.read.a2.flat.01
+    type: reading_comprehension
+    prompt: "Which flat did Aylin choose?"
+    options:
+      - "*The one near the park :: \"In the end I chose the second one.\""
+      - "The one in the city centre :: Bu ilk dairedir; onu seçmedi."
+      - "She hasn't decided yet. :: \"I finally made a decision.\""
+      - "She is staying in her flat now. :: Gelecek ay taşınıyor."
+    explanation: "İkinci daire parkın yakınındaki dairedir."
+  - id: q.read.a2.flat.02
+    type: reading_comprehension
+    prompt: "What is a disadvantage of the first flat?"
+    options:
+      - "*It is noisy. :: \"It is smaller and much noisier than my flat now.\""
+      - "It is far from her office. :: Tersine, ofisine daha yakın."
+      - "There are no shops nearby. :: Yakınında çok sayıda kafe ve dükkân var."
+      - "The rent is higher. :: Kirası daha yüksek olan ikinci dairedir."
+    explanation: "İlk dairenin sakıncaları: daha küçük ve daha gürültülü."
+  - id: q.read.a2.flat.03
+    type: reading_comprehension
+    prompt: "How will Aylin get to work from her new flat?"
+    options:
+      - "*By bus :: \"I will have to take the bus to work.\""
+      - "On foot :: Mesafe uzak; yürüyemez."
+      - "By car :: Arabadan söz edilmiyor."
+      - "By bike :: Bisikletten söz edilmiyor."
+    explanation: "Otobüsle gidecek ve yolculuk kırk dakika sürecek."
+  - id: q.read.a2.flat.04
+    type: reading_comprehension
+    difficulty: 2
+    prompt: "What is most important to Aylin?"
+    options:
+      - "*A quiet home :: \"A quiet home is more important to me than a short journey.\""
+      - "A short journey to work :: Bunu ikinci plana koyuyor."
+      - "Low rent :: Daha yüksek kirayı kabul ediyor."
+      - "Cafés and shops :: Bunlar ilk dairenin üstünlüğüydü ama onu seçmedi."
+    explanation: "Karşılaştırma cümlesi önceliğini gösteriyor."
+    lessons: [gram.a2.comparatives]
+  - id: q.read.a2.flat.05
+    type: matching
+    instruction_tr: "Metne göre özellikleri dairelerle eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["has a balcony", "second flat"]
+      - ["closer to the office", "first flat"]
+      - ["forty minutes by bus", "the journey from the second flat"]
+      - ["smaller and noisier", "the first flat compared with her flat now"]
+    explanation: "Metin iki daireyi karşılaştırıyor."

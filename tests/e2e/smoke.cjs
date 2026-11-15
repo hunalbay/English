@@ -7,7 +7,10 @@ const failures = [];
 const check = (condition, message) => { if (!condition) failures.push(message); };
 
 (async () => {
-  const browser = await chromium.launch();
+  // Sahte mikrofon: telaffuz kaydı gerçek bir aygıt olmadan sınanır.
+  const browser = await chromium.launch({
+    args: ["--use-fake-device-for-media-stream", "--use-fake-ui-for-media-stream", "--autoplay-policy=no-user-gesture-required"],
+  });
   const page = await (await browser.newContext({ viewport: { width: 1280, height: 900 } })).newPage();
   page.setDefaultTimeout(10000);
   const external = [];
@@ -288,6 +291,94 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await heading("Sayfa bulunamadı").waitFor();
   await page.goto(url + "#/ders/gram.a1.yok");
   await page.getByText("Ders bulunamadı.").waitFor();
+
+  // 11b) Okuma: metin, çeviri düğmesi, sözlükçe ve sorular
+  await menu.getByRole("link", { name: "Okuma", exact: true }).click();
+  await heading("Okuma").waitFor();
+  check((await page.locator(".tabs a").count()) === 6, "okuma sayfasında seviye sekmeleri eksik");
+  await page.goto(url + "#/okuma/A1");
+  await page.getByRole("link", { name: /Ailem/ }).click();
+  await heading("Ailem").waitFor();
+  check((await page.locator("#passage .passage-line").count()) >= 5, "okuma metni satırları görünmüyor");
+  check(!(await page.locator("#passage .passage-tr").first().isVisible()), "çeviri baştan görünür olmamalı");
+  await page.getByRole("button", { name: "Türkçe çevirileri göster" }).click();
+  check(await page.locator("#passage .passage-tr").first().isVisible(), "çeviri gösterilmedi");
+  check(await page.getByText("Metindeki kelimeler").isVisible(), "sözlükçe yok");
+  await shot("reading");
+  await page.getByRole("link", { name: "Soruları çöz" }).click();
+  await page.getByText("Soru 1 /").waitFor();
+  check(await page.locator(".question-prompt").isVisible(), "okuma sorusu yüklenmedi");
+  if (await page.locator(".context.passage").count()) {
+    check((await page.locator(".context.passage p").count()) >= 5, "okuma sorusunda metin eksik");
+    check((await page.locator(".context.passage [lang=tr]").count()) === 0, "soruda Türkçe çeviri gösterilmemeli");
+  }
+
+  // 11c) Dinleme: oynatıcı, hız seçimi, gizli yazılı metin, ses dosyasının gerçekten yüklenmesi
+  await menu.getByRole("link", { name: "Dinleme", exact: true }).click();
+  await heading("Dinleme").waitFor();
+  await page.goto(url + "#/dinleme/A1");
+  await page.getByRole("link", { name: /Kafede sipariş/ }).click();
+  await heading("Kafede sipariş").waitFor();
+  check(!(await page.locator("#transcript").isVisible()), "yazılı metin baştan gizli olmalı");
+  check((await menu.locator('a[aria-current="page"]').innerText()) === "Dinleme", "menüde Dinleme işaretli değil");
+  const audioInfo = await page.evaluate(async () => {
+    const audio = document.querySelector("audio.player");
+    if (!audio) return null;
+    audio.preload = "auto";
+    audio.load();
+    await new Promise((resolve) => {
+      audio.addEventListener("loadedmetadata", resolve, { once: true });
+      audio.addEventListener("error", resolve, { once: true });
+      setTimeout(resolve, 8000);
+    });
+    return { src: audio.getAttribute("src"), duration: audio.duration, error: audio.error ? audio.error.code : 0 };
+  });
+  check(audioInfo && audioInfo.src.startsWith("/media/clips/"), "dinleme kaydı oynatıcısı yok");
+  check(audioInfo && audioInfo.error === 0 && audioInfo.duration > 10, "dinleme kaydı yüklenemedi: " + JSON.stringify(audioInfo));
+  check((await page.locator("select.speed option").count()) === 3, "çalma hızı seçenekleri yok");
+  await page.getByRole("button", { name: "Yazılı metni göster" }).click();
+  check(await page.locator("#transcript .speaker").first().isVisible(), "yazılı metinde konuşmacı adları yok");
+  await shot("listening");
+  await page.getByRole("link", { name: "Soruları çöz" }).click();
+  await page.getByText("Soru 1 /").waitFor();
+  check((await page.locator("audio.player").count()) === 1 || (await page.locator(".options .btn").count()) >= 2,
+    "dinleme testi yüklenmedi");
+
+  // 11d) Telaffuz: örnek ses düğmeleri ve mikrofon kaydı (sahte aygıtla)
+  await menu.getByRole("link", { name: "Telaffuz", exact: true }).click();
+  await heading("Telaffuz").waitFor();
+  await page.goto(url + "#/telaffuz/A1");
+  await page.getByRole("link", { name: /th sesleri/ }).click();
+  await heading(/th sesleri/).waitFor();
+  check((await page.locator("#practice .practice-item").count()) >= 8, "telaffuz öğeleri görünmüyor");
+  check((await page.locator(".section-usage ol li").count()) === 4, "numaralı adımlar liste olarak gösterilmedi");
+  check((await page.locator("#practice .btn.listen").count()) >= 8, "örnek ses düğmeleri yok");
+  check((await page.locator("#practice .btn.listen.fallback").count()) === 0, "hazır kayıt yerine sistem sesi öneriliyor");
+  check(await page.getByText("otomatik olarak").first().isVisible(), "puanlama olmadığı açıklanmadı");
+  const firstItem = page.locator("#practice .practice-item").first();
+  await firstItem.locator(".btn.record").click();
+  await firstItem.getByText("Kaydediliyor…").waitFor();
+  await page.waitForTimeout(700);
+  await firstItem.locator(".btn.record").click();
+  await firstItem.getByRole("button", { name: "▶ Kaydımı dinle" }).waitFor();
+  check(await firstItem.getByText("Kayıt hazır.").isVisible(), "kayıt tamamlanmadı");
+  await shot("pronunciation");
+
+  // 11e) Yazma: açıklama, örnek ve öz değerlendirmeli çalışma
+  await menu.getByRole("link", { name: "Yazma", exact: true }).click();
+  await heading("Yazma").waitFor();
+  await page.goto(url + "#/yazma/A1");
+  await page.getByRole("link", { name: /Kendini tanıtan/ }).click();
+  await heading(/Kendini tanıtan/).waitFor();
+  check(await page.getByRole("heading", { name: "Yazma çalışması" }).isVisible(), "yazma çalışması kartı yok");
+  check(await page.getByText("otomatik olarak puanlamaz").isVisible(), "yazma için puanlama sınırı açıklanmadı");
+  await shot("writing");
+
+  // 11f) Kelime sayfasında hazır ses
+  await page.goto(url + "#/kelime/word.teacher");
+  await heading("teacher").waitFor();
+  check((await page.locator(".page-header .btn.listen").count()) === 1, "kelime sayfasında dinle düğmesi yok");
+  check((await page.locator(".page-header .btn.listen.fallback").count()) === 0, "kelime için hazır ses bulunamadı");
 
   // 12) Küçük ekranda yatay taşma olmamalı
   await page.setViewportSize({ width: 375, height: 700 });

@@ -1,0 +1,88 @@
+id: pron.a2.ed-endings
+kind: pronunciation
+level: A2
+title_tr: "-ed takısının üç okunuşu"
+title_en: "Pronouncing -ed endings"
+objective_tr: Düzenli fiillerin geçmiş zaman takısını fiilin son sesine göre /t/, /d/ ya da /ɪd/ olarak doğru okuyabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.past-simple-regular]
+vocabulary: [work, play, want, watch, need, live]
+sections:
+  - kind: explanation
+    title_tr: Üç farklı okunuş
+    text_tr: |-
+      Düzenli fiillerin geçmiş zamanı yazıda hep **-ed** ile biter, ama bu takı **üç farklı biçimde** okunur. Türkçe konuşanların en yaygın hatası, her fiilde ayrı bir hece ekleyip "**work-ed**", "**play-ed**", "**watch-ed**" demektir. Oysa çoğu fiilde -ed **ayrı bir hece oluşturmaz**.
+
+      **worked** tek hecedir: /wɜːrkt/. **played** tek hecedir: /pleɪd/. Yalnızca **wanted** ve **needed** gibi fiillerde fazladan bir hece vardır.
+  - kind: formula
+    title_tr: Kural
+    table:
+      headers: ["Fiilin son sesi", "-ed okunuşu", "Örnekler"]
+      rows:
+        - ["/t/ ya da /d/", "/ɪd/ — ayrı hece", "wanted, needed, started, decided, visited"]
+        - ["ötümsüz ses: /p, k, f, s, ʃ, tʃ/", "/t/ — hece eklenmez", "worked, stopped, watched, finished, laughed"]
+        - ["diğer bütün sesler (ötümlü ünsüzler ve ünlüler)", "/d/ — hece eklenmez", "played, lived, opened, called, tried"]
+  - kind: usage
+    title_tr: Nasıl karar verilir?
+    text_tr: |-
+      Yazıma değil **sese** bakın. **laugh** sözcüğü "gh" ile biter ama son sesi /f/dir → laughed /læft/. **decide** "e" ile biter ama son sesi /d/dir → decided /dɪˈsaɪdɪd/.
+
+      Pratik yol: fiilin son sesini söylerken boğazınıza dokunun. **Titreşim yoksa** (k, p, s, ş, ç, f) → /t/. **Titreşim varsa** → /d/. Son ses zaten **t ya da d ise** → /ɪd/.
+
+      Hece sayısını denetleyin: "worked" söylerken **tek** bir vuruş olmalı.
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Ardından ünlüyle başlayan bir sözcük geldiğinde -ed sonraki sözcüğe bağlanır ve daha kolay duyulur: "work**ed‿i**n", "liv**ed‿a**lone".
+
+      Kaydınızı dinlerken hece sayın: **asked** (1), **opened** (2), **decided** (3).
+practice:
+  - {en: "worked", tr: "çalıştı", ipa: "wɜːrkt", note_tr: "Tek hece; sonu /t/."}
+  - {en: "watched", tr: "izledi", ipa: "wɒtʃt", note_tr: "Tek hece; sonu /t/."}
+  - {en: "stopped", tr: "durdu", ipa: "stɒpt"}
+  - {en: "played", tr: "oynadı", ipa: "pleɪd", note_tr: "Tek hece; sonu /d/."}
+  - {en: "lived", tr: "yaşadı", ipa: "lɪvd"}
+  - {en: "opened", tr: "açtı", ipa: "ˈoʊpənd", note_tr: "İki hece; -ed hece eklemez."}
+  - {en: "wanted", tr: "istedi", ipa: "ˈwɒntɪd", note_tr: "İki hece; sonu /ɪd/."}
+  - {en: "needed", tr: "ihtiyaç duydu", ipa: "ˈniːdɪd"}
+  - {en: "decided", tr: "karar verdi", ipa: "dɪˈsaɪdɪd"}
+  - {en: "I worked late and watched a film.", tr: "Geç saate kadar çalıştım ve bir film izledim."}
+  - {en: "She lived in Rome and wanted to stay.", tr: "Roma'da yaşadı ve kalmak istedi."}
+  - {en: "We started at nine and finished at five.", tr: "Dokuzda başladık ve beşte bitirdik."}
+questions:
+  - id: q.pron.a2.ed.01
+    type: multiple_choice
+    prompt: "\"worked\" sözcüğünde -ed nasıl okunur?"
+    options:
+      - "*/t/ — ayrı hece oluşturmaz :: Son ses /k/ ötümsüz olduğu için /t/."
+      - "/d/ :: Ötümlü seslerden sonra /d/ okunur."
+      - "/ɪd/ — ayrı hece :: Yalnızca /t/ ve /d/ ile biten fiillerde."
+      - "Okunmaz :: Geçmiş zaman eki mutlaka duyulur."
+    explanation: "/p, k, f, s, ʃ, tʃ/ + ed → /t/."
+  - id: q.pron.a2.ed.02
+    type: multiple_choice
+    prompt: "Hangi fiilde -ed ayrı bir hece olarak /ɪd/ okunur?"
+    options:
+      - "*started :: Son ses /t/ → /ɪd/."
+      - "played :: /pleɪd/ — tek hece."
+      - "watched :: /wɒtʃt/ — tek hece."
+      - "called :: /kɔːld/ — tek hece."
+    explanation: "Yalnızca /t/ ya da /d/ ile biten fiillerde hece eklenir."
+  - id: q.pron.a2.ed.03
+    type: matching
+    prompt: "Fiilleri -ed okunuşlarıyla eşleştirin."
+    pairs:
+      - ["finished", "/t/"]
+      - ["opened", "/d/"]
+      - ["visited", "/ɪd/"]
+    explanation: "Okunuş, fiilin son sesine göre belirlenir."
+  - id: q.pron.a2.ed.04
+    type: multiple_choice
+    prompt: "\"asked\" kaç hecelidir?"
+    options:
+      - "*Bir :: /æskt/ — -ed hece eklemez."
+      - "İki :: \"ask-ed\" yaygın bir hatadır."
+      - "Üç :: Sözcükte tek bir sesli harf sesi vardır."
+      - "Dört :: Sözcükte tek bir sesli harf sesi vardır."
+    explanation: "Ötümsüz /k/ sesinden sonra -ed /t/ okunur."

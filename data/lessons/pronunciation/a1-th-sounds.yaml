@@ -1,0 +1,82 @@
+id: pron.a1.th-sounds
+kind: pronunciation
+level: A1
+title_tr: "th sesleri: think ve this"
+title_en: "The th sounds"
+objective_tr: Türkçede bulunmayan iki th sesini (/θ/ ve /ð/) çıkarabilecek ve bunları t, d, s, z seslerinden ayırt ederek söyleyebileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [think, this, three, mother, thank, weather]
+sections:
+  - kind: explanation
+    title_tr: Bu sesler neden zor?
+    text_tr: |-
+      İngilizcede **th** yazımı iki ayrı sesi gösterir ve ikisi de Türkçede yoktur. Bu yüzden Türkçe konuşanlar çoğu zaman **think** yerine "tink" ya da "sink", **this** yerine "dis" ya da "zis" der. Anlaşılırsınız, ama bazı sözcükler karışır: **think** (düşünmek) / **sink** (batmak), **three** (üç) / **tree** (ağaç).
+
+      **/θ/ — ötümsüz:** think, three, thank, bath. Ses telleri titreşmez; yalnızca hava çıkar.
+
+      **/ð/ — ötümlü:** this, that, mother, weather. Ses telleri titreşir; boğazınıza dokunursanız titreşimi hissedersiniz.
+  - kind: usage
+    title_tr: Nasıl çıkarılır?
+    text_tr: |-
+      1. Dilinizin ucunu **üst ön dişlerinizin hemen altına**, dişlerin arasından hafifçe görünecek biçimde yerleştirin.
+      2. Dili ısırmayın; dişlerle dil arasında **dar bir aralık** kalsın.
+      3. Havayı bu aralıktan **sürekli** üfleyin. Ses "s" gibi uzatılabilir olmalı; "t" gibi patlamamalıdır.
+      4. /ð/ için aynı konumda **sesinizi ekleyin**.
+
+      Aynaya bakarak çalışın: dilinizin ucunu görebiliyor olmalısınız. Başlangıçta abartılı gelebilir; bu normaldir.
+  - kind: comparison
+    title_tr: Karışan sesler
+    table:
+      headers: ["th ile", "Karıştığı sözcük", "Fark"]
+      rows:
+        - ["think /θɪŋk/", "sink /sɪŋk/", "th: dil dişlerin arasında; s: dil dişlerin arkasında"]
+        - ["three /θriː/", "tree /triː/", "th: hava sürekli akar; t: patlar"]
+        - ["then /ðen/", "den /den/", "th: sürekli ve titreşimli; d: patlar"]
+        - ["breathe /briːð/", "breeze /briːz/", "th: dil dişlerin arasında; z: dişlerin arkasında"]
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Önce sesi tek başına, sonra sözcüklerde, en son cümlelerde çalışın. Kendi kaydınızı dinlerken şuna dikkat edin: "th" yerine **t, d, s** ya da **z** duyuluyor mu?
+
+      Sık geçen sözcüklerle başlayın: **the, this, that, they, there, think, thing, thank you**. Bunları doğru söylemek konuşmanızın genelini hemen düzeltir.
+practice:
+  - {en: "think", tr: "düşünmek", ipa: "θɪŋk", note_tr: "Ötümsüz /θ/. \"sink\" ya da \"tink\" demeyin."}
+  - {en: "three", tr: "üç", ipa: "θriː", note_tr: "\"tree\" ile karıştırmayın."}
+  - {en: "thank you", tr: "teşekkür ederim", ipa: "ˈθæŋk juː"}
+  - {en: "bath", tr: "banyo, küvet", ipa: "bæθ", note_tr: "Sözcük sonunda /θ/."}
+  - {en: "this", tr: "bu", ipa: "ðɪs", note_tr: "Ötümlü /ð/. \"dis\" ya da \"zis\" demeyin."}
+  - {en: "that", tr: "şu, o", ipa: "ðæt"}
+  - {en: "mother", tr: "anne", ipa: "ˈmʌðər", note_tr: "Sözcük ortasında /ð/."}
+  - {en: "weather", tr: "hava durumu", ipa: "ˈweðər"}
+  - {en: "I think this is the third one.", tr: "Sanırım bu üçüncüsü.", note_tr: "Dört th sesi: think, this, the, third."}
+  - {en: "My mother and father are there.", tr: "Annem ve babam orada."}
+  - {en: "Thank you for the three things.", tr: "Üç şey için teşekkür ederim."}
+questions:
+  - id: q.pron.a1.th.01
+    type: multiple_choice
+    prompt: "Hangi sözcükte th ötümlüdür (ses telleri titreşir)?"
+    options:
+      - "*this :: /ðɪs/ — ötümlü."
+      - "think :: /θɪŋk/ — ötümsüz."
+      - "three :: /θriː/ — ötümsüz."
+      - "bath :: /bæθ/ — ötümsüz."
+    explanation: "the, this, that, they, mother: /ð/. think, three, thank, bath: /θ/."
+  - id: q.pron.a1.th.02
+    type: multiple_choice
+    prompt: "th sesini çıkarırken dilin ucu nerededir?"
+    options:
+      - "*Üst ön dişlerin hemen altında, dişlerin arasında :: Hava dil ile dişler arasındaki dar aralıktan geçer."
+      - "Üst dişlerin arkasındaki diş etinde :: Bu, t ve d seslerinin konumudur."
+      - "Alt dişlerin arkasında :: Bu konumda th çıkmaz."
+      - "Damağın ortasında :: Bu konumda th çıkmaz."
+    explanation: "Dilin ucu dişlerin arasından hafifçe görünür."
+  - id: q.pron.a1.th.03
+    type: matching
+    prompt: "Sözcükleri anlamlarıyla eşleştirin (yalnızca th sesiyle ayrılırlar)."
+    pairs:
+      - ["think", "düşünmek"]
+      - ["sink", "batmak; lavabo"]
+      - ["three", "üç"]
+      - ["tree", "ağaç"]
+    explanation: "th sesini yanlış söylemek başka bir sözcüğe yol açabilir."

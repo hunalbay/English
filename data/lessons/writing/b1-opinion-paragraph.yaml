@@ -1,0 +1,92 @@
+id: write.b1.opinion-paragraph
+kind: writing
+level: B1
+title_tr: "Görüş paragrafı"
+title_en: An opinion paragraph
+objective_tr: Bir konudaki görüşünüzü konu cümlesi, iki gerekçe, bir karşı görüş ve sonuç cümlesiyle 80–120 sözcüklük bir paragrafta savunabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.linking-words, gram.b1.second-conditional]
+vocabulary: [opinion, reason, example, agree, however, conclusion]
+sections:
+  - kind: explanation
+    title_tr: İyi bir paragrafın yapısı
+    text_tr: |-
+      İngilizce yazıda paragrafın açık bir **iskeleti** vardır. Okur, ilk cümlede görüşünüzü öğrenmeyi bekler; gerisi o görüşü destekler.
+
+      Türkçe kompozisyon alışkanlığında asıl fikir çoğu zaman sona saklanır. İngilizcede tam tersi yapılır: **önce sav, sonra gerekçe**.
+  - kind: formula
+    title_tr: Paragrafın planı
+    table:
+      headers: ["Bölüm", "İşlevi", "Kalıplar"]
+      rows:
+        - ["Konu cümlesi", "görüşünüzü açıkça söyler", "In my opinion, ... / I believe that ... / I think ..."]
+        - ["1. gerekçe", "neden + örnek", "First of all, ... / One reason is that ... / For example, ..."]
+        - ["2. gerekçe", "ikinci neden", "Secondly, ... / In addition, ... / Another reason is ..."]
+        - ["Karşı görüş", "öbür tarafı kabul edip yanıtlar", "Some people say that ... However, ... / Although ..., ..."]
+        - ["Sonuç cümlesi", "görüşü yeniden vurgular", "For these reasons, ... / To sum up, ... / In conclusion, ..."]
+  - kind: examples
+    title_tr: Örnek paragraf
+    examples:
+      - {en: "In my opinion, every child should learn to cook at school.", tr: "Bence her çocuk okulda yemek yapmayı öğrenmelidir.", note_tr: "Konu cümlesi"}
+      - {en: "First of all, cooking is a basic life skill. If young people knew how to prepare simple meals, they would eat less fast food.", tr: "Öncelikle yemek yapmak temel bir yaşam becerisidir. Gençler basit yemekler hazırlamayı bilselerdi daha az hazır yemek yerlerdi.", note_tr: "1. gerekçe"}
+      - {en: "In addition, cooking teaches useful things such as planning, measuring and working in a team.", tr: "Ayrıca yemek yapmak planlama, ölçme ve ekip çalışması gibi yararlı şeyler öğretir.", note_tr: "2. gerekçe"}
+      - {en: "Some people say that there is not enough time in the school day. However, one lesson a week would be enough.", tr: "Bazıları okul gününde yeterli zaman olmadığını söylüyor. Ancak haftada bir ders yeterli olur.", note_tr: "Karşı görüş ve yanıt"}
+      - {en: "For these reasons, I believe cooking lessons would be a valuable part of education.", tr: "Bu nedenlerle yemek derslerinin eğitimin değerli bir parçası olacağına inanıyorum.", note_tr: "Sonuç cümlesi"}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"According to me"** denmez → "**In my opinion**" ya da "**I think**".
+
+      **"I am agree"** → "I **agree**." (agree bir fiildir.)
+
+      **Görüşü sona saklamak.** İlk cümlede açıkça söyleyin.
+
+      **Gerekçeyi örneksiz bırakmak.** "It is good" yetmez; neden iyi olduğunu ve bir örneği yazın.
+
+      **Although ile but'ı birlikte kullanmak.**
+questions:
+  - id: q.write.b1.opinion.01
+    type: matching
+    prompt: "Cümleleri paragraftaki işlevleriyle eşleştirin."
+    pairs:
+      - ["In my opinion, cities should have more parks.", "konu cümlesi"]
+      - ["First of all, parks improve people's health.", "birinci gerekçe"]
+      - ["Some people say parks are expensive. However, ...", "karşı görüş ve yanıt"]
+      - ["For these reasons, we need more green spaces.", "sonuç cümlesi"]
+    explanation: "Her cümlenin paragrafta bir görevi vardır."
+  - id: q.write.b1.opinion.02
+    type: error_correction
+    prompt: "According to me, public transport should be free."
+    answers: ["In my opinion, public transport should be free.", "I think public transport should be free.", "I believe public transport should be free.", "I think that public transport should be free.", "I believe that public transport should be free."]
+    explanation: "\"According to\" başkalarının görüşü için kullanılır; kendi görüşünüz için \"In my opinion\"."
+  - id: q.write.b1.opinion.03
+    type: error_correction
+    prompt: "I am agree with this idea."
+    answers: ["I agree with this idea."]
+    explanation: "Agree bir fiildir; to be ile kullanılmaz."
+  - id: q.write.b1.opinion.04
+    type: paragraph_completion
+    difficulty: 3
+    context: "I believe that people should not use their phones at the dinner table. First of all, meals are one of the few moments when families talk to each other. ___, looking at a screen while someone is speaking is simply rude."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*In addition :: Aynı yönde ikinci bir gerekçe ekleniyor."
+      - "However :: Zıtlık yok; ikinci gerekçe geliyor."
+      - "For example :: İkinci cümle birincinin örneği değil, yeni bir gerekçe."
+      - "In conclusion :: Paragraf henüz bitmiyor."
+    explanation: "İkinci gerekçe: In addition / Secondly / Another reason is..."
+    lessons: [gram.b1.linking-words]
+  - id: q.write.b1.opinion.05
+    type: written_answer
+    difficulty: 3
+    prompt: "Şu konulardan birini seçip 80–120 sözcüklük bir görüş paragrafı yazın: (a) Herkes haftada dört gün çalışmalı. (b) Çocuklara on iki yaşından önce telefon verilmemeli. (c) Toplu taşıma ücretsiz olmalı."
+    model_answers:
+      - "In my opinion, public transport should be free in big cities. First of all, it would reduce traffic. If buses and trams were free, many people would leave their cars at home. Secondly, it would help people on low incomes, because travelling to work every day is expensive. Some people say that the government cannot afford it. However, cities already spend a lot of money on roads and car parks. For these reasons, I believe free public transport would make our cities cleaner and fairer."
+    checklist:
+      - "İlk cümlede görüşümü açıkça belirttim."
+      - "İki ayrı gerekçe yazdım ve en az birini örnekle destekledim."
+      - "Bir karşı görüşe değinip yanıt verdim."
+      - "Sıralama ve bağlama ifadeleri kullandım (First of all, In addition, However)."
+      - "Son cümlede görüşümü yeniden vurguladım."
+    explanation: "İskelet: konu cümlesi → gerekçe 1 → gerekçe 2 → karşı görüş → sonuç."

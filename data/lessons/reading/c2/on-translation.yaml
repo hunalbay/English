@@ -1,0 +1,102 @@
+id: read.c2.on-translation
+kind: reading
+level: C2
+title_tr: "Çeviri üzerine"
+title_en: On translation
+objective_tr: Dil ve anlam üzerine edebî bir denemede yazarın tonunu, ironisini ve örneklerle kurduğu savı yorumlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c2.register, gram.c2.fixed-structures, gram.c2.discourse-markers]
+vocabulary: [translate, meaning, equivalent, context, literal, nuance]
+passage:
+  mode: text
+  lines:
+    - {en: "Anyone who has learned a second language will remember the moment of discovering a word for which their own language has no equivalent. The discovery is usually reported with delight, as though the foreign language had been caught in possession of something rare. The less comfortable discovery comes later: that almost no word has an exact equivalent, and that we had simply not been looking closely.", tr: "İkinci bir dil öğrenmiş herkes, kendi dilinde karşılığı olmayan bir sözcüğü keşfettiği anı hatırlar. Bu keşif genellikle sevinçle anlatılır; sanki yabancı dil, nadir bir şeyi elinde bulundururken yakalanmış gibi. Daha az rahatlatıcı olan keşif sonra gelir: neredeyse hiçbir sözcüğün tam bir karşılığı yoktur ve biz yalnızca yeterince yakından bakmamışızdır."}
+    - {en: "Take a word as apparently simple as \"bread\". The dictionary offers a translation without hesitation. But the word carries with it a shape, a smell, a place at the table and a set of sayings, and none of these travels. To translate the word is easy; to translate what it means to those who use it is, strictly speaking, impossible.", tr: "\"Ekmek\" kadar yalın görünen bir sözcüğü ele alın. Sözlük hiç duraksamadan bir karşılık sunar. Ama sözcük beraberinde bir biçim, bir koku, sofrada bir yer ve bir dizi deyim taşır; bunların hiçbiri yolculuk etmez. Sözcüğü çevirmek kolaydır; onu kullananlar için ne anlama geldiğini çevirmek ise, doğrusu, olanaksızdır."}
+    - {en: "Turkish speakers know this well. How is one to render \"kolay gelsin\" for an English reader? \"May it come easy\" is accurate and absurd. \"Good luck with your work\" is natural and wrong, since nobody is wishing anyone luck. The honest translator must choose which kind of failure to prefer.", tr: "Türkçe konuşanlar bunu iyi bilir. \"Kolay gelsin\" İngiliz bir okur için nasıl aktarılır? \"May it come easy\" doğru ve saçmadır. \"Good luck with your work\" doğal ve yanlıştır, çünkü kimse kimseye şans dilemiyordur. Dürüst çevirmen, hangi tür başarısızlığı yeğleyeceğini seçmek zorundadır."}
+    - {en: "It is tempting to conclude that translation is a kind of fraud, and there has never been a shortage of people willing to say so. Yet the conclusion proves too much. If meaning could not cross between languages, it could scarcely cross between two speakers of the same one, each of whom attaches to \"bread\" a private history of kitchens. We manage, all the same, to understand one another well enough to quarrel.", tr: "Çevirinin bir tür sahtekârlık olduğu sonucuna varmak caziptir ve bunu söylemeye hazır insanlar hiçbir zaman eksik olmamıştır. Ne var ki bu sonuç gereğinden fazlasını kanıtlar. Anlam diller arasında geçemeseydi, aynı dili konuşan iki kişi arasında da güç bela geçerdi; onların her biri \"ekmek\" sözcüğüne kendine özgü bir mutfaklar geçmişi yükler. Yine de birbirimizi, kavga edebilecek kadar iyi anlamayı başarırız."}
+    - {en: "What translation offers, then, is not identity but resemblance, and resemblance is no small thing. A good translation is less like a photograph than like a performance of a piece of music: recognizably the same work, unmistakably played by someone else. We do not complain that the pianist is not the composer.", tr: "Öyleyse çevirinin sunduğu şey özdeşlik değil benzerliktir; benzerlik de küçümsenecek bir şey değildir. İyi bir çeviri bir fotoğraftan çok bir müzik yapıtının icrasına benzer: tanınabilir biçimde aynı yapıt, yanılmaya yer bırakmayacak biçimde bir başkası tarafından çalınmış. Piyanistin besteci olmadığından yakınmayız."}
+    - {en: "For the learner there is a practical moral. The stage at which one stops asking \"what is the word for this?\" and begins asking \"what would someone say here?\" is the stage at which a language ceases to be a code and becomes a place one can live in.", tr: "Dil öğrenen için bundan pratik bir ders çıkar. İnsanın \"bunun karşılığı ne?\" diye sormayı bırakıp \"burada biri ne derdi?\" diye sormaya başladığı aşama, bir dilin bir şifre olmaktan çıkıp içinde yaşanabilecek bir yere dönüştüğü aşamadır."}
+  glossary:
+    - {en: "equivalent", tr: "karşılık, eş değer"}
+    - {en: "be caught in possession of", tr: "(bir şeyi) elinde bulundururken yakalanmak"}
+    - {en: "strictly speaking", tr: "doğrusu, tam anlamıyla"}
+    - {en: "render", tr: "aktarmak, çevirmek"}
+    - {en: "fraud", tr: "sahtekârlık"}
+    - {en: "prove too much", tr: "gereğinden fazlasını kanıtlamak"}
+    - {en: "quarrel", tr: "kavga etmek, tartışmak"}
+    - {en: "cease", tr: "bırakmak, son bulmak"}
+questions:
+  - id: q.read.c2.translation.01
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What is the \"less comfortable discovery\" mentioned in the first paragraph?"
+    options:
+      - "*That exact equivalents between languages hardly exist at all :: \"...almost no word has an exact equivalent.\""
+      - "That some foreign words cannot be pronounced :: Telaffuzdan söz edilmiyor."
+      - "That one's own language is poorer than others :: Böyle bir karşılaştırma yapılmıyor."
+      - "That dictionaries contain many mistakes :: Sözlük hatalarından söz edilmiyor."
+    explanation: "İlk keşif tek bir sözcüktür; ikincisi bunun genel bir durum olduğudur."
+  - id: q.read.c2.translation.02
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "Why does the writer describe \"May it come easy\" as \"accurate and absurd\"?"
+    options:
+      - "*It reproduces the words faithfully but sounds unnatural in English. :: Sözcüğü sözcüğüne doğru, kullanım açısından tuhaf."
+      - "It is both grammatically wrong and funny. :: Dil bilgisi hatası değil, doğallık sorunu var."
+      - "It is the translation that English speakers normally use. :: Öyle olsaydı \"absurd\" denmezdi."
+      - "It changes the meaning completely. :: Anlamı koruyor; sorun doğallıkta."
+    explanation: "Yazar iki tür başarısızlığı karşılaştırıyor: doğru ama yapay / doğal ama yanlış."
+  - id: q.read.c2.translation.03
+    type: nuance
+    difficulty: 5
+    prompt: "\"We manage, all the same, to understand one another well enough to quarrel.\" What is the tone of this sentence?"
+    options:
+      - "*Gently ironic: the proof that we understand each other is that we can argue. :: Mizahi bir kanıt sunuyor."
+      - "Angry: people argue too much. :: Öfke yok; incelikli bir mizah var."
+      - "Despairing: understanding is impossible. :: Tersine, anlaşabildiğimizi söylüyor."
+      - "Neutral and technical :: Cümlenin ironik bir tonu var."
+    explanation: "all the same = yine de; cümlenin sonu beklenmedik ve mizahi."
+    lessons: [gram.c2.concession-advanced]
+  - id: q.read.c2.translation.04
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What does the writer mean by saying that the sceptical conclusion \"proves too much\"?"
+    options:
+      - "*If the argument were valid, it would also show that people who share a language cannot understand each other, which is plainly false. :: Sav, kabul edilemez bir sonuca da yol açıyor."
+      - "The argument has too many examples. :: Örnek sayısıyla ilgili değil."
+      - "The argument is too difficult to follow. :: Zorlukla ilgili değil."
+      - "The argument has already been proved by scientists. :: Böyle bir bilgi yok."
+    explanation: "\"Prove too much\": bir savın, savunulamayacak sonuçları da gerektirmesi."
+  - id: q.read.c2.translation.05
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What is the point of comparing translation to a musical performance?"
+    options:
+      - "*A translation is the same work realized by a different person, and that difference is not a defect. :: \"We do not complain that the pianist is not the composer.\""
+      - "Translators should also study music. :: Benzetme sözcüğü sözcüğüne alınmamalı."
+      - "Translations should be as exact as photographs. :: Yazar fotoğraf benzetmesini reddediyor."
+      - "Music cannot be translated. :: Konu müzik çevirisi değil."
+    explanation: "Özdeşlik değil benzerlik: aynı yapıt, başka bir yorumcu."
+  - id: q.read.c2.translation.06
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What advice for learners is implied in the final paragraph?"
+    options:
+      - "*Think about what a speaker would naturally say in a situation rather than searching for word-for-word equivalents. :: \"what would someone say here?\""
+      - "Memorize as many dictionary equivalents as possible. :: Yazar bu aşamanın geride bırakılmasını öneriyor."
+      - "Avoid translating anything at all. :: Böyle bir yasak önerilmiyor."
+      - "Live abroad for several years. :: \"A place one can live in\" mecazidir."
+    explanation: "Dil bir şifre değil, bir kullanım alanıdır."
+  - id: q.read.c2.translation.07
+    type: written_answer
+    difficulty: 5
+    prompt: "İngilizceye çevrilmesi güç bir Türkçe sözcük ya da deyim seçin (ör. \"eline sağlık\", \"hayırlı olsun\", \"gönül\"). 4–6 cümleyle ne anlama geldiğini, hangi durumda söylendiğini ve neden tek bir İngilizce karşılığının yetmediğini İngilizce açıklayın."
+    model_answers:
+      - "\"Eline sağlık\" literally means \"health to your hand\". It is said to someone who has made something for you, most often a meal, though it applies equally to a repaired tap or a knitted scarf. \"Thank you\" conveys the gratitude but loses the idea that the work of the hands deserves a blessing. \"Well done\", on the other hand, sounds like praise from a teacher. There is, in short, no single English phrase that is at once grateful, warm and entirely ordinary."
+    checklist:
+      - "İfadenin sözcüğü sözcüğüne anlamını verdim."
+      - "Hangi durumda ve kime söylendiğini açıkladım."
+      - "En az iki olası İngilizce karşılığı değerlendirip neden yetersiz kaldıklarını belirttim."
+      - "Üslubum tutarlı ve açıklayıcı."
+    explanation: "Kültüre özgü bir ifadeyi açıklamak, sözcük karşılığı vermekten farklı bir beceridir: tanım, bağlam ve karşılaştırma gerekir."

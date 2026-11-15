@@ -5,7 +5,7 @@ Kimlikler (lesson.id, vocabulary.id, unit.id) sürümler arasında kararlı meti
 değerleridir, çünkü kullanıcı ilerlemesi (user.db) bu kimliklere bağlanır.
 """
 
-SCHEMA_VERSION = "3"
+SCHEMA_VERSION = "4"
 
 DDL = """
 CREATE TABLE content_meta (
@@ -35,8 +35,10 @@ CREATE TABLE units (
     title_tr       TEXT NOT NULL,
     title_en       TEXT,
     description_tr TEXT,
+    track          TEXT NOT NULL CHECK (track IN ('grammar','reading','listening','writing','pronunciation')),
     UNIQUE (level, position)
 );
+CREATE INDEX ix_units_track ON units(track, level);
 
 CREATE TABLE lessons (
     id            TEXT PRIMARY KEY,
@@ -63,6 +65,49 @@ CREATE TABLE lesson_sections (
     text_tr    TEXT,
     table_json TEXT,
     UNIQUE (lesson_id, position)
+);
+
+-- Okuma metni / dinleme kaydının yazılı hâli
+CREATE TABLE passages (
+    lesson_id TEXT PRIMARY KEY REFERENCES lessons(id),
+    mode      TEXT NOT NULL CHECK (mode IN ('text','dialogue'))
+);
+
+CREATE TABLE passage_lines (
+    lesson_id TEXT NOT NULL REFERENCES passages(lesson_id),
+    position  INTEGER NOT NULL,
+    speaker   TEXT,
+    en        TEXT NOT NULL,
+    tr        TEXT NOT NULL,
+    PRIMARY KEY (lesson_id, position)
+);
+
+CREATE TABLE passage_glossary (
+    lesson_id TEXT NOT NULL REFERENCES passages(lesson_id),
+    position  INTEGER NOT NULL,
+    en        TEXT NOT NULL,
+    tr        TEXT NOT NULL,
+    PRIMARY KEY (lesson_id, position)
+);
+
+-- Telaffuz çalışması öğeleri
+CREATE TABLE practice_items (
+    lesson_id TEXT NOT NULL REFERENCES lessons(id),
+    position  INTEGER NOT NULL,
+    en        TEXT NOT NULL,
+    tr        TEXT NOT NULL,
+    ipa       TEXT,
+    note_tr   TEXT,
+    audio_key TEXT NOT NULL,
+    PRIMARY KEY (lesson_id, position)
+);
+
+-- Önceden üretilmiş ses klipleri. Anahtar: "w:<kelime>", "s:<metin özeti>", "l:<ders kimliği>".
+-- Kaydı olmayan içerik için ses yoktur; arayüz bunu açıkça belirtir.
+CREATE TABLE audio_clips (
+    key         TEXT PRIMARY KEY,
+    path        TEXT NOT NULL,
+    duration_ms INTEGER NOT NULL
 );
 
 CREATE TABLE lesson_relations (

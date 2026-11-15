@@ -1,0 +1,84 @@
+id: pron.a2.consonant-clusters
+kind: pronunciation
+level: A2
+title_tr: "Ünsüz kümeleri: sport, street, film"
+title_en: "Consonant clusters"
+objective_tr: Sözcük başında ve sonunda yan yana gelen ünsüzleri araya sesli harf eklemeden söyleyebileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [sport, street, school, film, text, spring]
+sections:
+  - kind: explanation
+    title_tr: Araya giren sesli harf
+    text_tr: |-
+      Türkçe sözcükler iki ünsüzle başlamaz; bu yüzden yabancı sözcükleri alırken araya ya da başa bir sesli harf ekleriz: **spor → sipor**, **tren → tiren**, **stres → sitres**, **film → filim**.
+
+      Aynı alışkanlık İngilizceye taşındığında "**s**ı**port**", "**s**i**treet**", "**i**school", "**fil**i**m**" gibi söyleyişler ortaya çıkar. Bu, sözcüğe fazladan bir hece ekler ve dinleyenin sözcüğü tanımasını zorlaştırır.
+
+      İngilizcede **sport** tek hecedir. **street** tek hecedir. **film** tek hecedir.
+  - kind: usage
+    title_tr: Nasıl çalışılır?
+    text_tr: |-
+      **Sözcük başı (s + ünsüz):** Önce **"s"yi uzatın**: "sssss". Sonra sesi kesmeden ikinci ünsüze geçin: "sssss-port" → "sport". Araya nefes ya da sesli harf girmemeli.
+
+      **Üçlü kümeler (str, spr, skr):** Aynı yöntem: "sss-treet", "sss-pring".
+
+      **Sözcük sonu:** Sondaki ünsüzleri sırayla, sesli harf eklemeden söyleyin: **film** /fɪlm/ ("filim" değil), **text** /tekst/, **asked** /æskt/, **months** /mʌnθs/.
+
+      **Geriye doğru kurma** zor sözcüklerde işe yarar: "ts" → "ksts" → "teksts" (texts).
+  - kind: comparison
+    title_tr: Hece sayısını denetleyin
+    table:
+      headers: ["Sözcük", "Doğru", "Yaygın hata"]
+      rows:
+        - ["sport", "1 hece /spɔːrt/", "sı-port (2 hece)"]
+        - ["street", "1 hece /striːt/", "si-triit (2 hece)"]
+        - ["school", "1 hece /skuːl/", "is-kul (2 hece)"]
+        - ["film", "1 hece /fɪlm/", "fi-lim (2 hece)"]
+        - ["spring", "1 hece /sprɪŋ/", "si-pi-ring (3 hece)"]
+        - ["clothes", "1 hece /kloʊðz/", "ko-lo-tes (3 hece)"]
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Her sözcüğü söylerken masaya **hece sayısı kadar** vurun. "street" için tek vuruş.
+
+      Kaydınızı dinleyin: sözcüğün başında fazladan bir "ı" ya da "i" duyuluyor mu?
+practice:
+  - {en: "sport", tr: "spor", ipa: "spɔːrt", note_tr: "Tek hece. \"sıport\" demeyin."}
+  - {en: "stop", tr: "durmak", ipa: "stɒp"}
+  - {en: "school", tr: "okul", ipa: "skuːl", note_tr: "Başa \"i\" eklemeyin."}
+  - {en: "street", tr: "sokak, cadde", ipa: "striːt", note_tr: "Üç ünsüz art arda: s-t-r."}
+  - {en: "spring", tr: "ilkbahar", ipa: "sprɪŋ"}
+  - {en: "film", tr: "film", ipa: "fɪlm", note_tr: "Tek hece. \"filim\" demeyin."}
+  - {en: "text", tr: "metin; mesaj", ipa: "tekst"}
+  - {en: "asked", tr: "sordu", ipa: "æskt", note_tr: "Sonda üç ünsüz: s-k-t."}
+  - {en: "The school is on Spring Street.", tr: "Okul Spring Caddesi'nde."}
+  - {en: "She stopped to send a text.", tr: "Mesaj göndermek için durdu."}
+  - {en: "I asked about the film last month.", tr: "Geçen ay filmi sordum."}
+questions:
+  - id: q.pron.a2.clusters.01
+    type: multiple_choice
+    prompt: "\"street\" sözcüğü kaç hecelidir?"
+    options:
+      - "*Bir :: /striːt/ — tek bir sesli harf sesi var."
+      - "İki :: \"si-triit\" yaygın bir hatadır."
+      - "Üç :: Sözcükte tek bir sesli harf sesi vardır."
+      - "Dört :: Sözcükte tek bir sesli harf sesi vardır."
+    explanation: "Hece sayısı sesli harf seslerinin sayısı kadardır."
+  - id: q.pron.a2.clusters.02
+    type: multiple_choice
+    prompt: "\"sport\" sözcüğünü çalışırken hangi yöntem önerilir?"
+    options:
+      - "*\"s\" sesini uzatıp kesmeden \"port\"a geçmek :: Böylece araya sesli harf girmez."
+      - "Önce \"sı\" deyip sonra \"port\" eklemek :: Bu, fazladan hece ekler."
+      - "Sözcüğün başına \"i\" eklemek :: Bu, fazladan hece ekler."
+      - "\"s\" sesini atlamak :: Sözcük değişir (port)."
+    explanation: "sssss-port → sport."
+  - id: q.pron.a2.clusters.03
+    type: true_false
+    instruction_tr: "Cümle doğru mu, yanlış mı?"
+    prompt: "İngilizcede \"film\" sözcüğü iki hecelidir."
+    options:
+      - "Doğru :: /fɪlm/ tek hecedir."
+      - "*Yanlış :: /fɪlm/ — l ile m arasında sesli harf yoktur."
+    explanation: "film tek hecelidir; \"filim\" Türkçe söyleyiştir."

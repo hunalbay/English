@@ -1,0 +1,61 @@
+id: listen.a1.new-neighbour
+kind: listening
+level: A1
+title_tr: "Yeni komşu"
+title_en: Meeting a new neighbour
+objective_tr: Tanışma konuşmasını dinleyip isim, ülke, meslek ve aile hakkındaki temel bilgileri anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.to-be-present, gram.a1.present-simple]
+vocabulary: [neighbor, name, nurse, hospital, flat, welcome]
+passage:
+  mode: dialogue
+  voices: {Emma: f1, Ali: m1}
+  lines:
+    - {speaker: Emma, en: "Hello! Are you our new neighbour?", tr: "Merhaba! Yeni komşumuz siz misiniz?"}
+    - {speaker: Ali, en: "Yes, I am. My name is Ali. I live in flat number six.", tr: "Evet, benim. Adım Ali. Altı numaralı dairede oturuyorum."}
+    - {speaker: Emma, en: "Nice to meet you, Ali. I'm Emma. I live in flat number four. Where are you from?", tr: "Tanıştığımıza memnun oldum Ali. Ben Emma. Dört numaralı dairede oturuyorum. Nerelisiniz?"}
+    - {speaker: Ali, en: "I'm from Turkey. I'm from Izmir.", tr: "Türkiyeliyim. İzmirliyim."}
+    - {speaker: Emma, en: "Oh, lovely! And what do you do?", tr: "Ne güzel! Peki ne iş yapıyorsunuz?"}
+    - {speaker: Ali, en: "I'm a nurse. I work at the city hospital. And you?", tr: "Hemşireyim. Şehir hastanesinde çalışıyorum. Ya siz?"}
+    - {speaker: Emma, en: "I'm a teacher. I teach music. Do you live alone?", tr: "Ben öğretmenim. Müzik öğretiyorum. Yalnız mı yaşıyorsunuz?"}
+    - {speaker: Ali, en: "No, I live with my wife. We have two children, a boy and a girl.", tr: "Hayır, eşimle yaşıyorum. İki çocuğumuz var, bir oğlan ve bir kız."}
+    - {speaker: Emma, en: "That's great. Welcome to the building!", tr: "Harika. Apartmana hoş geldiniz!"}
+    - {speaker: Ali, en: "Thank you, Emma. See you later.", tr: "Teşekkürler Emma. Görüşürüz."}
+questions:
+  - id: q.listen.a1.neighbour.01
+    type: listening_comprehension
+    prompt: "Which flat does Ali live in?"
+    options:
+      - "*Number six :: \"I live in flat number six.\""
+      - "Number four :: Dört numarada oturan Emma'dır."
+      - "Number two :: Kayıtta geçmiyor."
+      - "Number sixteen :: Six ile sixteen karıştırılmamalı."
+    explanation: "Ali altı, Emma dört numarada oturuyor."
+  - id: q.listen.a1.neighbour.02
+    type: listening_comprehension
+    prompt: "What is Ali's job?"
+    options:
+      - "*He is a nurse. :: \"I'm a nurse. I work at the city hospital.\""
+      - "He is a doctor. :: Hastanede çalışıyor ama hemşire."
+      - "He is a teacher. :: Öğretmen olan Emma'dır."
+      - "He is a musician. :: Müzik öğreten Emma'dır."
+    explanation: "nurse = hemşire"
+  - id: q.listen.a1.neighbour.03
+    type: listening_comprehension
+    prompt: "What does Emma teach?"
+    options:
+      - "*Music :: \"I teach music.\""
+      - "English :: Kayıtta geçmiyor."
+      - "Maths :: Kayıtta geçmiyor."
+      - "Turkish :: Kayıtta geçmiyor."
+    explanation: "\"I'm a teacher. I teach music.\""
+  - id: q.listen.a1.neighbour.04
+    type: listening_comprehension
+    prompt: "How many children does Ali have?"
+    options:
+      - "*Two :: \"We have two children, a boy and a girl.\""
+      - "One :: Bir oğlan ve bir kız: iki çocuk."
+      - "Three :: Kayıtta iki deniyor."
+      - "None :: İki çocuğu var."
+    explanation: "a boy and a girl = iki çocuk"

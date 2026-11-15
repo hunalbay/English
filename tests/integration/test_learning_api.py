@@ -27,7 +27,9 @@ def test_levels_list_all_six_with_real_counts(client, content_db):
     levels = client.get(f"{API}/levels").json()["levels"]
     assert [level["code"] for level in levels] == ["A1", "A2", "B1", "B2", "C1", "C2"]
     conn = sqlite3.connect(content_db)
-    expected = dict(conn.execute("SELECT level, COUNT(*) FROM lessons GROUP BY level"))
+    expected = dict(conn.execute(
+        "SELECT ls.level, COUNT(*) FROM lessons ls JOIN units u ON u.id = ls.unit_id "
+        "WHERE u.track = 'grammar' GROUP BY ls.level"))  # Dersler sayfası yalnızca dil bilgisi derslerini sayar
     conn.close()
     for level in levels:
         assert level["lesson_count"] == expected.get(level["code"], 0)

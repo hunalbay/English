@@ -54,6 +54,13 @@ def _public_question(question: dict, rng: random.Random) -> dict:
         payload["strict"] = question["grading"] == "strict"
     if question["data"].get("checklist"):
         payload["checklist"] = question["data"]["checklist"]
+    passage = question.get("passage")
+    if passage and question["type"] == "listening_comprehension":
+        # Dinleme sorusunda yalnızca kayıt verilir; yazılı metin cevaptan önce gönderilmez.
+        payload["audio"] = passage.get("audio")
+        payload["audio_missing"] = passage.get("audio") is None
+    elif passage:
+        payload["passage"] = {"mode": passage["mode"], "lines": passage["lines"]}
     return payload
 
 

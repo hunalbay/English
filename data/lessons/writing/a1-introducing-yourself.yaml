@@ -1,0 +1,92 @@
+id: write.a1.introducing-yourself
+kind: writing
+level: A1
+title_tr: "Kendini tanıtan kısa bir paragraf"
+title_en: Introducing yourself
+objective_tr: Adınızı, yaşınızı, nereli olduğunuzu, işinizi ve sevdiğiniz şeyleri anlatan 5–6 cümlelik bir paragraf yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.to-be-present, gram.a1.present-simple, gram.a1.conjunctions]
+vocabulary: [name, job, hobby, live, like, family]
+sections:
+  - kind: explanation
+    title_tr: Ne yazacağız?
+    text_tr: |-
+      Kendinizi tanıtan bir paragraf, bir dil öğrenirken yazılan ilk metindir: bir kursa kaydolurken, bir mesajlaşma uygulamasında ya da bir formda işinize yarar.
+
+      Kısa ve basit cümleler kurun. Her cümle **büyük harfle** başlar ve **noktayla** biter. İngilizcede **I** (ben) her zaman büyük yazılır.
+  - kind: formula
+    title_tr: Paragrafın planı
+    table:
+      headers: ["Sıra", "Ne yazılır?", "Kalıp"]
+      rows:
+        - ["1", "Ad", "My name is ... / I am ..."]
+        - ["2", "Yaş ve memleket", "I am ... years old. I am from ..."]
+        - ["3", "Yaşadığınız yer", "I live in ... with ..."]
+        - ["4", "İş ya da okul", "I am a ... / I work in ... / I am a student."]
+        - ["5", "Sevdikleriniz", "I like ... and ... / I love ..."]
+        - ["6", "Sevmedikleriniz ya da ek bilgi", "I don't like ... / I have ..."]
+  - kind: examples
+    title_tr: Örnek paragraf
+    examples:
+      - {en: "My name is Deniz Yıldız.", tr: "Adım Deniz Yıldız."}
+      - {en: "I am twenty-eight years old and I am from Antalya.", tr: "Yirmi sekiz yaşındayım ve Antalyalıyım."}
+      - {en: "I live in Ankara with my sister.", tr: "Ankara'da kız kardeşimle yaşıyorum."}
+      - {en: "I am an accountant. I work in a small company.", tr: "Muhasebeciyim. Küçük bir şirkette çalışıyorum."}
+      - {en: "I like music and I love cooking, but I don't like football.", tr: "Müziği severim ve yemek yapmaya bayılırım ama futbolu sevmem."}
+      - {en: "I have a cat. Her name is Limon.", tr: "Bir kedim var. Adı Limon."}
+  - kind: usage
+    title_tr: Cümleleri bağlamak
+    text_tr: |-
+      Kısa cümleleri **and** (ve), **but** (ama) ve **because** (çünkü) ile bağlayarak paragrafınızı daha akıcı yapabilirsiniz.
+
+      "I like tea. I like coffee." → "I like tea **and** coffee."
+
+      "I like films. I don't like horror films." → "I like films, **but** I don't like horror films."
+
+      "I am learning English **because** I want to travel."
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"I have 28 years old."** → Yaş **to be** ile söylenir: "I **am** 28 years old."
+
+      **"I am accountant."** → Meslekten önce **a / an** gelir: "I am **an** accountant."
+
+      **"i am from izmir."** → I, özel isimler ve cümle başı büyük harfle yazılır.
+
+      **"I like listen music."** → "I like **listening to** music."
+questions:
+  - id: q.write.a1.intro.01
+    type: word_order
+    prompt: "Cümle kurun."
+    tokens: [I, am, from, Antalya]
+    explanation: "özne + am + from + yer."
+  - id: q.write.a1.intro.02
+    type: error_correction
+    prompt: "I have thirty years old."
+    answers: ["I am thirty years old.", "I'm thirty years old."]
+    explanation: "Yaş to be ile söylenir."
+  - id: q.write.a1.intro.03
+    type: fill_blank
+    prompt: "I like tea, ___ I don't like coffee."
+    answers: [but]
+    explanation: "Zıtlık: but."
+    lessons: [gram.a1.conjunctions]
+  - id: q.write.a1.intro.04
+    type: error_correction
+    prompt: "I am engineer."
+    answers: ["I am an engineer.", "I'm an engineer."]
+    explanation: "Meslekten önce a / an; ünlü sesle başladığı için an."
+    lessons: [gram.a1.articles-a-an]
+  - id: q.write.a1.intro.05
+    type: written_answer
+    prompt: "Kendinizi tanıtan 5–6 cümlelik bir paragraf yazın: adınız, yaşınız, nereli olduğunuz, nerede yaşadığınız, işiniz ya da okulunuz, sevdiğiniz ve sevmediğiniz bir şey."
+    model_answers:
+      - "My name is Deniz Yıldız. I am twenty-eight years old and I am from Antalya. I live in Ankara with my sister. I am an accountant and I work in a small company. I like music and I love cooking, but I don't like football."
+    checklist:
+      - "Her cümle büyük harfle başlıyor ve noktayla bitiyor."
+      - "\"I\" her yerde büyük harfle yazılı."
+      - "Yaşımı \"I am ... years old\" ile yazdım."
+      - "Mesleğimden önce a / an kullandım."
+      - "En az bir kez and ya da but kullandım."
+    explanation: "Plan: ad → yaş ve memleket → yaşanılan yer → iş → sevilenler."

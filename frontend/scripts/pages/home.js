@@ -87,8 +87,10 @@ export async function render(root) {
     h("section", { class: "card" },
       h("h2", {}, "Geliştirme sürümü"),
       h("p", { class: "muted" },
-        `Bu sürümde ${data.totals.lessons} ders, ${data.totals.questions} soru ve ${data.totals.words} kelime bulunuyor. Okuma, ` +
-        "dinleme, yazma ve diğer modüller henüz eklenmedi; hazır oldukça menüde görünecekler.")),
+        `Bu sürümde ${data.totals.lessons} dil bilgisi dersi, ${data.totals.tracks.reading} okuma metni, ` +
+        `${data.totals.tracks.listening} dinleme kaydı, ${data.totals.tracks.writing} yazma dersi, ` +
+        `${data.totals.tracks.pronunciation} telaffuz dersi, ${data.totals.questions} soru ve ${data.totals.words} kelime bulunuyor. ` +
+        "Deyimler, mesleki İngilizce, seviye tespit sınavı ve ilerleme raporları henüz eklenmedi; hazır oldukça menüde görünecekler.")),
   );
   return "Ana Sayfa";
 }

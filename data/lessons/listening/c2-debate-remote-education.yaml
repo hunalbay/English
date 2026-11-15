@@ -1,0 +1,89 @@
+id: listen.c2.debate-remote-education
+kind: listening
+level: C2
+title_tr: "Tartışma: Uzaktan eğitim"
+title_en: "A debate on remote education"
+objective_tr: Hızlı tempolu bir tartışmada konuşmacıların örtük tutumlarını, ironiyi, ödünleme ve itiraz biçimlerini anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c2.discourse-markers, gram.c2.concession-advanced, gram.c2.register]
+vocabulary: [education, lecture, access, quality, discipline]
+passage:
+  mode: dialogue
+  voices: {Moderator: f2, Dr Hale: m1, Professor Lin: f1}
+  lines:
+    - {speaker: Moderator, en: "Our question tonight is whether online degrees can ever match the real thing. Doctor Hale, you think they already do.", tr: "Bu akşamki sorumuz, çevrim içi diplomaların gerçeğiyle boy ölçüşüp ölçüşemeyeceği. Doktor Hale, siz zaten ölçüştüklerini düşünüyorsunuz."}
+    - {speaker: Dr Hale, en: "I'd put it slightly differently. I think \"the real thing\" was never quite as wonderful as we like to remember. Three hundred students in a hall, half of them asleep, is hardly a golden age.", tr: "Ben biraz farklı ifade ederdim. Bence \"gerçeği\", hatırlamaktan hoşlandığımız kadar harika hiç olmadı. Yarısı uyuyan üç yüz öğrencinin doldurduğu bir amfi pek de altın çağ sayılmaz."}
+    - {speaker: Professor Lin, en: "With respect, that's a caricature. Nobody is defending bad lectures. What I'm defending is everything that happens around them.", tr: "Kusura bakmayın ama bu bir karikatür. Kimse kötü dersleri savunmuyor. Benim savunduğum, onların çevresinde olup biten her şey."}
+    - {speaker: Dr Hale, en: "Such as?", tr: "Örneğin?"}
+    - {speaker: Professor Lin, en: "The argument in the corridor afterwards. The student who discovers, purely by accident, a subject she never meant to study. You can't schedule that, and you certainly can't stream it.", tr: "Dersten sonra koridordaki tartışma. Hiç niyeti yokken, tümüyle tesadüfen, bir alanı keşfeden öğrenci. Bunu programa koyamazsınız; hele yayımlamanız hiç mümkün değil."}
+    - {speaker: Dr Hale, en: "Granted, and I wouldn't dream of denying it. But let's be honest about who gets to have that experience. Much as I love the corridor, it is open only to those who can afford to stop working for four years.", tr: "Kabul; bunu inkâr etmek aklımın ucundan geçmez. Ama o deneyimi kimin yaşayabildiği konusunda dürüst olalım. Koridoru ne kadar sevsem de o, yalnızca dört yıl boyunca çalışmayı bırakmaya gücü yetenlere açık."}
+    - {speaker: Moderator, en: "So access is your central point.", tr: "Yani sizin temel noktanız erişim."}
+    - {speaker: Dr Hale, en: "It is. A nurse in a small town who studies at midnight is not getting a second-rate education. She is getting the only one available to her.", tr: "Evet. Küçük bir kasabada gece yarısı ders çalışan bir hemşire ikinci sınıf bir eğitim almıyor. Kendisine açık olan tek eğitimi alıyor."}
+    - {speaker: Professor Lin, en: "And I'd be the last person to take it away from her. My worry is rather different. Once the cheaper option exists, it tends to become the only option, at least for those without money. We risk ending up with seminars for the few and videos for everyone else.", tr: "Bunu onun elinden almak isteyecek son kişi de benim. Benim kaygım oldukça farklı. Ucuz seçenek bir kez var olunca, en azından parası olmayanlar için, tek seçenek olmaya yatkın. Azınlık için seminerlerin, geri kalan herkes için videoların olduğu bir düzene varma riskimiz var."}
+    - {speaker: Dr Hale, en: "That's a fair point, actually. Though I'd say it's an argument about funding rather than about technology.", tr: "Doğrusu bu haklı bir nokta. Gerçi bunun teknolojiyle değil, finansmanla ilgili bir sav olduğunu söylerdim."}
+    - {speaker: Professor Lin, en: "On that, for once, we agree.", tr: "Bu konuda, ilk kez, aynı fikirdeyiz."}
+    - {speaker: Moderator, en: "Which seems a suitable moment to stop. Thank you both.", tr: "Bu da bitirmek için uygun bir an gibi görünüyor. İkinize de teşekkürler."}
+questions:
+  - id: q.listen.c2.debate.01
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "How does Dr Hale respond to the moderator's opening summary of his view?"
+    options:
+      - "*He reframes it: traditional teaching was never as good as people remember. :: \"I'd put it slightly differently.\""
+      - "He accepts it without change. :: Görüşünü yeniden çerçeveliyor."
+      - "He denies that he supports online degrees. :: Desteğini geri çekmiyor."
+      - "He refuses to answer. :: Yanıt veriyor."
+    explanation: "\"The real thing was never quite as wonderful as we like to remember.\""
+  - id: q.listen.c2.debate.02
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What does Professor Lin mean by calling his description \"a caricature\"?"
+    options:
+      - "*He has exaggerated the weaknesses of traditional teaching to make it easy to attack. :: Karikatür: abartılı ve haksız bir tasvir."
+      - "He has described lectures accurately. :: \"With respect\" ile nazik bir itiraz yapıyor."
+      - "He has made a joke that she enjoyed. :: Övgü değil, itiraz."
+      - "He has drawn a picture of a lecture hall. :: Mecazi kullanım."
+    explanation: "\"With respect\" kibar ama açık bir karşı çıkışı başlatır."
+    lessons: [gram.c2.discourse-markers]
+  - id: q.listen.c2.debate.03
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What exactly is Professor Lin defending?"
+    options:
+      - "*The unplanned encounters and discoveries that happen around formal teaching :: Koridordaki tartışma, tesadüfen keşfedilen alan."
+      - "Large lectures as the best way to teach :: \"Nobody is defending bad lectures.\""
+      - "Higher fees for universities :: Kayıtta böyle bir bilgi yok."
+      - "The idea that online courses should be banned :: Hemşirenin eğitimini elinden almak istemediğini söylüyor."
+    explanation: "\"What I'm defending is everything that happens around them.\""
+  - id: q.listen.c2.debate.04
+    type: nuance
+    difficulty: 5
+    prompt: "\"Much as I love the corridor, it is open only to those who can afford to stop working for four years.\" What is Dr Hale doing?"
+    options:
+      - "*Conceding the value of her point while arguing that few people can benefit from it :: Much as ...: ödünleme, ardından itiraz."
+      - "Rejecting the idea that informal learning matters :: Değerini kabul ediyor."
+      - "Changing the subject to his own university days :: Konu aynı."
+      - "Agreeing with her completely :: Ardından bir sınırlama getiriyor."
+    explanation: "Ödünleme + karşı sav."
+    lessons: [gram.c2.concession-advanced]
+  - id: q.listen.c2.debate.05
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "What is Professor Lin's real concern about online education?"
+    options:
+      - "*That it may become the only option for people without money, creating a two-tier system :: \"Seminars for the few and videos for everyone else.\""
+      - "That nurses should not study at night :: Bu eğitimi savunuyor."
+      - "That videos are technically unreliable :: Teknik sorunlardan söz edilmiyor."
+      - "That online students are less intelligent :: Böyle bir iddia yok."
+    explanation: "Kaygı, ucuz seçeneğin zamanla tek seçenek hâline gelmesi."
+  - id: q.listen.c2.debate.06
+    type: listening_comprehension
+    difficulty: 5
+    prompt: "How does the discussion end?"
+    options:
+      - "*They agree that the underlying issue is funding rather than technology. :: \"On that, for once, we agree.\""
+      - "They fail to agree on anything. :: Son noktada uzlaşıyorlar."
+      - "Dr Hale admits that online degrees are worthless. :: Böyle bir şey söylemiyor."
+      - "Professor Lin accepts that corridors are unimportant. :: Böyle bir şey söylemiyor."
+    explanation: "\"For once\" (ilk kez) hafif ironik bir uzlaşmayı gösteriyor."

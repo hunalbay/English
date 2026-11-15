@@ -1,0 +1,74 @@
+id: listen.b1.weather-and-plans
+kind: listening
+level: B1
+title_tr: "Hava durumu ve hafta sonu planı"
+title_en: A radio weather report
+objective_tr: Tek kişinin konuştuğu bir radyo hava durumunu dinleyip günlere göre hava koşullarını ve verilen tavsiyeleri anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.future-forms, gram.b1.unless-time-clauses]
+vocabulary: [weather, forecast, temperature, storm, coast, umbrella]
+passage:
+  mode: text
+  voices: {"": f2}
+  lines:
+    - {en: "Good evening, and here is the weather forecast for the weekend.", tr: "İyi akşamlar, işte hafta sonu hava tahmini."}
+    - {en: "Tomorrow, Friday, will start cloudy in most areas, with light rain along the coast in the morning.", tr: "Yarın, cuma günü, çoğu bölgede bulutlu başlayacak; sabah saatlerinde kıyı boyunca hafif yağmur görülecek."}
+    - {en: "By the afternoon the clouds will have cleared, and we can expect some sunshine, with temperatures reaching eighteen degrees.", tr: "Öğleden sonraya kadar bulutlar dağılmış olacak; sıcaklık on sekiz dereceye ulaşırken biraz güneş bekleyebiliriz."}
+    - {en: "Saturday is going to be the best day of the weekend. It will be dry and sunny everywhere, and warmer than usual for this time of year.", tr: "Cumartesi hafta sonunun en güzel günü olacak. Her yerde kuru ve güneşli, yılın bu zamanı için de olağandan daha sıcak olacak."}
+    - {en: "If you are planning a picnic or a walk in the mountains, Saturday is the day to do it.", tr: "Piknik ya da dağda yürüyüş planlıyorsanız bunun günü cumartesi."}
+    - {en: "On Sunday, however, the weather will change. A storm is moving in from the west, bringing heavy rain and strong winds by lunchtime.", tr: "Ancak pazar günü hava değişecek. Batıdan bir fırtına yaklaşıyor; öğle saatlerine doğru şiddetli yağmur ve kuvvetli rüzgâr getirecek."}
+    - {en: "Drivers should take extra care, and you shouldn't go sailing unless you really have to.", tr: "Sürücüler çok dikkatli olmalı; gerçekten zorunda değilseniz yelkenliyle açılmamalısınız."}
+    - {en: "The rain will continue until Monday morning, so don't forget your umbrella when you leave for work.", tr: "Yağmur pazartesi sabahına kadar sürecek; bu yüzden işe giderken şemsiyenizi unutmayın."}
+    - {en: "That's all from me. Have a lovely weekend.", tr: "Benden bu kadar. İyi hafta sonları."}
+questions:
+  - id: q.listen.b1.weather.01
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "What will the weather be like on Friday afternoon?"
+    options:
+      - "*Sunny, with temperatures of about eighteen degrees :: Öğleden sonra bulutlar dağılmış olacak."
+      - "Rainy along the coast :: Bu, cuma sabahı için söyleniyor."
+      - "Stormy with strong winds :: Bu, pazar günü için söyleniyor."
+      - "Cloudy all day :: Yalnızca gün bulutlu başlıyor."
+    explanation: "\"By the afternoon the clouds will have cleared.\""
+  - id: q.listen.b1.weather.02
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "Which day is recommended for outdoor activities?"
+    options:
+      - "*Saturday :: \"Saturday is the day to do it.\""
+      - "Friday :: Sabah yağmurlu."
+      - "Sunday :: Fırtına bekleniyor."
+      - "Monday :: Sabaha kadar yağmur sürecek."
+    explanation: "Cumartesi kuru, güneşli ve olağandan sıcak."
+  - id: q.listen.b1.weather.03
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "What advice does the speaker give about Sunday?"
+    options:
+      - "*Don't go sailing unless it is really necessary. :: \"You shouldn't go sailing unless you really have to.\""
+      - "Go for a walk in the mountains. :: Bu, cumartesi için öneriliyor."
+      - "Leave for work early. :: Kayıtta böyle bir öneri yok."
+      - "Stay at home all day. :: Bu kadarı söylenmiyor; sürücülere dikkat, denizcilere uyarı var."
+    explanation: "unless = if not"
+    lessons: [gram.b1.unless-time-clauses]
+  - id: q.listen.b1.weather.04
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "How long will the rain continue?"
+    options:
+      - "*Until Monday morning :: \"The rain will continue until Monday morning.\""
+      - "Until Sunday lunchtime :: Fırtına o saatte başlıyor."
+      - "Until Saturday :: Cumartesi kuru."
+      - "All next week :: Kayıtta böyle bir bilgi yok."
+    explanation: "until = -e kadar"
+  - id: q.listen.b1.weather.05
+    type: matching
+    instruction_tr: "Kayda göre günleri hava durumuyla eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["Friday morning", "light rain along the coast"]
+      - ["Saturday", "dry, sunny and warm"]
+      - ["Sunday", "heavy rain and strong winds"]
+    explanation: "Her gün için farklı bir tahmin veriliyor."

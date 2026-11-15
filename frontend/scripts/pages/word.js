@@ -1,6 +1,7 @@
 // Kelime sayfası: anlamlar, biçimler, örnekler, ilişkili kelimeler ve dersler.
 
 import * as api from "../api.js";
+import { listenButton } from "../audio.js";
 import { wordChip, wordListButton } from "../components.js";
 import { POS_TR, add, h, lessonLink, levelBadge, toast } from "../dom.js";
 
@@ -65,7 +66,9 @@ export async function render(root, params) {
     h("nav", { class: "breadcrumb", "aria-label": "Konum" }, h("a", { href: "#/sozluk" }, "Sözlük"), " › ", word.lemma),
     h("div", { class: "page-header" },
       h("div", { class: "row" }, h("h1", { lang: "en" }, word.lemma), levelBadge(word.level)),
-      word.ipa ? h("p", { class: "muted", lang: "en" }, `/${word.ipa}/`) : null,
+      h("p", { class: "row" },
+        word.ipa ? h("span", { class: "muted", lang: "en" }, `/${word.ipa}/`) : null,
+        listenButton(word.audio, word.lemma)),
       wordListButton(word)),
     h("section", { class: "card" },
       h("h2", {}, "Anlamlar"),

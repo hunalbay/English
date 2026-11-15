@@ -25,28 +25,62 @@ def _placeholders(values: list) -> str:
     return ",".join("?" * len(values))
 
 
+MEDIA_PREFIX = "/media/"
+TRACKS = ("grammar", "reading", "listening", "writing", "pronunciation")
+
+
+def audio_urls(conn: sqlite3.Connection, keys: list[str]) -> dict[str, dict]:
+    """Ses anahtarı -> {"url", "duration_ms"}. Klibi olmayan anahtarlar sonuçta yer almaz."""
+    if not keys:
+        return {}
+    result: dict[str, dict] = {}
+    for start in range(0, len(keys), 500):
+        chunk = keys[start:start + 500]
+        for row in conn.execute(
+            f"SELECT key, path, duration_ms FROM audio_clips WHERE key IN ({_placeholders(chunk)})", chunk  # noqa: S608
+        ):
+            result[row["key"]] = {"url": MEDIA_PREFIX + row["path"], "duration_ms": row["duration_ms"]}
+    return result
+
+
+def audio_counts(conn: sqlite3.Connection) -> Row:
+    counts = {"words": 0, "phrases": 0, "lessons": 0}
+    names = {"w": "words", "s": "phrases", "l": "lessons"}
+    for row in conn.execute("SELECT substr(key, 1, 1) AS kind, COUNT(*) AS n FROM audio_clips GROUP BY 1"):
+        counts[names.get(row["kind"], "phrases")] += row["n"]
+    return counts
+
+
 # --- Seviyeler ve dersler ---------------------------------------------------
 
 def levels(conn: sqlite3.Connection) -> list[Row]:
     return _rows(
         conn,
         """SELECT l.code, l.name_tr, l.description_tr,
-                  (SELECT COUNT(*) FROM lessons x WHERE x.level = l.code) AS lesson_count,
+                  (SELECT COUNT(*) FROM lessons x JOIN units u ON u.id = x.unit_id
+                    WHERE x.level = l.code AND u.track = 'grammar') AS lesson_count,
                   (SELECT COUNT(*) FROM vocabulary v WHERE v.level = l.code) AS word_count
            FROM levels l ORDER BY l.position""",
     )
 
 
-def lesson_ids_by_level(conn: sqlite3.Connection) -> dict[str, list[str]]:
+def lesson_ids_by_level(conn: sqlite3.Connection, track: str | None = "grammar") -> dict[str, list[str]]:
+    """Seviyeye göre ders kimlikleri. track=None bütün alanları kapsar."""
     result: dict[str, list[str]] = {}
-    for row in conn.execute("SELECT level, id FROM lessons"):
+    for row in conn.execute(
+        "SELECT ls.level, ls.id FROM lessons ls JOIN units u ON u.id = ls.unit_id WHERE ? IS NULL OR u.track = ?",
+        (track, track),
+    ):
         result.setdefault(row["level"], []).append(row["id"])
     return result
 
 
-def units(conn: sqlite3.Connection, level: str) -> list[Row]:
+def units(conn: sqlite3.Connection, level: str, track: str = "grammar") -> list[Row]:
     unit_rows = _rows(
-        conn, "SELECT id, level, title_tr, title_en, description_tr FROM units WHERE level = ? ORDER BY position", (level,)
+        conn,
+        "SELECT id, level, track, title_tr, title_en, description_tr FROM units "
+        "WHERE level = ? AND track = ? ORDER BY position",
+        (level, track),
     )
     for unit in unit_rows:
         unit["lessons"] = _rows(
@@ -54,6 +88,10 @@ def units(conn: sqlite3.Connection, level: str) -> list[Row]:
             "SELECT id, kind, level, title_tr, title_en, objective_tr FROM lessons WHERE unit_id = ? ORDER BY position",
             (unit["id"],),
         )
+        if track == "listening":
+            clips = audio_urls(conn, [f"l:{lesson['id']}" for lesson in unit["lessons"]])
+            for lesson in unit["lessons"]:
+                lesson["has_audio"] = f"l:{lesson['id']}" in clips
     return unit_rows
 
 
@@ -72,13 +110,23 @@ def lesson_briefs(conn: sqlite3.Connection, lesson_ids: list[str]) -> dict[str, 
     return {row["id"]: row for row in rows}
 
 
-def ordered_lesson_ids(conn: sqlite3.Connection, level: str) -> list[str]:
+def track_counts(conn: sqlite3.Connection) -> dict[str, dict[str, int]]:
+    """Alan -> seviye -> ders sayısı."""
+    result: dict[str, dict[str, int]] = {track: {} for track in TRACKS}
+    for row in conn.execute(
+        "SELECT u.track, ls.level, COUNT(*) AS n FROM lessons ls JOIN units u ON u.id = ls.unit_id GROUP BY 1, 2"
+    ):
+        result[row["track"]][row["level"]] = row["n"]
+    return result
+
+
+def ordered_lesson_ids(conn: sqlite3.Connection, level: str, track: str = "grammar") -> list[str]:
     return [
         row["id"]
         for row in conn.execute(
             """SELECT ls.id FROM lessons ls JOIN units u ON u.id = ls.unit_id
-               WHERE ls.level = ? ORDER BY u.position, ls.position""",
-            (level,),
+               WHERE ls.level = ? AND u.track = ? ORDER BY u.position, ls.position""",
+            (level, track),
         )
     ]
 
@@ -87,7 +135,7 @@ def lesson(conn: sqlite3.Connection, lesson_id: str) -> Row | None:
     data = _one(
         conn,
         """SELECT ls.id, ls.kind, ls.level, ls.title_tr, ls.title_en, ls.objective_tr, ls.review_status,
-                  u.id AS unit_id, u.title_tr AS unit_title_tr,
+                  u.id AS unit_id, u.title_tr AS unit_title_tr, u.track,
                   s.name AS source_name, s.license AS source_license
            FROM lessons ls JOIN units u ON u.id = ls.unit_id JOIN content_sources s ON s.id = ls.source_id
            WHERE ls.id = ?""",
@@ -113,6 +161,15 @@ def lesson(conn: sqlite3.Connection, lesson_id: str) -> Row | None:
             )
         ]
     data["sections"] = sections
+    data["passage"] = passage(conn, lesson_id, with_translation=True)
+    practice = _rows(
+        conn, "SELECT en, tr, ipa, note_tr, audio_key FROM practice_items WHERE lesson_id = ? ORDER BY position",
+        (lesson_id,),
+    )
+    clips = audio_urls(conn, [item["audio_key"] for item in practice])
+    for item in practice:
+        item["audio"] = clips.get(item.pop("audio_key"))
+    data["practice"] = practice
     relations = _rows(
         conn,
         """SELECT r.kind AS relation, ls.id, ls.kind, ls.level, ls.title_tr, ls.title_en
@@ -130,6 +187,26 @@ def lesson(conn: sqlite3.Connection, lesson_id: str) -> Row | None:
             "SELECT lv.word_id FROM lesson_vocabulary lv JOIN vocabulary v ON v.id = lv.word_id "
             "WHERE lv.lesson_id = ? ORDER BY v.lemma_key", (lesson_id,))],
     )
+    return data
+
+
+def passage(conn: sqlite3.Connection, lesson_id: str, with_translation: bool) -> Row | None:
+    """Dersin okuma metni / dinleme kaydı. Dinleme derslerinde ses bilgisi de eklenir."""
+    row = _one(
+        conn,
+        "SELECT p.mode, ls.kind FROM passages p JOIN lessons ls ON ls.id = p.lesson_id WHERE p.lesson_id = ?",
+        (lesson_id,),
+    )
+    if row is None:
+        return None
+    columns = "speaker, en, tr" if with_translation else "speaker, en"
+    data: Row = {
+        "mode": row["mode"],
+        "lines": _rows(conn, f"SELECT {columns} FROM passage_lines WHERE lesson_id = ? ORDER BY position", (lesson_id,)),  # noqa: S608
+        "glossary": _rows(conn, "SELECT en, tr FROM passage_glossary WHERE lesson_id = ? ORDER BY position", (lesson_id,)),
+    }
+    if row["kind"] == "listening":
+        data["audio"] = audio_urls(conn, [f"l:{lesson_id}"]).get(f"l:{lesson_id}")
     return data
 
 
@@ -201,6 +278,8 @@ def word(conn: sqlite3.Connection, word_id: str) -> Row | None:
     data["meanings"] = _rows(
         conn, "SELECT pos, meaning_tr, definition_en FROM word_meanings WHERE word_id = ? ORDER BY position", (word_id,)
     )
+    key = conn.execute("SELECT lemma_key FROM vocabulary WHERE id = ?", (word_id,)).fetchone()["lemma_key"]
+    data["audio"] = audio_urls(conn, [f"w:{key}"]).get(f"w:{key}")
     data["forms"] = [row["form"] for row in conn.execute("SELECT form FROM word_forms WHERE word_id = ? ORDER BY rowid", (word_id,))]
     data["examples"] = _rows(conn, "SELECT en, tr FROM example_sentences WHERE word_id = ? ORDER BY position", (word_id,))
     data["collocations"] = _rows(conn, "SELECT phrase, meaning_tr FROM collocations WHERE word_id = ? ORDER BY id", (word_id,))
@@ -257,7 +336,11 @@ def search(conn: sqlite3.Connection, query: str, limit: int) -> dict[str, list[R
 def totals(conn: sqlite3.Connection) -> Row:
     return {
         "questions": conn.execute("SELECT COUNT(*) FROM questions").fetchone()[0],
-        "lessons": conn.execute("SELECT COUNT(*) FROM lessons").fetchone()[0],
+        "lessons": conn.execute(
+            "SELECT COUNT(*) FROM lessons ls JOIN units u ON u.id = ls.unit_id WHERE u.track = 'grammar'"
+        ).fetchone()[0],
+        "tracks": {track: sum(levels.values()) for track, levels in track_counts(conn).items()},
+        "audio": audio_counts(conn),
         "words": conn.execute("SELECT COUNT(*) FROM vocabulary").fetchone()[0],
     }
 
@@ -393,6 +476,10 @@ def question_for_grading(conn: sqlite3.Connection, question_id: str) -> Row | No
     question["lessons"] = [briefs[lesson_id] for lesson_id in lesson_ids if lesson_id in briefs]
     question["vocabulary"] = word_briefs(conn, [row["word_id"] for row in conn.execute(
         "SELECT word_id FROM question_vocabulary WHERE question_id = ? ORDER BY word_id", (question_id,))])
+    # Okuma / dinleme sorularında dersin metni ya da kaydı soruyla birlikte gösterilir.
+    question["passage"] = None
+    if question["type"] in ("reading_comprehension", "listening_comprehension") and not question["context"]:
+        question["passage"] = passage(conn, question["lesson_id"], with_translation=False)
     return question
 
 

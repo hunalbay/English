@@ -1,0 +1,81 @@
+id: pron.a1.short-and-long-i
+kind: pronunciation
+level: A1
+title_tr: "Kısa ve uzun i: ship ve sheep"
+title_en: "Short and long i: ship and sheep"
+objective_tr: Kısa /ɪ/ ile uzun /iː/ seslerini ayırt edip söyleyebilecek, ship / sheep gibi sözcük çiftlerini karıştırmadan kullanabileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [ship, sheep, live, leave, sit, seat]
+sections:
+  - kind: explanation
+    title_tr: İki farklı i
+    text_tr: |-
+      Türkçede tek bir "i" vardır. İngilizcede iki tane: **kısa /ɪ/** (ship, sit, live) ve **uzun /iː/** (sheep, seat, leave). Fark yalnızca uzunluk değildir; ağzın biçimi de değişir.
+
+      Türkçe konuşanlar ikisini de Türkçe "i" gibi söyleme eğilimindedir. Sonuç: "I want to **live**" (yaşamak) ile "I want to **leave**" (ayrılmak) aynı duyulur. Bazı çiftlerde bu utandırıcı karışıklıklara yol açabilir: **sheet** / **beach** sözcüklerindeki ses mutlaka uzun olmalıdır.
+  - kind: usage
+    title_tr: Nasıl çıkarılır?
+    text_tr: |-
+      **/iː/ (uzun):** Dudaklarınızı **gülümser gibi yana gerin**. Dil yukarıda ve önde, gergindir. Sesi **uzatın**: "iii". Türkçedeki "i"den daha gergin ve uzundur.
+
+      **/ɪ/ (kısa):** Dudakları ve dili **gevşetin**. Ağız biraz daha açıktır. Ses **kısa ve gevşektir**; Türkçedeki "i" ile "ı" arasında bir yerdedir. "ship" derken gülümsemeyin.
+
+      **Yazım ipuçları:** **ee, ea, ie** çoğunlukla uzun okunur (see, eat, field). Tek başına **i** + ünsüz çoğunlukla kısadır (sit, big, fish).
+  - kind: comparison
+    title_tr: Karışan çiftler
+    table:
+      headers: ["Kısa /ɪ/", "Uzun /iː/"]
+      rows:
+        - ["ship — gemi", "sheep — koyun"]
+        - ["live — yaşamak", "leave — ayrılmak"]
+        - ["sit — oturmak", "seat — koltuk"]
+        - ["it — o", "eat — yemek"]
+        - ["fill — doldurmak", "feel — hissetmek"]
+        - ["this — bu", "these — bunlar"]
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Çiftleri art arda söyleyin ve farkı abartın: **ship — sheeeep**. Sonra abartıyı azaltın.
+
+      **this / these** çiftine özellikle çalışın; çok sık kullanılır ve fark hem sesli harfte (/ɪ/ – /iː/) hem sondaki ünsüzde (/s/ – /z/) duyulur.
+practice:
+  - {en: "ship", tr: "gemi", ipa: "ʃɪp", note_tr: "Kısa ve gevşek. Gülümsemeyin."}
+  - {en: "sheep", tr: "koyun", ipa: "ʃiːp", note_tr: "Uzun ve gergin. Dudaklar yana açılır."}
+  - {en: "live", tr: "yaşamak", ipa: "lɪv"}
+  - {en: "leave", tr: "ayrılmak", ipa: "liːv"}
+  - {en: "sit", tr: "oturmak", ipa: "sɪt"}
+  - {en: "seat", tr: "koltuk", ipa: "siːt"}
+  - {en: "this", tr: "bu", ipa: "ðɪs"}
+  - {en: "these", tr: "bunlar", ipa: "ðiːz"}
+  - {en: "Please sit in this seat.", tr: "Lütfen bu koltuğa oturun.", note_tr: "please, seat: uzun; sit, in, this: kısa."}
+  - {en: "I live here, but I leave at six.", tr: "Burada yaşıyorum ama altıda çıkıyorum."}
+  - {en: "We need three big fish.", tr: "Üç büyük balığa ihtiyacımız var.", note_tr: "we, need, three: uzun; big, fish: kısa."}
+questions:
+  - id: q.pron.a1.i.01
+    type: multiple_choice
+    prompt: "Hangi sözcükte sesli harf UZUN /iː/ okunur?"
+    options:
+      - "*seat :: /siːt/ — \"ea\" çoğunlukla uzun okunur."
+      - "sit :: /sɪt/ — kısa."
+      - "ship :: /ʃɪp/ — kısa."
+      - "big :: /bɪɡ/ — kısa."
+    explanation: "ee, ea → çoğunlukla /iː/; tek i + ünsüz → çoğunlukla /ɪ/."
+  - id: q.pron.a1.i.02
+    type: multiple_choice
+    prompt: "Kısa /ɪ/ sesini çıkarırken hangisi doğrudur?"
+    options:
+      - "*Dudaklar ve dil gevşektir; ses kısadır. :: Türkçe \"i\"den daha gevşek ve biraz daha açık."
+      - "Dudaklar gülümser gibi yana gerilir. :: Bu, uzun /iː/ sesidir."
+      - "Dudaklar yuvarlanır. :: Bu, /uː/ ya da /w/ için geçerlidir."
+      - "Ses uzatılır. :: Uzatılan ses /iː/dir."
+    explanation: "/ɪ/ gevşek ve kısa; /iː/ gergin ve uzun."
+  - id: q.pron.a1.i.03
+    type: matching
+    prompt: "Sözcükleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["live", "yaşamak"]
+      - ["leave", "ayrılmak"]
+      - ["fill", "doldurmak"]
+      - ["feel", "hissetmek"]
+    explanation: "Sesli harfin uzunluğu anlamı değiştirir."

@@ -1,0 +1,79 @@
+id: listen.b2.customer-call
+kind: listening
+level: B2
+title_tr: "Müşteri hizmetleri görüşmesi"
+title_en: A customer service call
+objective_tr: Bir sorunun çözüldüğü telefon görüşmesini dinleyip şikâyetin ayrıntılarını, sunulan seçenekleri ve varılan anlaşmayı anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.causative, gram.b2.passive-advanced, gram.b2.conditional-alternatives]
+vocabulary: [order, deliver, damage, replace, refund, apologize]
+passage:
+  mode: dialogue
+  voices: {Agent: f1, Customer: m2}
+  lines:
+    - {speaker: Agent, en: "Home Electronics, customer service. How may I help you?", tr: "Home Electronics, müşteri hizmetleri. Nasıl yardımcı olabilirim?"}
+    - {speaker: Customer, en: "Hello. I'm calling about a washing machine that was delivered on Tuesday. When I unpacked it, I noticed that the door was badly scratched.", tr: "Merhaba. Salı günü teslim edilen bir çamaşır makinesi için arıyorum. Ambalajından çıkardığımda kapağının fena hâlde çizilmiş olduğunu fark ettim."}
+    - {speaker: Agent, en: "I'm very sorry to hear that. Could I have your order number, please?", tr: "Bunu duyduğuma çok üzüldüm. Sipariş numaranızı alabilir miyim lütfen?"}
+    - {speaker: Customer, en: "Yes, it's four, seven, two, nine, one.", tr: "Evet: dört, yedi, iki, dokuz, bir."}
+    - {speaker: Agent, en: "Thank you. I can see the order here. It appears to have been damaged during delivery. Have you used the machine at all?", tr: "Teşekkürler. Siparişi görüyorum. Teslimat sırasında hasar görmüş gibi duruyor. Makineyi hiç kullandınız mı?"}
+    - {speaker: Customer, en: "No, I haven't even had it installed yet. I didn't want to connect it in case that caused a problem with the guarantee.", tr: "Hayır, daha kurdurmadım bile. Garantiyle ilgili bir sorun çıkar diye bağlamak istemedim."}
+    - {speaker: Agent, en: "That was sensible. I can offer you two options. We can replace the machine, or, provided that it works properly, you can keep it and we will refund fifteen percent of the price.", tr: "Mantıklı davranmışsınız. Size iki seçenek sunabilirim. Makineyi değiştirebiliriz; ya da düzgün çalışması koşuluyla makine sizde kalır ve biz fiyatın yüzde on beşini iade ederiz."}
+    - {speaker: Customer, en: "How long would a replacement take?", tr: "Değişim ne kadar sürer?"}
+    - {speaker: Agent, en: "Unfortunately that model is out of stock, so it would be about three weeks.", tr: "Ne yazık ki o model stokta yok; bu yüzden yaklaşık üç hafta sürer."}
+    - {speaker: Customer, en: "Three weeks without a washing machine is too long. I'll keep it, as long as the refund is confirmed in writing.", tr: "Çamaşır makinesiz üç hafta çok uzun. İadenin yazılı olarak onaylanması koşuluyla makine bende kalsın."}
+    - {speaker: Agent, en: "Of course. You will receive an email within the hour, and the refund should reach your account in five working days.", tr: "Elbette. Bir saat içinde bir e-posta alacaksınız; iade de beş iş günü içinde hesabınıza geçmiş olur."}
+    - {speaker: Customer, en: "Thank you. I appreciate your help.", tr: "Teşekkür ederim. Yardımınız için sağ olun."}
+questions:
+  - id: q.listen.b2.call.01
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "What is the customer's complaint?"
+    options:
+      - "*The door of the washing machine was scratched when it arrived. :: \"I noticed that the door was badly scratched.\""
+      - "The washing machine does not work. :: Henüz kurulmadı; çalışıp çalışmadığı bilinmiyor."
+      - "The wrong model was delivered. :: Kayıtta böyle bir bilgi yok."
+      - "The delivery was three weeks late. :: Üç hafta, değişim için gereken süre."
+    explanation: "Şikâyet, teslimatta oluşan çizik."
+  - id: q.listen.b2.call.02
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "Why hasn't the customer connected the machine?"
+    options:
+      - "*He was worried that it might affect the guarantee. :: \"...in case that caused a problem with the guarantee.\""
+      - "He does not know how to install it. :: Kurdurmaktan söz ediyor; bilmediğini söylemiyor."
+      - "The company told him not to. :: Bu kararı kendisi vermiş."
+      - "He has already bought another machine. :: Kayıtta böyle bir bilgi yok."
+    explanation: "in case: ihtimale karşı."
+  - id: q.listen.b2.call.03
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "Which option does the customer choose, and why?"
+    options:
+      - "*He keeps the machine with a 15% refund, because a replacement would take too long. :: Değişim üç hafta sürecek."
+      - "He asks for a replacement, because the scratch is too big. :: Değişimi reddediyor."
+      - "He asks for a full refund. :: Böyle bir seçenek sunulmuyor."
+      - "He decides to think about it and call back. :: Görüşme sırasında karar veriyor."
+    explanation: "\"Three weeks without a washing machine is too long. I'll keep it.\""
+  - id: q.listen.b2.call.04
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "What condition does the customer set?"
+    options:
+      - "*The refund must be confirmed in writing. :: \"...as long as the refund is confirmed in writing.\""
+      - "The refund must be paid in cash. :: Kayıtta böyle bir koşul yok."
+      - "A technician must install the machine for free. :: Kayıtta böyle bir koşul yok."
+      - "The machine must be replaced within a week. :: Değişimi seçmiyor."
+    explanation: "as long as = koşuluyla"
+    lessons: [gram.b2.conditional-alternatives]
+  - id: q.listen.b2.call.05
+    type: nuance
+    difficulty: 4
+    prompt: "The customer says, \"I haven't even had it installed yet.\" What does this tell us?"
+    options:
+      - "*He intends someone else to install it, and this has not happened yet. :: have + nesne + V3: bir işi başkasına yaptırmak."
+      - "He installed it himself. :: Causative yapı işi başkasının yapacağını gösterir."
+      - "He has installed it but not used it. :: Kurulum henüz yapılmadı."
+      - "He does not want it installed at all. :: \"Yet\" ileride yapılacağını düşündürür."
+    explanation: "have something done: yaptırmak."
+    lessons: [gram.b2.causative]

@@ -1,0 +1,110 @@
+id: write.b2.formal-email
+kind: writing
+level: B2
+title_tr: "Resmî e-posta: bilgi istemek ve başvurmak"
+title_en: A formal email
+objective_tr: Tanımadığınız bir kuruma bilgi isteyen ya da bir ilana başvuran, amacı açık, kibar ve düzenli bir resmî e-posta yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.indirect-questions, gram.b2.linking-advanced, gram.c2.register]
+vocabulary: [apply, position, attach, inquiry, available, grateful]
+sections:
+  - kind: explanation
+    title_tr: Resmî e-postanın özellikleri
+    text_tr: |-
+      Resmî bir e-postada amaç **ilk cümlede** söylenir, her paragraf **tek bir işi** yapar ve istekler **dolaylı ve kibar** biçimde iletilir.
+
+      Kısaltma (I'm, don't), ünlem işareti, gündelik sözcükler (want, get, a lot of) ve emir kipi kullanılmaz. Yine de amaç süslü yazmak değil, **açık** yazmaktır.
+  - kind: formula
+    title_tr: Bölümler ve kalıplar
+    table:
+      headers: ["Bölüm", "Kalıplar"]
+      rows:
+        - ["Hitap (ad bilinmiyor)", "Dear Sir or Madam, → kapanış: Yours faithfully,"]
+        - ["Hitap (ad biliniyor)", "Dear Ms Kaya, / Dear Mr Brown, → kapanış: Yours sincerely,"]
+        - ["Amaç", "I am writing to enquire about ... / to apply for ... / with regard to ..."]
+        - ["Kendini tanıtma", "I am currently working as ... / I have three years' experience in ..."]
+        - ["Kibar istek", "I would be grateful if you could ... / Could you please let me know whether ...?"]
+        - ["Ek", "Please find my CV attached. / I have attached ..."]
+        - ["Kapanış cümlesi", "I look forward to hearing from you. / Thank you in advance for your help."]
+  - kind: examples
+    title_tr: Örnek e-posta
+    examples:
+      - {en: "Dear Ms Kaya,", tr: "Sayın Bayan Kaya,"}
+      - {en: "I am writing to enquire about the evening English courses advertised on your website.", tr: "İnternet sitenizde duyurulan akşam İngilizce kursları hakkında bilgi almak için yazıyorum.", note_tr: "Amaç"}
+      - {en: "I am currently working as an accountant, and I would like to improve my business English, particularly for meetings and reports.", tr: "Şu anda muhasebeci olarak çalışıyorum ve özellikle toplantılar ve raporlar için iş İngilizcemi geliştirmek istiyorum.", note_tr: "Durum"}
+      - {en: "Could you please let me know whether there are any places available on the course starting in October? I would also be grateful if you could tell me how much the course costs.", tr: "Ekimde başlayan kursta boş yer olup olmadığını bildirir misiniz? Kursun ücretini de söyleyebilirseniz minnettar olurum.", note_tr: "Kibar istekler"}
+      - {en: "I look forward to hearing from you.", tr: "Yanıtınızı bekliyorum.", note_tr: "Kapanış"}
+      - {en: "Yours sincerely, Emre Demir", tr: "Saygılarımla, Emre Demir"}
+  - kind: comparison
+    title_tr: Gündelikten resmîye
+    table:
+      headers: ["Gündelik", "Resmî"]
+      rows:
+        - ["I want to know ...", "I would like to enquire about ..."]
+        - ["Can you send me ...?", "I would be grateful if you could send me ..."]
+        - ["Tell me how much it costs.", "Could you please let me know how much it costs?"]
+        - ["I'm sending my CV.", "Please find my CV attached."]
+        - ["Thanks a lot.", "Thank you in advance for your help."]
+        - ["Write back soon.", "I look forward to hearing from you."]
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"I look forward to hear from you"** → "to **hearing**" (buradaki to edattır).
+
+      **Hitap ile kapanışın uyuşmaması:** Dear Sir or Madam → Yours **faithfully**; Dear Ms Kaya → Yours **sincerely**.
+
+      **"Dear Mrs Ayşe"** → Unvandan sonra **soyadı** gelir: "Dear Ms Kaya".
+
+      **Dolaylı soruda soru sırası:** "Could you tell me how much **does it cost**?" → "how much **it costs**".
+
+      **Türkçe kalıpları çevirmek:** "I kiss your hands", "I wish you good works" gibi ifadeler İngilizcede kullanılmaz.
+questions:
+  - id: q.write.b2.formal.01
+    type: multiple_choice
+    prompt: "E-postanız \"Dear Sir or Madam,\" ile başlıyor. Nasıl bitirmelisiniz?"
+    options:
+      - "*Yours faithfully, :: Alıcının adı bilinmediğinde."
+      - "Yours sincerely, :: Alıcının adı bilindiğinde (Dear Ms Kaya)."
+      - "Love, :: Yakın arkadaş ve aile için."
+      - "Cheers, :: Gündelik."
+    explanation: "Sir or Madam → faithfully; ad → sincerely."
+  - id: q.write.b2.formal.02
+    type: error_correction
+    prompt: "I look forward to hear from you."
+    answers: ["I look forward to hearing from you."]
+    explanation: "look forward to + fiil-ing."
+    lessons: [gram.b1.gerund-infinitive]
+  - id: q.write.b2.formal.03
+    type: sentence_building
+    prompt: "Resmî biçimde yeniden yazın: \"Send me the price list.\" → I would be grateful if ..."
+    answers: ["I would be grateful if you could send me the price list.", "I would be grateful if you would send me the price list."]
+    explanation: "I would be grateful if you could + yalın fiil."
+  - id: q.write.b2.formal.04
+    type: error_correction
+    prompt: "Could you tell me when does the course start?"
+    answers: ["Could you tell me when the course starts?"]
+    explanation: "Dolaylı soruda düz cümle sırası kullanılır."
+    lessons: [gram.b1.indirect-questions]
+  - id: q.write.b2.formal.05
+    type: matching
+    prompt: "Gündelik ifadeleri resmî karşılıklarıyla eşleştirin."
+    pairs:
+      - ["I want to ask about", "I am writing to enquire about"]
+      - ["I'm sending you", "Please find attached"]
+      - ["Thanks a lot", "Thank you in advance for your help"]
+      - ["Write back soon", "I look forward to hearing from you"]
+    explanation: "Resmî e-postada yerleşik kalıplar kullanılır."
+  - id: q.write.b2.formal.06
+    type: written_answer
+    difficulty: 4
+    prompt: "Bir dil okulunun, otelin ya da şirketin yetkilisine 100–140 sözcüklük resmî bir e-posta yazın. Amacınızı ilk cümlede belirtin, kendinizi kısaca tanıtın, en az iki şey hakkında kibarca bilgi isteyin ve uygun biçimde bitirin."
+    model_answers:
+      - "Dear Sir or Madam, I am writing to enquire about the two-week summer course in business English advertised on your website. I am a twenty-nine-year-old financial analyst from İzmir, and I use English regularly at work, mainly in emails and video meetings. I would be grateful if you could tell me whether accommodation is included in the price. Could you also please let me know how many students there are in each class? Finally, I would like to know whether it is possible to pay in two instalments. Thank you in advance for your help. I look forward to hearing from you. Yours faithfully, Zeynep Arslan"
+    checklist:
+      - "Hitap ile kapanış birbiriyle uyumlu (Sir or Madam → faithfully / ad → sincerely)."
+      - "Amacımı ilk cümlede belirttim (I am writing to ...)."
+      - "Kısaltma ve gündelik sözcük kullanmadım."
+      - "İsteklerimi dolaylı ve kibar biçimde ilettim; dolaylı sorularda düz cümle sırası kullandım."
+      - "\"I look forward to hearing from you\" ya da benzeri bir kapanış cümlesi yazdım."
+    explanation: "Plan: hitap → amaç → durum → istekler → kapanış cümlesi → imza."

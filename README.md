@@ -3,10 +3,14 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 4 tamamlandı.** Test motoru ile A1–C2 dil bilgisi müfredatı hazır (107 ders, 874 soru).
-> Sözlükte 5.038 temel kelime, kelime kartları ve alıştırmalar çalışıyor.
-> Okuma/dinleme/yazma (Aşama 5) ve Windows kurulum paketi (Aşama 9) henüz eklenmedi.
-> Tüm içerik yapay zekâ ile yazılmış ve yalnızca otomatik denetimden geçmiştir; bir uzman tarafından gözden geçirilmemiştir.
+> **Durum: Aşama 5 tamamlandı.** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders)
+> ve telaffuz (7 ders) modülleri, test motoru, 5.043 kelimelik sözlük ve kelime çalışması hazır.
+> Dinleme kayıtları, telaffuz örnekleri ve bütün sözlük kelimeleri için önceden üretilmiş sentetik ses
+> programla birlikte gelir (bkz. [docs/AUDIO.md](docs/AUDIO.md)); internet gerekmez.
+> Deyimler ve mesleki İngilizce (Aşama 6), seviye tespit sınavı ve raporlar (Aşama 7) ile Windows kurulum
+> paketi (Aşama 9) henüz eklenmedi.
+> Tüm içerik yapay zekâ ile yazılmış ve yalnızca otomatik denetimden geçmiştir; sesler de dâhil olmak üzere
+> bir uzman tarafından gözden geçirilmemiştir.
 
 ## Geliştirme ortamı
 

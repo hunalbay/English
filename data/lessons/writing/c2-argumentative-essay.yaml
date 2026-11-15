@@ -1,0 +1,122 @@
+id: write.c2.argumentative-essay
+kind: writing
+level: C2
+title_tr: "Tartışmacı deneme"
+title_en: An argumentative essay
+objective_tr: Tartışmalı bir konuda açık bir tez ortaya koyan, karşı savları ciddiye alıp yanıtlayan ve okuru üslubuyla da ikna eden bir deneme yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c2.concession-advanced, gram.c2.cohesion, gram.c1.cleft-sentences, gram.c1.hedging]
+vocabulary: [argue, claim, evidence, object, assumption, persuade]
+sections:
+  - kind: explanation
+    title_tr: C2 düzeyinde deneme
+    text_tr: |-
+      Bu düzeyde dil bilgisi doğruluğu artık ölçüt değildir; varsayılır. Denemeyi iyi yapan üç şey vardır: **savunulabilir ve belirgin bir tez**, **karşı görüşle dürüst bir hesaplaşma** ve **okuru yormayan, denetimli bir üslup**.
+
+      "Her iki tarafın da haklı yanları vardır" bir tez değildir. Tez, akıllı bir insanın **karşı çıkabileceği** bir iddiadır.
+  - kind: formula
+    title_tr: Denemenin mimarisi
+    table:
+      headers: ["Bölüm", "İşlevi", "Araçlar"]
+      rows:
+        - ["Giriş", "konuyu daraltır, tezi koyar", "yaygın görüş → \"yet\" → tez"]
+        - ["Gelişme 1", "en güçlü gerekçe", "konu cümlesi + kanıt + yorum"]
+        - ["Gelişme 2", "ikinci gerekçe ya da örnek olay", "this + özetleyici isim ile bağ"]
+        - ["Karşı sav", "en güçlü itirazı kendi sözleriyle kurar", "It might be objected that ... / Critics would point out ..."]
+        - ["Yanıt", "itirazın neden yetmediğini gösterir", "Much as ..., ... / This objection, however, assumes ..."]
+        - ["Sonuç", "tezi yeni bir düzeyde yeniden söyler", "özet değil, çıkarım"]
+  - kind: examples
+    title_tr: Örnek kesitler
+    examples:
+      - {en: "It is widely assumed that the purpose of education is to prepare young people for work. Yet a system designed solely around employment prepares them, at best, for the jobs that exist today.", tr: "Eğitimin amacının gençleri çalışma hayatına hazırlamak olduğu yaygın biçimde varsayılır. Oysa yalnızca istihdam çevresinde tasarlanmış bir sistem onları, olsa olsa, bugün var olan işlere hazırlar.", note_tr: "Giriş: yaygın görüş → tez"}
+      - {en: "What employers consistently report wanting is not specific knowledge, which dates quickly, but the capacity to learn, which does not.", tr: "İşverenlerin istikrarlı biçimde istediklerini bildirdikleri şey, çabuk eskiyen belirli bilgiler değil, eskimeyen öğrenme kapasitesidir.", note_tr: "Gelişme: vurgu cümlesi"}
+      - {en: "It might be objected that such an education is a luxury which only the comfortable can afford. The objection deserves to be taken seriously.", tr: "Böyle bir eğitimin ancak hâli vakti yerinde olanların karşılayabileceği bir lüks olduğu itirazı yöneltilebilir. Bu itiraz ciddiye alınmayı hak eder.", note_tr: "Karşı sav"}
+      - {en: "Much as one sympathizes with the concern, it rests on an assumption that breadth and usefulness are opposed, and it is precisely this assumption that the evidence calls into question.", tr: "Bu kaygıya ne kadar hak verilse de itiraz, genişlik ile yararlılığın birbirine karşıt olduğu varsayımına dayanır; kanıtların kuşkuya düşürdüğü de tam bu varsayımdır.", note_tr: "Yanıt: ödünleme + çürütme"}
+      - {en: "To educate for work alone is, paradoxically, to educate badly even for work.", tr: "Yalnızca iş için eğitmek, tuhaf biçimde, iş için bile kötü eğitmektir.", note_tr: "Sonuç: tezin keskinleşmiş hâli"}
+  - kind: usage
+    title_tr: Üslup üzerine
+    text_tr: |-
+      **Karşı savı en güçlü hâliyle kurun.** Kolay çürütülen bir itiraz seçmek okurun güvenini zedeler.
+
+      **Her paragrafta tek bir iş.** İlk cümle paragrafın savını söyler; son cümle bir sonrakine kapı açar.
+
+      **Cümle uzunluğunu değiştirin.** Uzun ve katmanlı bir cümleden sonra gelen kısa bir cümle vurgu yapar.
+
+      **Bağlayıcıları azaltın.** "Moreover", "Furthermore" ile başlayan cümle dizileri mekanik durur; bağı **this + isim**, zamirler ve mantık kursun.
+
+      **Sonuçta yeni kanıt sunmayın;** ama yalnızca özetlemeyin de. Sonuç, "öyleyse ne?" sorusunu yanıtlar.
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tez yerine konu yazmak:** "This essay will discuss the advantages and disadvantages of..."
+
+      **Giriş paragrafında çok genel açılışlar:** "Since the dawn of time, humans have..."
+
+      **Karşı görüşü görmezden gelmek** ya da karikatürünü çizmek.
+
+      **Aşırı süslü sözcükler.** Nadir bir sözcük, yerinde değilse metni zayıflatır. Kesinlik gösterişten önce gelir.
+
+      **Sonuçta "In conclusion, there are both advantages and disadvantages" demek.**
+questions:
+  - id: q.write.c2.essay.01
+    type: multiple_choice
+    difficulty: 5
+    prompt: "Hangisi savunulabilir ve belirgin bir tezdir?"
+    options:
+      - "*Compulsory voting weakens democracy, because it replaces considered choice with reluctant compliance. :: Açık bir iddia ve gerekçesi var; karşı çıkılabilir."
+      - "This essay will discuss the advantages and disadvantages of compulsory voting. :: Konu duyurusu; tez değil."
+      - "Voting is an important topic in modern society. :: Kimsenin karşı çıkmayacağı genel bir gözlem."
+      - "There are many different opinions about compulsory voting. :: Bir iddia içermiyor."
+    explanation: "Tez: akıllı bir okurun karşı çıkabileceği, gerekçeli bir iddia."
+  - id: q.write.c2.essay.02
+    type: matching
+    prompt: "Cümleleri denemedeki işlevleriyle eşleştirin."
+    pairs:
+      - ["It is widely assumed that ... Yet ...", "tezi yaygın görüşe karşı konumlamak"]
+      - ["It might be objected that ...", "karşı savı ortaya koymak"]
+      - ["Much as one sympathizes with this concern, ...", "ödün verip itirazı yanıtlamak"]
+      - ["This assumption, however, ...", "önceki cümleye özetleyici isimle bağlanmak"]
+    explanation: "Her kalıp, akıl yürütmede belirli bir adımı işaret eder."
+    lessons: [gram.c2.concession-advanced]
+  - id: q.write.c2.essay.03
+    type: nuance
+    difficulty: 5
+    prompt: "Bir karşı savı ele alırken hangisi okurun güvenini en çok kazanır?"
+    options:
+      - "*Stating the strongest version of the objection fairly before answering it :: Dürüst hesaplaşma ikna gücünü artırır."
+      - "Choosing a weak objection that is easy to dismiss :: Okur bunu fark eder; güven zedelenir."
+      - "Ignoring objections to keep the essay short :: Tek yanlı görünür."
+      - "Calling opponents foolish :: Savı değil kişiyi hedef alır."
+    explanation: "En güçlü itirazı kurup yanıtlamak, tezinizin sınandığını gösterir."
+  - id: q.write.c2.essay.04
+    type: error_spotting
+    difficulty: 5
+    prompt: "Hangi cümle bir denemenin SONUÇ paragrafı için zayıftır?"
+    options:
+      - "*In conclusion, there are both advantages and disadvantages, and everyone must decide for themselves. :: Hiçbir sonuca varmıyor; tezi terk ediyor."
+      - "To educate for work alone is, paradoxically, to educate badly even for work. :: Tezi keskinleştirerek yeniden söylüyor."
+      - "If this is right, the question is no longer whether to reform the system but how soon. :: Çıkarım yapıyor: \"öyleyse ne?\""
+      - "What is at stake, then, is not efficiency but the kind of citizens we hope to produce. :: Tartışmayı daha üst bir düzeye taşıyor."
+    explanation: "Sonuç özet değil, çıkarımdır."
+  - id: q.write.c2.essay.05
+    type: sentence_building
+    difficulty: 5
+    prompt: "Vurgu cümlesiyle yeniden yazın: \"Employers want the capacity to learn.\" → What employers want ..."
+    answers: ["What employers want is the capacity to learn."]
+    explanation: "What + cümle + is + vurgulanan öge."
+    lessons: [gram.c1.cleft-sentences]
+  - id: q.write.c2.essay.06
+    type: written_answer
+    difficulty: 5
+    prompt: "Şu konulardan birinde 250–300 sözcüklük tartışmacı bir deneme yazın: (a) \"Yapay zekâ çağında yabancı dil öğrenmek gereksizleşecek.\" (b) \"Üniversite eğitimi herkes için ücretsiz olmalıdır.\" (c) \"Şehirlerde özel araç kullanımı yasaklanmalıdır.\" Açık bir tez koyun, en güçlü karşı savı ele alıp yanıtlayın."
+    model_answers:
+      - "It is often claimed that machine translation will soon make learning foreign languages pointless. Why spend years on irregular verbs when a phone can interpret for you? Yet the claim mistakes what a language is for. Translation transfers information; it does not create relationships. A negotiation conducted through a device may well reach agreement, but it is unlikely to produce trust, which depends on tone, timing and the small courtesies that no software chooses on our behalf. What we gain from speaking another language is not merely access to its words but a place among its speakers. Nor is the benefit only social. To learn a language is to discover that one's own way of dividing up the world is not the only one available, and this discovery, once made, is not easily forgotten. It might be objected that such advantages matter only to a privileged few, while most people simply need to be understood. The objection has force: for ordering a meal or reading a sign, a machine is entirely adequate, and it would be absurd to deny it. But this is an argument about which purposes require a language, not about whether any do. The tasks that machines perform well are precisely those in which nothing much is at stake. Much as technology will reduce the need for basic competence, it is likely to increase the value of real fluency, for the simple reason that fluency will become rarer. The question, then, is not whether machines can translate. It is whether being translated is the same as being heard."
+    checklist:
+      - "Giriş paragrafımda karşı çıkılabilecek, belirgin bir tez var."
+      - "Her gelişme paragrafı tek bir savı işliyor ve konu cümlesiyle başlıyor."
+      - "En güçlü karşı savı adil biçimde kurup yanıtladım."
+      - "Paragrafları yalnızca bağlayıcılarla değil, gönderme ve mantıkla bağladım."
+      - "Cümle uzunluklarını değiştirdim; en az bir vurgu yapısı kullandım."
+      - "Sonucum özet değil, bir çıkarım."
+    explanation: "Mimari: yaygın görüş → tez → gerekçeler → en güçlü itiraz → yanıt → çıkarım."

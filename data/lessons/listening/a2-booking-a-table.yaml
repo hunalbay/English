@@ -1,0 +1,73 @@
+id: listen.a2.booking-a-table
+kind: listening
+level: A2
+title_tr: "Restoranda yer ayırtmak"
+title_en: Booking a table
+objective_tr: Telefonla yapılan bir rezervasyon konuşmasını dinleyip gün, saat, kişi sayısı ve özel istekleri anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.could, gram.a2.going-to]
+vocabulary: [table, book, birthday, window, available, vegetarian]
+passage:
+  mode: dialogue
+  voices: {Receptionist: f2, Caller: m1}
+  lines:
+    - {speaker: Receptionist, en: "Good afternoon, Olive Tree Restaurant. How can I help you?", tr: "İyi günler, Olive Tree Restoran. Nasıl yardımcı olabilirim?"}
+    - {speaker: Caller, en: "Hello. I'd like to book a table for Saturday evening, please.", tr: "Merhaba. Cumartesi akşamı için bir masa ayırtmak istiyorum lütfen."}
+    - {speaker: Receptionist, en: "Certainly. For how many people?", tr: "Elbette. Kaç kişilik?"}
+    - {speaker: Caller, en: "There are going to be six of us. It's my wife's birthday.", tr: "Altı kişi olacağız. Eşimin doğum günü."}
+    - {speaker: Receptionist, en: "How lovely. What time would you like to come?", tr: "Ne güzel. Saat kaçta gelmek istersiniz?"}
+    - {speaker: Caller, en: "Could we come at eight o'clock?", tr: "Saat sekizde gelebilir miyiz?"}
+    - {speaker: Receptionist, en: "I'm afraid we are full at eight. We have a table at half past seven or at nine.", tr: "Maalesef sekizde doluyuz. Yedi buçukta ya da dokuzda masamız var."}
+    - {speaker: Caller, en: "Half past seven is fine. Could we have a table near the window?", tr: "Yedi buçuk uygun. Pencere kenarında bir masa alabilir miyiz?"}
+    - {speaker: Receptionist, en: "Yes, that's possible. Can I take your name, please?", tr: "Evet, mümkün. Adınızı alabilir miyim lütfen?"}
+    - {speaker: Caller, en: "It's Murat Kaya. Oh, and one of our guests is vegetarian. Is that a problem?", tr: "Murat Kaya. Ha, bir de konuklarımızdan biri vejetaryen. Sorun olur mu?"}
+    - {speaker: Receptionist, en: "Not at all. We have several vegetarian dishes. So, a table for six on Saturday at half past seven.", tr: "Hiç sorun değil. Birkaç vejetaryen yemeğimiz var. Öyleyse cumartesi yedi buçukta altı kişilik bir masa."}
+    - {speaker: Caller, en: "That's right. Thank you very much.", tr: "Doğru. Çok teşekkür ederim."}
+questions:
+  - id: q.listen.a2.table.01
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "Why is the man booking a table?"
+    options:
+      - "*It is his wife's birthday. :: \"It's my wife's birthday.\""
+      - "It is his birthday. :: Doğum günü eşinin."
+      - "He has a business meeting. :: Kayıtta geçmiyor."
+      - "His friends are visiting from abroad. :: Kayıtta geçmiyor."
+    explanation: "Neden, kişi sayısını söylerken belirtiliyor."
+  - id: q.listen.a2.table.02
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "What time is the booking?"
+    options:
+      - "*7.30 :: Sekiz dolu olduğu için yedi buçuğu seçiyor."
+      - "8.00 :: Bunu istiyor ama restoran dolu."
+      - "9.00 :: Bu da öneriliyor ama seçmiyor."
+      - "6.00 :: Altı, kişi sayısıdır."
+    explanation: "\"Half past seven is fine.\""
+  - id: q.listen.a2.table.03
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "What does the man ask for?"
+    options:
+      - "*A table near the window :: \"Could we have a table near the window?\""
+      - "A table in the garden :: Kayıtta geçmiyor."
+      - "A birthday cake :: Kayıtta pasta istenmiyor."
+      - "A cheaper menu :: Kayıtta geçmiyor."
+    explanation: "Pencere kenarında masa istiyor."
+  - id: q.listen.a2.table.04
+    type: listening_comprehension
+    difficulty: 2
+    prompt: "What does the receptionist say about vegetarian food?"
+    options:
+      - "*The restaurant has several vegetarian dishes. :: \"We have several vegetarian dishes.\""
+      - "The restaurant has no vegetarian food. :: Tersini söylüyor."
+      - "Vegetarian food must be ordered in advance. :: Böyle bir koşul yok."
+      - "Only one dish is vegetarian. :: \"Several\" = birkaç."
+    explanation: "\"Not at all\" = hiç sorun değil."
+  - id: q.listen.a2.table.05
+    type: fill_blank
+    instruction_tr: "Kaydı dinleyin ve boşluğu doldurun."
+    prompt: "The table is for ___ people."
+    answers: [six, "6"]
+    explanation: "\"There are going to be six of us.\""

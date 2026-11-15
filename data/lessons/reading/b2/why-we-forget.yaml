@@ -1,0 +1,87 @@
+id: read.b2.why-we-forget
+kind: reading
+level: B2
+title_tr: "Neden unuturuz?"
+title_en: Why we forget
+objective_tr: Bilimsel bir konuyu açıklayan metinde tanımları, neden-sonuç ilişkilerini ve örneklerin işlevini belirleyebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.third-conditional, gram.b2.participle-clauses]
+vocabulary: [memory, brain, forget, repeat, attention, effort]
+passage:
+  mode: text
+  lines:
+    - {en: "Most of us think of forgetting as a failure. We blame ourselves when a name escapes us or when we cannot recall what we studied the night before. Yet forgetting is not a fault in the system; to a large extent, it is the system.", tr: "Çoğumuz unutmayı bir başarısızlık olarak görürüz. Bir isim aklımızdan çıktığında ya da önceki gece çalıştığımızı hatırlayamadığımızda kendimizi suçlarız. Oysa unutma, sistemdeki bir arıza değildir; büyük ölçüde sistemin ta kendisidir."}
+    - {en: "Imagine remembering every face you passed in the street and every word of every conversation. Buried under so much detail, you would struggle to find the information that actually mattered. By letting unimportant memories fade, the brain keeps the important ones accessible.", tr: "Sokakta yanından geçtiğiniz her yüzü ve her konuşmanın her sözcüğünü hatırladığınızı düşünün. Bu kadar ayrıntının altında gömülü kalınca gerçekten önemli olan bilgiyi bulmakta zorlanırdınız. Beyin, önemsiz anıların silikleşmesine izin vererek önemli olanları erişilebilir tutar."}
+    - {en: "How does the brain decide what is important? Largely by repetition and attention. Information that we meet once, while thinking about something else, leaves only a weak trace. Information that we return to several times, and actually use, is treated as worth keeping.", tr: "Beyin neyin önemli olduğuna nasıl karar verir? Büyük ölçüde tekrar ve dikkat yoluyla. Aklımız başka bir şeydeyken bir kez karşılaştığımız bilgi yalnızca zayıf bir iz bırakır. Birkaç kez dönüp gerçekten kullandığımız bilgi ise saklanmaya değer sayılır."}
+    - {en: "This explains why studying for six hours the night before an exam works so badly. The material may still be there the next morning, but a week later most of it will have disappeared. Had the same six hours been spread over two weeks, far more would have remained.", tr: "Bu, sınavdan önceki gece altı saat çalışmanın neden bu kadar kötü sonuç verdiğini açıklar. Bilgi ertesi sabah hâlâ orada olabilir, ama bir hafta sonra çoğu kaybolmuş olacaktır. Aynı altı saat iki haftaya yayılsaydı çok daha fazlası kalırdı."}
+    - {en: "The timing of each review matters too. Reviewing something just as you are about to forget it appears to strengthen the memory more than reviewing it while it is still fresh. The effort of recalling is part of what makes the memory last.", tr: "Her tekrarın zamanlaması da önemlidir. Bir şeyi tam unutmak üzereyken tekrar etmek, belleği, bilgi hâlâ tazeyken tekrar etmekten daha çok güçlendiriyor gibi görünmektedir. Hatırlama çabası, anıyı kalıcı kılan şeyin bir parçasıdır."}
+    - {en: "For language learners, the lesson is clear. Ten minutes a day will take you further than two hours on Sunday, and testing yourself is more effective than reading your notes again. Forgetting is not your enemy; it is simply a signal that it is time to review.", tr: "Dil öğrenenler için çıkarılacak ders açıktır. Günde on dakika sizi pazar günü iki saatten daha ileri götürür ve kendinizi sınamak, notlarınızı yeniden okumaktan daha etkilidir. Unutmak düşmanınız değildir; yalnızca tekrar zamanının geldiğinin işaretidir."}
+  glossary:
+    - {en: "recall", tr: "hatırlamak"}
+    - {en: "to a large extent", tr: "büyük ölçüde"}
+    - {en: "fade", tr: "silikleşmek, solmak"}
+    - {en: "accessible", tr: "erişilebilir"}
+    - {en: "trace", tr: "iz"}
+    - {en: "spread over", tr: "(zamana) yaymak"}
+    - {en: "strengthen", tr: "güçlendirmek"}
+questions:
+  - id: q.read.b2.forget.01
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "What does the writer mean by \"it is the system\"?"
+    options:
+      - "*Forgetting is a normal and useful part of how memory works. :: Yazar unutmanın arıza değil, işleyişin parçası olduğunu söylüyor."
+      - "The education system makes people forget. :: \"System\" burada bellek sistemini anlatıyor."
+      - "People forget because their brains are damaged. :: Yazar bunun bir kusur olmadığını söylüyor."
+      - "Nobody knows how memory works. :: Metin işleyişi açıklıyor."
+    explanation: "İkinci paragraf unutmanın işlevini açıklıyor."
+  - id: q.read.b2.forget.02
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "What is the purpose of the example in the second paragraph (remembering every face and word)?"
+    options:
+      - "*To show why remembering everything would be a disadvantage :: Örnek, aşırı ayrıntının önemli bilgiyi bulmayı zorlaştıracağını gösteriyor."
+      - "To prove that some people have perfect memories :: Böyle bir iddia yok."
+      - "To explain how to remember faces :: Yüz hatırlama tekniği anlatılmıyor."
+      - "To describe a medical condition :: Tıbbi bir durumdan söz edilmiyor."
+    explanation: "Varsayımsal örnek bir savı destekliyor."
+  - id: q.read.b2.forget.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"Had the same six hours been spread over two weeks, far more would have remained.\" What does this sentence tell us?"
+    options:
+      - "*The six hours were not spread over two weeks, and so less was remembered. :: Devrik third conditional: geçmişte gerçekleşmemiş koşul."
+      - "The six hours were spread over two weeks. :: Yapı gerçeğin tersini anlatır."
+      - "The student should spread the hours in the future. :: Cümle geçmişteki hayali durumu anlatıyor."
+      - "Six hours is not enough for any exam. :: Süre değil, dağılım eleştiriliyor."
+    explanation: "Had + özne + V3 = If + özne + had + V3."
+    lessons: [gram.b2.third-conditional]
+  - id: q.read.b2.forget.04
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "According to the text, when is the best moment to review something?"
+    options:
+      - "*Just before you forget it :: \"Reviewing something just as you are about to forget it appears to strengthen the memory more.\""
+      - "Immediately after learning it :: Bilgi hâlâ tazeyken tekrarın daha az etkili olduğu söyleniyor."
+      - "Only the night before an exam :: Bu yöntem eleştiriliyor."
+      - "Once a year :: Metinde böyle bir bilgi yok."
+    explanation: "Hatırlama çabası belleği güçlendirir."
+  - id: q.read.b2.forget.05
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "Which advice for language learners follows from the text?"
+    options:
+      - "*Study a little every day and test yourself. :: Son paragraf tam olarak bunu öneriyor."
+      - "Read your notes as many times as possible. :: Kendini sınamanın yeniden okumaktan daha etkili olduğu söyleniyor."
+      - "Study for a long time once a week. :: Günde on dakikanın daha iyi olduğu söyleniyor."
+      - "Try never to forget anything. :: Unutmanın doğal olduğu vurgulanıyor."
+    explanation: "Aralıklı tekrar ve kendini sınama; bu programdaki kelime kartları da aynı ilkeye dayanır."
+  - id: q.read.b2.forget.06
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "The writer is certain that reviewing just before forgetting strengthens memory more."
+    options:
+      - "Doğru :: Yazar \"appears to\" diyerek ihtiyatlı konuşuyor; kesinlik bildirmiyor."
+      - "*Yanlış :: \"...appears to strengthen the memory more\" kesinlik değil, görünüş bildirir."
+    explanation: "appear to: ihtiyatlı ifade."

@@ -1,0 +1,105 @@
+id: write.a2.informal-email
+kind: writing
+level: A2
+title_tr: "Arkadaşa e-posta: davet etmek ve cevap vermek"
+title_en: An informal email
+objective_tr: Bir arkadaşınızı bir etkinliğe davet eden ya da bir daveti kabul / reddeden kısa, samimi bir e-posta yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.going-to, gram.a2.present-continuous-future, gram.a2.could]
+vocabulary: [invite, party, weekend, bring, arrive, reply]
+sections:
+  - kind: explanation
+    title_tr: Samimi e-postanın özellikleri
+    text_tr: |-
+      Arkadaşlara yazılan e-postalarda dil **gündeliktir**: kısaltmalar (I'm, don't, we're) kullanılır, cümleler kısadır ve ünlem işareti yadırganmaz.
+
+      E-postanın dört bölümü vardır: **selamlama**, **giriş** (hal hatır), **asıl konu** ve **kapanış**.
+  - kind: formula
+    title_tr: Bölümler ve kalıplar
+    table:
+      headers: ["Bölüm", "Kalıplar"]
+      rows:
+        - ["Selamlama", "Hi Ece, / Hello Mert, / Dear Ayşe,"]
+        - ["Giriş", "How are you? / I hope you're well. / Thanks for your email."]
+        - ["Davet", "Would you like to come? / Do you want to join us? / Can you come?"]
+        - ["Ayrıntı", "It's on Saturday at seven. / It's at my flat. / We're going to have a barbecue."]
+        - ["Kabul", "I'd love to come! / That sounds great. / What can I bring?"]
+        - ["Ret", "I'm sorry, but I can't come. / I'm afraid I'm busy on Saturday. / Maybe next time."]
+        - ["Kapanış", "Let me know. / See you soon. / Take care. / Love, ..."]
+  - kind: examples
+    title_tr: Örnek davet
+    examples:
+      - {en: "Hi Ece,", tr: "Selam Ece,"}
+      - {en: "How are you? I hope everything is fine.", tr: "Nasılsın? Umarım her şey yolundadır."}
+      - {en: "I'm having a birthday party next Saturday. Would you like to come?", tr: "Gelecek cumartesi bir doğum günü partisi veriyorum. Gelmek ister misin?"}
+      - {en: "It's at my flat and it starts at seven. We're going to order pizza and watch a film.", tr: "Benim dairemde ve yedide başlıyor. Pizza söyleyip film izleyeceğiz."}
+      - {en: "You can bring a friend if you want.", tr: "İstersen bir arkadaşını getirebilirsin."}
+      - {en: "Let me know by Thursday, please. See you soon! Selin", tr: "Lütfen perşembeye kadar haber ver. Görüşürüz! Selin"}
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Tarih ve saat edatları:** **on** Saturday, **at** seven o'clock, **in** the evening.
+
+      **"I want invite you"** → "I want **to** invite you."
+
+      **Reddederken neden vermemek** kaba kaçabilir. Kısa bir neden ekleyin: "I'm sorry, but I can't come **because I'm working**."
+
+      **Ayarlanmış planlar** için Present Continuous kullanılır: "I**'m having** a party" (parti veriyorum).
+questions:
+  - id: q.write.a2.email.01
+    type: matching
+    prompt: "E-posta bölümlerini uygun cümlelerle eşleştirin."
+    pairs:
+      - ["selamlama", "Hi Mert,"]
+      - ["giriş", "I hope you're well."]
+      - ["davet", "Would you like to come to my party?"]
+      - ["kapanış", "See you soon!"]
+    explanation: "Her bölümün yerleşik kalıpları vardır."
+  - id: q.write.a2.email.02
+    type: fill_blank
+    prompt: "The party is ___ Saturday at eight o'clock."
+    answers: ["on"]
+    grading: strict
+    explanation: "Günlerden önce on."
+    lessons: [gram.a1.prepositions-of-time]
+  - id: q.write.a2.email.03
+    type: multiple_choice
+    prompt: "Arkadaşınızın davetini kibarca reddediyorsunuz. Hangisi en uygun?"
+    options:
+      - "*I'm sorry, but I can't come because I'm visiting my parents. :: Özür, ret ve kısa bir neden içeriyor."
+      - "No. :: Çok sert ve nedensiz."
+      - "I don't want to come. :: Kaba kaçar."
+      - "I can come. :: Bu bir kabuldür."
+    explanation: "Kibar ret: özür + neden."
+  - id: q.write.a2.email.04
+    type: error_correction
+    prompt: "I want invite you to my house."
+    answers: ["I want to invite you to my house.", "I'd like to invite you to my house.", "I would like to invite you to my house."]
+    explanation: "want + to + fiil."
+    lessons: [gram.a2.verb-patterns]
+  - id: q.write.a2.email.05
+    type: written_answer
+    difficulty: 2
+    prompt: "Bir arkadaşınızı hafta sonu için bir etkinliğe (piknik, yemek, sinema...) davet eden 5–7 cümlelik bir e-posta yazın. Günü, saati, yeri ve ne yapacağınızı belirtin."
+    model_answers:
+      - "Hi Mert, How are you? I hope you're well. We're going to have a picnic in the park on Sunday. Would you like to join us? We're meeting at eleven o'clock near the lake. Can you bring some fruit? Let me know by Friday. See you soon! Aylin"
+    checklist:
+      - "Selamlama ve kapanış yazdım."
+      - "Günü, saati ve yeri belirttim (on / at edatlarıyla)."
+      - "Daveti bir soruyla yaptım (Would you like to...? / Can you...?)."
+      - "Kısaltmalar kullandım (I'm, we're)."
+      - "Arkadaşımdan bir cevap istedim."
+    explanation: "Bölümler: selamlama → giriş → davet ve ayrıntılar → kapanış."
+  - id: q.write.a2.email.06
+    type: written_answer
+    difficulty: 2
+    prompt: "Yukarıdaki örnek davete (Selin'in doğum günü partisi) cevap yazın: teşekkür edin, gelemeyeceğinizi söyleyin, nedenini açıklayın ve başka bir gün buluşmayı önerin. 4–5 cümle."
+    model_answers:
+      - "Hi Selin, Thanks for your invitation! I'm really sorry, but I can't come on Saturday because I'm working that evening. Happy birthday in advance! Could we meet for coffee on Sunday? Love, Ece"
+    checklist:
+      - "Davet için teşekkür ettim."
+      - "Özür dileyip gelemeyeceğimi söyledim."
+      - "Bir neden verdim (because ...)."
+      - "Başka bir gün önerdim."
+    explanation: "Kibar ret: teşekkür → özür → neden → alternatif."

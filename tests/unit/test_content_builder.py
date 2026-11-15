@@ -126,12 +126,13 @@ def test_built_database_integrity(content_db):
         allowed = {line.strip() for line in (DATA / "vocabulary" / "homographs.txt").read_text(encoding="utf-8").splitlines()
                    if line.strip() and not line.startswith("#")}
         assert overlaps == allowed
-        # her kelimenin anlamı, her dersin bölümü ve örneği vardır
+        # her kelimenin anlamı, her dersin bölümü (ya da okuma / dinleme metni) vardır
         assert conn.execute(
             "SELECT COUNT(*) FROM vocabulary v WHERE NOT EXISTS (SELECT 1 FROM word_meanings m WHERE m.word_id = v.id)"
         ).fetchone()[0] == 0
         assert conn.execute(
             "SELECT COUNT(*) FROM lessons l WHERE NOT EXISTS (SELECT 1 FROM lesson_sections s WHERE s.lesson_id = l.id)"
+            " AND NOT EXISTS (SELECT 1 FROM passages p WHERE p.lesson_id = l.id)"
         ).fetchone()[0] == 0
         assert conn.execute("SELECT COUNT(*) FROM example_sentences WHERE TRIM(tr) = ''").fetchone()[0] == 0
         conn.execute("PRAGMA foreign_keys=ON")
@@ -238,3 +239,55 @@ def test_every_real_question_is_linked_and_explained(content_db):
         ).fetchone()[0] == 0
     finally:
         conn.close()
+
+
+# --- Okuma, dinleme, yazma, telaffuz ----------------------------------------
+
+READING = Path("lessons") / "reading" / "a1" / "my-family.yaml"
+LISTENING = Path("lessons") / "listening" / "a1-at-the-cafe.yaml"
+
+
+def test_reading_lesson_requires_passage(data_copy):
+    _edit(data_copy / READING, lambda d: d.pop("passage"))
+    assert "metin (passage) zorunludur" in _errors(data_copy)
+
+
+def test_listening_question_only_in_listening_lesson(data_copy):
+    def change(doc):
+        doc["questions"][0]["type"] = "listening_comprehension"
+    _edit(data_copy / READING, change)
+    assert "yalnızca kaydı olan bir dinleme dersinde" in _errors(data_copy)
+
+
+def test_dialogue_needs_speakers(data_copy):
+    def change(doc):
+        doc["passage"]["lines"][0].pop("speaker")
+    _edit(data_copy / LISTENING, change)
+    assert "diyalogda her satırın konuşmacısı" in _errors(data_copy)
+
+
+def test_passage_line_requires_translation(data_copy):
+    def change(doc):
+        doc["passage"]["lines"][0].pop("tr")
+    _edit(data_copy / READING, change)
+    assert "passage.lines.0.tr" in _errors(data_copy)
+
+
+def test_lesson_kind_must_match_unit_track(data_copy):
+    def change(doc):
+        unit = next(u for u in doc["units"] if u["id"] == "a1.read")
+        unit["track"] = "listening"
+    _edit(data_copy / "curriculum" / "curriculum.yaml", change)
+    assert "ünitenin alanıyla" in _errors(data_copy)
+
+
+def test_pronunciation_lesson_requires_practice(data_copy):
+    _edit(data_copy / "lessons" / "pronunciation" / "a1-th-sounds.yaml", lambda d: d.pop("practice"))
+    assert "çalışma öğesi (practice) zorunludur" in _errors(data_copy)
+
+
+def test_writing_lesson_requires_written_task(data_copy):
+    def change(doc):
+        doc["questions"] = [q for q in doc["questions"] if q["type"] != "written_answer"]
+    _edit(data_copy / "lessons" / "writing" / "a1-introducing-yourself.yaml", change)
+    assert "en az bir yazılı cevap sorusu" in _errors(data_copy)

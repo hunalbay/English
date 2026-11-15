@@ -1,0 +1,78 @@
+id: listen.b2.podcast-sleep
+kind: listening
+level: B2
+title_tr: "Podcast: Uyku üzerine"
+title_en: "A podcast about sleep"
+objective_tr: İki kişinin bir konuyu tartıştığı bir söyleşiyi dinleyip konuşmacıların görüşlerini, verdikleri örnekleri ve vardıkları sonucu anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.should-have, gram.b2.modals-past, gram.b2.comparatives-advanced]
+vocabulary: [sleep, research, screen, habit, coffee, tired]
+passage:
+  mode: dialogue
+  voices: {Host: m1, Guest: f2}
+  lines:
+    - {speaker: Host, en: "Welcome back to the programme. My guest today has spent ten years studying sleep. So, let me start with a confession: I slept five hours last night.", tr: "Programa yeniden hoş geldiniz. Bugünkü konuğum on yılını uykuyu inceleyerek geçirdi. Bir itirafla başlayayım: dün gece beş saat uyudum."}
+    - {speaker: Guest, en: "Then you shouldn't have stayed up so late! But you're not alone. Around a third of adults regularly sleep less than they need.", tr: "O zaman o kadar geç saate kadar oturmamalıydınız! Ama yalnız değilsiniz. Yetişkinlerin yaklaşık üçte biri düzenli olarak ihtiyacından az uyuyor."}
+    - {speaker: Host, en: "People often say they can manage perfectly well on five or six hours. Is that true?", tr: "İnsanlar sık sık beş altı saatle gayet iyi idare edebildiklerini söylüyor. Bu doğru mu?"}
+    - {speaker: Guest, en: "For a very small number of people, possibly. For everyone else, it is an illusion. The more tired we are, the worse we become at judging how tired we are.", tr: "Çok az sayıda insan için belki. Geri kalan herkes için bir yanılsama. Ne kadar yorgunsak, ne kadar yorgun olduğumuzu değerlendirmekte o kadar kötüleşiyoruz."}
+    - {speaker: Host, en: "That's a worrying thought. So what is the biggest mistake people make?", tr: "Kaygı verici bir düşünce. Peki insanların yaptığı en büyük hata ne?"}
+    - {speaker: Guest, en: "Most people would say screens, and screens certainly don't help. But in my view the bigger problem is irregular hours. Going to bed at eleven during the week and at three at the weekend confuses the body far more than a phone does.", tr: "Çoğu insan ekranlar derdi; ekranların yardımcı olmadığı da kesin. Ama bence daha büyük sorun düzensiz saatler. Hafta içi on birde, hafta sonu üçte yatmak, bedeni bir telefonun yaptığından çok daha fazla şaşırtıyor."}
+    - {speaker: Host, en: "What about coffee? I must have drunk four cups yesterday.", tr: "Peki ya kahve? Dün dört fincan içmiş olmalıyım."}
+    - {speaker: Guest, en: "Coffee in the morning is fine. The trouble is that caffeine stays in the body for hours, so a cup at four in the afternoon may still be affecting you at midnight.", tr: "Sabah içilen kahvede sorun yok. Sıkıntı şu ki kafein bedende saatlerce kalıyor; yani öğleden sonra dörtte içilen bir fincan gece yarısında sizi hâlâ etkiliyor olabilir."}
+    - {speaker: Host, en: "And if someone can only change one thing, what should it be?", tr: "Peki biri yalnızca tek bir şeyi değiştirebilecekse bu ne olmalı?"}
+    - {speaker: Guest, en: "Get up at the same time every day, including weekends. It is not as pleasant as a long lie-in, but nothing else makes such a difference.", tr: "Hafta sonları da dahil her gün aynı saatte kalkın. Uzun bir sabah keyfi kadar hoş değil, ama başka hiçbir şey bu kadar fark yaratmıyor."}
+    - {speaker: Host, en: "I was afraid you would say that. Thank you very much for joining us.", tr: "Bunu söylemenizden korkuyordum. Bize katıldığınız için çok teşekkürler."}
+questions:
+  - id: q.listen.b2.sleep.01
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "What does the guest say about people who claim they need only five or six hours of sleep?"
+    options:
+      - "*Almost all of them are mistaken, because tired people judge their own tiredness badly. :: \"For everyone else, it is an illusion.\""
+      - "They are usually right. :: Yalnızca çok az kişi için doğru olabileceğini söylüyor."
+      - "They should drink more coffee. :: Böyle bir öneri yok."
+      - "They sleep more at the weekend, so it is fine. :: Düzensiz saatleri eleştiriyor."
+    explanation: "\"The more tired we are, the worse we become at judging how tired we are.\""
+    lessons: [gram.b2.comparatives-advanced]
+  - id: q.listen.b2.sleep.02
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "According to the guest, what is the biggest mistake?"
+    options:
+      - "*Keeping irregular sleeping hours :: \"In my view the bigger problem is irregular hours.\""
+      - "Using screens before bed :: Yardımcı olmadığını kabul ediyor ama en büyük sorun saymıyor."
+      - "Drinking coffee in the morning :: Sabah kahvesinde sorun görmüyor."
+      - "Sleeping too much at night :: Böyle bir şey söylenmiyor."
+    explanation: "Konuk, yaygın görüşü (ekranlar) kabul edip kendi görüşünü öne çıkarıyor."
+  - id: q.listen.b2.sleep.03
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "What is the problem with drinking coffee at four in the afternoon?"
+    options:
+      - "*The caffeine may still be active at midnight. :: \"A cup at four in the afternoon may still be affecting you at midnight.\""
+      - "It makes you hungry. :: Kayıtta böyle bir bilgi yok."
+      - "It is more expensive later in the day. :: Kayıtta böyle bir bilgi yok."
+      - "It has no effect at all. :: Tersine, etkisi saatlerce sürüyor."
+    explanation: "Kafein bedende saatlerce kalıyor."
+  - id: q.listen.b2.sleep.04
+    type: listening_comprehension
+    difficulty: 4
+    prompt: "What single change does the guest recommend?"
+    options:
+      - "*Getting up at the same time every day :: \"Get up at the same time every day, including weekends.\""
+      - "Going to bed earlier at weekends :: Önerilen, kalkış saatini sabitlemek."
+      - "Giving up coffee completely :: Böyle bir öneri yok."
+      - "Keeping the phone out of the bedroom :: Böyle bir öneri yok."
+    explanation: "Tek değişiklik: sabit kalkış saati."
+  - id: q.listen.b2.sleep.05
+    type: nuance
+    difficulty: 4
+    prompt: "The host says, \"I must have drunk four cups yesterday.\" What does he mean?"
+    options:
+      - "*He is fairly sure that he drank four cups. :: must have + V3: geçmişle ilgili güçlü çıkarım."
+      - "He was obliged to drink four cups. :: Zorunluluk için \"had to\" kullanılırdı."
+      - "He should have drunk four cups. :: Should have: yapılmamış doğru davranış."
+      - "He did not drink any coffee. :: Tersini söylüyor."
+    explanation: "must have + V3 = -miş olmalıyım."
+    lessons: [gram.b2.modals-past]

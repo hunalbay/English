@@ -1,0 +1,91 @@
+id: read.b2.the-price-of-fast-fashion
+kind: reading
+level: B2
+title_tr: "Hızlı modanın bedeli"
+title_en: The price of fast fashion
+objective_tr: Bir sorunu, nedenlerini ve çözüm önerilerini ele alan yazıda ana savı, destekleyici bilgileri ve yazarın tutumunu belirleyebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.passive-advanced, gram.b2.linking-advanced]
+vocabulary: [fashion, consumer, waste, cheap, environment, responsibility]
+passage:
+  mode: text
+  lines:
+    - {en: "A T-shirt for the price of a sandwich sounds like a bargain. For the customer, it is. For almost everyone else involved, it is anything but.", tr: "Bir sandviç fiyatına bir tişört kelepir gibi görünür. Müşteri için öyledir de. İşin içindeki hemen herkes içinse hiç de öyle değildir."}
+    - {en: "\"Fast fashion\" is the name given to clothes that are designed, produced and sold as quickly and cheaply as possible. Where shops once presented two collections a year, some brands now release new items every week.", tr: "\"Hızlı moda\", olabildiğince hızlı ve ucuz biçimde tasarlanan, üretilen ve satılan giysilere verilen addır. Mağazalar bir zamanlar yılda iki koleksiyon sunarken bugün bazı markalar her hafta yeni ürün çıkarıyor."}
+    - {en: "The consequences are easy to overlook because they occur far from the shop window. Clothing is often produced in countries where wages are low and safety rules are poorly enforced. Workers are said to earn a tiny fraction of the final price.", tr: "Sonuçlar vitrinden çok uzakta ortaya çıktığı için kolayca gözden kaçıyor. Giysiler çoğunlukla ücretlerin düşük olduğu ve güvenlik kurallarının yeterince uygulanmadığı ülkelerde üretiliyor. İşçilerin, son satış fiyatının çok küçük bir bölümünü kazandığı söyleniyor."}
+    - {en: "The environmental cost is equally serious. Growing cotton requires enormous amounts of water, while synthetic fabrics are made from oil and release tiny plastic fibres every time they are washed.", tr: "Çevresel bedel de aynı ölçüde ciddi. Pamuk yetiştirmek muazzam miktarda su gerektirirken, sentetik kumaşlar petrolden üretiliyor ve her yıkanışlarında minik plastik lifler salıyor."}
+    - {en: "Moreover, because the clothes are cheap, they are treated as disposable. Many items are thought to be worn only a handful of times before being thrown away, and most of them cannot easily be recycled.", tr: "Üstelik giysiler ucuz olduğu için kullan-at muamelesi görüyor. Birçok parçanın atılmadan önce yalnızca birkaç kez giyildiği düşünülüyor ve bunların çoğu kolayca geri dönüştürülemiyor."}
+    - {en: "It would be unfair to blame consumers alone. People on low incomes may have little choice, and brands spend fortunes persuading us that last month's jacket is already out of date.", tr: "Yalnızca tüketicileri suçlamak haksızlık olur. Düşük gelirli insanların pek seçeneği olmayabilir; markalar ise geçen ayki ceketin şimdiden demode olduğuna bizi ikna etmek için servet harcıyor."}
+    - {en: "Nevertheless, those who can afford to choose do have some power. Buying fewer, better-made clothes, repairing what we own and buying second-hand all reduce demand. None of these steps will transform the industry overnight, but an industry that depends on our habits can be changed by them.", tr: "Yine de seçme olanağı olanların elinde bir güç var. Daha az ve daha iyi üretilmiş giysi almak, elimizdekini onarmak ve ikinci el almak; hepsi talebi azaltır. Bu adımların hiçbiri sektörü bir gecede dönüştürmeyecek, ama alışkanlıklarımıza dayanan bir sektör yine onlarla değiştirilebilir."}
+  glossary:
+    - {en: "bargain", tr: "kelepir"}
+    - {en: "anything but", tr: "hiç de ... değil"}
+    - {en: "overlook", tr: "gözden kaçırmak"}
+    - {en: "enforce", tr: "(kuralı) uygulamak"}
+    - {en: "fraction", tr: "küçük bölüm, kesir"}
+    - {en: "disposable", tr: "kullan-at"}
+    - {en: "a handful of", tr: "bir avuç, birkaç"}
+    - {en: "demand", tr: "talep"}
+questions:
+  - id: q.read.b2.fashion.01
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "What is the writer's main argument?"
+    options:
+      - "*Cheap clothes have hidden social and environmental costs, and consumers who can choose should buy differently. :: Metin önce bedelleri, sonra tüketicinin yapabileceklerini anlatıyor."
+      - "Consumers are entirely responsible for the problems of the fashion industry. :: Yazar bunun haksızlık olacağını açıkça söylüyor."
+      - "Fast fashion should be banned immediately. :: Yasaklama önerisi yok."
+      - "Cheap clothes are a good thing for everyone. :: İlk paragraf bunun tersini söylüyor."
+    explanation: "Ana sav girişte ve son paragrafta ortaya konuyor."
+  - id: q.read.b2.fashion.02
+    type: word_in_context
+    difficulty: 4
+    prompt: "\"For almost everyone else involved, it is anything but.\" What does \"anything but\" mean here?"
+    options:
+      - "*It is definitely not a bargain. :: anything but = hiç de öyle değil."
+      - "It is also a bargain. :: Tam tersi anlam."
+      - "It is the only bargain. :: \"Nothing but\" ile karıştırılmamalı."
+      - "It may or may not be a bargain. :: İfade kesin bir olumsuzluk bildirir."
+    explanation: "anything but + (sıfat / isim): kesinlikle ... değil."
+  - id: q.read.b2.fashion.03
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "Why does the writer use phrases such as \"are said to earn\" and \"are thought to be worn\"?"
+    options:
+      - "*To report information without claiming it as certain fact :: Edilgen aktarma yapıları bilgiye mesafe koyar."
+      - "To show that the information is false :: Bilginin yanlış olduğu ima edilmiyor."
+      - "To hide who makes the clothes :: Amaç gizlemek değil, kesinlik derecesini belirtmek."
+      - "To make the text sound informal :: Bu yapılar resmî üsluba aittir."
+    explanation: "is said to / is thought to: yaygın kanıyı, kesinleştirmeden aktarır."
+    lessons: [gram.b2.passive-advanced]
+  - id: q.read.b2.fashion.04
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "According to the text, why are the consequences of fast fashion easy to overlook?"
+    options:
+      - "*They happen far away from where the clothes are sold. :: \"...because they occur far from the shop window.\""
+      - "They are not very serious. :: Yazar ciddi olduklarını vurguluyor."
+      - "Brands publish detailed reports about them. :: Metinde böyle bir bilgi yok."
+      - "Consumers do not care about the environment. :: Yazar tüketiciyi böyle suçlamıyor."
+    explanation: "Neden cümleciği üçüncü paragrafta."
+  - id: q.read.b2.fashion.05
+    type: reading_comprehension
+    difficulty: 4
+    prompt: "Which statement best describes the writer's attitude in the final paragraph?"
+    options:
+      - "*Cautiously hopeful :: Adımların sektörü bir gecede değiştirmeyeceğini kabul ediyor, ama değişimin mümkün olduğunu söylüyor."
+      - "Completely pessimistic :: Değişimin mümkün olduğunu söylüyor."
+      - "Angry with poor consumers :: Düşük gelirlilerin seçeneği olmayabileceğini kabul ediyor."
+      - "Indifferent :: Açık bir tutum ve öneri var."
+    explanation: "\"None of these steps will transform... but...\" ölçülü bir iyimserliktir."
+  - id: q.read.b2.fashion.06
+    type: matching
+    instruction_tr: "Metindeki sözcükleri anlamlarıyla eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["disposable", "made to be thrown away after use"]
+      - ["overlook", "fail to notice"]
+      - ["bargain", "something bought for a low price"]
+      - ["demand", "the wish of customers to buy something"]
+    explanation: "Sözcüklerin anlamı bağlamdan çıkarılabilir."

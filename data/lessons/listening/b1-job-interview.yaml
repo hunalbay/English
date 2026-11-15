@@ -1,0 +1,77 @@
+id: listen.b1.job-interview
+kind: listening
+level: B1
+title_tr: "İş görüşmesi"
+title_en: A job interview
+objective_tr: Bir iş görüşmesini dinleyip adayın deneyimini, güçlü yanlarını ve işin koşullarını anlayabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.present-perfect-continuous, gram.b1.indirect-questions]
+vocabulary: [experience, customer, manager, responsible, salary, improve]
+passage:
+  mode: dialogue
+  voices: {Interviewer: m2, Candidate: f1}
+  lines:
+    - {speaker: Interviewer, en: "Thank you for coming in today, Miss Arslan. Please, have a seat.", tr: "Bugün geldiğiniz için teşekkürler Bayan Arslan. Lütfen oturun."}
+    - {speaker: Candidate, en: "Thank you. I'm happy to be here.", tr: "Teşekkür ederim. Burada olmaktan memnunum."}
+    - {speaker: Interviewer, en: "Could you tell me a little about your current job?", tr: "Bana şu anki işinizden biraz söz eder misiniz?"}
+    - {speaker: Candidate, en: "Of course. I've been working at a travel agency for four years. I'm responsible for customer service, so I answer questions and solve problems with bookings.", tr: "Elbette. Dört yıldır bir seyahat acentesinde çalışıyorum. Müşteri hizmetlerinden sorumluyum; soruları yanıtlıyor ve rezervasyonlarla ilgili sorunları çözüyorum."}
+    - {speaker: Interviewer, en: "I see. And why do you want to leave?", tr: "Anlıyorum. Peki neden ayrılmak istiyorsunuz?"}
+    - {speaker: Candidate, en: "I enjoy my work, but the company is very small, and there is no chance to become a team leader. I'd like more responsibility.", tr: "İşimi seviyorum ama şirket çok küçük ve takım lideri olma olanağı yok. Daha fazla sorumluluk istiyorum."}
+    - {speaker: Interviewer, en: "What would you say is your greatest strength?", tr: "Sizce en güçlü yanınız nedir?"}
+    - {speaker: Candidate, en: "I stay calm when customers are angry. Last year a group of forty people missed their flight, and I managed to find new tickets for all of them in one afternoon.", tr: "Müşteriler öfkeliyken sakin kalırım. Geçen yıl kırk kişilik bir grup uçağını kaçırdı ve bir öğleden sonra içinde hepsine yeni bilet bulmayı başardım."}
+    - {speaker: Interviewer, en: "That's impressive. And is there anything you would like to improve?", tr: "Etkileyici. Peki geliştirmek istediğiniz bir şey var mı?"}
+    - {speaker: Candidate, en: "Yes, my German. I speak English well, but my German is only basic. I've been taking evening classes since January.", tr: "Evet, Almancam. İngilizceyi iyi konuşuyorum ama Almancam yalnızca temel düzeyde. Ocaktan beri akşam kurslarına gidiyorum."}
+    - {speaker: Interviewer, en: "Good. Do you have any questions for me?", tr: "Güzel. Bana sormak istediğiniz bir şey var mı?"}
+    - {speaker: Candidate, en: "Yes. Could you tell me whether the job involves working at weekends?", tr: "Evet. İşin hafta sonu çalışmayı gerektirip gerektirmediğini söyler misiniz?"}
+    - {speaker: Interviewer, en: "One Saturday a month, but you get a day off the following week. We will contact you by Friday.", tr: "Ayda bir cumartesi, ama ertesi hafta bir gün izin alıyorsunuz. Cumaya kadar sizinle iletişime geçeceğiz."}
+questions:
+  - id: q.listen.b1.interview.01
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "Why does the candidate want to leave her current job?"
+    options:
+      - "*There is no opportunity to take on more responsibility. :: Şirket küçük ve takım lideri olma olanağı yok."
+      - "She does not enjoy the work. :: İşini sevdiğini söylüyor."
+      - "The salary is too low. :: Maaştan söz edilmiyor."
+      - "The customers are always angry. :: Öfkeli müşterilerle baş edebildiğini söylüyor; ayrılma nedeni değil."
+    explanation: "\"There is no chance to become a team leader. I'd like more responsibility.\""
+  - id: q.listen.b1.interview.02
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "What example does she give of her greatest strength?"
+    options:
+      - "*She found new tickets for forty people who had missed their flight. :: Sakin kalabildiğine örnek olarak anlatıyor."
+      - "She learned German in one year. :: Almancası temel düzeyde."
+      - "She became a team leader. :: Bu olanağı olmadığı için ayrılmak istiyor."
+      - "She worked every weekend for four years. :: Kayıtta böyle bir bilgi yok."
+    explanation: "Güçlü yan: baskı altında sakin kalmak; örnek: kırk kişilik grup."
+  - id: q.listen.b1.interview.03
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "What is she doing to improve her German?"
+    options:
+      - "*She has been taking evening classes since January. :: \"I've been taking evening classes since January.\""
+      - "She is living in Germany. :: Kayıtta böyle bir bilgi yok."
+      - "She practises with customers. :: Kayıtta böyle bir bilgi yok."
+      - "Nothing yet, but she plans to start. :: Ocaktan beri kursa gidiyor."
+    explanation: "Present Perfect Continuous + since: süregelen eylem."
+    lessons: [gram.b1.present-perfect-continuous]
+  - id: q.listen.b1.interview.04
+    type: listening_comprehension
+    difficulty: 3
+    prompt: "What does the interviewer say about weekend work?"
+    options:
+      - "*Employees work one Saturday a month and get a day off the next week. :: Görüşmecinin son cevabı."
+      - "Employees work every Saturday. :: Ayda bir cumartesi."
+      - "There is no weekend work. :: Ayda bir cumartesi çalışılıyor."
+      - "Weekend work is paid double. :: Ücretten söz edilmiyor."
+    explanation: "\"One Saturday a month, but you get a day off the following week.\""
+  - id: q.listen.b1.interview.05
+    type: sentence_building
+    difficulty: 3
+    instruction_tr: "Adayın sorduğu kibar soruyu yazın."
+    prompt: "\"Does the job involve working at weekends?\" → Could you tell me whether ..."
+    answers: ["Could you tell me whether the job involves working at weekends?", "Could you tell me whether the job involves working at weekends"]
+    explanation: "Dolaylı soruda düz cümle sırası: whether + özne + fiil."
+    lessons: [gram.b1.indirect-questions]

@@ -1,0 +1,74 @@
+id: read.a1.at-the-market
+kind: reading
+level: A1
+title_tr: "Pazarda"
+title_en: At the market
+objective_tr: Alışverişle ilgili kısa bir metinde miktarları, fiyatları ve ne alındığını bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.there-is-are]
+vocabulary: [market, tomato, cheese, bread, cheap, expensive]
+passage:
+  mode: text
+  lines:
+    - {en: "Every Saturday morning Mrs Demir goes to the market near her flat.", tr: "Bayan Demir her cumartesi sabahı dairesinin yakınındaki pazara gider."}
+    - {en: "The market is big and busy. There are a lot of fruit and vegetables.", tr: "Pazar büyük ve kalabalıktır. Bir sürü meyve ve sebze vardır."}
+    - {en: "Today she needs tomatoes, potatoes, apples and some cheese.", tr: "Bugün domatese, patatese, elmaya ve biraz peynire ihtiyacı var."}
+    - {en: "The tomatoes are cheap. They are twenty lira a kilo, so she buys two kilos.", tr: "Domatesler ucuz. Kilosu yirmi lira, bu yüzden iki kilo alıyor."}
+    - {en: "The apples are red and sweet. She buys one kilo for her children.", tr: "Elmalar kırmızı ve tatlı. Çocukları için bir kilo alıyor."}
+    - {en: "The cheese is expensive today, so she doesn't buy it.", tr: "Peynir bugün pahalı, bu yüzden almıyor."}
+    - {en: "There isn't any bread at the market. She buys bread at the bakery on her way home.", tr: "Pazarda ekmek yok. Eve dönerken fırından ekmek alıyor."}
+  glossary:
+    - {en: "busy", tr: "kalabalık, yoğun"}
+    - {en: "need", tr: "ihtiyacı olmak"}
+    - {en: "a kilo", tr: "kilosu, bir kilo"}
+    - {en: "sweet", tr: "tatlı"}
+    - {en: "bakery", tr: "fırın"}
+    - {en: "on her way home", tr: "eve dönerken"}
+questions:
+  - id: q.read.a1.market.01
+    type: reading_comprehension
+    prompt: "When does Mrs Demir go to the market?"
+    options:
+      - "*Every Saturday morning :: Metnin ilk cümlesi."
+      - "Every Sunday :: Metinde cumartesi deniyor."
+      - "Every day :: Yalnızca cumartesi günleri."
+      - "On Saturday evening :: Sabah gidiyor."
+    explanation: "\"Every Saturday morning Mrs Demir goes to the market.\""
+  - id: q.read.a1.market.02
+    type: reading_comprehension
+    prompt: "How many kilos of tomatoes does she buy?"
+    options:
+      - "*Two :: \"...so she buys two kilos.\""
+      - "One :: Bir kilo aldığı şey elmadır."
+      - "Twenty :: Yirmi, domatesin kilo fiyatıdır."
+      - "None :: Almadığı şey peynirdir."
+    explanation: "Domates ucuz olduğu için iki kilo alıyor."
+  - id: q.read.a1.market.03
+    type: reading_comprehension
+    prompt: "Why doesn't she buy cheese?"
+    options:
+      - "*Because it is expensive. :: \"The cheese is expensive today, so she doesn't buy it.\""
+      - "Because there isn't any cheese. :: Pazarda olmayan şey ekmektir."
+      - "Because her children don't like it. :: Metinde böyle bir bilgi yok."
+      - "Because she has cheese at home. :: Metinde böyle bir bilgi yok."
+    explanation: "Peynir pahalı olduğu için almıyor."
+  - id: q.read.a1.market.04
+    type: reading_comprehension
+    prompt: "Where does she buy bread?"
+    options:
+      - "*At the bakery :: \"She buys bread at the bakery on her way home.\""
+      - "At the market :: \"There isn't any bread at the market.\""
+      - "At the supermarket :: Metinde süpermarket geçmiyor."
+      - "She doesn't buy bread. :: Fırından alıyor."
+    explanation: "Pazarda ekmek olmadığı için fırından alıyor."
+  - id: q.read.a1.market.05
+    type: matching
+    instruction_tr: "Metne göre ürünleri bilgilerle eşleştirin."
+    prompt: "Eşleştirin."
+    pairs:
+      - ["tomatoes", "cheap"]
+      - ["apples", "red and sweet"]
+      - ["cheese", "expensive"]
+      - ["bread", "not at the market"]
+    explanation: "Her ürün için metinde bir özellik veriliyor."

@@ -1,0 +1,89 @@
+id: read.b1.the-lost-wallet
+kind: reading
+level: B1
+title_tr: "Kayıp cüzdan"
+title_en: The lost wallet
+objective_tr: Kısa bir öyküde olayların sırasını izleyebilecek, kişilerin duygularını ve davranışlarının nedenlerini çıkarabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.past-perfect, gram.b1.reported-statements]
+vocabulary: [wallet, stranger, honest, reward, relief, refuse]
+passage:
+  mode: text
+  lines:
+    - {en: "It was a cold Tuesday evening when Kerem got off the tram and put his hand in his pocket. His wallet was not there.", tr: "Soğuk bir salı akşamıydı; Kerem tramvaydan indi ve elini cebine soktu. Cüzdanı orada değildi."}
+    - {en: "He checked his bag, his coat and his other pockets, but he found nothing. He had taken out his wallet to pay for a coffee at the station, so he must have dropped it there or on the tram.", tr: "Çantasına, montuna ve öbür ceplerine baktı ama hiçbir şey bulamadı. İstasyonda kahve parası ödemek için cüzdanını çıkarmıştı; demek ki onu orada ya da tramvayda düşürmüş olmalıydı."}
+    - {en: "Inside the wallet there were his bank cards, his driving licence and almost all the money he had for the rest of the month. He felt sick.", tr: "Cüzdanın içinde banka kartları, ehliyeti ve ayın geri kalanı için elindeki paranın neredeyse tamamı vardı. Midesi bulandı."}
+    - {en: "He went back to the station, but nobody had handed in a wallet. The woman at the information desk told him that people rarely got lost things back.", tr: "İstasyona geri gitti ama kimse bir cüzdan teslim etmemişti. Danışmadaki kadın, insanların kayıp eşyalarını nadiren geri aldığını söyledi."}
+    - {en: "Kerem walked home slowly. He had just started cancelling his cards when his phone rang. It was a number he didn't know.", tr: "Kerem ağır ağır eve yürüdü. Kartlarını iptal etmeye henüz başlamıştı ki telefonu çaldı. Tanımadığı bir numaraydı."}
+    - {en: "\"Is that Kerem Aydın?\" an old man's voice asked. \"I found your wallet under a seat on the tram. Your business card was inside.\"", tr: "Yaşlı bir adamın sesi, \"Kerem Aydın'la mı görüşüyorum?\" diye sordu. \"Cüzdanınızı tramvayda bir koltuğun altında buldum. İçinde kartvizitiniz vardı.\""}
+    - {en: "They met twenty minutes later outside a bakery. Everything was still in the wallet. Kerem offered the man some money as a reward, but he refused.", tr: "Yirmi dakika sonra bir fırının önünde buluştular. Her şey hâlâ cüzdandaydı. Kerem adama ödül olarak biraz para teklif etti ama adam kabul etmedi."}
+    - {en: "\"Someone did the same for me thirty years ago,\" he said. \"Just do it for someone else one day.\"", tr: "\"Otuz yıl önce biri benim için aynısını yapmıştı,\" dedi. \"Sen de bir gün başka biri için yap, yeter.\""}
+  glossary:
+    - {en: "get off", tr: "(taşıttan) inmek"}
+    - {en: "drop", tr: "düşürmek"}
+    - {en: "hand in", tr: "teslim etmek"}
+    - {en: "rarely", tr: "nadiren"}
+    - {en: "cancel", tr: "iptal etmek"}
+    - {en: "reward", tr: "ödül"}
+    - {en: "refuse", tr: "reddetmek"}
+questions:
+  - id: q.read.b1.wallet.01
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "Where did the old man find the wallet?"
+    options:
+      - "*Under a seat on the tram :: \"I found your wallet under a seat on the tram.\""
+      - "At the coffee shop in the station :: Kerem orada düşürmüş olabileceğini düşündü ama cüzdan tramvayda bulundu."
+      - "At the information desk :: Oraya kimse cüzdan teslim etmemişti."
+      - "Outside a bakery :: Orası buluştukları yerdir."
+    explanation: "Bilgi, yaşlı adamın telefondaki sözlerinde."
+  - id: q.read.b1.wallet.02
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "How did the old man know Kerem's phone number?"
+    options:
+      - "*There was a business card in the wallet. :: \"Your business card was inside.\""
+      - "The information desk gave it to him. :: Danışmayla bir bağlantısı yok."
+      - "He knew Kerem from the neighbourhood. :: Kerem'i tanımıyordu."
+      - "He found it on Kerem's driving licence. :: Ehliyette telefon numarasından söz edilmiyor."
+    explanation: "Kartvizit sayesinde aradı."
+  - id: q.read.b1.wallet.03
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "What was Kerem doing when his phone rang?"
+    options:
+      - "*He had just started cancelling his cards. :: \"He had just started cancelling his cards when his phone rang.\""
+      - "He was walking home from the station. :: Eve varmıştı; kartları iptal etmeye başlamıştı."
+      - "He was talking to the woman at the desk. :: Bu daha önce oldu."
+      - "He was having a coffee. :: Kahve olayı en başta geçti."
+    explanation: "Past Perfect + when: telefon çalmadan hemen önce başlamıştı."
+    lessons: [gram.b1.past-perfect]
+  - id: q.read.b1.wallet.04
+    type: reading_comprehension
+    difficulty: 3
+    prompt: "Why did the old man refuse the money?"
+    options:
+      - "*Because someone had once helped him in the same way. :: \"Someone did the same for me thirty years ago.\""
+      - "Because the amount was too small. :: Miktarla ilgili bir şey söylenmiyor."
+      - "Because he was rich. :: Metinde böyle bir bilgi yok."
+      - "Because he was in a hurry. :: Metinde böyle bir bilgi yok."
+    explanation: "Adam, kendisine yapılan iyiliği başkasına aktarıyor."
+  - id: q.read.b1.wallet.05
+    type: word_in_context
+    difficulty: 3
+    prompt: "\"He felt sick\" in the third paragraph suggests that Kerem was:"
+    options:
+      - "*very worried and upset :: Burada \"sick\" bedensel hastalığı değil, kaygıdan kaynaklanan kötü hissi anlatıyor."
+      - "ill because of the coffee :: Kahveyle bir ilgisi yok."
+      - "angry with the tram driver :: Öfkeden söz edilmiyor."
+      - "tired after work :: Yorgunluktan söz edilmiyor."
+    explanation: "Parasının tamamını kaybettiğini fark edince duyduğu kaygı."
+  - id: q.read.b1.wallet.06
+    type: sentence_building
+    difficulty: 3
+    instruction_tr: "Metindeki bilgiyi kullanarak cümleyi dolaylı anlatımla tamamlayın."
+    prompt: "The old man said, \"I found your wallet on the tram.\" → The old man said that he ..."
+    answers: ["The old man said that he had found Kerem's wallet on the tram.", "The old man said that he had found his wallet on the tram.", "The old man said that he had found the wallet on the tram."]
+    explanation: "Past Simple → Past Perfect; your → his / Kerem's."
+    lessons: [gram.b1.reported-statements]

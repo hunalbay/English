@@ -1,0 +1,74 @@
+id: read.a2.a-weekend-trip
+kind: reading
+level: A2
+title_tr: "Hafta sonu gezisi"
+title_en: A weekend trip
+objective_tr: Geçmiş bir geziyi anlatan metinde olayların sırasını, nedenlerini ve yazarın duygularını bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.past-simple-vs-continuous]
+vocabulary: [trip, village, weather, delicious, crowded, forget]
+passage:
+  mode: text
+  lines:
+    - {en: "Last weekend my friend Selin and I went to Şirince, a small village near İzmir.", tr: "Geçen hafta sonu arkadaşım Selin'le İzmir yakınlarındaki küçük bir köy olan Şirince'ye gittik."}
+    - {en: "We left early on Saturday morning because we wanted to avoid the traffic. The journey took about an hour by car.", tr: "Trafikten kaçınmak istediğimiz için cumartesi sabahı erken yola çıktık. Yolculuk arabayla yaklaşık bir saat sürdü."}
+    - {en: "When we arrived, the weather was perfect: sunny but not too hot. We walked through the narrow streets and looked at the old houses.", tr: "Vardığımızda hava mükemmeldi: güneşli ama fazla sıcak değildi. Dar sokaklarda yürüdük ve eski evlere baktık."}
+    - {en: "For lunch we found a small restaurant with a view of the hills. The food was delicious, especially the fresh bread and olives.", tr: "Öğle yemeği için tepeleri gören küçük bir lokanta bulduk. Yemekler çok lezzetliydi, özellikle taze ekmek ve zeytinler."}
+    - {en: "In the afternoon the village became very crowded, so we decided to leave. While we were driving home, Selin realized that she had forgotten her sunglasses at the restaurant.", tr: "Öğleden sonra köy çok kalabalıklaştı, biz de ayrılmaya karar verdik. Eve dönerken Selin güneş gözlüğünü lokantada unuttuğunu fark etti."}
+    - {en: "We called the restaurant, and the owner promised to keep them for us. Now we have a good reason to go back!", tr: "Lokantayı aradık ve sahibi gözlüğü bizim için saklamaya söz verdi. Artık geri dönmek için iyi bir nedenimiz var!"}
+  glossary:
+    - {en: "avoid", tr: "kaçınmak"}
+    - {en: "journey", tr: "yolculuk"}
+    - {en: "narrow", tr: "dar"}
+    - {en: "view", tr: "manzara"}
+    - {en: "realize", tr: "fark etmek"}
+    - {en: "owner", tr: "sahip"}
+    - {en: "promise", tr: "söz vermek"}
+questions:
+  - id: q.read.a2.trip.01
+    type: reading_comprehension
+    prompt: "Why did they leave early on Saturday?"
+    options:
+      - "*To avoid the traffic :: \"...because we wanted to avoid the traffic.\""
+      - "Because the weather was hot :: Hava vardıklarında güzeldi; erken çıkma nedeni değil."
+      - "Because the village was crowded :: Kalabalık öğleden sonra oldu."
+      - "Because the journey was very long :: Yolculuk yalnızca bir saat sürdü."
+    explanation: "Neden \"because\" cümleciğinde veriliyor."
+  - id: q.read.a2.trip.02
+    type: reading_comprehension
+    prompt: "What did the writer like most about the lunch?"
+    options:
+      - "*The fresh bread and olives :: \"...especially the fresh bread and olives.\""
+      - "The view of the sea :: Manzara tepelere bakıyordu, denize değil."
+      - "The low prices :: Fiyatlardan söz edilmiyor."
+      - "The big restaurant :: Lokanta küçüktü."
+    explanation: "\"Especially\" en çok beğenilen şeyi gösteriyor."
+  - id: q.read.a2.trip.03
+    type: reading_comprehension
+    prompt: "Why did they decide to leave the village?"
+    options:
+      - "*It became very crowded. :: \"The village became very crowded, so we decided to leave.\""
+      - "It started to rain. :: Hava güneşliydi."
+      - "Selin lost her sunglasses. :: Bunu yolda fark ettiler; ayrılma nedeni değil."
+      - "The restaurant closed. :: Metinde böyle bir bilgi yok."
+    explanation: "\"So\" sonucu bildiriyor."
+  - id: q.read.a2.trip.04
+    type: reading_comprehension
+    difficulty: 2
+    prompt: "When did Selin realize that her sunglasses were missing?"
+    options:
+      - "*While they were driving home :: \"While we were driving home, Selin realized...\""
+      - "While they were having lunch :: Gözlüğü orada unuttu ama o sırada fark etmedi."
+      - "When they arrived in the village :: Vardıklarında gözlüğü yanındaydı."
+      - "The next day :: Aynı gün, dönüş yolunda fark etti."
+    explanation: "Past Continuous arka plan eylemini, Past Simple araya giren olayı anlatıyor."
+    lessons: [gram.a2.past-simple-vs-continuous]
+  - id: q.read.a2.trip.05
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "The restaurant owner sent the sunglasses to Selin."
+    options:
+      - "Doğru :: Sahibi gözlüğü göndermedi; saklamaya söz verdi."
+      - "*Yanlış :: \"The owner promised to keep them for us.\""
+    explanation: "Gözlük lokantada bekliyor; bu yüzden geri gitmek için bir nedenleri var."

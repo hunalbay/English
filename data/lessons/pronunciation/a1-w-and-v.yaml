@@ -1,0 +1,80 @@
+id: pron.a1.w-and-v
+kind: pronunciation
+level: A1
+title_tr: "w ve v sesleri"
+title_en: "W and V"
+objective_tr: w ve v seslerini ayrı ayrı çıkarabilecek, west / vest gibi sözcük çiftlerini ayırt ederek söyleyebileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [west, wine, very, water, work, visit]
+sections:
+  - kind: explanation
+    title_tr: İki ayrı ses
+    text_tr: |-
+      Türkçede tek bir **v** sesi vardır ve çoğu zaman yumuşak söylenir. İngilizcede ise **w** ve **v** iki farklı sestir; karıştırıldığında sözcüğün anlamı değişebilir: **west** (batı) / **vest** (yelek), **wine** (şarap) / **vine** (asma).
+
+      Türkçe konuşanlar genellikle ikisini de Türkçe "v" gibi söyler. En sık duyulan hatalar: "**v**ater" (water), "**v**ork" (work), "**v**hat" (what).
+  - kind: usage
+    title_tr: Nasıl çıkarılır?
+    text_tr: |-
+      **/w/:** Dudaklarınızı "u" der gibi **yuvarlayıp öne uzatın**, sonra hızla açın. Dişler dudağa **değmez**. "u-ater" diye başlayıp hızlandırmak işe yarar: **water**.
+
+      **/v/:** **Üst dişlerinizi alt dudağınıza** hafifçe dokundurun ve sesinizi kullanarak hava üfleyin. Dudakta bir titreşim hissedersiniz. İngilizce v, Türkçedekinden daha **sürtünmeli** ve belirgindir.
+
+      Kısa denetim: aynada **w** söylerken dişleriniz görünmemeli; **v** söylerken üst dişleriniz dudağınızın üzerinde olmalı.
+  - kind: comparison
+    title_tr: Karışan çiftler
+    table:
+      headers: ["/w/", "/v/"]
+      rows:
+        - ["west — batı", "vest — yelek"]
+        - ["wine — şarap", "vine — asma"]
+        - ["wet — ıslak", "vet — veteriner"]
+        - ["while — iken", "vile — iğrenç"]
+        - ["wheel — tekerlek", "veal — dana eti"]
+  - kind: review_tips
+    title_tr: Çalışma önerileri
+    text_tr: |-
+      Çok sık kullanılan **w** sözcüklerine öncelik verin: **what, when, where, why, we, was, were, with, will, would, want, work, week, world**.
+
+      Yazımda **w** olup okunmayan sözcüklere dikkat: **write** /raɪt/, **wrong** /rɒŋ/, **who** /huː/, **answer** /ˈænsər/, **two** /tuː/.
+practice:
+  - {en: "we", tr: "biz", ipa: "wiː", note_tr: "Dudaklar yuvarlak başlar; dişler dudağa değmez."}
+  - {en: "water", tr: "su", ipa: "ˈwɔːtər", note_tr: "\"vater\" demeyin."}
+  - {en: "work", tr: "çalışmak; iş", ipa: "wɜːrk"}
+  - {en: "what", tr: "ne", ipa: "wɒt"}
+  - {en: "very", tr: "çok", ipa: "ˈveri", note_tr: "Üst dişler alt dudağa dokunur."}
+  - {en: "visit", tr: "ziyaret etmek", ipa: "ˈvɪzɪt"}
+  - {en: "west", tr: "batı", ipa: "west"}
+  - {en: "vest", tr: "yelek", ipa: "vest", note_tr: "\"west\" ile karşılaştırın."}
+  - {en: "We work very well.", tr: "Çok iyi çalışıyoruz.", note_tr: "Sıra: w, w, v, w."}
+  - {en: "What do you want to wear?", tr: "Ne giymek istiyorsun?"}
+  - {en: "Vera visits her village every winter.", tr: "Vera her kış köyünü ziyaret eder."}
+questions:
+  - id: q.pron.a1.wv.01
+    type: multiple_choice
+    prompt: "/w/ sesini çıkarırken hangisi doğrudur?"
+    options:
+      - "*Dudaklar yuvarlanır ve dişler dudağa değmez. :: \"u\" konumundan hızla açılır."
+      - "Üst dişler alt dudağa dokunur. :: Bu, /v/ sesinin konumudur."
+      - "Dil dişlerin arasına girer. :: Bu, th seslerinin konumudur."
+      - "Dudaklar tamamen kapanır. :: Bu, /b/ ve /p/ seslerinin konumudur."
+    explanation: "w: yuvarlak dudak; v: diş + dudak."
+  - id: q.pron.a1.wv.02
+    type: multiple_choice
+    prompt: "Hangi sözcükte w harfi OKUNMAZ?"
+    options:
+      - "*write :: /raɪt/ — wr- ile başlayan sözcüklerde w okunmaz."
+      - "water :: /ˈwɔːtər/ — w okunur."
+      - "week :: /wiːk/ — w okunur."
+      - "window :: /ˈwɪndoʊ/ — baştaki w okunur."
+    explanation: "write, wrong, wrap, who, answer, two: w sessizdir."
+  - id: q.pron.a1.wv.03
+    type: matching
+    prompt: "Sözcükleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["west", "batı"]
+      - ["vest", "yelek"]
+      - ["wet", "ıslak"]
+      - ["vet", "veteriner"]
+    explanation: "w ve v ayrımı anlamı değiştirir."

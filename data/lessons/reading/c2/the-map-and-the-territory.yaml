@@ -1,0 +1,103 @@
+id: read.c2.the-map-and-the-territory
+kind: reading
+level: C2
+title_tr: "Harita ve arazi"
+title_en: The map and the territory
+objective_tr: Yoğun ve soyut bir denemede örtük anlamları, benzetmelerin işlevini ve savın ince ayrımlarını çözümleyebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.c2.concession-advanced, gram.c2.cohesion, gram.c1.hedging]
+vocabulary: [model, measure, assumption, reality, simplify, target]
+passage:
+  mode: text
+  lines:
+    - {en: "A map that reproduced every stone and blade of grass would be exactly as large as the land it described, and therefore useless. Maps are valuable not in spite of what they leave out but because of it.", tr: "Her taşı ve her ot yaprağını yeniden üreten bir harita, betimlediği arazi kadar büyük ve dolayısıyla yararsız olurdu. Haritalar, dışarıda bıraktıklarına rağmen değil, tam da onlar sayesinde değerlidir."}
+    - {en: "The same is true of every model we use to make sense of the world: a company's accounts, a school's examination results, a nation's economic statistics. Each is a deliberate simplification, and each is indispensable. The trouble begins when we forget that a simplification is what it is.", tr: "Aynı şey, dünyayı anlamlandırmak için kullandığımız her model için geçerlidir: bir şirketin hesapları, bir okulun sınav sonuçları, bir ülkenin ekonomik istatistikleri. Her biri bilinçli bir yalınlaştırmadır ve her biri vazgeçilmezdir. Sorun, bunun bir yalınlaştırma olduğunu unuttuğumuzda başlar."}
+    - {en: "Consider what happens when a measurement becomes a target. A hospital judged by its waiting times may find ways of shortening the queue that leave patients no healthier. A school ranked by test scores may teach children to pass tests. Nobody need behave dishonestly for this to occur; it is enough that people respond, quite rationally, to what is counted.", tr: "Bir ölçüm hedefe dönüştüğünde neler olduğunu düşünün. Bekleme süreleriyle değerlendirilen bir hastane, kuyruğu kısaltmanın hastaları hiç de daha sağlıklı kılmayan yollarını bulabilir. Test puanlarıyla sıralanan bir okul, çocuklara test geçmeyi öğretebilir. Bunun olması için kimsenin dürüstlükten ayrılması gerekmez; insanların, gayet akılcı biçimde, sayılan şeye karşılık vermesi yeter."}
+    - {en: "The figure, in such cases, continues to improve while the thing it was meant to represent quietly deteriorates. Worse, the improvement in the figure is taken as evidence that all is well. The map is redrawn to show a road, and we are surprised to find ourselves standing in a field.", tr: "Böyle durumlarda rakam iyileşmeyi sürdürürken, temsil etmesi amaçlanan şey sessizce kötüleşir. Daha da kötüsü, rakamdaki iyileşme her şeyin yolunda olduğunun kanıtı sayılır. Harita bir yol gösterecek biçimde yeniden çizilir; kendimizi bir tarlanın ortasında bulunca da şaşırırız."}
+    - {en: "It does not follow that measurement should be abandoned. Much as one might sympathize with those who distrust numbers, the alternative to an imperfect measure is seldom perfect judgement; it is more often unexamined prejudice. For all their faults, figures can be checked, compared and challenged in a way that impressions cannot.", tr: "Bundan, ölçümün terk edilmesi gerektiği sonucu çıkmaz. Rakamlara güvenmeyenlere ne kadar hak verilse de kusurlu bir ölçünün alternatifi nadiren kusursuz yargıdır; çoğu zaman sorgulanmamış ön yargıdır. Bütün kusurlarına karşın rakamlar, izlenimlerin olamayacağı biçimde denetlenebilir, karşılaştırılabilir ve sorgulanabilir."}
+    - {en: "What is required is rather a certain habit of mind: to use the model while remembering that it is one. This means asking, of any figure, what it was designed to capture and what it could not; noticing when a number begins to be pursued for its own sake; and being willing, now and then, to leave the map on the table and walk the ground.", tr: "Gereken şey daha çok belli bir düşünce alışkanlığıdır: modeli, bir model olduğunu unutmadan kullanmak. Bu, her rakam için neyi yakalamak üzere tasarlandığını ve neyi yakalayamadığını sormak; bir sayının kendi başına amaç hâline gelmeye başladığını fark etmek; ve ara sıra haritayı masada bırakıp araziyi yürümeye istekli olmak demektir."}
+  glossary:
+    - {en: "blade of grass", tr: "ot yaprağı"}
+    - {en: "deliberate", tr: "bilinçli, kasıtlı"}
+    - {en: "indispensable", tr: "vazgeçilmez"}
+    - {en: "deteriorate", tr: "kötüleşmek"}
+    - {en: "it does not follow that", tr: "bundan ... sonucu çıkmaz"}
+    - {en: "unexamined prejudice", tr: "sorgulanmamış ön yargı"}
+    - {en: "for its own sake", tr: "kendi başına bir amaç olarak"}
+    - {en: "capture", tr: "yakalamak, yansıtmak"}
+questions:
+  - id: q.read.c2.map.01
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What point does the writer make with the image of a map as large as the land?"
+    options:
+      - "*A model is useful precisely because it omits detail. :: \"Maps are valuable not in spite of what they leave out but because of it.\""
+      - "Maps should include as much detail as possible. :: Yazar bunun haritayı yararsız kılacağını söylüyor."
+      - "Maps are always inaccurate and should not be trusted. :: Yazar haritaların değerli olduğunu söylüyor."
+      - "Large maps are more expensive to produce. :: Maliyetten söz edilmiyor."
+    explanation: "Benzetme, yalınlaştırmanın bir kusur değil bir işlev olduğunu gösteriyor."
+  - id: q.read.c2.map.02
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "According to the third paragraph, why do measurements stop reflecting reality when they become targets?"
+    options:
+      - "*People sensibly adapt their behaviour to what is counted. :: \"...it is enough that people respond, quite rationally, to what is counted.\""
+      - "People deliberately falsify the figures. :: \"Nobody need behave dishonestly for this to occur.\""
+      - "The measurements were badly designed from the beginning. :: Tasarım hatasından değil, hedefe dönüşmenin etkisinden söz ediliyor."
+      - "Hospitals and schools refuse to be measured. :: Metinde böyle bir bilgi yok."
+    explanation: "Sorun dürüstlük değil, akılcı tepkinin yan etkisidir."
+  - id: q.read.c2.map.03
+    type: word_in_context
+    difficulty: 5
+    prompt: "\"The map is redrawn to show a road, and we are surprised to find ourselves standing in a field.\" What does this sentence express?"
+    options:
+      - "*The figures say things have improved, but reality has not changed accordingly. :: Harita = rakam; arazi = gerçek durum."
+      - "Maps are frequently updated by governments. :: Cümle mecazidir."
+      - "People get lost when they do not use maps. :: Tersine, haritaya fazla güvenmenin sonucu anlatılıyor."
+      - "Roads are often built through fields. :: Sözcüğü sözcüğüne okuma."
+    explanation: "Benzetme, göstergenin iyileşip gerçeğin iyileşmemesini somutlaştırıyor."
+  - id: q.read.c2.map.04
+    type: nuance
+    difficulty: 5
+    prompt: "\"Much as one might sympathize with those who distrust numbers, the alternative to an imperfect measure is seldom perfect judgement.\" What is the writer doing here?"
+    options:
+      - "*Conceding a point to critics of measurement before rejecting their conclusion :: Much as ...: ödünleme; ardından karşı sav."
+      - "Agreeing completely with those who distrust numbers :: Yalnızca anlayış gösteriyor, sonuca katılmıyor."
+      - "Claiming that judgement is always perfect :: \"Seldom perfect\" deniyor."
+      - "Changing the subject :: Aynı tartışmayı sürdürüyor."
+    explanation: "Much as = although ... very much."
+    lessons: [gram.c2.concession-advanced]
+  - id: q.read.c2.map.05
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "What does \"it\" refer to in \"to use the model while remembering that it is one\"? And \"one\"?"
+    options:
+      - "*\"it\" = the model; \"one\" = a model :: Zamir ve yerine koyma sözcüğü aynı isme gönderme yapıyor."
+      - "\"it\" = the habit of mind; \"one\" = a habit :: Bağlam modeli kastediyor."
+      - "\"it\" = the world; \"one\" = a person :: Bağlamla uyuşmuyor."
+      - "\"it\" = measurement; \"one\" = a number :: Yakın ama cümledeki gönderge \"the model\"dır."
+    explanation: "one, sayılabilir bir ismin (a model) yerine geçer."
+    lessons: [gram.c1.ellipsis-substitution]
+  - id: q.read.c2.map.06
+    type: reading_comprehension
+    difficulty: 5
+    prompt: "Which statement best summarizes the writer's conclusion?"
+    options:
+      - "*Keep using measures, but stay aware of their limits and check them against reality. :: Son paragraf tam olarak bunu öneriyor."
+      - "Stop using measures, because they always mislead. :: Beşinci paragraf bunu reddediyor."
+      - "Trust figures more than personal experience in every case. :: Araziyi yürümek de öneriliyor."
+      - "Only experts should be allowed to interpret statistics. :: Metinde böyle bir öneri yok."
+    explanation: "\"To use the model while remembering that it is one.\""
+  - id: q.read.c2.map.07
+    type: written_answer
+    difficulty: 5
+    prompt: "Kendi deneyiminizden ya da bildiğiniz bir alandan, bir ölçümün hedefe dönüşüp anlamını yitirdiği bir örneği 4–6 cümleyle anlatın. En az bir ödünleme yapısı (much as, for all, however + sıfat, albeit) kullanın."
+    model_answers:
+      - "At a call centre where I once worked, staff were judged by the number of calls they answered each hour. The figure rose steadily, and managers were delighted. However reasonable the target seemed, it encouraged us to end conversations as quickly as possible, whether or not the customer's problem had been solved. For all the impressive statistics, complaints doubled within a year. The measure had been designed to capture efficiency, yet it ended up rewarding its opposite."
+    checklist:
+      - "Ölçümün ne olduğunu ve neyi göstermesi amaçlandığını belirttim."
+      - "İnsanların ölçüme nasıl uyum sağladığını anlattım."
+      - "Rakam ile gerçek durum arasındaki ayrışmayı gösterdim."
+      - "En az bir ödünleme yapısı kullandım."
+    explanation: "Soyut bir savı somut bir örnekle desteklemek ileri düzey yazının temel becerisidir."

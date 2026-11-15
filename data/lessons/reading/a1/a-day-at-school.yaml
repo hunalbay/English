@@ -1,0 +1,69 @@
+id: read.a1.a-day-at-school
+kind: reading
+level: A1
+title_tr: "Okulda bir gün"
+title_en: A day at school
+objective_tr: Günlük programı anlatan kısa bir metinde saatleri, sırayı ve alışkanlıkları bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.present-simple]
+vocabulary: [school, lesson, breakfast, lunch, homework, favorite]
+passage:
+  mode: text
+  lines:
+    - {en: "Mert is a student. He gets up at seven o'clock every morning.", tr: "Mert bir öğrenci. Her sabah saat yedide kalkar."}
+    - {en: "He has breakfast with his mother and then he walks to school. The school is near his house.", tr: "Annesiyle kahvaltı eder, sonra okula yürür. Okul evine yakındır."}
+    - {en: "Lessons start at half past eight. Mert has six lessons every day.", tr: "Dersler sekiz buçukta başlar. Mert'in her gün altı dersi vardır."}
+    - {en: "His favourite lesson is English because his teacher is very nice. He doesn't like history.", tr: "En sevdiği ders İngilizcedir çünkü öğretmeni çok iyidir. Tarihi sevmez."}
+    - {en: "At twelve o'clock he has lunch at school with his friends. They usually eat soup and rice.", tr: "Saat on ikide arkadaşlarıyla okulda öğle yemeği yer. Genellikle çorba ve pilav yerler."}
+    - {en: "School finishes at three. After school Mert plays basketball for an hour.", tr: "Okul üçte biter. Okuldan sonra Mert bir saat basketbol oynar."}
+    - {en: "In the evening he does his homework and goes to bed at ten.", tr: "Akşam ödevini yapar ve onda yatar."}
+  glossary:
+    - {en: "get up", tr: "kalkmak"}
+    - {en: "near", tr: "yakın"}
+    - {en: "half past eight", tr: "sekiz buçuk"}
+    - {en: "favourite", tr: "en sevilen"}
+    - {en: "usually", tr: "genellikle"}
+    - {en: "finish", tr: "bitmek"}
+questions:
+  - id: q.read.a1.school.01
+    type: reading_comprehension
+    prompt: "How does Mert go to school?"
+    options:
+      - "*He walks. :: \"He walks to school.\""
+      - "He goes by bus. :: Metinde otobüsten söz edilmiyor."
+      - "His mother drives him. :: Annesiyle yalnızca kahvaltı ediyor."
+      - "He rides a bike. :: Metinde bisikletten söz edilmiyor."
+    explanation: "Okul evine yakın olduğu için yürüyerek gidiyor."
+  - id: q.read.a1.school.02
+    type: reading_comprehension
+    prompt: "What time do lessons start?"
+    options:
+      - "*At 8.30 :: \"Lessons start at half past eight.\""
+      - "At 7.00 :: Yedide kalkıyor."
+      - "At 8.00 :: Half past eight = sekiz buçuk."
+      - "At 12.00 :: On ikide öğle yemeği yiyor."
+    explanation: "half past eight = 8.30"
+  - id: q.read.a1.school.03
+    type: reading_comprehension
+    prompt: "Why does Mert like English?"
+    options:
+      - "*Because his teacher is very nice. :: \"...because his teacher is very nice.\""
+      - "Because it is easy. :: Metinde kolay olduğu söylenmiyor."
+      - "Because his friends like it. :: Arkadaşlarının görüşü belirtilmiyor."
+      - "Because he doesn't like history. :: Tarihi sevmemesi ayrı bir bilgidir, neden olarak verilmiyor."
+    explanation: "Neden \"because\" ile açıklanıyor."
+  - id: q.read.a1.school.04
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "Mert has lunch at home."
+    options:
+      - "Doğru :: Metne göre öğle yemeğini okulda yiyor."
+      - "*Yanlış :: \"He has lunch at school with his friends.\""
+    explanation: "Öğle yemeğini okulda, arkadaşlarıyla yiyor."
+  - id: q.read.a1.school.05
+    type: word_order
+    instruction_tr: "Mert'in gününü metne göre anlatan cümleyi kurun."
+    prompt: "Cümle kurun."
+    tokens: [After, school, Mert, plays, basketball]
+    explanation: "\"After school Mert plays basketball for an hour.\""

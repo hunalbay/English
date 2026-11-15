@@ -1,0 +1,71 @@
+id: read.a1.my-family
+kind: reading
+level: A1
+title_tr: "Ailem"
+title_en: My family
+objective_tr: Aile üyelerini tanıtan kısa bir metni okuyup kişiler, yaşlar ve meslekler hakkındaki temel bilgileri bulabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.to-be-present]
+vocabulary: [family, brother, sister, doctor, student, garden]
+passage:
+  mode: text
+  lines:
+    - {en: "Hello! My name is Elif. I am twelve years old and I live in Bursa with my family.", tr: "Merhaba! Benim adım Elif. On iki yaşındayım ve ailemle birlikte Bursa'da yaşıyorum."}
+    - {en: "There are five people in my family: my mother, my father, my brother, my sister and me.", tr: "Ailemde beş kişi var: annem, babam, erkek kardeşim, kız kardeşim ve ben."}
+    - {en: "My mother is a doctor. She works in a big hospital. My father is a teacher. He teaches maths.", tr: "Annem doktor. Büyük bir hastanede çalışıyor. Babam öğretmen. Matematik öğretiyor."}
+    - {en: "My brother Can is sixteen. He is a student and he loves football. My sister Zeynep is only four. She is very funny.", tr: "Erkek kardeşim Can on altı yaşında. Öğrenci ve futbolu çok seviyor. Kız kardeşim Zeynep yalnızca dört yaşında. Çok komik."}
+    - {en: "We have a small house with a garden. We also have a cat. Her name is Pamuk and she is white.", tr: "Bahçeli küçük bir evimiz var. Bir de kedimiz var. Adı Pamuk ve beyaz."}
+    - {en: "On Sundays we have breakfast in the garden. I love my family.", tr: "Pazar günleri bahçede kahvaltı ederiz. Ailemi seviyorum."}
+  glossary:
+    - {en: "live", tr: "yaşamak"}
+    - {en: "people", tr: "insanlar, kişiler"}
+    - {en: "hospital", tr: "hastane"}
+    - {en: "teach", tr: "öğretmek"}
+    - {en: "funny", tr: "komik"}
+    - {en: "garden", tr: "bahçe"}
+questions:
+  - id: q.read.a1.my-family.01
+    type: reading_comprehension
+    prompt: "How many people are there in Elif's family?"
+    options:
+      - "*Five :: Metinde \"There are five people in my family\" deniyor."
+      - "Four :: Elif kendisini de sayıyor: anne, baba, iki kardeş ve Elif."
+      - "Six :: Kedi aile üyesi olarak sayılmıyor."
+      - "Three :: Metinde beş kişi sayılıyor."
+    explanation: "\"There are five people in my family.\""
+  - id: q.read.a1.my-family.02
+    type: reading_comprehension
+    prompt: "What is Elif's mother's job?"
+    options:
+      - "*She is a doctor. :: \"My mother is a doctor.\""
+      - "She is a teacher. :: Öğretmen olan babasıdır."
+      - "She is a student. :: Öğrenci olan Can'dır."
+      - "She is a nurse. :: Metinde hemşireden söz edilmiyor."
+    explanation: "\"My mother is a doctor. She works in a big hospital.\""
+  - id: q.read.a1.my-family.03
+    type: reading_comprehension
+    prompt: "How old is Zeynep?"
+    options:
+      - "*Four :: \"My sister Zeynep is only four.\""
+      - "Twelve :: On iki yaşında olan Elif'tir."
+      - "Sixteen :: On altı yaşında olan Can'dır."
+      - "Fourteen :: Metinde böyle bir yaş geçmiyor (four ile karıştırmayın)."
+    explanation: "\"My sister Zeynep is only four.\""
+  - id: q.read.a1.my-family.04
+    type: true_false
+    instruction_tr: "Metne göre cümle doğru mu, yanlış mı?"
+    prompt: "The family's cat is black."
+    options:
+      - "Doğru :: Metne göre kedi beyazdır."
+      - "*Yanlış :: \"Her name is Pamuk and she is white.\""
+    explanation: "Kedinin adı Pamuk ve rengi beyaz."
+  - id: q.read.a1.my-family.05
+    type: reading_comprehension
+    prompt: "What does the family do on Sundays?"
+    options:
+      - "*They have breakfast in the garden. :: \"On Sundays we have breakfast in the garden.\""
+      - "They play football. :: Futbolu seven Can'dır; pazar etkinliği olarak geçmiyor."
+      - "They go to the hospital. :: Hastane annenin iş yeridir."
+      - "They visit a school. :: Metinde böyle bir bilgi yok."
+    explanation: "Son paragrafta pazar günleri bahçede kahvaltı ettikleri söyleniyor."

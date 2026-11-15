@@ -7,6 +7,7 @@ import { add, applyTheme, h, pageHeader } from "./dom.js";
 import * as home from "./pages/home.js";
 import * as lessons from "./pages/lessons.js";
 import * as lesson from "./pages/lesson.js";
+import * as skill from "./pages/skill.js";
 import * as dictionary from "./pages/dictionary.js";
 import * as word from "./pages/word.js";
 import * as wordList from "./pages/word-list.js";
@@ -24,6 +25,14 @@ const ROUTES = [
   { pattern: "/dersler", page: lessons, nav: "Dersler", section: "/dersler" },
   { pattern: "/dersler/:level", page: lessons, section: "/dersler" },
   { pattern: "/ders/:id", page: lesson, section: "/dersler" },
+  { pattern: "/okuma", page: skill, nav: "Okuma", section: "/okuma", extra: { track: "reading" } },
+  { pattern: "/okuma/:level", page: skill, section: "/okuma", extra: { track: "reading" } },
+  { pattern: "/dinleme", page: skill, nav: "Dinleme", section: "/dinleme", extra: { track: "listening" } },
+  { pattern: "/dinleme/:level", page: skill, section: "/dinleme", extra: { track: "listening" } },
+  { pattern: "/yazma", page: skill, nav: "Yazma", section: "/yazma", extra: { track: "writing" } },
+  { pattern: "/yazma/:level", page: skill, section: "/yazma", extra: { track: "writing" } },
+  { pattern: "/telaffuz", page: skill, nav: "Telaffuz", section: "/telaffuz", extra: { track: "pronunciation" } },
+  { pattern: "/telaffuz/:level", page: skill, section: "/telaffuz", extra: { track: "pronunciation" } },
   { pattern: "/sozluk", page: dictionary, nav: "Sözlük", section: "/sozluk" },
   { pattern: "/kelime/:id", page: word, section: "/sozluk" },
   { pattern: "/calis", page: study, nav: "Kelime çalışması", section: "/calis" },
@@ -59,7 +68,7 @@ function match(path) {
         }
       } else if (segment !== parts[index]) ok = false;
     });
-    if (ok) return { route, params };
+    if (ok) return { route, params: { ...params, ...(route.extra || {}) } };
   }
   return null;
 }
@@ -94,6 +103,7 @@ async function render() {
     }
   }
   if (token !== renderToken) return; // bu arada başka bir sayfaya geçildi
+  if (root.dataset.section) renderNav(root.dataset.section);
   main.replaceChildren(root);
   main.dataset.route = path; // sayfanın tamamen çizildiğini gösterir (testler bunu bekler)
   window.scrollTo(0, 0);

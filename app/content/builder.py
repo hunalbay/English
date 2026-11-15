@@ -18,6 +18,7 @@ from pathlib import Path
 import yaml
 from pydantic import ValidationError
 
+from app.content.audio import available_clips, phrase_key
 from app.content.schema import DDL, SCHEMA_VERSION
 from app.content.source_models import (
     DEFAULT_INSTRUCTIONS,
@@ -30,7 +31,7 @@ from app.content.source_models import (
 )
 from app.content.text import english_tokens, fold_text, lemma_key, regular_inflections, word_id
 
-CONTENT_VERSION = "0.5.0"
+CONTENT_VERSION = "0.6.0"
 
 
 class ContentError(Exception):
@@ -240,6 +241,8 @@ def validate(content: Content) -> list[str]:
             if lesson_id in placed:
                 errors.append(f"curriculum.yaml: {lesson_id} birden fazla ünitede ({placed[lesson_id]}, {unit.id})")
             placed[lesson_id] = unit.id
+            if lesson.kind != unit.track:
+                errors.append(f"{lesson_id}: ders türü ({lesson.kind}) ünitenin alanıyla ({unit.track}) uyuşmuyor")
             if lesson.level != unit.level:
                 errors.append(f"{lesson_id}: ders seviyesi ({lesson.level}) ünite seviyesiyle ({unit.level}) uyuşmuyor")
 
@@ -268,6 +271,36 @@ def validate(content: Content) -> list[str]:
                     errors.append(f"{where}: dil bilgisi dersinde '{required}' bölümü zorunludur")
             if not any(section.examples for section in lesson.sections):
                 errors.append(f"{where}: en az bir örnek cümle gereklidir")
+        if lesson.kind in ("reading", "listening"):
+            if lesson.passage is None:
+                errors.append(f"{where}: okuma ve dinleme derslerinde metin (passage) zorunludur")
+            if not lesson.questions:
+                errors.append(f"{where}: okuma ve dinleme derslerinde en az bir soru gereklidir")
+        elif lesson.passage is not None:
+            errors.append(f"{where}: metin (passage) yalnızca okuma ve dinleme derslerinde kullanılır")
+        if lesson.passage is not None:
+            speakers = {line.speaker for line in lesson.passage.lines}
+            if lesson.passage.mode == "dialogue" and (None in speakers or len(speakers) < 2):
+                errors.append(f"{where}: diyalogda her satırın konuşmacısı ve en az iki konuşmacı olmalıdır")
+            if lesson.passage.mode == "text" and speakers != {None}:
+                errors.append(f"{where}: düz metinde konuşmacı belirtilmez")
+            for speaker in lesson.passage.voices:
+                if speaker and speaker not in speakers:
+                    errors.append(f"{where}: voices içinde metinde olmayan konuşmacı: '{speaker}'")
+        if lesson.kind == "pronunciation":
+            if not lesson.practice:
+                errors.append(f"{where}: telaffuz dersinde çalışma öğesi (practice) zorunludur")
+            if not lesson.sections:
+                errors.append(f"{where}: telaffuz dersinde açıklama bölümü zorunludur")
+        elif lesson.practice:
+            errors.append(f"{where}: çalışma öğeleri (practice) yalnızca telaffuz derslerinde kullanılır")
+        if len({" ".join(item.en.split()) for item in lesson.practice}) != len(lesson.practice):
+            errors.append(f"{where}: çalışma öğeleri yineleniyor")
+        if lesson.kind == "writing":
+            if not lesson.sections:
+                errors.append(f"{where}: yazma dersinde açıklama bölümü zorunludur")
+            if not any(question.type == "written_answer" for question in lesson.questions):
+                errors.append(f"{where}: yazma dersinde en az bir yazılı cevap sorusu gereklidir")
         for section in lesson.sections:
             if section.kind == "correct_incorrect" and not any(example.wrong for example in section.examples):
                 errors.append(f"{where}: '{section.title_tr}' bölümünde yanlış kullanım örneği yok")
@@ -350,8 +383,15 @@ def _validate_questions(content: Content) -> list[str]:
                     errors.append(f"{where}: en az üç, birbirinden farklı eşleştirme çifti gereklidir")
             elif evaluator == "self" and not question.model_answers:
                 errors.append(f"{where}: öz değerlendirme için örnek cevap (model_answers) gereklidir")
-            if question.type in ("reading_comprehension", "dialogue_completion", "paragraph_completion") and not question.context:
+            has_passage = lesson.passage is not None
+            if question.type in ("dialogue_completion", "paragraph_completion") and not question.context:
                 errors.append(f"{where}: bu soru tipi için metin (context) gereklidir")
+            if question.type == "reading_comprehension" and not question.context and not (
+                has_passage and lesson.kind == "reading"
+            ):
+                errors.append(f"{where}: okuma sorusu için metin (context) ya da dersin okuma metni gereklidir")
+            if question.type == "listening_comprehension" and not (has_passage and lesson.kind == "listening"):
+                errors.append(f"{where}: dinleme sorusu yalnızca kaydı olan bir dinleme dersinde kullanılabilir")
             for target in question.lessons:
                 if target not in content.lessons:
                     errors.append(f"{where}: ilgili ders bulunamadı: {target}")
@@ -375,7 +415,7 @@ def build(data_dir: Path, output: Path) -> dict[str, int]:
     conn = sqlite3.connect(tmp)
     try:
         conn.executescript(DDL)
-        _insert(conn, content)
+        _insert(conn, content, data_dir / "audio")
         conn.execute("PRAGMA foreign_keys=ON")
         broken = conn.execute("PRAGMA foreign_key_check").fetchall()
         if broken:
@@ -386,7 +426,7 @@ def build(data_dir: Path, output: Path) -> dict[str, int]:
         counts = {
             table: conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]  # noqa: S608 (sabit tablo adları)
             for table in ("units", "lessons", "lesson_sections", "questions", "vocabulary", "word_meanings",
-                          "example_sentences")
+                          "example_sentences", "passages", "practice_items", "audio_clips")
         }
         conn.execute("VACUUM")
     except Exception:
@@ -398,7 +438,11 @@ def build(data_dir: Path, output: Path) -> dict[str, int]:
     return counts
 
 
-def _insert(conn: sqlite3.Connection, content: Content) -> None:
+def _insert(conn: sqlite3.Connection, content: Content, audio_dir: Path) -> None:
+    conn.executemany(
+        "INSERT INTO audio_clips VALUES (?, ?, ?)",
+        [(key, path, ms) for key, (path, ms) in sorted(available_clips(content, audio_dir).items())],
+    )
     conn.executemany(
         "INSERT INTO content_meta VALUES (?, ?)",
         [
@@ -421,8 +465,9 @@ def _insert(conn: sqlite3.Connection, content: Content) -> None:
     for unit in content.curriculum.units:
         unit_position[unit.level] = unit_position.get(unit.level, 0) + 1
         conn.execute(
-            "INSERT INTO units VALUES (?, ?, ?, ?, ?, ?)",
-            (unit.id, unit.level, unit_position[unit.level], unit.title_tr, unit.title_en, unit.description_tr),
+            "INSERT INTO units VALUES (?, ?, ?, ?, ?, ?, ?)",
+            (unit.id, unit.level, unit_position[unit.level], unit.title_tr, unit.title_en, unit.description_tr,
+             unit.track),
         )
         for position, lesson_id in enumerate(unit.lessons, 1):
             lesson_place[lesson_id] = (unit.id, position)
@@ -453,6 +498,23 @@ def _insert(conn: sqlite3.Connection, content: Content) -> None:
             body_parts += [ex.en for ex in section.examples if not ex.wrong]
             if section.table:
                 body_parts += [cell for row in section.table.rows for cell in row]
+        if lesson.passage is not None:
+            conn.execute("INSERT INTO passages VALUES (?, ?)", (lesson.id, lesson.passage.mode))
+            conn.executemany(
+                "INSERT INTO passage_lines VALUES (?, ?, ?, ?, ?)",
+                [(lesson.id, i, line.speaker, line.en, line.tr) for i, line in enumerate(lesson.passage.lines, 1)],
+            )
+            conn.executemany(
+                "INSERT INTO passage_glossary VALUES (?, ?, ?, ?)",
+                [(lesson.id, i, item.en, item.tr) for i, item in enumerate(lesson.passage.glossary, 1)],
+            )
+            body_parts += [line.en for line in lesson.passage.lines]
+        conn.executemany(
+            "INSERT INTO practice_items VALUES (?, ?, ?, ?, ?, ?, ?)",
+            [(lesson.id, i, item.en, item.tr, item.ipa, item.note_tr, phrase_key(item.en))
+             for i, item in enumerate(lesson.practice, 1)],
+        )
+        body_parts += [item.en for item in lesson.practice]
         for kind, targets in (("prerequisite", lesson.prerequisites), ("next", lesson.next), ("related", lesson.related)):
             conn.executemany(
                 "INSERT INTO lesson_relations VALUES (?, ?, ?)", [(lesson.id, target, kind) for target in targets]
