@@ -26,14 +26,27 @@ function table(data) {
       h("tbody", {}, data.rows.map((row) => h("tr", {}, row.map((cell) => h("td", {}, cell)))))));
 }
 
-const TRACK_PATH = { grammar: "dersler", reading: "okuma", listening: "dinleme", writing: "yazma", pronunciation: "telaffuz" };
-const TRACK_NAME = { grammar: "Dersler", reading: "Okuma", listening: "Dinleme", writing: "Yazma", pronunciation: "Telaffuz" };
+const TRACK_PATH = {
+  grammar: "dersler", reading: "okuma", listening: "dinleme", writing: "yazma", pronunciation: "telaffuz",
+  expressions: "deyimler", professional: "mesleki",
+};
+const TRACK_NAME = {
+  grammar: "Dersler", reading: "Okuma", listening: "Dinleme", writing: "Yazma", pronunciation: "Telaffuz",
+  expressions: "Deyimler ve kalıplar", professional: "Mesleki İngilizce",
+};
+const EXPRESSION_TYPE_TR = {
+  idiom: "deyim", phrasal_verb: "öbek fiil", collocation: "birliktelik", proverb: "atasözü", slang: "argo",
+  phrase: "kalıp", term: "terim",
+};
+const REGISTER_TR = { informal: "gündelik", formal: "resmî", slang: "argo — dikkatli kullanın" };
 const TEST_CARD = {
   grammar: ["Konu testi", "Konu testini çöz", "Bu konuda"],
   reading: ["Okuduğunu anlama soruları", "Soruları çöz", "Bu metinle ilgili"],
   listening: ["Dinlediğini anlama soruları", "Soruları çöz", "Bu kayıtla ilgili"],
   writing: ["Yazma çalışması", "Yazmaya başla", "Bu derste"],
   pronunciation: ["Konu testi", "Konu testini çöz", "Bu konuda"],
+  expressions: ["Alıştırma soruları", "Soruları çöz", "Bu derste"],
+  professional: ["Alıştırma soruları", "Soruları çöz", "Bu derste"],
 };
 
 function passageLines(passage) {
@@ -102,6 +115,21 @@ function practiceSection(items) {
         h("div", { class: "row" }, listenButton(item.audio, item.en, { label: "Örneği dinle" }), recorder(item.en))))));
 }
 
+function expressionSection(items, track) {
+  return h("section", { class: "card", id: "expressions" },
+    h("h2", {}, track === "professional" ? "Terimler ve kalıplar" : "İfadeler"),
+    h("ul", { class: "practice" }, items.map((item) =>
+      h("li", { class: "practice-item expression" },
+        h("p", { class: "practice-en", lang: "en" }, item.en, " ",
+          h("span", { class: "badge" }, EXPRESSION_TYPE_TR[item.type] || item.type),
+          REGISTER_TR[item.register] ? h("span", { class: `badge ${item.register === "slang" ? "warn" : ""}` }, REGISTER_TR[item.register]) : null),
+        h("p", {}, h("strong", {}, item.tr)),
+        item.note_tr ? h("p", { class: "ex-note" }, item.note_tr) : null,
+        h("p", { class: "ex-en", lang: "en" }, item.example_en),
+        h("p", { class: "ex-tr" }, item.example_tr),
+        h("div", { class: "row" }, listenButton(item.audio, item.en))))));
+}
+
 function linked(title, lessons) {
   if (!lessons.length) return null;
   return h("section", { class: "card" }, h("h2", {}, title), h("div", { class: "list" }, lessons.map(lessonLink)));
@@ -160,6 +188,7 @@ export async function render(root, params) {
         section.table ? table(section.table) : null,
         section.examples.length ? h("ul", { class: "examples" }, section.examples.map(example)) : null)),
     lesson.practice.length ? practiceSection(lesson.practice) : null,
+    lesson.expressions.length ? expressionSection(lesson.expressions, lesson.track) : null,
     lesson.vocabulary.length
       ? h("section", { class: "card" }, h("h2", {}, "İlgili kelimeler"),
           h("div", { class: "chips" }, lesson.vocabulary.map(wordChip)))

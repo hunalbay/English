@@ -89,8 +89,9 @@ export async function render(root) {
       h("p", { class: "muted" },
         `Bu sürümde ${data.totals.lessons} dil bilgisi dersi, ${data.totals.tracks.reading} okuma metni, ` +
         `${data.totals.tracks.listening} dinleme kaydı, ${data.totals.tracks.writing} yazma dersi, ` +
-        `${data.totals.tracks.pronunciation} telaffuz dersi, ${data.totals.questions} soru ve ${data.totals.words} kelime bulunuyor. ` +
-        "Deyimler, mesleki İngilizce, seviye tespit sınavı ve ilerleme raporları henüz eklenmedi; hazır oldukça menüde görünecekler.")),
+        `${data.totals.tracks.pronunciation} telaffuz dersi, ${data.totals.tracks.expressions} deyim ve kalıp dersi, ` +
+        `${data.totals.tracks.professional} mesleki İngilizce dersi, ${data.totals.questions} soru ve ${data.totals.words} kelime bulunuyor. ` +
+        "Seviye tespit sınavı ve ilerleme raporları henüz eklenmedi; hazır olunca menüde görünecekler.")),
   );
   return "Ana Sayfa";
 }

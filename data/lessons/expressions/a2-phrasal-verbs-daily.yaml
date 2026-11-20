@@ -1,0 +1,83 @@
+id: expr.a2.phrasal-verbs-daily
+kind: expressions
+level: A2
+title_tr: "Günlük hayatta öbek fiiller"
+title_en: Everyday phrasal verbs
+objective_tr: Günlük rutinde en sık kullanılan öbek fiilleri anlamlarıyla öğrenip nesne alanlarda nesnenin yerini doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a2.verb-patterns]
+vocabulary: [wake, turn, look, give, find, light]
+sections:
+  - kind: explanation
+    title_tr: Öbek fiil nedir?
+    text_tr: |-
+      **Öbek fiil (phrasal verb)**, bir fiil ile bir ya da iki küçük sözcüğün (up, on, off, out, after...) birleşmesiyle oluşur ve çoğu zaman **yeni bir anlam** kazanır: **look** (bakmak) → **look after** (bakmak, ilgilenmek) → **look for** (aramak).
+
+      Anlamı parçalardan tahmin etmek her zaman mümkün değildir; bu yüzden öbek fiiller **kelime gibi** öğrenilir.
+  - kind: usage
+    title_tr: Nesnenin yeri
+    text_tr: |-
+      Bazı öbek fiillerde nesne araya girebilir: "**Turn off** the light." / "**Turn** the light **off**."
+
+      Nesne bir **zamir** (it, them, him) ise mutlaka araya girer: "Turn **it** off." ("Turn off it" yanlıştır.)
+
+      **look for, look after** gibi öbek fiillerde nesne hep sonda kalır: "I'm looking **for** my keys." / "I'm looking **for them**."
+expressions:
+  - {en: "wake up", type: phrasal_verb, tr: "uyanmak", example: {en: "I usually wake up at seven.", tr: "Genellikle yedide uyanırım."}}
+  - {en: "get up", type: phrasal_verb, tr: "(yataktan) kalkmak", note_tr: "Uyanmak ile kalkmak farklıdır: önce wake up, sonra get up.", example: {en: "I wake up at seven, but I get up at half past.", tr: "Yedide uyanırım ama yedi buçukta kalkarım."}}
+  - {en: "put on", type: phrasal_verb, tr: "giymek, takmak", example: {en: "It's cold. Put on your coat.", tr: "Hava soğuk. Montunu giy."}}
+  - {en: "take off", type: phrasal_verb, tr: "çıkarmak (giysi); havalanmak (uçak)", example: {en: "Please take off your shoes before you come in.", tr: "Lütfen içeri girmeden önce ayakkabılarınızı çıkarın."}}
+  - {en: "turn on", type: phrasal_verb, tr: "açmak (cihaz, ışık)", note_tr: "Kapı ve pencere için \"open\" kullanılır.", example: {en: "Can you turn on the light? It's dark in here.", tr: "Işığı açar mısın? Burası karanlık."}}
+  - {en: "turn off", type: phrasal_verb, tr: "kapatmak (cihaz, ışık)", example: {en: "Don't forget to turn off the oven.", tr: "Fırını kapatmayı unutma."}}
+  - {en: "look for", type: phrasal_verb, tr: "aramak (bir şeyi bulmaya çalışmak)", example: {en: "I'm looking for my glasses. Have you seen them?", tr: "Gözlüğümü arıyorum. Gördün mü?"}}
+  - {en: "look after", type: phrasal_verb, tr: "bakmak, ilgilenmek", example: {en: "My mother looks after my children on Fridays.", tr: "Cuma günleri çocuklarıma annem bakıyor."}}
+  - {en: "find out", type: phrasal_verb, tr: "öğrenmek, ortaya çıkarmak", example: {en: "Can you find out what time the train leaves?", tr: "Trenin saat kaçta kalktığını öğrenebilir misin?"}}
+  - {en: "give up", type: phrasal_verb, tr: "bırakmak, vazgeçmek", example: {en: "My father gave up smoking last year.", tr: "Babam geçen yıl sigarayı bıraktı."}}
+  - {en: "go out", type: phrasal_verb, tr: "dışarı çıkmak (eğlenmek için)", example: {en: "We often go out on Saturday evenings.", tr: "Cumartesi akşamları sık sık dışarı çıkarız."}}
+  - {en: "come back", type: phrasal_verb, tr: "geri gelmek, dönmek", example: {en: "When are you coming back from holiday?", tr: "Tatilden ne zaman dönüyorsun?"}}
+questions:
+  - id: q.expr.a2.pv-daily.01
+    type: multiple_choice
+    prompt: "I can't find my phone. Can you help me ___ it?"
+    options:
+      - "*look for :: Bulmaya çalışmak: look for."
+      - "look after :: \"Bakmak, ilgilenmek\" anlamındadır."
+      - "find out :: Bilgi öğrenmek için kullanılır; nesne aramak için değil."
+      - "turn on :: Cihazı açmak demektir."
+    explanation: "look for = aramak."
+  - id: q.expr.a2.pv-daily.02
+    type: error_correction
+    prompt: "The TV is too loud. Please turn off it."
+    answers: ["The TV is too loud. Please turn it off."]
+    explanation: "Nesne zamir olduğunda araya girer: turn it off."
+  - id: q.expr.a2.pv-daily.03
+    type: matching
+    prompt: "Öbek fiilleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["give up", "bırakmak, vazgeçmek"]
+      - ["look after", "bakmak, ilgilenmek"]
+      - ["find out", "öğrenmek"]
+      - ["put on", "giymek"]
+      - ["come back", "geri dönmek"]
+    explanation: "Öbek fiiller kelime gibi öğrenilir."
+  - id: q.expr.a2.pv-daily.04
+    type: fill_blank
+    prompt: "It's hot in here. You can take ___ your jacket."
+    answers: ["off"]
+    explanation: "take off = çıkarmak."
+  - id: q.expr.a2.pv-daily.05
+    type: nuance
+    difficulty: 2
+    prompt: "\"I woke up at six but I got up at seven.\" Bu kişi ne yaptı?"
+    options:
+      - "*Altıda uyandı, bir saat yatakta kaldı, yedide kalktı. :: wake up = uyanmak; get up = yataktan kalkmak."
+      - "Altıda kalktı, yedide yeniden uyudu. :: Anlamlar ters."
+      - "İki kez uyandı. :: get up uyanmak değil kalkmaktır."
+      - "Yedide uyandı. :: Altıda uyandı."
+    explanation: "wake up ≠ get up."
+  - id: q.expr.a2.pv-daily.06
+    type: translation
+    prompt: "Babam geçen yıl sigarayı bıraktı."
+    answers: ["My father gave up smoking last year.", "Last year my father gave up smoking.", "My dad gave up smoking last year.", "My father stopped smoking last year."]
+    explanation: "give up + fiil-ing."

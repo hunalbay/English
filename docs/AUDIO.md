@@ -9,9 +9,10 @@ ses üretmez, internete bağlanmaz ve hiçbir çevrim içi konuşma hizmetini ku
 |---|---|---|
 | Sözlükteki her kelime | `w:<kelime>` | Kelime sayfasındaki "Dinle" düğmesi |
 | Telaffuz çalışması öğeleri | `s:<metin özeti>` | Telaffuz derslerindeki örnek sesler |
+| Deyimler, kalıplar ve mesleki terimler | `s:<metin özeti>` | İfade listelerindeki "Dinle" düğmeleri |
 | Dinleme dersleri | `l:<ders kimliği>` | Kaydın tamamı tek dosya; diyaloglarda her konuşmacı ayrı ses |
 
-Okuma metinleri, dil bilgisi örnek cümleleri ve sorular için hazır ses **yoktur**.
+Okuma metinleri, dil bilgisi örnek cümleleri, ifadelerin örnek cümleleri ve sorular için hazır ses **yoktur**.
 
 Güncel sayılar `python scripts/build_audio.py --check` komutuyla ve Ayarlar sayfasındaki içerik
 bilgisinden görülebilir.

@@ -1,0 +1,93 @@
+id: expr.b2.idioms-body
+kind: expressions
+level: B2
+title_tr: "Vücutla ilgili deyimler"
+title_en: Body idioms
+objective_tr: Vücut bölümleriyle kurulan yaygın deyimleri anlayıp kullanabilecek, Türkçedeki benzerleriyle karşılaştırarak yanıltıcı eşleşmeleri fark edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.b1.common-idioms]
+vocabulary: [leg, chest, chin, heart, foot, shoulder]
+sections:
+  - kind: explanation
+    title_tr: Benzer ama aynı değil
+    text_tr: |-
+      Türkçede de vücutla ilgili çok sayıda deyim vardır ("ağzı kulaklarında", "gözden düşmek"). İngilizcedeki bazı deyimler Türkçeyle örtüşür, bazıları ise **yanıltıcı biçimde benzer** görünür.
+
+      Örneğin **learn by heart** Türkçedeki "ezberlemek" anlamındadır ve kalple bir ilgisi yoktur. **Pull someone's leg** ise "birinin ayağını kaydırmak" değil, **şaka yapmak, takılmak** demektir.
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **Deyimin sözcüklerini değiştirmek.** "Pull someone's arm" ya da "keep your head up" denmez; deyimler kalıplaşmıştır.
+
+      **Türkçedeki benzer görünümlü deyimle eş saymak.** "Turn a blind eye" (görmezden gelmek) ile Türkçedeki "göz yummak" yakındır; ama "give someone the cold shoulder" (soğuk davranmak) ile "omuz vermek" (destek olmak) zıt anlamlara yakındır.
+expressions:
+  - {en: "pull someone's leg", type: idiom, tr: "birine takılmak, şaka yapmak", style: informal, example: {en: "Are you serious, or are you pulling my leg?", tr: "Ciddi misin yoksa bana takılıyor musun?"}}
+  - {en: "get something off your chest", type: idiom, tr: "içini dökmek, içindekini söyleyip rahatlamak", example: {en: "I need to get this off my chest: I'm not happy in this job.", tr: "Bunu içimden atmam lazım: bu işte mutlu değilim."}}
+  - {en: "keep your chin up", type: idiom, tr: "moralini bozma, dik dur", style: informal, example: {en: "Keep your chin up. You'll find another job soon.", tr: "Moralini bozma. Yakında başka bir iş bulursun."}}
+  - {en: "see eye to eye", type: idiom, tr: "aynı fikirde olmak, anlaşmak", note_tr: "Çoğunlukla olumsuz cümlelerde kullanılır.", example: {en: "My brother and I don't always see eye to eye on politics.", tr: "Erkek kardeşimle siyaset konusunda her zaman aynı fikirde değiliz."}}
+  - {en: "learn something by heart", type: idiom, tr: "ezberlemek", example: {en: "We had to learn the poem by heart.", tr: "Şiiri ezberlememiz gerekiyordu."}}
+  - {en: "off the top of my head", type: idiom, tr: "aklıma ilk gelen, düşünmeden söylersem", style: informal, example: {en: "Off the top of my head, I'd say about fifty people came.", tr: "Düşünmeden söylersem, yaklaşık elli kişi geldi."}}
+  - {en: "turn a blind eye to", type: idiom, tr: "görmezden gelmek, göz yummak", example: {en: "The teacher turned a blind eye to students using their phones.", tr: "Öğretmen öğrencilerin telefon kullanmasına göz yumdu."}}
+  - {en: "put your foot in it", type: idiom, tr: "pot kırmak, çam devirmek", style: informal, example: {en: "I really put my foot in it when I asked about her ex-husband.", tr: "Eski kocasını sorduğumda resmen çam devirdim."}}
+  - {en: "be all ears", type: idiom, tr: "can kulağıyla dinlemek, kulak kesilmek", style: informal, example: {en: "Tell me what happened. I'm all ears.", tr: "Ne olduğunu anlat. Kulak kesildim."}}
+  - {en: "give someone the cold shoulder", type: idiom, tr: "birine soğuk davranmak, yüz vermemek", example: {en: "After our argument, she gave me the cold shoulder for a week.", tr: "Tartışmamızdan sonra bir hafta bana soğuk davrandı."}}
+  - {en: "have a sweet tooth", type: idiom, tr: "tatlıya düşkün olmak", style: informal, example: {en: "I have a terrible sweet tooth. I can't say no to baklava.", tr: "Tatlıya çok düşkünüm. Baklavaya hayır diyemem."}}
+  - {en: "be head over heels", type: idiom, tr: "sırılsıklam âşık olmak", style: informal, example: {en: "They met in June, and by July he was head over heels in love.", tr: "Haziranda tanıştılar; temmuza kadar sırılsıklam âşık olmuştu."}}
+questions:
+  - id: q.expr.b2.body.01
+    type: multiple_choice
+    difficulty: 3
+    prompt: "\"Relax, I'm only pulling your leg.\" ne anlama gelir?"
+    options:
+      - "*Rahatla, sadece şaka yapıyorum. :: pull someone's leg = birine takılmak."
+      - "Rahatla, sana yardım ediyorum. :: Yardım anlamı yok."
+      - "Rahatla, seni düşürmeyeceğim. :: Deyim sözcük sözcük anlaşılmaz."
+      - "Rahatla, seni kandırmaya çalışıyorum. :: Kötü niyetli bir kandırma değil, şakadır."
+    explanation: "pull someone's leg: zararsız bir şaka."
+  - id: q.expr.b2.body.02
+    type: matching
+    prompt: "Deyimleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["learn by heart", "ezberlemek"]
+      - ["turn a blind eye", "göz yummak"]
+      - ["put your foot in it", "pot kırmak"]
+      - ["give someone the cold shoulder", "soğuk davranmak"]
+      - ["be all ears", "kulak kesilmek"]
+    explanation: "Bazı deyimlerin Türkçede yakın karşılıkları vardır."
+  - id: q.expr.b2.body.03
+    type: nuance
+    difficulty: 4
+    prompt: "\"We don't see eye to eye\" ile \"We don't see each other\" arasındaki fark nedir?"
+    options:
+      - "*İlki aynı fikirde olmadıklarını, ikincisi görüşmediklerini söyler. :: see eye to eye = aynı fikirde olmak."
+      - "İkisi de görüşmediklerini söyler. :: İlki bir deyimdir."
+      - "İkisi de aynı fikirde olmadıklarını söyler. :: İkincisi sözcük anlamıyla görüşmemektir."
+      - "İlki göz teması kurmadıklarını söyler. :: Deyim mecazidir."
+    explanation: "Deyimler kalıp hâlinde anlam kazanır."
+  - id: q.expr.b2.body.04
+    type: dialogue_completion
+    difficulty: 3
+    context: "A: How many countries are there in the EU?\nB: ___, I'd say twenty-seven, but you should check."
+    prompt: "B cümlesine nasıl başlar?"
+    options:
+      - "*Off the top of my head :: Kesin olmayan, akla ilk gelen bilgi."
+      - "By heart :: Ezberden demektir; cümle başında bu şekilde kullanılmaz."
+      - "Head over heels :: Âşık olmak demektir."
+      - "I'm all ears :: Dinlemeye hazır olmak demektir."
+    explanation: "off the top of my head = düşünmeden, aklıma ilk gelen."
+  - id: q.expr.b2.body.05
+    type: error_correction
+    prompt: "Keep your head up. Everything will be fine."
+    answers: ["Keep your chin up. Everything will be fine."]
+    explanation: "Deyim kalıplaşmıştır: keep your chin up."
+  - id: q.expr.b2.body.06
+    type: sentence_completion
+    difficulty: 3
+    prompt: "I've been worried about this for weeks. I just need to ___"
+    options:
+      - "*get it off my chest. :: İçini dökmek."
+      - "learn it by heart. :: Ezberlemek demektir."
+      - "turn a blind eye. :: Görmezden gelmek demektir."
+      - "pull my leg. :: Şaka yapmak demektir; özne de uyuşmuyor."
+    explanation: "get something off your chest = içini dökmek."

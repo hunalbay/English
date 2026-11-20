@@ -20,6 +20,8 @@ def test_every_word_practice_item_and_listening_lesson_needs_a_clip():
     assert reading and not any(audio.lesson_key(lesson.id) in clips for lesson in reading)
     practice = [item for lesson in content.lessons.values() for item in lesson.practice]
     assert practice and all(audio.phrase_key(item.en) in clips for item in practice)
+    expressions = [item for lesson in content.lessons.values() for item in lesson.expressions]
+    assert expressions and all(audio.phrase_key(item.en) in clips for item in expressions)
 
 
 def test_dialogue_speakers_get_different_voices():

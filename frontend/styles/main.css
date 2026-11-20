@@ -393,3 +393,7 @@ textarea {
 .ipa { font-weight: 400; }
 .btn.recording { background: var(--danger); color: #fff; border-color: var(--danger); }
 .btn.listen.fallback { border-style: dashed; }
+
+/* --- Deyimler ve mesleki İngilizce --- */
+.expression .badge { margin-left: var(--space-1); font-size: 0.75rem; font-weight: 500; vertical-align: middle; }
+.expression .ex-en { margin-top: var(--space-2) !important; }

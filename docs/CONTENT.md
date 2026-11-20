@@ -79,7 +79,8 @@ kullanılır. İsteğe bağlı alanlar: `ipa`, `syllables`, `frequency_rank`, `c
 
 ## Ders dosyası
 
-Zorunlu alanlar: `id, kind, level, title_tr, title_en, objective_tr, source, review_status, sections`.
+Zorunlu alanlar: `id, kind, level, title_tr, title_en, objective_tr, source, review_status`.
+Ders türüne göre ek alanlar aşağıdaki tabloda.
 Bağlantılar: `prerequisites`, `next`, `related` (ders kimlikleri), `vocabulary` (temel biçimler).
 
 Bölüm türleri: `explanation, usage, formula, positive, negative, question, examples,
@@ -87,6 +88,28 @@ correct_incorrect, common_mistakes, comparison, exceptions, daily_life, review_t
 Her bölümde `text_tr` (boş satırla ayrılmış paragraflar; `**kalın**` desteklenir), `table`
 (`headers`, `rows`) ve `examples` (`en`, `tr`, `note_tr`; yanlış kullanım için `wrong: true` +
 `correction`) bulunabilir.
+
+## Ders türleri ve alanlar
+
+Her ünitenin bir `track` alanı vardır (varsayılan `grammar`); ünitedeki derslerin `kind` değeri bununla
+aynı olmalıdır. Menüde her alan ayrı bir sayfada listelenir.
+
+| `kind` / `track` | Klasör | Zorunlu ek alanlar |
+|---|---|---|
+| `grammar` | `lessons/<seviye>/` | `explanation` ve `common_mistakes` bölümleri, en az bir örnek |
+| `reading` | `lessons/reading/` | `passage` (her satırda `en` + `tr`), en az bir soru |
+| `listening` | `lessons/listening/` | `passage` (`mode: dialogue` ise her satırda `speaker`), en az bir soru; ses `build_audio.py` ile üretilir |
+| `writing` | `lessons/writing/` | en az bir bölüm ve bir `written_answer` sorusu |
+| `pronunciation` | `lessons/pronunciation/` | en az bir bölüm ve `practice` öğeleri (`en`, `tr`, isteğe bağlı `ipa`, `note_tr`) |
+| `expressions` | `lessons/expressions/` | `expressions` listesi, en az bir soru |
+| `professional` | `lessons/professional/` | `expressions` listesi, en az bir soru |
+
+`expressions` öğeleri: `en`, `type` (`idiom, phrasal_verb, collocation, proverb, slang, phrase, term`),
+`tr`, `example: {en, tr}`, isteğe bağlı `note_tr` ve `style` (`neutral, informal, formal, slang`).
+Bir ders içinde aynı ifade iki kez geçemez. Her ifade için `build_audio.py` bir ses klibi üretir.
+
+Metin, telaffuz öğesi ya da ifade değiştirildiğinde eski ses kullanılmaz; `build_audio.py` yeniden
+çalıştırılana kadar arayüzde "ses dosyası yok" uyarısı görünür (bkz. `docs/AUDIO.md`).
 
 ## Sorular
 

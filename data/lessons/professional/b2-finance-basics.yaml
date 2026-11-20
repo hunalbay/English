@@ -1,0 +1,92 @@
+id: prof.b2.finance-basics
+kind: professional
+level: B2
+title_tr: "Finansın temel terimleri"
+title_en: Finance basics
+objective_tr: Gelir, gider, kâr, bütçe, nakit akışı, fatura ve vergi gibi temel finans terimlerini anlayıp iş yazışmalarında doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+related: [prof.b2.presentations]
+vocabulary: [profit, loss, budget, invoice, tax, loan]
+sections:
+  - kind: explanation
+    title_tr: Sık karışan terimler
+    text_tr: |-
+      **revenue** (hasılat, gelir): satışlardan elde edilen toplam para. **profit** (kâr): gelirden giderler düşüldükten sonra kalan. Yüksek gelir, yüksek kâr anlamına gelmez.
+
+      **turnover** İngiliz İngilizcesinde genellikle **ciro** (yıllık satış hasılatı) demektir; ama İK bağlamında **personel devri** (çalışanların işten ayrılma oranı) anlamına da gelir. Anlam bağlamdan çıkar.
+
+      **invoice** (fatura) ödeme isteyen belgedir; **receipt** (makbuz, fiş) ödemenin yapıldığını gösterir.
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"win money"** yalnızca piyango ya da yarışmada kullanılır; işten para kazanmak **"earn money"** ya da **"make money"**dir.
+
+      **"cost"** isim ve fiildir: "The **cost** is high." / "It **costs** 500 euros." **"expense"** ise bir giderin kendisidir; **"expenses"** çoğunlukla iş harcamalarını (yol, konaklama) anlatır.
+
+      **"economic"** (ekonomiyle ilgili) ile **"economical"** (tutumlu, ucuza gelen) farklıdır.
+expressions:
+  - {en: "revenue", type: term, tr: "hasılat, gelir", example: {en: "The company's revenue grew by 12% last year.", tr: "Şirketin hasılatı geçen yıl %12 arttı."}}
+  - {en: "profit", type: term, tr: "kâr", example: {en: "Revenue rose, but profit fell because costs increased.", tr: "Hasılat arttı ama maliyetler yükseldiği için kâr düştü."}}
+  - {en: "make a loss", type: collocation, tr: "zarar etmek", example: {en: "The shop made a loss in its first year.", tr: "Dükkân ilk yılında zarar etti."}}
+  - {en: "budget", type: term, tr: "bütçe", example: {en: "We're 10% over budget on this project.", tr: "Bu projede bütçeyi %10 aştık."}}
+  - {en: "cash flow", type: term, tr: "nakit akışı", example: {en: "Late payments from customers can cause cash flow problems.", tr: "Müşterilerin geç ödemeleri nakit akışı sorunlarına yol açabilir."}}
+  - {en: "invoice", type: term, tr: "fatura", example: {en: "Please send the invoice to our accounts department.", tr: "Lütfen faturayı muhasebe bölümümüze gönderin."}}
+  - {en: "receipt", type: term, tr: "makbuz, fiş", example: {en: "Keep your receipts so you can claim your expenses.", tr: "Masraflarınızı talep edebilmeniz için fişlerinizi saklayın."}}
+  - {en: "expenses", type: term, tr: "(iş) masrafları, harcamalar", example: {en: "The company pays travel expenses.", tr: "Şirket yol masraflarını karşılıyor."}}
+  - {en: "VAT", type: term, tr: "KDV (value added tax)", example: {en: "Do the prices include VAT?", tr: "Fiyatlara KDV dahil mi?"}}
+  - {en: "interest rate", type: term, tr: "faiz oranı", example: {en: "The bank raised interest rates again.", tr: "Banka faiz oranlarını yine artırdı."}}
+  - {en: "turnover", type: term, tr: "ciro (BrE); personel devri (İK)", note_tr: "Anlam bağlamdan anlaşılır.", example: {en: "Annual turnover reached 3 million euros.", tr: "Yıllık ciro 3 milyon avroya ulaştı."}}
+  - {en: "break even", type: phrasal_verb, tr: "başa baş noktasına gelmek (ne kâr ne zarar)", example: {en: "We expect to break even in the second year.", tr: "İkinci yılda başa baş noktasına gelmeyi bekliyoruz."}}
+questions:
+  - id: q.prof.b2.finance.01
+    type: nuance
+    difficulty: 4
+    prompt: "\"Revenue increased, but profit fell.\" Bu nasıl mümkün olabilir?"
+    options:
+      - "*Giderler gelirden daha hızlı arttı. :: Kâr = gelir − giderler."
+      - "Şirket daha az satış yaptı. :: Gelir arttığına göre satış düşmedi."
+      - "Revenue ve profit aynı şeydir. :: Farklı kavramlardır."
+      - "Bu mümkün değildir. :: Giderler artarsa mümkündür."
+    explanation: "revenue (hasılat) ≠ profit (kâr)."
+  - id: q.prof.b2.finance.02
+    type: matching
+    prompt: "Terimleri Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["invoice", "fatura"]
+      - ["receipt", "makbuz, fiş"]
+      - ["cash flow", "nakit akışı"]
+      - ["interest rate", "faiz oranı"]
+      - ["break even", "başa baş noktasına gelmek"]
+    explanation: "Temel finans terimleri."
+  - id: q.prof.b2.finance.03
+    type: word_in_context
+    difficulty: 4
+    context: "Staff turnover in the call centre is very high: almost 40% of employees leave within a year. This is expensive, because new staff need several weeks of training."
+    prompt: "\"Turnover\" bu metinde ne anlama gelir?"
+    options:
+      - "*Personel devri, çalışanların işten ayrılma oranı :: \"Staff\" ve \"leave\" sözcükleri İK anlamını gösteriyor."
+      - "Ciro, satış hasılatı :: Bu, finans bağlamındaki anlamıdır."
+      - "Kâr :: Kârdan söz edilmiyor."
+      - "Mal devir hızı :: Stoktan söz edilmiyor."
+    explanation: "Çok anlamlı terimlerde bağlam belirleyicidir."
+  - id: q.prof.b2.finance.04
+    type: error_correction
+    prompt: "Our company won a lot of money last year."
+    answers: ["Our company made a lot of money last year.", "Our company earned a lot of money last year.", "Our company made a big profit last year."]
+    explanation: "İşten para kazanmak: make / earn money."
+  - id: q.prof.b2.finance.05
+    type: fill_blank
+    prompt: "The project cost more than planned, so we are now 15% over ___."
+    answers: [budget]
+    explanation: "over budget = bütçeyi aşmış."
+  - id: q.prof.b2.finance.06
+    type: multiple_choice
+    difficulty: 3
+    prompt: "Yeni bir kafe ilk yıl ne kâr ne zarar etti. Hangisi bunu anlatır?"
+    options:
+      - "*It broke even. :: Başa baş noktası."
+      - "It made a loss. :: Zarar etti demektir."
+      - "It made a profit. :: Kâr etti demektir."
+      - "It was over budget. :: Bütçeyi aştı demektir."
+    explanation: "break even = ne kâr ne zarar."

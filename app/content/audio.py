@@ -84,7 +84,7 @@ def required_clips(content: "Content") -> dict[str, ClipSpec]:
             voices = passage_voices(lesson.passage.lines, lesson.passage.voices)
             key = lesson_key(lesson.id)
             clips[key] = ClipSpec(key, tuple((voice, line.en) for voice, line in zip(voices, lesson.passage.lines)))
-        for item in lesson.practice:
+        for item in (*lesson.practice, *lesson.expressions):
             key = phrase_key(item.en)
             clips[key] = ClipSpec(key, ((DEFAULT_VOICE, item.en),))
     return clips

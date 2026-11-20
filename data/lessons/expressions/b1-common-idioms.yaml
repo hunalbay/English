@@ -1,0 +1,90 @@
+id: expr.b1.common-idioms
+kind: expressions
+level: B1
+title_tr: "Sık kullanılan deyimler"
+title_en: Common idioms
+objective_tr: Günlük konuşmada sık duyulan deyimleri anlayıp uygun durumlarda kullanabilecek, deyimleri sözcük sözcük çevirmenin neden yanıltıcı olduğunu kavrayabileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [easy, ice, weather, expensive, nervous, eye]
+sections:
+  - kind: explanation
+    title_tr: Deyimler sözcük sözcük çevrilmez
+    text_tr: |-
+      Deyimin anlamı, içindeki sözcüklerin anlamlarının toplamı değildir. "It's **a piece of cake**" pasta hakkında değil, bir işin **çok kolay** olduğu hakkındadır.
+
+      Bazı İngilizce deyimlerin Türkçede birebir karşılığı vardır, bazılarının yoktur. Karşılık ararken anlamı ve durumu düşünün, sözcükleri değil.
+  - kind: usage
+    title_tr: Ne zaman kullanmalı?
+    text_tr: |-
+      Deyimler çoğunlukla **gündelik konuşmaya** aittir. Bir arkadaşla konuşurken doğaldır; resmî bir raporda ya da sınav kompozisyonunda genellikle uygun değildir.
+
+      Önce **anlamayı**, sonra yavaş yavaş **kullanmayı** hedefleyin. Bir deyimi yanlış durumda kullanmak, hiç kullanmamaktan daha çok dikkat çeker.
+expressions:
+  - {en: "a piece of cake", type: idiom, tr: "çok kolay, çocuk oyuncağı", style: informal, example: {en: "Don't worry about the test. It's a piece of cake.", tr: "Sınav için endişelenme. Çocuk oyuncağı."}}
+  - {en: "break the ice", type: idiom, tr: "buzları eritmek, ilk soğukluğu gidermek", example: {en: "He told a funny story to break the ice.", tr: "Buzları eritmek için komik bir hikâye anlattı."}}
+  - {en: "under the weather", type: idiom, tr: "keyifsiz, hafif hasta", style: informal, example: {en: "I'm feeling a bit under the weather today.", tr: "Bugün biraz keyifsizim."}}
+  - {en: "cost an arm and a leg", type: idiom, tr: "çok pahalı olmak, dudak uçuklatmak", style: informal, example: {en: "That new phone costs an arm and a leg.", tr: "O yeni telefon dudak uçuklatacak kadar pahalı."}}
+  - {en: "once in a blue moon", type: idiom, tr: "çok nadiren, kırk yılda bir", example: {en: "We only eat out once in a blue moon.", tr: "Kırk yılda bir dışarıda yemek yeriz."}}
+  - {en: "call it a day", type: idiom, tr: "o günlük paydos etmek, bugünlük bu kadar demek", style: informal, example: {en: "It's nearly eight. Let's call it a day.", tr: "Saat neredeyse sekiz. Bugünlük bu kadar diyelim."}}
+  - {en: "get cold feet", type: idiom, tr: "son anda cesaretini kaybetmek, korkup vazgeçmek", example: {en: "He was going to ask her to marry him, but he got cold feet.", tr: "Ona evlenme teklif edecekti ama son anda cesaretini kaybetti."}}
+  - {en: "keep an eye on", type: idiom, tr: "göz kulak olmak", example: {en: "Could you keep an eye on my bag while I buy a ticket?", tr: "Bilet alırken çantama göz kulak olur musun?"}}
+  - {en: "in the same boat", type: idiom, tr: "aynı durumda, aynı gemide", example: {en: "Don't feel bad about the exam. We're all in the same boat.", tr: "Sınav yüzünden kendini kötü hissetme. Hepimiz aynı durumdayız."}}
+  - {en: "hit the books", type: idiom, tr: "sıkı ders çalışmak", style: informal, example: {en: "I can't come tonight. I have to hit the books.", tr: "Bu akşam gelemem. Sıkı ders çalışmam lazım."}}
+  - {en: "on the tip of my tongue", type: idiom, tr: "dilimin ucunda", note_tr: "Türkçedeki deyimle birebir aynıdır.", example: {en: "What's his name? It's on the tip of my tongue.", tr: "Adı neydi? Dilimin ucunda."}}
+  - {en: "it's raining cats and dogs", type: idiom, tr: "bardaktan boşanırcasına yağmur yağıyor", style: informal, note_tr: "Günümüzde biraz eski moda sayılır ama yaygın biçimde bilinir.", example: {en: "Take an umbrella. It's raining cats and dogs.", tr: "Şemsiye al. Bardaktan boşanırcasına yağıyor."}}
+questions:
+  - id: q.expr.b1.idioms.01
+    type: multiple_choice
+    prompt: "\"The exam was a piece of cake.\" ne anlama gelir?"
+    options:
+      - "*Sınav çok kolaydı. :: a piece of cake = çok kolay."
+      - "Sınavdan sonra pasta yedik. :: Deyim sözcük sözcük anlaşılmaz."
+      - "Sınav çok zordu. :: Tam tersi."
+      - "Sınavın bir kısmını yaptım. :: \"Piece\" burada parça anlamında değil."
+    explanation: "Deyimin anlamı sözcüklerin toplamı değildir."
+  - id: q.expr.b1.idioms.02
+    type: matching
+    prompt: "Deyimleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["once in a blue moon", "çok nadiren"]
+      - ["under the weather", "keyifsiz, hafif hasta"]
+      - ["keep an eye on", "göz kulak olmak"]
+      - ["call it a day", "bugünlük paydos etmek"]
+    explanation: "Her deyimi bir durumla birlikte öğrenin."
+  - id: q.expr.b1.idioms.03
+    type: dialogue_completion
+    context: "A: Are you coming to the party tonight?\nB: I don't think so. I'm a bit ___. I think I've got a cold."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*under the weather :: Hafif hasta, keyifsiz."
+      - "in the same boat :: Aynı durumda olmak demektir."
+      - "a piece of cake :: Kolay demektir."
+      - "on the tip of my tongue :: Bir şeyi hatırlamaya çalışırken söylenir."
+    explanation: "under the weather = hafif hasta."
+  - id: q.expr.b1.idioms.04
+    type: word_in_context
+    difficulty: 3
+    context: "Everyone was quiet at the beginning of the meeting, so the manager asked each person to say something about their weekend to break the ice."
+    prompt: "\"to break the ice\" burada ne anlama gelir?"
+    options:
+      - "*Gerginliği gidermek ve insanları konuşturmak :: Tanımadık ortamlardaki ilk soğukluğu gidermek."
+      - "Toplantıyı bitirmek :: Bitirmek değil başlatmak için yapılıyor."
+      - "Soğuk bir içecek ikram etmek :: Deyim mecazidir."
+      - "Birini eleştirmek :: Eleştiri anlamı yok."
+    explanation: "Türkçede de \"buzları eritmek\" denir."
+  - id: q.expr.b1.idioms.05
+    type: nuance
+    difficulty: 3
+    prompt: "Bir iş başvurusu mektubunda hangisi uygun DEĞİLDİR?"
+    options:
+      - "*I'd hit the books and learn the job in no time. :: Gündelik deyimler resmî mektuba uymaz."
+      - "I am a quick learner. :: Uygun ve yansız."
+      - "I am willing to undertake further training. :: Uygun ve resmî."
+      - "I have three years of relevant experience. :: Uygun ve yansız."
+    explanation: "Deyimler çoğunlukla gündelik konuşmaya aittir."
+  - id: q.expr.b1.idioms.06
+    type: fill_blank
+    prompt: "That restaurant is lovely, but it costs an arm and a ___."
+    answers: [leg]
+    explanation: "cost an arm and a leg = çok pahalı olmak."

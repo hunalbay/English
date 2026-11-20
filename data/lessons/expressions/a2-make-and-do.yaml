@@ -1,0 +1,80 @@
+id: expr.a2.make-and-do
+kind: expressions
+level: A2
+title_tr: "Make mi, do mu? Sözcük birliktelikleri"
+title_en: Make and do
+objective_tr: Türkçede ikisi de \"yapmak\" olan make ve do fiillerinin hangi isimlerle birlikte kullanıldığını bilecek ve sık karıştırılan birliktelikleri doğru kurabileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [make, do, mistake, decision, homework, money]
+sections:
+  - kind: explanation
+    title_tr: Birliktelik (collocation) nedir?
+    text_tr: |-
+      Bazı sözcükler alışkanlıkla birlikte kullanılır. Ana dili İngilizce olanlar "**make** a mistake" der; "do a mistake" dil bilgisi kuralını bozmaz ama yanlış ve yabancı duyulur. Bu tür doğal eşleşmelere **birliktelik (collocation)** denir.
+
+      Türkçede "hata yapmak", "ödev yapmak", "karar vermek" dediğimiz için make ve do sıkça karışır.
+  - kind: usage
+    title_tr: Genel eğilim
+    text_tr: |-
+      **make** çoğunlukla bir şey **üretmeyi, ortaya çıkarmayı** anlatır: make a cake, make a plan, make noise, make money.
+
+      **do** çoğunlukla bir **işi, görevi, etkinliği** yerine getirmeyi anlatır: do homework, do the dishes, do exercise. Belirsiz etkinliklerde de do kullanılır: do something, do nothing, do your best.
+
+      Bu eğilimler her zaman tutmaz; en güvenli yol birliktelikleri kalıp olarak öğrenmektir.
+expressions:
+  - {en: "make a mistake", type: collocation, tr: "hata yapmak", example: {en: "Don't worry, everyone makes mistakes.", tr: "Endişelenme, herkes hata yapar."}}
+  - {en: "make a decision", type: collocation, tr: "karar vermek", example: {en: "We need to make a decision today.", tr: "Bugün bir karar vermemiz gerekiyor."}}
+  - {en: "make money", type: collocation, tr: "para kazanmak", example: {en: "He makes money by selling old furniture.", tr: "Eski mobilya satarak para kazanıyor."}}
+  - {en: "make friends", type: collocation, tr: "arkadaş edinmek", example: {en: "It's easy to make friends at university.", tr: "Üniversitede arkadaş edinmek kolaydır."}}
+  - {en: "make a phone call", type: collocation, tr: "telefon etmek", example: {en: "Excuse me, I need to make a phone call.", tr: "Affedersiniz, bir telefon etmem gerekiyor."}}
+  - {en: "make noise", type: collocation, tr: "gürültü yapmak", example: {en: "Please don't make noise. The baby is sleeping.", tr: "Lütfen gürültü yapmayın. Bebek uyuyor."}}
+  - {en: "do homework", type: collocation, tr: "ödev yapmak", example: {en: "I do my homework after dinner.", tr: "Ödevimi akşam yemeğinden sonra yaparım."}}
+  - {en: "do the shopping", type: collocation, tr: "alışveriş yapmak (günlük ihtiyaçlar)", example: {en: "My brother does the shopping on Saturdays.", tr: "Cumartesi günleri alışverişi erkek kardeşim yapar."}}
+  - {en: "do the dishes", type: collocation, tr: "bulaşık yıkamak", example: {en: "You cooked, so I'll do the dishes.", tr: "Sen yemek yaptın, bulaşıkları ben yıkarım."}}
+  - {en: "do exercise", type: collocation, tr: "egzersiz yapmak", example: {en: "I do exercise three times a week.", tr: "Haftada üç kez egzersiz yaparım."}}
+  - {en: "do your best", type: collocation, tr: "elinden gelenin en iyisini yapmak", example: {en: "It doesn't matter if you win. Just do your best.", tr: "Kazanman önemli değil. Sadece elinden gelenin en iyisini yap."}}
+  - {en: "do someone a favour", type: collocation, tr: "birine iyilik yapmak", note_tr: "Amerikan yazımı: favor.", example: {en: "Could you do me a favour and water my plants?", tr: "Bana bir iyilik yapıp çiçeklerimi sular mısın?"}}
+questions:
+  - id: q.expr.a2.make-do.01
+    type: multiple_choice
+    prompt: "I ___ a lot of mistakes in my first English exam."
+    options:
+      - "*made :: Birliktelik: make a mistake."
+      - "did :: \"Do a mistake\" doğal bir birliktelik değildir."
+      - "had :: Bu anlamda kullanılmaz."
+      - "took :: Bu anlamda kullanılmaz."
+    explanation: "make a mistake = hata yapmak."
+  - id: q.expr.a2.make-do.02
+    type: multiple_choice
+    prompt: "Who usually ___ the dishes in your house?"
+    options:
+      - "*does :: Birliktelik: do the dishes."
+      - "makes :: \"Make the dishes\" bulaşık yıkamak anlamına gelmez."
+      - "washes up :: Washes up'tan sonra \"the dishes\" gereksizdir ve yapı bozulur."
+      - "cleans up :: Doğal bir birliktelik değildir."
+    explanation: "do the dishes = bulaşık yıkamak."
+  - id: q.expr.a2.make-do.03
+    type: matching
+    prompt: "Sözcükleri doğru fiille eşleştirin."
+    pairs:
+      - ["a decision", "make (karar vermek)"]
+      - ["homework", "do (ödev yapmak)"]
+      - ["friends", "make (arkadaş edinmek)"]
+      - ["exercise", "do (egzersiz yapmak)"]
+    explanation: "make: üretme, ortaya çıkarma; do: iş, görev, etkinlik."
+  - id: q.expr.a2.make-do.04
+    type: error_correction
+    prompt: "Could you make me a favour?"
+    answers: ["Could you do me a favour?", "Could you do me a favor?"]
+    explanation: "do someone a favour."
+  - id: q.expr.a2.make-do.05
+    type: fill_blank
+    prompt: "Please don't ___ noise after ten o'clock."
+    answers: [make]
+    explanation: "make noise = gürültü yapmak."
+  - id: q.expr.a2.make-do.06
+    type: translation
+    prompt: "Bugün bir karar vermemiz gerekiyor."
+    answers: ["We need to make a decision today.", "We have to make a decision today.", "Today we need to make a decision.", "We must make a decision today."]
+    explanation: "make a decision = karar vermek."

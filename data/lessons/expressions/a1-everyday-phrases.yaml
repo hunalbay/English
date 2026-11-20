@@ -1,0 +1,90 @@
+id: expr.a1.everyday-phrases
+kind: expressions
+level: A1
+title_tr: "Günlük kalıplar: selamlaşma ve nezaket"
+title_en: Everyday phrases
+objective_tr: Selamlaşma, teşekkür, özür ve vedalaşmada en sık kullanılan kalıpları yerinde kullanabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.to-be-present]
+vocabulary: [hello, thank, sorry, welcome, excuse, please]
+sections:
+  - kind: explanation
+    title_tr: Neden kalıp olarak öğrenmeli?
+    text_tr: |-
+      Günlük konuşmanın büyük bölümü hazır kalıplardan oluşur. Bu kalıplar sözcük sözcük çevrildiğinde tuhaf durabilir; bu yüzden **bütün olarak** ve **hangi durumda söylendikleriyle** birlikte öğrenilmelidir.
+
+      Örneğin "How are you?" bir sağlık sorusu değil, çoğu zaman bir selamlamadır. Kısa ve olumlu bir cevap beklenir: "Fine, thanks. And you?"
+  - kind: usage
+    title_tr: Dikkat edilecek noktalar
+    text_tr: |-
+      **Excuse me** birinin dikkatini çekmek ya da yol istemek için, **Sorry** bir hata için özür dilemek ya da duymadığınızı belirtmek için kullanılır.
+
+      **You're welcome** "rica ederim" demektir; "hoş geldiniz" için **Welcome** tek başına kullanılır.
+
+      **Please** istek cümlelerinin sonuna eklendiğinde ricayı kibarlaştırır: "A coffee, **please**."
+expressions:
+  - {en: "How are you?", type: phrase, tr: "Nasılsın? / Nasılsınız?", note_tr: "Çoğu zaman yalnızca bir selamlamadır; uzun bir cevap beklenmez.", example: {en: "Hi Ayşe! How are you? — Fine, thanks. And you?", tr: "Merhaba Ayşe! Nasılsın? — İyiyim, teşekkürler. Ya sen?"}}
+  - {en: "Nice to meet you.", type: phrase, tr: "Tanıştığımıza memnun oldum.", note_tr: "Yalnızca ilk tanışmada söylenir. Sonraki karşılaşmalarda \"Nice to see you\" denir.", example: {en: "This is my colleague Mert. — Nice to meet you, Mert.", tr: "Bu iş arkadaşım Mert. — Tanıştığımıza memnun oldum Mert."}}
+  - {en: "Nice to see you again.", type: phrase, tr: "Seni yeniden görmek güzel.", example: {en: "Oh, hello! Nice to see you again.", tr: "Ah, merhaba! Seni yeniden görmek güzel."}}
+  - {en: "Excuse me.", type: phrase, tr: "Affedersiniz. / Pardon. (dikkat çekmek, yol istemek)", note_tr: "Bir şey sormadan ya da birinin önünden geçmeden önce söylenir.", example: {en: "Excuse me, where is the station?", tr: "Affedersiniz, istasyon nerede?"}}
+  - {en: "Sorry.", type: phrase, tr: "Özür dilerim. / Pardon.", note_tr: "Bir hata için ya da duymadığınızda (\"Sorry?\") kullanılır.", example: {en: "Sorry, I'm late. The bus didn't come.", tr: "Özür dilerim, geç kaldım. Otobüs gelmedi."}}
+  - {en: "Thank you very much.", type: phrase, tr: "Çok teşekkür ederim.", example: {en: "Here's your coffee. — Thank you very much.", tr: "Kahveniz. — Çok teşekkür ederim."}}
+  - {en: "You're welcome.", type: phrase, tr: "Rica ederim.", note_tr: "\"Hoş geldiniz\" anlamına gelmez.", example: {en: "Thanks for your help. — You're welcome.", tr: "Yardımın için teşekkürler. — Rica ederim."}}
+  - {en: "No problem.", type: phrase, tr: "Sorun değil. / Ne demek.", style: informal, example: {en: "Can you close the window? — No problem.", tr: "Pencereyi kapatır mısın? — Tabii, sorun değil."}}
+  - {en: "Never mind.", type: phrase, tr: "Boş ver. / Önemli değil.", style: informal, example: {en: "I forgot your book. — Never mind. Bring it tomorrow.", tr: "Kitabını unuttum. — Boş ver. Yarın getirirsin."}}
+  - {en: "See you later.", type: phrase, tr: "Sonra görüşürüz.", style: informal, example: {en: "I'm going home now. See you later!", tr: "Şimdi eve gidiyorum. Sonra görüşürüz!"}}
+  - {en: "Have a nice day.", type: phrase, tr: "İyi günler.", note_tr: "Vedalaşırken söylenir; selamlaşırken \"Good morning / Good afternoon\" kullanılır.", example: {en: "Here's your receipt. Have a nice day!", tr: "Fişiniz. İyi günler!"}}
+  - {en: "Welcome!", type: phrase, tr: "Hoş geldin! / Hoş geldiniz!", example: {en: "Welcome to our home! Please come in.", tr: "Evimize hoş geldiniz! Lütfen içeri buyurun."}}
+questions:
+  - id: q.expr.a1.everyday.01
+    type: dialogue_completion
+    context: "A: Thank you for the flowers!\nB: ___"
+    prompt: "B ne der?"
+    options:
+      - "*You're welcome. :: Teşekküre verilen standart cevap: rica ederim."
+      - "Welcome! :: Bu, \"hoş geldin\" demektir."
+      - "Excuse me. :: Dikkat çekmek ya da yol istemek için kullanılır."
+      - "Nice to meet you. :: Yalnızca ilk tanışmada söylenir."
+    explanation: "Thank you → You're welcome / No problem."
+  - id: q.expr.a1.everyday.02
+    type: multiple_choice
+    prompt: "Sokakta birine yol sormadan önce ne dersiniz?"
+    options:
+      - "*Excuse me, ... :: Birinin dikkatini kibarca çekmek için kullanılır."
+      - "Sorry, ... :: Bir hata için özür dilerken kullanılır."
+      - "You're welcome, ... :: Teşekküre verilen cevaptır."
+      - "Never mind, ... :: \"Boş ver\" anlamındadır."
+    explanation: "Excuse me = dikkat çekmek; Sorry = özür dilemek."
+  - id: q.expr.a1.everyday.03
+    type: matching
+    prompt: "Kalıpları Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["Nice to meet you.", "Tanıştığımıza memnun oldum."]
+      - ["See you later.", "Sonra görüşürüz."]
+      - ["Never mind.", "Boş ver."]
+      - ["Have a nice day.", "İyi günler."]
+    explanation: "Kalıplar bütün olarak öğrenilir."
+  - id: q.expr.a1.everyday.04
+    type: dialogue_completion
+    context: "A: Hi Can! How are you?\nB: ___"
+    prompt: "B'nin en doğal cevabı hangisidir?"
+    options:
+      - "*Fine, thanks. And you? :: Kısa ve olumlu cevap, ardından aynı soru."
+      - "I am thirty years old. :: Yaş sorulmadı."
+      - "You're welcome. :: Teşekküre verilen cevaptır."
+      - "Nice to meet you. :: Can ile zaten tanışıyorlar."
+    explanation: "\"How are you?\" sorusuna kısa bir cevap verilir ve soru karşı tarafa yöneltilir."
+  - id: q.expr.a1.everyday.05
+    type: fill_blank
+    prompt: "A coffee, ___. (kibar istek)"
+    answers: [please]
+    explanation: "Please isteği kibarlaştırır."
+  - id: q.expr.a1.everyday.06
+    type: true_false
+    instruction_tr: "Cümle doğru mu, yanlış mı?"
+    prompt: "\"Nice to meet you\" her karşılaşmada söylenebilir."
+    options:
+      - "Doğru :: Yalnızca ilk tanışmada söylenir."
+      - "*Yanlış :: İlk tanışmada \"Nice to meet you\", sonrakilerde \"Nice to see you\" denir."
+    explanation: "meet: tanışmak; see: görmek."

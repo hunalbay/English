@@ -374,6 +374,26 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   check(await page.getByText("otomatik olarak puanlamaz").isVisible(), "yazma için puanlama sınırı açıklanmadı");
   await shot("writing");
 
+  // 11e2) Deyimler ve mesleki İngilizce: ifade listesi, rozetler, sesler
+  await menu.getByRole("link", { name: "Deyimler ve kalıplar", exact: true }).click();
+  await heading("Deyimler ve kalıplar").waitFor();
+  await page.goto(url + "#/deyimler/B1");
+  await page.getByRole("link", { name: /Sık kullanılan deyimler/ }).click();
+  await heading(/Sık kullanılan deyimler/).waitFor();
+  check((await page.locator("#expressions .expression").count()) >= 10, "deyim listesi görünmüyor");
+  check(await page.locator("#expressions").getByText("gündelik").first().isVisible(), "üslup rozeti yok");
+  check((await page.locator("#expressions .btn.listen.fallback").count()) === 0, "deyimler için hazır ses yok");
+  check((await menu.locator('a[aria-current="page"]').innerText()) === "Deyimler ve kalıplar", "menüde Deyimler işaretli değil");
+  await shot("expressions");
+  await menu.getByRole("link", { name: "Mesleki İngilizce", exact: true }).click();
+  await heading("Mesleki İngilizce").waitFor();
+  check(await page.getByText("SAP SE ile bağlantılı değildir").isVisible(), "SAP açıklaması görünmüyor");
+  await page.goto(url + "#/mesleki/C1");
+  await page.getByRole("link", { name: /SAP projelerinde/ }).click();
+  await heading(/SAP projelerinde/).waitFor();
+  check(await page.locator("#expressions").getByText("masraf yeri", { exact: true }).isVisible(), "SAP terimleri görünmüyor");
+  check((await page.locator("ol li").count()) >= 5, "satınalma adımları liste olarak görünmüyor");
+
   // 11f) Kelime sayfasında hazır ses
   await page.goto(url + "#/kelime/word.teacher");
   await heading("teacher").waitFor();

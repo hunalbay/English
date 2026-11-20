@@ -1,0 +1,110 @@
+id: prof.c1.negotiation
+kind: professional
+level: C1
+title_tr: "Müzakere"
+title_en: Negotiation
+objective_tr: Bir müzakerede teklif ve karşı teklif sunabilecek, koşullu ödün verebilecek, sınırlarınızı belirtebilecek ve anlaşmayı kibar ama kararlı bir dille kapatabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [prof.b2.meetings]
+related: [gram.b2.conditional-alternatives, gram.c1.hedging]
+vocabulary: [offer, deal, compromise, term, condition, flexible]
+sections:
+  - kind: explanation
+    title_tr: Koşullu dil
+    text_tr: |-
+      Müzakerede doğrudan "Hayır" ya da "Bunu istiyoruz" demek pazarlık alanını daraltır. Bunun yerine **koşullu yapılar** kullanılır; bunlar kapıyı açık tutar:
+
+      "**If** you **could** increase the order, we **would** be able to offer a better price." · "We **might** consider that, **provided that** delivery is within two weeks."
+
+      **Would, could, might** cümleyi bir teklif ya da olasılık hâline getirir; kesin bir söz vermeden konuşmayı ilerletir.
+  - kind: usage
+    title_tr: Müzakerenin aşamaları
+    table:
+      headers: ["Aşama", "Kalıplar"]
+      rows:
+        - ["Teklif", "We'd like to propose ... · Our offer is ..."]
+        - ["Açıklama isteme", "Could you clarify what you mean by ...? · What exactly is included?"]
+        - ["Koşullu ödün", "If you ..., we could ... · We'd be willing to ... provided that ..."]
+        - ["Sınır koyma", "I'm afraid that's not something we can accept. · That's our final offer."]
+        - ["Uzlaşma", "Shall we meet halfway? · I think we have a deal."]
+expressions:
+  - {en: "make a counter-offer", type: collocation, tr: "karşı teklif sunmak", example: {en: "They rejected our price and made a counter-offer.", tr: "Fiyatımızı reddedip karşı teklif sundular."}}
+  - {en: "meet someone halfway", type: idiom, tr: "orta yolda buluşmak", example: {en: "You want 20%, we offered 10%. Shall we meet halfway at 15%?", tr: "Siz %20 istiyorsunuz, biz %10 önerdik. %15'te orta yolda buluşalım mı?"}}
+  - {en: "make a concession", type: collocation, tr: "taviz vermek, ödün vermek", example: {en: "We're prepared to make a concession on the delivery date.", tr: "Teslim tarihi konusunda ödün vermeye hazırız."}}
+  - {en: "the bottom line", type: idiom, tr: "son nokta, asıl mesele; (finansta) net kâr", example: {en: "The bottom line is that we can't go below 40 euros per unit.", tr: "Asıl mesele şu: birim başına 40 avronun altına inemeyiz."}}
+  - {en: "a deal-breaker", type: term, tr: "anlaşmayı bozacak koşul", example: {en: "A three-year contract is a deal-breaker for us.", tr: "Üç yıllık bir sözleşme bizim için anlaşmayı bozar."}}
+  - {en: "a win-win situation", type: collocation, tr: "iki taraf için de kazançlı durum", example: {en: "A longer contract with a lower price would be a win-win situation.", tr: "Daha düşük fiyatlı daha uzun bir sözleşme iki taraf için de kazançlı olur."}}
+  - {en: "non-negotiable", type: term, tr: "pazarlığa kapalı", example: {en: "The safety standards are non-negotiable.", tr: "Güvenlik standartları pazarlığa kapalı."}}
+  - {en: "a ballpark figure", type: idiom, tr: "yaklaşık rakam, kabaca tahmin", style: informal, example: {en: "Can you give me a ballpark figure before we get the full quote?", tr: "Tam teklifi almadan önce bana yaklaşık bir rakam verebilir misiniz?"}}
+  - {en: "be on the same page", type: idiom, tr: "aynı şeyi anlamak, mutabık olmak", style: informal, example: {en: "Before we continue, let's make sure we're on the same page.", tr: "Devam etmeden önce aynı şeyi anladığımızdan emin olalım."}}
+  - {en: "terms and conditions", type: term, tr: "şartlar ve koşullar", example: {en: "Please read the terms and conditions carefully.", tr: "Lütfen şartları ve koşulları dikkatle okuyun."}}
+  - {en: "close the deal", type: collocation, tr: "anlaşmayı bağlamak", example: {en: "We closed the deal after three rounds of talks.", tr: "Üç tur görüşmeden sonra anlaşmayı bağladık."}}
+  - {en: "walk away", type: phrasal_verb, tr: "masadan kalkmak, anlaşmadan vazgeçmek", example: {en: "If they don't lower the price, we'll walk away.", tr: "Fiyatı düşürmezlerse masadan kalkarız."}}
+questions:
+  - id: q.prof.c1.nego.01
+    type: multiple_choice
+    difficulty: 4
+    prompt: "Bir müzakerede hangi cümle pazarlık alanını en çok açık tutar?"
+    options:
+      - "*If you could commit to a two-year contract, we might be able to lower the price. :: Koşullu ve olasılık bildiren bir teklif."
+      - "We won't lower the price. :: Kapıyı kapatır."
+      - "Lower your price or we leave. :: Tehdit gibi duyulur."
+      - "Your price is too high. :: Bir öneri içermez."
+    explanation: "If ... could ..., we might ...: koşullu ödün."
+    lessons: [gram.b2.conditional-alternatives]
+  - id: q.prof.c1.nego.02
+    type: matching
+    prompt: "İfadeleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["meet halfway", "orta yolda buluşmak"]
+      - ["a deal-breaker", "anlaşmayı bozacak koşul"]
+      - ["non-negotiable", "pazarlığa kapalı"]
+      - ["a ballpark figure", "yaklaşık rakam"]
+      - ["walk away", "anlaşmadan vazgeçmek"]
+    explanation: "Müzakere dili."
+  - id: q.prof.c1.nego.03
+    type: dialogue_completion
+    difficulty: 5
+    context: "Supplier: Our price is 50 euros per unit.\nBuyer: That's higher than we expected. ___"
+    prompt: "Alıcı kibar ama kararlı bir karşı teklifle nasıl devam eder?"
+    options:
+      - "*We'd be willing to order 5,000 units if you could bring it down to 44. :: Koşullu karşı teklif."
+      - "That's ridiculous. :: Saldırgan."
+      - "OK, we accept. :: Pazarlık yapmadan kabul ediyor."
+      - "We are on the same page. :: Anlaşma olmadığı hâlde mutabakat bildiriyor."
+    explanation: "Karşı teklif: koşul + öneri."
+  - id: q.prof.c1.nego.04
+    type: word_in_context
+    difficulty: 5
+    context: "\"We've discussed delivery times, payment terms and training. But the bottom line is this: unless the price drops by at least ten percent, we cannot sign.\""
+    prompt: "\"The bottom line\" burada ne anlama gelir?"
+    options:
+      - "*Asıl mesele, en belirleyici nokta :: Konuşmacı her şeyi tek bir koşula indiriyor."
+      - "Net kâr :: Finans anlamı; burada kullanılmıyor."
+      - "Sözleşmenin son satırı :: Sözcük anlamı."
+      - "En düşük fiyat :: Fiyat söz konusu ama deyimin anlamı bu değil."
+    explanation: "bottom line = asıl mesele (bağlama göre net kâr da olabilir)."
+  - id: q.prof.c1.nego.05
+    type: sentence_completion
+    difficulty: 4
+    prompt: "We could offer free delivery, provided that ___"
+    options:
+      - "*you place the order before the end of the month. :: provided that + Present Simple (gelecek anlamı)."
+      - "you will place the order before the end of the month. :: Koşul bağlacından sonra will gelmez."
+      - "you placed the order before the end of the month. :: Bu yapı hayali bir durum anlatır; teklif gerçek."
+      - "placing the order before the end of the month. :: provided that'tan sonra cümle gerekir."
+    explanation: "provided that + Present Simple."
+    lessons: [gram.b2.conditional-alternatives]
+  - id: q.prof.c1.nego.06
+    type: written_answer
+    difficulty: 5
+    prompt: "Bir tedarikçi birim fiyatı 30 avro olarak öneriyor; siz 25 avro hedefliyorsunuz. 3–4 cümleyle kibar ama kararlı bir karşı teklif yazın: bir gerekçe verin, koşullu bir ödün sunun ve kendi sınırınızı belirtin."
+    model_answers:
+      - "Thank you for your offer. However, 30 euros is above our budget, and we have received lower quotes from other suppliers. If you could reduce the price to 25 euros, we would be willing to sign a two-year contract and pay within 15 days. I'm afraid we cannot go above 27 euros."
+    checklist:
+      - "Teklif için teşekkür ederek kibar bir girişle başladım."
+      - "Karşı teklifimi bir gerekçeyle destekledim."
+      - "Koşullu bir ödün sundum (If you could ..., we would ...)."
+      - "Sınırımı kibar ama açık biçimde belirttim (I'm afraid ...)."
+    explanation: "Karşı teklif: teşekkür → gerekçe → koşullu ödün → sınır."

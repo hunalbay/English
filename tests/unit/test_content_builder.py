@@ -291,3 +291,30 @@ def test_writing_lesson_requires_written_task(data_copy):
         doc["questions"] = [q for q in doc["questions"] if q["type"] != "written_answer"]
     _edit(data_copy / "lessons" / "writing" / "a1-introducing-yourself.yaml", change)
     assert "en az bir yazılı cevap sorusu" in _errors(data_copy)
+
+
+def test_expression_lesson_requires_items(data_copy):
+    _edit(data_copy / "lessons" / "expressions" / "b1-common-idioms.yaml", lambda d: d.pop("expressions"))
+    assert "ifade / terim listesi (expressions) zorunludur" in _errors(data_copy)
+
+
+def test_expression_items_need_example_translation(data_copy):
+    def change(doc):
+        doc["expressions"][0]["example"].pop("tr")
+    _edit(data_copy / "lessons" / "expressions" / "b1-common-idioms.yaml", change)
+    assert "expressions.0.example.tr" in _errors(data_copy)
+
+
+def test_duplicate_expression_rejected(data_copy):
+    def change(doc):
+        doc["expressions"].append(dict(doc["expressions"][0], en=doc["expressions"][0]["en"].upper()))
+    _edit(data_copy / "lessons" / "expressions" / "b1-common-idioms.yaml", change)
+    assert "yinelenen öğe" in _errors(data_copy)
+
+
+def test_expressions_not_allowed_in_grammar_lessons(data_copy):
+    def change(doc):
+        doc["expressions"] = [{"en": "hello", "type": "phrase", "tr": "merhaba",
+                               "example": {"en": "Hello!", "tr": "Merhaba!"}}]
+    _edit(data_copy / "lessons" / "a1" / "to-be-present.yaml", change)
+    assert "yalnızca kalıp ve mesleki" in _errors(data_copy)

@@ -1,0 +1,82 @@
+id: expr.b2.phrasal-verbs-advanced
+kind: expressions
+level: B2
+title_tr: "İleri öbek fiiller"
+title_en: Advanced phrasal verbs
+objective_tr: Soyut anlamlı öbek fiilleri iş, ilişkiler ve sorun çözme bağlamlarında kullanabilecek, birden fazla anlamı olan öbek fiillerde doğru anlamı bağlamdan çıkarabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.b1.phrasal-verbs-work-travel]
+vocabulary: [idea, problem, tolerate, cause, reduce, notice]
+sections:
+  - kind: explanation
+    title_tr: Soyut anlamlar
+    text_tr: |-
+      B2 düzeyindeki öbek fiillerin çoğu **soyut** anlamlar taşır: bir fikir bulmak (**come up with**), bir şeye katlanmak (**put up with**), bir konuyu açmak (**bring up**).
+
+      Birçoğunun **birden fazla anlamı** vardır. **bring up** hem "(çocuk) yetiştirmek" hem "(konu) açmak" demektir; doğru anlam yalnızca bağlamdan anlaşılır.
+  - kind: usage
+    title_tr: Resmî karşılıklar
+    text_tr: |-
+      Raporlarda ve resmî e-postalarda öbek fiillerin yerine çoğu zaman tek sözcük kullanılır:
+
+      **come up with → devise / propose** · **look into → investigate** · **figure out → determine** · **cut down on → reduce** · **put up with → tolerate** · **come across → encounter**
+expressions:
+  - {en: "come up with", type: phrasal_verb, tr: "(fikir, çözüm) bulmak, ortaya atmak", example: {en: "We need to come up with a better plan.", tr: "Daha iyi bir plan bulmamız gerekiyor."}}
+  - {en: "put up with", type: phrasal_verb, tr: "katlanmak, tahammül etmek", example: {en: "I can't put up with this noise any longer.", tr: "Bu gürültüye daha fazla katlanamam."}}
+  - {en: "look into", type: phrasal_verb, tr: "araştırmak, incelemek", example: {en: "Thank you for your complaint. We will look into the matter.", tr: "Şikâyetiniz için teşekkür ederiz. Konuyu inceleyeceğiz."}}
+  - {en: "bring up", type: phrasal_verb, tr: "(konu) açmak; (çocuk) yetiştirmek", example: {en: "She brought up an interesting point in the meeting.", tr: "Toplantıda ilginç bir konuya değindi."}}
+  - {en: "figure out", type: phrasal_verb, tr: "çözmek, anlamak, kafasında oturtmak", style: informal, example: {en: "I can't figure out how this machine works.", tr: "Bu makinenin nasıl çalıştığını çözemiyorum."}}
+  - {en: "make up for", type: phrasal_verb, tr: "telafi etmek, açığını kapatmak", example: {en: "I'll work on Saturday to make up for the lost time.", tr: "Kaybedilen zamanı telafi etmek için cumartesi çalışacağım."}}
+  - {en: "go through", type: phrasal_verb, tr: "(zor bir dönem) yaşamak; (belgeyi) gözden geçirmek", example: {en: "Let's go through the contract together before you sign it.", tr: "İmzalamadan önce sözleşmeyi birlikte gözden geçirelim."}}
+  - {en: "cut down on", type: phrasal_verb, tr: "azaltmak", example: {en: "The doctor told me to cut down on salt.", tr: "Doktor tuzu azaltmamı söyledi."}}
+  - {en: "come across", type: phrasal_verb, tr: "rastlamak; (bir izlenim) bırakmak", example: {en: "I came across an old photo of my grandparents.", tr: "Büyükannemle büyükbabamın eski bir fotoğrafına rastladım."}}
+  - {en: "stand out", type: phrasal_verb, tr: "göze çarpmak, öne çıkmak", example: {en: "Her application stood out from all the others.", tr: "Başvurusu diğerlerinin hepsinden öne çıkıyordu."}}
+  - {en: "get away with", type: phrasal_verb, tr: "(yaptığı kötü bir şeyin) yanına kâr kalması, paçayı kurtarmak", example: {en: "He cheated in the exam and got away with it.", tr: "Sınavda kopya çekti ve paçayı kurtardı."}}
+  - {en: "back up", type: phrasal_verb, tr: "desteklemek; (dosyaları) yedeklemek", example: {en: "Always back up your files before you update the system.", tr: "Sistemi güncellemeden önce dosyalarınızı mutlaka yedekleyin."}}
+questions:
+  - id: q.expr.b2.pv-adv.01
+    type: multiple_choice
+    difficulty: 3
+    prompt: "The neighbours play loud music every night. I don't know how much longer I can ___ it."
+    options:
+      - "*put up with :: Katlanmak, tahammül etmek."
+      - "come up with :: Fikir bulmak demektir."
+      - "make up for :: Telafi etmek demektir."
+      - "come across :: Rastlamak demektir."
+    explanation: "put up with = tolerate."
+  - id: q.expr.b2.pv-adv.02
+    type: word_in_context
+    difficulty: 4
+    context: "My grandparents brought me up after my parents moved abroad for work. Years later, I never brought up the subject with them, because I knew it still made them sad."
+    prompt: "Metinde \"bring up\" sırasıyla hangi anlamlarda kullanılmıştır?"
+    options:
+      - "*Önce \"yetiştirmek\", sonra \"(konu) açmak\" :: Aynı öbek fiilin iki farklı anlamı."
+      - "İki kez de \"yetiştirmek\" :: İkinci kullanımda nesne \"the subject\"; konu açmak anlamında."
+      - "İki kez de \"(konu) açmak\" :: İlk kullanımda nesne \"me\"; yetiştirmek anlamında."
+      - "Önce \"kaldırmak\", sonra \"hatırlamak\" :: Bu anlamlar bağlama uymuyor."
+    explanation: "Çok anlamlı öbek fiillerde nesne ve bağlam anlamı belirler."
+  - id: q.expr.b2.pv-adv.03
+    type: matching
+    prompt: "Öbek fiilleri resmî karşılıklarıyla eşleştirin."
+    pairs:
+      - ["look into", "investigate"]
+      - ["cut down on", "reduce"]
+      - ["come up with", "devise"]
+      - ["come across", "encounter"]
+    explanation: "Resmî yazıda tek sözcüklü karşılıklar tercih edilir."
+  - id: q.expr.b2.pv-adv.04
+    type: error_correction
+    prompt: "I bought her flowers to make up her late birthday present."
+    answers: ["I bought her flowers to make up for her late birthday present.", "I bought her flowers to make up for the late birthday present."]
+    explanation: "make up for = telafi etmek (for gerekir)."
+  - id: q.expr.b2.pv-adv.05
+    type: fill_blank
+    prompt: "Her bright red coat made her stand ___ in the crowd."
+    answers: ["out"]
+    explanation: "stand out = göze çarpmak."
+  - id: q.expr.b2.pv-adv.06
+    type: translation
+    prompt: "Daha iyi bir çözüm bulmamız gerekiyor."
+    answers: ["We need to come up with a better solution.", "We have to come up with a better solution.", "We need to find a better solution.", "We must come up with a better solution."]
+    explanation: "come up with + isim."

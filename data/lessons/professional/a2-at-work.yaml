@@ -1,0 +1,82 @@
+id: prof.a2.at-work
+kind: professional
+level: A2
+title_tr: "İş yerinde temel sözcükler"
+title_en: Basic workplace English
+objective_tr: İş yeri, görevler, çalışma saatleri ve izinlerle ilgili temel sözcük ve kalıpları kullanarak işinizi kısaca anlatabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.a1.present-simple]
+vocabulary: [colleague, manager, department, salary, contract, shift]
+sections:
+  - kind: explanation
+    title_tr: İşinizi anlatmak
+    text_tr: |-
+      İş hayatında en sık sorulan sorular basittir: **What do you do?** (Ne iş yapıyorsunuz?) ve **Where do you work?** (Nerede çalışıyorsunuz?).
+
+      Cevap verirken mesleğinizden önce **a / an** kullanmayı unutmayın: "I'm **an** accountant." Departman ve şirket için **in** ve **for** kullanılır: "I work **in** the finance department **for** a logistics company."
+  - kind: usage
+    title_tr: Kalıplar
+    table:
+      headers: ["Amaç", "Kalıp"]
+      rows:
+        - ["Meslek", "I'm a / an ... · I work as a / an ..."]
+        - ["Şirket", "I work for ... (company)"]
+        - ["Bölüm", "I work in the ... department"]
+        - ["Sorumluluk", "I'm responsible for ... · I'm in charge of ..."]
+        - ["Çalışma saatleri", "I work from nine to six. · I work shifts."]
+        - ["İzin", "I'm off today. · I'm on holiday next week. · I'm off sick."]
+expressions:
+  - {en: "colleague", type: term, tr: "iş arkadaşı, meslektaş", example: {en: "I have lunch with my colleagues every day.", tr: "Her gün iş arkadaşlarımla öğle yemeği yerim."}}
+  - {en: "manager", type: term, tr: "müdür, yönetici", example: {en: "My manager is very supportive.", tr: "Müdürüm çok destekleyicidir."}}
+  - {en: "department", type: term, tr: "bölüm, departman", example: {en: "She works in the sales department.", tr: "Satış bölümünde çalışıyor."}}
+  - {en: "work for", type: phrase, tr: "(bir şirkette) çalışmak", note_tr: "Şirket için \"for\", bölüm için \"in\" kullanılır.", example: {en: "I work for an insurance company in Ankara.", tr: "Ankara'da bir sigorta şirketinde çalışıyorum."}}
+  - {en: "be responsible for", type: phrase, tr: "...-den sorumlu olmak", example: {en: "I'm responsible for customer orders.", tr: "Müşteri siparişlerinden sorumluyum."}}
+  - {en: "deadline", type: term, tr: "son teslim tarihi", example: {en: "The deadline for the report is Friday.", tr: "Raporun son teslim tarihi cuma."}}
+  - {en: "salary", type: term, tr: "maaş (aylık / yıllık)", example: {en: "The salary is paid on the last day of the month.", tr: "Maaş ayın son günü ödenir."}}
+  - {en: "contract", type: term, tr: "sözleşme", example: {en: "I have a one-year contract.", tr: "Bir yıllık sözleşmem var."}}
+  - {en: "work shifts", type: phrase, tr: "vardiyalı çalışmak", example: {en: "Nurses often work shifts, including nights.", tr: "Hemşireler gece dahil sık sık vardiyalı çalışır."}}
+  - {en: "day off", type: term, tr: "izin günü", example: {en: "Tomorrow is my day off.", tr: "Yarın izin günüm."}}
+  - {en: "be off sick", type: phrase, tr: "hastalık izninde olmak", style: informal, example: {en: "Murat is off sick today, so I'm answering his calls.", tr: "Murat bugün hastalık izninde, telefonlarına ben bakıyorum."}}
+  - {en: "work from home", type: phrase, tr: "evden çalışmak", example: {en: "I work from home on Mondays and Fridays.", tr: "Pazartesi ve cuma günleri evden çalışırım."}}
+questions:
+  - id: q.prof.a2.work.01
+    type: multiple_choice
+    prompt: "I work ___ a big software company."
+    options:
+      - "*for :: Şirket için: work for."
+      - "in :: \"in\" bölüm ya da şehir için kullanılır."
+      - "at the :: \"at the\" + şirket adı olurdu; burada \"a big ... company\" var."
+      - "to :: Bu anlamda kullanılmaz."
+    explanation: "work for + şirket; work in + bölüm."
+  - id: q.prof.a2.work.02
+    type: error_correction
+    prompt: "I am accountant in the finance department."
+    answers: ["I am an accountant in the finance department.", "I'm an accountant in the finance department."]
+    explanation: "Meslekten önce a / an."
+    lessons: [gram.a1.articles-a-an]
+  - id: q.prof.a2.work.03
+    type: matching
+    prompt: "Terimleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["deadline", "son teslim tarihi"]
+      - ["colleague", "iş arkadaşı"]
+      - ["day off", "izin günü"]
+      - ["salary", "maaş"]
+      - ["contract", "sözleşme"]
+    explanation: "İş yerinin temel sözcükleri."
+  - id: q.prof.a2.work.04
+    type: dialogue_completion
+    context: "A: Is Elif in the office today?\nB: No, she's ___. She has the flu."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*off sick :: Hastalık izninde."
+      - "on holiday :: Tatildedir; hasta olduğunu söylüyor."
+      - "working shifts :: Vardiyalı çalışmak demektir."
+      - "in charge :: Sorumlu olmak demektir."
+    explanation: "be off sick = hastalık izninde olmak."
+  - id: q.prof.a2.work.05
+    type: translation
+    prompt: "Müşteri siparişlerinden sorumluyum."
+    answers: ["I'm responsible for customer orders.", "I am responsible for customer orders.", "I'm in charge of customer orders.", "I am in charge of customer orders."]
+    explanation: "be responsible for / be in charge of."

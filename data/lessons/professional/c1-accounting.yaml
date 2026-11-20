@@ -1,0 +1,99 @@
+id: prof.c1.accounting
+kind: professional
+level: C1
+title_tr: "Muhasebe terimleri"
+title_en: Accounting terminology
+objective_tr: Finansal tablolar, kayıt, borç-alacak, tahakkuk, amortisman ve mutabakat gibi muhasebe terimlerini İngilizce raporlarda ve yazışmalarda doğru kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [prof.b2.finance-basics]
+vocabulary: [balance, statement, audit, asset, liability, equity]
+sections:
+  - kind: explanation
+    title_tr: Terim karşılıkları üzerine not
+    text_tr: |-
+      Muhasebe terimlerinin Türkçe karşılıkları kuruma, standarda (TFRS, Tek Düzen Hesap Planı) ve yazılıma göre değişebilir. Burada verilen karşılıklar **en yaygın** olanlardır. Kendi kurumunuzun terim listesini esas alın.
+
+      İngilizcede de iki gelenek vardır: İngiliz kullanımı (**turnover, stock, debtors**) ve Amerikan / uluslararası kullanım (**revenue, inventory, accounts receivable**). Uluslararası şirketlerde ikinci grup daha yaygındır.
+  - kind: comparison
+    title_tr: Temel finansal tablolar
+    table:
+      headers: ["İngilizce", "Türkçe", "Ne gösterir?"]
+      rows:
+        - ["balance sheet", "bilanço", "belirli bir tarihteki varlıklar, borçlar ve özkaynak"]
+        - ["income statement / P&L", "gelir tablosu / kâr-zarar tablosu", "bir dönemdeki gelir, gider ve kâr"]
+        - ["cash flow statement", "nakit akış tablosu", "nakdin nereden geldiği, nereye gittiği"]
+        - ["trial balance", "mizan", "hesapların borç ve alacak toplamları"]
+  - kind: usage
+    title_tr: Debit ve credit
+    text_tr: |-
+      **debit** = borç (sol taraf), **credit** = alacak (sağ taraf). Her kayıtta borç toplamı alacak toplamına eşittir (**double-entry bookkeeping**, çift taraflı kayıt).
+
+      Dikkat: günlük dilde "credit" olumlu, "debit" olumsuz bir çağrışım taşıyabilir; muhasebede ise yalnızca **taraf** bildirirler. Bir varlık hesabı borçlandırıldığında **artar**, alacaklandırıldığında **azalır**.
+expressions:
+  - {en: "balance sheet", type: term, tr: "bilanço", example: {en: "The balance sheet shows total assets of 4.2 million euros.", tr: "Bilanço 4,2 milyon avroluk toplam varlık gösteriyor."}}
+  - {en: "income statement", type: term, tr: "gelir tablosu (P&L: kâr-zarar tablosu)", example: {en: "Operating expenses are shown in the income statement.", tr: "Faaliyet giderleri gelir tablosunda gösterilir."}}
+  - {en: "general ledger", type: term, tr: "büyük defter, defter-i kebir", example: {en: "Every transaction is recorded in the general ledger.", tr: "Her işlem büyük deftere kaydedilir."}}
+  - {en: "journal entry", type: term, tr: "yevmiye kaydı", example: {en: "Please post a journal entry to correct the error.", tr: "Hatayı düzeltmek için lütfen bir yevmiye kaydı atın."}}
+  - {en: "debit / credit", type: term, tr: "borç / alacak", example: {en: "Debit the bank account and credit sales revenue.", tr: "Banka hesabını borçlandırın, satış gelirini alacaklandırın."}}
+  - {en: "accounts receivable", type: term, tr: "ticari alacaklar (alıcılar)", example: {en: "Accounts receivable increased because customers are paying later.", tr: "Müşteriler daha geç ödediği için ticari alacaklar arttı."}}
+  - {en: "accounts payable", type: term, tr: "ticari borçlar (satıcılar)", example: {en: "Accounts payable processes supplier invoices.", tr: "Satıcılar birimi tedarikçi faturalarını işler."}}
+  - {en: "accrual", type: term, tr: "tahakkuk", example: {en: "We booked an accrual for December's electricity bill.", tr: "Aralık ayı elektrik faturası için tahakkuk kaydı yaptık."}}
+  - {en: "depreciation", type: term, tr: "amortisman", example: {en: "The machines are depreciated over ten years.", tr: "Makineler on yılda amorti edilir."}}
+  - {en: "reconciliation", type: term, tr: "mutabakat", example: {en: "The bank reconciliation showed a difference of 300 euros.", tr: "Banka mutabakatı 300 avroluk bir fark gösterdi."}}
+  - {en: "write off", type: phrasal_verb, tr: "(alacağı) zarar yazmak, aktiften silmek", example: {en: "The debt was written off because the customer went bankrupt.", tr: "Müşteri iflas ettiği için alacak zarar yazıldı."}}
+  - {en: "fiscal year", type: term, tr: "mali yıl, hesap dönemi", note_tr: "BrE: financial year.", example: {en: "Our fiscal year ends on 31 March.", tr: "Mali yılımız 31 Mart'ta sona erer."}}
+  - {en: "audit", type: term, tr: "denetim; denetlemek", example: {en: "The external auditors will audit the accounts in February.", tr: "Bağımsız denetçiler hesapları şubatta denetleyecek."}}
+  - {en: "equity", type: term, tr: "özkaynak", example: {en: "Total assets equal liabilities plus equity.", tr: "Toplam varlıklar, borçlar ile özkaynağın toplamına eşittir."}}
+questions:
+  - id: q.prof.c1.acc.01
+    type: matching
+    prompt: "Terimleri Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["balance sheet", "bilanço"]
+      - ["trial balance", "mizan"]
+      - ["accrual", "tahakkuk"]
+      - ["depreciation", "amortisman"]
+      - ["reconciliation", "mutabakat"]
+    explanation: "Muhasebenin temel terimleri."
+  - id: q.prof.c1.acc.02
+    type: multiple_choice
+    difficulty: 4
+    prompt: "Müşterilerin şirkete olan borçları hangi kalemde görünür?"
+    options:
+      - "*accounts receivable :: Şirketin tahsil edeceği alacaklar."
+      - "accounts payable :: Şirketin tedarikçilere borçları."
+      - "equity :: Özkaynak."
+      - "depreciation :: Amortisman."
+    explanation: "receivable = alınacak; payable = ödenecek."
+  - id: q.prof.c1.acc.03
+    type: fill_blank
+    prompt: "Total assets = liabilities + ___"
+    answers: [equity]
+    explanation: "Temel muhasebe denklemi."
+  - id: q.prof.c1.acc.04
+    type: word_in_context
+    difficulty: 5
+    context: "After two years of unsuccessful attempts to collect the money, the finance director decided to write off the customer's debt of 18,000 euros."
+    prompt: "\"Write off\" burada ne anlama gelir?"
+    options:
+      - "*Tahsil edilemeyen alacağı zarar yazmak :: Alacak artık varlık olarak tutulmaz."
+      - "Müşteriye bir mektup yazmak :: Sözcük anlamı; burada terim anlamı kastediliyor."
+      - "Borcu yeniden yapılandırmak :: Yapılandırma değil, silme."
+      - "Alacağı mahkemeye taşımak :: Hukuki işlemden söz edilmiyor."
+    explanation: "write off = aktiften silmek, zarar yazmak."
+  - id: q.prof.c1.acc.05
+    type: nuance
+    difficulty: 5
+    prompt: "Çift taraflı kayıtta bir varlık hesabı \"debit\" edildiğinde ne olur?"
+    options:
+      - "*Varlık hesabının bakiyesi artar. :: Varlıklar borç tarafında artar."
+      - "Varlık hesabının bakiyesi azalır. :: Azalma alacak (credit) tarafında olur."
+      - "Şirket zarar eder. :: Debit bir taraf bildirir; zarar anlamına gelmez."
+      - "Hesap kapanır. :: Böyle bir sonuç yoktur."
+    explanation: "Muhasebede debit / credit olumlu ya da olumsuz değil, taraf bildirir."
+  - id: q.prof.c1.acc.06
+    type: translation
+    prompt: "Mali yılımız 31 Aralık'ta sona erer."
+    answers: ["Our fiscal year ends on 31 December.", "Our financial year ends on 31 December.", "Our fiscal year ends on December 31.", "Our financial year ends on December 31.", "Our fiscal year ends on 31st December.", "Our financial year ends on the 31st of December."]
+    explanation: "fiscal / financial year."

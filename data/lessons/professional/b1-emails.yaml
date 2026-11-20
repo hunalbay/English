@@ -1,0 +1,100 @@
+id: prof.b1.emails
+kind: professional
+level: B1
+title_tr: "İş e-postalarında kalıplar"
+title_en: Email phrases
+objective_tr: İş e-postalarını uygun bir açılış, amaç cümlesi, istek, ek bildirimi ve kapanışla, yansız ve kibar bir üslupla yazabileceksiniz.
+source: original
+review_status: auto_checked
+related: [write.b2.formal-email]
+vocabulary: [attach, regard, reply, request, confirm, available]
+sections:
+  - kind: explanation
+    title_tr: Günümüz iş e-postası
+    text_tr: |-
+      Bugünkü iş yazışmaları eski resmî mektuplardan daha **kısa ve yansızdır**. "Dear Sir or Madam" ve "Yours faithfully" yerine, adı bilinen kişilere "Hi Selin," ya da "Dear Ms Kaya," ile başlanır ve "Best regards," ile bitirilir.
+
+      İyi bir iş e-postası **konusunu ilk cümlede söyler**, **ne istediğini açıkça belirtir** ve **tek bir konuya** odaklanır.
+  - kind: formula
+    title_tr: E-postanın akışı
+    table:
+      headers: ["Bölüm", "Kalıplar"]
+      rows:
+        - ["Açılış", "Hi Selin, · Dear Mr Brown, · Good morning everyone,"]
+        - ["Bağlantı", "Thanks for your email. · Following our call yesterday, ..."]
+        - ["Amaç", "I'm writing regarding ... · I'm writing to ask about ..."]
+        - ["İstek", "Could you please ...? · Would it be possible to ...?"]
+        - ["Ek", "Please find attached ... · I've attached ..."]
+        - ["Kapanış cümlesi", "Let me know if you have any questions. · I look forward to hearing from you."]
+        - ["Kapanış", "Best regards, · Kind regards, · Many thanks,"]
+expressions:
+  - {en: "I'm writing regarding ...", type: phrase, tr: "... ile ilgili yazıyorum.", example: {en: "I'm writing regarding your order of 12 March.", tr: "12 Mart tarihli siparişinizle ilgili yazıyorum."}}
+  - {en: "Following our conversation, ...", type: phrase, tr: "Görüşmemizin ardından, ...", example: {en: "Following our conversation this morning, I've updated the schedule.", tr: "Bu sabahki görüşmemizin ardından programı güncelledim."}}
+  - {en: "Please find attached ...", type: phrase, tr: "Ekte ...-i bulabilirsiniz.", style: formal, example: {en: "Please find attached the invoice for May.", tr: "Mayıs ayı faturasını ekte bulabilirsiniz."}}
+  - {en: "Could you please confirm ...?", type: phrase, tr: "... teyit eder misiniz?", example: {en: "Could you please confirm the delivery date?", tr: "Teslimat tarihini teyit eder misiniz?"}}
+  - {en: "as discussed", type: phrase, tr: "konuştuğumuz gibi", example: {en: "As discussed, I'll send the final version on Friday.", tr: "Konuştuğumuz gibi son hâli cuma günü göndereceğim."}}
+  - {en: "I'm afraid ...", type: phrase, tr: "Maalesef ...", note_tr: "Olumsuz bir haberi yumuşatır; korku anlamı taşımaz.", example: {en: "I'm afraid we can't meet the deadline.", tr: "Maalesef teslim tarihine yetiştiremeyeceğiz."}}
+  - {en: "Thanks in advance.", type: phrase, tr: "Şimdiden teşekkürler.", example: {en: "Could you check the figures? Thanks in advance.", tr: "Rakamları kontrol edebilir misin? Şimdiden teşekkürler."}}
+  - {en: "follow up", type: phrasal_verb, tr: "(bir konuyu) takip etmek, hatırlatma yapmak", example: {en: "I'm just following up on my email from last week.", tr: "Geçen haftaki e-postamla ilgili takip için yazıyorum."}}
+  - {en: "reply all", type: term, tr: "tümünü yanıtla", note_tr: "Gerekmedikçe kullanmayın; herkesin gelen kutusunu doldurur.", example: {en: "Please don't reply all to this message.", tr: "Lütfen bu iletiye tümünü yanıtla ile cevap vermeyin."}}
+  - {en: "cc", type: term, tr: "bilgi (kopya) olarak eklemek", example: {en: "I've cc'd my manager on this email.", tr: "Bu e-postada müdürümü bilgi olarak ekledim."}}
+  - {en: "FYI", type: term, tr: "bilginize (for your information)", style: informal, example: {en: "FYI, the office will be closed on Monday.", tr: "Bilginize, ofis pazartesi kapalı olacak."}}
+  - {en: "Best regards,", type: phrase, tr: "Saygılarımla, / İyi çalışmalar,", note_tr: "Günümüz iş e-postalarında en yaygın kapanış.", example: {en: "Best regards, Ayşe", tr: "Saygılarımla, Ayşe"}}
+questions:
+  - id: q.prof.b1.emails.01
+    type: error_correction
+    prompt: "Please find attach the report."
+    answers: ["Please find attached the report.", "Please find the report attached."]
+    explanation: "Please find attached ... (attached: ekli)."
+  - id: q.prof.b1.emails.02
+    type: matching
+    prompt: "Kalıpları işlevleriyle eşleştirin."
+    pairs:
+      - ["I'm writing regarding your invoice.", "amacı belirtmek"]
+      - ["Could you please confirm the time?", "istekte bulunmak"]
+      - ["Please find attached the contract.", "ek bildirmek"]
+      - ["Let me know if you have any questions.", "kapanış cümlesi"]
+    explanation: "Her kalıbın e-postada belirli bir yeri vardır."
+  - id: q.prof.b1.emails.03
+    type: nuance
+    difficulty: 3
+    prompt: "\"I'm afraid the meeting has been cancelled.\" cümlesindeki \"I'm afraid\" ne işlev görür?"
+    options:
+      - "*Olumsuz bir haberi kibarca yumuşatır: maalesef. :: Korku anlamı yoktur."
+      - "Yazarın toplantıdan korktuğunu gösterir. :: Bu kalıpta korku anlamı yoktur."
+      - "Haberin kesin olmadığını gösterir. :: Kesinlik bildirir; yalnızca tonu yumuşatır."
+      - "Bir özrü bildirir. :: Özür değil, olumsuz haberi yumuşatma."
+    explanation: "I'm afraid ... = Maalesef ..."
+  - id: q.prof.b1.emails.04
+    type: multiple_choice
+    prompt: "Bir hafta önce gönderdiğiniz e-postaya cevap gelmedi. Nasıl başlarsınız?"
+    options:
+      - "*I'm just following up on my email from last week. :: Kibar bir hatırlatma."
+      - "Why didn't you answer my email? :: Suçlayıcı ve sert."
+      - "Please find attached my email. :: Anlamı uymuyor."
+      - "FYI, I sent you an email. :: Fazla gündelik ve sitemkâr."
+    explanation: "follow up on = takip etmek."
+  - id: q.prof.b1.emails.05
+    type: paragraph_completion
+    difficulty: 3
+    context: "Hi Mark,\nThanks for your quick reply. ___, I'll send you the updated price list by Thursday.\nBest regards,\nDeniz"
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*As discussed :: Daha önce konuşulan bir konuya gönderme."
+      - "Dear Sir :: Hitap e-postanın başında yer alır."
+      - "Yours faithfully :: Kapanıştır; ayrıca alıcının adı biliniyor."
+      - "Reply all :: Bir e-posta komutudur."
+    explanation: "as discussed = konuştuğumuz gibi."
+  - id: q.prof.b1.emails.06
+    type: written_answer
+    difficulty: 3
+    prompt: "Bir tedarikçiye 4–6 cümlelik bir e-posta yazın: siparişinizin (no. 4512) teslim tarihini sorun, ekte güncellenmiş adres bilgisini gönderdiğinizi belirtin ve uygun biçimde bitirin."
+    model_answers:
+      - "Dear Mr Brown, I'm writing regarding our order no. 4512. Could you please confirm the expected delivery date? Please also note that our delivery address has changed. Please find attached the updated details. Thanks in advance for your help. Best regards, Deniz Aydın"
+    checklist:
+      - "Uygun bir hitapla başladım."
+      - "Amacımı ilk cümlede belirttim (I'm writing regarding ...)."
+      - "İsteğimi kibar bir soruyla ilettim (Could you please ...?)."
+      - "Eki bildirdim (Please find attached ...)."
+      - "Uygun bir kapanış kullandım (Best regards, ...)."
+    explanation: "Akış: hitap → amaç → istek → ek → kapanış."

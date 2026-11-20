@@ -5,7 +5,7 @@ import sqlite3
 import pytest
 
 API = "/api/v1"
-TRACKS = ("reading", "listening", "writing", "pronunciation")
+TRACKS = ("reading", "listening", "writing", "pronunciation", "expressions", "professional")
 
 
 @pytest.mark.parametrize("track", TRACKS)
@@ -13,8 +13,9 @@ def test_track_summary_and_units(client, track):
     data = client.get(f"{API}/tracks/{track}").json()
     assert data["track"] == track
     assert [level["code"] for level in data["levels"]] == ["A1", "A2", "B1", "B2", "C1", "C2"]
-    assert data["levels"][0]["lesson_count"] >= 1 and data["levels"][0]["completed_lessons"] == 0
-    units = client.get(f"{API}/levels/A1/units?track={track}").json()
+    first = next(level for level in data["levels"] if level["lesson_count"])
+    assert first["completed_lessons"] == 0
+    units = client.get(f"{API}/levels/{first['code']}/units?track={track}").json()
     assert units["track"] == track and units["units"]
     assert all(lesson["kind"] == track for unit in units["units"] for lesson in unit["lessons"])
 
@@ -143,3 +144,31 @@ def test_audio_missing_is_reported_not_an_error(client, auth, settings, monkeypa
         assert question["audio"] is None and question["audio_missing"] is True
         units = quiet.get(f"{API}/levels/A1/units?track=listening").json()["units"]
         assert not any(item["has_audio"] for unit in units for item in unit["lessons"])
+
+
+def test_expression_lesson_lists_items_with_examples_and_audio(client):
+    lesson = client.get(f"{API}/lessons/expr.b1.common-idioms").json()
+    assert lesson["track"] == "expressions" and lesson["kind"] == "expressions"
+    items = lesson["expressions"]
+    assert len(items) >= 10
+    cake = next(item for item in items if item["en"] == "a piece of cake")
+    assert cake["type"] == "idiom" and cake["register"] == "informal"
+    assert cake["tr"] and cake["example_en"] and cake["example_tr"]
+    assert all(item["audio"] and item["audio"]["url"].startswith("/media/clips/") for item in items)
+    assert lesson["passage"] is None and lesson["practice"] == []
+
+
+def test_professional_lesson_has_terms(client):
+    lesson = client.get(f"{API}/lessons/prof.c1.sap-terms").json()
+    assert lesson["track"] == "professional"
+    terms = {item["en"]: item for item in lesson["expressions"]}
+    assert terms["cost center"]["tr"] == "masraf yeri"
+    assert {item["type"] for item in lesson["expressions"]} <= {"term", "collocation", "phrase", "phrasal_verb", "idiom"}
+    assert any("SAP SE" in (section["text_tr"] or "") for section in lesson["sections"])
+
+
+def test_expressions_are_searchable(client):
+    results = client.get(f"{API}/search", params={"q": "masraf yeri"}).json()
+    assert any(item["id"] == "prof.c1.sap-terms" for item in results["lessons"])
+    results = client.get(f"{API}/search", params={"q": "bardağı taşıran"}).json()
+    assert any(item["id"] == "expr.c1.advanced-idioms" for item in results["lessons"])

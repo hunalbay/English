@@ -1,0 +1,90 @@
+id: expr.c2.informal-and-slang
+kind: expressions
+level: C2
+title_tr: "Gündelik dil ve argo"
+title_en: Informal English and slang
+objective_tr: Dizilerde, sosyal medyada ve arkadaş sohbetlerinde duyulan gündelik ifadeleri anlayabilecek, bunların hangi ortamlarda uygunsuz kaçacağını ayırt edebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [gram.c2.register]
+vocabulary: [informal, casual, tired, expensive, relax, worry]
+sections:
+  - kind: explanation
+    title_tr: Önce anlamak, sonra dikkatle kullanmak
+    text_tr: |-
+      Argo ve gündelik ifadeler **hızla değişir**, **bölgeye göre farklılaşır** ve **yaşa bağlıdır**. Bir İngiliz gencinin kullandığı sözcük, bir Amerikalı yetişkine tuhaf gelebilir.
+
+      Bu derste yer alan ifadeler küfür ya da aşağılayıcı söz içermez ve yaygın biçimde anlaşılır. Yine de amaç öncelikle **anlamaktır**. İş, sınav ve resmî ortamlarda kullanmayın.
+  - kind: usage
+    title_tr: Bölge farkları
+    text_tr: |-
+      **İngiliz İngilizcesi (BrE):** knackered (bitkin), gutted (çok üzgün), skint (meteliksiz), cheers (teşekkürler / hoşça kal).
+
+      **Amerikan İngilizcesi (AmE):** awesome (harika — İngiltere'de de yaygın), my bad (benim hatam), hang out (takılmak).
+
+      Bölge belirtilmeyenler her iki yerde de yaygındır.
+expressions:
+  - {en: "chill out", type: slang, tr: "sakin ol, rahatla; kafa dinlemek", style: informal, example: {en: "Chill out! We've got plenty of time.", tr: "Sakin ol! Bolca vaktimiz var."}}
+  - {en: "hang out", type: phrasal_verb, tr: "takılmak, vakit geçirmek", style: informal, example: {en: "We usually hang out at the café after class.", tr: "Dersten sonra genellikle kafede takılırız."}}
+  - {en: "a rip-off", type: slang, tr: "kazık, fahiş fiyat", style: informal, example: {en: "Ten pounds for a coffee? What a rip-off!", tr: "Bir kahveye on pound mu? Resmen kazık!"}}
+  - {en: "broke", type: slang, tr: "meteliksiz, parasız", style: informal, example: {en: "I can't come to the cinema. I'm broke until payday.", tr: "Sinemaya gelemem. Maaş gününe kadar meteliksizim."}}
+  - {en: "knackered", type: slang, tr: "bitkin, pestili çıkmış (BrE)", style: slang, example: {en: "I'm knackered after that run.", tr: "O koşudan sonra pestilim çıktı."}}
+  - {en: "gutted", type: slang, tr: "çok üzgün, yıkılmış (BrE)", style: slang, example: {en: "She was gutted when she didn't get the job.", tr: "İşi alamayınca yıkıldı."}}
+  - {en: "my bad", type: slang, tr: "benim hatam, kusura bakma", style: slang, example: {en: "Oh, I took your seat? My bad.", tr: "Ah, senin yerine mi oturdum? Benim hatam."}}
+  - {en: "no worries", type: phrase, tr: "dert değil, sorun yok", style: informal, note_tr: "Özellikle Avustralya ve İngiltere'de çok yaygındır.", example: {en: "Sorry I'm late! — No worries.", tr: "Geç kaldım, kusura bakma! — Dert değil."}}
+  - {en: "binge-watch", type: slang, tr: "(dizi) bir oturuşta art arda izlemek", style: informal, example: {en: "We binge-watched the whole series over the weekend.", tr: "Hafta sonu bütün diziyi art arda izledik."}}
+  - {en: "ghost someone", type: slang, tr: "birine hiçbir açıklama yapmadan ortadan kaybolmak, mesajlarına cevap vermemek", style: slang, example: {en: "We went on three dates and then he ghosted me.", tr: "Üç kez buluştuk, sonra hiçbir şey demeden ortadan kayboldu."}}
+  - {en: "FOMO", type: slang, tr: "bir şeyi kaçırma korkusu (fear of missing out)", style: informal, example: {en: "I only went to the party because of FOMO.", tr: "Partiye yalnızca bir şeyi kaçırırım korkusuyla gittim."}}
+  - {en: "fair enough", type: phrase, tr: "haklısın, makul, olur", style: informal, example: {en: "I can't come because I'm working. — Fair enough.", tr: "Gelemem çünkü çalışıyorum. — Haklısın, olur."}}
+questions:
+  - id: q.expr.c2.slang.01
+    type: matching
+    prompt: "İfadeleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["broke", "meteliksiz"]
+      - ["a rip-off", "kazık, fahiş fiyat"]
+      - ["knackered", "bitkin"]
+      - ["gutted", "yıkılmış, çok üzgün"]
+      - ["my bad", "benim hatam"]
+    explanation: "Gündelik dil ve argo ifadeleri."
+  - id: q.expr.c2.slang.02
+    type: nuance
+    difficulty: 5
+    prompt: "Hangi durumda \"I'm knackered\" demek uygunsuz kaçar?"
+    options:
+      - "*Bir iş görüşmesinde neden geç kaldığınızı açıklarken :: Argo ifadeler resmî ortama uymaz."
+      - "Arkadaşınızla koşudan sonra :: Gündelik ortamda doğal."
+      - "Ev arkadaşınıza uzun bir günün sonunda :: Gündelik ortamda doğal."
+      - "Kardeşinize mesaj atarken :: Gündelik ortamda doğal."
+    explanation: "Argo, ortama göre seçilir."
+    lessons: [gram.c2.register]
+  - id: q.expr.c2.slang.03
+    type: dialogue_completion
+    difficulty: 5
+    context: "A: Sorry, I can't make it tonight. My boss wants me to stay late.\nB: ___ Let's go next week instead."
+    prompt: "B'nin en doğal cevabı hangisidir?"
+    options:
+      - "*Fair enough. :: Kabullenme: haklısın, olur."
+      - "My bad. :: B bir hata yapmadı."
+      - "What a rip-off! :: Fiyatla ilgili bir şikâyettir."
+      - "I'm gutted. :: Aşırı tepki; ardından gelen sakin öneriyle uyuşmuyor."
+    explanation: "fair enough = makul, kabul."
+  - id: q.expr.c2.slang.04
+    type: word_in_context
+    difficulty: 5
+    context: "\"We'd been messaging every day for a month, and then she just ghosted me. No explanation, nothing.\""
+    prompt: "\"She ghosted me\" ne anlama gelir?"
+    options:
+      - "*Hiçbir açıklama yapmadan iletişimi kesti. :: ghost someone."
+      - "Beni korkuttu. :: Sözcüğün eski anlamıyla ilgisi yok."
+      - "Bana hayalet hikâyesi anlattı. :: Mecazi ve güncel bir argo."
+      - "Beni engelledi ve şikâyet etti. :: Yalnızca cevap vermeyi bıraktı."
+    explanation: "Güncel argo: ghost someone."
+  - id: q.expr.c2.slang.05
+    type: true_false
+    instruction_tr: "Cümle doğru mu, yanlış mı?"
+    prompt: "\"Knackered\" ve \"gutted\" daha çok İngiliz İngilizcesinde kullanılır."
+    options:
+      - "*Doğru :: İkisi de özellikle Birleşik Krallık'ta yaygındır."
+      - "Yanlış :: Bu ifadeler Amerikan İngilizcesinde seyrektir."
+    explanation: "Argo bölgeden bölgeye değişir."

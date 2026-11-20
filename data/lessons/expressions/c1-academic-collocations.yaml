@@ -1,0 +1,85 @@
+id: expr.c1.academic-collocations
+kind: expressions
+level: C1
+title_tr: "Akademik ve resmî birliktelikler"
+title_en: Academic and formal collocations
+objective_tr: Rapor, deneme ve resmî yazışmalarda sık kullanılan fiil + isim birlikteliklerini doğru fiille kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.b2.strong-collocations]
+vocabulary: [conclusion, threat, research, aware, deadline, account]
+sections:
+  - kind: explanation
+    title_tr: Doğru fiili seçmek
+    text_tr: |-
+      Resmî yazıda hata çoğu zaman yanlış sözcükten değil, **yanlış fiilden** gelir. "Make a research", "do a conclusion", "make a role" anlaşılır ama yabancı duyulur. Doğruları: **conduct** research, **draw** a conclusion, **play** a role.
+
+      Bu birliktelikleri bilmek, metninize hemen daha akıcı ve güvenilir bir görünüm kazandırır.
+  - kind: common_mistakes
+    title_tr: Sık yapılan hatalar
+    text_tr: |-
+      **"make a research"** → conduct / carry out research (research sayılamaz; "a research" da yanlıştır).
+
+      **"give a decision"** → make / reach / take a decision.
+
+      **"take into consideration of"** → take something into consideration / account (of yok).
+expressions:
+  - {en: "draw a conclusion", type: collocation, tr: "sonuç çıkarmak", style: formal, example: {en: "It is too early to draw any conclusions from these results.", tr: "Bu sonuçlardan herhangi bir sonuç çıkarmak için henüz çok erken."}}
+  - {en: "pose a threat", type: collocation, tr: "tehdit oluşturmak", style: formal, example: {en: "Rising sea levels pose a serious threat to coastal cities.", tr: "Yükselen deniz seviyeleri kıyı şehirleri için ciddi bir tehdit oluşturuyor."}}
+  - {en: "conduct research", type: collocation, tr: "araştırma yapmak", style: formal, note_tr: "\"make a research\" yanlıştır.", example: {en: "The team conducted research in twelve countries.", tr: "Ekip on iki ülkede araştırma yaptı."}}
+  - {en: "raise awareness", type: collocation, tr: "farkındalık yaratmak", example: {en: "The campaign aims to raise awareness of mental health.", tr: "Kampanya ruh sağlığı konusunda farkındalık yaratmayı amaçlıyor."}}
+  - {en: "play a role", type: collocation, tr: "rol oynamak", example: {en: "Diet plays a key role in preventing disease.", tr: "Beslenme hastalıkları önlemede kilit bir rol oynar."}}
+  - {en: "meet a deadline", type: collocation, tr: "teslim tarihine yetiştirmek", example: {en: "We worked all weekend to meet the deadline.", tr: "Teslim tarihine yetiştirmek için bütün hafta sonu çalıştık."}}
+  - {en: "address an issue", type: collocation, tr: "bir sorunu ele almak", style: formal, example: {en: "The report fails to address the issue of cost.", tr: "Rapor maliyet sorununu ele almıyor."}}
+  - {en: "bear in mind", type: collocation, tr: "akılda tutmak, göz önünde bulundurmak", example: {en: "Bear in mind that prices may change.", tr: "Fiyatların değişebileceğini göz önünde bulundurun."}}
+  - {en: "take into account", type: collocation, tr: "hesaba katmak", example: {en: "The study did not take into account differences in income.", tr: "Çalışma gelir farklarını hesaba katmadı."}}
+  - {en: "shed light on", type: collocation, tr: "ışık tutmak, aydınlatmak", style: formal, example: {en: "New documents shed light on the causes of the crisis.", tr: "Yeni belgeler krizin nedenlerine ışık tutuyor."}}
+  - {en: "come to terms with", type: collocation, tr: "kabullenmek, sindirmek", example: {en: "It took him years to come to terms with his father's death.", tr: "Babasının ölümünü kabullenmesi yıllarını aldı."}}
+  - {en: "lay the foundations for", type: collocation, tr: "temelini atmak", style: formal, example: {en: "These reforms laid the foundations for economic growth.", tr: "Bu reformlar ekonomik büyümenin temelini attı."}}
+questions:
+  - id: q.expr.c1.acad.01
+    type: multiple_choice
+    difficulty: 4
+    prompt: "The scientists ___ research on the effects of noise on sleep."
+    options:
+      - "*conducted :: conduct research = araştırma yapmak."
+      - "made :: \"make research\" doğal bir birliktelik değildir."
+      - "did a :: Research sayılamaz; \"a research\" yanlıştır."
+      - "gave :: Bu anlamda kullanılmaz."
+    explanation: "conduct / carry out research."
+  - id: q.expr.c1.acad.02
+    type: matching
+    prompt: "Fiilleri doğru isimlerle eşleştirin."
+    pairs:
+      - ["draw", "a conclusion"]
+      - ["pose", "a threat"]
+      - ["raise", "awareness"]
+      - ["meet", "a deadline"]
+      - ["shed", "light on something"]
+    explanation: "Resmî yazıda fiil + isim birliktelikleri kalıplaşmıştır."
+  - id: q.expr.c1.acad.03
+    type: error_correction
+    prompt: "We must take into consideration of the costs."
+    answers: ["We must take the costs into consideration.", "We must take into consideration the costs.", "We must take the costs into account.", "We must take into account the costs."]
+    explanation: "take something into consideration / account (of yok)."
+  - id: q.expr.c1.acad.04
+    type: paragraph_completion
+    difficulty: 5
+    context: "The report makes several useful recommendations. However, it fails to ___ the question of how these changes would be funded, which is arguably the most important issue."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*address :: address an issue / a question = ele almak."
+      - "make :: \"make the question\" anlam vermez."
+      - "do :: \"do the question\" resmî yazıda uygun değildir."
+      - "raise awareness of :: Anlam kayar ve yapı bozulur."
+    explanation: "address = (sorunu) ele almak."
+  - id: q.expr.c1.acad.05
+    type: fill_blank
+    prompt: "Education plays a key ___ in reducing inequality."
+    answers: [role, part]
+    explanation: "play a role / part."
+  - id: q.expr.c1.acad.06
+    type: translation
+    prompt: "Bu sonuçlardan kesin bir sonuç çıkarmak zor."
+    answers: ["It is difficult to draw a firm conclusion from these results.", "It's difficult to draw a firm conclusion from these results.", "It is hard to draw a firm conclusion from these results.", "It is difficult to draw a definite conclusion from these results.", "It is difficult to draw firm conclusions from these results.", "It's hard to draw a firm conclusion from these results."]
+    explanation: "draw a conclusion."

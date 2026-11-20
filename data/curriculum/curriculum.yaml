@@ -526,3 +526,108 @@ units:
     lessons:
       - pron.b1.word-stress
       - pron.b1.sentence-stress
+
+  # --- Deyimler ve kalıplar ----------------------------------------------------
+  - id: a1.expr
+    level: A1
+    track: expressions
+    title_tr: Temel konuşma kalıpları
+    title_en: Basic phrases
+    description_tr: Selamlaşma, nezaket ve yardım isteme kalıpları.
+    lessons:
+      - expr.a1.everyday-phrases
+      - expr.a1.survival-phrases
+
+  - id: a2.expr
+    level: A2
+    track: expressions
+    title_tr: Öbek fiiller ve birliktelikler
+    title_en: Phrasal verbs and collocations
+    description_tr: Günlük öbek fiiller ve make / do birliktelikleri.
+    lessons:
+      - expr.a2.phrasal-verbs-daily
+      - expr.a2.make-and-do
+
+  - id: b1.expr
+    level: B1
+    track: expressions
+    title_tr: İş, seyahat ve günlük deyimler
+    title_en: Work, travel and common idioms
+    description_tr: İş ve seyahatte öbek fiiller; sık kullanılan deyimler.
+    lessons:
+      - expr.b1.phrasal-verbs-work-travel
+      - expr.b1.common-idioms
+
+  - id: b2.expr
+    level: B2
+    track: expressions
+    title_tr: Deyimler, öbek fiiller ve birliktelikler
+    title_en: Idioms, phrasal verbs and collocations
+    description_tr: Vücutla ilgili deyimler, soyut öbek fiiller ve güçlü birliktelikler.
+    lessons:
+      - expr.b2.idioms-body
+      - expr.b2.phrasal-verbs-advanced
+      - expr.b2.strong-collocations
+
+  - id: c1.expr
+    level: C1
+    track: expressions
+    title_tr: İleri deyimler, atasözleri, resmî birliktelikler
+    title_en: Advanced idioms, proverbs, formal collocations
+    description_tr: İş ve tartışma deyimleri, atasözleri ve akademik fiil + isim birliktelikleri.
+    lessons:
+      - expr.c1.advanced-idioms
+      - expr.c1.proverbs
+      - expr.c1.academic-collocations
+
+  - id: c2.expr
+    level: C2
+    track: expressions
+    title_tr: Argo ve ince anlamlı deyimler
+    title_en: Slang and nuanced idioms
+    description_tr: Gündelik dil ve argo; kültürel göndermeler taşıyan deyimler.
+    lessons:
+      - expr.c2.informal-and-slang
+      - expr.c2.nuanced-idioms
+
+  # --- Mesleki İngilizce ---------------------------------------------------------
+  - id: a2.prof
+    level: A2
+    track: professional
+    title_tr: İş yerinde
+    title_en: At work
+    description_tr: İşinizi, görevlerinizi ve çalışma düzeninizi anlatın.
+    lessons:
+      - prof.a2.at-work
+
+  - id: b1.prof
+    level: B1
+    track: professional
+    title_tr: Yazışma ve görüşme
+    title_en: Emails and calls
+    description_tr: İş e-postaları, telefon ve çevrim içi görüşmeler.
+    lessons:
+      - prof.b1.emails
+      - prof.b1.calls
+
+  - id: b2.prof
+    level: B2
+    track: professional
+    title_tr: Toplantı, sunum ve finans
+    title_en: Meetings, presentations and finance
+    description_tr: Toplantı yönetimi, sunum dili ve temel finans terimleri.
+    lessons:
+      - prof.b2.meetings
+      - prof.b2.presentations
+      - prof.b2.finance-basics
+
+  - id: c1.prof
+    level: C1
+    track: professional
+    title_tr: Muhasebe, müzakere ve ERP
+    title_en: Accounting, negotiation and ERP
+    description_tr: Muhasebe terimleri, müzakere dili ve SAP projelerinde kullanılan İngilizce.
+    lessons:
+      - prof.c1.accounting
+      - prof.c1.negotiation
+      - prof.c1.sap-terms

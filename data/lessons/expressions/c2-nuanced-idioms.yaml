@@ -1,0 +1,83 @@
+id: expr.c2.nuanced-idioms
+kind: expressions
+level: C2
+title_tr: "İnce anlamlı deyimler"
+title_en: Nuanced idioms
+objective_tr: Kültürel ve tarihsel göndermeler içeren, tonu ve kullanım alanı ince ayrımlar taşıyan deyimleri basın ve edebiyat metinlerinde doğru yorumlayabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.c1.advanced-idioms]
+vocabulary: [victory, praise, worm, baby, point, cycle]
+sections:
+  - kind: explanation
+    title_tr: Gönderme taşıyan deyimler
+    text_tr: |-
+      Bu düzeydeki deyimlerin çoğu bir **tarihsel olaya, romana ya da mantık kavramına** gönderme yapar: **a Pyrrhic victory** antik bir savaşa, **a Catch-22** aynı adlı bir romana, **a red herring** okuru yanlış ize sürükleyen bir ayrıntıya.
+
+      Gazete yorumlarında, denemelerde ve tartışma programlarında sıkça geçerler. Anlamlarının yanı sıra **tonlarını** da bilmek gerekir: **damn with faint praise** bir övgü değil, örtülü bir eleştiridir.
+expressions:
+  - {en: "a red herring", type: idiom, tr: "dikkati asıl konudan saptıran, yanıltıcı ayrıntı", example: {en: "The question about his past was a red herring; the real issue was the budget.", tr: "Geçmişiyle ilgili soru dikkati dağıtan bir ayrıntıydı; asıl mesele bütçeydi."}}
+  - {en: "a Pyrrhic victory", type: idiom, tr: "kazananı da yıkıma uğratan zafer, kayıpları kazancından büyük zafer", style: formal, example: {en: "The court case was a Pyrrhic victory: they won, but the legal costs ruined them.", tr: "Dava kayıpları kazancından büyük bir zaferdi: kazandılar ama mahkeme masrafları onları batırdı."}}
+  - {en: "a Catch-22", type: idiom, tr: "içinden çıkılmaz kısır döngü, iki yanı da kapalı çıkmaz", example: {en: "It's a Catch-22: you need experience to get a job, but you need a job to get experience.", tr: "Tam bir kısır döngü: iş bulmak için deneyim gerekiyor, deneyim kazanmak için de iş."}}
+  - {en: "damn with faint praise", type: idiom, tr: "cılız bir övgüyle aslında yermek", example: {en: "Calling the novel \"perfectly adequate\" is damning it with faint praise.", tr: "Romana \"gayet yeterli\" demek, onu cılız bir övgüyle yermektir."}}
+  - {en: "the tip of the iceberg", type: idiom, tr: "buzdağının görünen yüzü", example: {en: "These complaints are just the tip of the iceberg.", tr: "Bu şikâyetler buzdağının yalnızca görünen yüzü."}}
+  - {en: "a storm in a teacup", type: idiom, tr: "bir bardak suda fırtına (BrE); AmE: a tempest in a teapot", example: {en: "The row over the logo was a storm in a teacup.", tr: "Logo tartışması bir bardak suda fırtınaydı."}}
+  - {en: "have a chip on one's shoulder", type: idiom, tr: "(geçmişteki bir haksızlık yüzünden) içerlemiş, alıngan olmak", example: {en: "He has a chip on his shoulder about not going to university.", tr: "Üniversiteye gidemediği için içinde bir kırgınlık taşıyor."}}
+  - {en: "open a can of worms", type: idiom, tr: "çözülmesi zor yeni sorunlar başlatmak, başına iş açmak", example: {en: "Changing the pay system would open a can of worms.", tr: "Ücret sistemini değiştirmek başımıza bir sürü iş açar."}}
+  - {en: "throw the baby out with the bathwater", type: idiom, tr: "bir sorunu çözeyim derken değerli olanı da atmak, pireye kızıp yorgan yakmak", example: {en: "The system has flaws, but let's not throw the baby out with the bathwater.", tr: "Sistemin kusurları var ama pireye kızıp yorgan yakmayalım."}}
+  - {en: "a moot point", type: idiom, tr: "artık önemi kalmamış ya da tartışmalı konu", note_tr: "BrE'de \"tartışmalı\", AmE'de çoğunlukla \"artık önemsiz\" anlamında kullanılır.", example: {en: "Whether we should have bought the tickets is a moot point now; the concert is sold out.", tr: "Biletleri almalı mıydık, artık önemi yok; konserin bütün biletleri satıldı."}}
+  - {en: "have one's work cut out", type: idiom, tr: "önünde zorlu bir iş olmak", example: {en: "With only two weeks left, the new manager has her work cut out.", tr: "Yalnızca iki hafta kala yeni müdürün önünde zorlu bir iş var."}}
+  - {en: "be on tenterhooks", type: idiom, tr: "diken üstünde olmak", example: {en: "We were on tenterhooks waiting for the results.", tr: "Sonuçları beklerken diken üstündeydik."}}
+questions:
+  - id: q.expr.c2.nuanced.01
+    type: nuance
+    difficulty: 5
+    prompt: "Bir eleştirmen bir film için \"It was competently made and mercifully short.\" yazıyor. Bu ne tür bir yorumdur?"
+    options:
+      - "*Cılız bir övgüyle aslında yermek (damning with faint praise) :: Övgü gibi görünen sözler zayıflığı ima ediyor."
+      - "İçten bir övgü :: \"Mercifully short\" filmin sıkıcı olduğunu ima eder."
+      - "Yansız bir özet :: Açık bir tutum var."
+      - "Bir bardak suda fırtına :: Gereksiz büyütülen tartışma demektir."
+    explanation: "\"Mercifully short\" = neyse ki kısa: örtülü eleştiri."
+  - id: q.expr.c2.nuanced.02
+    type: matching
+    prompt: "Deyimleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["a red herring", "dikkati dağıtan yanıltıcı ayrıntı"]
+      - ["a Catch-22", "iki yanı kapalı çıkmaz"]
+      - ["a Pyrrhic victory", "kazananı da yıkan zafer"]
+      - ["a storm in a teacup", "bir bardak suda fırtına"]
+      - ["be on tenterhooks", "diken üstünde olmak"]
+    explanation: "Gönderme taşıyan deyimler."
+  - id: q.expr.c2.nuanced.03
+    type: word_in_context
+    difficulty: 5
+    context: "Critics of the new tax argue that it should be scrapped entirely. Yet most economists agree that, while the details are badly designed, the principle is sound. Abolishing it would be to throw the baby out with the bathwater."
+    prompt: "Son cümle ne ima eder?"
+    options:
+      - "*Vergiyi tümden kaldırmak, iyi olan ilkeyi de kusurlarla birlikte yok etmek olur. :: Değerli olanı sorunla birlikte atmak."
+      - "Vergi hiç düşünülmeden kaldırılmalıdır. :: Tersini savunuyor."
+      - "Vergi çocuklu aileleri etkiler. :: Deyim mecazidir."
+      - "Ekonomistler vergiye tümüyle karşıdır. :: İlkeyi doğru buluyorlar."
+    explanation: "throw the baby out with the bathwater."
+  - id: q.expr.c2.nuanced.04
+    type: dialogue_completion
+    difficulty: 5
+    context: "A: To get a work visa, you need a job offer. But companies won't hire you without a visa.\nB: So it's ___."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*a Catch-22 :: Birbirine bağlı iki koşul: kısır döngü."
+      - "a red herring :: Yanıltıcı ayrıntı demektir."
+      - "a Pyrrhic victory :: Pahalıya mal olan zafer demektir."
+      - "the tip of the iceberg :: Görünen küçük kısım demektir."
+    explanation: "Catch-22 = içinden çıkılmaz döngü."
+  - id: q.expr.c2.nuanced.05
+    type: sentence_completion
+    difficulty: 5
+    prompt: "If we start asking how the previous manager spent the budget, we'll ___"
+    options:
+      - "*open a can of worms. :: Başımıza yeni sorunlar açmak."
+      - "be on tenterhooks. :: Gergin bir bekleyiş demektir."
+      - "damn with faint praise. :: Yapı uymuyor; ayrıca anlam farklı."
+      - "have a chip on our shoulder. :: İçerlemek demektir."
+    explanation: "open a can of worms."

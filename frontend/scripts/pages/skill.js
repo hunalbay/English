@@ -16,6 +16,14 @@ const TRACKS = {
     path: "yazma", title: "Yazma",
     intro: "Metin türlerini örnekleriyle öğrenin ve kendi metninizi yazın. Program yazınızı otomatik olarak puanlamaz; örnek metin ve kontrol listesiyle kendiniz değerlendirirsiniz.",
   },
+  expressions: {
+    path: "deyimler", title: "Deyimler ve kalıplar",
+    intro: "Öbek fiiller, deyimler, sözcük birliktelikleri, atasözleri ve gündelik konuşma kalıpları. Her ifadenin Türkçe karşılığı, kullanım notu ve örnek cümlesi vardır.",
+  },
+  professional: {
+    path: "mesleki", title: "Mesleki İngilizce",
+    intro: "İş hayatı, yazışma, toplantı, finans, muhasebe ve SAP terimleri. Terimlerin Türkçe karşılıkları yaygın kullanımı yansıtır; kurumunuzdaki ya da yazılımınızdaki karşılıklar farklı olabilir. Bu içerik SAP SE ile bağlantılı değildir.",
+  },
   pronunciation: {
     path: "telaffuz", title: "Telaffuz",
     intro: "Türkçe konuşanları zorlayan sesleri örnek kayıtlarla çalışın: dinleyin, kendi sesinizi kaydedin ve karşılaştırın. Otomatik puanlama yoktur; kayıtlarınız saklanmaz ve hiçbir yere gönderilmez.",

@@ -12,7 +12,8 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 Level = Literal["A1", "A2", "B1", "B2", "C1", "C2"]
 ReviewStatus = Literal["draft", "auto_checked", "human_reviewed"]
 LessonKind = Literal[
-    "grammar", "vocabulary", "reading", "listening", "writing", "speaking", "pronunciation", "expressions"
+    "grammar", "vocabulary", "reading", "listening", "writing", "speaking", "pronunciation", "expressions",
+    "professional",
 ]
 SectionKind = Literal[
     "explanation", "usage", "formula", "positive", "negative", "question", "examples",
@@ -49,7 +50,7 @@ class LevelDef(Strict):
     description_tr: str = NonEmpty
 
 
-Track = Literal["grammar", "reading", "listening", "writing", "pronunciation"]
+Track = Literal["grammar", "reading", "listening", "writing", "pronunciation", "expressions", "professional"]
 
 
 class UnitDef(Strict):
@@ -139,6 +140,26 @@ class PracticeItem(Strict):
     note_tr: str | None = None
 
 
+class QuestionExample(Strict):
+    en: str = NonEmpty
+    tr: str = NonEmpty
+
+
+ExpressionType = Literal["idiom", "phrasal_verb", "collocation", "proverb", "slang", "phrase", "term"]
+Register = Literal["neutral", "informal", "formal", "slang"]
+
+
+class ExpressionItem(Strict):
+    """Deyim, öbek fiil, kalıp ya da mesleki terim. Her öğenin Türkçe karşılığı ve örnek cümlesi vardır."""
+
+    en: str = NonEmpty
+    type: ExpressionType
+    tr: str = NonEmpty
+    note_tr: str | None = None
+    style: Register = "neutral"
+    example: QuestionExample
+
+
 class LessonFile(Strict):
     id: str = Field(pattern=ID_PATTERN)
     kind: LessonKind
@@ -155,6 +176,7 @@ class LessonFile(Strict):
     sections: list[Section] = Field(default_factory=list)
     passage: Passage | None = None
     practice: list[PracticeItem] = Field(default_factory=list)
+    expressions: list[ExpressionItem] = Field(default_factory=list)
     questions: list[Question] = Field(default_factory=list)
 
 
@@ -197,11 +219,6 @@ DEFAULT_INSTRUCTIONS: dict[str, str] = {
     "paragraph_completion": "Paragraftaki boşluğa en uygun seçeneği işaretleyin.",
     "nuance": "Anlam farkına dikkat ederek doğru seçeneği işaretleyin.",
 }
-
-
-class QuestionExample(Strict):
-    en: str = NonEmpty
-    tr: str = NonEmpty
 
 
 class Question(Strict):

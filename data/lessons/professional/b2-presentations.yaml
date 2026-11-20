@@ -1,0 +1,85 @@
+id: prof.b2.presentations
+kind: professional
+level: B2
+title_tr: "Sunum yapmak"
+title_en: Presentations
+objective_tr: Bir sunumu açabilecek, bölümler arasında geçiş yapabilecek, grafik ve tabloları anlatabilecek ve soruları yönetebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.comparatives-advanced, gram.b2.linking-advanced]
+vocabulary: [presentation, graph, slide, increase, decline, question]
+sections:
+  - kind: explanation
+    title_tr: Yol işaretleri
+    text_tr: |-
+      Dinleyici bir sunumda geri dönüp okuyamaz. Bu yüzden iyi bir sunumda konuşmacı **nerede olduğunu sık sık söyler**: ne anlatacağını, ne anlattığını ve sırada ne olduğunu. Bu ifadelere **signposting (yol işaretleri)** denir.
+
+      "**First, I'll** look at ... **Then I'll** move on to ... **Finally, I'll** ..." gibi bir girişten sonra dinleyici sunumun haritasını bilir.
+  - kind: usage
+    title_tr: Grafik anlatmak
+    table:
+      headers: ["Değişim", "Fiil", "Derece"]
+      rows:
+        - ["artış", "rise, increase, grow, go up", "slightly, steadily, sharply, significantly"]
+        - ["azalış", "fall, decrease, decline, drop", "slightly, gradually, dramatically"]
+        - ["değişmeme", "remain stable, level off, stay the same", ""]
+        - ["en yüksek / en düşük", "peak at, reach a low of", ""]
+expressions:
+  - {en: "I'd like to start by ...", type: phrase, tr: "... ile başlamak istiyorum.", example: {en: "I'd like to start by thanking you all for coming.", tr: "Hepinize geldiğiniz için teşekkür ederek başlamak istiyorum."}}
+  - {en: "The purpose of this presentation is to ...", type: phrase, tr: "Bu sunumun amacı ...", example: {en: "The purpose of this presentation is to explain our new pricing.", tr: "Bu sunumun amacı yeni fiyatlandırmamızı açıklamaktır."}}
+  - {en: "Let me move on to ...", type: phrase, tr: "...-e geçeyim.", example: {en: "Let me move on to the second part: costs.", tr: "İkinci bölüme, maliyetlere geçeyim."}}
+  - {en: "As you can see from this chart, ...", type: phrase, tr: "Bu grafikte görebileceğiniz gibi ...", example: {en: "As you can see from this chart, sales rose sharply in March.", tr: "Bu grafikte görebileceğiniz gibi satışlar martta keskin bir artış gösterdi."}}
+  - {en: "rise sharply", type: collocation, tr: "keskin biçimde artmak", example: {en: "Energy prices rose sharply last winter.", tr: "Enerji fiyatları geçen kış keskin biçimde arttı."}}
+  - {en: "decline gradually", type: collocation, tr: "yavaş yavaş düşmek", example: {en: "Demand declined gradually over the year.", tr: "Talep yıl boyunca yavaş yavaş düştü."}}
+  - {en: "level off", type: phrasal_verb, tr: "sabitlenmek, dengelenmek", example: {en: "After a fast start, growth levelled off in the summer.", tr: "Hızlı bir başlangıçtan sonra büyüme yazın sabitlendi."}}
+  - {en: "That brings me to ...", type: phrase, tr: "Bu da beni ...-e getiriyor.", example: {en: "That brings me to my final point.", tr: "Bu da beni son noktama getiriyor."}}
+  - {en: "To recap, ...", type: phrase, tr: "Kısaca tekrarlarsak ...", example: {en: "To recap, we have three main options.", tr: "Kısaca tekrarlarsak, üç ana seçeneğimiz var."}}
+  - {en: "key takeaway", type: term, tr: "akılda kalması gereken ana mesaj", style: informal, example: {en: "The key takeaway is that small changes can save a lot of money.", tr: "Akılda kalması gereken ana mesaj, küçük değişikliklerin çok para kazandırabileceğidir."}}
+  - {en: "I'll be happy to take questions at the end.", type: phrase, tr: "Sonunda soruları memnuniyetle yanıtlarım.", example: {en: "I'll be happy to take questions at the end, so please make a note of them.", tr: "Sonunda soruları memnuniyetle yanıtlarım; lütfen not alın."}}
+  - {en: "That's a good question.", type: phrase, tr: "Güzel bir soru.", note_tr: "Düşünmek için zaman kazandırır; her soruda tekrarlanırsa samimiyetsiz durur.", example: {en: "That's a good question. Let me check the figures and get back to you.", tr: "Güzel bir soru. Rakamlara bakıp size döneyim."}}
+questions:
+  - id: q.prof.b2.pres.01
+    type: matching
+    prompt: "Kalıpları sunumdaki yerleriyle eşleştirin."
+    pairs:
+      - ["The purpose of this presentation is to ...", "giriş"]
+      - ["Let me move on to ...", "bölümler arası geçiş"]
+      - ["As you can see from this chart, ...", "görseli anlatma"]
+      - ["To recap, ...", "özet"]
+    explanation: "Yol işaretleri dinleyiciye sunumun haritasını verir."
+  - id: q.prof.b2.pres.02
+    type: multiple_choice
+    difficulty: 3
+    prompt: "Satışlar ocaktan haziran'a %2 arttı. Hangisi bunu en doğru anlatır?"
+    options:
+      - "*Sales rose slightly. :: Küçük bir artış: slightly."
+      - "Sales rose sharply. :: Sharply büyük ve hızlı artışı anlatır."
+      - "Sales levelled off. :: Sabitlenme demektir."
+      - "Sales declined gradually. :: Azalış demektir."
+    explanation: "Derece zarfları: slightly < steadily < significantly < sharply."
+  - id: q.prof.b2.pres.03
+    type: paragraph_completion
+    difficulty: 4
+    context: "Sales grew quickly in the first three months of the year. However, from April onwards, they stopped rising and ___ at around 5,000 units a month."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*levelled off :: Artış durup sabitlendi."
+      - "rose sharply :: Metin artışın durduğunu söylüyor."
+      - "declined dramatically :: Düşüşten söz edilmiyor."
+      - "peaked at zero :: Anlamsız."
+    explanation: "level off = sabitlenmek."
+  - id: q.prof.b2.pres.04
+    type: sentence_completion
+    difficulty: 3
+    prompt: "We've looked at the problem. That brings me ___"
+    options:
+      - "*to my recommendations. :: That brings me to + isim."
+      - "for my recommendations. :: Edat to olmalı."
+      - "my recommendations. :: Edat eksik."
+      - "at my recommendations. :: Edat to olmalı."
+    explanation: "That brings me to ..."
+  - id: q.prof.b2.pres.05
+    type: translation
+    prompt: "Bu grafikte görebileceğiniz gibi, satışlar martta keskin bir şekilde arttı."
+    answers: ["As you can see from this chart, sales rose sharply in March.", "As you can see from this chart, sales increased sharply in March.", "As you can see in this chart, sales rose sharply in March.", "As you can see from this graph, sales rose sharply in March.", "As you can see from the chart, sales rose sharply in March."]
+    explanation: "As you can see from ... + rise / increase sharply."

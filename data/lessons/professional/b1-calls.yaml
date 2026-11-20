@@ -1,0 +1,75 @@
+id: prof.b1.calls
+kind: professional
+level: B1
+title_tr: "Telefon ve çevrim içi görüşmeler"
+title_en: Phone and video calls
+objective_tr: İş telefonlarında ve çevrim içi toplantılarda bağlantı kurma, mesaj bırakma ve teknik sorunları dile getirme kalıplarını kullanabileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b1.indirect-questions]
+vocabulary: [call, message, connection, screen, hold, back]
+sections:
+  - kind: explanation
+    title_tr: Telefonda neden daha zor?
+    text_tr: |-
+      Telefonda ve çevrim içi görüşmelerde jest ve mimik yardımcı olmaz, ses kalitesi düşebilir. Bu yüzden **hazır kalıplar** güven verir: kimi aradığınızı, ne istediğinizi ve bir sorun olduğunda ne yapılacağını kısa cümlelerle söylersiniz.
+
+      Telefonda kendinizi tanıtırken "I am Deniz" yerine **"This is Deniz"** denir; birini sorarken **"Is that Mr Brown?"** ya da **"Could I speak to ...?"** kullanılır.
+  - kind: usage
+    title_tr: Çevrim içi toplantı
+    text_tr: |-
+      Çevrim içi toplantıların kendi kalıpları vardır: sesinizin kapalı olduğunu söylemek (**You're on mute**), ekran paylaşmak (**share your screen**), bağlantı sorunlarını belirtmek (**You're breaking up**).
+
+      Söz almak için kibar bir giriş kullanın: **"Sorry to interrupt, but ..."** ya da **"Can I just add something?"**
+expressions:
+  - {en: "This is ... speaking.", type: phrase, tr: "Ben ... (telefonda kendini tanıtma)", example: {en: "Hello, this is Selin Kaya speaking.", tr: "Merhaba, ben Selin Kaya."}}
+  - {en: "Could I speak to ...?", type: phrase, tr: "... ile görüşebilir miyim?", example: {en: "Could I speak to someone in accounts, please?", tr: "Muhasebeden biriyle görüşebilir miyim lütfen?"}}
+  - {en: "hold on", type: phrasal_verb, tr: "(hatta) beklemek", style: informal, example: {en: "Hold on a moment, I'll check.", tr: "Bir dakika bekleyin, kontrol edeyim."}}
+  - {en: "put someone through", type: phrasal_verb, tr: "(telefonu) birine bağlamak", example: {en: "I'll put you through to the sales department.", tr: "Sizi satış bölümüne bağlıyorum."}}
+  - {en: "leave a message", type: collocation, tr: "mesaj bırakmak", example: {en: "She's in a meeting. Would you like to leave a message?", tr: "Toplantıda. Mesaj bırakmak ister misiniz?"}}
+  - {en: "call someone back", type: phrasal_verb, tr: "birine geri dönmek, geri aramak", example: {en: "Can I call you back in ten minutes?", tr: "Sizi on dakika sonra geri arayabilir miyim?"}}
+  - {en: "You're on mute.", type: phrase, tr: "Mikrofonunuz kapalı.", example: {en: "Sorry, Ali, you're on mute. We can't hear you.", tr: "Pardon Ali, mikrofonun kapalı. Seni duyamıyoruz."}}
+  - {en: "You're breaking up.", type: phrase, tr: "Sesiniz kesik kesik geliyor.", example: {en: "Sorry, you're breaking up. Could you repeat that?", tr: "Pardon, sesiniz kesik geliyor. Tekrar eder misiniz?"}}
+  - {en: "share your screen", type: collocation, tr: "ekranını paylaşmak", example: {en: "Could you share your screen so we can see the chart?", tr: "Grafiği görebilmemiz için ekranınızı paylaşır mısınız?"}}
+  - {en: "Can everyone hear me?", type: phrase, tr: "Herkes beni duyabiliyor mu?", example: {en: "Good morning. Can everyone hear me?", tr: "Günaydın. Herkes beni duyabiliyor mu?"}}
+  - {en: "Sorry to interrupt, but ...", type: phrase, tr: "Böldüğüm için kusura bakmayın ama ...", example: {en: "Sorry to interrupt, but I think we've lost Mert.", tr: "Böldüğüm için kusura bakmayın ama sanırım Mert'in bağlantısı koptu."}}
+  - {en: "drop out", type: phrasal_verb, tr: "(bağlantısı) kopmak, düşmek", style: informal, example: {en: "Sorry, I dropped out for a minute. What did I miss?", tr: "Pardon, bir dakikalığına bağlantım koptu. Ne kaçırdım?"}}
+questions:
+  - id: q.prof.b1.calls.01
+    type: dialogue_completion
+    context: "A: Good morning, Atlas Logistics.\nB: Hello, ___ Mehmet Yılmaz from Kaya Foods. Could I speak to Ms Brown, please?"
+    prompt: "B kendini nasıl tanıtır?"
+    options:
+      - "*this is :: Telefonda: This is + ad."
+      - "I am :: Telefonda doğal değildir."
+      - "here is :: Bu kalıp kullanılmaz."
+      - "here speaks :: Başka dillerden sözcük sözcük çeviri; İngilizcede kullanılmaz."
+    explanation: "Telefonda kendini tanıtma: This is ... (speaking)."
+  - id: q.prof.b1.calls.02
+    type: matching
+    prompt: "Durumları kalıplarla eşleştirin."
+    pairs:
+      - ["Karşıdakinin mikrofonu kapalı.", "You're on mute."]
+      - ["Ses kesik kesik geliyor.", "You're breaking up."]
+      - ["Aradığınız kişi müsait değil.", "Would you like to leave a message?"]
+      - ["Arayanı başka bir bölüme aktarıyorsunuz.", "I'll put you through."]
+    explanation: "Telefon ve çevrim içi görüşme kalıpları."
+  - id: q.prof.b1.calls.03
+    type: fill_blank
+    prompt: "I'm driving at the moment. Can I call you ___ in half an hour?"
+    answers: [back]
+    explanation: "call someone back = geri aramak."
+  - id: q.prof.b1.calls.04
+    type: multiple_choice
+    prompt: "Çevrim içi toplantıda bir sunum yapacaksınız. Başlamadan önce ne sorarsınız?"
+    options:
+      - "*Can everyone see my screen? :: Ekran paylaşımını doğrulamak."
+      - "Can I put you through? :: Telefon bağlamak içindir."
+      - "Would you like to leave a message? :: Mesaj almak içindir."
+      - "You're breaking up. :: Karşı tarafın sesi kesildiğinde söylenir."
+    explanation: "Ekran paylaşmadan sonra herkesin gördüğünü teyit edin."
+  - id: q.prof.b1.calls.05
+    type: translation
+    prompt: "Sizi satış bölümüne bağlıyorum."
+    answers: ["I'll put you through to the sales department.", "I will put you through to the sales department.", "I'm putting you through to the sales department.", "I'll put you through to sales."]
+    explanation: "put someone through to ..."

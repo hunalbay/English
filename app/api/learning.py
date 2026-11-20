@@ -16,7 +16,7 @@ from app.services import progress
 router = APIRouter(tags=["learning"])
 
 LevelCode = Literal["A1", "A2", "B1", "B2", "C1", "C2"]
-TrackCode = Literal["grammar", "reading", "listening", "writing", "pronunciation"]
+TrackCode = Literal["grammar", "reading", "listening", "writing", "pronunciation", "expressions", "professional"]
 
 
 class LevelUpdate(BaseModel):

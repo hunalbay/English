@@ -1,0 +1,83 @@
+id: expr.c1.proverbs
+kind: expressions
+level: C1
+title_tr: "Atasözleri ve Türkçe karşılıkları"
+title_en: Proverbs
+objective_tr: Yaygın İngilizce atasözlerini anlayıp Türkçedeki en yakın karşılıklarıyla eşleştirebilecek ve konuşmada genellikle kısaltılarak kullanıldıklarını bileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [proverb, action, judge, practice, cook, smoke]
+sections:
+  - kind: explanation
+    title_tr: Karşılık, çeviri değildir
+    text_tr: |-
+      Atasözleri bir kültürün ortak deneyimini kısa bir kalıba sığdırır. İngilizce bir atasözünün Türkçe karşılığını ararken sözcüklere değil **verdiği öğüde** bakın: "Don't count your chickens before they hatch" (civcivlerini yumurtadan çıkmadan sayma) Türkçede "**Dereyi görmeden paçaları sıvama**" ile karşılanır.
+
+      Burada verilen Türkçe karşılıklar anlamca **en yakın** olanlardır; her zaman birebir örtüşmezler.
+  - kind: usage
+    title_tr: Konuşmada kısaltma
+    text_tr: |-
+      Ana dili İngilizce olanlar atasözlerini çoğu zaman **yarım bırakır**, çünkü devamını dinleyenin bildiğini varsayar: "Well, **when in Rome**..." · "**Too many cooks**..." · "**Every cloud**..."
+
+      Bu yüzden atasözünün ilk birkaç sözcüğünü tanımak, onu kendiniz kullanmaktan daha önemlidir.
+expressions:
+  - {en: "Actions speak louder than words.", type: proverb, tr: "Lafla peynir gemisi yürümez. (Söz değil, iş önemlidir.)", example: {en: "He keeps promising to help, but actions speak louder than words.", tr: "Hep yardım edeceğine söz veriyor ama lafla peynir gemisi yürümez."}}
+  - {en: "Don't count your chickens before they hatch.", type: proverb, tr: "Dereyi görmeden paçaları sıvama.", example: {en: "The contract isn't signed yet. Don't count your chickens before they hatch.", tr: "Sözleşme henüz imzalanmadı. Dereyi görmeden paçaları sıvama."}}
+  - {en: "The early bird catches the worm.", type: proverb, tr: "Erken kalkan yol alır.", example: {en: "Get there at eight. The early bird catches the worm.", tr: "Sekizde orada ol. Erken kalkan yol alır."}}
+  - {en: "Every cloud has a silver lining.", type: proverb, tr: "Her işte bir hayır vardır.", example: {en: "I missed my flight, but I met my future wife at the airport. Every cloud has a silver lining.", tr: "Uçağımı kaçırdım ama havaalanında müstakbel eşimle tanıştım. Her işte bir hayır var."}}
+  - {en: "Don't judge a book by its cover.", type: proverb, tr: "Görünüşe aldanma.", example: {en: "The restaurant looks old, but don't judge a book by its cover. The food is excellent.", tr: "Restoran eski görünüyor ama görünüşe aldanma. Yemekler harika."}}
+  - {en: "Better late than never.", type: proverb, tr: "Geç olsun da güç olmasın.", example: {en: "He finally apologized after two years. Better late than never.", tr: "İki yıl sonra nihayet özür diledi. Geç olsun da güç olmasın."}}
+  - {en: "Practice makes perfect.", type: proverb, tr: "İşleyen demir ışıldar.", example: {en: "Keep speaking English every day. Practice makes perfect.", tr: "Her gün İngilizce konuşmaya devam et. İşleyen demir ışıldar."}}
+  - {en: "Too many cooks spoil the broth.", type: proverb, tr: "Kaptanı çok olan gemi batar.", example: {en: "Ten people are working on one report? Too many cooks spoil the broth.", tr: "Tek bir rapor üzerinde on kişi mi çalışıyor? Kaptanı çok olan gemi batar."}}
+  - {en: "Rome wasn't built in a day.", type: proverb, tr: "Sabırla koruk helva olur. (Büyük işler zaman ister.)", example: {en: "You won't be fluent in a month. Rome wasn't built in a day.", tr: "Bir ayda akıcı konuşamazsın. Sabırla koruk helva olur."}}
+  - {en: "Where there's smoke, there's fire.", type: proverb, tr: "Ateş olmayan yerden duman çıkmaz.", example: {en: "Everyone says the company is in trouble. Where there's smoke, there's fire.", tr: "Herkes şirketin zor durumda olduğunu söylüyor. Ateş olmayan yerden duman çıkmaz."}}
+  - {en: "You can't have your cake and eat it.", type: proverb, tr: "İki karpuz bir koltuğa sığmaz.", example: {en: "You want a big salary and no responsibility? You can't have your cake and eat it.", tr: "Hem yüksek maaş hem sorumsuzluk mu istiyorsun? İki karpuz bir koltuğa sığmaz."}}
+  - {en: "When in Rome, do as the Romans do.", type: proverb, tr: "Girdiğin yerin âdetine uy.", example: {en: "Everyone here eats with their hands, so when in Rome...", tr: "Burada herkes elle yiyor, girdiğin yerin âdetine uy..."}}
+questions:
+  - id: q.expr.c1.proverbs.01
+    type: matching
+    prompt: "Atasözlerini Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["Where there's smoke, there's fire.", "Ateş olmayan yerden duman çıkmaz."]
+      - ["Better late than never.", "Geç olsun da güç olmasın."]
+      - ["The early bird catches the worm.", "Erken kalkan yol alır."]
+      - ["Don't count your chickens before they hatch.", "Dereyi görmeden paçaları sıvama."]
+      - ["Too many cooks spoil the broth.", "Kaptanı çok olan gemi batar."]
+    explanation: "Karşılık ararken sözcüklere değil öğüde bakın."
+  - id: q.expr.c1.proverbs.02
+    type: dialogue_completion
+    difficulty: 4
+    context: "A: I've been learning the guitar for two weeks and I still can't play a single song!\nB: Be patient. ___"
+    prompt: "B'nin söyleyeceği en uygun atasözü hangisidir?"
+    options:
+      - "*Rome wasn't built in a day. :: Büyük işler zaman ister."
+      - "Where there's smoke, there's fire. :: Söylentilerle ilgilidir."
+      - "Don't judge a book by its cover. :: Görünüşle ilgilidir."
+      - "Too many cooks spoil the broth. :: Fazla kişinin işe karışmasıyla ilgilidir."
+    explanation: "Sabır öğütleyen atasözü."
+  - id: q.expr.c1.proverbs.03
+    type: word_in_context
+    difficulty: 5
+    context: "\"I know the hotel is a bit strange — they serve dinner at ten and everyone takes a nap after lunch. But, you know, when in Rome...\""
+    prompt: "Konuşmacı cümleyi neden yarım bırakıyor?"
+    options:
+      - "*Atasözünün devamını (\"do as the Romans do\") dinleyenin bildiğini varsayıyor. :: Atasözleri konuşmada sık sık kısaltılır."
+      - "Roma'ya gitmeyi düşünüyor. :: Mecaz bir kullanım."
+      - "Ne diyeceğini unuttu. :: Bilinçli bir kısaltma."
+      - "Otelden şikâyet etmek istiyor. :: Tersine, yerel âdete uymayı kabul ediyor."
+    explanation: "When in Rome (do as the Romans do) = Girdiğin yerin âdetine uy."
+  - id: q.expr.c1.proverbs.04
+    type: fill_blank
+    prompt: "He says he'll change, but actions speak louder than ___."
+    answers: [words]
+    explanation: "Actions speak louder than words."
+  - id: q.expr.c1.proverbs.05
+    type: multiple_choice
+    difficulty: 4
+    prompt: "\"You want to save money and buy a new car this year? You can't have your cake and eat it.\" Konuşmacı ne demek istiyor?"
+    options:
+      - "*İki istek birbiriyle çelişiyor; ikisi birden olmaz. :: İki karpuz bir koltuğa sığmaz."
+      - "Pasta yemek sağlıksızdır. :: Atasözü mecazidir."
+      - "Arabayı hemen alması gerekir. :: Bir seçim yapması gerektiğini söylüyor."
+      - "Tasarruf etmek imkânsızdır. :: Yalnızca ikisinin birlikte olamayacağını söylüyor."
+    explanation: "Birbirini dışlayan iki şeyi birlikte istemek."

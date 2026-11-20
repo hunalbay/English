@@ -1,0 +1,95 @@
+id: prof.b2.meetings
+kind: professional
+level: B2
+title_tr: "Toplantılar"
+title_en: Meetings
+objective_tr: Bir toplantıyı açabilecek, gündemi yönetebilecek, görüş bildirip kibarca karşı çıkabilecek ve kararları özetleyebileceksiniz.
+source: original
+review_status: auto_checked
+related: [gram.b2.reporting-verbs]
+vocabulary: [agenda, chair, minute, opinion, decision, summary]
+sections:
+  - kind: explanation
+    title_tr: Toplantının dili
+    text_tr: |-
+      İngilizce toplantılarda doğrudan karşı çıkmak (**"You're wrong."**) çoğu zaman kaba bulunur. Anlaşmazlık **yumuşatılarak** dile getirilir: "I see your point, but ..." · "I'm not sure I agree." · "Could we look at it another way?"
+
+      Toplantıyı yöneten kişiye **chair** denir. Toplantının sonunda **action points** (yapılacaklar) ve sorumlular belirlenir; **minutes** (toplantı tutanağı) katılımcılara gönderilir.
+  - kind: common_mistakes
+    title_tr: Dikkat
+    text_tr: |-
+      **"Table" fiili** İngiliz ve Amerikan İngilizcesinde neredeyse **zıt** anlamlara gelir. BrE: "table a proposal" = gündeme getirmek. AmE: "table a proposal" = ertelemek, rafa kaldırmak. Uluslararası toplantılarda yanlış anlaşılmaması için **"put forward"** ya da **"postpone"** kullanmak daha güvenlidir.
+
+      **AOB** (any other business): gündemin sonunda "diğer konular" maddesi.
+expressions:
+  - {en: "agenda", type: term, tr: "gündem", example: {en: "There are four items on the agenda today.", tr: "Bugün gündemde dört madde var."}}
+  - {en: "chair", type: term, tr: "toplantı başkanı; toplantıya başkanlık etmek", example: {en: "Ayşe will chair the meeting while the director is away.", tr: "Direktör yokken toplantıya Ayşe başkanlık edecek."}}
+  - {en: "minutes", type: term, tr: "toplantı tutanağı", note_tr: "Bu anlamda her zaman çoğuldur.", example: {en: "Could someone take the minutes today?", tr: "Bugün tutanağı biri tutabilir mi?"}}
+  - {en: "action points", type: term, tr: "yapılacaklar, eylem maddeleri", example: {en: "Let's go through the action points before we finish.", tr: "Bitirmeden önce yapılacakların üzerinden geçelim."}}
+  - {en: "Let's move on to the next item.", type: phrase, tr: "Bir sonraki maddeye geçelim.", example: {en: "Thank you, Mert. Let's move on to the next item.", tr: "Teşekkürler Mert. Bir sonraki maddeye geçelim."}}
+  - {en: "I see your point, but ...", type: phrase, tr: "Ne demek istediğinizi anlıyorum ama ...", example: {en: "I see your point, but the cost is too high.", tr: "Ne demek istediğinizi anlıyorum ama maliyet çok yüksek."}}
+  - {en: "I'm not sure I agree.", type: phrase, tr: "Katıldığımdan pek emin değilim.", note_tr: "Kibar bir karşı çıkış.", example: {en: "I'm not sure I agree. Our customers seem happy with the current system.", tr: "Katıldığımdan pek emin değilim. Müşterilerimiz mevcut sistemden memnun görünüyor."}}
+  - {en: "Could we come back to that later?", type: phrase, tr: "Buna daha sonra dönebilir miyiz?", example: {en: "That's a good question. Could we come back to that later?", tr: "İyi bir soru. Buna daha sonra dönebilir miyiz?"}}
+  - {en: "put forward a proposal", type: collocation, tr: "öneri sunmak", example: {en: "The finance team put forward a proposal to cut costs.", tr: "Finans ekibi maliyetleri düşürmek için bir öneri sundu."}}
+  - {en: "reach a consensus", type: collocation, tr: "uzlaşmaya varmak", style: formal, example: {en: "We didn't reach a consensus, so we'll vote next week.", tr: "Uzlaşmaya varamadık, bu yüzden gelecek hafta oylayacağız."}}
+  - {en: "To sum up, ...", type: phrase, tr: "Özetlemek gerekirse ...", example: {en: "To sum up, we've agreed to delay the launch until May.", tr: "Özetlemek gerekirse, lansmanı mayısa ertelemeyi kabul ettik."}}
+  - {en: "AOB", type: term, tr: "diğer konular (any other business)", example: {en: "Is there any other business? No? Then let's finish there.", tr: "Başka konu var mı? Yok mu? O zaman burada bitirelim."}}
+questions:
+  - id: q.prof.b2.meetings.01
+    type: multiple_choice
+    difficulty: 3
+    prompt: "Bir iş arkadaşınızın önerisine kibarca karşı çıkıyorsunuz. Hangisi en uygundur?"
+    options:
+      - "*I see your point, but I'm worried about the cost. :: Görüşü kabul edip kaygıyı belirtir."
+      - "You're wrong. :: Çok doğrudan ve kaba."
+      - "That's a stupid idea. :: Saldırgan."
+      - "No. :: Gerekçesiz ve sert."
+    explanation: "Anlaşmazlık yumuşatılarak dile getirilir."
+  - id: q.prof.b2.meetings.02
+    type: matching
+    prompt: "Terimleri anlamlarıyla eşleştirin."
+    pairs:
+      - ["agenda", "gündem"]
+      - ["minutes", "toplantı tutanağı"]
+      - ["action points", "yapılacaklar"]
+      - ["chair", "toplantı başkanı"]
+      - ["AOB", "diğer konular"]
+    explanation: "Toplantı terimleri."
+  - id: q.prof.b2.meetings.03
+    type: nuance
+    difficulty: 4
+    prompt: "Amerikalı bir müdür \"Let's table this proposal.\" diyor. Büyük olasılıkla ne demek istiyor?"
+    options:
+      - "*Öneriyi şimdilik erteleyelim. :: AmE'de table = ertelemek, rafa kaldırmak."
+      - "Öneriyi hemen tartışmaya açalım. :: Bu, BrE anlamıdır."
+      - "Öneriyi masaya koyup imzalayalım. :: Sözcük anlamı."
+      - "Öneriyi reddedelim. :: Ret değil, erteleme."
+    explanation: "BrE ve AmE'de neredeyse zıt anlamlar; uluslararası ortamda \"postpone\" daha güvenli."
+  - id: q.prof.b2.meetings.04
+    type: dialogue_completion
+    difficulty: 3
+    context: "Chair: That's an important question about the budget, Kerem, but we only have ten minutes left. ___\nKerem: Of course."
+    prompt: "Başkan ne der?"
+    options:
+      - "*Could we come back to that later? :: Konuyu kibarca ertelemek."
+      - "To sum up, ... :: Özetlemek için kullanılır."
+      - "You're on mute. :: Çevrim içi görüşmede mikrofon uyarısıdır."
+      - "I'm not sure I agree. :: Karşı çıkmak içindir."
+    explanation: "Zamanı yönetmek için konuyu ertelemek."
+  - id: q.prof.b2.meetings.05
+    type: error_correction
+    prompt: "Could someone take the minute today?"
+    answers: ["Could someone take the minutes today?"]
+    explanation: "Tutanak anlamında minutes her zaman çoğuldur."
+  - id: q.prof.b2.meetings.06
+    type: written_answer
+    difficulty: 4
+    prompt: "Bir toplantının sonunda kullanacağınız 3–4 cümlelik bir kapanış konuşması yazın: varılan kararı özetleyin, iki yapılacak maddeyi ve sorumlularını belirtin, bir sonraki toplantının tarihini söyleyin."
+    model_answers:
+      - "To sum up, we've agreed to postpone the launch until May. Selin will update the marketing plan, and Burak will contact the supplier about the new delivery dates. I'll send the minutes this afternoon. Our next meeting is on Tuesday at ten."
+    checklist:
+      - "Özetle başladım (To sum up / So, to recap)."
+      - "En az iki yapılacak madde ve sorumlusunu belirttim."
+      - "Bir sonraki toplantının zamanını söyledim."
+      - "Gelecek planları will / be going to ile anlattım."
+    explanation: "Toplantı kapanışı: karar → yapılacaklar → sonraki adım."

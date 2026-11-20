@@ -70,7 +70,8 @@ export const POS_TR = {
 
 export const LESSON_KIND_TR = {
   grammar: "Dil bilgisi", vocabulary: "Kelime", reading: "Okuma", listening: "Dinleme", writing: "Yazma",
-  speaking: "Konuşma", pronunciation: "Telaffuz", expressions: "Kalıplar",
+  speaking: "Konuşma", pronunciation: "Telaffuz", expressions: "Deyimler ve kalıplar",
+  professional: "Mesleki İngilizce",
 };
 
 export function levelBadge(level) {

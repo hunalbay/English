@@ -1,0 +1,83 @@
+id: expr.b1.phrasal-verbs-work-travel
+kind: expressions
+level: B1
+title_tr: "İş ve seyahatte öbek fiiller"
+title_en: Phrasal verbs for work and travel
+objective_tr: İşte ve seyahatte sık geçen öbek fiilleri anlamlarıyla kullanabilecek, üç parçalı öbek fiillerde edatı doğru yerleştirebileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.a2.phrasal-verbs-daily]
+vocabulary: [check, pick, run, deal, carry, fill]
+sections:
+  - kind: explanation
+    title_tr: Üç parçalı öbek fiiller
+    text_tr: |-
+      Bazı öbek fiiller üç parçadan oluşur: **run out of**, **get on with**, **look forward to**. Bunlar ayrılmaz; nesne her zaman sonda gelir: "We've **run out of** milk."
+
+      **look forward to** kalıbındaki **to** bir edattır; ardından fiil gelirse **-ing** alır: "I'm looking forward to **seeing** you."
+  - kind: usage
+    title_tr: Resmî karşılıklar
+    text_tr: |-
+      Öbek fiiller konuşmada ve gündelik yazışmada çok yaygındır. Resmî yazıda çoğu zaman tek sözcüklü karşılıkları tercih edilir: **put off → postpone**, **carry on → continue**, **find out → discover**, **turn down → reject / decline**.
+expressions:
+  - {en: "set off", type: phrasal_verb, tr: "yola çıkmak", example: {en: "We set off early to avoid the traffic.", tr: "Trafikten kaçınmak için erken yola çıktık."}}
+  - {en: "check in", type: phrasal_verb, tr: "giriş yapmak (otel, havaalanı)", example: {en: "You can check in online 24 hours before the flight.", tr: "Uçuştan 24 saat önce çevrim içi giriş yapabilirsiniz."}}
+  - {en: "pick up", type: phrasal_verb, tr: "(birini / bir şeyi) almak, gidip almak", example: {en: "I'll pick you up from the airport at nine.", tr: "Seni dokuzda havaalanından alırım."}}
+  - {en: "drop off", type: phrasal_verb, tr: "(birini / bir şeyi) bırakmak", example: {en: "Can you drop me off at the station?", tr: "Beni istasyonda bırakabilir misin?"}}
+  - {en: "run out of", type: phrasal_verb, tr: "(bir şeyi) bitirmek, tükenmek", example: {en: "We've run out of paper for the printer.", tr: "Yazıcı kâğıdımız bitti."}}
+  - {en: "get on with", type: phrasal_verb, tr: "(biriyle) iyi geçinmek; (bir işe) devam etmek", example: {en: "I get on well with my new colleagues.", tr: "Yeni iş arkadaşlarımla iyi geçiniyorum."}}
+  - {en: "deal with", type: phrasal_verb, tr: "ilgilenmek, halletmek, başa çıkmak", example: {en: "Who deals with customer complaints?", tr: "Müşteri şikâyetleriyle kim ilgileniyor?"}}
+  - {en: "put off", type: phrasal_verb, tr: "ertelemek", example: {en: "The meeting has been put off until next week.", tr: "Toplantı gelecek haftaya ertelendi."}}
+  - {en: "carry on", type: phrasal_verb, tr: "devam etmek", example: {en: "Sorry for interrupting. Please carry on.", tr: "Böldüğüm için özür dilerim. Lütfen devam edin."}}
+  - {en: "fill in", type: phrasal_verb, tr: "(form) doldurmak", note_tr: "Amerikan İngilizcesinde \"fill out\" da kullanılır.", example: {en: "Please fill in this form and sign it at the bottom.", tr: "Lütfen bu formu doldurup altını imzalayın."}}
+  - {en: "turn down", type: phrasal_verb, tr: "reddetmek; (sesi) kısmak", example: {en: "She turned down the job because the salary was too low.", tr: "Maaş çok düşük olduğu için işi reddetti."}}
+  - {en: "look forward to", type: phrasal_verb, tr: "dört gözle beklemek, sabırsızlıkla beklemek", example: {en: "I'm looking forward to meeting you next week.", tr: "Gelecek hafta sizinle tanışmayı dört gözle bekliyorum."}}
+questions:
+  - id: q.expr.b1.pv-work.01
+    type: multiple_choice
+    prompt: "The printer isn't working because we've ___ ink."
+    options:
+      - "*run out of :: Bir şeyin tükenmesi: run out of."
+      - "run out :: Nesneden önce of gerekir."
+      - "put off :: Ertelemek demektir."
+      - "dropped off :: Bırakmak demektir."
+    explanation: "run out of + isim."
+  - id: q.expr.b1.pv-work.02
+    type: error_correction
+    prompt: "I'm looking forward to see you in Izmir."
+    answers: ["I'm looking forward to seeing you in Izmir.", "I am looking forward to seeing you in Izmir."]
+    explanation: "look forward to + fiil-ing."
+    lessons: [gram.b1.gerund-infinitive]
+  - id: q.expr.b1.pv-work.03
+    type: matching
+    prompt: "Öbek fiilleri resmî karşılıklarıyla eşleştirin."
+    pairs:
+      - ["put off", "postpone"]
+      - ["carry on", "continue"]
+      - ["turn down", "decline"]
+      - ["deal with", "handle"]
+    explanation: "Resmî yazıda tek sözcüklü karşılıklar tercih edilir."
+  - id: q.expr.b1.pv-work.04
+    type: dialogue_completion
+    context: "A: Is it OK if I leave my car here?\nB: Sorry, this is only for taxis. You can ___ your passengers here, but you can't park."
+    prompt: "B cümlesini nasıl tamamlar?"
+    options:
+      - "*drop off :: Yolcuları bırakmak: drop off."
+      - "set off :: Yola çıkmak demektir; nesne almaz."
+      - "check in :: Otel ya da havaalanında giriş yapmak demektir."
+      - "turn down :: Reddetmek demektir."
+    explanation: "drop off ↔ pick up."
+  - id: q.expr.b1.pv-work.05
+    type: sentence_completion
+    prompt: "She doesn't get on ___"
+    options:
+      - "*with her manager, so she wants to change departments. :: get on with + kişi: iyi geçinmek."
+      - "her manager, so she wants to change departments. :: Kişiden önce with gerekir."
+      - "to her manager, so she wants to change departments. :: Edat with olmalıdır."
+      - "for her manager, so she wants to change departments. :: Edat with olmalıdır."
+    explanation: "get on (well) with someone."
+  - id: q.expr.b1.pv-work.06
+    type: translation
+    prompt: "Toplantı gelecek haftaya ertelendi."
+    answers: ["The meeting has been put off until next week.", "The meeting was put off until next week.", "The meeting has been postponed until next week.", "The meeting was postponed until next week.", "The meeting has been put off to next week.", "The meeting was postponed to next week."]
+    explanation: "put off / postpone + until."

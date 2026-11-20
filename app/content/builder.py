@@ -31,7 +31,7 @@ from app.content.source_models import (
 )
 from app.content.text import english_tokens, fold_text, lemma_key, regular_inflections, word_id
 
-CONTENT_VERSION = "0.6.0"
+CONTENT_VERSION = "0.7.0"
 
 
 class ContentError(Exception):
@@ -294,6 +294,15 @@ def validate(content: Content) -> list[str]:
                 errors.append(f"{where}: telaffuz dersinde açıklama bölümü zorunludur")
         elif lesson.practice:
             errors.append(f"{where}: çalışma öğeleri (practice) yalnızca telaffuz derslerinde kullanılır")
+        if lesson.kind in ("expressions", "professional"):
+            if not lesson.expressions:
+                errors.append(f"{where}: bu ders türünde ifade / terim listesi (expressions) zorunludur")
+            if not lesson.questions:
+                errors.append(f"{where}: bu ders türünde en az bir soru gereklidir")
+        elif lesson.expressions:
+            errors.append(f"{where}: ifade listesi yalnızca kalıp ve mesleki İngilizce derslerinde kullanılır")
+        if len({" ".join(item.en.lower().split()) for item in lesson.expressions}) != len(lesson.expressions):
+            errors.append(f"{where}: ifade listesinde yinelenen öğe var")
         if len({" ".join(item.en.split()) for item in lesson.practice}) != len(lesson.practice):
             errors.append(f"{where}: çalışma öğeleri yineleniyor")
         if lesson.kind == "writing":
@@ -426,7 +435,8 @@ def build(data_dir: Path, output: Path) -> dict[str, int]:
         counts = {
             table: conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]  # noqa: S608 (sabit tablo adları)
             for table in ("units", "lessons", "lesson_sections", "questions", "vocabulary", "word_meanings",
-                          "example_sentences", "passages", "practice_items", "audio_clips")
+                          "example_sentences", "passages", "practice_items", "expression_items",
+                          "audio_clips")
         }
         conn.execute("VACUUM")
     except Exception:
@@ -515,6 +525,13 @@ def _insert(conn: sqlite3.Connection, content: Content, audio_dir: Path) -> None
              for i, item in enumerate(lesson.practice, 1)],
         )
         body_parts += [item.en for item in lesson.practice]
+        conn.executemany(
+            "INSERT INTO expression_items VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            [(lesson.id, i, item.type, item.en, item.tr, item.note_tr, item.style, item.example.en,
+              item.example.tr, phrase_key(item.en)) for i, item in enumerate(lesson.expressions, 1)],
+        )
+        for item in lesson.expressions:
+            body_parts += [item.en, item.tr]
         for kind, targets in (("prerequisite", lesson.prerequisites), ("next", lesson.next), ("related", lesson.related)):
             conn.executemany(
                 "INSERT INTO lesson_relations VALUES (?, ?, ?)", [(lesson.id, target, kind) for target in targets]

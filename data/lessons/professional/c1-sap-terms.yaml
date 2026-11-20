@@ -1,0 +1,105 @@
+id: prof.c1.sap-terms
+kind: professional
+level: C1
+title_tr: "SAP projelerinde İngilizce"
+title_en: English for SAP projects
+objective_tr: SAP gibi kurumsal kaynak planlama (ERP) sistemlerinde ve uygulama projelerinde kullanılan temel İngilizce terimleri anlayıp danışmanlarla ve destek ekipleriyle doğru iletişim kurabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [prof.c1.accounting]
+vocabulary: [system, order, document, period, role, data]
+sections:
+  - kind: explanation
+    title_tr: Bu ders hakkında
+    text_tr: |-
+      SAP, SAP SE'nin tescilli markasıdır. Bu ders SAP SE ile bağlantılı değildir ve SAP belgelerinden alıntı içermez; yalnızca ERP projelerinde ve günlük kullanımda yaygın olan **genel İngilizce terimleri** tanıtır.
+
+      Türkçe karşılıklar şirketten şirkete ve sistemin yerelleştirme ayarlarına göre değişebilir. Örneğin **vendor** bazı kurumlarda "satıcı", bazılarında "tedarikçi" olarak geçer; yeni sistemlerde **business partner** (iş ortağı) kavramı da kullanılır. Kendi kurumunuzun terim listesini esas alın.
+  - kind: usage
+    title_tr: Satınalmadan ödemeye
+    text_tr: |-
+      Tipik bir satınalma süreci şu belgelerle ilerler:
+
+      1. **Purchase requisition** (satınalma talebi): bir bölüm ihtiyacını bildirir.
+      2. **Purchase order, PO** (satınalma siparişi): tedarikçiye resmî sipariş gönderilir.
+      3. **Goods receipt, GR** (mal girişi): mal teslim alınır ve sisteme kaydedilir.
+      4. **Invoice receipt / verification** (fatura girişi / kontrolü): tedarikçinin faturası kontrol edilir.
+      5. **Payment** (ödeme): fatura ödenir.
+
+      Sipariş, mal girişi ve faturanın birbiriyle karşılaştırılmasına **three-way match** (üç yönlü eşleştirme) denir.
+  - kind: usage
+    title_tr: Destek ekibiyle yazışırken
+    text_tr: |-
+      Bir sorunu bildirirken **işlem kodunu (transaction code)**, **belge numarasını**, **şirket kodunu** ve **hata mesajının tam metnini** yazın. "It doesn't work" yerine: "When I try to post the invoice in company code 1000, I get the error message '...'."
+
+      Ekran görüntüsü eklemek ve sorunun **test** sisteminde mi **canlı (production)** sistemde mi olduğunu belirtmek çözümü hızlandırır.
+expressions:
+  - {en: "company code", type: term, tr: "şirket kodu", note_tr: "Bağımsız hesap seti tutulan en küçük organizasyon birimi.", example: {en: "Which company code should I post this invoice to?", tr: "Bu faturayı hangi şirket koduna kaydetmeliyim?"}}
+  - {en: "cost center", type: term, tr: "masraf yeri", note_tr: "BrE yazımı: cost centre.", example: {en: "Please charge the training costs to cost center 4100.", tr: "Lütfen eğitim masraflarını 4100 numaralı masraf yerine yansıtın."}}
+  - {en: "profit center", type: term, tr: "kâr merkezi", example: {en: "Each region is set up as a separate profit center.", tr: "Her bölge ayrı bir kâr merkezi olarak tanımlanmıştır."}}
+  - {en: "G/L account", type: term, tr: "ana hesap (büyük defter hesabı)", example: {en: "Travel expenses are posted to a separate G/L account.", tr: "Seyahat giderleri ayrı bir ana hesaba kaydedilir."}}
+  - {en: "master data", type: term, tr: "ana veri", example: {en: "Incorrect master data is the most common cause of posting errors.", tr: "Hatalı ana veri, kayıt hatalarının en yaygın nedenidir."}}
+  - {en: "purchase order (PO)", type: term, tr: "satınalma siparişi", example: {en: "We can't pay the invoice without a valid PO number.", tr: "Geçerli bir sipariş numarası olmadan faturayı ödeyemeyiz."}}
+  - {en: "goods receipt (GR)", type: term, tr: "mal girişi", example: {en: "The goods receipt was posted yesterday, so the invoice can be checked.", tr: "Mal girişi dün kaydedildi, fatura kontrol edilebilir."}}
+  - {en: "three-way match", type: term, tr: "üç yönlü eşleştirme (sipariş, mal girişi, fatura)", example: {en: "The invoice was blocked because the three-way match failed.", tr: "Üç yönlü eşleştirme tutmadığı için fatura bloke edildi."}}
+  - {en: "post a document", type: collocation, tr: "belgeyi kaydetmek (kayıt atmak)", example: {en: "The system won't let me post the document. The period is closed.", tr: "Sistem belgeyi kaydetmeme izin vermiyor. Dönem kapalı."}}
+  - {en: "reverse a document", type: collocation, tr: "belgeyi ters kayıtla iptal etmek", example: {en: "If you posted it to the wrong account, reverse the document and post it again.", tr: "Yanlış hesaba kaydettiyseniz belgeyi ters kayıtla iptal edip yeniden kaydedin."}}
+  - {en: "posting period", type: term, tr: "kayıt dönemi", example: {en: "Posting period 12 is now closed for all users.", tr: "12. kayıt dönemi artık bütün kullanıcılara kapalı."}}
+  - {en: "month-end closing", type: term, tr: "ay sonu kapanışı", example: {en: "All invoices must be entered before month-end closing.", tr: "Bütün faturalar ay sonu kapanışından önce girilmelidir."}}
+  - {en: "transaction code", type: term, tr: "işlem kodu (T-code)", example: {en: "Which transaction code do you use to display a purchase order?", tr: "Bir satınalma siparişini görüntülemek için hangi işlem kodunu kullanıyorsunuz?"}}
+  - {en: "authorization", type: term, tr: "yetki", note_tr: "BrE yazımı: authorisation.", example: {en: "I don't have authorization to change vendor master data.", tr: "Satıcı ana verisini değiştirme yetkim yok."}}
+  - {en: "production system", type: term, tr: "canlı sistem (üretim ortamı)", example: {en: "Please test the change in the test system before moving it to production.", tr: "Lütfen değişikliği canlı sisteme almadan önce test sisteminde deneyin."}}
+  - {en: "go-live", type: term, tr: "canlıya geçiş", example: {en: "The go-live is planned for 1 January.", tr: "Canlıya geçiş 1 Ocak için planlanıyor."}}
+  - {en: "raise a ticket", type: collocation, tr: "destek talebi (kayıt) açmak", example: {en: "If the error happens again, please raise a ticket with the support team.", tr: "Hata yeniden olursa lütfen destek ekibine bir talep kaydı açın."}}
+questions:
+  - id: q.prof.c1.sap.01
+    type: word_order
+    prompt: "Satınalma sürecinin ilk adımını anlatan cümleyi kurun."
+    tokens: [First, a, purchase, requisition, is, created]
+    explanation: "Süreç: requisition → PO → goods receipt → invoice → payment."
+  - id: q.prof.c1.sap.02
+    type: multiple_choice
+    difficulty: 4
+    prompt: "Bir fatura \"three-way match\" tutmadığı için bloke edildi. Hangi üç belge karşılaştırılır?"
+    options:
+      - "*Satınalma siparişi, mal girişi ve fatura :: PO – GR – invoice."
+      - "Bilanço, gelir tablosu ve mizan :: Bunlar finansal tablolardır."
+      - "Talep, sözleşme ve ödeme :: Eşleştirme sipariş, mal girişi ve fatura arasında yapılır."
+      - "Masraf yeri, kâr merkezi ve şirket kodu :: Bunlar organizasyon birimleridir."
+    explanation: "three-way match = üç yönlü eşleştirme."
+  - id: q.prof.c1.sap.03
+    type: matching
+    prompt: "Terimleri Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["cost center", "masraf yeri"]
+      - ["master data", "ana veri"]
+      - ["goods receipt", "mal girişi"]
+      - ["go-live", "canlıya geçiş"]
+      - ["authorization", "yetki"]
+    explanation: "Karşılıklar kuruma göre değişebilir."
+  - id: q.prof.c1.sap.04
+    type: nuance
+    difficulty: 5
+    prompt: "Destek ekibine yazacağınız hangi mesaj sorunun en hızlı çözülmesini sağlar?"
+    options:
+      - "*When I try to post invoice 5100023 in company code 1000 in the production system, I get the error \"Posting period 12 is not open\". Screenshot attached. :: Belge, şirket kodu, sistem, hata metni ve ekran görüntüsü var."
+      - "The system doesn't work. Please fix it urgently. :: Hiçbir ayrıntı yok."
+      - "I have a problem with an invoice. Can you help? :: Hangi fatura, hangi hata belli değil."
+      - "There is an error again!!! :: Ayrıntı yok ve tonu uygun değil."
+    explanation: "İyi bir destek talebi: ne, nerede, hangi hata, kanıt."
+  - id: q.prof.c1.sap.05
+    type: dialogue_completion
+    difficulty: 4
+    context: "User: I posted the invoice to the wrong cost center. Can I just change it?\nConsultant: Not directly. You'll need to ___ the document and post it again with the correct cost center."
+    prompt: "Danışman cümlesini nasıl tamamlar?"
+    options:
+      - "*reverse :: Ters kayıtla iptal etmek."
+      - "delete :: Kayıtlı muhasebe belgeleri silinmez; ters kayıtla iptal edilir."
+      - "write off :: Alacağı zarar yazmak demektir."
+      - "raise :: \"Raise a ticket\" destek talebi içindir."
+    explanation: "Kaydedilmiş belgeler genellikle silinmez; reverse edilir."
+  - id: q.prof.c1.sap.06
+    type: translation
+    prompt: "Satıcı ana verisini değiştirme yetkim yok."
+    answers: ["I don't have authorization to change vendor master data.", "I do not have authorization to change vendor master data.", "I don't have authorisation to change vendor master data.", "I don't have the authorization to change vendor master data.", "I don't have authorization to change the vendor master data.", "I don't have authorization to change supplier master data."]
+    explanation: "have authorization to + fiil."

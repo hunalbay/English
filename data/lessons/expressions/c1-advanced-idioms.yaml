@@ -1,0 +1,98 @@
+id: expr.c1.advanced-idioms
+kind: expressions
+level: C1
+title_tr: "İleri düzey deyimler: iş ve tartışma"
+title_en: Advanced idioms for work and discussion
+objective_tr: Toplantı, tartışma ve iş yazışmalarında sık duyulan mecazi ifadeleri anlayıp yerinde kullanabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.b2.idioms-body]
+vocabulary: [corner, advocate, square, issue, avoid, sword]
+sections:
+  - kind: explanation
+    title_tr: İş dünyasının mecazları
+    text_tr: |-
+      İş hayatında ve tartışmalarda kullanılan pek çok deyim, durumları kısa ve çarpıcı biçimde adlandırır: herkesin bildiği ama konuşmadığı sorun **the elephant in the room**, başa dönmek **back to square one**.
+
+      Bu deyimler toplantılarda ve iş yazışmalarında gündelik bir tonla kullanılır. Rapor ve akademik metinlerde ise daha az yer alır.
+  - kind: usage
+    title_tr: Dikkat
+    text_tr: |-
+      **Play devil's advocate** olumsuz bir şey değildir; bir fikri sınamak için bilerek karşı görüşü savunmak demektir: "Let me play devil's advocate for a moment..."
+
+      **Jump on the bandwagon** çoğunlukla eleştiri taşır: bir şeyi inandığınız için değil, moda olduğu için yapmak.
+expressions:
+  - {en: "the elephant in the room", type: idiom, tr: "herkesin bildiği ama kimsenin açmadığı sorun", example: {en: "The budget cuts were the elephant in the room at the meeting.", tr: "Bütçe kesintileri toplantıda herkesin bildiği ama kimsenin açmadığı konuydu."}}
+  - {en: "a blessing in disguise", type: idiom, tr: "başta kötü görünüp sonradan iyi çıkan şey, hayırlı bir aksilik", example: {en: "Losing that job was a blessing in disguise.", tr: "O işi kaybetmek sonradan hayırlı çıktı."}}
+  - {en: "beat around the bush", type: idiom, tr: "lafı dolandırmak", style: informal, example: {en: "Stop beating around the bush and tell me what happened.", tr: "Lafı dolandırmayı bırak da ne olduğunu söyle."}}
+  - {en: "the last straw", type: idiom, tr: "bardağı taşıran son damla", example: {en: "When they cancelled my holiday, it was the last straw. I resigned.", tr: "Tatilimi iptal ettiklerinde bardak taştı. İstifa ettim."}}
+  - {en: "cut corners", type: idiom, tr: "işi baştan savma yapmak, kestirmeden gitmek (kaliteden ödün vermek)", example: {en: "The builders cut corners, and now the roof is leaking.", tr: "İnşaatçılar işi baştan savma yaptı, şimdi de çatı akıtıyor."}}
+  - {en: "jump on the bandwagon", type: idiom, tr: "rüzgâra göre yelken açmak, modaya uymak", example: {en: "Every company is jumping on the AI bandwagon.", tr: "Her şirket yapay zekâ modasına uyuyor."}}
+  - {en: "play devil's advocate", type: idiom, tr: "(fikri sınamak için) bilerek karşı görüşü savunmak", example: {en: "I agree with you, but let me play devil's advocate for a moment.", tr: "Sana katılıyorum ama bir dakikalığına karşı tarafı savunayım."}}
+  - {en: "a double-edged sword", type: idiom, tr: "iki tarafı keskin bıçak", example: {en: "Social media is a double-edged sword for small businesses.", tr: "Sosyal medya küçük işletmeler için iki tarafı keskin bir bıçaktır."}}
+  - {en: "get the ball rolling", type: idiom, tr: "işi başlatmak, ilk adımı atmak", style: informal, example: {en: "Let's get the ball rolling with a quick introduction.", tr: "Kısa bir tanışmayla işe başlayalım."}}
+  - {en: "back to square one", type: idiom, tr: "başa dönmek, sıfırdan başlamak", example: {en: "The client rejected our design, so we're back to square one.", tr: "Müşteri tasarımımızı reddetti; başa döndük."}}
+  - {en: "read between the lines", type: idiom, tr: "satır aralarını okumak", example: {en: "If you read between the lines, the email is quite critical.", tr: "Satır aralarını okursan, e-posta epey eleştirel."}}
+  - {en: "steal someone's thunder", type: idiom, tr: "birinin parlayacağı anı elinden almak, gölgede bırakmak", example: {en: "I was going to announce the news, but my colleague stole my thunder.", tr: "Haberi ben duyuracaktım ama iş arkadaşım benden önce davranıp anımı elimden aldı."}}
+questions:
+  - id: q.expr.c1.idioms.01
+    type: multiple_choice
+    difficulty: 4
+    prompt: "\"Everyone knew the project was failing, but nobody mentioned it.\" Bu durumu en iyi anlatan deyim hangisidir?"
+    options:
+      - "*the elephant in the room :: Herkesin bildiği ama konuşulmayan sorun."
+      - "a blessing in disguise :: Kötü görünen ama iyi çıkan şey."
+      - "back to square one :: Başa dönmek."
+      - "the last straw :: Bardağı taşıran son damla."
+    explanation: "the elephant in the room."
+  - id: q.expr.c1.idioms.02
+    type: nuance
+    difficulty: 5
+    prompt: "Bir toplantıda biri \"Let me play devil's advocate.\" diyor. Ne yapmak üzeredir?"
+    options:
+      - "*Fikri sınamak için, inanmasa da karşı görüşü savunacak. :: Yapıcı bir tartışma tekniği."
+      - "Toplantıyı sabote edecek. :: Olumsuz bir niyet ifade etmez."
+      - "Bir avukatı arayacak. :: Deyim mecazidir."
+      - "Herkesle aynı fikirde olduğunu söyleyecek. :: Tersine, karşı görüşü dile getirecek."
+    explanation: "devil's advocate: kasıtlı karşı görüş."
+  - id: q.expr.c1.idioms.03
+    type: matching
+    prompt: "Deyimleri Türkçe karşılıklarıyla eşleştirin."
+    pairs:
+      - ["the last straw", "bardağı taşıran son damla"]
+      - ["beat around the bush", "lafı dolandırmak"]
+      - ["read between the lines", "satır aralarını okumak"]
+      - ["a double-edged sword", "iki tarafı keskin bıçak"]
+      - ["back to square one", "başa dönmek"]
+    explanation: "Bu deyimlerin Türkçede yakın karşılıkları vardır."
+  - id: q.expr.c1.idioms.04
+    type: word_in_context
+    difficulty: 4
+    context: "To save money, the contractor used cheaper materials and skipped several safety checks. Within a year, cracks had appeared in the walls. Cutting corners had turned out to be very expensive."
+    prompt: "\"Cutting corners\" burada ne anlama gelir?"
+    options:
+      - "*Masraf ya da zaman kazanmak için işi eksik ve özensiz yapmak :: Kaliteden ödün vermek."
+      - "Binanın köşelerini kesmek :: Deyim mecazidir."
+      - "Daha kısa bir yol kullanmak :: Sözcük anlamı; burada mecaz anlam kastediliyor."
+      - "Bütçeyi aşmak :: Tersine, tasarruf etmeye çalışıyordu."
+    explanation: "cut corners: kestirmeden gidip kaliteyi düşürmek."
+  - id: q.expr.c1.idioms.05
+    type: sentence_completion
+    difficulty: 4
+    prompt: "Nobody wanted to speak first, so the chair said, \"Right, let me ___\""
+    options:
+      - "*get the ball rolling.\" :: İşi başlatmak."
+      - "steal your thunder.\" :: Birinin parlayacağı anı elinden almak."
+      - "cut corners.\" :: Baştan savma yapmak."
+      - "beat around the bush.\" :: Lafı dolandırmak."
+    explanation: "get the ball rolling = başlatmak."
+  - id: q.expr.c1.idioms.06
+    type: nuance
+    difficulty: 5
+    prompt: "\"Many brands have jumped on the sustainability bandwagon.\" Yazarın tutumu nedir?"
+    options:
+      - "*Eleştirel: markaların sürdürülebilirliği inandıkları için değil, moda olduğu için benimsediğini ima ediyor. :: jump on the bandwagon çoğunlukla eleştiri taşır."
+      - "Övücü: markaları çevre bilinçleri için tebrik ediyor. :: Deyimin tonu olumsuzdur."
+      - "Yansız: yalnızca bir istatistik veriyor. :: Deyim bir tutum bildirir."
+      - "Kararsız: markaların ne yaptığını bilmiyor. :: Açık bir yargı var."
+    explanation: "Deyim seçimi yazarın tutumunu ele verir."

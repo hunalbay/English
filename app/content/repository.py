@@ -26,7 +26,7 @@ def _placeholders(values: list) -> str:
 
 
 MEDIA_PREFIX = "/media/"
-TRACKS = ("grammar", "reading", "listening", "writing", "pronunciation")
+TRACKS = ("grammar", "reading", "listening", "writing", "pronunciation", "expressions", "professional")
 
 
 def audio_urls(conn: sqlite3.Connection, keys: list[str]) -> dict[str, dict]:
@@ -170,6 +170,16 @@ def lesson(conn: sqlite3.Connection, lesson_id: str) -> Row | None:
     for item in practice:
         item["audio"] = clips.get(item.pop("audio_key"))
     data["practice"] = practice
+    expressions = _rows(
+        conn,
+        "SELECT type, en, tr, note_tr, register, example_en, example_tr, audio_key FROM expression_items "
+        "WHERE lesson_id = ? ORDER BY position",
+        (lesson_id,),
+    )
+    clips = audio_urls(conn, [item["audio_key"] for item in expressions])
+    for item in expressions:
+        item["audio"] = clips.get(item.pop("audio_key"))
+    data["expressions"] = expressions
     relations = _rows(
         conn,
         """SELECT r.kind AS relation, ls.id, ls.kind, ls.level, ls.title_tr, ls.title_en
@@ -341,6 +351,7 @@ def totals(conn: sqlite3.Connection) -> Row:
         ).fetchone()[0],
         "tracks": {track: sum(levels.values()) for track, levels in track_counts(conn).items()},
         "audio": audio_counts(conn),
+        "expressions": conn.execute("SELECT COUNT(*) FROM expression_items").fetchone()[0],
         "words": conn.execute("SELECT COUNT(*) FROM vocabulary").fetchone()[0],
     }
 

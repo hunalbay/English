@@ -1,0 +1,87 @@
+id: expr.b2.strong-collocations
+kind: expressions
+level: B2
+title_tr: "Güçlü birliktelikler: heavy rain, highly recommend"
+title_en: Strong collocations
+objective_tr: Sıfat + isim ve zarf + fiil / sıfat birlikteliklerini doğal biçimde kullanarak anlatımınızı ana dili İngilizce olanlarınkine yaklaştırabileceksiniz.
+source: original
+review_status: auto_checked
+prerequisites: [expr.a2.make-and-do]
+vocabulary: [heavy, strong, highly, deep, attention, effort]
+sections:
+  - kind: explanation
+    title_tr: Neden "heavy rain" ama "strong wind"?
+    text_tr: |-
+      Türkçede "şiddetli yağmur" da "şiddetli rüzgâr" da denir. İngilizcede ise yağmur **heavy**, rüzgâr **strong** olur. "Strong rain" anlaşılır ama yabancı duyulur.
+
+      Bu birlikteliklerin mantıksal bir açıklaması çoğu zaman yoktur. B2 düzeyinden sonra anlatımınızı en çok geliştirecek şeylerden biri, kelimeleri **eşleriyle birlikte** öğrenmektir.
+  - kind: review_tips
+    title_tr: Nasıl öğrenmeli?
+    text_tr: |-
+      Yeni bir isim öğrendiğinizde, onunla en sık kullanılan **fiili** ve **sıfatı** da not edin: **attention** → pay attention, draw attention, close attention.
+
+      Okurken bu tür ikilileri fark edip işaretleyin; kendi yazınızda bunları kullanmaya çalışın.
+expressions:
+  - {en: "heavy rain", type: collocation, tr: "şiddetli yağmur", note_tr: "\"strong rain\" değil.", example: {en: "Heavy rain caused flooding in the city centre.", tr: "Şiddetli yağmur şehir merkezinde sele yol açtı."}}
+  - {en: "strong wind", type: collocation, tr: "şiddetli rüzgâr", example: {en: "Strong winds are expected along the coast tonight.", tr: "Bu gece kıyı boyunca şiddetli rüzgâr bekleniyor."}}
+  - {en: "heavy traffic", type: collocation, tr: "yoğun trafik", example: {en: "Sorry I'm late. There was heavy traffic on the bridge.", tr: "Geç kaldığım için özür dilerim. Köprüde yoğun trafik vardı."}}
+  - {en: "strong coffee", type: collocation, tr: "sert kahve", note_tr: "Türkçedeki \"sert\" burada \"hard\" ile karşılanmaz.", example: {en: "I need a strong coffee before the meeting.", tr: "Toplantıdan önce sert bir kahveye ihtiyacım var."}}
+  - {en: "highly recommend", type: collocation, tr: "şiddetle tavsiye etmek", example: {en: "I highly recommend this restaurant.", tr: "Bu restoranı şiddetle tavsiye ederim."}}
+  - {en: "deeply regret", type: collocation, tr: "derin üzüntü duymak, çok pişman olmak", style: formal, example: {en: "We deeply regret any inconvenience caused.", tr: "Neden olunan rahatsızlıktan dolayı derin üzüntü duyuyoruz."}}
+  - {en: "bitterly disappointed", type: collocation, tr: "derin hayal kırıklığına uğramış", example: {en: "The fans were bitterly disappointed by the result.", tr: "Taraftarlar sonuç yüzünden derin bir hayal kırıklığına uğradı."}}
+  - {en: "fully aware", type: collocation, tr: "tamamen farkında", example: {en: "We are fully aware of the risks.", tr: "Risklerin tamamen farkındayız."}}
+  - {en: "pay attention", type: collocation, tr: "dikkat etmek", note_tr: "\"give attention\" ya da \"make attention\" değil.", example: {en: "Please pay attention to the safety instructions.", tr: "Lütfen güvenlik talimatlarına dikkat edin."}}
+  - {en: "make an effort", type: collocation, tr: "çaba göstermek", example: {en: "He made a real effort to learn Turkish.", tr: "Türkçe öğrenmek için gerçekten çaba gösterdi."}}
+  - {en: "catch a cold", type: collocation, tr: "soğuk algınlığına yakalanmak, üşütmek", example: {en: "Wear a coat or you'll catch a cold.", tr: "Mont giy, yoksa üşütürsün."}}
+  - {en: "reach an agreement", type: collocation, tr: "anlaşmaya varmak", example: {en: "After three hours, the two sides finally reached an agreement.", tr: "Üç saatin sonunda iki taraf nihayet anlaşmaya vardı."}}
+questions:
+  - id: q.expr.b2.colloc.01
+    type: multiple_choice
+    difficulty: 3
+    prompt: "The match was cancelled because of ___ rain."
+    options:
+      - "*heavy :: Birliktelik: heavy rain."
+      - "strong :: \"Strong rain\" doğal bir birliktelik değildir."
+      - "hard :: \"Hard rain\" seyrek kullanılır ve doğal değildir."
+      - "big :: \"Big rain\" doğal bir birliktelik değildir."
+    explanation: "heavy rain / heavy traffic / heavy snow; strong wind / strong coffee."
+  - id: q.expr.b2.colloc.02
+    type: error_spotting
+    difficulty: 4
+    prompt: "Hangi cümlede birliktelik YANLIŞTIR?"
+    options:
+      - "*Please give attention to the instructions. :: Doğrusu: pay attention."
+      - "I highly recommend this book. :: Doğru birliktelik."
+      - "We reached an agreement last night. :: Doğru birliktelik."
+      - "She made a real effort to be on time. :: Doğru birliktelik."
+    explanation: "pay attention to = dikkat etmek."
+  - id: q.expr.b2.colloc.03
+    type: matching
+    prompt: "Sözcükleri en doğal eşleriyle eşleştirin."
+    pairs:
+      - ["bitterly", "disappointed"]
+      - ["fully", "aware"]
+      - ["deeply", "regret"]
+      - ["highly", "recommend"]
+    explanation: "Zarf + sıfat / fiil birliktelikleri."
+  - id: q.expr.b2.colloc.04
+    type: fill_blank
+    prompt: "I always drink a ___ coffee in the morning to wake up."
+    answers: [strong]
+    explanation: "strong coffee = sert kahve."
+  - id: q.expr.b2.colloc.05
+    type: paragraph_completion
+    difficulty: 4
+    context: "Negotiations between the union and the management lasted all night. By six in the morning, both sides were exhausted, but they finally ___ an agreement on pay."
+    prompt: "Boşluğa hangisi gelmelidir?"
+    options:
+      - "*reached :: reach an agreement."
+      - "did :: \"do an agreement\" doğal değildir."
+      - "took :: \"take an agreement\" doğal değildir."
+      - "arrived :: \"arrive at an agreement\" olabilirdi ama edat eksik."
+    explanation: "reach / come to an agreement."
+  - id: q.expr.b2.colloc.06
+    type: translation
+    prompt: "Bu restoranı şiddetle tavsiye ederim."
+    answers: ["I highly recommend this restaurant.", "I would highly recommend this restaurant.", "I'd highly recommend this restaurant.", "I strongly recommend this restaurant."]
+    explanation: "highly / strongly recommend."

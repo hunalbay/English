@@ -5,7 +5,7 @@ Kimlikler (lesson.id, vocabulary.id, unit.id) sürümler arasında kararlı meti
 değerleridir, çünkü kullanıcı ilerlemesi (user.db) bu kimliklere bağlanır.
 """
 
-SCHEMA_VERSION = "4"
+SCHEMA_VERSION = "5"
 
 DDL = """
 CREATE TABLE content_meta (
@@ -35,7 +35,8 @@ CREATE TABLE units (
     title_tr       TEXT NOT NULL,
     title_en       TEXT,
     description_tr TEXT,
-    track          TEXT NOT NULL CHECK (track IN ('grammar','reading','listening','writing','pronunciation')),
+    track          TEXT NOT NULL CHECK (track IN ('grammar','reading','listening','writing','pronunciation',
+                                                 'expressions','professional')),
     UNIQUE (level, position)
 );
 CREATE INDEX ix_units_track ON units(track, level);
@@ -45,7 +46,8 @@ CREATE TABLE lessons (
     unit_id       TEXT NOT NULL REFERENCES units(id),
     position      INTEGER NOT NULL,
     kind          TEXT NOT NULL CHECK (kind IN ('grammar','vocabulary','reading','listening',
-                                               'writing','speaking','pronunciation','expressions')),
+                                               'writing','speaking','pronunciation','expressions',
+                                               'professional')),
     level         TEXT NOT NULL REFERENCES levels(code),
     title_tr      TEXT NOT NULL,
     title_en      TEXT NOT NULL,
@@ -101,6 +103,22 @@ CREATE TABLE practice_items (
     audio_key TEXT NOT NULL,
     PRIMARY KEY (lesson_id, position)
 );
+
+-- Deyimler, öbek fiiller, kalıplar ve mesleki terimler
+CREATE TABLE expression_items (
+    lesson_id  TEXT NOT NULL REFERENCES lessons(id),
+    position   INTEGER NOT NULL,
+    type       TEXT NOT NULL CHECK (type IN ('idiom','phrasal_verb','collocation','proverb','slang','phrase','term')),
+    en         TEXT NOT NULL,
+    tr         TEXT NOT NULL,
+    note_tr    TEXT,
+    register   TEXT NOT NULL CHECK (register IN ('neutral','informal','formal','slang')),
+    example_en TEXT NOT NULL,
+    example_tr TEXT NOT NULL,
+    audio_key  TEXT NOT NULL,
+    PRIMARY KEY (lesson_id, position)
+);
+CREATE INDEX ix_expression_items_type ON expression_items(type);
 
 -- Önceden üretilmiş ses klipleri. Anahtar: "w:<kelime>", "s:<metin özeti>", "l:<ders kimliği>".
 -- Kaydı olmayan içerik için ses yoktur; arayüz bunu açıkça belirtir.

@@ -1,0 +1,62 @@
+id: expr.a1.survival-phrases
+kind: expressions
+level: A1
+title_tr: "Anlamadığınızda: yardım isteme kalıpları"
+title_en: Asking for help
+objective_tr: Anlamadığınızda, tekrar ya da yavaş konuşma istediğinizde ve bir sözcüğün anlamını sorduğunuzda kullanılan kalıpları kullanabileceksiniz.
+source: original
+review_status: auto_checked
+vocabulary: [understand, repeat, slowly, mean, spell, say]
+sections:
+  - kind: explanation
+    title_tr: Konuşmayı sürdürmenin anahtarı
+    text_tr: |-
+      Yeni başlayan biri için en değerli kalıplar, konuşma koptuğunda onu yeniden başlatan kalıplardır. Anlamadığınızı söylemek bir eksiklik değil, iletişimin doğal bir parçasıdır.
+
+      Bu kalıpları ezberleyin; böylece bir sözcüğü bilmediğinizde susmak yerine sorabilirsiniz.
+expressions:
+  - {en: "Sorry, I don't understand.", type: phrase, tr: "Özür dilerim, anlamıyorum.", example: {en: "Sorry, I don't understand. Can you say that again?", tr: "Özür dilerim, anlamıyorum. Tekrar söyler misiniz?"}}
+  - {en: "Can you repeat that, please?", type: phrase, tr: "Tekrar eder misiniz lütfen?", example: {en: "Can you repeat that, please? I didn't hear the number.", tr: "Tekrar eder misiniz lütfen? Numarayı duymadım."}}
+  - {en: "Can you speak more slowly, please?", type: phrase, tr: "Daha yavaş konuşabilir misiniz lütfen?", example: {en: "My English isn't very good. Can you speak more slowly, please?", tr: "İngilizcem pek iyi değil. Daha yavaş konuşabilir misiniz lütfen?"}}
+  - {en: "What does this word mean?", type: phrase, tr: "Bu kelime ne demek?", note_tr: "\"What means...?\" yanlıştır; does kullanılır.", example: {en: "What does \"busy\" mean? — It means you have a lot to do.", tr: "\"Busy\" ne demek? — Yapacak çok işin olduğu anlamına gelir."}}
+  - {en: "How do you say ... in English?", type: phrase, tr: "... İngilizcede nasıl denir?", example: {en: "How do you say \"çatal\" in English? — Fork.", tr: "\"Çatal\" İngilizcede nasıl denir? — Fork."}}
+  - {en: "How do you spell that?", type: phrase, tr: "Nasıl yazılıyor? (harf harf)", example: {en: "My name is Özge. — How do you spell that?", tr: "Adım Özge. — Nasıl yazılıyor?"}}
+  - {en: "Pardon?", type: phrase, tr: "Efendim? / Anlayamadım?", note_tr: "Duymadığınızda kısa ve kibar bir sorudur. \"What?\" kaba duyulabilir.", example: {en: "It's twelve fifty. — Pardon? — Twelve fifty.", tr: "On iki elli. — Efendim? — On iki elli."}}
+  - {en: "I'm not sure.", type: phrase, tr: "Emin değilim.", example: {en: "Is the museum open today? — I'm not sure.", tr: "Müze bugün açık mı? — Emin değilim."}}
+  - {en: "Can you help me, please?", type: phrase, tr: "Bana yardım edebilir misiniz lütfen?", example: {en: "Excuse me, can you help me, please? I'm lost.", tr: "Affedersiniz, bana yardım edebilir misiniz lütfen? Kayboldum."}}
+  - {en: "Just a moment, please.", type: phrase, tr: "Bir dakika lütfen.", example: {en: "Just a moment, please. I'm looking for my ticket.", tr: "Bir dakika lütfen. Biletimi arıyorum."}}
+questions:
+  - id: q.expr.a1.survival.01
+    type: error_correction
+    prompt: "What means this word?"
+    answers: ["What does this word mean?"]
+    explanation: "Soru: What + does + özne + mean?"
+    lessons: [gram.a1.present-simple-negative-questions]
+  - id: q.expr.a1.survival.02
+    type: multiple_choice
+    prompt: "Biri çok hızlı konuşuyor. Ne dersiniz?"
+    options:
+      - "*Can you speak more slowly, please? :: Kibarca yavaş konuşmasını istiyorsunuz."
+      - "How do you spell that? :: Bu, bir sözcüğün harflerini sorar."
+      - "You're welcome. :: Teşekküre verilen cevaptır."
+      - "Just a moment, please. :: Beklemesini istersiniz; yavaş konuşmasını değil."
+    explanation: "more slowly: daha yavaş."
+  - id: q.expr.a1.survival.03
+    type: fill_blank
+    prompt: "How do you ___ \"kitap\" in English?"
+    answers: [say]
+    explanation: "How do you say ... in English?"
+  - id: q.expr.a1.survival.04
+    type: matching
+    prompt: "Durumları kalıplarla eşleştirin."
+    pairs:
+      - ["Bir sözcüğün harflerini öğrenmek istiyorsunuz.", "How do you spell that?"]
+      - ["Söyleneni duymadınız.", "Pardon?"]
+      - ["Bir sözcüğün anlamını bilmiyorsunuz.", "What does this word mean?"]
+      - ["Cevaptan emin değilsiniz.", "I'm not sure."]
+    explanation: "Her kalıp belirli bir durum içindir."
+  - id: q.expr.a1.survival.05
+    type: translation
+    prompt: "Özür dilerim, anlamıyorum."
+    answers: ["Sorry, I don't understand.", "I'm sorry, I don't understand.", "Sorry, I do not understand."]
+    explanation: "Sorry, I don't understand."
