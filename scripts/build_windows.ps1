@@ -11,6 +11,8 @@
 # Bu betik ayrı bir sanal ortam (.venv-build) kullanır; geliştirme ortamına dokunmaz.
 param([switch]$SkipSmoke)
 $ErrorActionPreference = "Stop"
+$env:PYTHONUTF8 = "1"          # Türkçe çıktılar için (Windows konsolu varsayılan olarak cp1252)
+$env:PYTHONIOENCODING = "utf-8"
 Set-Location (Split-Path -Parent $PSScriptRoot)
 
 if (-not (Test-Path ".venv-build")) { py -3.13 -m venv .venv-build }
