@@ -3,15 +3,15 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 6 tamamlandı.** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
-> telaffuz (7 ders), deyimler ve kalıplar (14 ders, 166 ifade) ile mesleki İngilizce (9 ders, 115 terim ve kalıp:
-> iş yazışmaları, toplantı, sunum, finans, muhasebe, müzakere, SAP terimleri) hazır. Toplam 1.200 soru,
-> 5.048 kelimelik sözlük ve kelime çalışması var.
+> **Durum: Aşama 7 tamamlandı.** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
+> telaffuz (7 ders), deyimler ve kalıplar (14 ders, 166 ifade) ile mesleki İngilizce (9 ders, 115 terim ve kalıp)
+> hazır. Toplam 1.200 soru, 5.048 kelimelik sözlük, kelime çalışması, seviye tespit sınavı ve ilerleme raporu
+> (güçlü / zayıf konular, günlük etkinlik, haftalık başarı, öneriler) var.
 > Kayıtlar, telaffuz örnekleri, ifadeler ve bütün sözlük kelimeleri için önceden üretilmiş sentetik ses
 > programla birlikte gelir (bkz. [docs/AUDIO.md](docs/AUDIO.md)); internet gerekmez.
-> Seviye tespit sınavı ve raporlar (Aşama 7) ile Windows kurulum paketi (Aşama 9) henüz eklenmedi.
+> Windows kurulum paketi (Aşama 9) henüz hazır değil.
 > Tüm içerik yapay zekâ ile yazılmış ve yalnızca otomatik denetimden geçmiştir; sesler de dâhil olmak üzere
-> bir uzman tarafından gözden geçirilmemiştir.
+> bir uzman tarafından gözden geçirilmemiştir. Seviye tespit sınavı resmî bir CEFR sınavıyla eşleştirilmemiştir.
 
 ## Geliştirme ortamı
 

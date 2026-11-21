@@ -400,6 +400,61 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   check((await page.locator(".page-header .btn.listen").count()) === 1, "kelime sayfasında dinle düğmesi yok");
   check((await page.locator(".page-header .btn.listen.fallback").count()) === 0, "kelime için hazır ses bulunamadı");
 
+  // 11g) İlerleme raporu: gerçek etkinlik, iki grafik, tablo görünümü, analiz
+  await menu.getByRole("link", { name: "İlerleme", exact: true }).click();
+  await heading("İlerleme").waitFor();
+  check((await page.locator("svg.chart").count()) === 2, "ilerleme grafikleri çizilmedi");
+  check((await page.locator("svg.chart .chart-bar").count()) >= 1, "bugünkü etkinlik grafikte görünmüyor");
+  const answered = Number((await page.locator(".stat-tile", { hasText: "Cevaplanan soru" }).locator(".stat-value").innerText()).trim());
+  check(answered >= 10, "cevaplanan soru sayısı etkinliği yansıtmıyor: " + answered);
+  check((await page.locator(".stat-tile", { hasText: "Güncel seri" }).locator(".stat-value").innerText()).startsWith("1"), "seri 1 gün olmalı");
+  const firstChart = page.locator(".chart-figure").first();
+  await firstChart.locator(".chart-item").last().focus();
+  check(await firstChart.locator(".chart-tooltip").isVisible(), "grafik ipucu görünmüyor");
+  check((await firstChart.locator(".chart-tooltip").innerText()).includes("soru"), "grafik ipucu değeri göstermiyor");
+  await page.locator(".chart-table summary").first().click();
+  check((await page.locator(".chart-table").first().locator("tbody tr").count()) === 30, "etkinlik tablosu 30 gün değil");
+  check(await page.locator("#analysis").isVisible(), "güçlü / zayıf yön bölümü yok");
+  check((await page.locator(".meter").count()) >= 5, "alan ilerleme çubukları eksik");
+  await shot("progress");
+
+  // 11h) Seviye tespit sınavı: başlat, bütün bölümleri cevapla, sonucu uygula
+  await menu.getByRole("link", { name: "Seviye tespiti", exact: true }).click();
+  await heading("Seviye tespit sınavı").waitFor();
+  check(await page.getByText("Konuşma, yazma ve dinleme").isVisible(), "sınavın sınırları açıklanmadı");
+  await page.getByRole("button", { name: "Sınava başla" }).click();
+  await page.locator("#placement-status").getByText("Bölüm 1 · A1").waitFor();
+  for (let step = 0; step < 48; step += 1) {
+    if (await page.locator("#placement-result").count()) break;
+    await page.locator("#placement-question").waitFor();
+    const before = await page.locator("#placement-status").innerText();
+    if (await page.locator("#placement-question .options .btn").count()) {
+      check((await page.locator("#feedback").count()) === 0, "seviye tespitinde geri bildirim gösterilmemeli");
+      await page.locator("#placement-question .options .btn").first().click();
+    } else {
+      await page.locator("#answer-input").fill("is");
+      await page.getByRole("button", { name: "Cevapla" }).click();
+    }
+    await page.waitForFunction((text) => {
+      if (document.getElementById("placement-result")) return true;
+      const status = document.getElementById("placement-status");
+      return status && /Soru \d/.test(status.textContent) && status.textContent !== text;
+    }, before);
+  }
+  await page.locator("#placement-result").waitFor();
+  check(await page.getByText("Tahmini seviyeniz").isVisible(), "tahmini seviye yok");
+  check((await page.getByRole("heading", { name: "Bölümler" }).locator("xpath=..").locator("tbody tr").count()) >= 1, "bölüm tablosu yok");
+  await shot("placement-result");
+  const applyButton = page.getByRole("button", { name: /seviyesiyle devam et/ }).first();
+  const appliedLevel = (await applyButton.innerText()).slice(0, 2);
+  await applyButton.click();
+  await heading("Ana Sayfa").waitFor();
+  check(await page.locator(".stat-value", { hasText: appliedLevel }).first().isVisible(), "sonuç profile uygulanmadı");
+  await page.goto(url + "#/seviye-tespiti");
+  await page.locator("#placement-history li").first().waitFor();
+  await page.goto(url + "#/testler");
+  await page.getByText("Seviye tespit sınavı").first().waitFor();
+
   // 12) Küçük ekranda yatay taşma olmamalı
   await page.setViewportSize({ width: 375, height: 700 });
   for (const hash of ["#/", "#/ders/gram.a1.to-be-present", "#/sozluk", "#/kelime/word.be", "#/ayarlar", "#/calis", "#/calis/kartlar/en_tr/level/A1", "#/calis/alistirma/matching/level/A1", "#/testler", "#/test/ders/gram.a1.articles-a-an"]) {

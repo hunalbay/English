@@ -10,7 +10,8 @@ function accuracyBadge(stats) {
 }
 
 function historyRow(item) {
-  const title = item.lesson ? item.lesson.title_tr : item.level ? `${item.level} karışık test` : "Karışık test";
+  const title = item.kind === "placement" ? "Seviye tespit sınavı"
+    : item.lesson ? item.lesson.title_tr : item.level ? `${item.level} karışık test` : "Karışık test";
   const date = new Date(item.started_at).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" });
   const extra = [
     item.partial ? `${item.partial} kısmen` : null,

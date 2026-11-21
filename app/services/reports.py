@@ -1,0 +1,233 @@
+"""İlerleme raporu ve güçlü / zayıf yön analizi.
+
+Bütün sayılar kullanıcının kendi kayıtlarından (user.db) hesaplanır; tahmin ya da örnek veri yoktur.
+Program çalışma süresini ölçmez; raporlar etkinlik sayılarına (cevaplanan soru, tekrar edilen kart,
+tamamlanan ders) dayanır. Günler bilgisayarın yerel saat dilimine göre ayrılır.
+"""
+
+from __future__ import annotations
+
+import sqlite3
+from datetime import date, datetime, timedelta, timezone
+
+from sqlalchemy import select
+from sqlalchemy.orm import Session
+
+from app.content import repository as repo
+from app.models.user import LessonProgress, ReviewHistory, TestSession, UserAnswer
+from app.services import placement
+from app.services import study as study_service
+from app.services import tests as tests_service
+
+LEVELS = ("A1", "A2", "B1", "B2", "C1", "C2")
+MIN_ANSWERS = 3          # bir konu hakkında yargıya varmak için gereken en az kesin cevap
+STRONG_FROM = 0.8
+WEAK_BELOW = 0.6
+ACTIVITY_DAYS = 30
+TREND_WEEKS = 8
+
+
+def _local_date(value: datetime, tz) -> date:  # noqa: ANN001
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=timezone.utc)
+    return value.astimezone(tz).date()
+
+
+def _graded_rows(session: Session) -> list[tuple[str, str, str, datetime]]:
+    """(question_id, lesson_id, result, answered_at) — yalnızca kesin ya da öz değerlendirmeli sonuçlar."""
+    rows = session.execute(
+        select(UserAnswer.question_id, UserAnswer.lesson_id, UserAnswer.result, UserAnswer.answered_at)
+    ).all()
+    graded = (*tests_service.RIGHT, *tests_service.WRONG)
+    return [tuple(row) for row in rows if row[2] in graded]
+
+
+def _rate(correct: int, total: int) -> float | None:
+    return round(correct / total, 3) if total else None
+
+
+def analysis(session: Session, content: sqlite3.Connection) -> dict:
+    """Konu, alan, seviye ve soru tipi bazında başarı; güçlü ve zayıf konular; öneriler."""
+    rows = _graded_rows(session)
+    lesson_ids = sorted({row[1] for row in rows})
+    briefs = repo.lesson_briefs(content, lesson_ids)
+    tracks = repo.lesson_tracks(content, lesson_ids)
+    meta = repo.question_meta(content, sorted({row[0] for row in rows}))
+
+    def bucket(store: dict, key: str, right: bool) -> None:
+        entry = store.setdefault(key, {"correct": 0, "total": 0})
+        entry["total"] += 1
+        entry["correct"] += int(right)
+
+    by_lesson: dict[str, dict] = {}
+    by_track: dict[str, dict] = {}
+    by_level: dict[str, dict] = {}
+    by_type: dict[str, dict] = {}
+    for question_id, lesson_id, result, _ in rows:
+        if lesson_id not in briefs or question_id not in meta:
+            continue  # içerik güncellemesiyle kaldırılmış soru ya da ders
+        right = result in tests_service.RIGHT
+        bucket(by_lesson, lesson_id, right)
+        bucket(by_track, tracks.get(lesson_id, "grammar"), right)
+        bucket(by_level, meta[question_id]["level"], right)
+        bucket(by_type, meta[question_id]["type"], right)
+
+    topics = [
+        {**briefs[lesson_id], "track": tracks.get(lesson_id, "grammar"), **counts,
+         "rate": _rate(counts["correct"], counts["total"])}
+        for lesson_id, counts in by_lesson.items()
+    ]
+    judged = [topic for topic in topics if topic["total"] >= MIN_ANSWERS]
+    strengths = sorted((t for t in judged if t["rate"] >= STRONG_FROM), key=lambda t: (-t["rate"], -t["total"], t["title_tr"]))
+    weaknesses = sorted((t for t in judged if t["rate"] < WEAK_BELOW), key=lambda t: (t["rate"], -t["total"], t["title_tr"]))
+
+    def table(store: dict, order: tuple[str, ...] | None = None) -> list[dict]:
+        keys = [key for key in order if key in store] if order else sorted(store, key=lambda k: -store[k]["total"])
+        return [{"key": key, **store[key], "rate": _rate(store[key]["correct"], store[key]["total"])} for key in keys]
+
+    vocab = study_service.stats(session, content)
+    difficult = vocab.get("most_missed", [])[:8]
+    due = vocab["directions"]["en_tr"]["due"] + vocab["directions"]["tr_en"]["due"]
+
+    recommendations = []
+    for topic in weaknesses[:3]:
+        recommendations.append({
+            "kind": "review_lesson", "lesson": {k: topic[k] for k in ("id", "kind", "level", "title_tr", "title_en", "track")},
+            "reason_tr": f"Bu konudaki {topic['total']} cevabınızın {topic['correct']} tanesi doğru (%{round(topic['rate'] * 100)}).",
+        })
+    if due:
+        recommendations.append({"kind": "review_words", "count": due,
+                                "reason_tr": f"Tekrar zamanı gelmiş {due} kelime kartınız var."})
+    latest = placement.latest(session)
+    if latest is None:
+        recommendations.append({"kind": "placement",
+                                "reason_tr": "Seviyenizi henüz ölçmediniz. Seviye tespit sınavı bir başlangıç noktası verir."})
+
+    return {
+        "graded_answers": len(rows),
+        "min_answers": MIN_ANSWERS,
+        "thresholds": {"strong_from": STRONG_FROM, "weak_below": WEAK_BELOW},
+        "by_track": table(by_track, repo.TRACKS),
+        "by_level": table(by_level, LEVELS),
+        "by_type": table(by_type),
+        "strengths": strengths[:8],
+        "weaknesses": weaknesses[:8],
+        "untested_topics": sum(1 for topic in topics if topic["total"] < MIN_ANSWERS),
+        "difficult_words": difficult,
+        "latest_placement": latest,
+        "recommendations": recommendations,
+    }
+
+
+def _streaks(days: set[date], today: date) -> tuple[int, int]:
+    """(güncel seri, en uzun seri). Bugün henüz etkinlik yoksa dünden geriye sayılır."""
+    current = 0
+    day = today if today in days else today - timedelta(days=1)
+    while day in days:
+        current += 1
+        day -= timedelta(days=1)
+    longest = run = 0
+    previous = None
+    for day in sorted(days):
+        run = run + 1 if previous is not None and day - previous == timedelta(days=1) else 1
+        longest = max(longest, run)
+        previous = day
+    return current, longest
+
+
+def progress(session: Session, content: sqlite3.Connection, now: datetime | None = None) -> dict:
+    """Etkinlik geçmişi, seriler, haftalık başarı ve alanlara göre tamamlanan dersler."""
+    now = now or datetime.now(timezone.utc)
+    tz = now.astimezone().tzinfo
+    today = _local_date(now, tz)
+    first_day = today - timedelta(days=ACTIVITY_DAYS - 1)
+
+    answers = session.execute(select(UserAnswer.answered_at, UserAnswer.result)).all()
+    reviews = session.execute(select(ReviewHistory.reviewed_at)).all()
+    completions = session.execute(
+        select(LessonProgress.completed_at, LessonProgress.lesson_id).where(LessonProgress.completed_at.is_not(None))
+    ).all()
+
+    activity_days: set[date] = set()
+    daily = {first_day + timedelta(days=i): {"questions": 0, "reviews": 0, "lessons": 0} for i in range(ACTIVITY_DAYS)}
+    for answered_at, _ in answers:
+        day = _local_date(answered_at, tz)
+        activity_days.add(day)
+        if day in daily:
+            daily[day]["questions"] += 1
+    for (reviewed_at,) in reviews:
+        day = _local_date(reviewed_at, tz)
+        activity_days.add(day)
+        if day in daily:
+            daily[day]["reviews"] += 1
+    for completed_at, _ in completions:
+        day = _local_date(completed_at, tz)
+        activity_days.add(day)
+        if day in daily:
+            daily[day]["lessons"] += 1
+
+    # Haftalık başarı (son 8 hafta, pazartesi başlangıçlı)
+    week_start = today - timedelta(days=today.weekday())
+    weeks = [week_start - timedelta(weeks=i) for i in range(TREND_WEEKS - 1, -1, -1)]
+    weekly = {week: {"correct": 0, "total": 0} for week in weeks}
+    graded = (*tests_service.RIGHT, *tests_service.WRONG)
+    for answered_at, result in answers:
+        if result not in graded:
+            continue
+        day = _local_date(answered_at, tz)
+        week = day - timedelta(days=day.weekday())
+        if week in weekly:
+            weekly[week]["total"] += 1
+            weekly[week]["correct"] += int(result in tests_service.RIGHT)
+
+    # Alanlara ve seviyelere göre tamamlanan dersler (yalnızca içerikte hâlâ bulunan dersler sayılır)
+    completed_ids = {lesson_id for _, lesson_id in completions}
+    track_levels = repo.track_counts(content)
+    by_track_level = {track: {level: 0 for level in LEVELS} for track in repo.TRACKS}
+    for track in repo.TRACKS:
+        for level, ids in repo.lesson_ids_by_level(content, track).items():
+            by_track_level[track][level] = sum(1 for lesson_id in ids if lesson_id in completed_ids)
+    tracks = [
+        {"track": track, "completed": sum(by_track_level[track].values()), "total": sum(track_levels[track].values()),
+         "levels": [{"level": level, "completed": by_track_level[track][level], "total": track_levels[track].get(level, 0)}
+                    for level in LEVELS if track_levels[track].get(level)]}
+        for track in repo.TRACKS
+    ]
+
+    current_streak, longest_streak = _streaks(activity_days, today)
+    graded_total = sum(1 for _, result in answers if result in graded)
+    graded_right = sum(1 for _, result in answers if result in tests_service.RIGHT)
+    finished_tests = session.scalar(
+        select(TestSession.id).where(TestSession.finished_at.is_not(None)).limit(1)
+    )
+    vocab = study_service.stats(session, content)
+    vocab_buckets = {
+        key: vocab["directions"]["en_tr"][key] for key in ("learning", "learned", "long_term")
+    }
+    return {
+        "today": today.isoformat(),
+        "timezone_note_tr": "Günler bilgisayarınızın saat dilimine göre hesaplanır.",
+        "measures_note_tr": "Program çalışma süresini ölçmez; rapor etkinlik sayılarına dayanır.",
+        "streak": {"current": current_streak, "longest": longest_streak, "active_days": len(activity_days)},
+        "daily": [{"date": day.isoformat(), **counts} for day, counts in daily.items()],
+        "weekly_accuracy": [
+            {"week_start": week.isoformat(), **counts, "rate": _rate(counts["correct"], counts["total"])}
+            for week, counts in weekly.items()
+        ],
+        "totals": {
+            "questions_answered": len(answers),
+            "graded_answers": graded_total,
+            "correct_answers": graded_right,
+            "accuracy": _rate(graded_right, graded_total),
+            "word_reviews": len(reviews),
+            "lessons_completed": sum(track["completed"] for track in tracks),
+            "has_finished_tests": finished_tests is not None,
+        },
+        "tracks": tracks,
+        "vocabulary": {
+            "studied_words": vocab["studied_words"],
+            "total_words": vocab["total_words"],
+            "buckets_en_tr": vocab_buckets,
+            "due": vocab["directions"]["en_tr"]["due"] + vocab["directions"]["tr_en"]["due"],
+        },
+    }

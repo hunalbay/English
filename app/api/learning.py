@@ -21,6 +21,7 @@ TrackCode = Literal["grammar", "reading", "listening", "writing", "pronunciation
 
 class LevelUpdate(BaseModel):
     level: LevelCode
+    source: Literal["self", "placement"] = "self"
 
 
 class CompletionUpdate(BaseModel):
@@ -43,7 +44,7 @@ def read_profile(session: Session = Depends(get_user_session)) -> dict:
 
 @router.put("/profile/level")
 def update_level(body: LevelUpdate, session: Session = Depends(get_user_session)) -> dict:
-    return _profile_payload(progress.set_level(session, body.level))
+    return _profile_payload(progress.set_level(session, body.level, body.source))
 
 
 @router.get("/dashboard")

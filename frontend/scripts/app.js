@@ -18,6 +18,8 @@ import * as exercise from "./pages/exercise.js";
 import * as tests from "./pages/tests.js";
 import * as test from "./pages/test.js";
 import * as settings from "./pages/settings.js";
+import * as placement from "./pages/placement.js";
+import * as progressPage from "./pages/progress.js";
 
 // pattern: ":ad" parçaları parametre olarak sayfaya aktarılır. nav: menüde gösterilecek ad.
 const ROUTES = [
@@ -48,6 +50,8 @@ const ROUTES = [
   { pattern: "/test/ders/:lessonId/:run", page: test, section: "/testler" },
   { pattern: "/test/seviye/:level", page: test, section: "/testler" },
   { pattern: "/kelimelerim", page: wordList, nav: "Kelimelerim", section: "/kelimelerim" },
+  { pattern: "/ilerleme", page: progressPage, nav: "İlerleme", section: "/ilerleme" },
+  { pattern: "/seviye-tespiti", page: placement, nav: "Seviye tespiti", section: "/seviye-tespiti" },
   { pattern: "/ara/:query", page: search, section: null },
   { pattern: "/ayarlar", page: settings, nav: "Ayarlar", section: "/ayarlar" },
 ];

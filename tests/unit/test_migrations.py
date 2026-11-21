@@ -76,3 +76,31 @@ def test_user_db_enforces_constraints(app):
                 "INSERT INTO user_profile (id, current_level, created_at, updated_at) "
                 "VALUES (1, 'Z9', '2026-01-01', '2026-01-01')"
             ))
+
+
+def test_upgrade_from_0004_keeps_test_history(settings):
+    """Aşama 6 kullanıcısının test geçmişi 0005'e geçerken korunur ve yeni oturum türü kullanılabilir."""
+    from alembic import command
+
+    settings.ensure_dirs()
+    config = migrations.alembic_config(settings)
+    command.upgrade(config, "0004")
+    conn = sqlite3.connect(settings.user_db_path)
+    conn.execute("INSERT INTO test_sessions (id, kind, level, question_ids, started_at) "
+                 "VALUES (1, 'level', 'A1', '[\"q.x\"]', '2026-01-01 10:00:00')")
+    conn.execute("INSERT INTO user_answers (session_id, question_id, lesson_id, answer_json, result, answered_at) "
+                 "VALUES (1, 'q.x', 'gram.a1.to-be-present', '1', 'correct', '2026-01-01 10:01:00')")
+    conn.commit()
+    conn.close()
+
+    assert migrations.run_migrations(settings) == "0005"
+    assert list(settings.backups_dir.glob("*.db"))  # güncellemeden önce yedek alındı
+    conn = sqlite3.connect(settings.user_db_path)
+    try:
+        assert conn.execute("SELECT kind, level FROM test_sessions WHERE id = 1").fetchone() == ("level", "A1")
+        assert conn.execute("SELECT result FROM user_answers WHERE session_id = 1").fetchone() == ("correct",)
+        conn.execute("INSERT INTO test_sessions (kind, question_ids, started_at) VALUES ('placement', '[]', '2026-01-02')")
+        with pytest.raises(sqlite3.IntegrityError):
+            conn.execute("INSERT INTO test_sessions (kind, question_ids, started_at) VALUES ('bogus', '[]', '2026-01-02')")
+    finally:
+        conn.close()

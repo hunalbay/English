@@ -37,6 +37,27 @@ uygulama katmanında ve içerik doğrulayıcıda sağlanır.
 
 Yeni kurulumda (dosya yokken) yedek alınmaz.
 
+Migration geçmişi: `0001` ayarlar ve profil · `0002` ders ilerlemesi ve kelime listesi · `0003` aralıklı
+tekrar · `0004` test oturumları ve cevaplar · `0005` seviye tespit sınavı (oturum türü ve sonuç tablosu;
+SQLite CHECK kısıtı tablo yeniden kurularak, veri korunarak değiştirilir).
+
+## Seviye tespiti ve raporlar
+
+**Seviye tespiti** (`app/services/placement.py`): her seviye için 8 soruluk bir blok sorulur, 6 doğru
+o seviyenin geçildiği anlamına gelir. Geçilen seviyeden sonra bir üst, kalınan seviyeden sonra (daha önce
+sınanmadıysa) bir alt seviye sorulur. Yalnızca program tarafından kesin değerlendirilebilen soru tipleri ve
+dil bilgisi, okuma, kalıp alanlarındaki sorular kullanılır; blok başına bir okuma ve bir kalıp sorusu hedeflenir.
+Daha önce görülmemiş sorular öne alınır. Cevaplar normal test uçlarıyla kaydedilir; sonuç
+`placement_results` tablosunda saklanır ve profil yalnızca kullanıcı onaylarsa değişir.
+
+**Raporlar** (`app/services/reports.py`): bütün sayılar `user.db` kayıtlarından hesaplanır. Program
+çalışma süresini ölçmez; etkinlik = cevaplanan soru + kelime tekrarı + tamamlanan ders. Günler yerel saat
+dilimine göre ayrılır. Bir konu ancak en az 3 kesin (ya da öz değerlendirmeli) cevapla güçlü (≥ %80) ya da
+geliştirilmeli (< %60) sayılır.
+
+Grafikler bağımlılıksız SVG'dir (`frontend/scripts/charts.js`): tek seri, tema rengini CSS değişkeninden
+alır, üzerine gelince ya da klavyeyle odaklanınca değer gösterir ve aynı veriyi tablo olarak da sunar.
+
 ## Güvenlik (`app/core/security.py`)
 
 - Sunucu yalnızca `127.0.0.1`'e bağlanır.

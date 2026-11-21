@@ -397,3 +397,33 @@ textarea {
 /* --- Deyimler ve mesleki İngilizce --- */
 .expression .badge { margin-left: var(--space-1); font-size: 0.75rem; font-weight: 500; vertical-align: middle; }
 .expression .ex-en { margin-top: var(--space-2) !important; }
+
+/* --- Grafikler --- */
+.chart-figure { margin: 0; }
+.chart-title { font-weight: 600; margin-bottom: var(--space-2); }
+.chart-host { position: relative; }
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart-bar { fill: var(--primary); }
+.chart-item:hover .chart-bar, .chart-item:focus .chart-bar { fill: var(--primary-hover, var(--primary)); opacity: 0.85; }
+.chart-item:focus { outline: none; }
+.chart-item:focus .chart-hit { stroke: var(--primary); stroke-width: 1; }
+.chart-hit { fill: transparent; }
+.chart-grid { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 4; }
+.chart-base { stroke: var(--border); stroke-width: 1; }
+.chart-tick { fill: var(--text-muted); font-size: 11px; }
+.chart-tooltip {
+  position: absolute; transform: translate(-50%, -100%); pointer-events: none; white-space: nowrap;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px;
+  padding: var(--space-1) var(--space-2); font-size: 0.8rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.chart-table { margin-top: var(--space-2); font-size: 0.9rem; }
+.meter + .meter { margin-top: var(--space-3); }
+.meter-head { display: flex; justify-content: space-between; gap: var(--space-2); }
+.stat-tiles { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.stat-tile { background: var(--surface-2); border-radius: var(--radius); padding: var(--space-3); }
+.stat-tile .stat-value { font-size: 1.6rem; }
+.rate-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+.rate-list li { display: flex; justify-content: space-between; gap: var(--space-3); align-items: baseline; }
+.placement-steps { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.placement-steps .badge { font-weight: 500; }
+.big-level { font-size: 2.4rem; font-weight: 700; margin: 0; line-height: 1.1; }

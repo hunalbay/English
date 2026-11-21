@@ -458,6 +458,44 @@ def question_ids(conn: sqlite3.Connection, lesson_id: str | None, level: str | N
         f"SELECT q.id FROM questions q {clause} ORDER BY q.lesson_id, q.position", params)]  # noqa: S608
 
 
+def placement_pool(conn: sqlite3.Connection, level: str, types: tuple[str, ...], tracks: tuple[str, ...]) -> list[Row]:
+    """Seviye tespiti için uygun sorular: (id, lesson_id, track). Sıra kararlıdır."""
+    return _rows(
+        conn,
+        f"""SELECT q.id, q.lesson_id, u.track FROM questions q
+            JOIN lessons ls ON ls.id = q.lesson_id JOIN units u ON u.id = ls.unit_id
+            WHERE q.level = ? AND q.type IN ({_placeholders(list(types))}) AND u.track IN ({_placeholders(list(tracks))})
+            ORDER BY q.id""",  # noqa: S608
+        [level, *types, *tracks],
+    )
+
+
+def lesson_tracks(conn: sqlite3.Connection, lesson_ids: list[str]) -> dict[str, str]:
+    if not lesson_ids:
+        return {}
+    result: dict[str, str] = {}
+    for start in range(0, len(lesson_ids), 500):
+        chunk = lesson_ids[start:start + 500]
+        for row in conn.execute(
+            f"SELECT ls.id, u.track FROM lessons ls JOIN units u ON u.id = ls.unit_id WHERE ls.id IN ({_placeholders(chunk)})",  # noqa: S608
+            chunk,
+        ):
+            result[row["id"]] = row["track"]
+    return result
+
+
+def question_meta(conn: sqlite3.Connection, question_ids: list[str]) -> dict[str, Row]:
+    """Soru kimliği -> (type, level, lesson_id)."""
+    result: dict[str, Row] = {}
+    for start in range(0, len(question_ids), 500):
+        chunk = question_ids[start:start + 500]
+        for row in _rows(
+            conn, f"SELECT id, type, level, lesson_id FROM questions WHERE id IN ({_placeholders(chunk)})", chunk  # noqa: S608
+        ):
+            result[row["id"]] = row
+    return result
+
+
 def existing_question_ids(conn: sqlite3.Connection, ids: list[str]) -> set[str]:
     found: set[str] = set()
     for start in range(0, len(ids), 500):

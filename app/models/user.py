@@ -140,7 +140,7 @@ class TestSession(UserBase):
 
     __tablename__ = "test_sessions"
     __table_args__ = (
-        CheckConstraint("kind IN ('lesson','level','mixed')", name="ck_test_sessions_kind"),
+        CheckConstraint("kind IN ('lesson','level','mixed','placement')", name="ck_test_sessions_kind"),
         Index("ix_test_sessions_started", "started_at"),
     )
 
@@ -174,3 +174,34 @@ class UserAnswer(UserBase):
     answer_json: Mapped[str] = mapped_column(Text, nullable=False)
     result: Mapped[str] = mapped_column(String(16), nullable=False)
     answered_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+
+class PlacementResult(UserBase):
+    """Seviye tespit sınavının durumu ve sonucu.
+
+    blocks_json: [{"level": "A2", "question_ids": [...], "correct": 6, "total": 8, "passed": true}, ...]
+    result_level: geçilen en yüksek seviye ("below_A1": hiçbir seviye geçilemedi).
+    recommended_level: çalışılması önerilen seviye.
+    """
+
+    __tablename__ = "placement_results"
+    __table_args__ = (
+        CheckConstraint("start_level IN ('A1','A2','B1','B2','C1','C2')", name="ck_placement_start_level"),
+        CheckConstraint(
+            "result_level IS NULL OR result_level IN ('below_A1','A1','A2','B1','B2','C1','C2')",
+            name="ck_placement_result_level",
+        ),
+        Index("ix_placement_results_started", "started_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    session_id: Mapped[int] = mapped_column(
+        ForeignKey("test_sessions.id", ondelete="CASCADE"), nullable=False, unique=True
+    )
+    start_level: Mapped[str] = mapped_column(String(2), nullable=False)
+    current_level: Mapped[str] = mapped_column(String(2), nullable=False)
+    blocks_json: Mapped[str] = mapped_column(Text, nullable=False)
+    result_level: Mapped[str | None] = mapped_column(String(8))
+    recommended_level: Mapped[str | None] = mapped_column(String(2))
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, nullable=False)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

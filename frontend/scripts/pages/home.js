@@ -45,8 +45,9 @@ async function renderOnboarding(root) {
     h("section", { class: "card", "aria-labelledby": "tespit-baslik" },
       h("h2", { id: "tespit-baslik" }, "Seviyemi bilmiyorum"),
       h("p", { class: "muted" },
-        "Seviye tespit sınavı henüz hazır değil; ilerleyen bir sürümde eklenecek. Şimdilik emin değilseniz " +
-        "A1 ile başlayıp dersler kolay gelirse seviyenizi yükseltebilirsiniz.")),
+        "Kısa bir seviye tespit sınavı, dil bilgisi, okuma ve kelime sorularıyla hangi seviyeden başlamanız " +
+        "gerektiğini tahmin eder."),
+      h("a", { class: "btn primary", href: "#/seviye-tespiti" }, "Seviye tespit sınavına gir")),
   );
 }
 
@@ -83,6 +84,7 @@ export async function render(root) {
         h("a", { href: "#/calis" }, "Kelime çalışması")),
       stat("Kelime listeniz", `${data.word_list_count} kelime`, h("a", { href: "#/kelimelerim" }, "Kelimelerim")),
       stat("Sözlük", `${data.totals.words} kelime`, h("a", { href: "#/sozluk" }, "Sözlüğü aç")),
+      stat("İlerleme", "Rapor ve öneriler", h("a", { href: "#/ilerleme" }, "İlerleme raporunu aç")),
     ),
     h("section", { class: "card" },
       h("h2", {}, "Geliştirme sürümü"),
@@ -91,7 +93,7 @@ export async function render(root) {
         `${data.totals.tracks.listening} dinleme kaydı, ${data.totals.tracks.writing} yazma dersi, ` +
         `${data.totals.tracks.pronunciation} telaffuz dersi, ${data.totals.tracks.expressions} deyim ve kalıp dersi, ` +
         `${data.totals.tracks.professional} mesleki İngilizce dersi, ${data.totals.questions} soru ve ${data.totals.words} kelime bulunuyor. ` +
-        "Seviye tespit sınavı ve ilerleme raporları henüz eklenmedi; hazır olunca menüde görünecekler.")),
+        "")),
   );
   return "Ana Sayfa";
 }
