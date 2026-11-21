@@ -1,0 +1,34 @@
+English Master — üçüncü taraf bileşenler ve içerik kaynakları
+=============================================================
+
+Bu program aşağıdaki bileşenleri ve kaynakları içerir. Her bileşenin lisans metni bu klasördeki
+alt klasörlerde yer alır (kurulu programda: <kurulum klasörü>\_internal\licenses\).
+
+İÇERİK KAYNAKLARI
+-----------------
+* Kelime seçimi ve A1–B2 seviye bilgisi: The CEFR-J Wordlist Version 1.5. Compiled by Yukio Tono,
+  Tokyo University of Foreign Studies. http://www.cefr-j.org/download.html
+  (Kaynak gösterilerek ücretsiz kullanım. Türkçe anlamlar, örnekler ve çeviriler bu listeden alınmamıştır.)
+* Telaffuz yazımı (IPA): CMU Pronouncing Dictionary'den otomatik dönüştürülmüştür.
+  Copyright (C) 1993-2015 Carnegie Mellon University. BSD lisansı.
+* Ses kayıtları: Piper metin-ses aracı ve "en-us-libritts-high" ses modeliyle önceden üretilmiştir.
+  Model, LibriTTS veri kümesiyle eğitilmiştir: H. Zen ve ark., "LibriTTS: A Corpus Derived from
+  LibriSpeech for Text-to-Speech", 2019 (CC BY 4.0, https://www.openslr.org/60/).
+  Piper ve model dosyası programla birlikte dağıtılmaz; yalnızca üretilmiş MP3 dosyaları dağıtılır.
+  Ayrıntılar: docs\AUDIO.md
+* Diğer bütün ders, açıklama, soru, örnek cümle ve çeviriler English Master için yazılmış özgün
+  içeriktir (yapay zekâ desteğiyle hazırlanmış, otomatik denetimlerden geçirilmiştir; bir uzman
+  tarafından gözden geçirilmemiştir).
+* SAP, SAP SE'nin tescilli markasıdır. English Master SAP SE ile bağlantılı değildir.
+
+YAZILIM BİLEŞENLERİ
+-------------------
+* Python çalışma zamanı — Python Software Foundation License (PSF-2.0).
+  Python ile birlikte gelen SQLite (kamu malı), OpenSSL (Apache-2.0), libffi (MIT), zlib, bzip2,
+  liblzma / xz ve expat kütüphanelerini içerir.
+* PyInstaller önyükleyicisi — GPL-2.0, PyInstaller'ın "bootloader exception" istisnasıyla; paketlenen
+  programın lisansını etkilemez.
+* pystray (yalnızca Windows, sistem tepsisi simgesi) — LGPL-3.0. Bu kütüphane derlenmiş arşive değil,
+  değiştirilebilir kaynak dosyaları olarak pakete konmuştur: <kurulum klasörü>\_internal\pystray\
+  Kaynak kodu: https://github.com/moses-palmer/pystray
+* Python paketleri: aşağıdaki listede ve alt klasörlerde.

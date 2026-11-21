@@ -120,17 +120,11 @@ def _run_tray(url: str, stop: threading.Event, on_quit) -> bool:  # noqa: ANN001
     """Tepsi simgesini ana iş parçacığında çalıştırır. Kullanılamıyorsa False döner."""
     try:
         import pystray
-        from PIL import Image, ImageDraw
-    except Exception:  # pystray yok ya da grafik ortam yok
-        return False
 
-    image = Image.new("RGB", (64, 64), "#2f5fd0")
-    draw = ImageDraw.Draw(image)
-    draw.rectangle((14, 16, 22, 48), fill="white")
-    for y in (16, 29, 42):
-        draw.rectangle((14, y, 34, y + 6), fill="white")
-    draw.polygon([(40, 48), (40, 16), (47, 16), (51, 30), (55, 16), (62, 16), (62, 48),
-                  (56, 48), (56, 28), (53, 40), (49, 40), (46, 28), (46, 48)], fill="white")
+        from app.core.icon import draw_icon
+        image = draw_icon(64)
+    except Exception:  # pystray / Pillow yok ya da grafik ortam yok
+        return False
 
     def quit_app(icon, _item) -> None:  # noqa: ANN001
         on_quit()

@@ -1,0 +1,5 @@
+# Yalnızca Windows paketini üretmek için gerekenler (uygulama çalışırken kullanılmaz)
+pyinstaller==6.22.2
+pillow==13.0.0
+# İçerik dosyalarını (YAML) derlemek için
+PyYAML==6.0.3

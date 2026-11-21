@@ -3,13 +3,12 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 8 (kalite güvencesi) tamamlandı; ayrıntılar [docs/QA.md](docs/QA.md).** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
+> **Durum: Aşama 9 (Windows paketi) tamamlandı.** Kurulum: [docs/INSTALL.md](docs/INSTALL.md) · Paket üretimi: [docs/BUILD.md](docs/BUILD.md) · Kalite raporu: [docs/QA.md](docs/QA.md). Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
 > telaffuz (7 ders), deyimler ve kalıplar (14 ders, 166 ifade) ile mesleki İngilizce (9 ders, 115 terim ve kalıp)
 > hazır. Toplam 1.200 soru, 5.048 kelimelik sözlük, kelime çalışması, seviye tespit sınavı ve ilerleme raporu
 > (güçlü / zayıf konular, günlük etkinlik, haftalık başarı, öneriler) var.
 > Kayıtlar, telaffuz örnekleri, ifadeler ve bütün sözlük kelimeleri için önceden üretilmiş sentetik ses
 > programla birlikte gelir (bkz. [docs/AUDIO.md](docs/AUDIO.md)); internet gerekmez.
-> Windows kurulum paketi (Aşama 9) henüz hazır değil.
 > Tüm içerik yapay zekâ ile yazılmış ve yalnızca otomatik denetimden geçmiştir; sesler de dâhil olmak üzere
 > bir uzman tarafından gözden geçirilmemiştir. Seviye tespit sınavı resmî bir CEFR sınavıyla eşleştirilmemiştir.
 
@@ -47,7 +46,7 @@ Seçenekler: `--port N`, `--no-browser`, `--no-tray`.
 | `migrations/` | Kullanıcı veri tabanı (`user.db`) şema sürümleri (Alembic) |
 | `scripts/` | İçerik derleme ve geliştirme betikleri |
 | `tests/` | `unit/`, `integration/`, `e2e/` |
-| `packaging/` | PyInstaller + NSIS dosyaları (Aşama 9) |
+| `packaging/` | Windows paketi: PyInstaller tanımı, NSIS kurulum betiği, duman testi, lisans bildirimi |
 | `docs/` | Mimari ve geliştirici belgeleri |
 
 Ayrıntılar: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · İçerik ekleme: [docs/CONTENT.md](docs/CONTENT.md)

@@ -12,3 +12,4 @@ data/build/
 node_modules/
 .idea/
 .vscode/
+.venv-build/

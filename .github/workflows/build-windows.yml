@@ -1,0 +1,118 @@
+name: Windows paketi
+
+# Yalnızca sürüm etiketi (v*) gönderildiğinde ya da elle tetiklendiğinde çalışır.
+# Gizli bilgi kullanmaz; kullanıcı verisi içermez.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Paketle, kur, dene, kaldır
+    runs-on: windows-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+
+      - name: Bağımlılıkları kur
+        run: |
+          python -m pip install -r requirements.txt -r packaging/requirements-build.txt
+
+      - name: Sürümü oku
+        id: version
+        run: |
+          $version = python -c "import app; print(app.__version__)"
+          "version=$version" >> $env:GITHUB_OUTPUT
+          Write-Host "Sürüm: $version"
+
+      - name: İçerik veri tabanını üret ve lisansları topla
+        run: |
+          python scripts/build_content.py
+          python packaging/collect_licenses.py
+
+      - name: PyInstaller ile paketle
+        run: pyinstaller packaging/english_master.spec --noconfirm --distpath dist --workpath build/pyi
+
+      - name: Paket içeriğini denetle
+        run: |
+          $root = "dist/EnglishMaster"
+          foreach ($path in @("EnglishMaster.exe", "_internal/data/build/content.db", "_internal/data/audio/manifest.json",
+                              "_internal/frontend/index.html", "_internal/migrations/env.py",
+                              "_internal/licenses/THIRD_PARTY_NOTICES.txt", "_internal/pystray/__init__.py")) {
+            if (-not (Test-Path "$root/$path")) { throw "Pakette eksik: $path" }
+          }
+          $clips = (Get-ChildItem "$root/_internal/data/audio/clips" -Recurse -Filter *.mp3).Count
+          Write-Host "Ses klibi: $clips"
+          if ($clips -lt 5000) { throw "Ses klipleri eksik: $clips" }
+          "{0:N1} MB" -f ((Get-ChildItem $root -Recurse | Measure-Object Length -Sum).Sum / 1MB)
+
+      - name: Paketlenmiş programı dene
+        run: python packaging/smoke_test.py dist/EnglishMaster/EnglishMaster.exe
+
+      - name: Kurulum dosyasını üret (NSIS)
+        run: |
+          if (-not (Get-Command makensis -ErrorAction SilentlyContinue)) {
+            choco install nsis -y --no-progress
+            $env:PATH += ";${env:ProgramFiles(x86)}\NSIS"
+          }
+          $version = "${{ steps.version.outputs.version }}"
+          makensis /V3 /DVERSION=$version packaging/installer.nsi
+          if ($LASTEXITCODE -ne 0) { throw "makensis başarısız" }
+          $setup = "dist/EnglishMaster-Setup-$version.exe"
+          (Get-FileHash $setup -Algorithm SHA256).Hash.ToLower() + "  EnglishMaster-Setup-$version.exe" | Out-File "$setup.sha256" -Encoding ascii
+          Get-Item $setup | Format-List Name, Length
+
+      - name: Sessiz kur, kurulu programı dene, kaldır; kişisel veri korunmalı
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $target = "$env:RUNNER_TEMP\EM Kurulum"
+          Start-Process "dist/EnglishMaster-Setup-$version.exe" -ArgumentList "/S", "/D=$target" -Wait
+          if (-not (Test-Path "$target\EnglishMaster.exe")) { throw "Kurulum başarısız" }
+          if (-not (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\English Master\English Master.lnk")) { throw "Başlat menüsü kısayolu yok" }
+          $key = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\EnglishMaster"
+          if ((Get-ItemProperty $key).DisplayVersion -ne $version) { throw "Kaldırma kaydı yanlış" }
+
+          # Gerçek kullanıcı klasörüyle (LOCALAPPDATA\EnglishMaster) çalıştır
+          python packaging/smoke_test.py "$target\EnglishMaster.exe" --use-default-data-dir
+          if ($LASTEXITCODE -ne 0) { throw "Kurulu program denemesi başarısız" }
+          $userDb = "$env:LOCALAPPDATA\EnglishMaster\user.db"
+          if (-not (Test-Path $userDb)) { throw "Kullanıcı verisi oluşmadı" }
+
+          # Aynı sürümü yeniden kur (güncelleme senaryosu): veri korunmalı
+          Start-Process "dist/EnglishMaster-Setup-$version.exe" -ArgumentList "/S", "/D=$target" -Wait
+          if (-not (Test-Path $userDb)) { throw "Yeniden kurulumda kişisel veri silindi" }
+
+          # Sessiz kaldırma: program kalkmalı, kişisel veri varsayılan olarak korunmalı
+          Start-Process "$target\Uninstall.exe" -ArgumentList "/S", "_?=$target" -Wait
+          Remove-Item "$target\Uninstall.exe" -ErrorAction SilentlyContinue
+          if (Test-Path "$target\EnglishMaster.exe") { throw "Program kaldırılamadı" }
+          if (Test-Path "$target\_internal") { throw "Program dosyaları kaldı" }
+          if (Test-Path $key) { throw "Kaldırma kaydı silinmedi" }
+          if (-not (Test-Path $userDb)) { throw "Kaldırma kişisel veriyi sildi!" }
+          Write-Host "Kurulum, güncelleme ve kaldırma denetimleri geçti; kişisel veri korundu."
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EnglishMaster-Setup-${{ steps.version.outputs.version }}
+          path: |
+            dist/EnglishMaster-Setup-*.exe
+            dist/EnglishMaster-Setup-*.exe.sha256
+          if-no-files-found: error
+          retention-days: 30
