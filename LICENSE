@@ -1,0 +1,17 @@
+English Master
+Telif hakkı (c) 2026 English Master. Tüm hakları saklıdır.
+
+Bu depodaki kaynak kod, ders içerikleri, alıştırmalar, sorular, çeviriler,
+açıklamalar ve arayüz tasarımı telif hakkıyla korunmaktadır. Hak sahibinin
+yazılı izni olmadan kopyalanamaz, değiştirilemez, dağıtılamaz, satılamaz,
+kiralanamaz veya başka bir ürüne dâhil edilemez.
+
+Programın kullanımı, kurulumda gösterilen Son Kullanıcı Lisans Sözleşmesi'ne
+(packaging/EULA.txt) tabidir.
+
+İstisnalar — üçüncü taraf bileşenler:
+Bu ürün, kendi lisanslarıyla dağıtılan üçüncü taraf yazılım ve veriler içerir
+(Python bileşenleri, CEFR-J kelime listesi, CMU Pronouncing Dictionary,
+LibriTTS/Piper ses modeli vb.). Bu bileşenler yukarıdaki kısıtlamaya tabi
+değildir; ayrıntılar packaging/THIRD_PARTY_NOTICES.txt dosyasında ve
+programın licenses klasöründedir.

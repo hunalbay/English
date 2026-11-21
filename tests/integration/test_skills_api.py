@@ -127,11 +127,12 @@ def test_audio_missing_is_reported_not_an_error(client, auth, settings, monkeypa
     conn.commit()
     conn.close()
 
-    from app.core.config import load_settings
+    from dataclasses import replace
+
     from app.main import create_app
     from fastapi.testclient import TestClient
 
-    silent = create_app(load_settings(data_dir=tmp_path / "u2", content_db_path=copy))
+    silent = create_app(replace(settings, content_db_path=copy))
     with TestClient(silent, base_url="http://127.0.0.1:8765") as quiet:
         token = {"X-EM-Token": quiet.get(f"{API}/session").json()["token"]}
         lesson = quiet.get(f"{API}/lessons/listen.a1.at-the-cafe").json()

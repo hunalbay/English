@@ -3,6 +3,7 @@
 // kayıtlı değer korunur ve süre ölçümü eklenirse yeniden gösterilebilir.
 
 import * as api from "../api.js";
+import * as license from "../license.js";
 import { LEVEL_NAMES, add, applyTheme, h, toast } from "../dom.js";
 
 const THEMES = [
@@ -23,8 +24,8 @@ async function save(key, value) {
 }
 
 export async function render(root) {
-  const [{ settings }, profile, health] = await Promise.all([
-    api.get("/settings"), api.get("/profile"), api.get("/health"),
+  const [{ settings }, profile, health, licenseStatus] = await Promise.all([
+    api.get("/settings"), api.get("/profile"), api.get("/health"), license.refresh(),
   ]);
 
   const levelSelect = h("select", {
@@ -107,13 +108,24 @@ export async function render(root) {
     ),
     h(
       "section",
+      { class: "card", "aria-labelledby": "license-heading" },
+      h("h2", { id: "license-heading" }, "Lisans"),
+      licenseStatus && licenseStatus.licensed
+        ? h("p", {}, `${licenseStatus.name} adına, ${license.formatDate(licenseStatus.expires)} tarihine kadar geçerli.`)
+        : null,
+      h("p", {}, h("a", { href: "#/lisans" }, "Lisans bilgileri ve bilgisayar kodu"),
+        " · ", h("a", { href: "#/geri-bildirim" }, "Geri bildirim gönder")),
+    ),
+    h(
+      "section",
       { class: "card" },
       h("h2", {}, "Program hakkında"),
       h("p", { class: "muted", id: "about" },
         `Program sürümü ${health.version} · `,
         health.content.available ? `İçerik sürümü ${health.content.version}` : "Eğitim içeriği bulunamadı",
         ` · Veri şeması ${health.user_db.schema_revision}`),
-      h("p", { class: "muted" }, "Verileriniz yalnızca bu bilgisayarda saklanır. Program hiçbir kullanım verisi toplamaz veya göndermez."),
+      h("p", { class: "muted" }, "© 2026 English Master. Tüm hakları saklıdır. Üçüncü taraf bileşenlerin lisansları program klasöründeki licenses klasöründedir."),
+      h("p", { class: "muted" }, "Verileriniz yalnızca bu bilgisayarda saklanır. Program hiçbir kullanım verisi toplamaz veya göndermez; lisans denetimi de internetsiz, bu bilgisayarda yapılır."),
     ),
   );
   return "Ayarlar";

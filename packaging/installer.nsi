@@ -17,6 +17,9 @@ ManifestDPIAware true
 !ifndef SOURCE_DIR
   !define SOURCE_DIR "..\dist\EnglishMaster"
 !endif
+!ifndef EULA_FILE
+  !define EULA_FILE "..\build\EULA-installer.txt"
+!endif
 !ifndef ICON_FILE
   !define ICON_FILE "..\build\icon.ico"
 !endif
@@ -51,8 +54,10 @@ VIAddVersionKey /LANG=1055 "LegalCopyright" "English Master"
 !define MUI_ABORTWARNING
 !define MUI_UNABORTWARNING
 
-!define MUI_WELCOMEPAGE_TEXT "Bu sihirbaz English Master ${VERSION} sürümünü bilgisayarınıza kuracak.$\r$\n$\r$\nProgram ücretsizdir, internet bağlantısı ve hesap gerektirmez. İlerlemeniz yalnızca bu bilgisayarda saklanır.$\r$\n$\r$\nDaha önce kurduysanız yeni sürüm eskisinin üzerine kurulur; ilerlemeniz korunur."
+!define MUI_WELCOMEPAGE_TEXT "Bu sihirbaz English Master ${VERSION} sürümünü bilgisayarınıza kuracak.$\r$\n$\r$\nBu, davetle verilen ücretsiz deneme sürümüdür; ilk açılışta size verilen lisans anahtarını girmeniz gerekir. Program internet bağlantısı ve hesap gerektirmez. İlerlemeniz yalnızca bu bilgisayarda saklanır.$\r$\n$\r$\nDaha önce kurduysanız yeni sürüm eskisinin üzerine kurulur; ilerlemeniz korunur."
 !insertmacro MUI_PAGE_WELCOME
+!define MUI_LICENSEPAGE_TEXT_TOP "Kuruluma devam etmeden önce lütfen sözleşmeyi okuyun."
+!insertmacro MUI_PAGE_LICENSE "${EULA_FILE}"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_INSTFILES

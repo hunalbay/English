@@ -68,6 +68,21 @@ alır, üzerine gelince ya da klavyeyle odaklanınca değer gösterir ve aynı v
 - Hata ayrıntıları yalnızca `logs/app.log` dosyasına yazılır.
 - FastAPI'nin yerleşik OpenTelemetry desteği kapalıdır; telemetri yoktur.
 
+## Lisans (deneme sürümü)
+
+- `app/core/license_format.py`: bilgisayar kodu (MachineGuid'den SHA-256 ile türetilir, 4 karakterlik denetim
+  parçası içerir) ve anahtar biçimi `EM1.<base64url(JSON)>.<base64url(Ed25519 imzası)>`. JSON: biçim sürümü,
+  bilgisayar kodu, ad, bitiş ve veriliş tarihi, lisans numarası.
+- `app/core/license_keys.py`: programa gömülü açık anahtarlar (ortam değişkeniyle değiştirilemez).
+- `app/services/license.py`: `license.json` (veri klasöründe) okunur, imza / bilgisayar kodu / bitiş tarihi /
+  saat geri alma denetlenir; sonuç gün boyunca önbelleğe alınır. Geçersiz anahtar mevcut lisansın üzerine yazılmaz.
+- `app/core/license_gate.py`: lisans yoksa `/api/v1` altındaki bütün uçlar `403 license_required` döner; yalnızca
+  `health`, `session`, `license`, `feedback`, `settings` ve `system/shutdown` açıktır. Yeni eklenen uçlar
+  kendiliğinden kilitlidir (testle denetlenir).
+- Arayüz lisans yoksa yalnızca Lisans ve Geri bildirim sayfalarını gösterir; bir istek `license_required`
+  dönerse lisans ekranına geçer.
+- `scripts/license_tool.py`: program sahibinin anahtar çifti oluşturduğu ve anahtar ürettiği araç (bkz. LICENSING.md).
+
 ## Arayüz
 
 Saf ES modülleri, hash tabanlı yönlendirme, derleme adımı yok. Menüde yalnızca gerçekten

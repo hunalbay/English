@@ -17,6 +17,22 @@
 3. Sihirbazdaki adımları izleyin. Yönetici izni gerekmez; program kendi kullanıcı klasörünüze kurulur
    (`%LOCALAPPDATA%\Programs\English Master`). İsterseniz masaüstü kısayolu da eklenir.
 
+## İlk açılış: lisans anahtarı
+
+English Master şu an davetle verilen ücretsiz bir deneme sürümüdür. İlk açılışta **Lisans** sayfası görünür:
+
+1. Sayfadaki **bilgisayar kodunu** (ör. `7KQ2-M9XA-P4TD-WR3H`) **Kodu kopyala** ile kopyalayıp
+   onurgulcicek@hotmail.com adresine gönderin.
+2. Size yalnızca bu bilgisayarda çalışan, `EM1.` ile başlayan bir lisans anahtarı gönderilir.
+3. Anahtarın tamamını Lisans sayfasındaki kutuya yapıştırıp **Lisansı etkinleştir**'e tıklayın.
+
+Bundan sonra internet gerekmez. Lisans bitiş tarihinin sonuna kadar geçerlidir; bitişe 14 gün kala program
+uyarır. Süre dolarsa çalışmalarınız silinmez; yeni anahtar girdiğinizde kaldığınız yerden devam edersiniz.
+Programı kaldırıp yeniden kurmak lisansı silmez. Windows yeniden kurulursa ya da başka bir bilgisayara geçerseniz
+yeni bilgisayar kodu için yeni anahtar istemeniz gerekir.
+
+Görüş, öneri ya da hata bildirimi için menüdeki **Geri bildirim** sayfasını kullanın.
+
 ## Programı kullanmak
 
 - **Başlat** menüsünden ya da masaüstü kısayolundan **English Master**'ı açın. Program varsayılan
@@ -39,6 +55,7 @@
 | Dosya / klasör | İçerik |
 |---|---|
 | `user.db` | Bütün kişisel kayıtlarınız |
+| `license.json` | Lisans anahtarınız (yalnızca bu bilgisayarda çalışır) |
 | `backups\` | Program her güncellemede verilerinizi değiştirmeden önce buraya yedek alır |
 | `logs\` | Hata ayıklama kayıtları (yalnızca bu bilgisayarda kalır) |
 

@@ -59,7 +59,8 @@ jobs:
           $root = "dist/EnglishMaster"
           foreach ($path in @("EnglishMaster.exe", "_internal/data/build/content.db", "_internal/data/audio/manifest.json",
                               "_internal/frontend/index.html", "_internal/migrations/env.py",
-                              "_internal/licenses/THIRD_PARTY_NOTICES.txt", "_internal/pystray/__init__.py")) {
+                              "_internal/licenses/THIRD_PARTY_NOTICES.txt", "_internal/licenses/EULA.txt",
+                              "_internal/pystray/__init__.py")) {
             if (-not (Test-Path "$root/$path")) { throw "Pakette eksik: $path" }
           }
           $clips = (Get-ChildItem "$root/_internal/data/audio/clips" -Recurse -Filter *.mp3).Count
@@ -111,6 +112,25 @@ jobs:
           if (Test-Path $key) { throw "Kaldırma kaydı silinmedi" }
           if (-not (Test-Path $userDb)) { throw "Kaldırma kişisel veriyi sildi!" }
           Write-Host "Kurulum, güncelleme ve kaldırma denetimleri geçti; kişisel veri korundu."
+
+      - name: Lisans aracını paketle ve dene (kurulum paketine girmez)
+        run: |
+          pyinstaller packaging/license_tool.spec --noconfirm --distpath dist/tool --workpath build/pyi-tool
+          $tool = "dist/tool/EnglishMaster-LisansAraci.exe"
+          $dir = "$env:RUNNER_TEMP\lisans-deneme"
+          & $tool --klasor $dir init
+          if ($LASTEXITCODE -ne 0) { throw "init başarısız" }
+          $code = python -c "from app.core.license_format import machine_code_from_id as m; print(m('ci'))"
+          $key = & $tool --klasor $dir issue --kod $code --isim "Deneme" --bitis 31.12.2099
+          if ($LASTEXITCODE -ne 0 -or -not $key.StartsWith("EM1.")) { throw "issue başarısız" }
+          & $tool --klasor $dir check $key
+          if ($LASTEXITCODE -ne 0) { throw "check başarısız" }
+          Remove-Item -Recurse -Force $dir   # deneme anahtarı yapıta girmez
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EnglishMaster-LisansAraci-${{ steps.version.outputs.version }}
+          path: dist/tool/EnglishMaster-LisansAraci.exe
 
       - uses: actions/upload-artifact@v4
         with:

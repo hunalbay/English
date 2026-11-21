@@ -20,6 +20,7 @@ async function parse(response) {
   }
   if (!response.ok) {
     const error = body && body.error;
+    if (error && error.code === "license_required") window.dispatchEvent(new Event("em:license-required"));
     throw new ApiError(
       (error && error.message) || "Sunucu beklenmeyen bir yanıt verdi.",
       response.status,

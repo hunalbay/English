@@ -25,8 +25,34 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   const heading = (name) => page.getByRole("heading", { level: 1, name });
   const shot = async (name) => { if (shots) await page.screenshot({ path: `${shots}-${name}.png`, fullPage: true }); };
 
+  // 0) Lisans yokken yalnızca lisans ve geri bildirim sayfaları açılır
+  await page.goto(url + "#/dersler");
+  await heading("Lisans").waitFor();
+  const lockedNav = await menu.getByRole("link").allTextContents();
+  check(JSON.stringify(lockedNav) === JSON.stringify(["Geri bildirim", "Lisans"]), `kilitli menü yanlış: ${lockedNav}`);
+  check(await page.locator("#search-form").isHidden(), "kilitliyken arama kutusu görünüyor");
+  const machineCode = (await page.locator("#machine-code").textContent()).trim();
+  check(/^[A-Z2-7]{4}(-[A-Z2-7]{4}){3}$/.test(machineCode), `bilgisayar kodu biçimi yanlış: ${machineCode}`);
+  await shot("license");
+  await page.getByLabel("Lisans anahtarı").fill("EM1.yanlis.anahtar");
+  await page.getByRole("button", { name: "Lisansı etkinleştir" }).click();
+  await page.locator("#toast.error").waitFor();
+  check(await heading("Lisans").isVisible(), "yanlış anahtarla kilit açıldı");
+
+  await menu.getByRole("link", { name: "Geri bildirim" }).click();
+  await heading("Geri bildirim").waitFor();
+  check(await page.getByText("onurgulcicek@hotmail.com").first().isVisible(), "geri bildirim adresi görünmüyor");
+  check((await page.locator("#fb-diagnostics").textContent()).includes(`Bilgisayar kodu: ${machineCode}`), "program bilgileri eksik");
+  await page.getByRole("button", { name: "Metni kopyala" }).click();
+  check(await page.locator("#toast.error").isVisible(), "boş mesaj kopyalanmaya çalışıldı");
+  check(await page.getByRole("button", { name: "E-posta programında aç" }).isVisible(), "e-posta düğmesi yok");
+
+  await menu.getByRole("link", { name: "Lisans" }).click();
+  await heading("Lisans").waitFor();
+  await page.getByLabel("Lisans anahtarı").fill(process.env.EM_LICENSE_KEY || "");
+  await page.getByRole("button", { name: "Lisansı etkinleştir" }).click();
+
   // 1) İlk açılış: seviye seçimi
-  await page.goto(url);
   await heading("English Master'a hoş geldiniz").waitFor();
   check((await page.locator(".level-card").count()) === 6, "altı seviye kartı görünmüyor");
   await shot("onboarding");
@@ -279,6 +305,11 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   check((await page.getByText("Günlük çalışma hedefi").count()) === 0, "işlevsiz günlük hedef ayarı hâlâ görünüyor");
   check(await page.locator('input[name="theme"][value="dark"]').isChecked(), "tema seçimi korunmadı");
   check((await page.locator("#about").innerText()).includes("İçerik sürümü"), "program bilgisi görünmüyor");
+  check(await page.getByText(/^Deneme Kullanıcısı adına, \d\d\.\d\d\.\d{4} tarihine kadar geçerli\.$/).isVisible(), "lisans bilgisi ayarlarda yok");
+  await page.getByRole("link", { name: "Lisans bilgileri ve bilgisayar kodu" }).click();
+  await page.getByRole("heading", { name: "Lisans geçerli" }).waitFor();
+  check(await page.getByText("Deneme Kullanıcısı", { exact: true }).isVisible(), "lisans sahibi görünmüyor");
+  check((await menu.getByRole("link").count()) > 5, "lisanslıyken tam menü görünmüyor");
 
   // 11) Bilinmeyen sayfa ve bilinmeyen ders
   await page.goto(url + "#/yok");
@@ -481,7 +512,13 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
 
   check(external.length === 0, "dış adrese istek atıldı: " + external.join(", "));
   // bilinçli olarak istenen 404 yanıtı dışındaki konsol hataları
-  const unexpected = consoleErrors.filter((text) => !text.includes("404"));
+  // 404: bilinmeyen sayfa denemesi; 422: kasıtlı yanlış lisans anahtarı denemesi (bir kez)
+  let wrongKey = 0;
+  const unexpected = consoleErrors.filter((text) => {
+    if (text.includes("404")) return false;
+    if (text.includes("422") && wrongKey === 0) { wrongKey += 1; return false; }
+    return true;
+  });
   check(unexpected.length === 0, "konsol hatası: " + unexpected.join(" | "));
   await browser.close();
 

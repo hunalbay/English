@@ -12,6 +12,8 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from app.core.license_keys import PUBLIC_KEYS
+
 APP_NAME = "EnglishMaster"
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 8765
@@ -51,6 +53,10 @@ class Settings:
     migrations_dir: Path
     host: str = DEFAULT_HOST
     port: int = DEFAULT_PORT
+    # Lisans anahtarlarını doğrulayan açık anahtarlar (app/core/license_keys.py).
+    license_public_keys: tuple[str, ...] = PUBLIC_KEYS
+    # Yalnızca testler içindir; ortam değişkeniyle değiştirilemez.
+    machine_id_override: str | None = None
 
     @property
     def user_db_path(self) -> Path:
@@ -63,6 +69,10 @@ class Settings:
     @property
     def logs_dir(self) -> Path:
         return self.data_dir / "logs"
+
+    @property
+    def license_path(self) -> Path:
+        return self.data_dir / "license.json"
 
     def ensure_dirs(self) -> None:
         for path in (self.data_dir, self.backups_dir, self.logs_dir):

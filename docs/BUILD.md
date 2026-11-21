@@ -63,8 +63,15 @@ makensis /DVERSION=0.9.0 packaging\installer.nsi
 | `packaging/THIRD_PARTY_NOTICES.txt` | İçerik kaynakları ve bileşenlerin atıf metni |
 | `packaging/smoke_test.py` | Paketlenmiş ya da kurulu programı çalıştırıp dener |
 | `packaging/requirements-build.txt` | Yalnızca paketleme için gereken araçlar (sabit sürümler) |
+| `packaging/EULA.txt` | Kurulumda gösterilen kullanım sözleşmesi (`collect_licenses.py` NSIS için UTF-16 kopyasını üretir) |
+| `packaging/license_tool.spec` | Lisans aracı (`EnglishMaster-LisansAraci.exe`); kurulum paketine girmez, ayrı yapıt olarak üretilir |
 
 ## Notlar
+
+- **Lisans açık anahtarı:** Paket, `app/core/license_keys.py` içindeki açık anahtar(lar)la doğrulanan lisansları
+  kabul eder. Liste boşsa program hiçbir anahtarı kabul etmez. Dağıtımdan önce bkz. [LICENSING.md](LICENSING.md).
+  Paket denemesi (`smoke_test.py`) gerçek gizli anahtara erişemediği için lisanslı ekranları değil, kilidin
+  çalıştığını dener; lisanslı akış Linux/Windows testlerinde geçici bir test anahtarıyla denenir.
 
 - **Kod imzalama yok.** Kurulum dosyası dijital olarak imzalanmadığı için Windows SmartScreen
   "Windows bilgisayarınızı korudu" uyarısı gösterebilir. İmzalama için bir kod imzalama sertifikası

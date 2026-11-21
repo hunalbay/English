@@ -1,8 +1,8 @@
 import sqlite3
+from dataclasses import replace
 
 from fastapi.testclient import TestClient
 
-from app.core.config import load_settings
 from app.main import create_app
 from tests.conftest import BASE_URL
 
@@ -197,7 +197,7 @@ def test_progress_survives_restart_and_content_rebuild(settings, tmp_path):
 
     rebuilt = tmp_path / "rebuilt.db"
     builder.build(ROOT / "data", rebuilt)
-    again = load_settings(data_dir=settings.data_dir, content_db_path=rebuilt)
+    again = replace(settings, content_db_path=rebuilt)
     with TestClient(create_app(again), base_url=BASE_URL) as second:
         dashboard = second.get(f"{API}/dashboard").json()
         assert dashboard["profile"]["current_level"] == "A1"
@@ -218,8 +218,8 @@ def test_stale_progress_for_removed_content_is_ignored(client, auth, app):
     assert client.get(f"{API}/word-list").json()["items"] == []
 
 
-def test_missing_content_gives_clear_error(tmp_path):
-    settings = load_settings(data_dir=tmp_path / "u", content_db_path=tmp_path / "yok.db")
+def test_missing_content_gives_clear_error(tmp_path, settings):
+    settings = replace(settings, content_db_path=tmp_path / "yok.db")
     with TestClient(create_app(settings), base_url=BASE_URL) as client:
         response = client.get(f"{API}/levels")
         assert response.status_code == 503

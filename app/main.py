@@ -11,11 +11,13 @@ from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app import __version__
-from app.api import learning, reports, study, system, tests, vocabulary
+from app.api import learning, license, reports, study, system, tests, vocabulary
 from app.core.config import Settings, load_settings
+from app.core.license_gate import LicenseGateMiddleware
 from app.core.logging import get_logger, setup_logging
 from app.core.security import LocalSecurityMiddleware, new_session_token
 from app.database.user_db import create_session_factory, create_user_engine
+from app.services.license import LicenseManager
 from app.services.migrations import run_migrations
 
 API_PREFIX = "/api/v1"
@@ -66,6 +68,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.user_engine = engine
     app.state.user_sessions = create_session_factory(engine)
 
+    app.state.license = LicenseManager(settings)
+
+    # Sıra: önce yerel güvenlik denetimi (en dışta), sonra lisans kilidi.
+    app.add_middleware(LicenseGateMiddleware, api_prefix=API_PREFIX, manager=app.state.license)
     app.add_middleware(LocalSecurityMiddleware, token=app.state.session_token)
 
     @app.exception_handler(StarletteHTTPException)
@@ -85,7 +91,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         log.error("Beklenmeyen hata: %s %s", request.method, request.url.path, exc_info=exc)
         return _error(500, "internal_error", "Beklenmeyen bir hata oluştu. Ayrıntılar log dosyasına yazıldı.")
 
-    for module in (system, learning, vocabulary, study, tests, reports):
+    for module in (system, license, learning, vocabulary, study, tests, reports):
         app.include_router(module.router, prefix=API_PREFIX)
 
     @app.api_route(

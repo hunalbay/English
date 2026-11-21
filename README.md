@@ -1,9 +1,10 @@
 # English Master
 
-Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
-Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
+Türkçe konuşanlar için A1'den C2'ye **çevrimdışı** İngilizce eğitim programı.
+Şu an **davetle verilen ücretsiz lisans anahtarıyla** kullanılan bir deneme sürümüdür. Hesap, üyelik veya internet
+bağlantısı gerektirmez; lisans denetimi bilgisayarda yapılır ve ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 9 (Windows paketi) tamamlandı.** Kurulum: [docs/INSTALL.md](docs/INSTALL.md) · Paket üretimi: [docs/BUILD.md](docs/BUILD.md) · Kalite raporu: [docs/QA.md](docs/QA.md). Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
+> **Durum: Aşama 9 (Windows paketi) ve deneme sürümü lisanslaması tamamlandı.** Lisans anahtarları: [docs/LICENSING.md](docs/LICENSING.md) · Kurulum: [docs/INSTALL.md](docs/INSTALL.md) · Paket üretimi: [docs/BUILD.md](docs/BUILD.md) · Kalite raporu: [docs/QA.md](docs/QA.md). Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
 > telaffuz (7 ders), deyimler ve kalıplar (14 ders, 166 ifade) ile mesleki İngilizce (9 ders, 115 terim ve kalıp)
 > hazır. Toplam 1.200 soru, 5.048 kelimelik sözlük, kelime çalışması, seviye tespit sınavı ve ilerleme raporu
 > (güçlü / zayıf konular, günlük etkinlik, haftalık başarı, öneriler) var.
@@ -35,6 +36,8 @@ python3 -m venv .venv
 
 `python -m app` yerel sunucuyu yalnızca `127.0.0.1` üzerinde başlatır ve arayüzü tarayıcıda açar.
 Seçenekler: `--port N`, `--no-browser`, `--no-tray`.
+Geliştirme sırasında programın açılması için bir lisans gerekir: [docs/LICENSING.md](docs/LICENSING.md) adımlarıyla
+kendi bilgisayar kodunuz için anahtar üretin. Testler geçici bir test anahtarı kullanır, gerçek anahtar gerekmez.
 
 ## Yapı
 
@@ -53,4 +56,11 @@ Ayrıntılar: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · İçerik ekleme: [
 
 ## Gizlilik
 
-Program hiçbir kullanım verisi toplamaz ve dışarı göndermez. Telemetri yoktur.
+Program hiçbir kullanım verisi toplamaz ve dışarı göndermez. Telemetri yoktur. Lisans anahtarı internetsiz,
+bilgisayarda doğrulanır; IP adresi veya başka bir bilgi gönderilmez. Geri bildirim yalnızca kullanıcı kendi
+e-posta programıyla gönderirse iletilir.
+
+## Telif hakkı
+
+© 2026 English Master. Tüm hakları saklıdır (bkz. [LICENSE](LICENSE), kullanım koşulları: [packaging/EULA.txt](packaging/EULA.txt)).
+Üçüncü taraf bileşenler kendi lisanslarıyla dağıtılır: [packaging/THIRD_PARTY_NOTICES.txt](packaging/THIRD_PARTY_NOTICES.txt).

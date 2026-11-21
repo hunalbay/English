@@ -7,7 +7,8 @@
 #   .\scripts\build_windows.ps1              # paketle, dene, kurulum dosyasını üret
 #   .\scripts\build_windows.ps1 -SkipSmoke   # paketlenmiş programı denemeden
 #
-# Çıktı: dist\EnglishMaster\ (taşınabilir klasör) ve dist\EnglishMaster-Setup-<sürüm>.exe
+# Çıktı: dist\EnglishMaster\ (taşınabilir klasör), dist\EnglishMaster-Setup-<sürüm>.exe
+#        ve dist\tool\EnglishMaster-LisansAraci.exe (yalnızca sizin için; dağıtmayın)
 # Bu betik ayrı bir sanal ortam (.venv-build) kullanır; geliştirme ortamına dokunmaz.
 param([switch]$SkipSmoke)
 $ErrorActionPreference = "Stop"
@@ -36,6 +37,10 @@ if (-not $SkipSmoke) {
   & $python packaging\smoke_test.py dist\EnglishMaster\EnglishMaster.exe
   if ($LASTEXITCODE -ne 0) { throw "Paketlenmiş program denemesi başarısız" }
 }
+
+Write-Host "`n== Lisans aracı paketleniyor (kurulum paketine girmez)"
+& $python -m PyInstaller packaging\license_tool.spec --noconfirm --distpath dist\tool --workpath build\pyi-tool
+if ($LASTEXITCODE -ne 0) { throw "Lisans aracı paketlenemedi" }
 
 $makensis = Get-Command makensis -ErrorAction SilentlyContinue
 if (-not $makensis) {

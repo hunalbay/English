@@ -17,7 +17,7 @@ OUT = ROOT / "build" / "licenses"
 # Çalışma zamanında pakete giren dağıtımlar (requirements.txt ve onların bağımlılıkları)
 RUNTIME = ["fastapi", "starlette", "pydantic", "pydantic-core", "typing-extensions", "typing-inspection",
            "annotated-types", "annotated-doc", "anyio", "idna", "sniffio", "uvicorn", "h11", "click",
-           "SQLAlchemy", "greenlet", "alembic", "Mako", "MarkupSafe"]
+           "SQLAlchemy", "greenlet", "alembic", "Mako", "MarkupSafe", "cryptography", "cffi", "pycparser"]
 if sys.platform == "win32":
     RUNTIME += ["pystray", "six", "pillow", "colorama"]
 
@@ -56,6 +56,10 @@ def main() -> int:
         notice + "\n\nPakete giren Python bileşenleri (sürüm — lisans):\n" + "\n".join(f"  - {line}" for line in summary) + "\n",
         encoding="utf-8",
     )
+    # Kurulum sihirbazındaki sözleşme sayfası: NSIS düz metni UTF-16 (BOM'lu) olarak en güvenilir okur.
+    eula = (ROOT / "packaging" / "EULA.txt").read_text(encoding="utf-8")
+    (OUT / "EULA.txt").write_text(eula, encoding="utf-8")
+    (ROOT / "build" / "EULA-installer.txt").write_text(eula.replace("\n", "\r\n"), encoding="utf-16")
     print(f"{len(summary)} bileşenin lisansı toplandı: {OUT}")
     if missing:
         print("Lisans dosyası bulunamayanlar (meta veri özeti yazıldı):", ", ".join(missing))

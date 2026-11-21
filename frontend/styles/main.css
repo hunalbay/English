@@ -427,3 +427,23 @@ textarea {
 .placement-steps { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 .placement-steps .badge { font-weight: 500; }
 .big-level { font-size: 2.4rem; font-weight: 700; margin: 0; line-height: 1.1; }
+
+/* --- Lisans ve geri bildirim --- */
+.field.wide { max-width: 640px; }
+.machine-code {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 1.35rem; font-weight: 700;
+  letter-spacing: 0.08em; padding: var(--space-2) var(--space-3); background: var(--surface-2);
+  border-radius: 8px; user-select: all;
+}
+#license-key { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85rem; word-break: break-all; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: var(--space-2) var(--space-4); margin: 0 0 var(--space-3); }
+.facts dt { font-weight: 600; }
+.facts dd { margin: 0; }
+.checkbox { display: flex; gap: var(--space-2); align-items: center; font-weight: 600; }
+.diagnostics {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.85rem; white-space: pre-wrap;
+  background: var(--surface-2); border-radius: 8px; padding: var(--space-3); margin: 0; overflow-wrap: anywhere;
+}
+.diagnostics[hidden] { display: none; }
+.license-banner { margin-bottom: var(--space-4); }
+.card + p, .card + .hint { margin-top: var(--space-4); }

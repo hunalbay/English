@@ -26,9 +26,13 @@ def _env(data_dir: Path, content_db: Path) -> dict[str, str]:
     }
 
 
-def _start(env: dict[str, str]) -> tuple[subprocess.Popen, str]:
+LICENSED_RUNNER = Path(__file__).with_name("licensed_app.py")
+
+
+def _start(env: dict[str, str], licensed: bool = False) -> tuple[subprocess.Popen, str]:
+    entry = [str(LICENSED_RUNNER)] if licensed else ["-m", "app"]
     process = subprocess.Popen(
-        [sys.executable, "-m", "app", "--no-browser", "--no-tray", "--port", "0"],
+        [sys.executable, *entry, "--no-browser", "--no-tray", "--port", "0"],
         cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8",
     )
     line = process.stdout.readline()
@@ -88,20 +92,41 @@ def test_start_single_instance_persist_and_shutdown(env):
             process.kill()
 
 
+def test_real_program_without_public_key_is_locked(env):
+    """Depodaki programa henüz açık anahtar eklenmediyse hiçbir lisans kabul edilmez."""
+    from app.core.license_keys import PUBLIC_KEYS
+
+    if PUBLIC_KEYS:
+        pytest.skip("Programda açık anahtar tanımlı")
+    process, url = _start(env)
+    try:
+        assert _json(url + "api/v1/license")["state"] == "unconfigured"
+        token = _json(url + "api/v1/session")["token"]
+        _json(url + "api/v1/system/shutdown", "POST", token)
+        assert process.wait(timeout=15) == 0
+    finally:
+        if process.poll() is None:
+            process.kill()
+
+
 @pytest.mark.e2e
-def test_browser_smoke(env):
+def test_browser_smoke(env, signer):
     if shutil.which("node") is None:
         pytest.skip("Node.js yok")
     probe = subprocess.run(["node", "-e", "require('playwright')"], capture_output=True)
     if probe.returncode != 0:
         pytest.skip("Playwright kurulu değil")
 
-    process, url = _start(env)
+    from tests.conftest import TEST_MACHINE_ID
+
+    env = {**env, "EM_TEST_PUBLIC_KEY": signer.public_text, "EM_TEST_MACHINE_ID": TEST_MACHINE_ID,
+           "EM_LICENSE_KEY": signer.key(name="Deneme Kullanıcısı")}
+    process, url = _start(env, licensed=True)
     try:
         args = ["node", str(SMOKE), url]
         if os.environ.get("EM_SCREENSHOT_PREFIX"):
             args.append(os.environ["EM_SCREENSHOT_PREFIX"])
-        result = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", timeout=120)
+        result = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", timeout=180, env=env)
         assert result.returncode == 0, result.stdout + result.stderr
         # duman testi programı arayüzden kapatır; süreç düzgün sonlanmalı
         assert process.wait(timeout=15) == 0

@@ -115,15 +115,16 @@ def test_openapi_docs_disabled(client):
     assert client.get("/openapi.json").status_code == 404
 
 
-def test_corrupt_content_db_gives_clear_503(tmp_path):
+def test_corrupt_content_db_gives_clear_503(tmp_path, settings):
+    from dataclasses import replace
+
     from fastapi.testclient import TestClient
 
-    from app.core.config import load_settings
     from app.main import create_app
 
     bad = tmp_path / "content.db"
     bad.write_bytes(b"bozuk" * 500)
-    app = create_app(load_settings(data_dir=tmp_path / "user", content_db_path=bad))
+    app = create_app(replace(settings, content_db_path=bad))
     with TestClient(app, base_url="http://127.0.0.1:8765") as client:
         response = client.get("/api/v1/levels")
         assert response.status_code == 503

@@ -3,6 +3,7 @@
 // geliştirildikçe ROUTES listesine eklenir.
 
 import * as api from "./api.js";
+import * as license from "./license.js";
 import { add, applyTheme, h, pageHeader } from "./dom.js";
 import * as home from "./pages/home.js";
 import * as lessons from "./pages/lessons.js";
@@ -20,6 +21,8 @@ import * as test from "./pages/test.js";
 import * as settings from "./pages/settings.js";
 import * as placement from "./pages/placement.js";
 import * as progressPage from "./pages/progress.js";
+import * as licensePage from "./pages/license.js";
+import * as feedback from "./pages/feedback.js";
 
 // pattern: ":ad" parçaları parametre olarak sayfaya aktarılır. nav: menüde gösterilecek ad.
 const ROUTES = [
@@ -54,7 +57,11 @@ const ROUTES = [
   { pattern: "/seviye-tespiti", page: placement, nav: "Seviye tespiti", section: "/seviye-tespiti" },
   { pattern: "/ara/:query", page: search, section: null },
   { pattern: "/ayarlar", page: settings, nav: "Ayarlar", section: "/ayarlar" },
+  { pattern: "/geri-bildirim", page: feedback, nav: "Geri bildirim", section: "/geri-bildirim", open: true },
+  // Lisans sayfası menüde yalnızca lisans yokken görünür; lisans varken Ayarlar'dan açılır.
+  { pattern: "/lisans", page: licensePage, navLocked: "Lisans", section: "/lisans", open: true },
 ];
+const LICENSE_ROUTE = ROUTES.find((route) => route.pattern === "/lisans");
 
 const main = document.getElementById("main");
 const nav = document.getElementById("nav");
@@ -81,18 +88,37 @@ function match(path) {
   return null;
 }
 
+function isLocked() {
+  const status = license.status();
+  return Boolean(status && !status.licensed);
+}
+
 function renderNav(section) {
+  const locked = isLocked();
+  const items = ROUTES.map((route) => ({ route, label: locked ? (route.open && (route.navLocked || route.nav)) : route.nav }))
+    .filter((item) => item.label);
   nav.replaceChildren(
-    ...ROUTES.filter((route) => route.nav).map((route) =>
-      h("a", { href: `#${route.pattern}`, "aria-current": route.section === section ? "page" : null }, route.nav),
+    ...items.map(({ route, label }) =>
+      h("a", { href: `#${route.pattern}`, "aria-current": route.section === section ? "page" : null }, label),
     ),
   );
+  document.getElementById("search-form").hidden = locked;
+}
+
+function expiryBanner() {
+  const status = license.status();
+  if (!status || !status.licensed || !status.warn) return null;
+  const when = status.days_left === 0 ? "bugün sona eriyor" : `${license.formatDate(status.expires)} tarihinde sona eriyor (${status.days_left} gün kaldı)`;
+  return h("p", { class: "notice license-banner", role: "status" },
+    `Lisansınız ${when}. `, h("a", { href: "#/lisans" }, "Lisansı yenile"));
 }
 
 async function render() {
   const token = ++renderToken;
   const path = location.hash.replace(/^#/, "") || "/";
-  const found = match(path);
+  let found = match(path);
+  // Lisans yoksa yalnızca lisans ve geri bildirim sayfaları açılır.
+  if (isLocked() && !(found && found.route.open)) found = { route: LICENSE_ROUTE, params: {} };
   renderNav(found ? found.route.section : null);
   const root = document.createElement("div");
   if (!found) {
@@ -111,6 +137,10 @@ async function render() {
     }
   }
   if (token !== renderToken) return; // bu arada başka bir sayfaya geçildi
+  if (found && found.route !== LICENSE_ROUTE) {
+    const banner = expiryBanner();
+    if (banner) root.prepend(banner);
+  }
   if (root.dataset.section) renderNav(root.dataset.section);
   main.replaceChildren(root);
   main.dataset.route = path; // sayfanın tamamen çizildiğini gösterir (testler bunu bekler)
@@ -135,5 +165,19 @@ document.getElementById("search-form").addEventListener("submit", (event) => {
   if (query) location.hash = `#/ara/${encodeURIComponent(query)}`;
 });
 
+// Program açıkken lisans süresi dolarsa (ya da kilitli bir uca istek giderse) lisans ekranına dönülür.
+let relocking = false;
+window.addEventListener("em:license-required", async () => {
+  if (relocking) return;
+  relocking = true;
+  try {
+    await license.refresh();
+  } catch {
+    /* durum alınamadı; mevcut sayfa hatayı gösterir */
+  }
+  relocking = false;
+  render();
+});
+
 api.get("/settings").then((data) => applyTheme(data.settings.theme)).catch(() => {});
-render();
+license.refresh().catch(() => {}).finally(render);

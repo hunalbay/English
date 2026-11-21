@@ -4,6 +4,8 @@ uvicorn==0.54.0
 SQLAlchemy==2.1.8
 alembic==1.20.1
 pydantic==2.14.3
+# Lisans anahtarı imza doğrulaması (Ed25519; Apache-2.0 / BSD)
+cryptography==50.0.1
 # Sistem tepsisi simgesi (yalnızca Windows paketinde kullanılır)
 pystray==0.19.5; sys_platform == "win32"
 pillow==13.0.0; sys_platform == "win32"

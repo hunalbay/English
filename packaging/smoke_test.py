@@ -18,6 +18,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -80,15 +81,27 @@ def main() -> int:
     status, _, body = get("/api/v1/health")
     health = json.loads(body)
     check(status == 200 and health.get("content", {}).get("available") is True, f"içerik veri tabanı yüklü: {health.get('content')}")
-    status, _, body = get("/api/v1/levels")
-    check(len(json.loads(body)["levels"]) == 6, "altı seviye listeleniyor")
-    status, _, body = get("/api/v1/lessons/gram.a1.to-be-present")
-    check(status == 200 and json.loads(body)["sections"], "bir ders açılıyor")
-    status, _, body = get("/api/v1/vocabulary/word.book")
-    audio = json.loads(body).get("audio")
-    check(bool(audio), "kelime için ses kaydı bilgisi var")
-    if audio:
-        status, ctype, data = get(audio["url"])
+    # Lisans yokken: lisans ekranı çalışır, eğitim API'leri kilitlidir
+    status, _, body = get("/api/v1/license")
+    lic = json.loads(body)
+    check(status == 200 and len(lic.get("machine_code", "")) == 19, f"lisans durumu ve bilgisayar kodu: {lic.get('state')} {lic.get('machine_code')}")
+    check(lic.get("state") in ("missing", "unconfigured") or args.use_default_data_dir, "temiz kurulumda lisans yok")
+    if not lic.get("licensed"):
+        try:
+            get("/api/v1/levels")
+            locked = False
+        except urllib.error.HTTPError as error:
+            locked = error.code == 403 and json.loads(error.read())["error"]["code"] == "license_required"
+        check(locked, "lisans yokken eğitim API'leri kilitli")
+    status, _, body = get("/api/v1/feedback")
+    check(status == 200 and "@" in json.loads(body)["email"], "geri bildirim bilgisi sunuluyor")
+
+    # Ses dosyaları paketle gelir ve sunulur
+    clips_dir = args.exe.parent / "_internal" / "data" / "audio" / "clips"
+    sample = next(iter(sorted(clips_dir.rglob("*.mp3"))), None) if clips_dir.is_dir() else None
+    check(sample is not None, "pakette ses dosyası var")
+    if sample is not None:
+        status, ctype, data = get("/media/clips/" + sample.relative_to(clips_dir).as_posix())
         check(status == 200 and ctype.startswith("audio/mpeg") and len(data) > 1000, f"ses dosyası sunuluyor ({len(data)} bayt)")
     status, ctype, body = get("/")
     check(status == 200 and b"English Master" in body and ctype.startswith("text/html"), "arayüz sayfası sunuluyor")
@@ -100,10 +113,10 @@ def main() -> int:
     check(second.returncode == 0, "ikinci kopya açılmadı, çalışan program bildirildi")
 
     token = json.loads(get("/api/v1/session")[2])["token"]
-    request = urllib.request.Request(base + "/api/v1/profile/level", method="PUT", data=b'{"level": "B1"}',
+    request = urllib.request.Request(base + "/api/v1/settings/theme", method="PUT", data=b'{"value": "dark"}',
                                      headers={"X-EM-Token": token, "content-type": "application/json"})
     urllib.request.urlopen(request, timeout=10)  # noqa: S310
-    check(json.loads(get("/api/v1/profile")[2])["current_level"] == "B1", "kullanıcı verisi yazılabiliyor")
+    check(json.loads(get("/api/v1/settings")[2])["settings"]["theme"] == "dark", "kullanıcı verisi yazılabiliyor")
 
     request = urllib.request.Request(base + "/api/v1/system/shutdown", method="POST", data=b"{}",
                                      headers={"X-EM-Token": token, "content-type": "application/json"})

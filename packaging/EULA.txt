@@ -1,0 +1,46 @@
+ENGLISH MASTER — SON KULLANICI LİSANS SÖZLEŞMESİ (DENEME SÜRÜMÜ)
+
+Telif hakkı (c) 2026 English Master. Tüm hakları saklıdır.
+
+Programı kurarak veya kullanarak aşağıdaki koşulları kabul etmiş olursunuz.
+
+1. Deneme sürümü
+   Bu program, davetle verilen ücretsiz bir deneme sürümüdür. Kullanım için
+   size özel olarak verilen bir lisans anahtarı gerekir. Lisans anahtarı,
+   üzerinde yazılı bitiş tarihinin sonuna kadar geçerlidir.
+
+2. Kullanım hakkı
+   Lisans anahtarı yalnızca bir kişiye ve yalnızca kodu bildirilen tek bir
+   bilgisayara verilir. Program kişisel öğrenme amacıyla kullanılabilir.
+
+3. Yasaklar
+   Hak sahibinin yazılı izni olmadan:
+   - programı, ders içeriklerini, soruları veya ses kayıtlarını kopyalamak,
+     dağıtmak, satmak, kiralamak veya yayımlamak;
+   - lisans anahtarını başkasıyla paylaşmak;
+   - lisans denetimini atlatmaya çalışmak, programı değiştirmek, kaynak koda
+     dönüştürmek (tersine mühendislik)
+   yasaktır.
+
+4. Kişisel veriler
+   İlerlemeniz, cevaplarınız ve ses kayıtlarınız yalnızca bu bilgisayarda
+   saklanır. Program internete bağlanmaz, kullanım verisi toplamaz veya
+   göndermez. Lisans denetimi bu bilgisayarda, internetsiz yapılır.
+   Geri bildirim yalnızca siz kendi e-posta programınızla gönderirseniz
+   iletilir.
+
+5. Garanti yoktur
+   Deneme sürümü "olduğu gibi" sunulur. İçerikte hata bulunabilir. Programın
+   kullanımından doğabilecek zararlardan, yürürlükteki hukukun izin verdiği
+   ölçüde, hak sahibi sorumlu tutulamaz.
+
+6. Üçüncü taraf bileşenler
+   Program, kendi lisanslarıyla dağıtılan üçüncü taraf yazılım ve veriler
+   içerir. Bu bileşenler için kendi lisansları geçerlidir; metinleri program
+   klasöründeki "licenses" klasöründedir.
+
+7. Sona erme
+   Lisans süresi dolduğunda veya bu koşullara uyulmadığında kullanım hakkı
+   sona erer. Süre dolduğunda bilgisayarınızdaki çalışmalarınız silinmez.
+
+İletişim: onurgulcicek@hotmail.com

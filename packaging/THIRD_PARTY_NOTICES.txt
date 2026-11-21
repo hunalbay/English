@@ -26,6 +26,9 @@ YAZILIM BİLEŞENLERİ
 * Python çalışma zamanı — Python Software Foundation License (PSF-2.0).
   Python ile birlikte gelen SQLite (kamu malı), OpenSSL (Apache-2.0), libffi (MIT), zlib, bzip2,
   liblzma / xz ve expat kütüphanelerini içerir.
+* cryptography — Apache-2.0 veya BSD-3-Clause (lisans anahtarı imza doğrulaması için). Windows
+  paketi kendi içinde OpenSSL (Apache-2.0) derlemesi taşır. Bağımlılıkları: cffi (MIT-0),
+  pycparser (BSD-3-Clause).
 * PyInstaller önyükleyicisi — GPL-2.0, PyInstaller'ın "bootloader exception" istisnasıyla; paketlenen
   programın lisansını etkilemez.
 * pystray (yalnızca Windows, sistem tepsisi simgesi) — LGPL-3.0. Bu kütüphane derlenmiş arşive değil,
