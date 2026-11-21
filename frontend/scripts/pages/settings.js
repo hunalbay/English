@@ -1,4 +1,6 @@
-// Ayarlar sayfası: tema, günlük hedef, programı kapatma.
+// Ayarlar sayfası: seviye, tema, programı kapatma.
+// Not: "günlük hedef (dakika)" ayarı program çalışma süresini ölçmediği için arayüzden kaldırıldı;
+// kayıtlı değer korunur ve süre ölçümü eklenirse yeniden gösterilebilir.
 
 import * as api from "../api.js";
 import { LEVEL_NAMES, add, applyTheme, h, toast } from "../dom.js";
@@ -71,35 +73,6 @@ export async function render(root) {
     ),
   );
 
-  const goalInput = h("input", {
-    id: "daily-goal",
-    type: "number",
-    min: "5",
-    max: "240",
-    step: "5",
-    value: String(settings.daily_goal_minutes),
-    "aria-describedby": "daily-goal-hint",
-  });
-  const goalField = h(
-    "form",
-    {
-      class: "field",
-      novalidate: true, // doğrulama mesajı Türkçe olarak aşağıda gösterilir
-      onsubmit: async (event) => {
-        event.preventDefault();
-        const value = Number(goalInput.value);
-        if (!Number.isInteger(value) || value < 5 || value > 240) {
-          toast("Günlük hedef 5 ile 240 dakika arasında olmalıdır.", { error: true });
-          return;
-        }
-        await save("daily_goal_minutes", value);
-      },
-    },
-    h("label", { for: "daily-goal" }, "Günlük çalışma hedefi (dakika)"),
-    h("div", { class: "row" }, goalInput, h("button", { class: "btn primary", type: "submit" }, "Kaydet")),
-    h("p", { class: "hint", id: "daily-goal-hint" }, "5 ile 240 dakika arasında bir değer girin."),
-  );
-
   const quitButton = h(
     "button",
     {
@@ -124,7 +97,7 @@ export async function render(root) {
 
   add(root, 
     h("div", { class: "page-header" }, h("h1", {}, "Ayarlar")),
-    h("section", { class: "card" }, levelField, themeField, goalField),
+    h("section", { class: "card" }, levelField, themeField),
     h(
       "section",
       { class: "card" },

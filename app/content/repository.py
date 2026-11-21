@@ -373,7 +373,7 @@ def word_ids_for_level(conn: sqlite3.Connection, level: str) -> list[str]:
             key=lambda row: (
                 row["frequency_rank"] is None,
                 row["frequency_rank"] or 0,
-                hashlib.sha1(row["id"].encode("utf-8")).hexdigest(),  # noqa: S324 (güvenlik amaçlı değil)
+                hashlib.sha1(row["id"].encode("utf-8"), usedforsecurity=False).hexdigest(),  # kararlı sıralama, güvenlik amaçlı değil
             ),
         )
     ]

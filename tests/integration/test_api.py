@@ -14,7 +14,7 @@ def test_health(client):
     assert body["version"] == __version__
     assert body["content"]["available"] is True
     assert body["content"]["version"]
-    assert body["user_db"]["schema_revision"] == "0005"
+    assert body["user_db"]["schema_revision"] == "0006"
     assert response.headers["cache-control"] == "no-store"
 
 
@@ -113,3 +113,18 @@ def test_shutdown_unavailable_without_launcher(client, auth):
 def test_openapi_docs_disabled(client):
     assert client.get("/docs").status_code == 404
     assert client.get("/openapi.json").status_code == 404
+
+
+def test_corrupt_content_db_gives_clear_503(tmp_path):
+    from fastapi.testclient import TestClient
+
+    from app.core.config import load_settings
+    from app.main import create_app
+
+    bad = tmp_path / "content.db"
+    bad.write_bytes(b"bozuk" * 500)
+    app = create_app(load_settings(data_dir=tmp_path / "user", content_db_path=bad))
+    with TestClient(app, base_url="http://127.0.0.1:8765") as client:
+        response = client.get("/api/v1/levels")
+        assert response.status_code == 503
+        assert "bozuk" in response.json()["error"]["message"]

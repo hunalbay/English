@@ -26,6 +26,34 @@ class MigrationError(RuntimeError):
     """Şema güncellemesi başarısız oldu; veri tabanı önceki hâline döndürüldü."""
 
 
+class UserDataError(MigrationError):
+    """user.db okunamıyor (bozuk ya da SQLite dosyası değil). Dosyaya dokunulmaz."""
+
+
+def check_user_db(settings: Settings) -> None:
+    """Var olan user.db'nin okunabilir bir SQLite veri tabanı olduğunu doğrular."""
+    db_path = settings.user_db_path
+    if not db_path.is_file():
+        return
+    try:
+        conn = sqlite3.connect(f"file:{db_path.as_posix()}?mode=ro", uri=True)
+        try:
+            result = conn.execute("PRAGMA quick_check").fetchone()[0]
+        finally:
+            conn.close()
+    except sqlite3.DatabaseError as exc:
+        log.error("user.db okunamadı: %s", exc)
+        result = "unreadable"
+    if result != "ok":
+        log.error("user.db bütünlük denetimi başarısız: %s", result)
+        raise UserDataError(
+            "Kişisel verilerinizin bulunduğu dosya bozuk görünüyor ve açılamadı. Dosya silinmedi ya da "
+            f"değiştirilmedi.\n\nDosya: {db_path}\nYedekler: {settings.backups_dir}\n\n"
+            "Programı kapatıp bu dosyayı başka bir yere taşırsanız program boş bir kayıtla açılır; "
+            "yedek klasöründeki en yeni dosyayı user.db adıyla geri koyarak eski kayıtlarınızı geri alabilirsiniz."
+        )
+
+
 def alembic_config(settings: Settings) -> Config:
     config = Config()
     config.set_main_option("script_location", settings.migrations_dir.as_posix())
@@ -74,6 +102,7 @@ def _restore(backup: Path, db_path: Path) -> None:
 def run_migrations(settings: Settings) -> str | None:
     """Veri tabanını en güncel şemaya getirir; güncel revizyonu döndürür."""
     settings.ensure_dirs()
+    check_user_db(settings)
     db_path = settings.user_db_path
     head = head_revision(settings)
     current = current_revision(db_path)

@@ -30,6 +30,13 @@ def get_content(request: Request) -> Iterator[sqlite3.Connection]:
         raise HTTPException(status_code=503, detail="Eğitim içeriği bulunamadı. Programı yeniden kurmayı deneyin.")
     conn = connect_readonly(path)
     try:
+        conn.execute("SELECT value FROM content_meta LIMIT 1").fetchone()
+    except sqlite3.DatabaseError:
+        conn.close()
+        raise HTTPException(
+            status_code=503, detail="Eğitim içeriği dosyası bozuk ya da okunamıyor. Programı yeniden kurmayı deneyin."
+        ) from None
+    try:
         yield conn
     finally:
         conn.close()

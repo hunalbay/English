@@ -93,7 +93,7 @@ def test_upgrade_from_0004_keeps_test_history(settings):
     conn.commit()
     conn.close()
 
-    assert migrations.run_migrations(settings) == "0005"
+    assert migrations.run_migrations(settings) == "0006"
     assert list(settings.backups_dir.glob("*.db"))  # güncellemeden önce yedek alındı
     conn = sqlite3.connect(settings.user_db_path)
     try:
@@ -104,3 +104,14 @@ def test_upgrade_from_0004_keeps_test_history(settings):
             conn.execute("INSERT INTO test_sessions (kind, question_ids, started_at) VALUES ('bogus', '[]', '2026-01-02')")
     finally:
         conn.close()
+
+
+def test_corrupt_user_db_stops_with_clear_message_and_is_left_untouched(settings):
+    settings.ensure_dirs()
+    garbage = b"bu bir veri tabani degil" * 200
+    settings.user_db_path.write_bytes(garbage)
+    with pytest.raises(migrations.UserDataError) as info:
+        migrations.run_migrations(settings)
+    assert "bozuk" in str(info.value) and str(settings.backups_dir) in str(info.value)
+    assert settings.user_db_path.read_bytes() == garbage  # dosyaya dokunulmadı
+    assert list(settings.backups_dir.glob("*.db")) == []

@@ -38,7 +38,7 @@ class ClipSpec:
             {"model": MODEL_ID, "gap": LINE_GAP_MS, "lines": [[VOICES[voice], text] for voice, text in self.lines]},
             ensure_ascii=False, separators=(",", ":"),
         )
-        return hashlib.sha1(payload.encode("utf-8")).hexdigest()  # noqa: S324 (güvenlik amaçlı değil)
+        return hashlib.sha1(payload.encode("utf-8"), usedforsecurity=False).hexdigest()  # içerik özeti, güvenlik amaçlı değil
 
     @property
     def filename(self) -> str:
@@ -51,7 +51,7 @@ def word_key(lemma: str) -> str:
 
 
 def phrase_key(text: str) -> str:
-    return "s:" + hashlib.sha1(" ".join(text.split()).encode("utf-8")).hexdigest()[:20]  # noqa: S324
+    return "s:" + hashlib.sha1(" ".join(text.split()).encode("utf-8"), usedforsecurity=False).hexdigest()[:20]
 
 
 def lesson_key(lesson_id: str) -> str:
@@ -83,7 +83,7 @@ def required_clips(content: "Content") -> dict[str, ClipSpec]:
         if lesson.passage is not None and lesson.kind == "listening":
             voices = passage_voices(lesson.passage.lines, lesson.passage.voices)
             key = lesson_key(lesson.id)
-            clips[key] = ClipSpec(key, tuple((voice, line.en) for voice, line in zip(voices, lesson.passage.lines)))
+            clips[key] = ClipSpec(key, tuple((voice, line.en) for voice, line in zip(voices, lesson.passage.lines, strict=True)))
         for item in (*lesson.practice, *lesson.expressions):
             key = phrase_key(item.en)
             clips[key] = ClipSpec(key, ((DEFAULT_VOICE, item.en),))

@@ -121,6 +121,13 @@ window.addEventListener("hashchange", () => {
   render().then(() => main.focus({ preventScroll: true }));
 });
 
+// "İçeriğe geç": adres çubuğundaki # yönlendirme için kullanıldığından bağlantı adresi değiştirmez,
+// yalnızca odağı sayfa içeriğine taşır.
+document.querySelector(".skip-link").addEventListener("click", (event) => {
+  event.preventDefault();
+  main.focus();
+});
+
 document.getElementById("search-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const input = document.getElementById("search-input");

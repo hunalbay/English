@@ -163,7 +163,11 @@ def reset_word(session: Session, word_id: str) -> None:
 def stats(session: Session, content: sqlite3.Connection, now: datetime | None = None) -> dict:
     """Kelime istatistikleri — tamamı gerçek kayıtlardan hesaplanır."""
     now = now or utcnow()
-    items = list(session.scalars(select(ReviewItem)))
+    # Yalnızca gereken sütunlar okunur (binlerce kartta ORM nesnesi oluşturmaktan çok daha hızlı).
+    items = session.execute(select(
+        ReviewItem.word_id, ReviewItem.direction, ReviewItem.ease, ReviewItem.interval_days,
+        ReviewItem.repetitions, ReviewItem.lapses, ReviewItem.due_at, ReviewItem.created_at,
+    )).all()
     existing = repo.existing_word_ids(content, sorted({item.word_id for item in items}))
     items = [item for item in items if item.word_id in existing]
 

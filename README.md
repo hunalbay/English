@@ -3,7 +3,7 @@
 Türkçe konuşanlar için A1'den C2'ye **ücretsiz, çevrimdışı** İngilizce eğitim programı.
 Hesap, üyelik veya internet bağlantısı gerektirmez; ilerlemeniz yalnızca kendi bilgisayarınızda saklanır.
 
-> **Durum: Aşama 7 tamamlandı.** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
+> **Durum: Aşama 8 (kalite güvencesi) tamamlandı; ayrıntılar [docs/QA.md](docs/QA.md).** Dil bilgisi (107 ders), okuma (15 metin), dinleme (10 kayıt), yazma (6 ders),
 > telaffuz (7 ders), deyimler ve kalıplar (14 ders, 166 ifade) ile mesleki İngilizce (9 ders, 115 terim ve kalıp)
 > hazır. Toplam 1.200 soru, 5.048 kelimelik sözlük, kelime çalışması, seviye tespit sınavı ve ilerleme raporu
 > (güçlü / zayıf konular, günlük etkinlik, haftalık başarı, öneriler) var.

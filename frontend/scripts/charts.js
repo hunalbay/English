@@ -36,12 +36,13 @@ export function barChart(items, options) {
   const slot = plotW / items.length;
   const barW = Math.max(2, Math.min(28, slot - 2)); // çubuklar arasında en az 2px boşluk
 
-  const root = svg("svg", { viewBox: `0 0 ${width} ${height}`, class: "chart", role: "img", "aria-label": options.title });
+  // Grafik bir grup; her çubuk klavyeyle odaklanabilen ve değerini okuyan ayrı bir görseldir.
+  const root = svg("svg", { viewBox: `0 0 ${width} ${height}`, class: "chart", role: "group", "aria-label": options.title });
   // Silik yatay çizgiler: 0, yarı, tam
   for (const fraction of [0, 0.5, 1]) {
     const y = pad.top + plotH - plotH * fraction;
-    root.append(svg("line", { x1: pad.left, x2: width - pad.right, y1: y, y2: y, class: fraction === 0 ? "chart-base" : "chart-grid" }));
-    const tick = svg("text", { x: pad.left - 6, y: y + 4, class: "chart-tick", "text-anchor": "end" });
+    root.append(svg("line", { x1: pad.left, x2: width - pad.right, y1: y, y2: y, class: fraction === 0 ? "chart-base" : "chart-grid", "aria-hidden": "true" }));
+    const tick = svg("text", { x: pad.left - 6, y: y + 4, class: "chart-tick", "text-anchor": "end", "aria-hidden": "true" });
     tick.textContent = format(max * fraction);
     root.append(tick);
   }
@@ -58,7 +59,7 @@ export function barChart(items, options) {
 
   items.forEach((item, index) => {
     const x = pad.left + slot * index + (slot - barW) / 2;
-    const group = svg("g", { class: "chart-item", tabindex: 0, "aria-label": item.tooltip });
+    const group = svg("g", { class: "chart-item", tabindex: 0, role: "img", "aria-label": item.tooltip });
     // Geniş görünmez isabet alanı (çubuktan büyük)
     group.append(svg("rect", { x: pad.left + slot * index, y: pad.top, width: slot, height: plotH, class: "chart-hit" }));
     if (item.value !== null && item.value > 0) {

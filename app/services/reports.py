@@ -10,7 +10,7 @@ from __future__ import annotations
 import sqlite3
 from datetime import date, datetime, timedelta, timezone
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.content import repository as repo
@@ -135,6 +135,16 @@ def _streaks(days: set[date], today: date) -> tuple[int, int]:
     return current, longest
 
 
+def _day_counts(session: Session, column, *conditions) -> dict[date, int]:  # noqa: ANN001
+    """Yerel güne göre kayıt sayıları. Gruplama SQLite'ta yapılır (büyük geçmişte de hızlı kalır).
+
+    Zaman damgaları UTC saklanır; SQLite'ın 'localtime' dönüşümü işletim sisteminin saat dilimini kullanır.
+    """
+    day = func.date(column, "localtime")
+    rows = session.execute(select(day, func.count()).where(*conditions).group_by(day)).all()
+    return {date.fromisoformat(value): count for value, count in rows if value}
+
+
 def progress(session: Session, content: sqlite3.Connection, now: datetime | None = None) -> dict:
     """Etkinlik geçmişi, seriler, haftalık başarı ve alanlara göre tamamlanan dersler."""
     now = now or datetime.now(timezone.utc)
@@ -142,43 +152,45 @@ def progress(session: Session, content: sqlite3.Connection, now: datetime | None
     today = _local_date(now, tz)
     first_day = today - timedelta(days=ACTIVITY_DAYS - 1)
 
-    answers = session.execute(select(UserAnswer.answered_at, UserAnswer.result)).all()
-    reviews = session.execute(select(ReviewHistory.reviewed_at)).all()
-    completions = session.execute(
-        select(LessonProgress.completed_at, LessonProgress.lesson_id).where(LessonProgress.completed_at.is_not(None))
-    ).all()
-
-    activity_days: set[date] = set()
-    daily = {first_day + timedelta(days=i): {"questions": 0, "reviews": 0, "lessons": 0} for i in range(ACTIVITY_DAYS)}
-    for answered_at, _ in answers:
-        day = _local_date(answered_at, tz)
-        activity_days.add(day)
-        if day in daily:
-            daily[day]["questions"] += 1
-    for (reviewed_at,) in reviews:
-        day = _local_date(reviewed_at, tz)
-        activity_days.add(day)
-        if day in daily:
-            daily[day]["reviews"] += 1
-    for completed_at, _ in completions:
-        day = _local_date(completed_at, tz)
-        activity_days.add(day)
-        if day in daily:
-            daily[day]["lessons"] += 1
+    question_days = _day_counts(session, UserAnswer.answered_at)
+    review_days = _day_counts(session, ReviewHistory.reviewed_at)
+    lesson_days = _day_counts(session, LessonProgress.completed_at, LessonProgress.completed_at.is_not(None))
+    activity_days = {day for counts in (question_days, review_days, lesson_days) for day, n in counts.items() if n}
+    daily = {
+        first_day + timedelta(days=i): {
+            "questions": question_days.get(first_day + timedelta(days=i), 0),
+            "reviews": review_days.get(first_day + timedelta(days=i), 0),
+            "lessons": lesson_days.get(first_day + timedelta(days=i), 0),
+        }
+        for i in range(ACTIVITY_DAYS)
+    }
 
     # Haftalık başarı (son 8 hafta, pazartesi başlangıçlı)
     week_start = today - timedelta(days=today.weekday())
     weeks = [week_start - timedelta(weeks=i) for i in range(TREND_WEEKS - 1, -1, -1)]
     weekly = {week: {"correct": 0, "total": 0} for week in weeks}
     graded = (*tests_service.RIGHT, *tests_service.WRONG)
-    for answered_at, result in answers:
+    day_expr = func.date(UserAnswer.answered_at, "localtime")
+    result_rows = session.execute(
+        select(day_expr, UserAnswer.result, func.count()).group_by(day_expr, UserAnswer.result)
+    ).all()
+    graded_total = graded_right = 0
+    for value, result, count in result_rows:
         if result not in graded:
             continue
-        day = _local_date(answered_at, tz)
+        graded_total += count
+        right = result in tests_service.RIGHT
+        graded_right += count if right else 0
+        day = date.fromisoformat(value)
         week = day - timedelta(days=day.weekday())
         if week in weekly:
-            weekly[week]["total"] += 1
-            weekly[week]["correct"] += int(result in tests_service.RIGHT)
+            weekly[week]["total"] += count
+            weekly[week]["correct"] += count if right else 0
+    completions = session.execute(
+        select(LessonProgress.completed_at, LessonProgress.lesson_id).where(LessonProgress.completed_at.is_not(None))
+    ).all()
+    answers_total = sum(question_days.values())
+    reviews_total = sum(review_days.values())
 
     # Alanlara ve seviyelere göre tamamlanan dersler (yalnızca içerikte hâlâ bulunan dersler sayılır)
     completed_ids = {lesson_id for _, lesson_id in completions}
@@ -195,8 +207,6 @@ def progress(session: Session, content: sqlite3.Connection, now: datetime | None
     ]
 
     current_streak, longest_streak = _streaks(activity_days, today)
-    graded_total = sum(1 for _, result in answers if result in graded)
-    graded_right = sum(1 for _, result in answers if result in tests_service.RIGHT)
     finished_tests = session.scalar(
         select(TestSession.id).where(TestSession.finished_at.is_not(None)).limit(1)
     )
@@ -215,11 +225,11 @@ def progress(session: Session, content: sqlite3.Connection, now: datetime | None
             for week, counts in weekly.items()
         ],
         "totals": {
-            "questions_answered": len(answers),
+            "questions_answered": answers_total,
             "graded_answers": graded_total,
             "correct_answers": graded_right,
             "accuracy": _rate(graded_right, graded_total),
-            "word_reviews": len(reviews),
+            "word_reviews": reviews_total,
             "lessons_completed": sum(track["completed"] for track in tracks),
             "has_finished_tests": finished_tests is not None,
         },

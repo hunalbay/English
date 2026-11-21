@@ -158,6 +158,19 @@ def _run_tray(url: str, stop: threading.Event, on_quit) -> bool:  # noqa: ANN001
     return True
 
 
+def show_error(message: str) -> None:
+    """Açılış hatasını kullanıcıya gösterir. Paketlenmiş Windows sürümünde konsol olmadığından
+    mesaj ayrıca bir uyarı penceresinde gösterilir."""
+    print(f"HATA: {message}", file=sys.stderr)
+    if sys.platform == "win32":
+        try:
+            import ctypes
+
+            ctypes.windll.user32.MessageBoxW(None, message, "English Master", 0x10)  # MB_ICONERROR
+        except Exception:  # noqa: BLE001, S110 (pencere gösterilemezse konsol mesajı yeterli)
+            pass
+
+
 def run(settings: Settings, open_browser: bool = True, use_tray: bool = True) -> int:
     settings.ensure_dirs()
     setup_logging(settings.logs_dir)
@@ -171,11 +184,7 @@ def run(settings: Settings, open_browser: bool = True, use_tray: bool = True) ->
             if open_browser:
                 webbrowser.open(url)
             return 0
-        print(
-            "HATA: English Master zaten açık görünüyor ancak yanıt vermiyor. "
-            "Programı kapatıp yeniden deneyin.",
-            file=sys.stderr,
-        )
+        show_error("English Master zaten açık görünüyor ancak yanıt vermiyor. Programı kapatıp yeniden deneyin.")
         return 2
 
     try:
@@ -184,7 +193,7 @@ def run(settings: Settings, open_browser: bool = True, use_tray: bool = True) ->
         try:
             app = create_app(settings)
         except MigrationError as exc:
-            print(f"HATA: {exc}", file=sys.stderr)
+            show_error(str(exc))
             return 1
 
         config = uvicorn.Config(
@@ -211,7 +220,7 @@ def run(settings: Settings, open_browser: bool = True, use_tray: bool = True) ->
         while not server.started and not stopped.wait(0.05):
             pass
         if not server.started:
-            print("HATA: Yerel sunucu başlatılamadı. Ayrıntılar log dosyasındadır.", file=sys.stderr)
+            show_error(f"Yerel sunucu başlatılamadı. Ayrıntılar log dosyasındadır: {settings.logs_dir}")
             return 1
 
         url = f"http://{settings.host}:{settings.port}/"

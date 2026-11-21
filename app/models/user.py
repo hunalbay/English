@@ -122,6 +122,7 @@ class ReviewHistory(UserBase):
     __table_args__ = (
         Index("ix_review_history_word", "word_id", "reviewed_at"),
         Index("ix_review_history_time", "reviewed_at"),
+        Index("ix_review_history_wrong", "correct", "word_id"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
@@ -165,6 +166,7 @@ class UserAnswer(UserBase):
         ),
         Index("ix_user_answers_question", "question_id"),
         Index("ix_user_answers_lesson", "lesson_id"),
+        Index("ix_user_answers_time", "answered_at", "result"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)

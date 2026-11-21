@@ -274,16 +274,10 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.getByText("Koyu", { exact: true }).click();
   await page.getByText("Ayar kaydedildi.").waitFor();
   check((await page.evaluate(() => document.documentElement.dataset.theme)) === "dark", "koyu tema uygulanmadı");
-  await page.getByLabel("Günlük çalışma hedefi (dakika)").fill("35");
-  await page.getByRole("button", { name: "Kaydet" }).click();
-  await page.getByText("Ayar kaydedildi.").waitFor();
   await page.reload();
   await heading("Ayarlar").waitFor();
-  check((await page.getByLabel("Günlük çalışma hedefi (dakika)").inputValue()) === "35", "günlük hedef korunmadı");
+  check((await page.getByText("Günlük çalışma hedefi").count()) === 0, "işlevsiz günlük hedef ayarı hâlâ görünüyor");
   check(await page.locator('input[name="theme"][value="dark"]').isChecked(), "tema seçimi korunmadı");
-  await page.getByLabel("Günlük çalışma hedefi (dakika)").fill("1000");
-  await page.getByRole("button", { name: "Kaydet" }).click();
-  await page.getByText("5 ile 240 dakika arasında olmalıdır").waitFor();
   check((await page.locator("#about").innerText()).includes("İçerik sürümü"), "program bilgisi görünmüyor");
 
   // 11) Bilinmeyen sayfa ve bilinmeyen ders
@@ -454,6 +448,17 @@ const check = (condition, message) => { if (!condition) failures.push(message); 
   await page.locator("#placement-history li").first().waitFor();
   await page.goto(url + "#/testler");
   await page.getByText("Seviye tespit sınavı").first().waitFor();
+
+  // 11i) Klavye: ilk Tab "İçeriğe geç" bağlantısına gider; Enter sayfayı değiştirmeden odağı içeriğe taşır
+  await page.goto(url + "#/sozluk");
+  await page.reload();  // sayfa ilk kez açılmış gibi: odak belgenin başında
+  await heading("Sözlük").waitFor();
+  await page.keyboard.press("Tab");
+  check(await page.evaluate(() => document.activeElement.classList.contains("skip-link")), "ilk Tab içeriğe geç bağlantısına gitmiyor");
+  await page.keyboard.press("Enter");
+  await page.waitForTimeout(200);
+  check(await page.evaluate(() => document.activeElement.id === "main"), "içeriğe geç odağı taşımadı");
+  check(page.url().endsWith("#/sozluk") && await heading("Sözlük").isVisible(), "içeriğe geç sayfayı değiştirdi");
 
   // 12) Küçük ekranda yatay taşma olmamalı
   await page.setViewportSize({ width: 375, height: 700 });

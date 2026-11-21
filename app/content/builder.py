@@ -168,7 +168,7 @@ def _read_psv(path: Path, errors: list[str]) -> VocabularyFile | None:
             continue
         words.append({
             "lemma": lemma,
-            "meanings": [{"pos": POS_ABBREVIATIONS[p], "tr": t} for p, t in zip(pos_list, tr_list)],
+            "meanings": [{"pos": POS_ABBREVIATIONS[p], "tr": t} for p, t in zip(pos_list, tr_list, strict=True)],
             "examples": [{"en": en, "tr": ex_tr}],
             "forms": [f.strip() for f in parts[5].split(",") if f.strip()] if len(parts) == 6 else [],
         })
